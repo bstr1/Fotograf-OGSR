@@ -142,7 +142,7 @@ function actor_binder:reinit()
     -- added by boryan67
     self.object:set_callback(callback.use_object, self.use_object, self)
     self.object:set_callback(callback.death, self.death_callback, self)
-
+	self.object:set_callback( callback.use_object, self.on_use_object, self )
     self.object:set_callback(callback.on_level_map_click, self.on_level_map_click, self)
     -- end of addition
 end
@@ -766,4 +766,11 @@ end
 
 function actor_binder:on_key_hold(key, bind)
     self.am:call("on_key_hold", key, bind)
+end
+
+function actor_binder:on_use_object( obj )
+  local sobj = alife():object( obj:id() )
+  if sobj then
+    self.am:call( "on_use", obj, sobj )
+  end
 end

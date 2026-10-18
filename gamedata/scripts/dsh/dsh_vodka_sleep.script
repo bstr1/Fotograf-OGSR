@@ -1,0 +1,10 @@
+function attach( sm )
+	sm:subscribe({ signal = "on_use", fun = this.on_use })
+end
+
+function on_use( obj )
+	if obj:section() == "vodka" then
+		amk.save_variable("gg_need_sleep", amk.load_variable("gg_need_sleep", 0) + 10)
+		amk_mod.test_sleep_pp()
+	end
+end

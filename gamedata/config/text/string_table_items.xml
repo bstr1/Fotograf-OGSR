@@ -1,5 +1,4 @@
-﻿<?xml version='1.0' encoding="UTF-8"?>
-<!-- для описания всевозможных предметов в игре -->
+﻿<!-- для описания всевозможных предметов в игре -->
 <string_table>
 	<string id="item test1">
 		<text>This is a ITEM test string</text>
