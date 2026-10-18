@@ -29,7 +29,7 @@ function options_dialog:InitControls()
 
 	xml:InitStatic("back_video", self)
 	xml:InitStatic("background", self)
-	xml:InitStatic("rug_video", self)
+	-- xml:InitStatic("rug_video", self)
 	self.dialog = xml:InitStatic("main_dialog:dialog", self)
 
 	xml:InitFrame("frame_hint", self)

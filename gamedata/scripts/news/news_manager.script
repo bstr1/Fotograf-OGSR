@@ -124,13 +124,13 @@ function send_tip(actor, news_id, timeout, sender, showtime, sender_id)
 			local npc = sim:story_object(sender_id)
 			if npc ~= nil then
 				if npc.online then
-					--РІ РѕРЅР»Р°Р№РЅРµ РїСЂРѕРІРµСЂСЏРµРј РЅР° СЂР°РЅРµРЅРЅРѕСЃС‚СЊ
+					--в онлайне проверяем на раненность
 					if xr_wounded.is_heavy_wounded_by_id(npc.id) then
 						printf("[PDA]Cannot send tips [%s], sender is heavy wounded", tostring(news_id))
 						return false
 					end
 				end
-				-- РІ РґСЂСѓРіРёС… СЃР»СѓС‡Р°СЏС… С‚РѕР»СЊРєРѕ РЅР° СЃРјРµСЂС‚СЊ
+				-- в других случаях только на смерть
 				if npc:alive() == 1 then
 					printf("[PDA]Cannot send tips [%s], sender is dead", tostring(news_id))
 					return false
@@ -142,13 +142,13 @@ function send_tip(actor, news_id, timeout, sender, showtime, sender_id)
 	if timeout == nil then timeout = 0 end
 	if showtime == nil then showtime = 5000 end
 
-	--' РРіСЂР°РµРј РґРµС„РѕР»С‚РЅС‹Р№ Р·РІСѓРє
+	--' Играем дефолтный звук
 	pda_tips:play(db.actor, timeout, sound_object.s2d)
 	if news[news_id] ~= nil then
-		--' РРіСЂР°РµРј Р·РІСѓРє Р·Р°Р±РёС‚С‹Р№
+		--' Играем звук забитый
 		news[news_id]:play(db.actor, timeout+1, sound_object.s2d)
 
-		--' РќРµРѕР±С…РѕРґРёРјРѕ РїРѕСЃС‚Р°РІРёС‚СЊ РІСЂРµРјСЏ РїРѕРєР°Р·Р° РїРѕ РґР»РёРЅРµ СЃС†РµРЅС‹
+		--' Необходимо поставить время показа по длине сцены
 		local length = news[news_id]:length()
 		if length > showtime then
 			showtime = length
@@ -170,7 +170,7 @@ function send_tip_nosound(actor, news_id, timeout, sender)
 
 	timeout = 0
 
-	--' РРіСЂР°РµРј РґРµС„РѕР»С‚РЅС‹Р№ Р·РІСѓРє
+	--' Играем дефолтный звук
 	pda_tips:play(db.actor, timeout, sound_object.s2d)
 	local news_sound = news[news_id]
 
@@ -186,10 +186,10 @@ local action_descr_by_type = {
 function send_task(actor, type, task, objective)
 	if db.actor == nil then return false end
 	
-	--' Р‘РµСЂРµРј РєРѕРѕСЂРґРёРЅР°С‚С‹ РёР· С‚РµРєСЃС‚СѓСЂС‹ С‚Р°СЃРєР°
+	--' Берем координаты из текстуры таска
     local task_texture, task_rect = get_texture_info("ui_iconsTotal_"..task:get_id(), "ui_iconsTotal_locations")
         
-	--' РРіСЂР°РµРј РґРµС„РѕР»С‚РЅС‹Р№ Р·РІСѓРє
+	--' Играем дефолтный звук
 	pda_task:play(db.actor, 0, sound_object.s2d)
 
 	local news_text = "%c[255,160,160,160]"..game.translate_string(action_descr_by_type[type]).."\\n".."%c[default]"..game.translate_string(task:get_title())
@@ -203,7 +203,7 @@ function send_task(actor, type, task, objective)
 	if type == "new" or
 		type == "update"
 	then
-		--' Р’С‹РґР°С‚СЊ РЅРѕРІРѕРµ РїРѕРґР·Р°РґР°РЅРёРµ
+		--' Выдать новое подзадание
 		if task:get_objectives_cnt() == objective:get_idx()+1 then
 			return
 		end
@@ -221,7 +221,7 @@ function send_encyclopedy(type, title)
 		pda_news:play(db.actor, 0, sound_object.s2d)
 
 
-		--' Р‘РµСЂРµРј РєРѕРѕСЂРґРёРЅР°С‚С‹ РёР· С‚РµРєСЃС‚СѓСЂС‹ С‚Р°СЃРєР°
+		--' Берем координаты из текстуры таска
 		local task_texture, task_rect = get_texture_info("ui_iconsTotal_locations", "ui_iconsTotal_locations")
 		local news_text = "%c[255,160,160,160]"..game.translate_string("st_found_new_pda").."\\n".."%c[default]"..game.translate_string(title)
 		if db.actor:is_talking() then	
@@ -233,18 +233,18 @@ function send_encyclopedy(type, title)
 end
 function send_treasure(name)
 	local 	level_name = {}
-		level_name["mir"]  = "РњРёСЂРѕС‚РІРѕСЂС‡РµСЃРєРёР№ РљРѕСЂРїСѓСЃ"
-		level_name["road"]  = "РСЃРїС‹С‚Р°С‚РµР»СЊРЅС‹Р№ РџРѕР»РёРіРѕРЅ"
-		level_name["prom"]  = "РџСЂРѕРјР·РѕРЅР°"
-		level_name["agru"] = "РџРѕРґРІР°Р»С‹ РђРіСЂРѕРїСЂРѕРјР°"
-		level_name["bol"]  = "Р‘РѕР»РѕС‚Р°"
-		level_name["les"]  = "Р›РµСЃ"
-		level_name["mg"]  = "РњС‘СЂС‚РІС‹Р№ Р“РѕСЂРѕРґ"
-		level_name["x16"]  = "Р›Р°Р±РѕСЂР°С‚РѕСЂРёСЏ x16"
-		level_name["dysh"]  = "Р§РµСЂРІРѕРЅРµ Р”С‹С€Р»Рѕ"
-		level_name["pri"]  = "РџСЂРёРїСЏС‚СЊ"
-		level_name["x18"]  = "Р›Р°Р±РѕСЂР°С‚РѕСЂРёСЏ x18"
-		level_name["bar"]  = "РўРµСЂСЂРёС‚РѕСЂРёСЏ Р‘Р°СЂР°"
+		level_name["mir"]  = "Миротворческий Корпус"
+		level_name["road"]  = "Испытательный Полигон"
+		level_name["prom"]  = "Промзона"
+		level_name["agru"] = "Подвалы Агропрома"
+		level_name["bol"]  = "Болота"
+		level_name["les"]  = "Лес"
+		level_name["mg"]  = "Мёртвый Город"
+		level_name["x16"]  = "Лаборатория x16"
+		level_name["dysh"]  = "Червоне Дышло"
+		level_name["pri"]  = "Припять"
+		level_name["x18"]  = "Лаборатория x18"
+		level_name["bar"]  = "Территория Бара"
 	pda_news:play(db.actor, 0, sound_object.s2d)
 	local task_texture, task_rect = get_texture_info("ui_iconsTotal_found_thing")
 	local level_key = string.sub(name,1,string.find(name,"_s",1,plain)-1)
@@ -262,7 +262,7 @@ end
 
 function relocate_item(actor, type, item)
 	if db.actor == nil then return false end
-	--' РРіСЂР°РµРј РґРµС„РѕР»С‚РЅС‹Р№ Р·РІСѓРє
+	--' Играем дефолтный звук
 	if type == "in" then
 		local task_texture, task_rect = get_texture_info("ui_iconsTotal_found_thing")
 		local news_text = "%c[255,160,160,160]"..game.translate_string("general_in_item").."\\n".."%c[default]"..game.translate_string(get_inv_name(item))		
@@ -285,7 +285,7 @@ end
 
 function relocate_key(actor, type, item)
 	if db.actor == nil then return false end
-	--' РРіСЂР°РµРј РґРµС„РѕР»С‚РЅС‹Р№ Р·РІСѓРє
+	--' Играем дефолтный звук
 	if type == "in" then
 		local task_texture, task_rect = get_texture_info("ui_iconsTotal_found_thing")
 		local news_text = "%c[255,160,160,160]"..game.translate_string("general_in_item").."\\n".."%c[default]"..game.translate_string(get_inv_name(item))		
@@ -310,7 +310,7 @@ function relocate_money(actor, type, amount)
 	if db.actor == nil then return false end
 
 
-	--' РРіСЂР°РµРј РґРµС„РѕР»С‚РЅС‹Р№ Р·РІСѓРє
+	--' Играем дефолтный звук
 	if type == "in" then
 		local task_texture, task_rect = get_texture_info("ui_iconsTotal_found_money")
 		local news_text = "%c[255,160,160,160]"..game.translate_string("general_in_money").."\\n".."%c[default]"..game.translate_string(tostring(amount))

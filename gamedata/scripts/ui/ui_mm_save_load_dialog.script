@@ -111,7 +111,7 @@ function save_load_dialog:InitControlsSave()
 	xml:InitStatic("back_video", self)
 
 	xml:InitStatic("background", self)	
-	xml:InitStatic("newspaper_video", self)	
+	-- xml:InitStatic("newspaper_video", self)	
 	self.form = xml:InitStatic("form", self)
 
 	xml:InitStatic("form:caption", self.form)
@@ -146,7 +146,7 @@ function save_load_dialog:InitControlsLoad()
 
 	xml:InitStatic("back_video", self)
 	xml:InitStatic("background", self)
-	xml:InitStatic("newspaper_video", self)
+	-- xml:InitStatic("newspaper_video", self)
 
 	self.form = xml:InitStatic("form", self)
 
