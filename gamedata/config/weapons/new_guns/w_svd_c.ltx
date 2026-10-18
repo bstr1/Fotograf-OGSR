@@ -15,8 +15,8 @@ ef_main_weapon_type		 = 3
 ef_weapon_type			 = 8
 
 ;--- scope weapons -----------------------------------------------------------------
-holder_range_modifier	= 2.15               ; во сколько раз увеличивается eye_range 
-holder_fov_modifier		= 0.3              ; во сколько раз увеличивается eye_fov
+holder_range_modifier	= 2.15               ; РІРѕ СЃРєРѕР»СЊРєРѕ СЂР°Р· СѓРІРµР»РёС‡РёРІР°РµС‚СЃСЏ eye_range 
+holder_fov_modifier		= 0.3              ; РІРѕ СЃРєРѕР»СЊРєРѕ СЂР°Р· СѓРІРµР»РёС‡РёРІР°РµС‚СЃСЏ eye_fov
 ;-----------------------------------------------------------------------------------
 
 cost				= 18700
@@ -32,23 +32,23 @@ ammo_class			= ammo_7.62x54_7h1, ammo_7.62x54_7h14, ammo_7.62x54_ap
 sprint_allowed			= true
 
 ;-----------------------------------------------------------------------------------
-fire_dispersion_base		= 0.022  ;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
+fire_dispersion_base		= 0.022  ;СѓРіРѕР» (РІ РіСЂР°РґСѓСЃР°С…) Р±Р°Р·РѕРІРѕР№ РґРёСЃРїРµСЂСЃРёРё РѕСЂСѓР¶РёСЏ (РѕСЂСѓР¶РёСЏ Р·Р°Р¶Р°С‚РѕРіРѕ РІ С‚РёСЃРєР°С…)
 control_inertion_factor		= 2.2f
 disp_rate = 1.85
 
-;отдача
-cam_relax_speed         		= 3	;скорость возврата в исходное положение
-cam_dispersion          	= 1.5	;увеличения угла (в градусах) с каждым выстрелом
-cam_dispersion_inc			= 0.5	;увеличениe cam_dispersion с каждым выстрелом
-cam_dispertion_frac			= 0.6	;ствол будет подыматься на cam_dispersion*cam_dispertion_frac +- cam_dispersion*(1-cam_dispertion_frac)
-cam_max_angle					= 18.0	;максимальный угол отдачи
+;РѕС‚РґР°С‡Р°
+cam_relax_speed         		= 3	;СЃРєРѕСЂРѕСЃС‚СЊ РІРѕР·РІСЂР°С‚Р° РІ РёСЃС…РѕРґРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ
+cam_dispersion          	= 1.5	;СѓРІРµР»РёС‡РµРЅРёСЏ СѓРіР»Р° (РІ РіСЂР°РґСѓСЃР°С…) СЃ РєР°Р¶РґС‹Рј РІС‹СЃС‚СЂРµР»РѕРј
+cam_dispersion_inc			= 0.5	;СѓРІРµР»РёС‡РµРЅРёe cam_dispersion СЃ РєР°Р¶РґС‹Рј РІС‹СЃС‚СЂРµР»РѕРј
+cam_dispertion_frac			= 0.6	;СЃС‚РІРѕР» Р±СѓРґРµС‚ РїРѕРґС‹РјР°С‚СЊСЃСЏ РЅР° cam_dispersion*cam_dispertion_frac +- cam_dispersion*(1-cam_dispertion_frac)
+cam_max_angle					= 18.0	;РјР°РєСЃРёРјР°Р»СЊРЅС‹Р№ СѓРіРѕР» РѕС‚РґР°С‡Рё
 cam_max_angle_horz				= 7.0	;(degree) maximum shot horizontal degree 
 cam_step_angle_horz				= 0.35	;(degree) size of step camera moved in horizontal position while shooting
 
-fire_dispersion_condition_factor = 5	;увеличение дисперсии в процентах при максимальном износе 
-misfire_probability 		= 0.001 ;вероятность осечки при максимальном износе 
+fire_dispersion_condition_factor = 5	;СѓРІРµР»РёС‡РµРЅРёРµ РґРёСЃРїРµСЂСЃРёРё РІ РїСЂРѕС†РµРЅС‚Р°С… РїСЂРё РјР°РєСЃРёРјР°Р»СЊРЅРѕРј РёР·РЅРѕСЃРµ 
+misfire_probability 		= 0.001 ;РІРµСЂРѕСЏС‚РЅРѕСЃС‚СЊ РѕСЃРµС‡РєРё РїСЂРё РјР°РєСЃРёРјР°Р»СЊРЅРѕРј РёР·РЅРѕСЃРµ 
 misfire_condition_k			= 0.06
-condition_shot_dec 			= 0.0001 ;увеличение износа при каждом выстреле
+condition_shot_dec 			= 0.0001 ;СѓРІРµР»РёС‡РµРЅРёРµ РёР·РЅРѕСЃР° РїСЂРё РєР°Р¶РґРѕРј РІС‹СЃС‚СЂРµР»Рµ
 ;-----------------------------------------------------------------------------------
 
 hand_dependence 		= 1
@@ -97,7 +97,7 @@ fire_distance       = 500
 bullet_speed	    = 480
 rpm                 = 110
 
-use_aim_bullet				= true		;Поддерживается ли первая суппер пуля
+use_aim_bullet				= true		;РџРѕРґРґРµСЂР¶РёРІР°РµС‚СЃСЏ Р»Рё РїРµСЂРІР°СЏ СЃСѓРїРїРµСЂ РїСѓР»СЏ
 time_to_aim					= 1.0	
 
 hud                     = wpn_svd-c_hud
@@ -149,7 +149,7 @@ silencer_light_var_color	= 0.05
 silencer_light_var_range	= 0.5
 silencer_light_time 		= 0.2
 
-;звуки
+;Р·РІСѓРєРё
 snd_draw		= Aaz\svd-c\svd-c_draw
 snd_holster	        = Aaz\svd-c\svd-c_holster
 snd_shoot		= Aaz\svd-c\svd-c_shot    
@@ -179,7 +179,7 @@ anim_holster		= holster
 anim_shoot			= shoot
 anim_idle_sprint	= idle_sprint
 
-;смещения HUD для режима приближения
+;СЃРјРµС‰РµРЅРёСЏ HUD РґР»СЏ СЂРµР¶РёРјР° РїСЂРёР±Р»РёР¶РµРЅРёСЏ
 zoom_offset				= -0.127151,0.043251,-0.145000
 zoom_rotate_x			= 0.000000
 zoom_rotate_y			= -0.000000

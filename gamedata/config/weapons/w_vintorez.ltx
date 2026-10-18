@@ -1,13 +1,13 @@
-; Винтовка снайперская специальная ВСС "Винторез" (6П29)
-;-(правлено SR)-------------------------------------
-; калибр 				9x39 мм
-; длина ствола 				200 мм
-; магазин				20
-; вес без магазина			3.16
-; эффективная дальность стрельбы	250 м 
-; прицельная дальность			400 м
-; дульная скорость пули			290 м/с
-; темп стрельбы				700 в/с
+; Р’РёРЅС‚РѕРІРєР° СЃРЅР°Р№РїРµСЂСЃРєР°СЏ СЃРїРµС†РёР°Р»СЊРЅР°СЏ Р’РЎРЎ "Р’РёРЅС‚РѕСЂРµР·" (6Рџ29)
+;-(РїСЂР°РІР»РµРЅРѕ SR)-------------------------------------
+; РєР°Р»РёР±СЂ 				9x39 РјРј
+; РґР»РёРЅР° СЃС‚РІРѕР»Р° 				200 РјРј
+; РјР°РіР°Р·РёРЅ				20
+; РІРµСЃ Р±РµР· РјР°РіР°Р·РёРЅР°			3.16
+; СЌС„С„РµРєС‚РёРІРЅР°СЏ РґР°Р»СЊРЅРѕСЃС‚СЊ СЃС‚СЂРµР»СЊР±С‹	250 Рј 
+; РїСЂРёС†РµР»СЊРЅР°СЏ РґР°Р»СЊРЅРѕСЃС‚СЊ			400 Рј
+; РґСѓР»СЊРЅР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ РїСѓР»Рё			290 Рј/СЃ
+; С‚РµРјРї СЃС‚СЂРµР»СЊР±С‹				700 РІ/СЃ
 ;---------------------------------------------------
 [wpn_vintorez]:identity_immunities
 GroupControlSection		= spawn_group
@@ -26,8 +26,8 @@ ef_main_weapon_type		= 3
 ef_weapon_type			= 8
 
 ;--- scope weapons -----------------------------------------------------------------
-holder_range_modifier		= 2.5 		; во сколько раз увеличивается eye_range 
-holder_fov_modifier		= 0.3 		; во сколько раз увеличивается eye_fov
+holder_range_modifier		= 2.5 		; РІРѕ СЃРєРѕР»СЊРєРѕ СЂР°Р· СѓРІРµР»РёС‡РёРІР°РµС‚СЃСЏ eye_range 
+holder_fov_modifier		= 0.3 		; РІРѕ СЃРєРѕР»СЊРєРѕ СЂР°Р· СѓРІРµР»РёС‡РёРІР°РµС‚СЃСЏ eye_fov
 ;-----------------------------------------------------------------------------------
 
 cost				= 13800
@@ -58,25 +58,25 @@ inv_grid_height			= 2
 inv_grid_x			= 0
 inv_grid_y			= 4
 
-;спавнить автоматически боеприпасы при подъеме оружия
+;СЃРїР°РІРЅРёС‚СЊ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё Р±РѕРµРїСЂРёРїР°СЃС‹ РїСЂРё РїРѕРґСЉРµРјРµ РѕСЂСѓР¶РёСЏ
 auto_spawn_ammo			= false
 
 ;-----------------------------------------------------------------------------------
-;базовая дисперсия
+;Р±Р°Р·РѕРІР°СЏ РґРёСЃРїРµСЂСЃРёСЏ
 fire_dispersion_base		= 0.018
 control_inertion_factor		= 1.44f
 disp_rate = 1.8
 
-;отдача
-cam_relax_speed         	= 6.75	;скорость возврата в исходное положение
-cam_dispersion          	= 0.21	;увеличения угла (в градусах) с каждым выстрелом
-cam_dispersion_inc		= 0.15	;увеличениe cam_dispersion с каждым выстрелом
-cam_dispertion_frac		= 0.9	;ствол будет подыматься на cam_dispersion*cam_dispertion_frac +- cam_dispersion*(1-cam_dispertion_frac)
-cam_max_angle			= 7.0	;максимальный угол отдачи
+;РѕС‚РґР°С‡Р°
+cam_relax_speed         	= 6.75	;СЃРєРѕСЂРѕСЃС‚СЊ РІРѕР·РІСЂР°С‚Р° РІ РёСЃС…РѕРґРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ
+cam_dispersion          	= 0.21	;СѓРІРµР»РёС‡РµРЅРёСЏ СѓРіР»Р° (РІ РіСЂР°РґСѓСЃР°С…) СЃ РєР°Р¶РґС‹Рј РІС‹СЃС‚СЂРµР»РѕРј
+cam_dispersion_inc		= 0.15	;СѓРІРµР»РёС‡РµРЅРёe cam_dispersion СЃ РєР°Р¶РґС‹Рј РІС‹СЃС‚СЂРµР»РѕРј
+cam_dispertion_frac		= 0.9	;СЃС‚РІРѕР» Р±СѓРґРµС‚ РїРѕРґС‹РјР°С‚СЊСЃСЏ РЅР° cam_dispersion*cam_dispertion_frac +- cam_dispersion*(1-cam_dispertion_frac)
+cam_max_angle			= 7.0	;РјР°РєСЃРёРјР°Р»СЊРЅС‹Р№ СѓРіРѕР» РѕС‚РґР°С‡Рё
 cam_max_angle_horz		= 10.0	;(degree) maximum shot horizontal degree 
 cam_step_angle_horz		= 1.4	;(degree) size of step camera moved in horizontal position while shooting
 
-fire_dispersion_condition_factor = 3	;увеличение дисперсии в процентах при максимальном износе 
+fire_dispersion_condition_factor = 3	;СѓРІРµР»РёС‡РµРЅРёРµ РґРёСЃРїРµСЂСЃРёРё РІ РїСЂРѕС†РµРЅС‚Р°С… РїСЂРё РјР°РєСЃРёРјР°Р»СЊРЅРѕРј РёР·РЅРѕСЃРµ 
 misfire_probability 	         = 0.001
 misfire_condition_k		 = 0.05
 condition_shot_dec 		 = 0.0002
@@ -108,7 +108,7 @@ rpm                             = 750
 
 rpm_empty_click 	 	= 400
 
-use_aim_bullet			= true			;Поддерживается ли первая супер пуля
+use_aim_bullet			= true			;РџРѕРґРґРµСЂР¶РёРІР°РµС‚СЃСЏ Р»Рё РїРµСЂРІР°СЏ СЃСѓРїРµСЂ РїСѓР»СЏ
 time_to_aim			= 1.0	
 
 hud 				= wpn_vintorez_hud
@@ -117,7 +117,7 @@ position 			= -0.026, -0.084, 0.0
 orientation 			= 0, 0, 0
 
 ;--STRAP PARAMETERS-----------------------------------------------------------------
-;на плечо
+;РЅР° РїР»РµС‡Рѕ
 strap_position 			= -0.26,-0.11,0.20	; position (offset) and orientation of the weapon when it is strapped
 strap_orientation 		= -15,-9,110		; (3rd person view in degrees)
 strap_bone0			= bip01_spine2
@@ -159,10 +159,10 @@ silencer_light_var_color	= 0.05
 silencer_light_var_range	= 0.5
 silencer_light_time 		= 0.2
 
-hit_probability_gd_novice	= 0.80				; точность стрельбы,      
-hit_probability_gd_stalker	= 0.85				; когда оружие в руках НПС
-hit_probability_gd_veteran	= 0.90				; в зависимости от уровня 
-hit_probability_gd_master	= 0.95				; сложности игры          
+hit_probability_gd_novice	= 0.80				; С‚РѕС‡РЅРѕСЃС‚СЊ СЃС‚СЂРµР»СЊР±С‹,      
+hit_probability_gd_stalker	= 0.85				; РєРѕРіРґР° РѕСЂСѓР¶РёРµ РІ СЂСѓРєР°С… РќРџРЎ
+hit_probability_gd_veteran	= 0.90				; РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ СѓСЂРѕРІРЅСЏ 
+hit_probability_gd_master	= 0.95				; СЃР»РѕР¶РЅРѕСЃС‚Рё РёРіСЂС‹          
 
 ;-----------------------------------------------------------------------------
 ;-- HUD DESCRIPTION
@@ -194,6 +194,6 @@ zoom_offset					= -0.13,0.09,-0.05
 zoom_rotate_x				= 0.0
 zoom_rotate_y				= 0.0
 
-;время поворота HUD (сек)
+;РІСЂРµРјСЏ РїРѕРІРѕСЂРѕС‚Р° HUD (СЃРµРє)
 zoom_rotate_time		= 0.3
 rotate_time			= 0.3

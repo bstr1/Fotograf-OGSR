@@ -5,11 +5,11 @@
 		</dialog>
 
 		<capt x="90" y="4" width="200" height="29">
-			<text font="graffiti22">Активация GPS</text>
+			<text font="graffiti22">РђРєС‚РёРІР°С†РёСЏ GPS</text>
 		</capt>
 		
 		<msg x="180" y="50" width="200" height="30">
-			<text font="graffiti22">Текст для GPS метки:</text>
+			<text font="graffiti22">РўРµРєСЃС‚ РґР»СЏ GPS РјРµС‚РєРё:</text>
 		</msg>
 
 		<edit_box x="180" y="85" width="280" height="23">
@@ -21,14 +21,14 @@
 			<texture_e>ui_button_ordinary_e</texture_e>
 			<texture_t>ui_button_ordinary_t</texture_t>
 			<texture_h>ui_button_ordinary_h</texture_h>
-			<text>Установить</text>
+			<text>РЈСЃС‚Р°РЅРѕРІРёС‚СЊ</text>
 		</btn_1>
 
 		<btn_quit x="30" y="100" width="117" height="29">
 			<texture_e>ui_button_ordinary_e</texture_e>
 			<texture_t>ui_button_ordinary_t</texture_t>
 			<texture_h>ui_button_ordinary_h</texture_h>
-			<text>Не надо</text>
+			<text>РќРµ РЅР°РґРѕ</text>
 		</btn_quit>
 	</main_dialog>
 </w>

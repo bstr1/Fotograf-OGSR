@@ -1,7 +1,7 @@
 [logic]
 active = sr_idle@off
 
-;зона выключена
+;Р·РѕРЅР° РІС‹РєР»СЋС‡РµРЅР°
 [sr_idle@off]
 on_actor_inside = {=ex_trans_zone_not_off} sr_psy_antenna@start
 
@@ -10,20 +10,20 @@ eff_intensity = 10
 hit_intensity = 10
 on_timer = 100 | sr_psy_antenna@wel
 
-;при вхождении в зону приветствуем определённым звуком и\или партиклем при наличии активатора
+;РїСЂРё РІС…РѕР¶РґРµРЅРёРё РІ Р·РѕРЅСѓ РїСЂРёРІРµС‚СЃС‚РІСѓРµРј РѕРїСЂРµРґРµР»С‘РЅРЅС‹Рј Р·РІСѓРєРѕРј Рё\РёР»Рё РїР°СЂС‚РёРєР»РµРј РїСЂРё РЅР°Р»РёС‡РёРё Р°РєС‚РёРІР°С‚РѕСЂР°
 [sr_psy_antenna@wel]
 eff_intensity = 10
 hit_intensity = 15
 on_actor_inside = {!ex_trans_zone_not_act} sr_psy_antenna@trans, {=ex_trans_zone_not_act} sr_psy_antenna@act %=ex_transform.zone_wel(2)%
 
-;выбор\сохранение нужных компонентов
+;РІС‹Р±РѕСЂ\СЃРѕС…СЂР°РЅРµРЅРёРµ РЅСѓР¶РЅС‹С… РєРѕРјРїРѕРЅРµРЅС‚РѕРІ
 [sr_psy_antenna@act]
 eff_intensity = 10
 hit_intensity = 30
 on_actor_inside = {!ex_trans_zone_not_act} sr_psy_antenna@trans, {=ex_trans_zone_not_act} %=ex_transform.zone_act(2)%
 on_actor_outside = sr_idle@off %=stop_postprocess(1973)%
 
-;сообственно каталицация с выдачей необходимых инфопоршней
+;СЃРѕРѕР±СЃС‚РІРµРЅРЅРѕ РєР°С‚Р°Р»РёС†Р°С†РёСЏ СЃ РІС‹РґР°С‡РµР№ РЅРµРѕР±С…РѕРґРёРјС‹С… РёРЅС„РѕРїРѕСЂС€РЅРµР№
 [sr_psy_antenna@trans]
 eff_intensity = 10
 hit_intensity = 5

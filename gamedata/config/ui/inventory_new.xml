@@ -33,7 +33,7 @@
             cell_width = "30" cell_height="30" rows_num="7" cols_num="22"
             unlimited="1" group_similar="1"/>
 
-    <!-- *** изменено для AMK *** -->
+    <!-- *** РёР·РјРµРЅРµРЅРѕ РґР»СЏ AMK *** -->
 
     <dragdrop_belt x="365" y="396" width="360" height="61"
             cell_width = "30" cell_height="30" rows_num="2" cols_num="8"/>

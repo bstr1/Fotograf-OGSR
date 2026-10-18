@@ -377,7 +377,7 @@
 	</anomaly_zone_mini_spot>
 	
 	
-<!--описания меток для разных аномалий--> 
+<!--РѕРїРёСЃР°РЅРёСЏ РјРµС‚РѕРє РґР»СЏ СЂР°Р·РЅС‹С… Р°РЅРѕРјР°Р»РёР№--> 
 
 	<anomaly_bald_location hint="anomaly_zone">
 		<mini_map  spot="anomaly_bald_mini_spot"/>

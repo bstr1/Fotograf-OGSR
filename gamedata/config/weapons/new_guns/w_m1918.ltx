@@ -14,8 +14,8 @@ description			= enc_weapon_wpn_m16a3
 ef_main_weapon_type		= 2
 ef_weapon_type			= 6
 ;-----------------------------------------------------------------------------------
-holder_range_modifier	        = 1.0		   ; во сколько раз увеличивается eye_range 
-holder_fov_modifier		= 0.7              ; во сколько раз увеличивается eye_fov
+holder_range_modifier	        = 1.0		   ; РІРѕ СЃРєРѕР»СЊРєРѕ СЂР°Р· СѓРІРµР»РёС‡РёРІР°РµС‚СЃСЏ eye_range 
+holder_fov_modifier		= 0.7              ; РІРѕ СЃРєРѕР»СЊРєРѕ СЂР°Р· СѓРІРµР»РёС‡РёРІР°РµС‚СЃСЏ eye_fov
 ;-----------------------------------------------------------------------------------
 
 cost					= 11500
@@ -51,23 +51,23 @@ slot 			 		= 2		; // secondary
 animation_slot				= 2		; type of the animation that will be used
 
 ;-----------------------------------------------------------------------------------
-;базовая дисперсия
-fire_dispersion_base		= 0.12 	;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
+;Р±Р°Р·РѕРІР°СЏ РґРёСЃРїРµСЂСЃРёСЏ
+fire_dispersion_base		= 0.12 	;СѓРіРѕР» (РІ РіСЂР°РґСѓСЃР°С…) Р±Р°Р·РѕРІРѕР№ РґРёСЃРїРµСЂСЃРёРё РѕСЂСѓР¶РёСЏ (РѕСЂСѓР¶РёСЏ Р·Р°Р¶Р°С‚РѕРіРѕ РІ С‚РёСЃРєР°С…)
 control_inertion_factor		= 1.2f
 
-;отдача
-cam_relax_speed        		= 15 ;скорость возврата в исходное положение
-cam_dispersion         		= 0.15	;увеличения угла (в градусах) с каждым выстрелом
-cam_dispersion_inc		= 0.1	;увеличениe cam_dispersion с каждым выстрелом
-cam_dispertion_frac		= 0.15	;ствол будет подыматься на cam_dispersion*cam_dispertion_frac +- cam_dispersion*(1-cam_dispertion_frac)
-cam_max_angle			= 7.0	;максимальный угол отдачи
+;РѕС‚РґР°С‡Р°
+cam_relax_speed        		= 15 ;СЃРєРѕСЂРѕСЃС‚СЊ РІРѕР·РІСЂР°С‚Р° РІ РёСЃС…РѕРґРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ
+cam_dispersion         		= 0.15	;СѓРІРµР»РёС‡РµРЅРёСЏ СѓРіР»Р° (РІ РіСЂР°РґСѓСЃР°С…) СЃ РєР°Р¶РґС‹Рј РІС‹СЃС‚СЂРµР»РѕРј
+cam_dispersion_inc		= 0.1	;СѓРІРµР»РёС‡РµРЅРёe cam_dispersion СЃ РєР°Р¶РґС‹Рј РІС‹СЃС‚СЂРµР»РѕРј
+cam_dispertion_frac		= 0.15	;СЃС‚РІРѕР» Р±СѓРґРµС‚ РїРѕРґС‹РјР°С‚СЊСЃСЏ РЅР° cam_dispersion*cam_dispertion_frac +- cam_dispersion*(1-cam_dispertion_frac)
+cam_max_angle			= 7.0	;РјР°РєСЃРёРјР°Р»СЊРЅС‹Р№ СѓРіРѕР» РѕС‚РґР°С‡Рё
 cam_max_angle_horz		= 5.0	;(degree) maximum shot horizontal degree 
 cam_step_angle_horz		= 0.075;  0.4	;(degree) size of step camera moved in horizontal position while shooting
 
-fire_dispersion_condition_factor = 5	    ;увеличение дисперсии в процентах при максимальном износе 
-misfire_probability 		 = 0.001  ;вероятность осечки при максимальном износе
+fire_dispersion_condition_factor = 5	    ;СѓРІРµР»РёС‡РµРЅРёРµ РґРёСЃРїРµСЂСЃРёРё РІ РїСЂРѕС†РµРЅС‚Р°С… РїСЂРё РјР°РєСЃРёРјР°Р»СЊРЅРѕРј РёР·РЅРѕСЃРµ 
+misfire_probability 		 = 0.001  ;РІРµСЂРѕСЏС‚РЅРѕСЃС‚СЊ РѕСЃРµС‡РєРё РїСЂРё РјР°РєСЃРёРјР°Р»СЊРЅРѕРј РёР·РЅРѕСЃРµ
 misfire_condition_k		 = 0.05 
-condition_shot_dec 		 = 0.0001 ;увеличение износа при каждом выстреле
+condition_shot_dec 		 = 0.0001 ;СѓРІРµР»РёС‡РµРЅРёРµ РёР·РЅРѕСЃР° РїСЂРё РєР°Р¶РґРѕРј РІС‹СЃС‚СЂРµР»Рµ
 ;-----------------------------------------------------------------------------------
 
 direction                	= 0, 0, 1
@@ -96,11 +96,11 @@ hit_impulse		 	= 10
 hit_type 			= fire_wound
 
 fire_distance            	= 300
-bullet_speed			= 455	;начальная скорость пули
+bullet_speed			= 455	;РЅР°С‡Р°Р»СЊРЅР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ РїСѓР»Рё
 rpm                      	= 750
 ; end ttc	
 
-use_aim_bullet			= true		;Поддерживается ли первая суппер пуля
+use_aim_bullet			= true		;РџРѕРґРґРµСЂР¶РёРІР°РµС‚СЃСЏ Р»Рё РїРµСЂРІР°СЏ СЃСѓРїРїРµСЂ РїСѓР»СЏ
 time_to_aim			= 1.0	
 
 hud                      	= wpn_m16a4_pr_hud
@@ -143,7 +143,7 @@ silencer_name  			= wpn_addon_sil_556_ar
 silencer_x 			= 227
 silencer_y 			= 8
 
-;звуки
+;Р·РІСѓРєРё
 snd_draw			= weapons\m16\m16_draw
 snd_holster			= weapons\m16\m16_holster
 snd_shoot			= weapons\m16\m16_shoot
@@ -153,7 +153,7 @@ snd_reload			= weapons\m16\m16a4_reload
 snd_silncer_shot                = weapons\m16\m16_shoot_sill
 snd_silncer_shot1	        = weapons\m16\m16_shoot1_sill
 
-;настройки для глушителя
+;РЅР°СЃС‚СЂРѕР№РєРё РґР»СЏ РіР»СѓС€РёС‚РµР»СЏ
 silencer_hit_power       	= 0.56
 silencer_hit_impulse	 	= 10
 silencer_fire_distance   	= 250
@@ -208,10 +208,10 @@ anim_switch_grenade_off		= switch_off
 anim_draw_g			= draw_grenade
 anim_holster_g			= holster_grenade
 
-;смещения HUD для режима приближения
+;СЃРјРµС‰РµРЅРёСЏ HUD РґР»СЏ СЂРµР¶РёРјР° РїСЂРёР±Р»РёР¶РµРЅРёСЏ
 zoom_offset			= -0.094500,0.0180,-0.05
 zoom_rotate_x		        = -0.0015
 zoom_rotate_y		        = -0.0005
 
-;прячем перекрестие прицела в зуме
+;РїСЂСЏС‡РµРј РїРµСЂРµРєСЂРµСЃС‚РёРµ РїСЂРёС†РµР»Р° РІ Р·СѓРјРµ
 zoom_hide_crosshair	        = true

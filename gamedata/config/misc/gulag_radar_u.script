@@ -16,7 +16,7 @@ danger_inertion_time =  90000
 
 
 
-;--------Свобода
+;--------РЎРІРѕР±РѕРґР°
 [logic@rad_svoboda]
 active = walker@rad_svoboda
 combat_ignore=combat_ignore
@@ -84,7 +84,7 @@ path_look = way_look
 on_info = {+rad_start_svoboda_vs_dolg} kamp@svoboda_vs_dolg1
 
 
-;--------Долг
+;--------Р”РѕР»Рі
 [logic@rad_dolg]
 active = walker@rad_dolg
 combat_ignore=combat_ignore
@@ -156,7 +156,7 @@ radius = 3
 center_point = kamp_center1
 radius = 3
  
-----------------кулак на входе-----------------
+----------------РєСѓР»Р°Рє РЅР° РІС…РѕРґРµ-----------------
 
 [logic@rad_entrance_binocular0]
 active = walker@rad_entrance_binocular0
@@ -219,7 +219,7 @@ danger=danger_condition
 [rad_monolith]
 combat_type = monolith
 
-----------------кулак v долине-----------------
+----------------РєСѓР»Р°Рє v РґРѕР»РёРЅРµ-----------------
 [logic@rad_valley_kamp]
 active = kamp@rad_valley_kamp
 on_combat = combat@rad_monolith

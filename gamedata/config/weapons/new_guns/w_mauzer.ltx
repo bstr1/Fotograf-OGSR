@@ -15,8 +15,8 @@ ef_main_weapon_type			= 2
 ef_weapon_type				= 5
 
 ;-----------------------------------------------------------------------------------
-holder_range_modifier	= 1.0		       ; во сколько раз увеличивается eye_range 
-holder_fov_modifier		= 0.7              ; во сколько раз увеличивается eye_fov
+holder_range_modifier	= 1.0		       ; РІРѕ СЃРєРѕР»СЊРєРѕ СЂР°Р· СѓРІРµР»РёС‡РёРІР°РµС‚СЃСЏ eye_range 
+holder_fov_modifier		= 0.7              ; РІРѕ СЃРєРѕР»СЊРєРѕ СЂР°Р· СѓРІРµР»РёС‡РёРІР°РµС‚СЃСЏ eye_fov
 ;-----------------------------------------------------------------------------------
 
 cost					 	= 2300
@@ -53,24 +53,24 @@ slot 			 			= 1		; // secondary
 animation_slot				= 1		; type of the animation that will be used
 
 ;-----------------------------------------------------------------------------------
-;базовая дисперсия
-fire_dispersion_base		= 0.15 	;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
+;Р±Р°Р·РѕРІР°СЏ РґРёСЃРїРµСЂСЃРёСЏ
+fire_dispersion_base		= 0.15 	;СѓРіРѕР» (РІ РіСЂР°РґСѓСЃР°С…) Р±Р°Р·РѕРІРѕР№ РґРёСЃРїРµСЂСЃРёРё РѕСЂСѓР¶РёСЏ (РѕСЂСѓР¶РёСЏ Р·Р°Р¶Р°С‚РѕРіРѕ РІ С‚РёСЃРєР°С…)
 control_inertion_factor		= 1.2f
 
-;отдача
-cam_relax_speed         	= 8 	;скорость возврата в исходное положение
-cam_dispersion          	= 1.5	;увеличения угла (в градусах) с каждым выстрелом
-cam_dispersion_inc		= 0.23	;увеличениe cam_dispersion с каждым выстрелом
-cam_dispertion_frac		= 1.0	;ствол будет подыматься на cam_dispersion*cam_dispertion_frac +- cam_dispersion*(1-cam_dispertion_frac)
-cam_max_angle			= 22.0	;максимальный угол отдачи
+;РѕС‚РґР°С‡Р°
+cam_relax_speed         	= 8 	;СЃРєРѕСЂРѕСЃС‚СЊ РІРѕР·РІСЂР°С‚Р° РІ РёСЃС…РѕРґРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ
+cam_dispersion          	= 1.5	;СѓРІРµР»РёС‡РµРЅРёСЏ СѓРіР»Р° (РІ РіСЂР°РґСѓСЃР°С…) СЃ РєР°Р¶РґС‹Рј РІС‹СЃС‚СЂРµР»РѕРј
+cam_dispersion_inc		= 0.23	;СѓРІРµР»РёС‡РµРЅРёe cam_dispersion СЃ РєР°Р¶РґС‹Рј РІС‹СЃС‚СЂРµР»РѕРј
+cam_dispertion_frac		= 1.0	;СЃС‚РІРѕР» Р±СѓРґРµС‚ РїРѕРґС‹РјР°С‚СЊСЃСЏ РЅР° cam_dispersion*cam_dispertion_frac +- cam_dispersion*(1-cam_dispertion_frac)
+cam_max_angle			= 22.0	;РјР°РєСЃРёРјР°Р»СЊРЅС‹Р№ СѓРіРѕР» РѕС‚РґР°С‡Рё
 cam_max_angle_horz		= 10.0	;(degree) maximum shot horizontal degree 
 cam_step_angle_horz		= 0.6	;(degree) size of step camera moved in horizontal position while shooting
 
 
-fire_dispersion_condition_factor = 5	;увеличение дисперсии в процентах при максимальном износе 
-misfire_probability 		= 0.003	;вероятность осечки при максимальном износе 
+fire_dispersion_condition_factor = 5	;СѓРІРµР»РёС‡РµРЅРёРµ РґРёСЃРїРµСЂСЃРёРё РІ РїСЂРѕС†РµРЅС‚Р°С… РїСЂРё РјР°РєСЃРёРјР°Р»СЊРЅРѕРј РёР·РЅРѕСЃРµ 
+misfire_probability 		= 0.003	;РІРµСЂРѕСЏС‚РЅРѕСЃС‚СЊ РѕСЃРµС‡РєРё РїСЂРё РјР°РєСЃРёРјР°Р»СЊРЅРѕРј РёР·РЅРѕСЃРµ 
 misfire_condition_k			= 0.05
-condition_shot_dec			= 0.0001 ;увеличение износа при каждом выстреле
+condition_shot_dec			= 0.0001 ;СѓРІРµР»РёС‡РµРЅРёРµ РёР·РЅРѕСЃР° РїСЂРё РєР°Р¶РґРѕРј РІС‹СЃС‚СЂРµР»Рµ
 ;-----------------------------------------------------------------------------------
 
 direction                	= 0, 0, 1
@@ -101,7 +101,7 @@ fire_distance            	= 70
 bullet_speed			    = 335
 rpm                      	= 750
 
-use_aim_bullet				= true		;Поддерживается ли первая суппер пуля
+use_aim_bullet				= true		;РџРѕРґРґРµСЂР¶РёРІР°РµС‚СЃСЏ Р»Рё РїРµСЂРІР°СЏ СЃСѓРїРїРµСЂ РїСѓР»СЏ
 time_to_aim					= 1.0	
 
 hud                      	= wpn_mauzer_hud
@@ -148,7 +148,7 @@ grenade_launcher_name 		= wpn_addon_c96_priklad
 grenade_launcher_x          = -88		; offset in inventory icon
 grenade_launcher_y          = -4
 
-;звуки
+;Р·РІСѓРєРё
 snd_draw			= weapons\c96_draw
 snd_holster			= weapons\generic_holster
 snd_shoot			= weapons\c96_shoot
@@ -161,7 +161,7 @@ snd_shoot_grenade			= weapons\gen_grenshoot
 snd_reload_grenade			= weapons\gen_grenload, 1.0, 0.8
 snd_switch					= weapons\groza_switch, 1.0, 0.5
 
-;настройки для глушителя
+;РЅР°СЃС‚СЂРѕР№РєРё РґР»СЏ РіР»СѓС€РёС‚РµР»СЏ
 silencer_hit_power       	= 0.44
 silencer_hit_impulse	 	= 10
 silencer_fire_distance   	= 250
@@ -212,7 +212,7 @@ anim_switch_grenade_off		= reload_w_gl
 anim_draw_g					= draw_w_gl
 anim_holster_g				= holster_w_gl
 
-;(режим обычной стрельбы)			  
+;(СЂРµР¶РёРј РѕР±С‹С‡РЅРѕР№ СЃС‚СЂРµР»СЊР±С‹)			  
 anim_idle_gl				= idle_w_gl
 anim_idle_gl_aim			= idle_aim_w_gl
 anim_reload_gl				= reload_w_gl
@@ -220,15 +220,15 @@ anim_draw_gl				= draw_w_gl
 anim_holster_gl				= holster_w_gl
 anim_shoot_gl				= shoot_w_gl
 
-;смещения HUD для режима приближения
+;СЃРјРµС‰РµРЅРёСЏ HUD РґР»СЏ СЂРµР¶РёРјР° РїСЂРёР±Р»РёР¶РµРЅРёСЏ
 zoom_offset             = -0.0995, 0.01, -0.05
 zoom_rotate_x           = -0.01
 zoom_rotate_y           = 0
 
-;прячем перекрестие прицела в зуме
+;РїСЂСЏС‡РµРј РїРµСЂРµРєСЂРµСЃС‚РёРµ РїСЂРёС†РµР»Р° РІ Р·СѓРјРµ
 zoom_hide_crosshair	= true
 
-;режим подствольника
+;СЂРµР¶РёРј РїРѕРґСЃС‚РІРѕР»СЊРЅРёРєР°
 grenade_normal_zoom_offset			= -0.0995, 0.01, -0.05
 grenade_normal_zoom_rotate_x		= -0.01
 grenade_normal_zoom_rotate_y		= 0
@@ -241,14 +241,14 @@ grenade_zoom_rotate_y		= 0
 [wpn_addon_c96_priklad]:identity_immunities
 $spawn			= "weapons\c96_priklad" ; option for Level Editor
 visual           	        = weapons\mauzer\wpn_c96_priklad.ogf
-description		= "Приклад к Маузер С96"
+description		= "РџСЂРёРєР»Р°Рґ Рє РњР°СѓР·РµСЂ РЎ96"
 class			= A_M209
 
 box_size		= 0
 
 cost					 = 250
-inv_name		= Приклад
-inv_name_short	= Приклад
+inv_name		= РџСЂРёРєР»Р°Рґ
+inv_name_short	= РџСЂРёРєР»Р°Рґ
 inv_weight		= 1.36
 
 inv_grid_width     = 2
@@ -275,7 +275,7 @@ grenade_vel			= 71
 
 fake_grenade_name = wpn_fake_missile2
 
-;могут ли боеприпасы быть неограниченными : 1 - могут, 0 - не могут
+;РјРѕРіСѓС‚ Р»Рё Р±РѕРµРїСЂРёРїР°СЃС‹ Р±С‹С‚СЊ РЅРµРѕРіСЂР°РЅРёС‡РµРЅРЅС‹РјРё : 1 - РјРѕРіСѓС‚, 0 - РЅРµ РјРѕРіСѓС‚
 can_be_unlimited = true ;false
 
 

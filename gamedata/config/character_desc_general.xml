@@ -4,7 +4,7 @@
 	
 
 	<specific_character id="actor" no_random = "1">
-		<name>Фотограф</name>
+		<name>Р¤РѕС‚РѕРіСЂР°С„</name>
 		<icon x="26" y="6"></icon>
 		<map_icon x="2" y="5"></map_icon>
 
@@ -78,7 +78,7 @@
 		<name>GENERATE_NAME_stalker</name>
 		<icon x="2" y="2"></icon>
 		<map_icon x="1" y="0"></map_icon>
-		<bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+		<bio>РћРїС‹С‚РЅС‹Р№ СЃС‚Р°Р»РєРµСЂ. Р”РµС‚Р°Р»СЊРЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚.</bio>
 
 		<class>Stalker_general</class>
 		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
@@ -104,7 +104,7 @@
 		<name>Osoznanie</name>
 		<icon x="2" y="2"></icon>
 		<map_icon x="1" y="0"></map_icon>
-		<bio>Представитель проекта "Осознание".</bio>
+		<bio>РџСЂРµРґСЃС‚Р°РІРёС‚РµР»СЊ РїСЂРѕРµРєС‚Р° "РћСЃРѕР·РЅР°РЅРёРµ".</bio>
 
 		<class>osoznanie</class>
 		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>

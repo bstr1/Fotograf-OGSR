@@ -1,4 +1,4 @@
-; Автомат специальный АС "Вал" (6П30)
+; РђРІС‚РѕРјР°С‚ СЃРїРµС†РёР°Р»СЊРЅС‹Р№ РђРЎ "Р’Р°Р»" (6Рџ30)
 ;--------------------------------------
 [wpn_val_haron]:identity_immunities
 GroupControlSection			= spawn_group
@@ -50,24 +50,24 @@ kill_msg_width		= 78
 kill_msg_height		= 21
 
 ;-----------------------------------------------------------------------------------
-;базовая дисперсия
+;Р±Р°Р·РѕРІР°СЏ РґРёСЃРїРµСЂСЃРёСЏ
 dispersion_start		= 0
-fire_dispersion_base		= 0.015		;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
+fire_dispersion_base		= 0.015		;СѓРіРѕР» (РІ РіСЂР°РґСѓСЃР°С…) Р±Р°Р·РѕРІРѕР№ РґРёСЃРїРµСЂСЃРёРё РѕСЂСѓР¶РёСЏ (РѕСЂСѓР¶РёСЏ Р·Р°Р¶Р°С‚РѕРіРѕ РІ С‚РёСЃРєР°С…)
 control_inertion_factor		= 1.83f
 
-;отдача
-cam_relax_speed 		= 4.75		;скорость возврата в исходное положение
-cam_dispersion 			= 0.12		;увеличения угла (в градусах) с каждым выстрелом
-cam_dispersion_inc		= 0.15		;увеличениe cam_dispersion с каждым выстрелом
-cam_dispertion_frac		= 0.69		;ствол будет подыматься на cam_dispersion*cam_dispertion_frac +- cam_dispersion*(1-cam_dispertion_frac)
-cam_max_angle			= 5.0		;максимальный угол отдачи
+;РѕС‚РґР°С‡Р°
+cam_relax_speed 		= 4.75		;СЃРєРѕСЂРѕСЃС‚СЊ РІРѕР·РІСЂР°С‚Р° РІ РёСЃС…РѕРґРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ
+cam_dispersion 			= 0.12		;СѓРІРµР»РёС‡РµРЅРёСЏ СѓРіР»Р° (РІ РіСЂР°РґСѓСЃР°С…) СЃ РєР°Р¶РґС‹Рј РІС‹СЃС‚СЂРµР»РѕРј
+cam_dispersion_inc		= 0.15		;СѓРІРµР»РёС‡РµРЅРёe cam_dispersion СЃ РєР°Р¶РґС‹Рј РІС‹СЃС‚СЂРµР»РѕРј
+cam_dispertion_frac		= 0.69		;СЃС‚РІРѕР» Р±СѓРґРµС‚ РїРѕРґС‹РјР°С‚СЊСЃСЏ РЅР° cam_dispersion*cam_dispertion_frac +- cam_dispersion*(1-cam_dispertion_frac)
+cam_max_angle			= 5.0		;РјР°РєСЃРёРјР°Р»СЊРЅС‹Р№ СѓРіРѕР» РѕС‚РґР°С‡Рё
 cam_max_angle_horz		= 8.0		;(degree) maximum shot horizontal degree 
 cam_step_angle_horz		= 0.65		;(degree) size of step camera moved in horizontal position while shooting
 
-fire_dispersion_condition_factor = 3		;увеличение дисперсии в процентах при максимальном износе 
-misfire_probability 		= 0.001	;вероятность осечки при максимальном износе 
+fire_dispersion_condition_factor = 3		;СѓРІРµР»РёС‡РµРЅРёРµ РґРёСЃРїРµСЂСЃРёРё РІ РїСЂРѕС†РµРЅС‚Р°С… РїСЂРё РјР°РєСЃРёРјР°Р»СЊРЅРѕРј РёР·РЅРѕСЃРµ 
+misfire_probability 		= 0.001	;РІРµСЂРѕСЏС‚РЅРѕСЃС‚СЊ РѕСЃРµС‡РєРё РїСЂРё РјР°РєСЃРёРјР°Р»СЊРЅРѕРј РёР·РЅРѕСЃРµ 
 misfire_condition_k		= 0.05
-condition_shot_dec 		= 0.00003	;увеличение износа при каждом выстреле
+condition_shot_dec 		= 0.00003	;СѓРІРµР»РёС‡РµРЅРёРµ РёР·РЅРѕСЃР° РїСЂРё РєР°Р¶РґРѕРј РІС‹СЃС‚СЂРµР»Рµ
 ;-----------------------------------------------------------------------------------
 
 direction            	        = 0, 0, 1
@@ -94,12 +94,12 @@ hit_type 			= fire_wound
 hit_rate			= 1.95
 
 fire_distance   	        = 230
-bullet_speed			= 380	;начальная скорость пули (реальная скорость 290 м/с)
+bullet_speed			= 380	;РЅР°С‡Р°Р»СЊРЅР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ РїСѓР»Рё (СЂРµР°Р»СЊРЅР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ 290 Рј/СЃ)
 rpm                             = 850
 rpm_empty_click 		= 400
 ; end ttc
 
-use_aim_bullet			= false	;Поддерживается ли первая суппер пуля
+use_aim_bullet			= false	;РџРѕРґРґРµСЂР¶РёРІР°РµС‚СЃСЏ Р»Рё РїРµСЂРІР°СЏ СЃСѓРїРїРµСЂ РїСѓР»СЏ
 time_to_aim			= 1.0	
 
 hud             	        = wpn_val_haron_hud
@@ -110,7 +110,7 @@ position 			= -0.026,-0.172,0
 orientation 			=  0, 0, 0
 
 ;--STRAP PARAMETERS-----------------------------------------------------------------
-;под мишкой
+;РїРѕРґ РјРёС€РєРѕР№
 strap_position         		= -0.26,-0.11,0.25  ; position (offset) and orientation of the weapon when it is strapped
 strap_orientation      		= -15,-9,110	    ; (3rd person view in degrees)
 strap_bone0			= bip01_spine2
@@ -131,7 +131,7 @@ scope_name 			= wpn_addon_scope
 scope_x 			= 37 ; offset in inventory icon
 scope_y 			= 0
 ;------------------------------  Sound of Duke -----------------------
-;звуки
+;Р·РІСѓРєРё
 snd_draw			= weapons\vintorez\vintorez_draw
 snd_holster			= weapons\rifle_holster
 snd_shoot			= weapons\vintorez\vintorez_shoot
@@ -168,15 +168,15 @@ anim_holster       = holster
 anim_shoot         = shoot
 anim_idle_sprint   = idle_sprint
 ;-----------------------------------------------------------------------------
-;смещения HUD для режима приближения
+;СЃРјРµС‰РµРЅРёСЏ HUD РґР»СЏ СЂРµР¶РёРјР° РїСЂРёР±Р»РёР¶РµРЅРёСЏ
 zoom_offset		= -0.09,0.0372,-0.080700
 zoom_rotate_x		= 0.021
 zoom_rotate_y		= 0.017900
 ;-----------------------------------------------------------------------------
-;прячем перекрестие прицела в зуме
+;РїСЂСЏС‡РµРј РїРµСЂРµРєСЂРµСЃС‚РёРµ РїСЂРёС†РµР»Р° РІ Р·СѓРјРµ
 zoom_hide_crosshair		= true
 
-;время поворота HUD (сек)
+;РІСЂРµРјСЏ РїРѕРІРѕСЂРѕС‚Р° HUD (СЃРµРє)
 zoom_rotate_time		= 0.3
 rotate_time			= 0.3
 

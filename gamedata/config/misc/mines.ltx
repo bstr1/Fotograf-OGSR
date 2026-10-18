@@ -1,21 +1,11 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;МИННЫЙ МОД BY SkyLoader;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
---Пора начинать, наверное.
-
---Ну что-ж с спавном мин разобрался, теперь со свойствами бы посидеть
-
-;Свойства активации мины
+;РЎРІРѕР№СЃС‚РІР° Р°РєС‚РёРІР°С†РёРё РјРёРЅС‹
 [mine_activation]
 starting		=	0.5,	detectors\geiger_click3, 0, 0, 0,  0,	"","idle"
 flying			=	0,	detectors\geiger_click3, 0, 0, 0,  0,	"","idle"
 idle_before_spawning	=	9,	detectors\bomb_timer, 0, 0, 0,  0,	"","idle"
 spawning		=	0.5,  	detectors\geiger_click3, 0, 0, 0,  0,	"","idle"
 
---Начнем... эмм... с простой мины...
-	
-;Мина 1
+;РњРёРЅР° 1
 [mine_1]:identity_immunities
 GroupControlSection			= spawn_group
 $spawn						= "weapons\mine\mine_1"
@@ -47,7 +37,7 @@ jump_height			= 0
 lights_enabled 		= false
 
 
-;скорости увеличения (уменьшения) 
+;СЃРєРѕСЂРѕСЃС‚Рё СѓРІРµР»РёС‡РµРЅРёСЏ (СѓРјРµРЅСЊС€РµРЅРёСЏ) 
 health_restore_speed		= 0.0			
 radiation_restore_speed		= 0.0
 satiety_restore_speed		= 0.0
@@ -56,8 +46,6 @@ bleeding_restore_speed		= 0.0
 hit_absorbation_sect		= mine_absorbation
 
 artefact_activation_seq		= mine_activation
-
---Худ... Надо с моделями как-то подумать... нифига в них не понимаю...
 
 [mine_1_hud]
 orientation             	= 0, 0, 0		
@@ -69,10 +57,8 @@ anim_hide					= holster
 anim_show					= draw
 anim_activate				= holster
 
---ну тут просто
-
 [mine_absorbation]
-burn_immunity = 1.0				;коэффициенты иммунитета 
+burn_immunity = 1.0				;РєРѕСЌС„С„РёС†РёРµРЅС‚С‹ РёРјРјСѓРЅРёС‚РµС‚Р° 
 strike_immunity = 1.0
 shock_immunity = 1.0
 wound_immunity = 1.0		
@@ -82,9 +68,8 @@ chemical_burn_immunity = 1.0
 explosion_immunity = 1.0
 fire_wound_immunity  = 1.0
 
---Опять мина новая
 
-;Мина 2
+;РњРёРЅР° 2
 [mine_2]:mine_1
 hud							= mine_2_hud
 visual				= weapons\grenade\wpn_mines_2.ogf  
@@ -99,8 +84,6 @@ hit_absorbation_sect		= mine_absorbation
 
 artefact_activation_seq		= mine_activation
 
---Блиин..... опять модееели!!!!
-
 [mine_2_hud]
 orientation             	= 0, 0, 0		
 position                	= 0, 0, 0
@@ -111,9 +94,8 @@ anim_hide					= holster
 anim_show					= draw
 anim_activate				= holster
 
---Думал думал и надумал! Эл. мина!
 
-;Мина 3
+;РњРёРЅР° 3
 [mine_3]:identity_immunities
 GroupControlSection			= spawn_group
 $spawn						= "weapons\mine\mine_3"
@@ -146,7 +128,7 @@ jump_height			= 0
 lights_enabled 		= false
 
 
-;скорости увеличения (уменьшения) 
+;СЃРєРѕСЂРѕСЃС‚Рё СѓРІРµР»РёС‡РµРЅРёСЏ (СѓРјРµРЅСЊС€РµРЅРёСЏ) 
 health_restore_speed		= 0.0			
 radiation_restore_speed		= 0.0
 satiety_restore_speed		= 0.0

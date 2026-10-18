@@ -10,14 +10,14 @@ cform               	= skeleton
 class               	= WP_AK74
 min_radius          	= 30
 max_radius          	= 100
-description		= "Пистолет-пулемёт M1A1 системы Томпсона образца 1943 года. Такое оружие поставлялось по ленд-лизу в СССР в годы Великой Отечественной Войны. Неплохое, хоть и морально устаревшее, оружие для ближнего боя с противником не отягащенным ношением бронезащиты."
+description		= "РџРёСЃС‚РѕР»РµС‚-РїСѓР»РµРјС‘С‚ M1A1 СЃРёСЃС‚РµРјС‹ РўРѕРјРїСЃРѕРЅР° РѕР±СЂР°Р·С†Р° 1943 РіРѕРґР°. РўР°РєРѕРµ РѕСЂСѓР¶РёРµ РїРѕСЃС‚Р°РІР»СЏР»РѕСЃСЊ РїРѕ Р»РµРЅРґ-Р»РёР·Сѓ РІ РЎРЎРЎР  РІ РіРѕРґС‹ Р’РµР»РёРєРѕР№ РћС‚РµС‡РµСЃС‚РІРµРЅРЅРѕР№ Р’РѕР№РЅС‹. РќРµРїР»РѕС…РѕРµ, С…РѕС‚СЊ Рё РјРѕСЂР°Р»СЊРЅРѕ СѓСЃС‚Р°СЂРµРІС€РµРµ, РѕСЂСѓР¶РёРµ РґР»СЏ Р±Р»РёР¶РЅРµРіРѕ Р±РѕСЏ СЃ РїСЂРѕС‚РёРІРЅРёРєРѕРј РЅРµ РѕС‚СЏРіР°С‰РµРЅРЅС‹Рј РЅРѕС€РµРЅРёРµРј Р±СЂРѕРЅРµР·Р°С‰РёС‚С‹."
 	
 ef_main_weapon_type		= 2
 ef_weapon_type			= 6
 
 ;-----------------------------------------------------------------------------------
-holder_range_modifier	= 1.0		       ; во сколько раз увеличивается eye_range 
-holder_fov_modifier		= 0.7              ; во сколько раз увеличивается eye_fov
+holder_range_modifier	= 1.0		       ; РІРѕ СЃРєРѕР»СЊРєРѕ СЂР°Р· СѓРІРµР»РёС‡РёРІР°РµС‚СЃСЏ eye_range 
+holder_fov_modifier		= 0.7              ; РІРѕ СЃРєРѕР»СЊРєРѕ СЂР°Р· СѓРІРµР»РёС‡РёРІР°РµС‚СЃСЏ eye_fov
 ;-----------------------------------------------------------------------------------
 
 
@@ -39,8 +39,8 @@ single_handed			= 0
 slot 					= 2		; // secondary
 animation_slot			= 2		; type of the animation that will be used
 
-inv_name	        	= "Томпсон"
-inv_name_short			= "Томпсон"
+inv_name	        	= "РўРѕРјРїСЃРѕРЅ"
+inv_name_short			= "РўРѕРјРїСЃРѕРЅ"
 inv_weight				= 4.78
 
 inv_grid_width			= 4
@@ -54,21 +54,21 @@ kill_msg_width		= 87
 kill_msg_height		= 24
 
 ;-----------------------------------------------------------------------------------
-;базовая дисперсия
+;Р±Р°Р·РѕРІР°СЏ РґРёСЃРїРµСЂСЃРёСЏ
 fire_dispersion_base		= 0.28
 control_inertion_factor		= 1.4f
 
-;отдача
-cam_relax_speed        		= 5.2;0.25	;скорость возврата в исходное положение
-cam_dispersion         		= 0.25	;увеличения угла (в градусах) с каждым выстрелом
-cam_dispersion_inc		= 0.1	;увеличениe cam_dispersion с каждым выстрелом
-cam_dispertion_frac		= 1.0	;ствол будет подыматься на cam_dispersion*cam_dispertion_frac +- cam_dispersion*(1-cam_dispertion_frac)
-cam_max_angle			= 8.2	;максимальный угол отдачи
+;РѕС‚РґР°С‡Р°
+cam_relax_speed        		= 5.2;0.25	;СЃРєРѕСЂРѕСЃС‚СЊ РІРѕР·РІСЂР°С‚Р° РІ РёСЃС…РѕРґРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ
+cam_dispersion         		= 0.25	;СѓРІРµР»РёС‡РµРЅРёСЏ СѓРіР»Р° (РІ РіСЂР°РґСѓСЃР°С…) СЃ РєР°Р¶РґС‹Рј РІС‹СЃС‚СЂРµР»РѕРј
+cam_dispersion_inc		= 0.1	;СѓРІРµР»РёС‡РµРЅРёe cam_dispersion СЃ РєР°Р¶РґС‹Рј РІС‹СЃС‚СЂРµР»РѕРј
+cam_dispertion_frac		= 1.0	;СЃС‚РІРѕР» Р±СѓРґРµС‚ РїРѕРґС‹РјР°С‚СЊСЃСЏ РЅР° cam_dispersion*cam_dispertion_frac +- cam_dispersion*(1-cam_dispertion_frac)
+cam_max_angle			= 8.2	;РјР°РєСЃРёРјР°Р»СЊРЅС‹Р№ СѓРіРѕР» РѕС‚РґР°С‡Рё
 cam_max_angle_horz		= 6.0	;(degree) maximum shot horizontal degree 
 cam_step_angle_horz		= 0.5	;(degree) size of step camera moved in horizontal position while shooting
 
-fire_dispersion_condition_factor = 5	;увеличение дисперсии в процентах при максимальном износе 
-misfire_probability 		= 0.003	;вероятность осечки при максимальном износе 
+fire_dispersion_condition_factor = 5	;СѓРІРµР»РёС‡РµРЅРёРµ РґРёСЃРїРµСЂСЃРёРё РІ РїСЂРѕС†РµРЅС‚Р°С… РїСЂРё РјР°РєСЃРёРјР°Р»СЊРЅРѕРј РёР·РЅРѕСЃРµ 
+misfire_probability 		= 0.003	;РІРµСЂРѕСЏС‚РЅРѕСЃС‚СЊ РѕСЃРµС‡РєРё РїСЂРё РјР°РєСЃРёРјР°Р»СЊРЅРѕРј РёР·РЅРѕСЃРµ 
 misfire_condition_k			= 0.05
 condition_shot_dec 			= 0.0003
 
@@ -98,11 +98,11 @@ hit_impulse		 	= 3
 hit_type 			= fire_wound
 hit_rate	                = 1.88
 fire_distance                   = 100
-bullet_speed			= 320	;начальная скорость пули
+bullet_speed			= 320	;РЅР°С‡Р°Р»СЊРЅР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ РїСѓР»Рё
 rpm                             = 700
 ; end ttc
 
-use_aim_bullet				= true		;Поддерживается ли первая суппер пуля
+use_aim_bullet				= true		;РџРѕРґРґРµСЂР¶РёРІР°РµС‚СЃСЏ Р»Рё РїРµСЂРІР°СЏ СЃСѓРїРїРµСЂ РїСѓР»СЏ
 time_to_aim					= 1.0	
 
 hud                      	= wpn_thompson_hud
@@ -113,7 +113,7 @@ position         	        = -0.026, -0.097, 0.0
 orientation      	        = 0, 0, 0
 
 ;--STRAP PARAMETERS-----------------------------------------------------------------
-;под мишкой
+;РїРѕРґ РјРёС€РєРѕР№
 strap_position         		= -0.26,-0.11,0.25			; position (offset) and orientation of the weapon when it is strapped
 strap_orientation      		= -15,-9,110				; (3rd person view in degrees)
 strap_bone0					= bip01_spine2
@@ -147,7 +147,7 @@ grenade_launcher_name 		= wpn_addon_grenade_launcher_m203
 grenade_launcher_x 			= 109
 grenade_launcher_y 			= 30
 
-;звуки
+;Р·РІСѓРєРё
 snd_draw					= weapons\sig550\draw
 snd_holster					= weapons\sig550\holster
 snd_shoot					= new_weapons\usp\usp_shoot
@@ -198,8 +198,8 @@ anim_holster			= holster
 anim_shoot				= shoot
 anim_idle_sprint			= idle_sprint
 			
-;анимации с подключенным подствольником
-;(режим стрельбы из подствольника)
+;Р°РЅРёРјР°С†РёРё СЃ РїРѕРґРєР»СЋС‡РµРЅРЅС‹Рј РїРѕРґСЃС‚РІРѕР»СЊРЅРёРєРѕРј
+;(СЂРµР¶РёРј СЃС‚СЂРµР»СЊР±С‹ РёР· РїРѕРґСЃС‚РІРѕР»СЊРЅРёРєР°)
 anim_idle_g					= idle_grenade
 anim_idle_g_aim				= idle_w_gl_aim
 anim_reload_g				= reload_grenade
@@ -208,7 +208,7 @@ anim_switch_grenade_on			= switch_on
 anim_switch_grenade_off			= switch_off
 anim_draw_g					= draw_grenade
 anim_holster_g				= holster_grenade
-;(режим обычной стрельбы)			  
+;(СЂРµР¶РёРј РѕР±С‹С‡РЅРѕР№ СЃС‚СЂРµР»СЊР±С‹)			  
 anim_idle_gl				= idle_w_gl
 anim_idle_gl_aim				= idle_w_gl_aim
 anim_reload_gl				= reload_w_gl
@@ -216,21 +216,21 @@ anim_draw_gl				= draw_w_gl
 anim_holster_gl				= holster_w_gl
 anim_shoot_gl				= shoot_w_gl
 
-;смещения HUD для режима приближения
+;СЃРјРµС‰РµРЅРёСЏ HUD РґР»СЏ СЂРµР¶РёРјР° РїСЂРёР±Р»РёР¶РµРЅРёСЏ
 zoom_offset			= -0.1495,0.06,-0
 zoom_rotate_x		= 0
 zoom_rotate_y		= 0
 
-;прячем перекрестие прицела в зуме
+;РїСЂСЏС‡РµРј РїРµСЂРµРєСЂРµСЃС‚РёРµ РїСЂРёС†РµР»Р° РІ Р·СѓРјРµ
 zoom_hide_crosshair	= true
 
-;тоже самое, но для прицепленого подствольника
-;режим обычной стрельбы
+;С‚РѕР¶Рµ СЃР°РјРѕРµ, РЅРѕ РґР»СЏ РїСЂРёС†РµРїР»РµРЅРѕРіРѕ РїРѕРґСЃС‚РІРѕР»СЊРЅРёРєР°
+;СЂРµР¶РёРј РѕР±С‹С‡РЅРѕР№ СЃС‚СЂРµР»СЊР±С‹
 zoom_offset			= -0.1495,0.06,-0
 zoom_rotate_x		= 0
 zoom_rotate_y		= 0
 
-;режим подствольника
+;СЂРµР¶РёРј РїРѕРґСЃС‚РІРѕР»СЊРЅРёРєР°
 grenade_zoom_offset			= 0,0,0
 grenade_zoom_rotate_x		= 0
 grenade_zoom_rotate_y		= 0

@@ -17,7 +17,7 @@
 	<texture_e>ui\ui_btn_mm_e</texture_e>
 	<texture_t>ui\ui_btn_mm_t</texture_t>
 	<texture_h>ui\ui_btn_mm_h</texture_h>
-		<text>Аномалия обнаружена</text>
+		<text>РђРЅРѕРјР°Р»РёСЏ РѕР±РЅР°СЂСѓР¶РµРЅР°</text>
 	</btn_1>
 
 	<form x="415" y="168" width="560" height="460">

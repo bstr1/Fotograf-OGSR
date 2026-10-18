@@ -174,13 +174,50 @@ function log3(fmt, ...)
 		args[i] = tostring_all(args[i])
 	end
 	local res, msg = pcall(string.format, fmt, unpack(args))
+	--
+	--if res then msg = msg.."\nlog3 called from: "..debug.traceback() end
+	--
 	if not res then --Если произошла ошибка
-		msg = "!!log3 failed for string[" .. tostring(fmt) .. "]: "..msg.."\n"..debug.traceback()
+		msg = "!!log3 failed: "..msg.."\n"..debug.traceback()
 	end
 	log1(msg)
-	return msg
 end
---==============================================================================================
+-----------------------------------------------------------------------------------------
+local logs_cach = {}
+--Функция создаёт новый лог-файл и выводит текст в него.
+--fname - название лог-файла, например "Anomaly_Evader". Он будет создан в папке logs, к названию добавится дата и время создания.
+--fmt, ... - строка формата с параметрами как и в функции log3
+function log4(fname, fmt, ...)
+	local f = logs_cach[fname]
+	if not f then
+		local dt = os.date("*t")
+		local fpath = getFS():update_path("$logs$", string.format("%s_%02d.%02d.%02d_%02d.%02d.%02d.log",fname,dt.day,dt.month,dt.year,dt.hour,dt.min,dt.sec))
+		f = io.open(fpath, "w")
+		logs_cach[fname] = f
+	end
+	local args = {...}
+	for i=1, #args do
+		args[i] = tostring_all(args[i])
+	end
+	local res, msg = pcall(string.format, fmt, unpack(args))
+	if not res then
+		msg = "!!log4 failed: "..msg.."\n"..debug.traceback()
+	end
+	f:write(msg..'\n')
+	f:flush()
+end
+-----------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------
+function log2(fmt, ...) --Простая обёртка для log1.
+	log1(fmt:format(...))
+end
+-----------------------------------------------------------------------------------------
+function clear_log() --Очистить лог
+	cmd("clear_log")	
+end
+-----------------------------------------------------------------------------------------
+--*****************************************************************************************************
 function abort(...)
 	log1("!!****************************[ABORT]*********************************")
 	log1(debug.traceback())

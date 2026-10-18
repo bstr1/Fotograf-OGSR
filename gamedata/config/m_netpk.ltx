@@ -1,14 +1,14 @@
 ;====================================================================
-;--/ для модуля "Чтение-запись net-пакетов" (m_netpk.script)
+;--/ РґР»СЏ РјРѕРґСѓР»СЏ "Р§С‚РµРЅРёРµ-Р·Р°РїРёСЃСЊ net-РїР°РєРµС‚РѕРІ" (m_netpk.script)
 ;--/ last edit: 27.01.2012 by Artos
 ;====================================================================
-[options] ;--/ дебаговые опции для модуля "Нет-пакеты"
-disable_convert_client2server = false ;--/ отключить проверку на тип объекта и конвертирование в серверную сущность
-disable_convert_custom_data   = false ;--/ отключить конвертирование 'custom_data' из строки в таблицу (и обратно)
-disable_net_dummy             = false ;--/ отключить использование 'net_dummy' в хелперах
-enable_debug                  = false ;--/ (false|true) режим отладки (от|в)ключен
+[options] ;--/ РґРµР±Р°РіРѕРІС‹Рµ РѕРїС†РёРё РґР»СЏ РјРѕРґСѓР»СЏ "РќРµС‚-РїР°РєРµС‚С‹"
+disable_convert_client2server = false ;--/ РѕС‚РєР»СЋС‡РёС‚СЊ РїСЂРѕРІРµСЂРєСѓ РЅР° С‚РёРї РѕР±СЉРµРєС‚Р° Рё РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°РЅРёРµ РІ СЃРµСЂРІРµСЂРЅСѓСЋ СЃСѓС‰РЅРѕСЃС‚СЊ
+disable_convert_custom_data   = false ;--/ РѕС‚РєР»СЋС‡РёС‚СЊ РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°РЅРёРµ 'custom_data' РёР· СЃС‚СЂРѕРєРё РІ С‚Р°Р±Р»РёС†Сѓ (Рё РѕР±СЂР°С‚РЅРѕ)
+disable_net_dummy             = false ;--/ РѕС‚РєР»СЋС‡РёС‚СЊ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ 'net_dummy' РІ С…РµР»РїРµСЂР°С…
+enable_debug                  = false ;--/ (false|true) СЂРµР¶РёРј РѕС‚Р»Р°РґРєРё (РѕС‚|РІ)РєР»СЋС‡РµРЅ
 ;--/ --------------------------------------------------------------------------------------------------------
-[clsid_to_class] ;--/ массив соответствий (TODO: перепроверить)
+[clsid_to_class] ;--/ РјР°СЃСЃРёРІ СЃРѕРѕС‚РІРµС‚СЃС‚РІРёР№ (TODO: РїРµСЂРµРїСЂРѕРІРµСЂРёС‚СЊ)
 ;--/ script_clsid            = CLSID      | cse_server_object_class              | server_object_class      | comments
 ;--/ --------------------------------------------------------------------------------------------------------
 art_bast_artefact            = unknown    , cse_alife_item_artefact              ,                          ;--/
@@ -137,7 +137,7 @@ script_stalker               = AI_STL_S   , se_stalker                          
 trader                       = AI_TRADE_S , cse_alife_trader                     ,                          ;--/
 script_trader                = AI_TRD_S   , se_trader                            , se_trader                ;--/ SHoC|STCS
 script_zone                  = SCRIPTZN   , cse_alife_space_restrictor           ,                          ;--/
-sim_faction                  = SFACTION   , se_sim_faction                       ,                          ;--/ STCS Внимание! Только для чтения (в доработке!)
+sim_faction                  = SFACTION   , se_sim_faction                       ,                          ;--/ STCS Р’РЅРёРјР°РЅРёРµ! РўРѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ (РІ РґРѕСЂР°Р±РѕС‚РєРµ!)
 smart_terrain                = SMRTTRRN   , se_smart_terrain                     ,                          ;--/
 smart_zone                   = SMRTZN     , cse_alife_smart_zone                 ,                          ;--/
 smart_cover                  = SMRTCOVR   , cse_smart_cover                      ,                          ;--/ STCS|SCoP
@@ -257,6 +257,6 @@ obj_fake_s                   = II_FAKE    , cse_alife_item                      
 ;--/ by Malandrinus, OGS Evolution Team
 custom_storage               = CUST_ST    , cse_alife_dynamic_object             , se_custom_storage        ;--/
 ;--/---------------------------------------------------------------------------------------------------------
-not_used                     = II_DOCF    , unknown                              ,                          ;--/# в качестве примера!
+not_used                     = II_DOCF    , unknown                              ,                          ;--/# РІ РєР°С‡РµСЃС‚РІРµ РїСЂРёРјРµСЂР°!
 
 ;====================================================================
