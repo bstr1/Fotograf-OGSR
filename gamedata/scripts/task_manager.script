@@ -452,8 +452,9 @@ function CRandomTask:action_give_task(actor, npc, p1, p2)
   
   printf("p1 = %s p2 = %s", tostring(p1), tostring(p2))
 
-  local task_id=self.task_id_by_yes_phrase_id[p2]
+  local task_id=self.task_id_by_yes_phrase_id[tonumber(p2)]
   local task_desc = self.task_info[task_id]
+  if task_id == nil or task_desc == nil then return end
   
   task:load(task_desc.complex_type)
   task:set_title(task_desc.type)
@@ -468,7 +469,7 @@ function CRandomTask:action_give_task(actor, npc, p1, p2)
   if task_desc.target_objects ~= nil then
     self.task_info[task_id].selected_target = task_desc.target_objects[math.random(table.getn(task_desc.target_objects))]
     printf("TARGET DEBUG INFO")
-    printf("selected = %s", tostring(self.task_info[self.task_id_by_yes_phrase_id[p2]].selected_target))
+    printf("selected = %s", tostring(self.task_info[self.task_id_by_yes_phrase_id[tonumber(p2)]].selected_target))
     print_table(task_desc.target_objects)
   end
 	if task_desc.start_info_portion~=nil and not has_alife_info(task_desc.start_info_portion)then
@@ -524,8 +525,8 @@ function CRandomTask:action_give_task(actor, npc, p1, p2)
   db.actor:give_task(task,time,false)
 
   --' дизаблим все остальные задани€ данного типа, так как игрок не может одновременно обладать двум€ задани€ми одного типа.
-  self.task_info[self.task_id_by_yes_phrase_id[p2]].status = "selected"
-  self.active_task_by_type[task_desc.complex_type] = self.task_id_by_yes_phrase_id[p2]
+  self.task_info[self.task_id_by_yes_phrase_id[tonumber(p2)]].status = "selected"
+  self.active_task_by_type[task_desc.complex_type] = self.task_id_by_yes_phrase_id[tonumber(p2)]
   for k,v in pairs(self.task_info) do
     if v.complex_type == task_desc.complex_type then
       v.enabled = false
@@ -534,10 +535,11 @@ function CRandomTask:action_give_task(actor, npc, p1, p2)
 end
 --' ќтказ игроком от квеста
 function CRandomTask:action_refuse_task(actor, npc, p1, p2)
-  local task_desc = self.task_info[self.task_id_by_yes_phrase_id[p2]]
+  local task_desc = self.task_info[self.task_id_by_yes_phrase_id[tonumber(p2)]]
+  if task_desc == nil then return end
 
   --' ƒелаем доступными все задани€ данного типа
-  self.task_info[self.task_id_by_yes_phrase_id[p2]].status = "refused"
+  self.task_info[self.task_id_by_yes_phrase_id[tonumber(p2)]].status = "refused"
   -- ”дал€ем цель из списка 
   amk_remove_target_id_from_kill_targets(self.task_info[self.active_task_by_type[task_desc.complex_type]].selected_target)
   -------------------------
@@ -714,13 +716,14 @@ function CRandomTask:action_task_show(npc, actor)
 end
 --' ѕроверка доступен ли текущий таск дл€ выдачи
 function CRandomTask:task_avail(actor, npc, p1, p2, p3, calculate)
-  local task_desc = self.task_info[self.task_id_by_init_phrase_id[p3]]
+  local task_desc = self.task_info[self.task_id_by_init_phrase_id[tonumber(p3) or -1]]
+  if task_desc == nil and calculate ~= "reset" then return false end
   --' ≈сли calculate == true то нужно провер€ть check_task_props, инача просто вернуть значени€.
   if calculate == "reset" then    
     self.current_parent_type_prior = {}
     return
   elseif calculate == true then
-    self:check_task_props(self.task_id_by_init_phrase_id[p3])
+    self:check_task_props(self.task_id_by_init_phrase_id[tonumber(p3)])
 
     local t = task_desc.enabled and task_desc.enabled_props and task_desc.init_condition == nil
 
@@ -742,9 +745,9 @@ function CRandomTask:task_avail(actor, npc, p1, p2, p3, calculate)
     return false
   end
 
---' printf("@@@avail %s", tostring(self.task_id_by_init_phrase_id[p3]))
---' printf("@@@enabled %s", tostring(self.task_info[self.task_id_by_init_phrase_id[p3]].enabled))
---' printf("@@@enabled_props %s", tostring(self.task_info[self.task_id_by_init_phrase_id[p3]].enabled_props))
+--' printf("@@@avail %s", tostring(self.task_id_by_init_phrase_id[tonumber(p3)]))
+--' printf("@@@enabled %s", tostring(self.task_info[self.task_id_by_init_phrase_id[tonumber(p3)]].enabled))
+--' printf("@@@enabled_props %s", tostring(self.task_info[self.task_id_by_init_phrase_id[tonumber(p3)]].enabled_props))
   
   return task_desc.enabled and 
        task_desc.enabled_props and
@@ -877,8 +880,8 @@ function CRandomTask:actor_update()
 end
 --' ѕровер€етс€ €вл€етс€ ли текущий таск выданным игроку
 function CRandomTask:active_task(actor, npc, p1, p2, p3)
-  return self.task_info[self.task_id_by_init_phrase_id[p3]].status == "selected" or
-          self.task_info[self.task_id_by_init_phrase_id[p3]].status == "completed"
+  return self.task_info[self.task_id_by_init_phrase_id[tonumber(p3)]].status == "selected" or
+          self.task_info[self.task_id_by_init_phrase_id[tonumber(p3)]].status == "completed"
 end
 
 function CRandomTask:make_task_failed(task_id)
@@ -892,7 +895,7 @@ function CRandomTask:completed_task(actor, npc, p1, p2, p3)
 --  amk.mylog("Checking quest items p1 "..tostring(p1).." p2 "..tostring(p2).." p3 "..tostring(p3))
   if not p3 then return false end
 --  amk.mylog("chp1")
-  local tid=self.task_id_by_desc_phrase_id[p2]
+  local tid=self.task_id_by_desc_phrase_id[tonumber(p2)]
 --  amk.mylog("chp2")
   if not tid then return false end
 --  amk.mylog("chp3")
@@ -954,12 +957,13 @@ end
 function CRandomTask:task_reward(npc, actor, p1, p2)
 --  amk.mylog("Rewarding p1 "..tostring(p1).." p2 "..tostring(p2))
   local parent = self:get_parent(npc) 
-  local v=self.task_id_by_completed_phrase_id[p2]
+  local v=self.task_id_by_completed_phrase_id[tonumber(p2)]
 --  amk.mylog("Rewarding ")
 
 --  for k,v in pairs(self.active_task_by_type) do 
   if true then
     local task_desc = self.task_info[v]
+    if task_desc == nil then return end
     if task_desc.status == "completed" and task_desc.parent == parent then
       --' «абираем у игрока квестовый предмет.
       local can_finish = true

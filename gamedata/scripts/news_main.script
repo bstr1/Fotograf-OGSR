@@ -235,7 +235,7 @@ end
 
 function on_death(victim, killer)
 	if (victim ~= nil) then
-		if (_g.IsStalker(victim)) then
+		if (_G.IsStalker(victim)) then
 			local m_obj
 			if (isGameObject(victim)) then
 				m_obj = victim
@@ -281,7 +281,7 @@ function on_stalker_death(victim_, killer_)
 		else
 			killer = get_obj(killer_.id)
 		end
-		if (_g.IsMonster(killer)) then
+		if (_G.IsMonster(killer)) then
 			m_killer = format_death_by_monster(killer)
 			m_killer_str = get_monster_name(killer, 2)
 		elseif (IsAnomaly(killer)) then
@@ -380,7 +380,7 @@ function on_npc_death(victim_, killer_)
 			killer = get_obj(killer_.id)
 		end
 		if (killer) then
-			if (_g.IsMonster(killer)) then
+			if (_G.IsMonster(killer)) then
 				m_killer = format_death_by_monster(killer)
 			elseif (IsNpcStalker(killer)) then -- Хм, и кто ж его так? Или свои, или ГГ
 				if (IsNpcActor(killer)) then
@@ -510,7 +510,7 @@ end
 function get_npc_community(obj)
 	local m_s_c = ""
 	if (obj) then
-		if(_g.IsMonster(obj)) then
+		if(_G.IsMonster(obj)) then
 			m_s_c = get_monster_name(obj, 1)
 		else
 			if (obj.character_community) then				
@@ -564,7 +564,7 @@ function get_object_name(obj)
 end
 
 function get_weapon_type(weapon)
-	if(weapon and _g.isWeapon(weapon)) then
+	if(weapon and _G.isWeapon(weapon)) then
 		local id = get_weapon_name(weapon)
 		if id == nil then 
 			return 0
@@ -725,7 +725,7 @@ function get_weapon_type(weapon)
 end
 
 function get_weapon_name(weapon)
-	if(weapon and _g.isWeapon(weapon)) then
+	if(weapon and _G.isWeapon(weapon)) then
 		local result = ""
 		if weapon.section then
 			result = weapon:section()
@@ -750,7 +750,7 @@ function get_npc_weapon(obj)
 			if (ob.active_item) then
 				local m_act = ob:active_item()
 				if (m_act) then
-					if (_g.isWeapon(m_act)) then
+					if (_G.isWeapon(m_act)) then
 						return m_act
 					else
 						mylog("get_npc_weapon - m_act is not a weapon - "..get_clsid(m_act))				
@@ -776,7 +776,7 @@ function get_monster_name(obj, index)
 	local m_comm = ""
 	local m_n = ""
 	if index == nil then index = 1 end
-	if(_g.IsMonster(obj)) then
+	if(_G.IsMonster(obj)) then
 		local m_clsid = get_clsid(obj)
 		if m_clsid then
 			m_comm = news_data.monster_classes[m_clsid]
@@ -824,7 +824,7 @@ end
 function get_monster_rank(obj)
 	local m_rank = ""
 	if (obj) then
-		if (obj and _g.IsMonster(obj)) then
+		if (obj and _G.IsMonster(obj)) then
 			m_rank = ranks.get_obj_rank_name(obj)
 			if (m_rank == nil) then
 				m_rank = ""
@@ -860,7 +860,7 @@ function get_anomaly_name(obj, index)
 end
 
 function IsNpcOther(obj)
-	if (obj and _g.IsStalker(obj)) then
+	if (obj and _G.IsStalker(obj)) then
 		local m_comm  = get_npc_community(obj)
 		if (m_comm == "actor"  or m_comm == "actor_dolg" or m_comm == "actor_freedom" or m_comm == "stalker" or m_comm == "dolg" or m_comm == "freedom" or m_comm == "hunter" or m_comm == "nebo" or m_comm == "newstalk") then
 			return false
@@ -872,7 +872,7 @@ function IsNpcOther(obj)
 end
 
 function IsNpcStalker(obj)
-	if (obj and _g.IsStalker(obj)) then
+	if (obj and _G.IsStalker(obj)) then
 		local m_comm  = get_npc_community(obj)
 		if (m_comm == "actor" or m_comm == "actor_dolg" or m_comm == "actor_freedom" or m_comm == "stalker" or m_comm == "dolg" or m_comm == "freedom" or m_comm == "hunter" or m_comm == "nebo" or m_comm == "newstalk") then
 			if (obj.name and obj:name() ~= "agr_ratcatcher") then
@@ -884,7 +884,7 @@ function IsNpcStalker(obj)
 end
 
 function IsNpcActor(obj)
-	if (obj and _g.IsStalker(obj)) then
+	if (obj and _G.IsStalker(obj)) then
 		local m_comm  = get_npc_community(obj)
 		if (m_comm == "actor" or m_comm == "actor_dolg" or m_comm == "actor_freedom") then
 			return true
@@ -1091,11 +1091,11 @@ function format_death_hear_sounds(victim_, killer_, weapon_)
 					m_s = format_template_hear(victim_, m_hear_a, m_hear_z)
 				end			
 			end
-		elseif (killer_ and victim_ and _g.IsMonster(victim_) ~= true and (IsAnomaly(killer_) or _g.IsMonster(killer_))) then -- Если killer == аномалия и victim ~= монстры - то крики
+		elseif (killer_ and victim_ and _G.IsMonster(victim_) ~= true and (IsAnomaly(killer_) or _G.IsMonster(killer_))) then -- Если killer == аномалия и victim ~= монстры - то крики
 			m_hear_a = "Слышал ужасные крики"
 			m_hear_z = "слышал ужасные крики"
 			m_s = format_template_hear(victim_, m_hear_a, m_hear_z)
-		elseif ((killer_ and _g.IsMonster(killer_)) or (victim_ and _g.IsMonster(victim_))) then -- Если killer == монстры  или victim == монстры - то звуки
+		elseif ((killer_ and _G.IsMonster(killer_)) or (victim_ and _G.IsMonster(victim_))) then -- Если killer == монстры  или victim == монстры - то звуки
 			m_hear_a = "Слышал страшный рык"
 			m_hear_z = "слышал страшный рык"
 			m_s = format_template_hear(victim_, m_hear_a, m_hear_z)
@@ -1120,7 +1120,7 @@ function format_template_killer_act(obj)
 		local m_class = ""
 		local m_level = get_point_description(get_object_levelname(obj), get_object_position(obj))
 		if (m_level == "") then return "" end
-		if (_g.IsMonster(obj)) then
+		if (_G.IsMonster(obj)) then
 			m_class = get_monster_name(obj, 4)
 		else
 			local m_comm  = get_npc_community(obj)
@@ -1644,7 +1644,7 @@ function check_news()
 		for k, v in pairs(table_spawned) do	
 			on_spawn_group(v.community, v.level, v.position, v.count, v.o_type)
 		end
-		_g.clear_table(table_spawned)
+		_G.clear_table(table_spawned)
 	end
 	
 	amk.oau_reason="cn killed_by_actor"
@@ -1652,7 +1652,7 @@ function check_news()
 		for k, v in pairs(table_killed_by_actor) do	
 			on_hero_seen(v.community, v.level, v.position, v.count, v.o_type)
 		end
-		_g.clear_table(table_killed_by_actor)
+		_G.clear_table(table_killed_by_actor)
 	end
 	
 	if (timer_last_showed + timer_show_freq < game_minutes()) then
@@ -2146,7 +2146,7 @@ function do_seen_monster()
 										where = m_where
 									end
 								end
-								if (_g.IsMonster(obj)) then
+								if (_G.IsMonster(obj)) then
 									local tbl = amk.read_monster_params(obj)
 									local cd = amk.parse_custom_data(tbl.custom)
 									if not cd.smart_terrains then cd.smart_terrains={} end
@@ -2497,7 +2497,7 @@ end
 function on_offline_monster_found(who, object)
 	if (who and object) then
 		local s_enemy = ""
-		if (_g.IsMonster(object)) then
+		if (_G.IsMonster(object)) then
 			s_enemy = get_monster_name(object, 2)
 		end
 		mylog(get_npc_name(who).." воюет с "..s_enemy)
@@ -2507,7 +2507,7 @@ end
 function on_offline_enemy_found(who, object)
 	if (who and object) then
 		local s_enemy = ""
-		if (_g.IsStalker(object)) then
+		if (_G.IsStalker(object)) then
 			s_enemy = get_npc_community(object)
 		end
 		mylog(get_npc_name(who).." воюет с "..s_enemy)
@@ -2517,7 +2517,7 @@ end
 -- Кого-то грохнули в оффлайн.
 function on_offline_death(victim, killer, weapon)
 	if (victim and killer) then
-		if (_g.IsStalker(victim)) then
+		if (_G.IsStalker(victim)) then
 			if (IsNpcStalker(victim)) then
 				on_offline_stalker_death(victim, killer, weapon)
 			else
@@ -2539,7 +2539,7 @@ function on_offline_stalker_death(victim_, killer_, weapon_)
 	m_victim = format_death_stalker_corpse(victim_)
 	local m_level = get_level_name(get_object_levelname(victim_))
 	if (killer_) then
-		if (_g.IsMonster(killer_)) then
+		if (_G.IsMonster(killer_)) then
 			m_killer = format_death_by_monster(killer_)
 			m_killer_str = get_monster_name(killer_, 2)
 		elseif (IsAnomaly(killer_)) then
@@ -2619,7 +2619,7 @@ function on_offline_npc_death(victim_, killer_, weapon_)
 	local aid = nil
 	m_victim = format_death_npc_corpse(victim_)
 	if (killer_) then
-		if (_g.IsMonster(killer_)) then
+		if (_G.IsMonster(killer_)) then
 			m_killer = format_death_by_monster(killer_)
 		elseif (IsNpcStalker(killer_)) then -- Хм, и кто ж его так? Или свои, или ГГ
 			m_killer = format_death_by_weapon(weapon_)
@@ -2688,11 +2688,11 @@ end
 
 function on_offline_corpse_found(who, object)
 	if (who and object) then
-		if (_g.IsStalker(who) and IsNpcStalker(who)) then
+		if (_G.IsStalker(who) and IsNpcStalker(who)) then
 			local s_corpse = ""
-			if (_g.IsMonster(object)) then
+			if (_G.IsMonster(object)) then
 				s_corpse = format_template_corpse_monster(object)
-			elseif (_g.IsStalker(object)) then
+			elseif (_G.IsStalker(object)) then
 				if (IsNpcStalker(object)) then
 					s_corpse = format_template_corpse_stalker(object)			
 				else

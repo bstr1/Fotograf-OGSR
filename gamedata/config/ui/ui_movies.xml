@@ -71,7 +71,7 @@
 			<sound>characters_voice\scenario\video\dream_rats</sound>
 			<pause_state>on</pause_state>
 			<function_on_stop>xr_effects.end_x18_dream</function_on_stop>
-			<can_be_stopped>off</can_be_stopped>
+			 
 			<video_wnd x="0" y="0" width="1024" height="768" stretch="1">
 				<texture x="0" y="1" width="512" height="286">intro\dream_rats</texture>
 			</video_wnd>
@@ -91,7 +91,7 @@
 			<sound>characters_voice\scenario\video\dream_sarcofag</sound>
 			<pause_state>on</pause_state>
 			<function_on_stop>xr_effects.end_radar_dream</function_on_stop>
-			<can_be_stopped>off</can_be_stopped>
+			 
 			<video_wnd x="0" y="0" width="1024" height="768" stretch="1">
 				<texture x="0" y="1" width="512" height="286">intro\dream_sarcofag</texture>
 			</video_wnd>
@@ -110,7 +110,7 @@
 		<item type="video">
 			<sound>characters_voice\scenario\video\dream_doctor</sound>
 			<pause_state>on</pause_state>
-			<can_be_stopped>off</can_be_stopped>
+			 
 			<function_on_stop>xr_effects.end_yantar_dream</function_on_stop>
 			<video_wnd x="0" y="0" width="1024" height="768" stretch="1">
 				<texture x="0" y="1" width="512" height="286">intro\dream_doctor</texture>
@@ -130,7 +130,7 @@
 		<item type="video">
 			<sound>characters_voice\scenario\video\final_blind</sound>
 			<pause_state>on</pause_state>
-			<can_be_stopped>off</can_be_stopped>
+			 
 			<video_wnd x="0" y="0" width="1024" height="768" stretch="1">
 				<texture x="0" y="1" width="512" height="286">intro\final_blind</texture>
 			</video_wnd>
@@ -150,7 +150,7 @@
 			<sound>characters_voice\scenario\video\final_gold</sound>
 			<pause_state>on</pause_state>
 			<function_on_stop>xr_effects.game_credits</function_on_stop>
-			<can_be_stopped>off</can_be_stopped>
+			 
 			<video_wnd x="0" y="0" width="1024" height="768" stretch="1">
 				<texture x="0" y="1" width="512" height="286">intro\final_gold</texture>
 			</video_wnd>
@@ -170,7 +170,7 @@
 			<sound>characters_voice\scenario\video\final_to_monolith</sound>
 			<pause_state>on</pause_state>
 			<function_on_stop>xr_effects.game_credits</function_on_stop>
-			<can_be_stopped>off</can_be_stopped>
+			 
 			<video_wnd x="0" y="0" width="1024" height="768" stretch="1">
 				<texture x="0" y="1" width="512" height="286">intro\final_to_monolith</texture>
 			</video_wnd>
@@ -190,7 +190,7 @@
 			<sound>characters_voice\scenario\video\final_apocal</sound>
 			<pause_state>on</pause_state>
 			<function_on_stop>xr_effects.game_credits</function_on_stop>
-			<can_be_stopped>off</can_be_stopped>
+			 
 			<video_wnd x="0" y="0" width="1024" height="768" stretch="1">
 				<texture x="0" y="1" width="512" height="286">intro\final_apocal</texture>
 			</video_wnd>
@@ -209,7 +209,7 @@
 		<item type="video">
 			<sound>characters_voice\scenario\video\final_foto</sound>
 			<pause_state>on</pause_state>
-			<can_be_stopped>off</can_be_stopped>
+			 
 			<function_on_stop>fotograf.foto_credits</function_on_stop>
 			<video_wnd x="0" y="0" width="1024" height="768" stretch="1">
 				<texture x="0" y="0" width="1280" height="720">intro\final_1280_720</texture>
@@ -229,7 +229,7 @@
 		<item type="video">
 			<sound>characters_voice\scenario\video\dream_doctor_2</sound>
 			<pause_state>on</pause_state>
-			<can_be_stopped>off</can_be_stopped>
+			 
 			<function_on_stop>xr_effects.game_credits</function_on_stop>
 			<video_wnd x="0" y="0" width="1024" height="768" stretch="1">
 				<texture x="0" y="1" width="512" height="286">intro\dream_doctor_2</texture>
@@ -270,7 +270,7 @@
 			<sound>characters_voice\scenario\video\dream_01</sound>
 			<pause_state>on</pause_state>
 			<function_on_stop>sleep_manager.stopper</function_on_stop>
-			<can_be_stopped>off</can_be_stopped>
+			 
 			<video_wnd x="0" y="0" width="1024" height="768" stretch="1">
 				<texture x="0" y="0" width="848" height="480">sleep\dream_01</texture>
 			</video_wnd>
@@ -290,7 +290,7 @@
 			<sound>characters_voice\scenario\video\dream_02</sound>
 			<pause_state>on</pause_state>
 			<function_on_stop>sleep_manager.stopper3</function_on_stop>
-			<can_be_stopped>off</can_be_stopped>
+			 
 			<video_wnd x="0" y="0" width="1024" height="768" stretch="1">
 				<texture x="0" y="0" width="576" height="320">sleep\dream_02</texture>
 			</video_wnd>
@@ -310,7 +310,7 @@
 			<sound>characters_voice\scenario\video\dream_03</sound>
 			<pause_state>on</pause_state>
 			<function_on_stop>sleep_manager.stopper</function_on_stop>
-			<can_be_stopped>off</can_be_stopped>
+			 
 			<video_wnd x="0" y="0" width="1024" height="768" stretch="1">
 				<texture x="0" y="0" width="848" height="480">sleep\dream_03</texture>
 			</video_wnd>
@@ -330,7 +330,7 @@
 			<sound>characters_voice\scenario\video\dream_04</sound>
 			<pause_state>on</pause_state>
 			<function_on_stop>sleep_manager.stopper</function_on_stop>
-			<can_be_stopped>off</can_be_stopped>
+			 
 			<video_wnd x="0" y="0" width="1024" height="768" stretch="1">
 				<texture x="0" y="0" width="704" height="396">sleep\dream_04</texture>
 			</video_wnd>
@@ -350,7 +350,7 @@
 			<sound>characters_voice\scenario\video\dream_05</sound>
 			<pause_state>on</pause_state>
 			<function_on_stop>sleep_manager.stopper</function_on_stop>
-			<can_be_stopped>off</can_be_stopped>
+			 
 			<video_wnd x="0" y="0" width="1024" height="768" stretch="1">
 				<texture x="0" y="0" width="704" height="396">sleep\dream_05</texture>
 			</video_wnd>
@@ -370,7 +370,7 @@
 			<sound>characters_voice\scenario\video\dream_06</sound>
 			<pause_state>on</pause_state>
 			<function_on_stop>sleep_manager.stopper</function_on_stop>
-			<can_be_stopped>off</can_be_stopped>
+			 
 			<video_wnd x="0" y="0" width="1024" height="768" stretch="1">
 				<texture x="0" y="0" width="704" height="396">sleep\dream_06</texture>
 			</video_wnd>
@@ -390,7 +390,7 @@
 			<sound>characters_voice\scenario\video\dream_07</sound>
 			<pause_state>on</pause_state>
 			<function_on_stop>sleep_manager.stopper</function_on_stop>
-			<can_be_stopped>off</can_be_stopped>
+			 
 			<video_wnd x="0" y="0" width="1024" height="768" stretch="1">
 				<texture x="0" y="0" width="848" height="480">sleep\dream_07</texture>
 			</video_wnd>
@@ -410,7 +410,7 @@
 			<sound>characters_voice\scenario\video\dream_08</sound>
 			<pause_state>on</pause_state>
 			<function_on_stop>sleep_manager.stopper3</function_on_stop>
-			<can_be_stopped>off</can_be_stopped>
+			 
 			<video_wnd x="0" y="0" width="1024" height="768" stretch="1">
 				<texture x="0" y="0" width="704" height="396">sleep\dream_08</texture>
 			</video_wnd>
@@ -430,7 +430,7 @@
 			<sound>characters_voice\scenario\video\dream_09</sound>
 			<pause_state>on</pause_state>
 			<function_on_stop>sleep_manager.stopper2</function_on_stop>
-			<can_be_stopped>off</can_be_stopped>
+			 
 			<video_wnd x="0" y="0" width="1024" height="768" stretch="1">
 				<texture x="0" y="0" width="1024" height="576">sleep\dream_09</texture>
 			</video_wnd>
@@ -450,7 +450,7 @@
 			<sound>characters_voice\scenario\video\dream_10</sound>
 			<pause_state>on</pause_state>
 			<function_on_stop>sleep_manager.stopper</function_on_stop>
-			<can_be_stopped>off</can_be_stopped>
+			 
 			<video_wnd x="0" y="0" width="1024" height="768" stretch="1">
 				<texture x="0" y="0" width="848" height="480">sleep\dream_10</texture>
 			</video_wnd>
@@ -470,7 +470,7 @@
 			<sound>characters_voice\scenario\video\dream_11</sound>
 			<pause_state>on</pause_state>
 			<function_on_stop>sleep_manager.stopper2</function_on_stop>
-			<can_be_stopped>off</can_be_stopped>
+			 
 			<video_wnd x="0" y="0" width="1024" height="768" stretch="1">
 				<texture x="0" y="0" width="1024" height="576">sleep\dream_11</texture>
 			</video_wnd>
@@ -490,7 +490,7 @@
 			<sound>characters_voice\scenario\video\dream_12</sound>
 			<pause_state>on</pause_state>
 			<function_on_stop>sleep_manager.stopper2</function_on_stop>
-			<can_be_stopped>off</can_be_stopped>
+			 
 			<video_wnd x="0" y="0" width="1024" height="768" stretch="1">
 				<texture x="0" y="0" width="1024" height="576">sleep\dream_12</texture>
 			</video_wnd>
@@ -510,7 +510,7 @@
 			<sound>characters_voice\scenario\video\dream_13</sound>
 			<pause_state>on</pause_state>
 			<function_on_stop>sleep_manager.stopper</function_on_stop>
-			<can_be_stopped>off</can_be_stopped>
+			 
 			<video_wnd x="0" y="0" width="1024" height="768" stretch="1">
 				<texture x="0" y="0" width="848" height="480">sleep\dream_13</texture>
 			</video_wnd>
@@ -530,7 +530,7 @@
 			<sound>characters_voice\scenario\video\dream_14</sound>
 			<pause_state>on</pause_state>
 			<function_on_stop>sleep_manager.stopper</function_on_stop>
-			<can_be_stopped>off</can_be_stopped>
+			 
 			<video_wnd x="0" y="0" width="1024" height="768" stretch="1">
 				<texture x="0" y="0" width="848" height="480">sleep\dream_14</texture>
 			</video_wnd>
@@ -550,7 +550,7 @@
 			<sound>characters_voice\scenario\video\dream_15</sound>
 			<pause_state>on</pause_state>
 			<function_on_stop>sleep_manager.stopper</function_on_stop>
-			<can_be_stopped>off</can_be_stopped>
+			 
 			<video_wnd x="0" y="0" width="1024" height="768" stretch="1">
 				<texture x="0" y="0" width="848" height="480">sleep\dream_15</texture>
 			</video_wnd>
@@ -570,7 +570,7 @@
 			<sound>characters_voice\scenario\video\gluk_01</sound>
 			<pause_state>on</pause_state>
 			<function_on_stop>foto.stopper</function_on_stop>
-			<can_be_stopped>off</can_be_stopped>
+			 
 			<video_wnd x="0" y="0" width="1024" height="768" stretch="1">
 				<texture x="0" y="0" width="848" height="480">sleep\gluk_01</texture>
 			</video_wnd>
@@ -608,7 +608,7 @@
 		<item type="video">
 			<sound>characters_voice\human_01\monolith\states\sleep\sleep_6.ogg</sound>
 			<pause_state>off</pause_state>
-			<can_be_stopped>off</can_be_stopped>
+			 
 			<function_on_stop>sleep_manager.dreamer</function_on_stop>
 			<video_wnd x="0" y="0" width="1024" height="768" stretch="1">
 				<texture x="0" y="1" width="1024" height="768">intro\intro_back</texture>
@@ -648,7 +648,7 @@
 			<sound>characters_voice\scenario\video\intro_foto</sound>
 			<pause_state>on</pause_state>
             <function_on_stop>fotograf.end_foto_video</function_on_stop>
-			<can_be_stopped>off</can_be_stopped>
+			 
 			<video_wnd x="0" y="0" width="1024" height="768" stretch="1">
 	<texture x="0" y="0" width="1024" height="768">intro\intro_foto</texture>
 			</video_wnd>

@@ -103,6 +103,46 @@
 <infoportion_complete>heli_all</infoportion_complete>
 </objective>
 <objective>
+<text>Снять данные с Миротворческого Корпуса.</text>
+<icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
+<infoportion_complete>heli_predbannik</infoportion_complete>
+</objective>
+<objective>
+<text>Снять данные с Болот.</text>
+<icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
+<infoportion_complete>heli_swamp</infoportion_complete>
+</objective>
+<objective>
+<text>Снять данные с Промзоны.</text>
+<icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
+<infoportion_complete>heli_promzone</infoportion_complete>
+</objective>
+<objective>
+<text>Снять данные с Аномального Леса.</text>
+<icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
+<infoportion_complete>heli_aver</infoportion_complete>
+</objective>
+<objective>
+<text>Снять данные с Мёртвого Города.</text>
+<icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
+<infoportion_complete>heli_deadcity</infoportion_complete>
+</objective>
+<objective>
+<text>Снять данные с Бара.</text>
+<icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
+<infoportion_complete>heli_bar</infoportion_complete>
+</objective>
+<objective>
+<text>Снять данные с Червоного Дышла.</text>
+<icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
+<infoportion_complete>heli_dyshlo</infoportion_complete>
+</objective>
+<objective>
+<text>Снять данные с Припяти.</text>
+<icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
+<infoportion_complete>heli_pripyat</infoportion_complete>
+</objective>
+<objective>
 <text>Принести данные полковнику Петренко.</text>
 <map_location_type hint="Полковник Петренко">blue_location</map_location_type>
 <object_story_id>komandir_petrenko</object_story_id>

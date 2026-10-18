@@ -1,0 +1,38 @@
+local function on_info(npc, info_id)
+    if level.name() == "l05_bar" then
+        if info_id == "bar_narod_spawn" then
+
+            local obj = alife():object("bar_bar_visitor_hunter")
+            if obj then
+                alife():release(obj, true)
+            end
+            log3("delete govno bar")
+        end
+    end
+end
+
+function attach( sm )
+    -- sm:subscribe({ signal = "on_before_first_update", fun = this.on_first_update })
+    -- sm:subscribe({ signal = "on_before_spawn", fun = this.on_spawn })
+    sm:subscribe({ signal = "on_info",         fun = on_info})
+end
+
+-- function on_npc_spawn(obj)
+	-- if obj:name() ~= "bar_bar_visitor_hunter" then return end
+	-- fix_hunter_now(obj)
+-- end
+
+-- function fix_bar_visitor_hunter()
+	-- if level.name() ~= "l05_bar" then return end
+	-- local sobj = alife():object("bar_bar_visitor_hunter")
+	-- if not sobj then return end
+	-- local obj = level.object_by_id(sobj.id)
+	-- if not obj then return end
+	-- fix_hunter_now(obj)
+-- end
+
+-- function fix_hunter_now(obj)
+	-- alife():teleport_object(obj:id(), vector():set(128.041992, -4.839024, 27.847557), 35769, 237)
+	-- obj:set_patrol_path("bar_bar_visitor_hunter_walk", patrol.start, patrol.continue, true)
+	-- log1("[dsh_fixes] bar_bar_visitor_hunter fixed")
+-- end

@@ -8,7 +8,6 @@
 #include "ui\map_spots_bar.xml"
 #include "ui\map_spots_military.xml"
 #include "ui\map_spots_radar.xml"
-#include "ui\map_spots_mp.xml"
 #include "ui\map_spots_relations.xml"
 #include "ui\map_spots_lchangers.xml"
 
@@ -700,5 +699,14 @@
 	<pseudo_gigant_target_spot x="0" y="0" width="10" height="10" alignment="c" stretch="1" scale="1">
 		<texture x="0" y="82" width="11" height="11">ui\ui_zone_spots</texture>
 	</pseudo_gigant_target_spot>
-	
+
+
+    <mp_hit_sector_location hint="hit_sector" ttl="3" pos_to_actor="1">
+        <mini_map spot="mp_hit_sector_mini_spot" />
+    </mp_hit_sector_location>
+
+    <mp_hit_sector_mini_spot x="0" y="0" width="80" height="256" heading="1" alignment="c">
+        <texture x="305" y="762" width="80" height="256">ui\ui_hud</texture>
+    </mp_hit_sector_mini_spot>
+
 </map_spots>

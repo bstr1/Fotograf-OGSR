@@ -273,7 +273,14 @@
 <info_portion id="heli_start"></info_portion>
 <info_portion id="heli_reader"></info_portion>
 <info_portion id="heli_all"></info_portion>
-
+<info_portion id="heli_predbannik"></info_portion>
+<info_portion id="heli_swamp"></info_portion>
+<info_portion id="heli_promzone"></info_portion>
+<info_portion id="heli_aver"></info_portion>
+<info_portion id="heli_deadcity"></info_portion>
+<info_portion id="heli_bar"></info_portion>
+<info_portion id="heli_dyshlo"></info_portion>
+<info_portion id="heli_pripyat"></info_portion>
 
 
 </game_information_portions>

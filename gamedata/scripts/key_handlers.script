@@ -1,0 +1,159 @@
+-- key_handlers.script для NS OGSR
+-- Прыжки с Shift + функции pokazometr
+--P - КОТИК
+--NUMPAD1 - Здоровье
+--NUMPAD2 - показометр
+--NUMPAD3 - удалить метки
+--NUMPAD4 - чистильщик
+--NUMPAD5 - рестикторы
+--NUMPAD6 - бабло 50к
+
+local shift_state = false
+
+local keys = {
+    ["press"] = {
+        -- Прыжки вперёд при зажатом Shift
+        [DIK_keys.DIK_X] = {
+            func = function()
+                if shift_state and level.present() and db.actor and db.actor:alive() then
+                    db.actor:set_actor_position(device().cam_pos:add(device().cam_dir:mul(3.0)))
+                end
+            end
+        },
+        [DIK_keys.DIK_C] = {
+            func = function()
+                if shift_state and level.present() and db.actor and db.actor:alive() then
+                    db.actor:set_actor_position(device().cam_pos:add(device().cam_dir:mul(10.0)))
+                end
+            end
+        },
+        [DIK_keys.DIK_V] = {
+            func = function()
+                if shift_state and level.present() and db.actor and db.actor:alive() then
+                    db.actor:set_actor_position(device().cam_pos:add(device().cam_dir:mul(30.0)))
+                end
+            end
+        },
+
+        -- === Функции pokazometr ===
+        [DIK_keys.DIK_P] = {                    -- P
+            func = function()
+                if pokazometr and pokazometr.final_victory then
+                    pokazometr.final_victory(r)
+                end
+            end
+        },
+
+        [DIK_keys.DIK_NUMPAD1] = {              -- Numpad 1
+            func = function()
+                if pokazometr and pokazometr.zdoroviy then
+                    pokazometr.zdoroviy()
+                end
+            end
+        },
+
+        [DIK_keys.DIK_NUMPAD2] = {              -- Numpad 2
+            func = function()
+                if pokazometr and pokazometr.set_spots then
+                    pokazometr.set_spots()
+                end
+            end
+        },
+
+        -- [DIK_keys.DIK_NUMPAD3] = {              -- Numpad 3
+            -- func = function()
+                -- if pokazometr and pokazometr.pda_verb then
+                    -- pokazometr.pda_verb()
+                -- end
+            -- end
+        -- },
+
+        [DIK_keys.DIK_NUMPAD4] = {              -- Numpad 4
+            func = function()
+                if pokazometr and pokazometr.cleaner then
+                    pokazometr.cleaner()
+                end
+            end
+        },
+		
+        [DIK_keys.DIK_NUMPAD5] = {              -- Numpad 5
+            func = function()
+                if pokazometr and pokazometr.show_restrictors then
+                    pokazometr.show_restrictors()
+                end
+            end
+        },
+
+        [DIK_keys.DIK_NUMPAD7] = {              -- Numpad 6
+            func = function()
+                if pokazometr and pokazometr.bablo then
+                    pokazometr.bablo()
+                end
+            end
+        },
+
+        [DIK_keys.DIK_NUMPAD6] = {              -- Numpad 7
+            func = function()
+                if pokazometr and pokazometr.nuh_na_vse then
+                    pokazometr.nuh_na_vse()
+                end
+            end
+        },
+
+        [DIK_keys.DIK_NUMPAD9] = {              -- Numpad 7
+            func = function()
+                if ban and ban.ban then
+                    ban.ban()
+                end
+            end
+        },
+
+        [DIK_keys.DIK_RBRACKET] = {             -- Кнопка ]
+            func = function()
+                if pokazometr and pokazometr.show_mobs then
+                    pokazometr.show_mobs()
+                end
+            end
+        },
+
+        -- Shift
+        [DIK_keys.DIK_LSHIFT] = {
+            func = function()
+                shift_state = true
+            end
+        },
+    },
+
+    ["release"] = {
+        [DIK_keys.DIK_LSHIFT] = {
+            func = function()
+                shift_state = false
+            end
+        },
+    }
+}
+
+-- ==================== Обработчики клавиш ====================
+function handler_press(key, binded_action)
+    handler(key, true)
+end
+
+function handler_release(key, binded_action)
+    handler(key, false)
+end
+
+function handler(key, state)
+    local handler_base = keys[state and "press" or "release"]
+    if handler_base then
+        local handler_key = handler_base[key]
+        if handler_key and handler_key.func then
+            handler_key.func()
+        end
+    end
+end
+
+-- ====================== ATTACH ======================
+function attach(sm)
+    sm:subscribe({ signal = "on_key_down", fun = this.handler_press })
+    sm:subscribe({ signal = "on_key_up",   fun = this.handler_release })
+end

@@ -388,7 +388,7 @@ function action_inhide:initialize()
   local stop=false
   for r=r0,0,-1 do
     for ang=ang0,ang0+360,30 do
-      local v=utils.vector_rotate_y(v0,ang)
+      local v=vector_rotate_y(v0,ang)
       local lvid=level.vertex_in_direction(self.st.hide.center,v,r)
       if npc:accessible(lvid) and (not self.st.hide.place[lvid]) and
          amk_mod.check_npc_in_hideout(level.vertex_position(lvid),self.st.hide) and 
@@ -511,7 +511,7 @@ function find_open_dir(npc,excludeang,excludewidth)
   local preflook=vector():set(0,0,0)
   local prefang=0
   for ang=excludeang+excludewidth/2,excludeang+360-excludewidth/2,20 do
-    local vec1=utils.vector_rotate_y(vec,ang)
+    local vec1=vector_rotate_y(vec,ang)
     local vtx=level.vertex_in_direction(npc:level_vertex_id(),vec1,100)
     local dist=level.vertex_position(vtx):distance_to(npc:position())
     if dist>maxdist then

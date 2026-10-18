@@ -1,0 +1,906 @@
+--4etkiu
+function log(s)
+    if s then
+        -- Пишет напрямую в лог без мусора в консоли и фризов
+        _G.log1("---POKAZOMETR: " .. tostring(s))
+    end
+end
+
+
+local show_pos_enable = false			-- отображение динамических сообщений
+function enable( v )				-- вызывать pokazometr.enable( true ) из net_spawn() актора
+	if v then show_pos_enable = true	-- и pokazometr.enable( false ) из net_destroy() актора
+	else					-- иначе - вылеты при повторной загрузке.
+		show_pos_enable = false		-- к сожалению, возможность сделать скрипт, не требующий
+		this.show_pos_stop()		-- изменения в других файлах, дружными усилиями сообщества
+	end					-- мУдоделов заблокирована наглухо.
+end
+
+local t_exclusive = {
+	"controller_mini", "zat_ohotnik_dog1", "zat_ohotnik_dog2", "zat_ohotnik_dog3", "quest_venom", "boar_child", "chimera_quest", "dog_quest", "kontrik_electro", "cat_quest", "tank_zasada", "quest_karlito", "rat_saharo", "labirint_monolit_shahter",
+	"white_wolf", "dead_mono_labirint", "ohota_burer", "wolffrend_zaton", "bibliofrend_zaton", "knife_sucker", "hlist_zombied", "psydog_saharov", "cat_ystinov", "gigant_swamp",
+	"biomassa_big_kuzmat", "capitan_filatov", "esc_stalker_corpse", "atp_trupak_disk", "himik_trup", "fenrir_jupiter", "yan_specnaz_dead", "suslov_marsh", "dar_stalker0000", "zombied_pripyat_scene",
+	"dar_stalker0000_0000", "suslov", "x16_stalker_ghost", "yantar_dead_scientist_01", "himik_zl", "aes_stalker", "blizn_krug_dead", "amk_embankment_soldat1", "amk_mini_bar_kulinar",
+	"amk_mini_bar_voron", "dead_korchagin_military", "dead_military_bunker1", "dead_military_bunker2", "dead_military_esc", "esc_trup_bratka", "esc_trup_scene", "gar_bandit_post_1", "gar_sniper_bandit",
+	"kat_bandit_0006", "mil_Svoboda_zombi_stalker", "peshera_stalker", "village_stalk_dead3", "warlab_kostolom_dead", "generators_pantera_dead", "trupak_v_anomalii", "trupak_vert_krusha", "countryman_friend",
+	"trupak_na_2verte", "trupak_2vert_s_zapiskoy", "trupak_truba", "village_brat_dead", "hospital_muha_trup", "muha_die", "peshera_stalker_dead", "lim_strannik_dead", "ataker_bandit_2", "my_cat", "base_kitty",
+	"forest_lastday_dead", "brainlab_ecolog_trupik", "yan_stalker", "dshor_leila", "dshor_hornet", "esc_akims_trups", "dogfrend", "esc_akims_trups2", "shaxter_flesh2", "zombied_experiment", "war_kostolom_dead",
+	"esc_buddy1", "pes_buddy", "chees2_trup_vzruv_beter1", "chees2_trup_vzruv_beter2", "chees2_trup_vzruv_beter3", "zombied_experiment_1", "zombik_exper", "chees2_trup_vzruv_beter4", "zat_elza_sos1", "zat_elza_sos2"
+}
+local string_sub = string.sub
+local lobj_by_id, add_spot
+local sim, gg
+local actor
+local level_id
+local particles = {}
+local t_labels = {}	-- при установке метки перед level.map_add_object_spot() заносить сюда,вот так: t_labels[i] = "тип метки", иначе при повторных вызовах движок придет в изумление
+local spot_mode = 0
+local t_names, t_sect, t_anoms, t_mobs = {}, {}, {}, {}
+local show_mob_type = 0
+local show_items_mode = 0
+local b_off = false
+local r_off = false
+local t_pp = {}
+local fly_vel, fly_pos = false, vector():set( 0, 0, 0 )
+local fly_test_tm = 0
+local snd
+local t_snd = {"monsters\\cat\\attack_hit", }
+local victory_snd_obj = nil -- Хранилище для объекта звука
+local c_ibox = clsid.inventory_box
+local c_af = 93
+local c_box = 89
+local c_rest = clsid.script_restr
+local c_npc = clsid.script_stalker
+local c_tport = 178
+local c_turret = 92
+local c_explosive = 79
+local show_pos_wnd = 0
+local msg_tm, msg_cnt, msg_fps = 0, 1, 0
+local info_static1, info_static2
+local test_w, test_c
+local t_disabled_anoms = {}
+
+
+function reinit()	-- делаем все красиво и "идеологически правильно"
+	-- чтобы можно было подключать в любом месте и не получить при этом странное
+
+	if not db.actor then return false end	-- вызвали из странной позы
+
+	if not sim then	-- первый раз
+		actor = db.actor
+		sim, gg = alife(), game_graph()
+		lobj_by_id = level.object_by_id
+		add_spot = level.map_add_object_spot
+
+		level_id = sim:level_id()
+
+for _, v in ipairs({
+    "lekarstvo", "proviziya", "doc_krol", "propusk", "propusk1",
+    "flyer", "barman_pismo", "doctor_pismo", "metka_fab", "metka_pekar",
+    "sidor_pismo", "voronin_pismo", "pismo_brown", "voronin_pismo2",
+    "pda_mir", "pda_nebo", "karta_bar", "doktor_flashka", "doc_tele",
+    "foto_news", "foto_01", "foto_02",
+    "levsha_decoder", "anom_zond", "anom_pribor", "pda_lukash", "pda_boom",
+    "objectiv", "maloy_pda", "lavrov_pda", "bloknot_foto", "info_actor",
+    "pda_agent_mk", "pda_agent_prom", "pda_agent_aver", "plan_baza",
+    "haron_case", "hunter_case", "koran",
+    "microscope", "pechat_mashinka", "raciya_new", "chess", "planshetka",
+    "memory_module", "kolba", "tiski", "plata", "vidik", "icona", "koloda",
+    "samopisec", "table_lampa", "fonarik", "yaschik_freedom",
+    "filin_pribor", "filin_priemnik", "wulf_case",
+    "shema_labs", "coder_x18", "instrument_case", "pda_pmc_aver",
+    "manuscript", "kastrula", "pda_pmc_dyshlo", "razuvaev_pda",
+    "codes_pda", "karta_peschery"
+}) do t_sect[v] = true end
+
+-- аномалии
+for _, v in ipairs({
+    {"anomaly_buzz_location", clsid.zone_buzz_s}, {"anomaly_ameba_location", clsid.zone_bfuzz_s},
+    {"anomaly_elec_location", clsid.zone_electra_s}, {"anomaly_grav_location", clsid.zone_galant_s},
+    {"anomaly_ice_location", clsid.zone_ice_s}, {"anomaly_bald_location", clsid.zone_mbald_s},
+    {"anomaly_minc_location", clsid.zone_mincer_s}, {"anomaly_burn_location", clsid.zone_zharka_s},
+    {"anomaly_zone_location", clsid.zone_radioactive}, {"anomaly_zone_location", clsid.zone_radioactive_s},
+    {"anomaly_zone_location", 187}
+}) do if v[2] then t_anoms[v[2]] = v[1] end end
+
+-- монстры
+for _, v in ipairs({
+    {"monster_part_location", clsid.bloodsucker_s}, {"monster_part_location", clsid.boar_s},
+    {"monster_part_location", clsid.dog_s}, {"monster_part_location", clsid.flesh_s},
+    {"monster_part_location", clsid.pseudodog_s}, {"monster_part_location", clsid.burer_s},
+    {"monster_part_location", clsid.cat_s}, {"monster_part_location", clsid.chimera_s},
+    {"monster_part_location", clsid.controller_s}, {"monster_part_location", clsid.fracture_s},
+    {"monster_part_location", clsid.poltergeist_s}, {"monster_part_location", clsid.gigant_s},
+    {"monster_part_location", clsid.zombie_s}, {"monster_part_location", clsid.snork_s},
+    {"monster_part_location", clsid.tushkano_s}, {"monster_part_location", clsid.psy_dog_s}
+}) do if v[2] then t_mobs[v[2]] = v[1] end end
+	end
+
+	for i, v in pairs( t_labels ) do	-- убираем старые метки, чтобы не приводить движок в изумление
+		if sim:object( i ) and level.map_has_object_spot( i, v ) ~= 0 then
+			level.map_remove_object_spot(  i, v )
+		end
+	end
+
+	t_labels = {}
+
+	return true
+end
+
+function del_spots()	-- Удаление меток вручную, чтобы не мельтешили
+	for i, v in pairs( t_labels ) do
+		if sim:object( i ) and level.map_has_object_spot( i, v ) ~= 0 then
+			level.map_remove_object_spot(  i, v )
+		end
+	end
+	t_labels = {}
+	amk.send_tip( "Метки удалены" )
+	--clear_bad_objects()
+end
+
+
+local t_useful_items = {}
+local show_items_mode = 0
+
+function show_items()
+	if db.actor then actor = db.actor
+	else return
+	end
+
+	for k, v in pairs( t_useful_items ) do v[2] = 0 end
+
+	local lobj_by_id = level.object_by_id
+	local add_spot = level.map_add_object_spot
+	local sim, gg = alife(), game_graph()
+
+	local level_id = sim:level_id()
+	local sys_ini = system_ini()
+
+	local obj, item, gvid, cls_id
+	local t, c
+
+	for i = 1, 65534 do	-- Ищем вообще все существующие объекты в игре
+		obj = sim:object( i )
+		if obj then
+			if obj.parent_id == 65535 then	-- лежат на земле
+				gvid = obj.m_game_vertex_id	-- только те, что на текущей локации
+				if gg:valid_vertex_id( gvid ) then
+					if gg:vertex( gvid ):level_id() == level_id then
+						t = t_useful_items[obj:section_name()]
+						if not t then
+							c = obj:section_name()
+							c = ( sys_ini:line_exist( c, "cost" )
+								and sys_ini:r_float( c, "cost" ) ) or -1
+							t = { c, 0 }
+							t_useful_items[obj:section_name()] = t
+						end
+
+						if ( t[1] ~= -1 ) and ( obj.parent_id == 65535 ) then
+							t[2] = t[2] + 1
+							t_labels[i] = "green_location"
+							add_spot( i, "green_location",
+								string.format( "%s y: %.03f",
+								obj:name(), obj.position.y ) )
+						end
+	end	end	end	end	end
+
+	for k, v in pairs( t_useful_items ) do
+		if v[1] ~= -1 then log( string.format( "sect: %s, n: %s", k, v[2] ) ) end
+	end
+	--amk.send_tip( "Показываем подбираемое" )
+end
+
+
+-- Вывод меток на арты, разбиваемые ящики, тайники и прочее, что вписали в таблички в reinit
+function set_spots()
+    if not reinit() then return end
+    
+    if show_items_mode == 0 then 
+        show_items_mode = 1 -- показываем арты/ящики/тайники
+    elseif show_items_mode == 1 then -- показываем то, что можно взять
+        show_items_mode = 2
+        show_items()
+        return
+    else
+        show_items_mode = 0 -- сброс меток
+        return
+    end
+
+    local obj, gvid, cls_id
+
+    for i = 1, 65534 do -- Ищем вообще все существующие объекты в игре
+        obj = sim:object( i )
+        if obj then
+            cls_id = obj:clsid()
+            
+            -- 1. Артефакты
+            if cls_id == c_af then
+                if obj.parent_id == 65535 then -- лежат на земле
+                    gvid = obj.m_game_vertex_id 
+                    if gg:valid_vertex_id( gvid ) then
+                        if gg:vertex( gvid ):level_id() == level_id then
+                            t_labels[i] = "artefact_location"
+                            add_spot( i, "artefact_location", obj:name() )
+                        end
+                    end
+                end
+
+            -- 2. Тайники (инвентарные ящики)
+            elseif ( cls_id == c_ibox ) and ( obj.position.y >= -290 ) then
+                gvid = obj.m_game_vertex_id 
+                if gg:valid_vertex_id( gvid ) then
+                    if gg:vertex( gvid ):level_id() == level_id then
+                        local box = lobj_by_id( i ) -- только те, что в онлайне
+                        if box and not box:is_inv_box_empty() then ---------------- и с хабаром 
+                            t_labels[i] = "habar_clear_location"
+                            add_spot( i, "habar_clear_location", obj:name() .. " y = " .. tostring( obj.position.y ) )
+                        end
+                    end
+                end
+
+            -- 3. Разбиваемые ящики (деревянные/металлические короба)
+            elseif cls_id == c_box then
+                gvid = obj.m_game_vertex_id
+                if gg:valid_vertex_id( gvid ) then
+                    if gg:vertex( gvid ):level_id() == level_id then
+                        local ini = obj:spawn_ini() -- только те, из которых что-то выпадает
+                        if ini and ini:section_exist( "drop_box" ) then
+                            t_labels[i] = "green_location"
+                            add_spot( i, "green_location", obj:name() )
+                        end
+                    end
+                end
+
+            -- 4. Объекты по секции (твой список предметов)
+            elseif t_sect[obj:section_name()] then
+                -- Проверка: ставим метку только если предмет валяется в мире (не у NPC)
+                if obj.parent_id == 65535 then
+                    gvid = obj.m_game_vertex_id
+                    if gg:valid_vertex_id( gvid ) then
+                        if gg:vertex( gvid ):level_id() == level_id then
+                            t_labels[i] = "red_location"
+                            add_spot( i, "red_location", obj:name() )
+                        end
+                    end
+                end
+
+            -- 5. Объекты по уникальному имени
+            elseif t_names[obj:name()] then
+                -- Здесь тоже добавил проверку на родителя, на всякий случай
+                if obj.parent_id == 65535 then
+                    gvid = obj.m_game_vertex_id
+                    if gg:valid_vertex_id( gvid ) then
+                        if gg:vertex( gvid ):level_id() == level_id then
+                            t_labels[i] = "green_location"
+                            add_spot( i, "green_location", obj:name() )
+                        end
+                    end
+                end
+            end
+        end 
+    end
+end
+
+
+
+
+
+
+
+
+
+-- Показ рестрикторов
+function show_restrictors()	-- Показ рестрикторов с логикой и телепортов
+	if not reinit() then return end
+
+	local sys_ini = system_ini()
+
+	for k, v in pairs( t_pp ) do	-- останавливаем и удаляем старые париклы в любом случае
+		if v and v:playing() then v:stop() end
+	end
+	t_pp = {}
+
+	if r_off then	-- переключатель для "включить/выключить"
+		r_off = false
+		--amk.send_tip( "%c[255,1,255,1]Показ рестрикторов отключен" )
+		return
+	end
+
+	r_off = true	-- следующий вызов - выключение
+
+	local obj, gvid, p, sect, cls_id
+
+	for i = 1, 65534 do	-- Ищем вообще все существующие объекты в игре
+		obj = sim:object( i )
+		if obj then
+			cls_id = obj:clsid()
+			if cls_id == c_rest then	-- рестриктор
+				gvid = obj.m_game_vertex_id	-- только те, что на текущей локации
+				if gg:valid_vertex_id( gvid )
+				  and gg:vertex( gvid ):level_id() == level_id then
+
+					local ini = obj:spawn_ini()	-- только те, которые что-то делают
+					if ini and ini:section_exist( "logic" ) then	-- есть секция с логикой
+
+						t_labels[i] = "red_location"
+						add_spot( i, "red_location", obj:name()
+							.. " y: " .. tostring( obj.position.y ) )
+						-- получаем партиклю
+						p = particles_object(
+							"anomaly2\\gravity_damage_02_smoke" )    --- PLK сменил свечение как у лехи в паке ЗЧ
+						t_pp[i] = p	-- сохраняем, чтоб работала,
+								-- и чтобы было можно потом удалить
+						p:play_at_pos( obj.position )	-- запуск
+
+						-- Отлов и вывод логики в лог. Не трогать!
+						-- нужно, если придется что-то странное разребать
+						-- log( "space_restr: " .. obj:name()
+						--	.. " lvid: " .. obj.m_level_vertex_id )
+						-- if string.find( obj:name(), "art_bul" ) then
+						--	log( "space_restr: " .. obj:name()
+						--		.. " lvid: " .. obj.m_level_vertex_id )
+						--	log( "lines:" .. tostring( ini:line_count( "logic" ) ) )
+						--	local r, k, v
+						--	for ii = 0, ini:line_count( "logic" ) - 1 do
+						--		r, k, v = ini:r_line( "logic", ii, "", "" )
+						--		log( tostring( ii ) .. ": ", k )
+						--		get_console():execute( string.format(
+						--			"load ~%s~: [%s]", k or "",
+						--			-- обрезка слишком длинных строк,
+						--			-- иначе вылет
+						--			string.sub( ( v or "" ), 1, 150 ) ) )
+						--	end
+						--	get_console():execute( "flush" )
+						-- end
+					end
+				end 
+
+			elseif cls_id == c_tport then	-- Телепорты
+				gvid = obj.m_game_vertex_id	-- только те, что на текущей локации
+				if gg:valid_vertex_id( gvid ) then
+					if gg:vertex( gvid ):level_id() == level_id then
+
+						sect = obj:section_name()
+						local s = sys_ini:line_exist( sect, "script_binding" )
+						  and sys_ini:r_string( sect, "script_binding" )
+
+						if s == "bind_mteleport.bind" then
+							-- log( obj:name() .. " cls: " .. tostring( obj:clsid() ) )
+							t_labels[i] = "gps_stalker"
+							add_spot( i, "gps_stalker", obj:name()   --- PLK  Взято с ЗЧ + свечение так же
+								.. " y: " .. tostring( obj.position.y ) )
+							p = particles_object(
+								"anomaly2\\generator\\anomaly_teleport_00001" )
+							t_pp[i] = p
+							p:play_at_pos( obj.position )
+						end
+					end
+	end	end	end	end
+
+	--amk.send_tip( "%c[255,1,255,1]Отображение рестрикторов и телепортов включено" )
+end
+
+function nuh_na_vse()	-- метки на ВСЕ объекты на локации
+	if not reinit() then return end
+
+	local pos = actor:position()
+	local obj, gvid, ini, s
+	for i = 1, 65534 do	-- Поиск обьекта по ИД и далее вывод
+		obj = sim:object( i )
+		if obj then
+			if obj.parent_id == 65535 then
+				gvid = obj.m_game_vertex_id
+				if gg:valid_vertex_id( gvid ) then
+					if gg:vertex( gvid ):level_id() == level_id then
+						t_labels[i] = "gps_stalker"
+						add_spot( i, "gps_stalker", obj:name() )
+						if obj.position:distance_to_xz( pos ) < 5 then
+							local spawn_id = -1
+							if obj.m_story_id and ( obj.m_story_id ~= 4294967296 ) then
+								spawn_id = sim:spawn_id( obj.m_story_id )
+							end
+							log( string.format( "%s (%s, %s), clsid: %d,  spawn: %d (%.02f %.02f %.02f, %d, %d )",
+								obj:name(), obj:section_name(), i, obj:clsid(),
+								 spawn_id ,
+								obj.position.x, obj.position.y, obj.position.z,
+								obj.m_level_vertex_id, obj.m_game_vertex_id ) )
+							ini = obj:spawn_ini()
+							if ini and ini:section_exist( "logic" ) then
+								s = ( ini:line_exist( "logic", "cfg" )
+									and ini:r_string( "logic", "cfg" ) )
+									or ( ini:line_exist( "logic", "active" )
+									and ini:r_string( "logic", "active" ) )
+								log( "logic: " .. string.sub( ( s or "n/a" ), 1, 180 ) )
+							end
+						end
+					end
+				end
+			end
+	end	end
+
+	amk.send_tip( "Нюх на все активирован" )
+	get_console():execute( "flush" )
+end
+
+
+function show_mobs()	-- метки на живое и дохлое, мутантов и нпс
+	if not reinit() then return end
+
+	for i = 1, 65534 do	-- поиск по всем ID
+		local se_obj = sim:object(i)
+		if se_obj then
+			local cls_id = se_obj:clsid()
+			
+			-- Проверяем, что это NPC или монстр
+			if cls_id == clsid.script_stalker or t_mobs[cls_id] then
+				local game_obj = level.object_by_id(i)
+				if game_obj then
+					local name = se_obj:name()
+					local spot_type
+					
+					if se_obj:alive() then
+						if cls_id == clsid.script_stalker then
+							-- Проверяем наличие метода relation
+							if se_obj.relation then
+								if se_obj:relation(actor) == game_object.enemy then
+									spot_type = "kill_stalker_location"	-- враги (красные)
+								else
+									spot_type = "gps_stalker_spot"	-- друзья (синие)
+								end
+							else
+								spot_type = "green_location"	-- по умолчанию
+							end
+						else
+							spot_type = t_mobs[cls_id] or "monster_part_spot"	-- монстры
+						end
+					else
+						spot_type = "alife_combat_attack"	-- трупы (красные)
+					end
+					
+					t_labels[i] = spot_type
+					level.map_add_object_spot(i, spot_type, name)
+					
+					-- Включаем отображение на карте
+					if se_obj.visible_for_map then
+						se_obj:visible_for_map(true)
+					end
+				end
+			end
+		end
+	end
+	
+	amk.send_tip("Метки на мобов установлены")
+end
+
+
+
+
+
+
+------------------------------------------------------------------ПОЛЕТ------------------------------------------------------------------
+function dummy() end
+function fly()
+	if not ( actor or reinit() ) then return false end
+	if device().precache_frame >= 2 then return false end	-- идет загрузка
+
+	if fly_vel then
+		-- if device():is_paused() then fly_vel = 0
+		if actor:active_slot() == 5 then
+			if fly_vel < 0.5 then fly_vel = fly_vel + 0.0003 end
+		else fly_vel = 0
+		end
+		if fly_vel ~= 0 then
+			fly_pos = vector():mad( fly_pos, device().cam_dir:normalize(), fly_vel )
+		end
+
+		actor:set_actor_position( fly_pos )
+
+		return false
+	end
+
+	fly_vel = false
+	--amk.send_tip( "Полет остановлен." )
+	return true
+end
+function pokaz_stalkerov()	-- замена камеры
+	if not ( actor or reinit() ) then return end
+
+	if fly_vel then
+		fly_vel = false
+		return
+	end
+
+	fly_vel = 0
+	fly_pos = level.vertex_position( actor:level_vertex_id() )
+	-- fly_pos.y = fly_pos.y + 0.1
+	level.add_call( fly, dummy )
+
+	--amk.send_tip( "Полет включен." )
+	-- amk.send_tip( string.format( "%.02f %.02f %.02f", fly_pos.x, fly_pos.y, fly_pos.z ) )
+end
+class "test_tools_wnd" ( CUIScriptWnd )	-- CUIWindow	-- CUIStatic
+function test_tools_wnd:__init() super()
+	self.wnd = self
+	test_w = self
+
+	test_w:Init( 20, 240, 300, 40 )	-- собственно, окно
+	test_w:SetAutoDelete( true )
+	-- test_w:Enable( false )
+
+	info_static1 = CUIStatic()
+	self.s1 = info_static1
+	info_static1:SetWindowName( "dc_info_wnd1" )
+	info_static1:SetText( "" )
+	info_static1:Init( 0, 0, 300, 20 )
+	info_static1:SetAutoDelete( true )
+	test_w:AttachChild( info_static1 )
+
+	info_static2 = CUIStatic()
+	self.s2 = info_static2
+	info_static2:SetWindowName( "dc_info_wnd2" )
+	info_static2:SetText( "" )
+	info_static2:Init( 0, 20, 300, 20 )
+	info_static2:SetAutoDelete( true )
+	test_w:AttachChild( info_static2 )
+end
+------------------------------------------------------------------ПОЛЕТ------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------КОРДИНАТЫ И ЛЕЧЕНИЕ-----------------------------------------------------------
+function show_pos_stop()
+	if test_w then
+		local hud = get_hud()
+		if hud then hud:RemoveDialogToRender( test_w ) end
+		test_w.wnd = false
+	end
+	test_w = false
+	info_static1, info_static2 = false, false
+end
+
+
+function show_pos()
+	if show_pos_enable then	-- из net_spaw()/net_destroy() актора выставлять
+		if device().precache_frame >= 2		-- идет загрузка
+		  or level.main_input_receiver()	-- открыто какое-то окно
+		  or device():is_paused()		-- пауза
+		  or actor:has_info( "mm_opt" )		-- пробуем отловить mainmenu ОПЫ без лазания в туда
+		then
+			if test_w then
+				show_pos_stop()
+				log( "show pos, suspended, statics removed" )
+			end
+
+			return false	-- но продолжаем апдейт в ожидании, когда можно будет
+		end
+	else
+		log( "show pos, not loaded, stop" )
+		show_pos_stop()
+		show_pos_wnd = 0
+		return true	-- а вот здесь - прекращаем
+	end
+
+
+	local hud =  get_hud()
+	if hud then
+		if show_pos_wnd ~= 1 then
+			if show_pos_wnd == 2 then
+				if test_w then
+					log( "show pos, info_static: stop" )
+					show_pos_stop()
+
+				else log( "show pos, no info_static: stop" )
+				end
+ 
+				show_pos_wnd = 3
+			end
+
+			return false
+
+		elseif not test_w then
+
+			log( "show pos, new info_static, create" )
+
+			test_tools_wnd()
+			hud:AddDialogToRender( test_w )
+
+			log( "show pos, new info_static, ok" )
+		end
+
+	else
+		if test_w then
+			log( "show pos, info_static: lost, clear" )
+			show_pos_stop()
+		end
+
+		return false
+	end
+
+	local pos = actor:position()
+	local cam = device().cam_dir
+
+	if msg_tm < time_global() then
+		msg_tm = time_global() + 1000
+		msg_fps = msg_cnt
+		msg_cnt = 1
+	else msg_cnt = msg_cnt + 1
+	end
+
+	info_static1:SetText(
+		string.format( "%.03f %.03f %.03f, lvid: %d, gvid: %d",
+		pos.x, pos.y, pos.z, actor:level_vertex_id(), actor:game_vertex_id() )
+	)
+	info_static1:Show( true )
+
+	info_static2:SetText(
+		string.format( "cam: %.03f, %.03f, %.03f  fps: %d", cam.x, cam.y, cam.z, msg_fps )
+	)
+	info_static2:Show( true )
+
+	return false
+end
+function zdoroviy()
+	actor = db.actor
+	if not actor then return end
+	if actor.health < 0.99 then actor.health = 0.98 - actor.health end
+	if actor.power < 0.99 then actor.power = 0.98 - actor.power end
+	if actor.psy_health < 0.99 then actor.psy_health = 0.98 - actor.psy_health end
+	if actor.radiation >= 0.01 then actor.radiation = 0.01 - actor.radiation end
+	amk.send_tip( "Вылечено" )
+	if show_pos_wnd ~= 1 then	-- пробуем запустить динамический показ
+
+		if show_pos_enable then	-- только если разрешено
+			if show_pos_wnd == 0 then	-- не запущено или принудительно остановлено
+				show_pos_wnd = 1
+				level.add_call( show_pos, dummy )	-- запуск проверки
+				log( "show pos, add_call: ok" )
+			else				-- запущено, но приостановлено
+				show_pos_wnd = 1	-- запущено
+				log( "show pos, restart" )
+			end
+		end
+
+	else	-- стоп
+		show_pos_wnd = 2
+		log( "show pos, add_call: stop" )
+	end
+	local p = actor:position()
+	local s = string.format( "%.02f %.02f %.02f lv: %d, gv: %d", p.x, p.y, p.z,
+		actor:level_vertex_id(), actor:game_vertex_id() )
+	log( s )
+	amk.send_tip( s )
+end
+-----------------------------------------------------------КОРДИНАТЫ И ЛЕЧЕНИЕ-----------------------------------------------------------
+
+
+
+-----------------------------------------------------------УБОРЩИК И ТУШЕНИЕ АНОМАЛИЙ-----------------------------------------------------------
+function cleaner()
+    if not db.actor then return end
+    local pos = db.actor:position()
+    local sim = alife()
+    
+    local actor_level_id = game_graph():vertex(db.actor:game_vertex_id()):level_id()
+    
+    local removed_names = {}
+    local skipped_details = {} -- Таблица для хранения инфы о защищенных
+    local skipped_count = 0
+
+    for i = 1, 65534 do
+        local se_obj = sim:object(i)
+        
+        if se_obj and (IsStalker(se_obj) or IsMonster(se_obj)) then
+            -- у серверных объектов в OGSR нет alive(): живость проверяем у клиентского
+            local game_obj = level.object_by_id(i)
+            if game_obj and not game_obj:alive() then
+                local obj_level_id = game_graph():vertex(se_obj.m_game_vertex_id):level_id()
+                
+                if obj_level_id == actor_level_id then
+                    local dist = se_obj.position:distance_to(pos)
+                    
+                    if dist < 50 then
+                        local s_id = se_obj.m_story_id or se_obj.story_id or -1
+                        local name_en = se_obj:name()
+                        local section = se_obj:section_name()
+
+                        local is_quest = not (s_id == -1 or s_id == 4294967295 or s_id == 4294967296 or s_id == 65535)
+                        local is_exclusive = false
+                        if t_exclusive then
+                            for _, vv in ipairs(t_exclusive) do
+                                if string.find(name_en, vv) then is_exclusive = true break end
+                            end
+                        end
+
+                        -- Логика получения читаемого имени (RU)
+                        local name_ru = ""
+
+                        -- Для сталкеров берем их личное имя
+                        if game_obj and IsStalker(se_obj) then
+                            name_ru = game_obj:character_name()
+                        end
+
+                        -- Для мутантов или если имя пустое — берем из конфига (inv_name)
+                        if name_ru == "" or name_ru == nil then
+                            local ini = system_ini()
+                            if ini:section_exist(section) then
+                                local raw = ini:line_exist(section, "inv_name") and ini:r_string(section, "inv_name") or 
+                                            ini:line_exist(section, "character_name") and ini:r_string(section, "character_name")
+                                if raw then 
+                                    name_ru = game.translate_string(raw) 
+                                end
+                            end
+                        end
+                        
+                        -- Если всё равно пусто (бывает в кривых конфигах), пишем секцию
+                        if name_ru == "" or name_ru == nil then name_ru = section end
+
+                        if not is_quest and not is_exclusive then
+                            -- Добавляем в таблицу удаленных (теперь без лимита в выводе)
+                            table.insert(removed_names, name_ru)
+                            sim:release(se_obj, true)
+                        else
+                            -- СОБИРАЕМ ИНФУ О ЗАЩИЩЕННЫХ
+                            skipped_count = skipped_count + 1
+                            local info = string.format("%s [%s]", name_ru, section)
+                            table.insert(skipped_details, info)
+                        end
+                    end
+                end
+            end
+        end
+    end
+
+    -- ВЫВОД РЕЗУЛЬТАТОВ
+    local message = ""
+    
+    if #removed_names > 0 then
+        message = message .. "УДАЛЕНО (" .. #removed_names .. " шт.):\\n"
+        -- Убрано ограничение (было 10), теперь выводит всех через запятую
+        message = message .. table.concat(removed_names, ", ") .. "\\n\\n"
+    else
+        message = message .. "Трупов для удаления не найдено.\\n\\n"
+    end
+
+    if skipped_count > 0 then
+        message = message .. "ЗАЩИЩЕНЫ (квестовые): " .. skipped_count .. " шт.\\n"
+        -- Для защищенных тоже убрал ограничение, но выводим списком
+        message = message .. table.concat(skipped_details, "\\n")
+    end
+
+    amk.send_tip(message, "Уборщик трупов", nil, 15)
+    
+    disable()
+end
+
+-- Тушилка аномалий на партикли
+function disable()
+
+if not reinit() then return end
+
+	amk.send_tip( "Глушим аномалии партиклями" )
+
+	for i, v in ipairs( {
+		-- лагогенераторы
+
+	} ) do
+		v = sim:object( v )
+		if v then sim:release( v, true ) end
+	end
+
+	local obj, p, gvid, anom, cls_id
+	local pos = db.actor:position()
+
+	for i = 1, 65534 do	-- Ищем вообще все существующие объекты в игре
+		obj = sim:object( i )
+		if obj then
+		cls_id = obj:clsid()
+			if t_anoms[cls_id] then		-- аномалии
+				gvid = obj.m_game_vertex_id	-- только те, что на текущей локации
+				if gg:valid_vertex_id( gvid ) then
+					if ( gg:vertex( gvid ):level_id() == level_id )
+					  and ( obj.position:distance_to_sqr( pos ) < 600 )	-- 30 * 30
+					  and not t_disabled_anoms[i] then	-- кроме тех, что уже выключены
+						anom = lobj_by_id( i )	-- получаем собственно аномалию
+						if anom then
+							-- помечаем место, где была
+							p = particles_object( "anomaly\\galantine" )
+							t_disabled_anoms[i] = p
+							p:play_at_pos( obj.position )
+
+							anom:disable_anomaly()	-- выключаем
+							-- совсем удалять НЕЛЬЗЯ!
+						end
+				end	end
+			end
+		end
+	end
+end
+-----------------------------------------------------------УБОРЩИК И ТУШЕНИЕ АНОМАЛИЙ-----------------------------------------------------------
+
+
+
+
+
+
+
+
+function bablo()	-- Выдача бабла игроку без палева античита не работает в ТТ2!
+	local actor = db.actor
+	if not actor then return end
+	if actor:money() < 0 then dialogs.relocate_money(actor,50000,"in") end
+	if actor:money() < 2000000 then
+		dialogs.relocate_money(actor,50000,"in")
+		amk.send_tip( "Бабло выдано" )
+	else amk.send_tip( "А не подавимся?" )
+	end
+end
+
+-- Окончательная победа
+function final_victory(r)
+    if not reinit() then return end
+
+    local radius = r or 70
+    local r_sqr = radius * radius
+    local pos = actor:position()
+    
+    -- Подготовка хита
+    local h = hit()
+    h.power = 1000
+    h.direction = vector():set(0, 1, 0)
+    h.impulse = 100
+    h.draftsman = actor
+    h.type = hit.wound
+
+    -- Перебор по id: у серверных объектов в OGSR нет метода alive(),
+    -- поэтому живость проверяем у клиентского объекта (level.object_by_id)
+    local actor_id = actor:id()
+    for id = 1, 65534 do
+        local se_obj = sim:object(id)
+        -- Проверяем, что это сталкер или монстр
+        if se_obj and (IsStalker(se_obj) or IsMonster(se_obj)) then
+            local obj = lobj_by_id(id)
+            -- в онлайне, не актор и жив
+            if obj and id ~= actor_id and obj:alive() then
+                -- Считаем расстояние через вектор
+                if obj:position():distance_to_sqr(pos) < r_sqr then
+                    -- Проверка на враждебность
+                    if IsMonster(se_obj) or obj:relation(actor) == game_object.enemy then
+
+                        -- Проверка Story ID
+                        local sid = se_obj.m_story_id
+                        if not sid or sid == 4294967295 or sid == 65535 or sid == -1 then
+
+                            -- Проверка исключений по имени
+                            local name = se_obj:name()
+                            local exclude = false
+                            if t_exclusive then
+                                for _, pat in ipairs(t_exclusive) do
+                                    if string.find(name, pat) then
+                                        exclude = true
+                                        break
+                                    end
+                                end
+                            end
+
+                            if not exclude then
+                                obj:hit(h)
+                            end
+                        else
+                            log("final_victory, protected by SID: " .. tostring(name))
+                        end
+                    end
+                end
+            end
+        end
+    end
+
+    -- Звук (исправлено обрывание в OGSR)
+    if t_snd and #t_snd > 0 then
+        local random_snd = t_snd[math.random(#t_snd)]
+        victory_snd_obj = sound_object(random_snd) 
+        if victory_snd_obj then
+            victory_snd_obj:play(actor, 0, sound_object.s2d)
+        end
+    end
+end

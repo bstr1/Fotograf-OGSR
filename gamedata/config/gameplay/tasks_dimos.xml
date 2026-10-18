@@ -1,7 +1,7 @@
 
 ------------------anom_research---------------------
 
-<game_task id="anom_research">
+<game_task id="anom_research" version="1">
 <title>Исследовать аномалии.</title>
 <objective>
 <text>Исследовать аномалии.</text>
@@ -10,9 +10,39 @@
 <article>anoms_research</article>
 </objective>
 <objective>
-<text>Исследовать семь видов аномалий.</text>
+<text>Исследовать аномалию «Жарка».</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
-<infoportion_complete>all_anom_research</infoportion_complete>
+<infoportion_complete>zharka_first_research</infoportion_complete>
+</objective>
+<objective>
+<text>Исследовать аномалию «Ведьмин студень».</text>
+<icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
+<infoportion_complete>galant_first_research</infoportion_complete>
+</objective>
+<objective>
+<text>Исследовать аномалию «Студень».</text>
+<icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
+<infoportion_complete>buzz_first_research</infoportion_complete>
+</objective>
+<objective>
+<text>Исследовать аномалию «Карусель».</text>
+<icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
+<infoportion_complete>mincer_first_research</infoportion_complete>
+</objective>
+<objective>
+<text>Исследовать аномалию «Трамплин».</text>
+<icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
+<infoportion_complete>mosquit_first_research</infoportion_complete>
+</objective>
+<objective>
+<text>Исследовать аномалию «Снежка».</text>
+<icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
+<infoportion_complete>ice_first_research</infoportion_complete>
+</objective>
+<objective>
+<text>Исследовать аномалию «Воронка».</text>
+<icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
+<infoportion_complete>gravi_first_research</infoportion_complete>
 </objective>
 <objective>
 <text>Вернуться к Круглову</text>

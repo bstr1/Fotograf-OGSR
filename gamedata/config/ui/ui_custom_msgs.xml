@@ -1,8 +1,27 @@
 <?xml version='1.0' encoding="UTF-8"?>
 <header>
- <cs_debug  x="200" y="180" width="600" height="100" complex_mode="1">
+ <cs_debug  x="250" y="50" width="600" height="100" complex_mode="1">
 		<text font="graffiti22"  r="240" g="217" b="182" a="255" align="l"/>
 	</cs_debug> 
+  <gul_debug x="740" y="10" width="300" height="300" complex_mode="1">
+    <text font="letterica18" r="255" g="255" b="255" a="255" align="l"/>
+  </gul_debug>
+  <prs_debug x="450" y="10" width="290" height="300" complex_mode="1">
+    <text font="letterica18" r="255" g="255" b="255" a="255" align="l"/>
+  </prs_debug>
+  <logic_debug x="100" y="210" width="470" height="350" complex_mode="1">
+    <text font="letterica18" r="255" g="255" b="255" a="255" align="l"/>
+  </logic_debug>
+  <act_debug x="450" y="320" width="300" height="240" complex_mode="1">
+    <text font="letterica18" r="255" g="255" b="255" a="255" align="l"/>
+  </act_debug>
+  <ach_debug x="760" y="320" width="280" height="220" complex_mode="1">
+    <text font="letterica18" r="255" g="255" b="255" a="255" align="l"/>
+  </ach_debug>
+  <slots_debug x="100" y="570" width="470" height="180" complex_mode="1">
+    <text font="letterica18" r="255" g="255" b="255" a="255" align="l"/>
+  </slots_debug>
+
 
  <hud_coord  x="0" y="15" width="1024" height="128">
     <text x="0" y="0" font="graffiti19" r="238" g="238" b="23" a="255" align="r" complex_mode="1"/>
