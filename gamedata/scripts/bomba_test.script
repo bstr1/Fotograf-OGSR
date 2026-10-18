@@ -1,10 +1,10 @@
 
 
 --[[-------------------------------------------------------------------
-               Mega-Bomba с дистанционным управлением  v.1.0 
-              разработка:    erlik(Garry_Galler)
-              last edit :        17 октября 2009 
-	   как всегда использован  скрипт камрада singapur'а22  для отслеживания использования предмета
+               Mega-Bomba СЃ РґРёСЃС‚Р°РЅС†РёРѕРЅРЅС‹Рј СѓРїСЂР°РІР»РµРЅРёРµРј  v.1.0 
+              СЂР°Р·СЂР°Р±РѕС‚РєР°:    erlik(Garry_Galler)
+              last edit :        17 РѕРєС‚СЏР±СЂСЏ 2009 
+	   РєР°Рє РІСЃРµРіРґР° РёСЃРїРѕР»СЊР·РѕРІР°РЅ  СЃРєСЂРёРїС‚ РєР°РјСЂР°РґР° singapur'Р°22  РґР»СЏ РѕС‚СЃР»РµР¶РёРІР°РЅРёСЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ РїСЂРµРґРјРµС‚Р°
 --]]-------------------------------------------------------------------
 
 
@@ -26,7 +26,7 @@ local flag6 = false
 function use_pult()
 if pult and type(pult) == "number" then
 if not level.object_by_id(pult) then
-level.start_stop_menu(ui_pult.ui_pult(), true) --запускаем меню
+level.start_stop_menu(ui_pult.ui_pult(), true) --Р·Р°РїСѓСЃРєР°РµРј РјРµРЅСЋ
 alife():create("dist_pult", db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(), db.actor:id())
 end
 pult = nil
@@ -41,10 +41,10 @@ end
 
 
 
---функция вызываемая из дропа
+--С„СѓРЅРєС†РёСЏ РІС‹Р·С‹РІР°РµРјР°СЏ РёР· РґСЂРѕРїР°
 function drop_pult(obj)
 if obj:section() == "dist_pult" then
-pult = obj --\\если наша вещь, то запомнить его userdata
+pult = obj --\\РµСЃР»Рё РЅР°С€Р° РІРµС‰СЊ, С‚Рѕ Р·Р°РїРѕРјРЅРёС‚СЊ РµРіРѕ userdata
 end
 end
 
@@ -54,19 +54,19 @@ function bomba_activate()
 local actor = db.actor
 local bomba = db.actor:object("bomba")
 if not bomba and obj_id == 0 then
-news_manager.send_tip(actor, "У вас нет бомбы для активации", 0, nil, 5000)
+news_manager.send_tip(actor, "РЈ РІР°СЃ РЅРµС‚ Р±РѕРјР±С‹ РґР»СЏ Р°РєС‚РёРІР°С†РёРё", 0, nil, 5000)
 elseif not bomba and obj_id ~= 0 then
-news_manager.send_tip(actor, "Идиот - бомба заложена, установи таймер!", 0, nil, 5000)
+news_manager.send_tip(actor, "РРґРёРѕС‚ - Р±РѕРјР±Р° Р·Р°Р»РѕР¶РµРЅР°, СѓСЃС‚Р°РЅРѕРІРё С‚Р°Р№РјРµСЂ!", 0, nil, 5000)
 elseif bomba and obj_id == 0 then
 pos = 0 
-alife():release(alife():object(bomba:id()), true) --\\ удаляем из инвентаря
-this.spawn_bobm() --\  спавним рядом с ГГ
+alife():release(alife():object(bomba:id()), true) --\\ СѓРґР°Р»СЏРµРј РёР· РёРЅРІРµРЅС‚Р°СЂСЏ
+this.spawn_bobm() --\  СЃРїР°РІРЅРёРј СЂСЏРґРѕРј СЃ Р“Р“
 elseif bomba and obj_id ~= 0 then
 pos = 0 
-obj_id = 0      --\ проверяем на то, не спавнили ли уже бомбу, если да - то обнулим ее id  
-alife():release(alife():object(bomba:id()), true) --\\ удаляем из инвентаря
+obj_id = 0      --\ РїСЂРѕРІРµСЂСЏРµРј РЅР° С‚Рѕ, РЅРµ СЃРїР°РІРЅРёР»Рё Р»Рё СѓР¶Рµ Р±РѕРјР±Сѓ, РµСЃР»Рё РґР° - С‚Рѕ РѕР±РЅСѓР»РёРј РµРµ id  
+alife():release(alife():object(bomba:id()), true) --\\ СѓРґР°Р»СЏРµРј РёР· РёРЅРІРµРЅС‚Р°СЂСЏ
 --flag_ex = false
-this.spawn_bobm() --\  спавним рядом с ГГ
+this.spawn_bobm() --\  СЃРїР°РІРЅРёРј СЂСЏРґРѕРј СЃ Р“Р“
 end
 end
 
@@ -76,7 +76,7 @@ local pos = db.actor:position()
 local dir = db.actor:direction()
 pos = pos:add(dir:mul(2))
 local objbomb = alife():create("bomba", pos, db.actor:level_vertex_id(), db.actor:game_vertex_id())
-obj_id = objbomb.id --  id объекта после создания
+obj_id = objbomb.id --  id РѕР±СЉРµРєС‚Р° РїРѕСЃР»Рµ СЃРѕР·РґР°РЅРёСЏ
 --flag_ex = true
 end
 
@@ -84,20 +84,20 @@ end
 
 function start_bomba()
 if start_flag then
-news_manager.send_tip(db.actor, "Включить таймер невозможно - ждите подрыва первой бомбы.", 0, nil, 5000) 
+news_manager.send_tip(db.actor, "Р’РєР»СЋС‡РёС‚СЊ С‚Р°Р№РјРµСЂ РЅРµРІРѕР·РјРѕР¶РЅРѕ - Р¶РґРёС‚Рµ РїРѕРґСЂС‹РІР° РїРµСЂРІРѕР№ Р±РѕРјР±С‹.", 0, nil, 5000) 
 return
 elseif not db.actor:object("bomba") and obj_id == 0 then
-news_manager.send_tip(db.actor, "Включить таймер невозможно", 0, nil, 5000)
+news_manager.send_tip(db.actor, "Р’РєР»СЋС‡РёС‚СЊ С‚Р°Р№РјРµСЂ РЅРµРІРѕР·РјРѕР¶РЅРѕ", 0, nil, 5000)
 elseif not db.actor:object("bomba") and obj_id ~= 0 then
-news_manager.send_tip(db.actor, "Включен отсчет таймера", 0, nil, 5000)
+news_manager.send_tip(db.actor, "Р’РєР»СЋС‡РµРЅ РѕС‚СЃС‡РµС‚ С‚Р°Р№РјРµСЂР°", 0, nil, 5000)
 start_flag = true
 time0 = time_global()
 elseif db.actor:object("bomba") and obj_id ~= 0 then
-news_manager.send_tip(db.actor, "Включен отсчет таймера", 0, nil, 5000)
+news_manager.send_tip(db.actor, "Р’РєР»СЋС‡РµРЅ РѕС‚СЃС‡РµС‚ С‚Р°Р№РјРµСЂР°", 0, nil, 5000)
 start_flag = true
 time0 = time_global()
 elseif db.actor:object("bomba") and obj_id == 0 then
-news_manager.send_tip(db.actor, "Сделайте закладку бомбы", 0, nil, 5000)
+news_manager.send_tip(db.actor, "РЎРґРµР»Р°Р№С‚Рµ Р·Р°РєР»Р°РґРєСѓ Р±РѕРјР±С‹", 0, nil, 5000)
 end
 end
 
@@ -115,7 +115,7 @@ if not start_flag then
 return 
 else
 if not flag_snd then
-snd_bum3:play_at_pos(db.actor, vector():set(0,0,0), 0, sound_object.s2d) -- \играем звук таймера 
+snd_bum3:play_at_pos(db.actor, vector():set(0,0,0), 0, sound_object.s2d) -- \РёРіСЂР°РµРј Р·РІСѓРє С‚Р°Р№РјРµСЂР° 
 flag_snd = true
 end
 
@@ -129,10 +129,10 @@ pos = boom_obj:position()
                 h.draftsman = boom_obj
                 h.power = 10
                 h.type = hit.fire_wound 				
-		        boom_obj:hit(h) -- \взрываем бомбу		
-                snd_bum:play_at_pos(db.actor, vector():set(0,0,0), 0, sound_object.s2d) -- \играем звук  взрыва от позиции 
-                particles_object("explosions\\explosion_01"):play_at_pos(pos)   -- \играем партиклы от позиции бомбы
-                level.add_cam_effector("camera_effects\\earthquake.anm", 1975, true, "")  -- \включаем тряску
+		        boom_obj:hit(h) -- \РІР·СЂС‹РІР°РµРј Р±РѕРјР±Сѓ		
+                snd_bum:play_at_pos(db.actor, vector():set(0,0,0), 0, sound_object.s2d) -- \РёРіСЂР°РµРј Р·РІСѓРє  РІР·СЂС‹РІР° РѕС‚ РїРѕР·РёС†РёРё 
+                particles_object("explosions\\explosion_01"):play_at_pos(pos)   -- \РёРіСЂР°РµРј РїР°СЂС‚РёРєР»С‹ РѕС‚ РїРѕР·РёС†РёРё Р±РѕРјР±С‹
+                level.add_cam_effector("camera_effects\\earthquake.anm", 1975, true, "")  -- \РІРєР»СЋС‡Р°РµРј С‚СЂСЏСЃРєСѓ
 flag_boom = true
 flag1 = true
 time0 = time_global()
@@ -140,9 +140,9 @@ end
 
 elseif flag1 then 
 if time_global() - time0 > 3000 then
-level.remove_cam_effector(1975)       -- \останавливаем тряску через 3 секунды
+level.remove_cam_effector(1975)       -- \РѕСЃС‚Р°РЅР°РІР»РёРІР°РµРј С‚СЂСЏСЃРєСѓ С‡РµСЂРµР· 3 СЃРµРєСѓРЅРґС‹
 particles_object("explosions\\explosion_dym"):play_at_pos(pos)
-snd_bum2:play_at_pos(db.actor, vector():set(0,0,0), 0, sound_object.s2d) -- \играем еще один звук взрыва
+snd_bum2:play_at_pos(db.actor, vector():set(0,0,0), 0, sound_object.s2d) -- \РёРіСЂР°РµРј РµС‰Рµ РѕРґРёРЅ Р·РІСѓРє РІР·СЂС‹РІР°
 flag1 =  false
 time0 = time_global()
 flag2 = true
@@ -151,8 +151,8 @@ end
 elseif flag2 then
 if time_global() - time0 > 2000 then
 particles_object("explosions\\group_items\\campfire_06_flame_big"):play_at_pos(pos)
-particles_object("explosions\\expl_benzin_00"):play_at_pos(pos)    --\ и еще один партикл
-snd_bum4:play_at_pos(db.actor, vector():set(0,0,0), 0, sound_object.s2d) -- \играем еще один звук взрыва
+particles_object("explosions\\expl_benzin_00"):play_at_pos(pos)    --\ Рё РµС‰Рµ РѕРґРёРЅ РїР°СЂС‚РёРєР»
+snd_bum4:play_at_pos(db.actor, vector():set(0,0,0), 0, sound_object.s2d) -- \РёРіСЂР°РµРј РµС‰Рµ РѕРґРёРЅ Р·РІСѓРє РІР·СЂС‹РІР°
 flag2 = false
 time0 = time_global()
 flag3 = true
@@ -188,8 +188,8 @@ end
 
 elseif flag6 then
 if time_global() - time0 > 3000 then
---particles_object("anomaly\\marevo"):play_at_pos(pos)   --\ и еще один партикл
---particles_object("industrial_particles\\exhaust_isparenie_white_down"):play_at_pos(pos)   --\ и еще один партикл
+--particles_object("anomaly\\marevo"):play_at_pos(pos)   --\ Рё РµС‰Рµ РѕРґРёРЅ РїР°СЂС‚РёРєР»
+--particles_object("industrial_particles\\exhaust_isparenie_white_down"):play_at_pos(pos)   --\ Рё РµС‰Рµ РѕРґРёРЅ РїР°СЂС‚РёРєР»
 flag6 = false
 flag_boom = false
 flag_snd = false
@@ -203,7 +203,7 @@ end
 
 
 
---\ функции сохранения значений переменных
+--\ С„СѓРЅРєС†РёРё СЃРѕС…СЂР°РЅРµРЅРёСЏ Р·РЅР°С‡РµРЅРёР№ РїРµСЂРµРјРµРЅРЅС‹С…
 
 function save_variable(p)
 p:w_u16(obj_id)

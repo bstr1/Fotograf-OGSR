@@ -1,126 +1,126 @@
 --[[--------------------------------------------------------------------------------------
  File			: bind_photo.script
- Description	: Биндер фотокамеры.
- Copyright		: 2012 © boryan67
+ Description	: Р‘РёРЅРґРµСЂ С„РѕС‚РѕРєР°РјРµСЂС‹.
+ Copyright		: 2012 В© boryan67
  Author			: boryan67(Dracula)
  Last edit		: 09.09.2012 
 --]]--------------------------------------------------------------------------------------
 local tbl_photo = {}
-active_photo_binder = nil	-- динамическая таблица доступных целей
--- таблица целей для съёмки
--- формат имя/секция, минимальная дистанция, максимальная дистанция, кость
+active_photo_binder = nil	-- РґРёРЅР°РјРёС‡РµСЃРєР°СЏ С‚Р°Р±Р»РёС†Р° РґРѕСЃС‚СѓРїРЅС‹С… С†РµР»РµР№
+-- С‚Р°Р±Р»РёС†Р° С†РµР»РµР№ РґР»СЏ СЃСЉС‘РјРєРё
+-- С„РѕСЂРјР°С‚ РёРјСЏ/СЃРµРєС†РёСЏ, РјРёРЅРёРјР°Р»СЊРЅР°СЏ РґРёСЃС‚Р°РЅС†РёСЏ, РјР°РєСЃРёРјР°Р»СЊРЅР°СЏ РґРёСЃС‚Р°РЅС†РёСЏ, РєРѕСЃС‚СЊ
 
 local tbl_target = {
-	{name="brown", dist_min=1, dist_max=4, bone="bip01_head"},	-- 1 Браун
-	{name="smith", dist_min=1, dist_max=4, bone="bip01_head"},	-- 2 Смит
-	{name="nato_enginer", dist_min=1, dist_max=4, bone="bip01_head"},	-- 3 Марио
-	{name="barman_new", dist_min=1, dist_max=2.5, bone="bip01_head"},	-- 4 Барон
-	{name="razuvaev", dist_min=1, dist_max=4, bone="bip01_head"},	-- 5 Разуваев
-	{name="komandir_petrenko", dist_min=1, dist_max=4, bone="bip01_head"},  -- 6 Петренко
-	{name="mk_bratok_bar_song", dist_min=1, dist_max=4, bone="bip01_head"}, -- 7 Браток_Бар
-	{name="shpak", dist_min=1, dist_max=4, bone="bip01_head"},	-- 8 Шпак
-	{name="komandir_voronin", dist_min=1, dist_max=3, bone="bip01_head"},	-- 9 Воронин
-	{name="uchen_saharov", dist_min=1, dist_max=1.5, bone="bip01_head"},	-- 10 Сахаров
-	{name="uchen_kaymanov", dist_min=1, dist_max=4, bone="bip01_head"},	-- 11 Кайманов
-	{name="haron_new", dist_min=1, dist_max=4, bone="bip01_head"},	-- 12 Харон
-	{name="borovikov", dist_min=1, dist_max=2.5, bone="bip01_head"},	-- 13 Боря Серов
-	{name="dron", dist_min=1, dist_max=4, bone="bip01_head"},	-- 14 Дрон
-	{name="bar_barman", dist_min=1, dist_max=2.5, bone="bip01_head"},	-- 15 Дядя Миша
-	{name="osvedom", dist_min=1, dist_max=4, bone="bip01_head"},	-- 16 Связной
-	{name="brigadir", dist_min=1, dist_max=4, bone="bip01_head"},	-- 17 Бригадир
-	{name="brityi", dist_min=1, dist_max=4, bone="bip01_head"},	-- 18 Бритый
-	{name="bar_bar_visitor_hunter", dist_min=1, dist_max=4, bone="bip01_head"}, -- 19 Вадик (Бар)
-	{name="semyon", dist_min=1, dist_max=4, bone="bip01_head"},	-- 20 Семён
-	{name="djonny", dist_min=1, dist_max=4, bone="bip01_head"},	-- 21 Эдик
-	{name="bar_leha", dist_min=1, dist_max=4, bone="bip01_head"},	-- 22 Лёха
-	{name="neytral_08", dist_min=1, dist_max=4, bone="bip01_head"},	-- 23 Серый
-	{name="neytral_09", dist_min=1, dist_max=4, bone="bip01_head"},	-- 24 Флинт
-	{name="bar_ataka_03", dist_min=1, dist_max=4, bone="bip01_head"},	-- 25 Димос
-	{name="neytral_16", dist_min=1, dist_max=4, bone="bip01_head"},	-- 26 Женёк
-	{name="neytral_20", dist_min=1, dist_max=4, bone="bip01_head"},	-- 27 Павлик
-	{name="bar_ataka_01", dist_min=1, dist_max=4, bone="bip01_head"},	-- 28 Левша
-	{name="bar_ataka_04", dist_min=1, dist_max=4, bone="bip01_head"},	-- 29 Санчо
-	{name="bar_ataka_05", dist_min=1, dist_max=4, bone="bip01_head"},	-- 30 Юра
-	{name="bar_digger_kamp5", dist_min=1, dist_max=4, bone="bip01_head"},	-- 31 Бром
-	{name="shershen", dist_min=1, dist_max=4, bone="bip01_head"},	-- 32 Шершень
-	{name="volk", dist_min=1, dist_max=4, bone="bip01_head"},	-- 33 Волк
-	{name="lis", dist_min=1, dist_max=4, bone="bip01_head"},	-- 34 Лис
-	{name="prizrak", dist_min=1, dist_max=4, bone="bip01_head"},	-- 35 Призрак
-	{name="babay", dist_min=1, dist_max=4, bone="bip01_head"},	-- 36 Бабай
-	{name="greta", dist_min=1, dist_max=4, bone="bip01_head"},	-- 37 Грета
-	{name="lukash", dist_min=1, dist_max=4, bone="bip01_head"},	-- 38 Лукаш
-	{name="max", dist_min=1, dist_max=4, bone="bip01_head"},	-- 39 Макс
-	{name="kep", dist_min=1, dist_max=4, bone="bip01_head"},	-- 40 Кэп
-	{name="skryaga", dist_min=1, dist_max=4, bone="bip01_head"},	-- 41 Скряга
-	{name="kock", dist_min=1, dist_max=4, bone="bip01_head"},	-- 42 Джанго
-	{name="shurup", dist_min=1, dist_max=4, bone="bip01_head"},	-- 43 Шуруп
-	{name="mk_bratok_kbore", dist_min=1, dist_max=4, bone="bip01_head"},	-- 44 Браток у Бара
-	{name="mk_ohr_borov", dist_min=1, dist_max=4, bone="bip01_head"}, -- 45 Охранник Бори
-	{name="feldsher", dist_min=1, dist_max=4, bone="bip01_head"},	-- 46 Фельдшер
-	{name="mk_zhorik", dist_min=1, dist_max=4, bone="bip01_head"},	-- 47 Жорик
-	{name="novichok_01", dist_min=1, dist_max=4, bone="bip01_head"},	-- 48 Шустрый
-	{name="mk_npc_mafon", dist_min=1, dist_max=3, bone="bip01_head"},  -- 49 Браток с Крысоловом
-	{name="zubarev", dist_min=1, dist_max=4, bone="bip01_head"},	-- 50 Зубарев
-	{name="poet", dist_min=1, dist_max=4, bone="bip01_head"},	-- 51 Стихоплёт
-	{name="mk_dezertir_fort", dist_min=1, dist_max=4, bone="bip01_head"},	-- 52 Дезертир на МК
-	{name="uchen_01", dist_min=1, dist_max=4, bone="bip01_head"},	-- 53 Флейшман
-	{name="uchen_02", dist_min=1, dist_max=4, bone="bip01_head"},	-- 54 Семёнов
-	{name="uchen_03", dist_min=1, dist_max=4, bone="bip01_head"},	-- 55 Гуревич
-	{name="uchen_04", dist_min=1, dist_max=4, bone="bip01_head"},	-- 56 Ройзманн
-	{name="uchen_05", dist_min=1, dist_max=4, bone="bip01_head"},	-- 57 Дроздов
-	{name="uchen_06", dist_min=1, dist_max=4, bone="bip01_head"},	-- 58 Плоймар
-	{name="bratok_bar_06", dist_min=1, dist_max=4, bone="bip01_head"}, -- 59 Браток в тельняшке
-	{name="zhila", dist_min=1, dist_max=4, bone="bip01_head"},	-- 60 Жила
-	{name="krysolov", dist_min=1, dist_max=4, bone="bip01_head"},	-- 61 Крысолов
-	{name="swamp_doctor", dist_min=1, dist_max=4, bone="bip01_head"},	-- 62 Доктор
-	{name="vasil_swamp", dist_min=1, dist_max=4, bone="bip01_head"},	-- 63 Васильев
-	{name="kruglov_swamp", dist_min=1, dist_max=4, bone="bip01_head"},	-- 64 Круглов
-	{name="kaymanov_ohr1", dist_min=1, dist_max=4, bone="bip01_head"},	-- 65 Охранник-1
-	{name="kaymanov_ohr2", dist_min=1, dist_max=4, bone="bip01_head"},	-- 66 Охранник-2
-	{name="bar_bar_drunk_dolg", dist_min=1, dist_max=4, bone="bip01_head"}, -- 67 Бар_посетитель
-	{name="bar_bar_visitors_3_2", dist_min=1, dist_max=4, bone="bip01_head"}, -- 68 Бар_посетитель
-	{name="bar_bar_visitors_3_3", dist_min=1, dist_max=4, bone="bip01_head"}, -- 69 Бар_посетитель
-	{name="bar_bar_visitors_3_4", dist_min=1, dist_max=4, bone="bip01_head"}, -- 70 Бар_посетитель
-	{name="bar_bar_lisiy", dist_min=1, dist_max=4, bone="bip01_head"}, -- 71 Бар_посетитель
-	{name="bar_bar_visitors_2_1", dist_min=1, dist_max=4, bone="bip01_head"}, -- 72 Бар_посетитель
-	{name="bar_ataka_02", dist_min=1, dist_max=4, bone="bip01_head"}, -- 73 Бар_Диггер
-	{name="blokpost_01", dist_min=1, dist_max=4, bone="bip01_head"}, -- 74 Бар_часовой
-	{name="blokpost_02", dist_min=1, dist_max=4, bone="bip01_head"}, -- 75 Бар_часовой
-	{name="blokpost_03", dist_min=1, dist_max=4, bone="bip01_head"}, -- 76 Бар_часовой
-	{name="filin", dist_min=1, dist_max=4, bone="bip01_head"}, -- 77 Филин (Бар)
-	{name="lesnik", dist_min=1, dist_max=4, bone="bip01_head"}, -- 78 Лесник
-	{name="sutuly", dist_min=1, dist_max=4, bone="bip01_head"}, -- 79 Сутулый
-	{name="mazay", dist_min=1, dist_max=4, bone="bip01_head"}, -- 80 Мазай
-	{name="grek", dist_min=1, dist_max=4, bone="bip01_head"}, -- 81 Грек
-	{name="zahar", dist_min=1, dist_max=4, bone="bip01_head"}, -- 82 Захар
-	{name="osvedom_new", dist_min=1, dist_max=4, bone="bip01_head"}, -- 83 Связной_Лес
-	{name="osvedom_dva", dist_min=1, dist_max=4, bone="bip01_head"}, -- 84 Связной_Бар
-	{name="genrih", dist_min=1, dist_max=4, bone="bip01_head"}, -- 85 Генрих
-	{name="yurgen", dist_min=1, dist_max=4, bone="bip01_head"}, -- 86 Юрген
-	{name="jagger", dist_min=1, dist_max=4, bone="bip01_head"}, -- 87 Джаггер
-	{name="missis_uchen", dist_min=1, dist_max=4, bone="bip01_head"}, -- 88 Гертруда
-	{name="uchen_mg1", dist_min=1, dist_max=4, bone="bip01_head"}, -- 89 Учёный1
-	{name="uchen_mg2", dist_min=1, dist_max=4, bone="bip01_head"}, -- 90 Учёный2
-	{name="uchen_mg3", dist_min=1, dist_max=4, bone="bip01_head"}, -- 91 Учёный3
-	{name="petrograf", dist_min=1, dist_max=4, bone="bip01_head"}, -- 92 Петрограф
-	{name="sidor", dist_min=1, dist_max=4, bone="bip01_head"}, -- 93 Сидорович
-	{name="plichko_dolg", dist_min=1, dist_max=4, bone="bip01_head"}, -- 94 Пличко
-	{name="zapadlo", dist_min=1, dist_max=4, bone="bip01_head"}, -- 95 Западло
-	{name="verka", dist_min=1, dist_max=4, bone="bip01_head"}, -- 96 Верка
-	{name="dunya", dist_min=1, dist_max=4, bone="bip01_head"} -- 97 Дуня
+	{name="brown", dist_min=1, dist_max=4, bone="bip01_head"},	-- 1 Р‘СЂР°СѓРЅ
+	{name="smith", dist_min=1, dist_max=4, bone="bip01_head"},	-- 2 РЎРјРёС‚
+	{name="nato_enginer", dist_min=1, dist_max=4, bone="bip01_head"},	-- 3 РњР°СЂРёРѕ
+	{name="barman_new", dist_min=1, dist_max=2.5, bone="bip01_head"},	-- 4 Р‘Р°СЂРѕРЅ
+	{name="razuvaev", dist_min=1, dist_max=4, bone="bip01_head"},	-- 5 Р Р°Р·СѓРІР°РµРІ
+	{name="komandir_petrenko", dist_min=1, dist_max=4, bone="bip01_head"},  -- 6 РџРµС‚СЂРµРЅРєРѕ
+	{name="mk_bratok_bar_song", dist_min=1, dist_max=4, bone="bip01_head"}, -- 7 Р‘СЂР°С‚РѕРє_Р‘Р°СЂ
+	{name="shpak", dist_min=1, dist_max=4, bone="bip01_head"},	-- 8 РЁРїР°Рє
+	{name="komandir_voronin", dist_min=1, dist_max=3, bone="bip01_head"},	-- 9 Р’РѕСЂРѕРЅРёРЅ
+	{name="uchen_saharov", dist_min=1, dist_max=1.5, bone="bip01_head"},	-- 10 РЎР°С…Р°СЂРѕРІ
+	{name="uchen_kaymanov", dist_min=1, dist_max=4, bone="bip01_head"},	-- 11 РљР°Р№РјР°РЅРѕРІ
+	{name="haron_new", dist_min=1, dist_max=4, bone="bip01_head"},	-- 12 РҐР°СЂРѕРЅ
+	{name="borovikov", dist_min=1, dist_max=2.5, bone="bip01_head"},	-- 13 Р‘РѕСЂСЏ РЎРµСЂРѕРІ
+	{name="dron", dist_min=1, dist_max=4, bone="bip01_head"},	-- 14 Р”СЂРѕРЅ
+	{name="bar_barman", dist_min=1, dist_max=2.5, bone="bip01_head"},	-- 15 Р”СЏРґСЏ РњРёС€Р°
+	{name="osvedom", dist_min=1, dist_max=4, bone="bip01_head"},	-- 16 РЎРІСЏР·РЅРѕР№
+	{name="brigadir", dist_min=1, dist_max=4, bone="bip01_head"},	-- 17 Р‘СЂРёРіР°РґРёСЂ
+	{name="brityi", dist_min=1, dist_max=4, bone="bip01_head"},	-- 18 Р‘СЂРёС‚С‹Р№
+	{name="bar_bar_visitor_hunter", dist_min=1, dist_max=4, bone="bip01_head"}, -- 19 Р’Р°РґРёРє (Р‘Р°СЂ)
+	{name="semyon", dist_min=1, dist_max=4, bone="bip01_head"},	-- 20 РЎРµРјС‘РЅ
+	{name="djonny", dist_min=1, dist_max=4, bone="bip01_head"},	-- 21 Р­РґРёРє
+	{name="bar_leha", dist_min=1, dist_max=4, bone="bip01_head"},	-- 22 Р›С‘С…Р°
+	{name="neytral_08", dist_min=1, dist_max=4, bone="bip01_head"},	-- 23 РЎРµСЂС‹Р№
+	{name="neytral_09", dist_min=1, dist_max=4, bone="bip01_head"},	-- 24 Р¤Р»РёРЅС‚
+	{name="bar_ataka_03", dist_min=1, dist_max=4, bone="bip01_head"},	-- 25 Р”РёРјРѕСЃ
+	{name="neytral_16", dist_min=1, dist_max=4, bone="bip01_head"},	-- 26 Р–РµРЅС‘Рє
+	{name="neytral_20", dist_min=1, dist_max=4, bone="bip01_head"},	-- 27 РџР°РІР»РёРє
+	{name="bar_ataka_01", dist_min=1, dist_max=4, bone="bip01_head"},	-- 28 Р›РµРІС€Р°
+	{name="bar_ataka_04", dist_min=1, dist_max=4, bone="bip01_head"},	-- 29 РЎР°РЅС‡Рѕ
+	{name="bar_ataka_05", dist_min=1, dist_max=4, bone="bip01_head"},	-- 30 Р®СЂР°
+	{name="bar_digger_kamp5", dist_min=1, dist_max=4, bone="bip01_head"},	-- 31 Р‘СЂРѕРј
+	{name="shershen", dist_min=1, dist_max=4, bone="bip01_head"},	-- 32 РЁРµСЂС€РµРЅСЊ
+	{name="volk", dist_min=1, dist_max=4, bone="bip01_head"},	-- 33 Р’РѕР»Рє
+	{name="lis", dist_min=1, dist_max=4, bone="bip01_head"},	-- 34 Р›РёСЃ
+	{name="prizrak", dist_min=1, dist_max=4, bone="bip01_head"},	-- 35 РџСЂРёР·СЂР°Рє
+	{name="babay", dist_min=1, dist_max=4, bone="bip01_head"},	-- 36 Р‘Р°Р±Р°Р№
+	{name="greta", dist_min=1, dist_max=4, bone="bip01_head"},	-- 37 Р“СЂРµС‚Р°
+	{name="lukash", dist_min=1, dist_max=4, bone="bip01_head"},	-- 38 Р›СѓРєР°С€
+	{name="max", dist_min=1, dist_max=4, bone="bip01_head"},	-- 39 РњР°РєСЃ
+	{name="kep", dist_min=1, dist_max=4, bone="bip01_head"},	-- 40 РљСЌРї
+	{name="skryaga", dist_min=1, dist_max=4, bone="bip01_head"},	-- 41 РЎРєСЂСЏРіР°
+	{name="kock", dist_min=1, dist_max=4, bone="bip01_head"},	-- 42 Р”Р¶Р°РЅРіРѕ
+	{name="shurup", dist_min=1, dist_max=4, bone="bip01_head"},	-- 43 РЁСѓСЂСѓРї
+	{name="mk_bratok_kbore", dist_min=1, dist_max=4, bone="bip01_head"},	-- 44 Р‘СЂР°С‚РѕРє Сѓ Р‘Р°СЂР°
+	{name="mk_ohr_borov", dist_min=1, dist_max=4, bone="bip01_head"}, -- 45 РћС…СЂР°РЅРЅРёРє Р‘РѕСЂРё
+	{name="feldsher", dist_min=1, dist_max=4, bone="bip01_head"},	-- 46 Р¤РµР»СЊРґС€РµСЂ
+	{name="mk_zhorik", dist_min=1, dist_max=4, bone="bip01_head"},	-- 47 Р–РѕСЂРёРє
+	{name="novichok_01", dist_min=1, dist_max=4, bone="bip01_head"},	-- 48 РЁСѓСЃС‚СЂС‹Р№
+	{name="mk_npc_mafon", dist_min=1, dist_max=3, bone="bip01_head"},  -- 49 Р‘СЂР°С‚РѕРє СЃ РљСЂС‹СЃРѕР»РѕРІРѕРј
+	{name="zubarev", dist_min=1, dist_max=4, bone="bip01_head"},	-- 50 Р—СѓР±Р°СЂРµРІ
+	{name="poet", dist_min=1, dist_max=4, bone="bip01_head"},	-- 51 РЎС‚РёС…РѕРїР»С‘С‚
+	{name="mk_dezertir_fort", dist_min=1, dist_max=4, bone="bip01_head"},	-- 52 Р”РµР·РµСЂС‚РёСЂ РЅР° РњРљ
+	{name="uchen_01", dist_min=1, dist_max=4, bone="bip01_head"},	-- 53 Р¤Р»РµР№С€РјР°РЅ
+	{name="uchen_02", dist_min=1, dist_max=4, bone="bip01_head"},	-- 54 РЎРµРјС‘РЅРѕРІ
+	{name="uchen_03", dist_min=1, dist_max=4, bone="bip01_head"},	-- 55 Р“СѓСЂРµРІРёС‡
+	{name="uchen_04", dist_min=1, dist_max=4, bone="bip01_head"},	-- 56 Р РѕР№Р·РјР°РЅРЅ
+	{name="uchen_05", dist_min=1, dist_max=4, bone="bip01_head"},	-- 57 Р”СЂРѕР·РґРѕРІ
+	{name="uchen_06", dist_min=1, dist_max=4, bone="bip01_head"},	-- 58 РџР»РѕР№РјР°СЂ
+	{name="bratok_bar_06", dist_min=1, dist_max=4, bone="bip01_head"}, -- 59 Р‘СЂР°С‚РѕРє РІ С‚РµР»СЊРЅСЏС€РєРµ
+	{name="zhila", dist_min=1, dist_max=4, bone="bip01_head"},	-- 60 Р–РёР»Р°
+	{name="krysolov", dist_min=1, dist_max=4, bone="bip01_head"},	-- 61 РљСЂС‹СЃРѕР»РѕРІ
+	{name="swamp_doctor", dist_min=1, dist_max=4, bone="bip01_head"},	-- 62 Р”РѕРєС‚РѕСЂ
+	{name="vasil_swamp", dist_min=1, dist_max=4, bone="bip01_head"},	-- 63 Р’Р°СЃРёР»СЊРµРІ
+	{name="kruglov_swamp", dist_min=1, dist_max=4, bone="bip01_head"},	-- 64 РљСЂСѓРіР»РѕРІ
+	{name="kaymanov_ohr1", dist_min=1, dist_max=4, bone="bip01_head"},	-- 65 РћС…СЂР°РЅРЅРёРє-1
+	{name="kaymanov_ohr2", dist_min=1, dist_max=4, bone="bip01_head"},	-- 66 РћС…СЂР°РЅРЅРёРє-2
+	{name="bar_bar_drunk_dolg", dist_min=1, dist_max=4, bone="bip01_head"}, -- 67 Р‘Р°СЂ_РїРѕСЃРµС‚РёС‚РµР»СЊ
+	{name="bar_bar_visitors_3_2", dist_min=1, dist_max=4, bone="bip01_head"}, -- 68 Р‘Р°СЂ_РїРѕСЃРµС‚РёС‚РµР»СЊ
+	{name="bar_bar_visitors_3_3", dist_min=1, dist_max=4, bone="bip01_head"}, -- 69 Р‘Р°СЂ_РїРѕСЃРµС‚РёС‚РµР»СЊ
+	{name="bar_bar_visitors_3_4", dist_min=1, dist_max=4, bone="bip01_head"}, -- 70 Р‘Р°СЂ_РїРѕСЃРµС‚РёС‚РµР»СЊ
+	{name="bar_bar_lisiy", dist_min=1, dist_max=4, bone="bip01_head"}, -- 71 Р‘Р°СЂ_РїРѕСЃРµС‚РёС‚РµР»СЊ
+	{name="bar_bar_visitors_2_1", dist_min=1, dist_max=4, bone="bip01_head"}, -- 72 Р‘Р°СЂ_РїРѕСЃРµС‚РёС‚РµР»СЊ
+	{name="bar_ataka_02", dist_min=1, dist_max=4, bone="bip01_head"}, -- 73 Р‘Р°СЂ_Р”РёРіРіРµСЂ
+	{name="blokpost_01", dist_min=1, dist_max=4, bone="bip01_head"}, -- 74 Р‘Р°СЂ_С‡Р°СЃРѕРІРѕР№
+	{name="blokpost_02", dist_min=1, dist_max=4, bone="bip01_head"}, -- 75 Р‘Р°СЂ_С‡Р°СЃРѕРІРѕР№
+	{name="blokpost_03", dist_min=1, dist_max=4, bone="bip01_head"}, -- 76 Р‘Р°СЂ_С‡Р°СЃРѕРІРѕР№
+	{name="filin", dist_min=1, dist_max=4, bone="bip01_head"}, -- 77 Р¤РёР»РёРЅ (Р‘Р°СЂ)
+	{name="lesnik", dist_min=1, dist_max=4, bone="bip01_head"}, -- 78 Р›РµСЃРЅРёРє
+	{name="sutuly", dist_min=1, dist_max=4, bone="bip01_head"}, -- 79 РЎСѓС‚СѓР»С‹Р№
+	{name="mazay", dist_min=1, dist_max=4, bone="bip01_head"}, -- 80 РњР°Р·Р°Р№
+	{name="grek", dist_min=1, dist_max=4, bone="bip01_head"}, -- 81 Р“СЂРµРє
+	{name="zahar", dist_min=1, dist_max=4, bone="bip01_head"}, -- 82 Р—Р°С…Р°СЂ
+	{name="osvedom_new", dist_min=1, dist_max=4, bone="bip01_head"}, -- 83 РЎРІСЏР·РЅРѕР№_Р›РµСЃ
+	{name="osvedom_dva", dist_min=1, dist_max=4, bone="bip01_head"}, -- 84 РЎРІСЏР·РЅРѕР№_Р‘Р°СЂ
+	{name="genrih", dist_min=1, dist_max=4, bone="bip01_head"}, -- 85 Р“РµРЅСЂРёС…
+	{name="yurgen", dist_min=1, dist_max=4, bone="bip01_head"}, -- 86 Р®СЂРіРµРЅ
+	{name="jagger", dist_min=1, dist_max=4, bone="bip01_head"}, -- 87 Р”Р¶Р°РіРіРµСЂ
+	{name="missis_uchen", dist_min=1, dist_max=4, bone="bip01_head"}, -- 88 Р“РµСЂС‚СЂСѓРґР°
+	{name="uchen_mg1", dist_min=1, dist_max=4, bone="bip01_head"}, -- 89 РЈС‡С‘РЅС‹Р№1
+	{name="uchen_mg2", dist_min=1, dist_max=4, bone="bip01_head"}, -- 90 РЈС‡С‘РЅС‹Р№2
+	{name="uchen_mg3", dist_min=1, dist_max=4, bone="bip01_head"}, -- 91 РЈС‡С‘РЅС‹Р№3
+	{name="petrograf", dist_min=1, dist_max=4, bone="bip01_head"}, -- 92 РџРµС‚СЂРѕРіСЂР°С„
+	{name="sidor", dist_min=1, dist_max=4, bone="bip01_head"}, -- 93 РЎРёРґРѕСЂРѕРІРёС‡
+	{name="plichko_dolg", dist_min=1, dist_max=4, bone="bip01_head"}, -- 94 РџР»РёС‡РєРѕ
+	{name="zapadlo", dist_min=1, dist_max=4, bone="bip01_head"}, -- 95 Р—Р°РїР°РґР»Рѕ
+	{name="verka", dist_min=1, dist_max=4, bone="bip01_head"}, -- 96 Р’РµСЂРєР°
+	{name="dunya", dist_min=1, dist_max=4, bone="bip01_head"} -- 97 Р”СѓРЅСЏ
 }
 
--- Сканер целей
+-- РЎРєР°РЅРµСЂ С†РµР»РµР№
 function IsTarget(obj)
 	local x = 0
 	if not obj then return x end
 	local sect = obj:section()
 	local name = obj:name()
 	if name then 
-		-- ищем совпадение в таблице
+		-- РёС‰РµРј СЃРѕРІРїР°РґРµРЅРёРµ РІ С‚Р°Р±Р»РёС†Рµ
 		for x,v in pairs (tbl_target) do
 			if name==v.name or sect==v.name then
-				return x -- возвращаем номер совпавшего элемента таблицы
+				return x -- РІРѕР·РІСЂР°С‰Р°РµРј РЅРѕРјРµСЂ СЃРѕРІРїР°РІС€РµРіРѕ СЌР»РµРјРµРЅС‚Р° С‚Р°Р±Р»РёС†С‹
 			end
 		end
 	end
@@ -171,9 +171,9 @@ end
 
 function photo_binder:frame_update(delta)
 	object_binder.update(self, delta)
-	if not has_alife_info("start_photo") then return end	-- нет разрешения фотогрфировать
+	if not has_alife_info("start_photo") then return end	-- РЅРµС‚ СЂР°Р·СЂРµС€РµРЅРёСЏ С„РѕС‚РѕРіСЂС„РёСЂРѕРІР°С‚СЊ
 	local ammo_elapsed = self.object:get_ammo_in_magazine()
-	--позиция камеры
+	--РїРѕР·РёС†РёСЏ РєР°РјРµСЂС‹
 	self.photo_pos = device().cam_pos
 	self.photo_dir = device().cam_dir
 
@@ -183,29 +183,29 @@ function photo_binder:frame_update(delta)
 		return
 	end
 	
-	-- Определяем что делаем с левой кнопокой мыши
+	-- РћРїСЂРµРґРµР»СЏРµРј С‡С‚Рѕ РґРµР»Р°РµРј СЃ Р»РµРІРѕР№ РєРЅРѕРїРѕРєРѕР№ РјС‹С€Рё
 	local num = self.last_ammo_elapsed - ammo_elapsed
-	if num > 0 then -- это либо первое нажатие, либо удержание
-		if not self.lbutton_pressed then -- первое нажатие
+	if num > 0 then -- СЌС‚Рѕ Р»РёР±Рѕ РїРµСЂРІРѕРµ РЅР°Р¶Р°С‚РёРµ, Р»РёР±Рѕ СѓРґРµСЂР¶Р°РЅРёРµ
+		if not self.lbutton_pressed then -- РїРµСЂРІРѕРµ РЅР°Р¶Р°С‚РёРµ
 			self:OnLButtonDown()
 			self.lbutton_pressed = true
-		else -- удерживание
+		else -- СѓРґРµСЂР¶РёРІР°РЅРёРµ
 			self:OnLButtonHold(delta)
 		end
-	elseif self.lbutton_pressed then -- отпускание
+	elseif self.lbutton_pressed then -- РѕС‚РїСѓСЃРєР°РЅРёРµ
 		self:OnLButtonUp()
 		self.lbutton_pressed = false
 	end
 	self.last_ammo_elapsed = ammo_elapsed
-	---- Аналогично отрабатываем для правой кнопки мыши ---------
-	if db.actor:zoom_mode() then -- это либо первое нажатие, либо удержание
-		if not self.rbutton_pressed then -- первое нажатие
+	---- РђРЅР°Р»РѕРіРёС‡РЅРѕ РѕС‚СЂР°Р±Р°С‚С‹РІР°РµРј РґР»СЏ РїСЂР°РІРѕР№ РєРЅРѕРїРєРё РјС‹С€Рё ---------
+	if db.actor:zoom_mode() then -- СЌС‚Рѕ Р»РёР±Рѕ РїРµСЂРІРѕРµ РЅР°Р¶Р°С‚РёРµ, Р»РёР±Рѕ СѓРґРµСЂР¶Р°РЅРёРµ
+		if not self.rbutton_pressed then -- РїРµСЂРІРѕРµ РЅР°Р¶Р°С‚РёРµ
 			self:OnRButtonDown()
 			self.rbutton_pressed = true
-		else -- удерживание
+		else -- СѓРґРµСЂР¶РёРІР°РЅРёРµ
 			self:OnRButtonHold(delta)
 		end
-	elseif self.rbutton_pressed then -- отпускание
+	elseif self.rbutton_pressed then -- РѕС‚РїСѓСЃРєР°РЅРёРµ
 		self:OnRButtonUp()
 		self.rbutton_pressed = false
 	end
@@ -233,30 +233,30 @@ function photo_binder:load(reader)
 end
 
 -----------------------------------------------------------------------------------
--- поиск объекта в конусе экспозиции
+-- РїРѕРёСЃРє РѕР±СЉРµРєС‚Р° РІ РєРѕРЅСѓСЃРµ СЌРєСЃРїРѕР·РёС†РёРё
 function photo_binder:exposure(cone)
-	if not cone then cone = 0.9848 end -- 10 градусов
+	if not cone then cone = 0.9848 end -- 10 РіСЂР°РґСѓСЃРѕРІ
 	local exp_id = nil
 	local exp_obj = nil
 	local dist_min = 100
 	local obj
 	local str_num = 0
-	-- сканируем таблицу доступных целей
+	-- СЃРєР°РЅРёСЂСѓРµРј С‚Р°Р±Р»РёС†Сѓ РґРѕСЃС‚СѓРїРЅС‹С… С†РµР»РµР№
 	for id,v in pairs (tbl_photo) do	
 		obj = level.object_by_id(id)
 		if obj  then
 			local obj_pos
-			local x = tbl_target[v]	-- получили параметры из таблицы
-			if x.bone then obj_pos = obj:bone_position("bip01_head")	-- целимся в голову
-			else obj_pos = obj:position()	-- иначе в позицию цели
+			local x = tbl_target[v]	-- РїРѕР»СѓС‡РёР»Рё РїР°СЂР°РјРµС‚СЂС‹ РёР· С‚Р°Р±Р»РёС†С‹
+			if x.bone then obj_pos = obj:bone_position("bip01_head")	-- С†РµР»РёРјСЃСЏ РІ РіРѕР»РѕРІСѓ
+			else obj_pos = obj:position()	-- РёРЅР°С‡Рµ РІ РїРѕР·РёС†РёСЋ С†РµР»Рё
 			end
 			local target_dir = vector():sub(obj_pos,self.photo_pos):normalize()
 			local target_cos = self.photo_dir:dotproduct(target_dir)
-			if target_cos > cone then -- цель в конусе экспозиции  
-				if (x.bone and obj:see(db.actor)) or (not x.bone) then -- и лицом к объективу или это предмет
-					local cur_dist = self.photo_pos:distance_to(obj_pos)	-- расстояние до объекта				
-					if cur_dist > x.dist_min and cur_dist < x.dist_max and cur_dist < dist_min then -- если в допуске
-						dist_min = cur_dist	-- фокусируем на ближайшем объекте в конусе экспозиции
+			if target_cos > cone then -- С†РµР»СЊ РІ РєРѕРЅСѓСЃРµ СЌРєСЃРїРѕР·РёС†РёРё  
+				if (x.bone and obj:see(db.actor)) or (not x.bone) then -- Рё Р»РёС†РѕРј Рє РѕР±СЉРµРєС‚РёРІСѓ РёР»Рё СЌС‚Рѕ РїСЂРµРґРјРµС‚
+					local cur_dist = self.photo_pos:distance_to(obj_pos)	-- СЂР°СЃСЃС‚РѕСЏРЅРёРµ РґРѕ РѕР±СЉРµРєС‚Р°				
+					if cur_dist > x.dist_min and cur_dist < x.dist_max and cur_dist < dist_min then -- РµСЃР»Рё РІ РґРѕРїСѓСЃРєРµ
+						dist_min = cur_dist	-- С„РѕРєСѓСЃРёСЂСѓРµРј РЅР° Р±Р»РёР¶Р°Р№С€РµРј РѕР±СЉРµРєС‚Рµ РІ РєРѕРЅСѓСЃРµ СЌРєСЃРїРѕР·РёС†РёРё
 						exp_id = id
 						exp_obj = obj
 					end
@@ -266,34 +266,34 @@ function photo_binder:exposure(cone)
 			tbl_photo[id] = nil
 		end
 	end
-	self.target = exp_obj -- запомнили объект
-	self.target_id = exp_id -- запомнили id
+	self.target = exp_obj -- Р·Р°РїРѕРјРЅРёР»Рё РѕР±СЉРµРєС‚
+	self.target_id = exp_id -- Р·Р°РїРѕРјРЅРёР»Рё id
 	if exp_obj and exp_id then
 		self.exposured = true
 	else
 		self.exposured = false 
 	end
 end
--- нажатие ПКМ
+-- РЅР°Р¶Р°С‚РёРµ РџРљРњ
 function photo_binder:OnRButtonDown()
-	tbl_photo = {}	-- чистим таблицу целей
+	tbl_photo = {}	-- С‡РёСЃС‚РёРј С‚Р°Р±Р»РёС†Сѓ С†РµР»РµР№
 	local obj
 	local str_num
 	for id=1,65534 do
-		obj = level.object_by_id(id)	-- ищем на текущем уровне
-		if obj then -- есть объект
-			str_num = IsTarget(obj)	-- запрашиваем идентификацию цели
-			if str_num > 0 then	-- если это наша цель
-				tbl_photo[id] = str_num	-- запомним его ид и номер строки в таблице целей
+		obj = level.object_by_id(id)	-- РёС‰РµРј РЅР° С‚РµРєСѓС‰РµРј СѓСЂРѕРІРЅРµ
+		if obj then -- РµСЃС‚СЊ РѕР±СЉРµРєС‚
+			str_num = IsTarget(obj)	-- Р·Р°РїСЂР°С€РёРІР°РµРј РёРґРµРЅС‚РёС„РёРєР°С†РёСЋ С†РµР»Рё
+			if str_num > 0 then	-- РµСЃР»Рё СЌС‚Рѕ РЅР°С€Р° С†РµР»СЊ
+				tbl_photo[id] = str_num	-- Р·Р°РїРѕРјРЅРёРј РµРіРѕ РёРґ Рё РЅРѕРјРµСЂ СЃС‚СЂРѕРєРё РІ С‚Р°Р±Р»РёС†Рµ С†РµР»РµР№
 			end
 		end 
 	end
 	end
--- Удержание ПКМ
+-- РЈРґРµСЂР¶Р°РЅРёРµ РџРљРњ
 function photo_binder:OnRButtonHold(delta)
 	self:exposure(0.999)
-		-- ищем объект в видоискатель
-	-- Защита от зависания биндера при исчезновении объекта 
+		-- РёС‰РµРј РѕР±СЉРµРєС‚ РІ РІРёРґРѕРёСЃРєР°С‚РµР»СЊ
+	-- Р—Р°С‰РёС‚Р° РѕС‚ Р·Р°РІРёСЃР°РЅРёСЏ Р±РёРЅРґРµСЂР° РїСЂРё РёСЃС‡РµР·РЅРѕРІРµРЅРёРё РѕР±СЉРµРєС‚Р° 
 	if not level.object_by_id(self.target_id) then
 		tbl_photo[self.target_id] = nil
 		self.target = nil
@@ -312,22 +312,22 @@ function photo_binder:OnRButtonHold(delta)
 		end
 	end
 end
--- Отпускание ПКМ
+-- РћС‚РїСѓСЃРєР°РЅРёРµ РџРљРњ
 function photo_binder:OnRButtonUp()
 	self.new_target_id = nil
 	self.target = nil
 end
--- Нажатие ЛКМ
+-- РќР°Р¶Р°С‚РёРµ Р›РљРњ
 function photo_binder:OnLButtonDown() 
-	-- если есть цель
+	-- РµСЃР»Рё РµСЃС‚СЊ С†РµР»СЊ
 	if self.exposured then
 		local str_num = tbl_photo[self.target_id]
 		local info = "info_target"..str_num
 		if not has_alife_info(info) then
-			-- делаем снимок в рюкзак
+			-- РґРµР»Р°РµРј СЃРЅРёРјРѕРє РІ СЂСЋРєР·Р°Рє
 			local obj=alife():create("foto_news", db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(), db.actor:id())
 			if obj then
-				local text = "Получен новый снимок для газеты."
+				local text = "РџРѕР»СѓС‡РµРЅ РЅРѕРІС‹Р№ СЃРЅРёРјРѕРє РґР»СЏ РіР°Р·РµС‚С‹."
 				news_manager.send_tip(db.actor, text, 1, nil, 10000)
 				db.actor:give_info_portion(info)
 			end
@@ -336,23 +336,23 @@ function photo_binder:OnLButtonDown()
 	self.exposured = false
 	self.target = nil
 end
--- удержание ЛКМ
+-- СѓРґРµСЂР¶Р°РЅРёРµ Р›РљРњ
 function photo_binder:OnLButtonHold(delta) 
 
 end
--- отпускание ЛКМ
+-- РѕС‚РїСѓСЃРєР°РЅРёРµ Р›РљРњ
 function photo_binder:OnLButtonUp() 
 
 end
--- Взяли в руки
+-- Р’Р·СЏР»Рё РІ СЂСѓРєРё
 function photo_binder:OnTake()
 
 end
--- Держим в руках
+-- Р”РµСЂР¶РёРј РІ СЂСѓРєР°С…
 function photo_binder:OnHold(delta)
 
 end
--- Убрали
+-- РЈР±СЂР°Р»Рё
 function photo_binder:OnRemove()
 	self.rbutton_pressed = false
 	self.lbutton_pressed = false

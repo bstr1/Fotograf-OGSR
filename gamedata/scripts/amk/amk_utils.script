@@ -2,7 +2,7 @@
 
 File:  amk_utils .script
 Created:  23.05.2008
-Copyright:  © 2008 AMK team
+Copyright:  В© 2008 AMK team
 Version:  1.1.0.5
 
 --]]
@@ -11,7 +11,7 @@ Version:  1.1.0.5
 --* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 -- *			                         Menu 					                 *
 --* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-RestrictionStock = nil   --Ограничения на вместимость инвентаря
+RestrictionStock = nil   --РћРіСЂР°РЅРёС‡РµРЅРёСЏ РЅР° РІРјРµСЃС‚РёРјРѕСЃС‚СЊ РёРЅРІРµРЅС‚Р°СЂСЏ
 
 
 
@@ -21,73 +21,73 @@ RestrictionStock = nil   --Ограничения на вместимость инвентаря
 -- *			                         Callback 					                 *
 --* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
---Callback на старт игры
+--Callback РЅР° СЃС‚Р°СЂС‚ РёРіСЂС‹
 function start_game()
 end
 
---Callback на апдейт монстров (работает постоянно)
+--Callback РЅР° Р°РїРґРµР№С‚ РјРѕРЅСЃС‚СЂРѕРІ (СЂР°Р±РѕС‚Р°РµС‚ РїРѕСЃС‚РѕСЏРЅРЅРѕ)
 function monster_update(delta)
 end
 
---Callback на смерть монстров
+--Callback РЅР° СЃРјРµСЂС‚СЊ РјРѕРЅСЃС‚СЂРѕРІ
 function monster_death(victim, who)
 end
 
---Callback на хит монстра
+--Callback РЅР° С…РёС‚ РјРѕРЅСЃС‚СЂР°
 function monster_hit(obj, amount, local_direction, who, bone_index)
 end
 
---Callback юзания обьекта
+--Callback СЋР·Р°РЅРёСЏ РѕР±СЊРµРєС‚Р°
 function physics_use(obj, who)
 end
 
---Callback на хит обьекта
+--Callback РЅР° С…РёС‚ РѕР±СЊРµРєС‚Р°
 function physics_hit(obj, amount, local_direction, who, bone_index)
 end
 
---Callback на "смерть" обьекта
+--Callback РЅР° "СЃРјРµСЂС‚СЊ" РѕР±СЊРµРєС‚Р°
 function physics_death(victim, who)
 end
 
---Callback на инфопоршен
+--Callback РЅР° РёРЅС„РѕРїРѕСЂС€РµРЅ
 function actor_info(npc, info_id)
 end
 
---Callback на заход на уровень
+--Callback РЅР° Р·Р°С…РѕРґ РЅР° СѓСЂРѕРІРµРЅСЊ
 function actor_level_border_enter(npc, info_id)
 end
 
---Callback на выход с уровня
+--Callback РЅР° РІС‹С…РѕРґ СЃ СѓСЂРѕРІРЅСЏ
 function actor_level_border_exit(npc, info_id)
 end
 
---Callback на полученияе артикла
+--Callback РЅР° РїРѕР»СѓС‡РµРЅРёСЏРµ Р°СЂС‚РёРєР»Р°
 function actor_article(npc, group, name)
 end
 
---Callback на взятия предмета в инвентарь гг из ящика
+--Callback РЅР° РІР·СЏС‚РёСЏ РїСЂРµРґРјРµС‚Р° РІ РёРЅРІРµРЅС‚Р°СЂСЊ РіРі РёР· СЏС‰РёРєР°
 function actor_item_from_box(box, item)
 end
 
---Callback на взятие предмета в инвентарь гг
+--Callback РЅР° РІР·СЏС‚РёРµ РїСЂРµРґРјРµС‚Р° РІ РёРЅРІРµРЅС‚Р°СЂСЊ РіРі
 function actor_item_take(obj)
 	if obj ~= nil and RestrictionStock ~= nil then
 		restriction_stock.restriction_of_stock(obj,0)
 	end
 end
 
---Callback на потерю предмета из инвенаря гг
+--Callback РЅР° РїРѕС‚РµСЂСЋ РїСЂРµРґРјРµС‚Р° РёР· РёРЅРІРµРЅР°СЂСЏ РіРі
 function actor_item_drop(obj)
 	if obj ~= nil and RestrictionStock ~= nil then
 		restriction_stock.restriction_of_stock(obj,1)
 	end
 end
 
---Callback на получение тасков
+--Callback РЅР° РїРѕР»СѓС‡РµРЅРёРµ С‚Р°СЃРєРѕРІ
 function actor_task(_task, _objective, _state)
 end
 
---Callback на апдейт актора  (работает постоянно)
+--Callback РЅР° Р°РїРґРµР№С‚ Р°РєС‚РѕСЂР°  (СЂР°Р±РѕС‚Р°РµС‚ РїРѕСЃС‚РѕСЏРЅРЅРѕ)
 function actor_update(delta)
 end
 
@@ -96,7 +96,7 @@ end
 -- *			                         Inventory					       *
 --* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
---Проверка на количество предметов в инвентаре гг
+--РџСЂРѕРІРµСЂРєР° РЅР° РєРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРµРґРјРµС‚РѕРІ РІ РёРЅРІРµРЅС‚Р°СЂРµ РіРі
 function inventory_search(itemS, n)
 	local  actor = db.actor
 	local  count = 0
@@ -108,7 +108,7 @@ function inventory_search(itemS, n)
 	end
 end
 
---Проверка на предмет в инвентаре гг
+--РџСЂРѕРІРµСЂРєР° РЅР° РїСЂРµРґРјРµС‚ РІ РёРЅРІРµРЅС‚Р°СЂРµ РіРі
 function have_a_item(itemS)
     local actor = db.actor
     if actor ~= nil and actor:object(itemS) ~= nil then
@@ -118,7 +118,7 @@ function have_a_item(itemS)
 	end
 end
 
---Проверка на предмет в инветаре и выдачу инфопоршена
+--РџСЂРѕРІРµСЂРєР° РЅР° РїСЂРµРґРјРµС‚ РІ РёРЅРІРµС‚Р°СЂРµ Рё РІС‹РґР°С‡Сѓ РёРЅС„РѕРїРѕСЂС€РµРЅР°
 function have_a_item_info(itemS, info)
     local actor = db.actor
     if actor ~= nil and actor:object(itemS) ~= nil and actor:dont_has_info(info) then
@@ -126,7 +126,7 @@ function have_a_item_info(itemS, info)
 	end
 end
 
---Проверка инфопоршенов
+--РџСЂРѕРІРµСЂРєР° РёРЅС„РѕРїРѕСЂС€РµРЅРѕРІ
 function have_a_info(info_has, not_info_has)
 	local actor = db.actor
 	if has_alife_info(info_has) and not has_alife_info(not_info_has) then
@@ -136,7 +136,7 @@ function have_a_info(info_has, not_info_has)
 	end
 end
 
---Проверка денег у гг
+--РџСЂРѕРІРµСЂРєР° РґРµРЅРµРі Сѓ РіРі
 function actor_has_money(money)
 	local actor = db.actor
 	if actor:money() >= money then
@@ -150,7 +150,7 @@ end
 -- *			                         Transfers					       *
 --* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
---Трансфер денег между гг и нпс
+--РўСЂР°РЅСЃС„РµСЂ РґРµРЅРµРі РјРµР¶РґСѓ РіРі Рё РЅРїСЃ
 function actor_give_money(npcObj, actorObj, money, Type)
 	local actor, npc
 	if db.actor and db.actor:id() == npc:id() then
@@ -168,7 +168,7 @@ function actor_give_money(npcObj, actorObj, money, Type)
 	end
 end
 
---Трансфер предмета между гг и нпс
+--РўСЂР°РЅСЃС„РµСЂ РїСЂРµРґРјРµС‚Р° РјРµР¶РґСѓ РіРі Рё РЅРїСЃ
 function actor_give_item(npcObj, actorObj, itemS, Type)
 	local actor, npc
 	if db.actor and db.actor:id() == npc:id() then
@@ -186,7 +186,7 @@ function actor_give_item(npcObj, actorObj, itemS, Type)
 	end
 end
 
---Трансфер предметов между гг и нпс
+--РўСЂР°РЅСЃС„РµСЂ РїСЂРµРґРјРµС‚РѕРІ РјРµР¶РґСѓ РіРі Рё РЅРїСЃ
 function relocate_n_items_section(victim, section, Type, count)
     if db.actor and victim then
 		if Type == "in" then

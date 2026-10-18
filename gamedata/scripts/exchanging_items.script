@@ -1,14 +1,14 @@
 
 --[[ ---------------------------------------------------------------------------------------------------
  File        : exchanging_items.script
- Description : Обмен предметами с НПС
- Copyright   : 2011 © Stalk15
+ Description : РћР±РјРµРЅ РїСЂРµРґРјРµС‚Р°РјРё СЃ РќРџРЎ
+ Copyright   : 2011 В© Stalk15
  Author      : Stalk15
  Update      : boryan67 
  Last edit   : 16.06.2013
 --]]-----------------------------------------------------------------------------------------------
 
-------------------  Таблицы итемов  ------------------
+------------------  РўР°Р±Р»РёС†С‹ РёС‚РµРјРѕРІ  ------------------
 local all_items = 
 {
 	[2.6]  = "chernigov", 
@@ -88,7 +88,7 @@ local all_items =
 	[116.88] = "wpn_g36c_sk1",
 	[119.67] = "wpn_hk417_sk1",
 	[119.65] = "wpn_sr25_mk11_mod0_sk1",
--- уники
+-- СѓРЅРёРєРё
 	[119.11] = "wpn_ak74_m1",	
 	[119.12] = "wpn_abakan_m1",
 	[119.13] = "wpn_ak74u_m1",
@@ -165,7 +165,7 @@ local all_items =
 	[316.35] = "white_outfit",
 	[313.92] = "ecolog_outfit",
 	[318.52] = "protection_outfit",	
--- оружие на броники	
+-- РѕСЂСѓР¶РёРµ РЅР° Р±СЂРѕРЅРёРєРё	
 	[315.5]  = "wpn_ak9",	
 	[315.03] = "wpn_svd_c",
 	[320.5]  = "wpn_m82a3",
@@ -592,34 +592,34 @@ local InArt, InOutf, InItm, InWpn, InItem, InAmmo, ProposedArtRank, ProposedOutf
 --------------------------- Dialog ---------------------------
 local exchanging_items_intro_phrase = 
 {
-    "Обменяться не желаешь?",
-    "Ты против обмена не возражаешь?",
-    "Есть чего на обмен выдвинуть?",
-    "Махнемся не глядя?",
-    "Меняться будешь?",
-    "Не найдется желания обменяться?",
-    "Бартер интересует?",
-    "Обменяться не хочешь?",
-    "Может махнёмся?"
+    "РћР±РјРµРЅСЏС‚СЊСЃСЏ РЅРµ Р¶РµР»Р°РµС€СЊ?",
+    "РўС‹ РїСЂРѕС‚РёРІ РѕР±РјРµРЅР° РЅРµ РІРѕР·СЂР°Р¶Р°РµС€СЊ?",
+    "Р•СЃС‚СЊ С‡РµРіРѕ РЅР° РѕР±РјРµРЅ РІС‹РґРІРёРЅСѓС‚СЊ?",
+    "РњР°С…РЅРµРјСЃСЏ РЅРµ РіР»СЏРґСЏ?",
+    "РњРµРЅСЏС‚СЊСЃСЏ Р±СѓРґРµС€СЊ?",
+    "РќРµ РЅР°Р№РґРµС‚СЃСЏ Р¶РµР»Р°РЅРёСЏ РѕР±РјРµРЅСЏС‚СЊСЃСЏ?",
+    "Р‘Р°СЂС‚РµСЂ РёРЅС‚РµСЂРµСЃСѓРµС‚?",
+    "РћР±РјРµРЅСЏС‚СЊСЃСЏ РЅРµ С…РѕС‡РµС€СЊ?",
+    "РњРѕР¶РµС‚ РјР°С…РЅС‘РјСЃСЏ?"
 }
 
-local exchanging_items_phr_1 = "Почему бы не обменяться? Давай обменяемся. Смотри, что могу тебе предложить, выбирай: "
-local exchanging_items_phr_2 = "Не-не, не буду я с тобой меняться."
+local exchanging_items_phr_1 = "РџРѕС‡РµРјСѓ Р±С‹ РЅРµ РѕР±РјРµРЅСЏС‚СЊСЃСЏ? Р”Р°РІР°Р№ РѕР±РјРµРЅСЏРµРјСЃСЏ. РЎРјРѕС‚СЂРё, С‡С‚Рѕ РјРѕРіСѓ С‚РµР±Рµ РїСЂРµРґР»РѕР¶РёС‚СЊ, РІС‹Р±РёСЂР°Р№: "
+local exchanging_items_phr_2 = "РќРµ-РЅРµ, РЅРµ Р±СѓРґСѓ СЏ СЃ С‚РѕР±РѕР№ РјРµРЅСЏС‚СЊСЃСЏ."
 
-local exchanging_items_phr_3 = "Я бы пожрать что-нибудь взял..."
-local exchanging_items_phr_4 = "Я бы оружие взял..."
-local exchanging_items_phr_5 = "Я бы костюм взял..."
-local exchanging_items_phr_6 = "Я бы медикаментов или выпить взял..."
-local exchanging_items_phr_61 = "Я бы патроны взял..."
+local exchanging_items_phr_3 = "РЇ Р±С‹ РїРѕР¶СЂР°С‚СЊ С‡С‚Рѕ-РЅРёР±СѓРґСЊ РІР·СЏР»..."
+local exchanging_items_phr_4 = "РЇ Р±С‹ РѕСЂСѓР¶РёРµ РІР·СЏР»..."
+local exchanging_items_phr_5 = "РЇ Р±С‹ РєРѕСЃС‚СЋРј РІР·СЏР»..."
+local exchanging_items_phr_6 = "РЇ Р±С‹ РјРµРґРёРєР°РјРµРЅС‚РѕРІ РёР»Рё РІС‹РїРёС‚СЊ РІР·СЏР»..."
+local exchanging_items_phr_61 = "РЇ Р±С‹ РїР°С‚СЂРѕРЅС‹ РІР·СЏР»..."
 
-local exchanging_items_phr_7 = "Хорошо. А в замен я у тебя возьму во это: "
-local exchanging_items_phr_8 = "Думаю, ни какого обмена у нас с тобой не будет и быть не может. Смотрю, у тебя ничего путного нет. Подваливай, когда разбогатеешь."
+local exchanging_items_phr_7 = "РҐРѕСЂРѕС€Рѕ. Рђ РІ Р·Р°РјРµРЅ СЏ Сѓ С‚РµР±СЏ РІРѕР·СЊРјСѓ РІРѕ СЌС‚Рѕ: "
+local exchanging_items_phr_8 = "Р”СѓРјР°СЋ, РЅРё РєР°РєРѕРіРѕ РѕР±РјРµРЅР° Сѓ РЅР°СЃ СЃ С‚РѕР±РѕР№ РЅРµ Р±СѓРґРµС‚ Рё Р±С‹С‚СЊ РЅРµ РјРѕР¶РµС‚. РЎРјРѕС‚СЂСЋ, Сѓ С‚РµР±СЏ РЅРёС‡РµРіРѕ РїСѓС‚РЅРѕРіРѕ РЅРµС‚. РџРѕРґРІР°Р»РёРІР°Р№, РєРѕРіРґР° СЂР°Р·Р±РѕРіР°С‚РµРµС€СЊ."
 
-local exchanging_items_phr_9 = "Хорошо, я согласен, меняемся. Держи, это тебе."
-local exchanging_items_phr_10 = "Вот и славненько. Забирай свое: "
+local exchanging_items_phr_9 = "РҐРѕСЂРѕС€Рѕ, СЏ СЃРѕРіР»Р°СЃРµРЅ, РјРµРЅСЏРµРјСЃСЏ. Р”РµСЂР¶Рё, СЌС‚Рѕ С‚РµР±Рµ."
+local exchanging_items_phr_10 = "Р’РѕС‚ Рё СЃР»Р°РІРЅРµРЅСЊРєРѕ. Р—Р°Р±РёСЂР°Р№ СЃРІРѕРµ: "
 
-local exchanging_items_phr_11 = "Я передумал меняться."
-local exchanging_items_phr_12 = "Дело твое."
+local exchanging_items_phr_11 = "РЇ РїРµСЂРµРґСѓРјР°Р» РјРµРЅСЏС‚СЊСЃСЏ."
+local exchanging_items_phr_12 = "Р”РµР»Рѕ С‚РІРѕРµ."
 
 function init_exchanging_items_dialog(dlg)
 	local intro_phrase = exchanging_items_intro_phrase[math.random(1, table.getn(exchanging_items_intro_phrase))]
@@ -727,11 +727,11 @@ function give_message_proposed_items(first_speaker, second_speaker)
 	InItm = Item
 	InWpn = Wpn
 	InAmmo = Ammo
-	db.actor:give_talk_message("%c[255,250,194,87]Еда:%c[255,87,250,240] "..TxtArt, "ui\\ui_iconstotal", Frect():set(0,329,83,47), "iconed_answer_item")
-	db.actor:give_talk_message("%c[255,250,194,87]Костюм:%c[255,87,250,240] "..TxtOutfit, "ui\\ui_iconstotal", Frect():set(0,141,83,47), "iconed_answer_item")
-	db.actor:give_talk_message("%c[255,250,194,87]Предмет:%c[255,87,250,240] "..TxtItm, "ui\\ui_iconstotal", Frect():set(0,94,83,47), "iconed_answer_item")
-	db.actor:give_talk_message("%c[255,250,194,87]Оружие:%c[255,87,250,240] "..TxtWpn, "ui\\ui_iconstotal", Frect():set(0,517,83,47), "iconed_answer_item")
-	db.actor:give_talk_message("%c[255,250,194,87]Патроны:%c[255,87,250,240] "..TxtAmmo, "ui\\ui_iconstotal", Frect():set(0,517,83,47), "iconed_answer_item")
+	db.actor:give_talk_message("%c[255,250,194,87]Р•РґР°:%c[255,87,250,240] "..TxtArt, "ui\\ui_iconstotal", Frect():set(0,329,83,47), "iconed_answer_item")
+	db.actor:give_talk_message("%c[255,250,194,87]РљРѕСЃС‚СЋРј:%c[255,87,250,240] "..TxtOutfit, "ui\\ui_iconstotal", Frect():set(0,141,83,47), "iconed_answer_item")
+	db.actor:give_talk_message("%c[255,250,194,87]РџСЂРµРґРјРµС‚:%c[255,87,250,240] "..TxtItm, "ui\\ui_iconstotal", Frect():set(0,94,83,47), "iconed_answer_item")
+	db.actor:give_talk_message("%c[255,250,194,87]РћСЂСѓР¶РёРµ:%c[255,87,250,240] "..TxtWpn, "ui\\ui_iconstotal", Frect():set(0,517,83,47), "iconed_answer_item")
+	db.actor:give_talk_message("%c[255,250,194,87]РџР°С‚СЂРѕРЅС‹:%c[255,87,250,240] "..TxtAmmo, "ui\\ui_iconstotal", Frect():set(0,517,83,47), "iconed_answer_item")
 end
 
 function MssgAbstractedItem()

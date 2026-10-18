@@ -1,5 +1,5 @@
---// отладочный вывод в конcоль
-local console = false  --// true\false  - вкл\выкл
+--// РѕС‚Р»Р°РґРѕС‡РЅС‹Р№ РІС‹РІРѕРґ РІ РєРѕРЅcРѕР»СЊ
+local console = false  --// true\false  - РІРєР»\РІС‹РєР»
 
 function Console(fmt, ...)
 if console then 
@@ -8,7 +8,7 @@ local msg = string.format(fmt, ...)
    end
 end 
 
-function kvest_failed_update() --Это у нас прописано в бинд сталкере(апдейдит 2 функции)
+function kvest_failed_update() --Р­С‚Рѕ Сѓ РЅР°СЃ РїСЂРѕРїРёСЃР°РЅРѕ РІ Р±РёРЅРґ СЃС‚Р°Р»РєРµСЂРµ(Р°РїРґРµР№РґРёС‚ 2 С„СѓРЅРєС†РёРё)
 this.UpdateBackTimer()
 this.ShowTimerOnHud()
 end
@@ -18,14 +18,14 @@ local iLast
 
 function StartBackTimer()
 if iLast then
-    iTimer = time_global()+iLast --/ взводим таймер на остаток времени iLast
+    iTimer = time_global()+iLast --/ РІР·РІРѕРґРёРј С‚Р°Р№РјРµСЂ РЅР° РѕСЃС‚Р°С‚РѕРє РІСЂРµРјРµРЅРё iLast
     else
-   iTimer = time_global() + 1020*1000 --/ 60 - это 1 минута, 1020 - это 17 минут
+   iTimer = time_global() + 1020*1000 --/ 60 - СЌС‚Рѕ 1 РјРёРЅСѓС‚Р°, 1020 - СЌС‚Рѕ 17 РјРёРЅСѓС‚
    end
 end
 
 function UpdateBackTimer()
---// если квест выполнен - таймер останавливаем и убираем
+--// РµСЃР»Рё РєРІРµСЃС‚ РІС‹РїРѕР»РЅРµРЅ - С‚Р°Р№РјРµСЂ РѕСЃС‚Р°РЅР°РІР»РёРІР°РµРј Рё СѓР±РёСЂР°РµРј
       if has_alife_info("pobeg_finish") then
       this.StopBackTimer()
       return end 
@@ -33,24 +33,24 @@ function UpdateBackTimer()
      if iTimer then
      iLast=iTimer-time_global()
 
-    --// это блок тебе не нужен - это я проверял на досрочное выполение 
+    --// СЌС‚Рѕ Р±Р»РѕРє С‚РµР±Рµ РЅРµ РЅСѓР¶РµРЅ - СЌС‚Рѕ СЏ РїСЂРѕРІРµСЂСЏР» РЅР° РґРѕСЃСЂРѕС‡РЅРѕРµ РІС‹РїРѕР»РµРЅРёРµ 
      -- if iLast<60000 then
      -- db.actor:give_info_portion("pobeg_finish")
-      --Console("Квест выполнен")
+      --Console("РљРІРµСЃС‚ РІС‹РїРѕР»РЅРµРЅ")
       --end 
       
         if iTimer < time_global() then
         this.StopBackTimer()
-        -- //По истечении выкл таймер и если квест не выполнен - проваливаем его
+        -- //РџРѕ РёСЃС‚РµС‡РµРЅРёРё РІС‹РєР» С‚Р°Р№РјРµСЂ Рё РµСЃР»Рё РєРІРµСЃС‚ РЅРµ РІС‹РїРѕР»РЅРµРЅ - РїСЂРѕРІР°Р»РёРІР°РµРј РµРіРѕ
            if has_alife_info("pobeg_start") and not has_alife_info("pobeg_finish") then
            db.actor:give_info_portion("pobeg_net")
-           Console("Квест провален")
+           Console("РљРІРµСЃС‚ РїСЂРѕРІР°Р»РµРЅ")
            end
         end
     end
 end
 
--- //выводим значение таймера в обратном отсчете на худ
+-- //РІС‹РІРѕРґРёРј Р·РЅР°С‡РµРЅРёРµ С‚Р°Р№РјРµСЂР° РІ РѕР±СЂР°С‚РЅРѕРј РѕС‚СЃС‡РµС‚Рµ РЅР° С…СѓРґ
 
 local UICustomStatic
 
@@ -67,7 +67,7 @@ local hud = get_hud()
        local hours = math.floor(iLast/3600000)
        local minutes = math.floor(iLast/60000 - hours*60)
        local seconds = math.floor(iLast/1000 - hours*3600 - minutes*60)
-       local text = string.format("%02d:%02d:%02d",hours,minutes,seconds) -- выводим время в формате 00:00:00
+       local text = string.format("%02d:%02d:%02d",hours,minutes,seconds) -- РІС‹РІРѕРґРёРј РІСЂРµРјСЏ РІ С„РѕСЂРјР°С‚Рµ 00:00:00
        UICustomStatic:wnd():SetTextST(text)
        end
     else
@@ -77,7 +77,7 @@ local hud = get_hud()
    end
 end
 
---//Если квест выполнится до истечения таймера, вызываем остановку
+--//Р•СЃР»Рё РєРІРµСЃС‚ РІС‹РїРѕР»РЅРёС‚СЃСЏ РґРѕ РёСЃС‚РµС‡РµРЅРёСЏ С‚Р°Р№РјРµСЂР°, РІС‹Р·С‹РІР°РµРј РѕСЃС‚Р°РЅРѕРІРєСѓ
 function StopBackTimer() 
 iTimer = nil 
 iLast=nil
@@ -85,13 +85,13 @@ end
 
 function LoadBackTimer(iVal)
 iLast = iVal
---// перезапуск таймера на остаток времени если мы выходили из игры
+--// РїРµСЂРµР·Р°РїСѓСЃРє С‚Р°Р№РјРµСЂР° РЅР° РѕСЃС‚Р°С‚РѕРє РІСЂРµРјРµРЅРё РµСЃР»Рё РјС‹ РІС‹С…РѕРґРёР»Рё РёР· РёРіСЂС‹
    if iLast then
    this.StartBackTimer()
     end
 end
 
 function SaveBackTimer()
---// запишем значение остатка времени
+--// Р·Р°РїРёС€РµРј Р·РЅР°С‡РµРЅРёРµ РѕСЃС‚Р°С‚РєР° РІСЂРµРјРµРЅРё
 return iLast  
 end

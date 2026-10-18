@@ -1,12 +1,12 @@
 -------------------------------------------------------------------------------------------
--- Загрузка работ для Свободы
+-- Р—Р°РіСЂСѓР·РєР° СЂР°Р±РѕС‚ РґР»СЏ РЎРІРѕР±РѕРґС‹
 -------------------------------------------------------------------------------------------
 function load_job_base (sj, gname, type, squad, groups)
     local t
     -----------------------------------------------------------------------
-    -- Нормальное состояние базы
+    -- РќРѕСЂРјР°Р»СЊРЅРѕРµ СЃРѕСЃС‚РѕСЏРЅРёРµ Р±Р°Р·С‹
     -----------------------------------------------------------------------
-    -- Лукаш
+    -- Р›СѓРєР°С€
     t = {section = "logic@mil_freedom_lukash",
 		idle = 0,
 		prior = 20, state = {0, 3},
@@ -18,7 +18,7 @@ function load_job_base (sj, gname, type, squad, groups)
 		            end
 		}
 	table.insert(sj, t)		
-    -- Повар
+    -- РџРѕРІР°СЂ
     t = {section = "logic@mil_freedom_cook",
 		idle = 0,
 		prior = 20, state = {0, 2, 3, 4},
@@ -30,7 +30,7 @@ function load_job_base (sj, gname, type, squad, groups)
 		            end
 		}
 	table.insert(sj, t)		
-    -- Снайпер №1
+    -- РЎРЅР°Р№РїРµСЂ в„–1
     t = {section = "logic@mil_freedom_sniper1",
 		idle = 0,
 		prior = 20, state = {0, 2, 3},
@@ -43,7 +43,7 @@ function load_job_base (sj, gname, type, squad, groups)
 		}
 	table.insert(sj, t)		
 
-    -- Снайпер №2
+    -- РЎРЅР°Р№РїРµСЂ в„–2
     t = {section = "logic@mil_freedom_sniper2",
 		idle = 0,
 		prior = 20, state = {0, 2, 3},
@@ -56,7 +56,7 @@ function load_job_base (sj, gname, type, squad, groups)
 		}
 	table.insert(sj, t)		
 
-    -- Снайпер №3
+    -- РЎРЅР°Р№РїРµСЂ в„–3
     t = {section = "logic@mil_freedom_sniper5",
 		idle = 0,
 		prior = 20, state = {0, 2, 3},
@@ -69,7 +69,7 @@ function load_job_base (sj, gname, type, squad, groups)
 		}
 	table.insert(sj, t)		
 	
-    -- Снайпер №4
+    -- РЎРЅР°Р№РїРµСЂ в„–4
     t = {section = "logic@mil_freedom_sniper4",
 		idle = 0,
 		prior = 19, state = {0, 2, 3},
@@ -82,7 +82,7 @@ function load_job_base (sj, gname, type, squad, groups)
 		}
 	table.insert(sj, t)		
 
-    -- Снайпер №5
+    -- РЎРЅР°Р№РїРµСЂ в„–5
     t = {section = "logic@mil_freedom_sniper3",
 		idle = 0,
 		prior = 20, state = {0, 2, 3},
@@ -95,7 +95,7 @@ function load_job_base (sj, gname, type, squad, groups)
 		}
 	table.insert(sj, t)		
 	
-    -- Скряга
+    -- РЎРєСЂСЏРіР°
     t = {section = "logic@mil_freedom_trader",
 		idle = 0,
 		prior = 20, state = {0, 3, 4},
@@ -108,7 +108,7 @@ function load_job_base (sj, gname, type, squad, groups)
 		}
 	table.insert(sj, t)	
 		
-    -- Охранник Лукаша
+    -- РћС…СЂР°РЅРЅРёРє Р›СѓРєР°С€Р°
     t = {section = "logic@mil_freedom_guard1",
 		idle = 0,
 		prior = 15, state = {0, 3 ,4},
@@ -120,7 +120,7 @@ function load_job_base (sj, gname, type, squad, groups)
 		            end
 		}
 	table.insert(sj, t)		
-    -- Охранник Лукаша
+    -- РћС…СЂР°РЅРЅРёРє Р›СѓРєР°С€Р°
     t = {section = "logic@mil_freedom_bodyguard1",
 		idle = 0,
 		prior = 19, state = {0, 3, 4},
@@ -132,7 +132,7 @@ function load_job_base (sj, gname, type, squad, groups)
 		            end
 		}
 	table.insert(sj, t)		
-    -- Охранник Лукаша
+    -- РћС…СЂР°РЅРЅРёРє Р›СѓРєР°С€Р°
     t = {section = "logic@mil_freedom_bodyguard2",
 		idle = 0,
 		prior = 19, state = {0, 3, 4},
@@ -144,7 +144,7 @@ function load_job_base (sj, gname, type, squad, groups)
 		            end
 		}
 	table.insert(sj, t)		
-	-- Охранник арсенала
+	-- РћС…СЂР°РЅРЅРёРє Р°СЂСЃРµРЅР°Р»Р°
     t = {section = "logic@mil_freedom_aguard",
 		idle = 0,
 		prior = 15, state = {0, 3, 4},
@@ -183,7 +183,7 @@ function load_job_base (sj, gname, type, squad, groups)
      	}
 	table.insert(sj, t)
 	------
-	-- мужик у костра 1
+	-- РјСѓР¶РёРє Сѓ РєРѕСЃС‚СЂР° 1
     t = {section = "logic@mil_freedom_stalker1",
 		idle = 0,
 		prior = 2, state = {0, 3, 4},
@@ -193,7 +193,7 @@ function load_job_base (sj, gname, type, squad, groups)
 		}
 	table.insert(sj, t)		
 
-    -- мужик у костра 2
+    -- РјСѓР¶РёРє Сѓ РєРѕСЃС‚СЂР° 2
     t = {section = "logic@mil_freedom_stalker2",
 		idle = 0,
 		prior = 2, state = {0, 3, 4},
@@ -203,7 +203,7 @@ function load_job_base (sj, gname, type, squad, groups)
 		}
 	table.insert(sj, t)	
 	
-    -- одиночный патрульный на базе
+    -- РѕРґРёРЅРѕС‡РЅС‹Р№ РїР°С‚СЂСѓР»СЊРЅС‹Р№ РЅР° Р±Р°Р·Рµ
     t = {section = "logic@mil_freedom_stalker4",
 		idle = 0,
 		prior = 10, state = {0, 3, 4},
@@ -216,7 +216,7 @@ function load_job_base (sj, gname, type, squad, groups)
 		}
 	table.insert(sj, t)		
 
-    -- патрульный на базе
+    -- РїР°С‚СЂСѓР»СЊРЅС‹Р№ РЅР° Р±Р°Р·Рµ
     t = {section = "logic@mil_freedom_stalker5",
 		idle = 0,
 		prior = 10, state = {0, 4},
@@ -229,7 +229,7 @@ function load_job_base (sj, gname, type, squad, groups)
 		}
 	table.insert(sj, t)		
 
-    --охранник у входа 
+    --РѕС…СЂР°РЅРЅРёРє Сѓ РІС…РѕРґР° 
     t = {section = "logic@mil_freedom_stalker8",
 		idle = 0,
 		prior = 13, state = {0, 3, 4},
@@ -241,7 +241,7 @@ function load_job_base (sj, gname, type, squad, groups)
 		            end         
 		}
 	table.insert(sj, t)		
-	-- просто мужик на входе
+	-- РїСЂРѕСЃС‚Рѕ РјСѓР¶РёРє РЅР° РІС…РѕРґРµ
     t = {section = "logic@mil_freedom_stalker9",
 		idle = 0,
 		prior = 10, state = {0, 3, 4},
@@ -250,7 +250,7 @@ function load_job_base (sj, gname, type, squad, groups)
 		in_rest = "mil_freedom_wall_restrictor", out_rest = ""
 		}
 	table.insert(sj, t)		
-	-- просто мужик на входе
+	-- РїСЂРѕСЃС‚Рѕ РјСѓР¶РёРє РЅР° РІС…РѕРґРµ
     t = {section = "logic@mil_freedom_stalker10",
 		idle = 0,
 		prior = 10, state = {0, 3, 4},
@@ -370,7 +370,7 @@ function load_job_base (sj, gname, type, squad, groups)
 	--table.insert(sj, t)
 	
 	-------------------------------- combat state 1-----------------------------
-    -- Лукаш
+    -- Р›СѓРєР°С€
     t = {section = "logic@mil_freedom_lukash_combat1",
 		idle = 0,
 		prior = 11, state = {2},
@@ -382,7 +382,7 @@ function load_job_base (sj, gname, type, squad, groups)
 		            end
 		}
 	table.insert(sj, t)		
-    -- Скряга
+    -- РЎРєСЂСЏРіР°
     t = {section = "logic@mil_freedom_trader_combat1",
 		idle = 0,
 		prior = 11, state = {2},
@@ -394,7 +394,7 @@ function load_job_base (sj, gname, type, squad, groups)
 		            end
 		}
 	table.insert(sj, t)		
-    -- Охранник Лукаша
+    -- РћС…СЂР°РЅРЅРёРє Р›СѓРєР°С€Р°
     t = {section = "logic@mil_freedom_guard_combat1",
 		idle = 0,
 		prior = 11, state = {2},
@@ -406,7 +406,7 @@ function load_job_base (sj, gname, type, squad, groups)
 		            end
 		}
 	table.insert(sj, t)		
-    -- Охранник Лукаша
+    -- РћС…СЂР°РЅРЅРёРє Р›СѓРєР°С€Р°
     t = {section = "logic@mil_freedom_bodyguard1_combat1",
 		idle = 0,
 		prior = 11, state = {2},
@@ -418,7 +418,7 @@ function load_job_base (sj, gname, type, squad, groups)
 		            end
 		}
 	table.insert(sj, t)		
-    -- Охранник Лукаша
+    -- РћС…СЂР°РЅРЅРёРє Р›СѓРєР°С€Р°
     t = {section = "logic@mil_freedom_bodyguard2_combat1",
 		idle = 0,
 		prior = 11, state = {2},
@@ -445,8 +445,8 @@ function load_job_base (sj, gname, type, squad, groups)
 	    table.insert(sj, t)
     end
 
-	-------------------------------- Атака хутора Долга-----------------------------
-	-- Макс
+	-------------------------------- РђС‚Р°РєР° С…СѓС‚РѕСЂР° Р”РѕР»РіР°-----------------------------
+	-- РњР°РєСЃ
     t = {section = "logic@mil_freedom_max_attack",
 		idle = 0,
 		prior = 18, state = {3},
@@ -460,7 +460,7 @@ function load_job_base (sj, gname, type, squad, groups)
 		            end
 		}
 	table.insert(sj, t)		
-	-- Мужик у костра 1
+	-- РњСѓР¶РёРє Сѓ РєРѕСЃС‚СЂР° 1
     t = {section = "logic@mil_freedom_stalker1_attack",
 		idle = 0,
 		prior = 15, state = {3},
@@ -474,7 +474,7 @@ function load_job_base (sj, gname, type, squad, groups)
 		            --end
 		}
 	table.insert(sj, t)		
-	-- Мужик у костра 2
+	-- РњСѓР¶РёРє Сѓ РєРѕСЃС‚СЂР° 2
     t = {section = "logic@mil_freedom_stalker2_attack",
 		idle = 0,
 		prior = 15, state = {3},
@@ -561,8 +561,8 @@ function load_job_base (sj, gname, type, squad, groups)
 		}
 	table.insert(sj, t)		
 	
--- четвертое состояние гулага Свободы
-    -- Лукаш
+-- С‡РµС‚РІРµСЂС‚РѕРµ СЃРѕСЃС‚РѕСЏРЅРёРµ РіСѓР»Р°РіР° РЎРІРѕР±РѕРґС‹
+    -- Р›СѓРєР°С€
     t = {section = "logic@mil_freedom_commander",
 		idle = 0,
 		prior = 20, state = {4},
@@ -576,7 +576,7 @@ function load_job_base (sj, gname, type, squad, groups)
 		}
 	table.insert(sj, t)
 	
-    -- Снайпер №1
+    -- РЎРЅР°Р№РїРµСЂ в„–1
     t = {section = "logic@mil_freedom_sniper14",
 		idle = 0,
 		prior = 20, state = {4},
@@ -589,7 +589,7 @@ function load_job_base (sj, gname, type, squad, groups)
 		}
 	table.insert(sj, t)		
 
-    -- Снайпер №2
+    -- РЎРЅР°Р№РїРµСЂ в„–2
     t = {section = "logic@mil_freedom_sniper24",
 		idle = 0,
 		prior = 20, state = {4},
@@ -602,7 +602,7 @@ function load_job_base (sj, gname, type, squad, groups)
 		}
 	table.insert(sj, t)		
 
-    -- Снайпер №3
+    -- РЎРЅР°Р№РїРµСЂ в„–3
     t = {section = "logic@mil_freedom_sniper54",
 		idle = 0,
 		prior = 20, state = {4},
@@ -615,7 +615,7 @@ function load_job_base (sj, gname, type, squad, groups)
 		}
 	table.insert(sj, t)		
 	
-    -- Снайпер №4
+    -- РЎРЅР°Р№РїРµСЂ в„–4
     t = {section = "logic@mil_freedom_sniper44",
 		idle = 0,
 		prior = 19, state = {4},
@@ -628,7 +628,7 @@ function load_job_base (sj, gname, type, squad, groups)
 		}
 	table.insert(sj, t)		
 
-    -- Снайпер №5
+    -- РЎРЅР°Р№РїРµСЂ в„–5
     t = {section = "logic@mil_freedom_sniper34",
 		idle = 0,
 		prior = 20, state = {4},
@@ -644,14 +644,14 @@ function load_job_base (sj, gname, type, squad, groups)
 end
 
 -------------------------------------------------------------------------------------------
--- Проверка состояния гулага Свободы
+-- РџСЂРѕРІРµСЂРєР° СЃРѕСЃС‚РѕСЏРЅРёСЏ РіСѓР»Р°РіР° РЎРІРѕР±РѕРґС‹
 -------------------------------------------------------------------------------------------
 function check_state (gulag)
     
-    -- отсеиваем четвертое состояние.
+    -- РѕС‚СЃРµРёРІР°РµРј С‡РµС‚РІРµСЂС‚РѕРµ СЃРѕСЃС‚РѕСЏРЅРёРµ.
     if has_alife_info("mil_lukash_dead") or has_alife_info("mil_freedom_quests_end") then
        if this.check_enemy (gulag) == true then
-          -- поскольку вопрос об отношении к актеру решаться не собирается, то выход будет именно таким.
+          -- РїРѕСЃРєРѕР»СЊРєСѓ РІРѕРїСЂРѕСЃ РѕР± РѕС‚РЅРѕС€РµРЅРёРё Рє Р°РєС‚РµСЂСѓ СЂРµС€Р°С‚СЊСЃСЏ РЅРµ СЃРѕР±РёСЂР°РµС‚СЃСЏ, С‚Рѕ РІС‹С…РѕРґ Р±СѓРґРµС‚ РёРјРµРЅРЅРѕ С‚Р°РєРёРј.
           if gulag:npc_is_enemy_to_anybody (db.actor) == true then
              relation_registry.set_community_goodwill ("freedom", db.actor:id (), -5000)
              xr_gulag.setGulagRelation ("mil_freedom", game_object.enemy, db.actor)
@@ -667,7 +667,7 @@ function check_state (gulag)
     if gulag.state == 3 then
        if has_alife_info("mil_dolg_after_explode") or gulag:npc_is_enemy_to_anybody (db.actor) == true then
           db.actor:disable_info_portion ("mil_freedom_attack")
-          -- поскольку вопрос об отношении к актеру решаться не собирается, то выход будет именно таким.
+          -- РїРѕСЃРєРѕР»СЊРєСѓ РІРѕРїСЂРѕСЃ РѕР± РѕС‚РЅРѕС€РµРЅРёРё Рє Р°РєС‚РµСЂСѓ СЂРµС€Р°С‚СЊСЃСЏ РЅРµ СЃРѕР±РёСЂР°РµС‚СЃСЏ, С‚Рѕ РІС‹С…РѕРґ Р±СѓРґРµС‚ РёРјРµРЅРЅРѕ С‚Р°РєРёРј.
           if gulag:npc_is_enemy_to_anybody (db.actor) == true then
              relation_registry.set_community_goodwill ("freedom", db.actor:id (), -5000)
              xr_gulag.setGulagRelation ("mil_freedom", game_object.enemy, db.actor)
@@ -701,7 +701,7 @@ function check_state (gulag)
 end
 
 -------------------------------------------------------------------------------------------
--- Проверка, имеется ли у гулага враг
+-- РџСЂРѕРІРµСЂРєР°, РёРјРµРµС‚СЃСЏ Р»Рё Сѓ РіСѓР»Р°РіР° РІСЂР°Рі
 -------------------------------------------------------------------------------------------
 function check_enemy (gulag)
     for k,v in pairs(gulag.Object) do
@@ -714,7 +714,7 @@ function check_enemy (gulag)
     return false
 end
 -------------------------------------------------------------------------------------------
--- Проверка, имеется ли у гулага враг - актер
+-- РџСЂРѕРІРµСЂРєР°, РёРјРµРµС‚СЃСЏ Р»Рё Сѓ РіСѓР»Р°РіР° РІСЂР°Рі - Р°РєС‚РµСЂ
 -------------------------------------------------------------------------------------------
 function is_actor_enemy (gulag)
     for k,v in pairs(gulag.Object) do
@@ -731,13 +731,13 @@ end
 
 
 -------------------------------------------------------------------------------------------
--- Загрузка работ для блокпоста Свободы у выхода на Радар
+-- Р—Р°РіСЂСѓР·РєР° СЂР°Р±РѕС‚ РґР»СЏ Р±Р»РѕРєРїРѕСЃС‚Р° РЎРІРѕР±РѕРґС‹ Сѓ РІС‹С…РѕРґР° РЅР° Р Р°РґР°СЂ
 -------------------------------------------------------------------------------------------
 function load_job_fblockpost (sj, gname, type, squad, groups)
 
     local t
-    -- состояние 0
-    --мужик у костра 1    
+    -- СЃРѕСЃС‚РѕСЏРЅРёРµ 0
+    --РјСѓР¶РёРє Сѓ РєРѕСЃС‚СЂР° 1    
     t = {section = "logic@mil_fblockpost_stalker",
 		idle = 0,
 		prior = 5, state = {0, 1},
@@ -746,7 +746,7 @@ function load_job_fblockpost (sj, gname, type, squad, groups)
 		in_rest = "", out_rest = ""
 		}
 	table.insert(sj, t)		
-    --мужик у костра 2
+    --РјСѓР¶РёРє Сѓ РєРѕСЃС‚СЂР° 2
     t = {section = "logic@mil_fblockpost_stalker",
 		idle = 0,
 		prior = 5, state = {0, 1},
@@ -755,7 +755,7 @@ function load_job_fblockpost (sj, gname, type, squad, groups)
 		in_rest = "", out_rest = ""
 		}
 	table.insert(sj, t)		
-    --мужик у костра 3
+    --РјСѓР¶РёРє Сѓ РєРѕСЃС‚СЂР° 3
     t = {section = "logic@mil_fblockpost_stalker",
 		idle = 0,
 		prior = 5, state = {0, 1},
@@ -764,7 +764,7 @@ function load_job_fblockpost (sj, gname, type, squad, groups)
 		in_rest = "", out_rest = ""
 		}
 	table.insert(sj, t)		
-    --мужик у костра 4
+    --РјСѓР¶РёРє Сѓ РєРѕСЃС‚СЂР° 4
     t = {section = "logic@mil_fblockpost_stalker",
 		idle = 0,
 		prior = 5, state = {0, 1},
@@ -773,7 +773,7 @@ function load_job_fblockpost (sj, gname, type, squad, groups)
 		in_rest = "", out_rest = ""
 		}
 	table.insert(sj, t)		
-    --мужик у костра 5
+    --РјСѓР¶РёРє Сѓ РєРѕСЃС‚СЂР° 5
     t = {section = "logic@mil_fblockpost_stalker",
 		idle = 0,
 		prior = 5, state = {0},
@@ -782,7 +782,7 @@ function load_job_fblockpost (sj, gname, type, squad, groups)
 		in_rest = "", out_rest = ""
 		}
 	table.insert(sj, t)		
-    --командир
+    --РєРѕРјР°РЅРґРёСЂ
     t = {section = "logic@mil_fblockpost_commander",
 		idle = 0,
 		prior = 10, state = {0, 1},
@@ -794,7 +794,7 @@ function load_job_fblockpost (sj, gname, type, squad, groups)
 		            end
 		}
 	table.insert(sj, t)		
-    --патрульный 1
+    --РїР°С‚СЂСѓР»СЊРЅС‹Р№ 1
     t = {section = "logic@mil_fblockpost_patrol1",
 		idle = 0,
 		prior = 5, state = {0, 1},
@@ -803,7 +803,7 @@ function load_job_fblockpost (sj, gname, type, squad, groups)
 		in_rest = "", out_rest = ""
 		}
 	table.insert(sj, t)		
-    --патрульный 2
+    --РїР°С‚СЂСѓР»СЊРЅС‹Р№ 2
     t = {section = "logic@mil_fblockpost_patrol2",
 		idle = 0,
 		prior = 5, state = {0, 1},
@@ -812,7 +812,7 @@ function load_job_fblockpost (sj, gname, type, squad, groups)
 		in_rest = "", out_rest = ""
 		}
 	table.insert(sj, t)		
-    --кэмпер 1
+    --РєСЌРјРїРµСЂ 1
     t = {section = "logic@mil_fblockpost_camper3",
 		idle = 0,
 		prior = 5, state = {0, 1},
@@ -821,7 +821,7 @@ function load_job_fblockpost (sj, gname, type, squad, groups)
 		in_rest = "", out_rest = ""
 		}
 	table.insert(sj, t)		
-    --кэмпер 2
+    --РєСЌРјРїРµСЂ 2
     t = {section = "logic@mil_fblockpost_camper6",
 		idle = 0,
 		prior = 5, state = {0, 1},
@@ -830,8 +830,8 @@ function load_job_fblockpost (sj, gname, type, squad, groups)
 		in_rest = "", out_rest = ""
 		}
 	table.insert(sj, t)		
-	-- состояние 2
-    --кэмпер 1
+	-- СЃРѕСЃС‚РѕСЏРЅРёРµ 2
+    --РєСЌРјРїРµСЂ 1
     t = {section = "logic@mil_fblockpost_camper1",
 		idle = 0,
 		prior = 5, state = {2},
@@ -840,7 +840,7 @@ function load_job_fblockpost (sj, gname, type, squad, groups)
 		in_rest = "", out_rest = ""
 		}
 	table.insert(sj, t)		
-    --кэмпер 2
+    --РєСЌРјРїРµСЂ 2
     t = {section = "logic@mil_fblockpost_camper2",
 		idle = 0,
 		prior = 5, state = {2},
@@ -849,7 +849,7 @@ function load_job_fblockpost (sj, gname, type, squad, groups)
 		in_rest = "", out_rest = ""
 		}
 	table.insert(sj, t)		
-    --кэмпер 3
+    --РєСЌРјРїРµСЂ 3
     t = {section = "logic@mil_fblockpost_camper3",
 		idle = 0,
 		prior = 5, state = {2},
@@ -858,7 +858,7 @@ function load_job_fblockpost (sj, gname, type, squad, groups)
 		in_rest = "", out_rest = ""
 		}
 	table.insert(sj, t)		
-    --кэмпер 4
+    --РєСЌРјРїРµСЂ 4
     t = {section = "logic@mil_fblockpost_camper4",
 		idle = 0,
 		prior = 5, state = {2},
@@ -867,7 +867,7 @@ function load_job_fblockpost (sj, gname, type, squad, groups)
 		in_rest = "", out_rest = ""
 		}
 	table.insert(sj, t)		
-    --кэмпер 5
+    --РєСЌРјРїРµСЂ 5
     t = {section = "logic@mil_fblockpost_camper5",
 		idle = 0,
 		prior = 5, state = {2},
@@ -876,7 +876,7 @@ function load_job_fblockpost (sj, gname, type, squad, groups)
 		in_rest = "", out_rest = ""
 		}
 	table.insert(sj, t)		
-    --кэмпер 6
+    --РєСЌРјРїРµСЂ 6
     t = {section = "logic@mil_fblockpost_camper6",
 		idle = 0,
 		prior = 5, state = {2},
@@ -885,7 +885,7 @@ function load_job_fblockpost (sj, gname, type, squad, groups)
 		in_rest = "", out_rest = ""
 		}
 	table.insert(sj, t)		
-    --кэмпер 7
+    --РєСЌРјРїРµСЂ 7
     t = {section = "logic@mil_fblockpost_camper7",
 		idle = 0,
 		prior = 5, state = {2},
@@ -896,7 +896,7 @@ function load_job_fblockpost (sj, gname, type, squad, groups)
 	table.insert(sj, t)		
 end
 --------------------------------------------------------------------------
--- Функция проверки состояния гулага Свободы у выхода на Радар
+-- Р¤СѓРЅРєС†РёСЏ РїСЂРѕРІРµСЂРєРё СЃРѕСЃС‚РѕСЏРЅРёСЏ РіСѓР»Р°РіР° РЎРІРѕР±РѕРґС‹ Сѓ РІС‹С…РѕРґР° РЅР° Р Р°РґР°СЂ
 --------------------------------------------------------------------------
 function check_fblockpost_state (gulag)
 
@@ -917,13 +917,13 @@ end
 
 
 -------------------------------------------------------------------------------------------
--- Загрузка работ для блокпоста нейтралов у выхода на Радар
+-- Р—Р°РіСЂСѓР·РєР° СЂР°Р±РѕС‚ РґР»СЏ Р±Р»РѕРєРїРѕСЃС‚Р° РЅРµР№С‚СЂР°Р»РѕРІ Сѓ РІС‹С…РѕРґР° РЅР° Р Р°РґР°СЂ
 -------------------------------------------------------------------------------------------
 function load_job_fneutral (sj, gname, type, squad, groups)
 
     local t
-    -- состояние 0
-    --мужик у костра 1    
+    -- СЃРѕСЃС‚РѕСЏРЅРёРµ 0
+    --РјСѓР¶РёРє Сѓ РєРѕСЃС‚СЂР° 1    
     t = {section = "logic@mil_fneutral_stalker",
 		idle = 0,
 		prior = 1, state = {0, 1},
@@ -932,7 +932,7 @@ function load_job_fneutral (sj, gname, type, squad, groups)
 		in_rest = "", out_rest = ""
 		}
 	table.insert(sj, t)		
-    --мужик у костра 2
+    --РјСѓР¶РёРє Сѓ РєРѕСЃС‚СЂР° 2
     t = {section = "logic@mil_fneutral_stalker",
 		idle = 0,
 		prior = 1, state = {0, 1},
@@ -941,7 +941,7 @@ function load_job_fneutral (sj, gname, type, squad, groups)
 		in_rest = "", out_rest = ""
 		}
 	table.insert(sj, t)		
-    --мужик у костра 3
+    --РјСѓР¶РёРє Сѓ РєРѕСЃС‚СЂР° 3
     t = {section = "logic@mil_fneutral_stalker",
 		idle = 0,
 		prior = 1, state = {0, 1},
@@ -950,7 +950,7 @@ function load_job_fneutral (sj, gname, type, squad, groups)
 		in_rest = "", out_rest = ""
 		}
 	table.insert(sj, t)		
-    --мужик у костра 4
+    --РјСѓР¶РёРє Сѓ РєРѕСЃС‚СЂР° 4
     t = {section = "logic@mil_fneutral_stalker",
 		idle = 0,
 		prior = 1, state = {0, 1},
@@ -959,7 +959,7 @@ function load_job_fneutral (sj, gname, type, squad, groups)
 		in_rest = "", out_rest = ""
 		}
 	table.insert(sj, t)		
-    --мужик у костра 5
+    --РјСѓР¶РёРє Сѓ РєРѕСЃС‚СЂР° 5
     t = {section = "logic@mil_fneutral_stalker",
 		idle = 0,
 		prior = 1, state = {0},
@@ -968,7 +968,7 @@ function load_job_fneutral (sj, gname, type, squad, groups)
 		in_rest = "", out_rest = ""
 		}
 	table.insert(sj, t)		
-    --командир
+    --РєРѕРјР°РЅРґРёСЂ
     --t = {section = "logic@mil_fneutral_commander",
 		--idle = 0,
 		--prior = 2, state = {0, 1},
@@ -980,7 +980,7 @@ function load_job_fneutral (sj, gname, type, squad, groups)
 		            --end
 		--}
 	--table.insert(sj, t)		
-    --кэмпер 1
+    --РєСЌРјРїРµСЂ 1
     t = {section = "logic@mil_fneutral_camper3",
 		idle = 0,
 		prior = 1, state = {0, 1},
@@ -989,7 +989,7 @@ function load_job_fneutral (sj, gname, type, squad, groups)
 		in_rest = "", out_rest = ""
 		}
 	table.insert(sj, t)		
-    --кэмпер 2
+    --РєСЌРјРїРµСЂ 2
     t = {section = "logic@mil_fneutral_camper5",
 		idle = 0,
 		prior = 1, state = {0, 1},
@@ -998,8 +998,8 @@ function load_job_fneutral (sj, gname, type, squad, groups)
 		in_rest = "", out_rest = ""
 		}
 	table.insert(sj, t)		
-	-- состояние 2
-    --кэмпер 1
+	-- СЃРѕСЃС‚РѕСЏРЅРёРµ 2
+    --РєСЌРјРїРµСЂ 1
     t = {section = "logic@mil_fneutral_camper1",
 		idle = 0,
 		prior = 1, state = {2},
@@ -1008,7 +1008,7 @@ function load_job_fneutral (sj, gname, type, squad, groups)
 		in_rest = "", out_rest = ""
 		}
 	table.insert(sj, t)		
-    --кэмпер 2
+    --РєСЌРјРїРµСЂ 2
     t = {section = "logic@mil_fneutral_camper2",
 		idle = 0,
 		prior = 1, state = {2},
@@ -1017,7 +1017,7 @@ function load_job_fneutral (sj, gname, type, squad, groups)
 		in_rest = "", out_rest = ""
 		}
 	table.insert(sj, t)		
-    --кэмпер 3
+    --РєСЌРјРїРµСЂ 3
     t = {section = "logic@mil_fneutral_camper3",
 		idle = 0,
 		prior = 1, state = {2},
@@ -1026,7 +1026,7 @@ function load_job_fneutral (sj, gname, type, squad, groups)
 		in_rest = "", out_rest = ""
 		}
 	table.insert(sj, t)		
-    --кэмпер 4
+    --РєСЌРјРїРµСЂ 4
     t = {section = "logic@mil_fneutral_camper4",
 		idle = 0,
 		prior = 1, state = {2},
@@ -1035,7 +1035,7 @@ function load_job_fneutral (sj, gname, type, squad, groups)
 		in_rest = "", out_rest = ""
 		}
 	table.insert(sj, t)		
-    --кэмпер 5
+    --РєСЌРјРїРµСЂ 5
     t = {section = "logic@mil_fneutral_camper5",
 		idle = 0,
 		prior = 1, state = {2},
@@ -1046,7 +1046,7 @@ function load_job_fneutral (sj, gname, type, squad, groups)
 	table.insert(sj, t)		
 end
 --------------------------------------------------------------------------
--- Функция проверки состояния гулага нейтралов у выхода на Радар
+-- Р¤СѓРЅРєС†РёСЏ РїСЂРѕРІРµСЂРєРё СЃРѕСЃС‚РѕСЏРЅРёСЏ РіСѓР»Р°РіР° РЅРµР№С‚СЂР°Р»РѕРІ Сѓ РІС‹С…РѕРґР° РЅР° Р Р°РґР°СЂ
 --------------------------------------------------------------------------
 function check_blockpost_state (gulag)
 
@@ -1071,7 +1071,7 @@ function load_ltx(gname, type)
 	return nil
 end
 --------------------------------------------------------------------------
--- Проверка принадлежности сталкеров гулагам
+-- РџСЂРѕРІРµСЂРєР° РїСЂРёРЅР°РґР»РµР¶РЅРѕСЃС‚Рё СЃС‚Р°Р»РєРµСЂРѕРІ РіСѓР»Р°РіР°Рј
 --------------------------------------------------------------------------
 function checkStalker(npc_community, gulag_type)
 	if gulag_type == "mil_fneutral" then
@@ -1103,11 +1103,11 @@ end
 
 
 --------------------------------------------------------------------------
--- Функция загрузки работ для деревни
+-- Р¤СѓРЅРєС†РёСЏ Р·Р°РіСЂСѓР·РєРё СЂР°Р±РѕС‚ РґР»СЏ РґРµСЂРµРІРЅРё
 --------------------------------------------------------------------------
 function load_job_village (sj, gname, type, squad, groups)
     local t
-    --Угрюмый
+    --РЈРіСЂСЋРјС‹Р№
     t = {section = "logic@mil_village_ugrumy",
 		idle = 0,
 		prior = 1, state = {0},
@@ -1118,7 +1118,7 @@ function load_job_village (sj, gname, type, squad, groups)
 		            end
 		}
 	table.insert(sj, t)		
-    --Спецназовец
+    --РЎРїРµС†РЅР°Р·РѕРІРµС†
     t = {section = "logic@mil_village_soldier1",
 		idle = 0,
 		prior = 1, state = {0},
@@ -1129,7 +1129,7 @@ function load_job_village (sj, gname, type, squad, groups)
 		            end
 		}
 	table.insert(sj, t)		
-    --Рядовой
+    --Р СЏРґРѕРІРѕР№
     t = {section = "logic@mil_village_soldier2",
 		idle = 0,
 		prior = 1, state = {0},
@@ -1140,7 +1140,7 @@ function load_job_village (sj, gname, type, squad, groups)
 		            end
 		}
 	table.insert(sj, t)		
-    --Угрюмый
+    --РЈРіСЂСЋРјС‹Р№
     t = {section = "logic@mil_village_ugrumy_search",
 		idle = 0,
 		prior = 1, state = {1},
@@ -1151,7 +1151,7 @@ function load_job_village (sj, gname, type, squad, groups)
 		            end
 		}
 	table.insert(sj, t)		
-    --Спецназовец
+    --РЎРїРµС†РЅР°Р·РѕРІРµС†
     t = {section = "logic@mil_village_specnaz_search",
 		idle = 0,
 		prior = 1, state = {1},
@@ -1162,7 +1162,7 @@ function load_job_village (sj, gname, type, squad, groups)
 		            end
 		}
 	table.insert(sj, t)		
-    --Рядовой
+    --Р СЏРґРѕРІРѕР№
     t = {section = "logic@mil_village_regular_search",
 		idle = 0,
 		prior = 1, state = {1},
@@ -1175,7 +1175,7 @@ function load_job_village (sj, gname, type, squad, groups)
 	table.insert(sj, t)		
 end
 --------------------------------------------------------------------------
--- Функция проверки состояния гулага деревни
+-- Р¤СѓРЅРєС†РёСЏ РїСЂРѕРІРµСЂРєРё СЃРѕСЃС‚РѕСЏРЅРёСЏ РіСѓР»Р°РіР° РґРµСЂРµРІРЅРё
 --------------------------------------------------------------------------
 function check_village_state (gulag)
     if has_alife_info("mil_miser_task_complete") or 
@@ -1192,11 +1192,11 @@ end
 
 
 --------------------------------------------------------------------------
--- Функция загрузки работ для Долга
+-- Р¤СѓРЅРєС†РёСЏ Р·Р°РіСЂСѓР·РєРё СЂР°Р±РѕС‚ РґР»СЏ Р”РѕР»РіР°
 --------------------------------------------------------------------------
 function load_job_dolg (sj, gname, type, squad, groups)
     local t
-    -- первое состояние
+    -- РїРµСЂРІРѕРµ СЃРѕСЃС‚РѕСЏРЅРёРµ
     t = {section = "logic@mil_dolg_skull",
 		idle = 0,
 		prior = 13, state = {0},
@@ -1292,7 +1292,7 @@ function load_job_dolg (sj, gname, type, squad, groups)
 		            end
 		}
 	table.insert(sj, t)	
-    -- второе состояние
+    -- РІС‚РѕСЂРѕРµ СЃРѕСЃС‚РѕСЏРЅРёРµ
     t = {section = "logic@mil_dolg_skull_attack",
 		idle = 0,
 		prior = 13, state = {1},
@@ -1390,7 +1390,7 @@ function load_job_dolg (sj, gname, type, squad, groups)
 		            end
 		}
 	table.insert(sj, t)	
-    -- третье состояние
+    -- С‚СЂРµС‚СЊРµ СЃРѕСЃС‚РѕСЏРЅРёРµ
     t = {section = "logic@mil_dolg_skull_return",
 		idle = 0,
 		prior = 13, state = {2},
@@ -1490,11 +1490,11 @@ function load_job_dolg (sj, gname, type, squad, groups)
 	table.insert(sj, t)	
 end
 --------------------------------------------------------------------------
--- Функция проверки состояния гулага Долга
--- Возвращаемые значения:
---              0 - первое состояние (убийство патруля и сбор в сарае)
---              1 - снайпер умер, атака на базу Свободы
---              2 - Лукаш убит - возвращение на хутор
+-- Р¤СѓРЅРєС†РёСЏ РїСЂРѕРІРµСЂРєРё СЃРѕСЃС‚РѕСЏРЅРёСЏ РіСѓР»Р°РіР° Р”РѕР»РіР°
+-- Р’РѕР·РІСЂР°С‰Р°РµРјС‹Рµ Р·РЅР°С‡РµРЅРёСЏ:
+--              0 - РїРµСЂРІРѕРµ СЃРѕСЃС‚РѕСЏРЅРёРµ (СѓР±РёР№СЃС‚РІРѕ РїР°С‚СЂСѓР»СЏ Рё СЃР±РѕСЂ РІ СЃР°СЂР°Рµ)
+--              1 - СЃРЅР°Р№РїРµСЂ СѓРјРµСЂ, Р°С‚Р°РєР° РЅР° Р±Р°Р·Сѓ РЎРІРѕР±РѕРґС‹
+--              2 - Р›СѓРєР°С€ СѓР±РёС‚ - РІРѕР·РІСЂР°С‰РµРЅРёРµ РЅР° С…СѓС‚РѕСЂ
 --------------------------------------------------------------------------
 function check_dolg_state (gulag)
       
@@ -1511,7 +1511,7 @@ end
 
 
 --------------------------------------------------------------------------
--- Функция загрузки работ гулага у выхода на Радар Монолита
+-- Р¤СѓРЅРєС†РёСЏ Р·Р°РіСЂСѓР·РєРё СЂР°Р±РѕС‚ РіСѓР»Р°РіР° Сѓ РІС‹С…РѕРґР° РЅР° Р Р°РґР°СЂ РњРѕРЅРѕР»РёС‚Р°
 --------------------------------------------------------------------------
 function load_job_monolith (sj, gname, type, squad, groups)
     local t, a
@@ -1607,7 +1607,7 @@ function load_job_monolith (sj, gname, type, squad, groups)
     end	    
 end
 -------------------------------------------------------------------------------------------
--- Проверка состояния гулага Монолита
+-- РџСЂРѕРІРµСЂРєР° СЃРѕСЃС‚РѕСЏРЅРёСЏ РіСѓР»Р°РіР° РњРѕРЅРѕР»РёС‚Р°
 -------------------------------------------------------------------------------------------
 function check_monolith_state (gulag)
     return 0
@@ -1616,7 +1616,7 @@ end
 
 
 -------------------------------------------------------------------------------------------
--- Загрузка работ для мутантов
+-- Р—Р°РіСЂСѓР·РєР° СЂР°Р±РѕС‚ РґР»СЏ РјСѓС‚Р°РЅС‚РѕРІ
 -------------------------------------------------------------------------------------------
 function load_job_mil_monster (sj, gname, type, squad, groups)
     local t, a
@@ -1641,14 +1641,14 @@ function load_job_mil_monster (sj, gname, type, squad, groups)
     end	    
 end
 -------------------------------------------------------------------------------------------
--- Проверка состояния гулага мутантов
+-- РџСЂРѕРІРµСЂРєР° СЃРѕСЃС‚РѕСЏРЅРёСЏ РіСѓР»Р°РіР° РјСѓС‚Р°РЅС‚РѕРІ
 -------------------------------------------------------------------------------------------
 function check_mil_monster_state (gulag)
-    --создадим переменную, которая отвечает за то, что мутанты не попрут назад, когда кто-то
-    --из них помрет
+    --СЃРѕР·РґР°РґРёРј РїРµСЂРµРјРµРЅРЅСѓСЋ, РєРѕС‚РѕСЂР°СЏ РѕС‚РІРµС‡Р°РµС‚ Р·Р° С‚Рѕ, С‡С‚Рѕ РјСѓС‚Р°РЅС‚С‹ РЅРµ РїРѕРїСЂСѓС‚ РЅР°Р·Р°Рґ, РєРѕРіРґР° РєС‚Рѕ-С‚Рѕ
+    --РёР· РЅРёС… РїРѕРјСЂРµС‚
     if gulag.state == 0 then
-       --считаем только тех, кто уже пришёл, иначе создастся ситуация, когда гулаг
-       --формально наполнен, но все новосёлы ещё гуляют по соседним локациям
+       --СЃС‡РёС‚Р°РµРј С‚РѕР»СЊРєРѕ С‚РµС…, РєС‚Рѕ СѓР¶Рµ РїСЂРёС€С‘Р», РёРЅР°С‡Рµ СЃРѕР·РґР°СЃС‚СЃСЏ СЃРёС‚СѓР°С†РёСЏ, РєРѕРіРґР° РіСѓР»Р°Рі
+       --С„РѕСЂРјР°Р»СЊРЅРѕ РЅР°РїРѕР»РЅРµРЅ, РЅРѕ РІСЃРµ РЅРѕРІРѕСЃС‘Р»С‹ РµС‰С‘ РіСѓР»СЏСЋС‚ РїРѕ СЃРѕСЃРµРґРЅРёРј Р»РѕРєР°С†РёСЏРј
        if gulag:get_population_comed () < 10 then 
           return 0
        end
@@ -1662,7 +1662,7 @@ function check_mil_monster_state (gulag)
 end
 
 -------------------------------------------------------------------------------------------
--- Проверка на принадлежность мутантов нам
+-- РџСЂРѕРІРµСЂРєР° РЅР° РїСЂРёРЅР°РґР»РµР¶РЅРѕСЃС‚СЊ РјСѓС‚Р°РЅС‚РѕРІ РЅР°Рј
 -------------------------------------------------------------------------------------------
 function checkMonster(npc_community, gulag_type)
 
@@ -1675,7 +1675,7 @@ end
 
 
 -------------------------------------------------------------------------------------------
--- Главная функция загрузки работ
+-- Р“Р»Р°РІРЅР°СЏ С„СѓРЅРєС†РёСЏ Р·Р°РіСЂСѓР·РєРё СЂР°Р±РѕС‚
 -------------------------------------------------------------------------------------------
 function load_job (sj, gname, type, squad, groups)
     if type == "mil_freedom" then 
@@ -1717,7 +1717,7 @@ end
 
 
 -------------------------------------------------------------------------------------------
--- Функция проверки состояний гулагов
+-- Р¤СѓРЅРєС†РёСЏ РїСЂРѕРІРµСЂРєРё СЃРѕСЃС‚РѕСЏРЅРёР№ РіСѓР»Р°РіРѕРІ
 -------------------------------------------------------------------------------------------
 function load_states (gname, type)
     if type == "mil_freedom" then

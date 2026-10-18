@@ -1,13 +1,13 @@
 -- ************************************************
 -- **                    Imp                     **
--- **       Биндер самодельных телепортов        **
--- ** Поддерживает работу самопальных телепортов **
+-- **       Р‘РёРЅРґРµСЂ СЃР°РјРѕРґРµР»СЊРЅС‹С… С‚РµР»РµРїРѕСЂС‚РѕРІ        **
+-- ** РџРѕРґРґРµСЂР¶РёРІР°РµС‚ СЂР°Р±РѕС‚Сѓ СЃР°РјРѕРїР°Р»СЊРЅС‹С… С‚РµР»РµРїРѕСЂС‚РѕРІ **
 -- ************************************************
 
-local teleport_binders ={}	-- Список телепортов
+local teleport_binders ={}	-- РЎРїРёСЃРѕРє С‚РµР»РµРїРѕСЂС‚РѕРІ
 
 function abs_comp(a,b)
-	-- Служебная функция вычисления разности
+	-- РЎР»СѓР¶РµР±РЅР°СЏ С„СѓРЅРєС†РёСЏ РІС‹С‡РёСЃР»РµРЅРёСЏ СЂР°Р·РЅРѕСЃС‚Рё
 	if( a < b) then
 		return (b - a)
 	else
@@ -16,17 +16,17 @@ function abs_comp(a,b)
 end
 
 function teleportate(x,y,z)
--- Функция телепортации
+-- Р¤СѓРЅРєС†РёСЏ С‚РµР»РµРїРѕСЂС‚Р°С†РёРё
 	local a = vector()
-	-- Задаем координаты
+	-- Р—Р°РґР°РµРј РєРѕРѕСЂРґРёРЅР°С‚С‹
 	a.x = x
 	a.y = y
 	a.z = z
 
-	-- Сама телепортация
+	-- РЎР°РјР° С‚РµР»РµРїРѕСЂС‚Р°С†РёСЏ
 	db.actor:set_actor_position(a)
 
-	-- Звуковое сопровождение
+	-- Р—РІСѓРєРѕРІРѕРµ СЃРѕРїСЂРѕРІРѕР¶РґРµРЅРёРµ
 	local snd_obj = xr_sound.get_safe_sound_object([[affects\tinnitus3a]])
 	snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
 
@@ -36,21 +36,21 @@ end
 function actor_update(delta)
 	local i,v,acter_poz,s
 
-	-- Получим позицию актера (что-бы каждый раз не запрашивать)
+	-- РџРѕР»СѓС‡РёРј РїРѕР·РёС†РёСЋ Р°РєС‚РµСЂР° (С‡С‚Рѕ-Р±С‹ РєР°Р¶РґС‹Р№ СЂР°Р· РЅРµ Р·Р°РїСЂР°С€РёРІР°С‚СЊ)
 	acter_poz = db.actor:position()
 
-	-- Проверяем наши телепорты
+	-- РџСЂРѕРІРµСЂСЏРµРј РЅР°С€Рё С‚РµР»РµРїРѕСЂС‚С‹
 	for i, v in pairs(teleport_binders) do
 		s = v.parametrs
 
 		local obj = level.object_by_id( i )
 		if obj ~= nil then
-		-- Наш телепорт в онлайне проверяем дальше
+		-- РќР°С€ С‚РµР»РµРїРѕСЂС‚ РІ РѕРЅР»Р°Р№РЅРµ РїСЂРѕРІРµСЂСЏРµРј РґР°Р»СЊС€Рµ
 			if s.teleporte ~= nil and s.teleporte ~= false then
-				-- Телепорт запущен
+				-- РўРµР»РµРїРѕСЂС‚ Р·Р°РїСѓС‰РµРЅ
 				if ( time_global() <= s.time ) then
-					-- Если время отведенное на показ спецэфектов
-					-- прошло, производим телепортацию
+					-- Р•СЃР»Рё РІСЂРµРјСЏ РѕС‚РІРµРґРµРЅРЅРѕРµ РЅР° РїРѕРєР°Р· СЃРїРµС†СЌС„РµРєС‚РѕРІ
+					-- РїСЂРѕС€Р»Рѕ, РїСЂРѕРёР·РІРѕРґРёРј С‚РµР»РµРїРѕСЂС‚Р°С†РёСЋ
 					teleportate(s.poz_x,s.poz_y,s.poz_z)
 					if s.rotate ~= nil then
 						db.actor:set_actor_direction(s.rotate)
@@ -60,15 +60,15 @@ function actor_update(delta)
 				return
 			end
 
-			-- Пороверим не забрел-ли актер в наш телепорт
+			-- РџРѕСЂРѕРІРµСЂРёРј РЅРµ Р·Р°Р±СЂРµР»-Р»Рё Р°РєС‚РµСЂ РІ РЅР°С€ С‚РµР»РµРїРѕСЂС‚
 			if (abs_comp(s.x, acter_poz.x)< v.parametrs.radius  and
 			    abs_comp(s.z, acter_poz.z)< v.parametrs.radius  and
 			    abs_comp(s.y, acter_poz.y)< v.parametrs.z_radius) then
-				-- Актер в зоне действия телепорта, запустим телепорт
+				-- РђРєС‚РµСЂ РІ Р·РѕРЅРµ РґРµР№СЃС‚РІРёСЏ С‚РµР»РµРїРѕСЂС‚Р°, Р·Р°РїСѓСЃС‚РёРј С‚РµР»РµРїРѕСЂС‚
 				s["teleporte"] = true
 				s["time"] = time_global() + 500
 
-				-- Запускаем спецэфекты телепортации
+				-- Р—Р°РїСѓСЃРєР°РµРј СЃРїРµС†СЌС„РµРєС‚С‹ С‚РµР»РµРїРѕСЂС‚Р°С†РёРё
 				level.add_pp_effector ("teleport.ppe", 2006, false)
 			end
 		end
@@ -88,30 +88,30 @@ end
 function restrictor_teleport:net_spawn(data)
 	local char_ini = system_ini()
 
-	-- Если это телепорт то занесем его в специальный список телепортов
+	-- Р•СЃР»Рё СЌС‚Рѕ С‚РµР»РµРїРѕСЂС‚ С‚Рѕ Р·Р°РЅРµСЃРµРј РµРіРѕ РІ СЃРїРµС†РёР°Р»СЊРЅС‹Р№ СЃРїРёСЃРѕРє С‚РµР»РµРїРѕСЂС‚РѕРІ
 	if self.teleport == true then
 		teleport_binders[self.object:id()] = self
 
-		-- Заполним таблицу параметров
+		-- Р—Р°РїРѕР»РЅРёРј С‚Р°Р±Р»РёС†Сѓ РїР°СЂР°РјРµС‚СЂРѕРІ
 		self["parametrs"] = {}
 		if char_ini:line_exist(self.section, "radius") then
 			self.parametrs["radius"] = tonumber(char_ini:r_string(self.section, "radius"))
 		else
-			self.parametrs["radius"] = 2 -- Дефолтный радиус по xy
+			self.parametrs["radius"] = 2 -- Р”РµС„РѕР»С‚РЅС‹Р№ СЂР°РґРёСѓСЃ РїРѕ xy
 		end
 		if char_ini:line_exist(self.section, "z_radius") then
 			self.parametrs["z_radius"] = tonumber(char_ini:r_string(self.section, "z_radius"))
 		else
-			self.parametrs["z_radius"] = self.parametrs["radius"] -- если радиус высоты не задан то задаем равным радиусу xy
+			self.parametrs["z_radius"] = self.parametrs["radius"] -- РµСЃР»Рё СЂР°РґРёСѓСЃ РІС‹СЃРѕС‚С‹ РЅРµ Р·Р°РґР°РЅ С‚Рѕ Р·Р°РґР°РµРј СЂР°РІРЅС‹Рј СЂР°РґРёСѓСЃСѓ xy
 		end
 
-		-- Запомним позицию что-бы каждый раз не считать
+		-- Р—Р°РїРѕРјРЅРёРј РїРѕР·РёС†РёСЋ С‡С‚Рѕ-Р±С‹ РєР°Р¶РґС‹Р№ СЂР°Р· РЅРµ СЃС‡РёС‚Р°С‚СЊ
 		local s_obj = alife():object(self.object:id())
 		self.parametrs["x"] = tonumber(s_obj.position.x);
 		self.parametrs["y"] = tonumber(s_obj.position.y);
 		self.parametrs["z"] = tonumber(s_obj.position.z);
 
-		-- Запомним координаты куда телепортимся
+		-- Р—Р°РїРѕРјРЅРёРј РєРѕРѕСЂРґРёРЅР°С‚С‹ РєСѓРґР° С‚РµР»РµРїРѕСЂС‚РёРјСЃСЏ
 		self.parametrs["poz_x"] = tonumber(char_ini:r_string(self.section, "poz_x"))
 		self.parametrs["poz_y"] = tonumber(char_ini:r_string(self.section, "poz_y"))
 		self.parametrs["poz_z"] = tonumber(char_ini:r_string(self.section, "poz_z"))
@@ -124,7 +124,7 @@ function restrictor_teleport:net_spawn(data)
 end
 
 function restrictor_teleport:net_destroy()
-	-- Удаляем наш телепорт
+	-- РЈРґР°Р»СЏРµРј РЅР°С€ С‚РµР»РµРїРѕСЂС‚
 	teleport_binders[self.object:id()] = nil
 	self.parametrs = nil
 	object_binder.net_destroy(self)
@@ -134,7 +134,7 @@ function restrictor_teleport:reload(section)
 	local char_ini = system_ini()
 
 	self.section = section
-	-- Если это телепорт то 
+	-- Р•СЃР»Рё СЌС‚Рѕ С‚РµР»РµРїРѕСЂС‚ С‚Рѕ 
 	if char_ini ~= nil and char_ini:line_exist(self.section, "teleport") then
 		self["teleport"] = true
 	end

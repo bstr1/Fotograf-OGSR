@@ -1,7 +1,7 @@
 --[[
 
 File:  amk_mod .script
-copyright © AMK TEAM 2007-2008
+copyright В© AMK TEAM 2007-2008
 
 
 --]]
@@ -62,15 +62,15 @@ function spawn_star(actor,npc,p1,p2)
 	if news_main then
 		m_where = news_main.get_point_description("l01_escape", vector():set(a.position.x,a.position.y,a.position.z))
 	else
-		m_where = "Здесь, на Кордоне"
+		m_where = "Р—РґРµСЃСЊ, РЅР° РљРѕСЂРґРѕРЅРµ"
 	end
-	db.actor:give_talk_message(m_where.." скорее всего поискать стоит. Где-то там он, точно говорю.", "ui\\ui_iconstotal", Frect():set(0,0,10,10), "simple_answer_item")
+	db.actor:give_talk_message(m_where.." СЃРєРѕСЂРµРµ РІСЃРµРіРѕ РїРѕРёСЃРєР°С‚СЊ СЃС‚РѕРёС‚. Р“РґРµ-С‚Рѕ С‚Р°Рј РѕРЅ, С‚РѕС‡РЅРѕ РіРѕРІРѕСЂСЋ.", "ui\\ui_iconstotal", Frect():set(0,0,10,10), "simple_answer_item")
 end
 
 --'*******************************************************************************
 --'   **   **   **   **   **    **   **   **        FIRST_RUN          **   **   **   **   **    **   **   **   ** 
 --'*******************************************************************************
--- Эта функция вызывается первой. Онлайновые объекты недоступны! db.actor недоступен!
+-- Р­С‚Р° С„СѓРЅРєС†РёСЏ РІС‹Р·С‹РІР°РµС‚СЃСЏ РїРµСЂРІРѕР№. РћРЅР»Р°Р№РЅРѕРІС‹Рµ РѕР±СЉРµРєС‚С‹ РЅРµРґРѕСЃС‚СѓРїРЅС‹! db.actor РЅРµРґРѕСЃС‚СѓРїРµРЅ!
 function on_game_start()
 	math.randomseed (device ():time_global ())
 end
@@ -116,7 +116,7 @@ function check_spawn()
 		amk.save_variable("freeplay",2)
 	elseif amk.load_variable("freeplay",0)==2 and (not has_alife_info("cit_fail_first_task")) then
 		db.actor:give_info_portion("cit_fail_first_task")
-	    amk.save_variable("freeplay",0) -- отключили фриплей
+	    amk.save_variable("freeplay",0) -- РѕС‚РєР»СЋС‡РёР»Рё С„СЂРёРїР»РµР№
     end]]
 
     if amk.load_variable("freeplay", 0) == 1 then amk.save_variable("freeplay", 0) 
@@ -136,12 +136,12 @@ function check_spawn()
 		amk_objects.update() 
 	end
 
-	-- Выдадим сообщения при переходе на уровень.
+	-- Р’С‹РґР°РґРёРј СЃРѕРѕР±С‰РµРЅРёСЏ РїСЂРё РїРµСЂРµС…РѕРґРµ РЅР° СѓСЂРѕРІРµРЅСЊ.
 	if news_main then
 		if (lname ~= sname and sname ~= "") then
-			if (news_main.isIsolatedLevel(lname)== true and news_main.isIsolatedLevel(sname) == false) then -- Спустились под землю.
+			if (news_main.isIsolatedLevel(lname)== true and news_main.isIsolatedLevel(sname) == false) then -- РЎРїСѓСЃС‚РёР»РёСЃСЊ РїРѕРґ Р·РµРјР»СЋ.
 				news_main.on_disconnect()
-			elseif (news_main.isIsolatedLevel(lname) == false and news_main.isIsolatedLevel(sname) == true) then -- Выбрались из-под земли.
+			elseif (news_main.isIsolatedLevel(lname) == false and news_main.isIsolatedLevel(sname) == true) then -- Р’С‹Р±СЂР°Р»РёСЃСЊ РёР·-РїРѕРґ Р·РµРјР»Рё.
 				news_main.on_connect()
 			end
 			if (amk_offline_alife) then
@@ -170,7 +170,7 @@ function check_spawn()
 		end
 	end
 
-	-- Временное решение со сном(lsclon)
+	-- Р’СЂРµРјРµРЅРЅРѕРµ СЂРµС€РµРЅРёРµ СЃРѕ СЃРЅРѕРј(lsclon)
 	if not amk.has_g_timer("gg_need_sleep") then
 		amk.g_start_timer("gg_need_sleep",0,0,6)
 		if amk.load_variable("block_sleep_menu",0) == 0 and amk.load_variable("gg_need_sleep",0) < 0 then
@@ -248,7 +248,7 @@ function show_news()
 
 	local ln = level.name()
 	if (ln == "l03u_agr_underground" or ln == "l04u_labx18" or ln == "l08u_brainlab" or ln == "l10u_bunker" or ln == "av_peshera" or has_alife_info("parallel_mg")) then
-		-- Радиомолчание
+		-- Р Р°РґРёРѕРјРѕР»С‡Р°РЅРёРµ
 	else	
 		if math.random()>0.2 then
 			if math.random()>0.875 then
@@ -441,12 +441,12 @@ local cur_level=nil
 local havegoodart=false
 
 local afs={
---симбион
+--СЃРёРјР±РёРѕРЅ
 "af_medusa",
 "af_blood",
 "af_rusty_thorn",
 
---жарка
+--Р¶Р°СЂРєР°
 "af_soul",
 "af_spirit_1",
 "af_spirit_2",
@@ -455,16 +455,16 @@ local afs={
 "af_kol_3",
 "af_armor_3",
 
---электра
+--СЌР»РµРєС‚СЂР°
 "af_spirit_3",
-"af_drops", -- +симбион
+"af_drops", -- +СЃРёРјР±РёРѕРЅ
 "af_dummy_glassbeads",
 "af_dummy_dummy",
 "af_pudd_1",
 "af_pudd_2",
 "af_dik_1",
 
---холодец
+--С…РѕР»РѕРґРµС†
 "af_cry_2",
 "af_babka_1",
 "af_pudd_3",
@@ -472,12 +472,12 @@ local afs={
 "af_kol_2",
 "af_armor_2",
 
---карусель
+--РєР°СЂСѓСЃРµР»СЊ
 "af_babka_2",
 "af_kol_1",
 "af_armor_1",
 
---трамплин
+--С‚СЂР°РјРїР»РёРЅ
 "af_dik_3",
 "af_fuzz_kolobok",
 "af_dummy_pellicle"
@@ -512,87 +512,87 @@ function check_af_transform(af,anom_id,anom_sect)
 	if string.find(anom_sect,"_zharka")~=nil then
 		if af_sect=="af_soul" and actor:has_info("info_amk_recipt_souls") then
 			af_flash(af)
-			af_start_transform_timer(af_start_transform(70,25,af_sect,"af_spirit_1"), pos ,0,4,0,"Капля души")
+			af_start_transform_timer(af_start_transform(70,25,af_sect,"af_spirit_1"), pos ,0,4,0,"РљР°РїР»СЏ РґСѓС€Рё")
 		end
 		if af_sect=="af_spirit_1" and actor:has_info("info_amk_recipt_souls") then
 			af_flash(af)
-			af_start_transform_timer(af_start_transform(60,20,af_sect,"af_spirit_2"), pos ,0,6,0,"Огненная душа")
+			af_start_transform_timer(af_start_transform(60,20,af_sect,"af_spirit_2"), pos ,0,6,0,"РћРіРЅРµРЅРЅР°СЏ РґСѓС€Р°")
 		end
 		if af_sect=="af_spirit_2" and actor:has_info("info_amk_recipt_souls") then
 			af_flash(af)
-			af_start_transform_timer(af_start_transform(50,35,af_sect,"af_spirit_3"), pos ,0,10,0,"Кристальная душа")
+			af_start_transform_timer(af_start_transform(50,35,af_sect,"af_spirit_3"), pos ,0,10,0,"РљСЂРёСЃС‚Р°Р»СЊРЅР°СЏ РґСѓС€Р°")
 		end
 		if af_sect=="af_cry_1" and actor:has_info("info_amk_recipt_tears_fire") then
 			af_flash(af)
-			af_start_transform_timer(af_start_transform(65,20,af_sect,"af_cry_2"), pos ,0,5,0,"Слёзы огня")
+			af_start_transform_timer(af_start_transform(65,20,af_sect,"af_cry_2"), pos ,0,5,0,"РЎР»С‘Р·С‹ РѕРіРЅСЏ")
 		end
 		if af_sect=="af_rusty_sea-urchin" and actor:has_info("info_amk_recipt_dikoobraz") then
 			af_flash(af)
-			af_start_transform_timer(af_start_transform(65,20,af_sect,"af_dik_1"), pos ,0,3,0,"Дикобраз")
+			af_start_transform_timer(af_start_transform(65,20,af_sect,"af_dik_1"), pos ,0,3,0,"Р”РёРєРѕР±СЂР°Р·")
 		end
 		if af_sect=="af_kol_3" and actor:has_info("info_amk_recipt_giant_small_brother") then
 			af_flash(af)
-			af_start_transform_timer(af_start_transform(49,30,af_sect,"af_kol_4"), pos ,0,3,0,"Младший брат Гиганта")
+			af_start_transform_timer(af_start_transform(49,30,af_sect,"af_kol_4"), pos ,0,3,0,"РњР»Р°РґС€РёР№ Р±СЂР°С‚ Р“РёРіР°РЅС‚Р°")
 		end
 		if af_sect=="af_armor_3" and actor:has_info("info_amk_recipt_controller_skalp") then
 			af_flash(af)
-			af_start_transform_timer(af_start_transform(40,25,af_sect,"af_armor_4"), pos ,0,6,0,"Скальп контролёра")
+			af_start_transform_timer(af_start_transform(40,25,af_sect,"af_armor_4"), pos ,0,6,0,"РЎРєР°Р»СЊРї РєРѕРЅС‚СЂРѕР»С‘СЂР°")
 		end   
 	end
 	if string.find(anom_sect,"_galant")~=nil then
 		if af_sect=="af_spirit_3" and actor:has_info("info_amk_recipt_souls") then 
 			af_flash(af)
-			af_start_transform_timer(af_start_transform(50,30,af_sect,"af_spirit_4"), pos ,0,1,0,"Кристальная душа Бенгала")
+			af_start_transform_timer(af_start_transform(50,30,af_sect,"af_spirit_4"), pos ,0,1,0,"РљСЂРёСЃС‚Р°Р»СЊРЅР°СЏ РґСѓС€Р° Р‘РµРЅРіР°Р»Р°")
 		end
 		if af_sect=="af_drops" and actor:has_info("info_amk_recipt_tears_electra") then
 			af_flash(af)
-			af_start_transform_timer(af_start_transform(75,10,af_sect,"af_cry_1"), pos ,0,5,0,"Слёзы Электры")
+			af_start_transform_timer(af_start_transform(75,10,af_sect,"af_cry_1"), pos ,0,5,0,"РЎР»С‘Р·С‹ Р­Р»РµРєС‚СЂС‹")
 		end
 		if af_sect=="af_dummy_glassbeads" and actor:has_info("info_amk_recipt_grandmother_glassbeards") then
 			af_flash(af)
-			af_start_transform_timer(af_start_transform(85,10,af_sect,"af_babka_1"), pos ,0,5,0,"Бабкины бусы")
+			af_start_transform_timer(af_start_transform(85,10,af_sect,"af_babka_1"), pos ,0,5,0,"Р‘Р°Р±РєРёРЅС‹ Р±СѓСЃС‹")
 		end
 		if af_sect=="af_dummy_dummy" and actor:has_info("info_amk_recipt_dummy") then
 			af_flash(af)
-			af_start_transform_timer(af_start_transform(70,25,af_sect,"af_pudd_1"), pos ,0,3,0,"Огненная пустышка")
+			af_start_transform_timer(af_start_transform(70,25,af_sect,"af_pudd_1"), pos ,0,3,0,"РћРіРЅРµРЅРЅР°СЏ РїСѓСЃС‚С‹С€РєР°")
 		end
 		if af_sect=="af_pudd_1" and actor:has_info("info_amk_recipt_dummy") then
 			af_flash(af)
-			af_start_transform_timer(af_start_transform(59,20,af_sect,"af_pudd_2"), pos ,0,6,0,"Яркая пустышка")
+			af_start_transform_timer(af_start_transform(59,20,af_sect,"af_pudd_2"), pos ,0,6,0,"РЇСЂРєР°СЏ РїСѓСЃС‚С‹С€РєР°")
 		end
 		if af_sect=="af_pudd_2" and actor:has_info("info_amk_recipt_dummy") then
 			af_flash(af)
-			af_start_transform_timer(af_start_transform(50,35,af_sect,"af_pudd_3"), pos ,0,8,0,"Лунная пустышка")
+			af_start_transform_timer(af_start_transform(50,35,af_sect,"af_pudd_3"), pos ,0,8,0,"Р›СѓРЅРЅР°СЏ РїСѓСЃС‚С‹С€РєР°")
 		end
 		if af_sect=="af_dik_1" and actor:has_info("info_amk_recipt_electra_dikoobraz") then
 			af_flash(af)
-			af_start_transform_timer(af_start_transform(72,25,af_sect,"af_dik_2"), pos ,0,5,0,"Электрический дикобраз")
+			af_start_transform_timer(af_start_transform(72,25,af_sect,"af_dik_2"), pos ,0,5,0,"Р­Р»РµРєС‚СЂРёС‡РµСЃРєРёР№ РґРёРєРѕР±СЂР°Р·")
 		end
 	end
 	if string.find(anom_sect,"_buzz")~=nil then
 		if af_sect=="af_cry_2" and actor:has_info("info_amk_recipt_tears_chimaera") then
 			af_flash(af)
-			af_start_transform_timer(af_start_transform(55,25,af_sect,"af_cry_3"), pos ,0,2,0,"Слёзы химеры")
+			af_start_transform_timer(af_start_transform(55,25,af_sect,"af_cry_3"), pos ,0,2,0,"РЎР»С‘Р·С‹ С…РёРјРµСЂС‹")
 		end
 		if af_sect=="af_babka_1" and actor:has_info("info_amk_recipt_pra_grandmother_glassbeards") then
 			af_flash(af)
-			af_start_transform_timer(af_start_transform(72,12,af_sect,"af_babka_2"), pos ,0,3,0,"Бусы прабабки")
+			af_start_transform_timer(af_start_transform(72,12,af_sect,"af_babka_2"), pos ,0,3,0,"Р‘СѓСЃС‹ РїСЂР°Р±Р°Р±РєРё")
 		end
 		if af_sect=="af_pudd_3" and actor:has_info("info_amk_recipt_dummy") then
 			af_flash(af)
-			af_start_transform_timer(af_start_transform(80,10,af_sect,"af_pudd_4"), pos ,0,12,0,"Пудинг")
+			af_start_transform_timer(af_start_transform(80,10,af_sect,"af_pudd_4"), pos ,0,12,0,"РџСѓРґРёРЅРі")
 		end
 		if af_sect=="af_dik_2" and actor:has_info("info_amk_recipt_sopl_dikoobraz") then
 			af_flash(af)
-			af_start_transform_timer(af_start_transform(74,10,af_sect,"af_dik_3"), pos ,0,2,0,"Сопливый дикобраз")
+			af_start_transform_timer(af_start_transform(74,10,af_sect,"af_dik_3"), pos ,0,2,0,"РЎРѕРїР»РёРІС‹Р№ РґРёРєРѕР±СЂР°Р·")
 		end
 		if af_sect=="af_kol_2" and actor:has_info("info_amk_recipt_almaz_kolobok") then
 			af_flash(af)
-			af_start_transform_timer(af_start_transform(78,17,af_sect,"af_kol_3"), pos ,0,8,0,"Алмазный колобок")
+			af_start_transform_timer(af_start_transform(78,17,af_sect,"af_kol_3"), pos ,0,8,0,"РђР»РјР°Р·РЅС‹Р№ РєРѕР»РѕР±РѕРє")
 		end
 		if af_sect=="af_armor_2" and actor:has_info("info_amk_recipt_pancir") then
 			af_flash(af)
-			af_start_transform_timer(af_start_transform(65,25,af_sect,"af_armor_3"), pos ,0,2,0,"Панцирь")
+			af_start_transform_timer(af_start_transform(65,25,af_sect,"af_armor_3"), pos ,0,2,0,"РџР°РЅС†РёСЂСЊ")
 		end
 		if af_sect=="af_medusa" or af_sect=="af_drops" or af_sect=="af_blood" or af_sect=="af_rusty_thorn" and actor:has_info("info_amk_recipt_simbion") then
 			local s={}
@@ -628,7 +628,7 @@ function check_af_transform(af,anom_id,anom_sect)
 				alife():release(alife():object(s.koluchka), true)
 				alife():release(alife():object(s.blood), true)
 				amk.del_variable("af_simbion_activation")
-				af_start_transform_timer(af_start_transform(75,25,"af_buliz","af_simbion") , pos ,0,5,0,"Симбион")
+				af_start_transform_timer(af_start_transform(75,25,"af_buliz","af_simbion") , pos ,0,5,0,"РЎРёРјР±РёРѕРЅ")
 				return
 			end
 			amk.save_variable("af_simbion_activation",amk.pack_array_to_string(s))
@@ -637,29 +637,29 @@ function check_af_transform(af,anom_id,anom_sect)
 	if string.find(anom_sect,"_mincer")~=nil then
 		if af_sect=="af_babka_2" and actor:has_info("info_amk_recipt_burer_grandmother_glassbeards") then
 			af_flash(af)
-			af_start_transform_timer(af_start_transform(85,10,af_sect,"af_babka_3"), pos ,0,0,10,"Бусы бабки бюрера")
+			af_start_transform_timer(af_start_transform(85,10,af_sect,"af_babka_3"), pos ,0,0,10,"Р‘СѓСЃС‹ Р±Р°Р±РєРё Р±СЋСЂРµСЂР°")
 		end
 		if af_sect=="af_kol_1" and actor:has_info("info_amk_recipt_titan_kolobok") then
 			af_flash(af)
-			af_start_transform_timer(af_start_transform(55,35,af_sect,"af_kol_2"), pos ,0,5,0,"Титановый колобок")
+			af_start_transform_timer(af_start_transform(55,35,af_sect,"af_kol_2"), pos ,0,5,0,"РўРёС‚Р°РЅРѕРІС‹Р№ РєРѕР»РѕР±РѕРє")
 		end
 		if af_sect=="af_armor_1" and actor:has_info("info_amk_recipt_cheshya") then
 			af_flash(af)
-			af_start_transform_timer(af_start_transform(80,10,af_sect,"af_armor_2"), pos ,0,5,0,"Чешуя")
+			af_start_transform_timer(af_start_transform(80,10,af_sect,"af_armor_2"), pos ,0,5,0,"Р§РµС€СѓСЏ")
 		end
 	end
 	if string.find(anom_sect,"_mosquito_bald")~=nil then
 		if af_sect=="af_dik_3" and actor:has_info("info_amk_recipt_stone_dikoobraz") then
 			af_flash(af)
-			af_start_transform_timer(af_start_transform(50,28,af_sect,"af_dik_4"), pos ,0,9,0,"Каменный дикобраз")
+			af_start_transform_timer(af_start_transform(50,28,af_sect,"af_dik_4"), pos ,0,9,0,"РљР°РјРµРЅРЅС‹Р№ РґРёРєРѕР±СЂР°Р·")
 		end
 		if af_sect=="af_fuzz_kolobok" and actor:has_info("info_amk_recipt_steel_kolobok") then
 			af_flash(af)
-			af_start_transform_timer(af_start_transform(70,25,af_sect,"af_kol_1"), pos ,0,2,0,"Стальной колобок")
+			af_start_transform_timer(af_start_transform(70,25,af_sect,"af_kol_1"), pos ,0,2,0,"РЎС‚Р°Р»СЊРЅРѕР№ РєРѕР»РѕР±РѕРє")
 		end
 		if af_sect=="af_dummy_pellicle" and actor:has_info("info_amk_recipt_shkura") then
 			af_flash(af)
-			af_start_transform_timer(af_start_transform(70,25,af_sect,"af_armor_1"), pos ,0,5,0,"Шкура")
+			af_start_transform_timer(af_start_transform(70,25,af_sect,"af_armor_1"), pos ,0,5,0,"РЁРєСѓСЂР°")
 		end
 	end
 end
@@ -827,7 +827,7 @@ function start_blow_timer()
 	if (news_main and news_main.next_blow) then
 		news_main.next_blow(t_time+shift)
 	end]]
-	local time = math.random(5,10) --задаётся время в минутах	
+	local time = math.random(5,10) --Р·Р°РґР°С‘С‚СЃСЏ РІСЂРµРјСЏ РІ РјРёРЅСѓС‚Р°С…	
 	amk.g_start_timer( "blow_shift",0,0,time)
 end
 
@@ -838,12 +838,12 @@ function Blowout_pp(phase)
 --' GameMin = 12 RealSec
 --' TimeBlowout = 184 RealSec
 
---' Начало (Timer = 36 sec)
---' Первая Фаза (Timer = 36 sec)
---' Вторая Фаза (Timer = 36 sec)
---' Третья Фаза (Timer = 36 sec)
---' Четвертая Фаза (Timer = 60 sec)
---' Конечнвя Фаза (Timer = 0 sec)
+--' РќР°С‡Р°Р»Рѕ (Timer = 36 sec)
+--' РџРµСЂРІР°СЏ Р¤Р°Р·Р° (Timer = 36 sec)
+--' Р’С‚РѕСЂР°СЏ Р¤Р°Р·Р° (Timer = 36 sec)
+--' РўСЂРµС‚СЊСЏ Р¤Р°Р·Р° (Timer = 36 sec)
+--' Р§РµС‚РІРµСЂС‚Р°СЏ Р¤Р°Р·Р° (Timer = 60 sec)
+--' РљРѕРЅРµС‡РЅРІСЏ Р¤Р°Р·Р° (Timer = 0 sec)
 ---------------------------------------------------
 
 	amk.mylog("blowout "..phase)
@@ -977,7 +977,7 @@ function on_blowout_hit(npc,hide)
     	h.impulse = 0
 		h.draftsman = npc
 		h.direction = vector():set(0,0,0)
-		h:bone("bip01_spine") -- чтобы учитывалась броня
+		h:bone("bip01_spine") -- С‡С‚РѕР±С‹ СѓС‡РёС‚С‹РІР°Р»Р°СЃСЊ Р±СЂРѕРЅСЏ
     	h.type = hit.strike
 		npc:hit(h)
     	h.type = hit.telepatic
@@ -1052,7 +1052,7 @@ function update_anoms()
     end
 end
 
--- anom_state[sid]==true для активных аномалий
+-- anom_state[sid]==true РґР»СЏ Р°РєС‚РёРІРЅС‹С… Р°РЅРѕРјР°Р»РёР№
 function pack_anoms(anom_state)
 	local str=""
 	for i=0,amk_hideouts.anom_count-1,7 do
@@ -1141,13 +1141,13 @@ function generate_recipe(obj)
 	end
 	if not info then return end
 	local recipes=amk.load_table("amk_body_recipe")
-	-- Проверим не генерился ли уже этот рецепт
+	-- РџСЂРѕРІРµСЂРёРј РЅРµ РіРµРЅРµСЂРёР»СЃСЏ Р»Рё СѓР¶Рµ СЌС‚РѕС‚ СЂРµС†РµРїС‚
 	for k,v in pairs(recipes) do
 		if v==info then
 			return
 		end
 	end
-	-- Сгенерим рецепт
+	-- РЎРіРµРЅРµСЂРёРј СЂРµС†РµРїС‚
 	if math.random(100)<=prob then
 		recipes[obj:id()]=info
 		amk.save_table("amk_body_recipe",recipes)
@@ -1252,9 +1252,9 @@ function set_hud_tex(static,enabled)
 end
 
 local blurs=nil
-local blurval=0 -- уровень запотевания от 0 до 1
-local blurlt=0 -- время последнего обновления
-local blurcyctime=0 -- время начала последнего цикла дыхания (выдох)
+local blurval=0 -- СѓСЂРѕРІРµРЅСЊ Р·Р°РїРѕС‚РµРІР°РЅРёСЏ РѕС‚ 0 РґРѕ 1
+local blurlt=0 -- РІСЂРµРјСЏ РїРѕСЃР»РµРґРЅРµРіРѕ РѕР±РЅРѕРІР»РµРЅРёСЏ
+local blurcyctime=0 -- РІСЂРµРјСЏ РЅР°С‡Р°Р»Р° РїРѕСЃР»РµРґРЅРµРіРѕ С†РёРєР»Р° РґС‹С…Р°РЅРёСЏ (РІС‹РґРѕС…)
 local blurlastphase=0
 
 function set_blurs(enabled,rect)
@@ -1273,14 +1273,14 @@ function set_blurs(enabled,rect)
 		return    
 	end
   
--- Циклы в зависимости от силы дыхания: 0->1->0 0->1->2->4->5->0 0->1->2->3->4->5->0 5->4->3->4->5 4->3->4
+-- Р¦РёРєР»С‹ РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ СЃРёР»С‹ РґС‹С…Р°РЅРёСЏ: 0->1->0 0->1->2->4->5->0 0->1->2->3->4->5->0 5->4->3->4->5 4->3->4
 	local power=db.actor.power
-	local period=1.0+power*power*1.0 -- текущая частота дыхания от 30 до 120 циклов в минуту
+	local period=1.0+power*power*1.0 -- С‚РµРєСѓС‰Р°СЏ С‡Р°СЃС‚РѕС‚Р° РґС‹С…Р°РЅРёСЏ РѕС‚ 30 РґРѕ 120 С†РёРєР»РѕРІ РІ РјРёРЅСѓС‚Сѓ
 	local expirt=0.3
 	local breathpower=3
   
-	local delta=(time_global()-blurlt)/1000 -- дельта в секундах
-	local phase=(time_global()-blurcyctime)/1000 -- фаза дыхательного цикла в сек.
+	local delta=(time_global()-blurlt)/1000 -- РґРµР»СЊС‚Р° РІ СЃРµРєСѓРЅРґР°С…
+	local phase=(time_global()-blurcyctime)/1000 -- С„Р°Р·Р° РґС‹С…Р°С‚РµР»СЊРЅРѕРіРѕ С†РёРєР»Р° РІ СЃРµРє.
 	blurlt=time_global()
 	if phase>period then
 		phase=phase%period
@@ -1290,7 +1290,7 @@ function set_blurs(enabled,rect)
 		blurlastphase=0
 	end
   
-	local blurdelta=delta*-0.7 -- работа вентилляции
+	local blurdelta=delta*-0.7 -- СЂР°Р±РѕС‚Р° РІРµРЅС‚РёР»Р»СЏС†РёРё
 	if blurlastphase<expirt and phase<expirt then
 		blurdelta=blurdelta+(phase-blurlastphase)*breathpower
 	elseif blurlastphase<expirt then
@@ -1502,7 +1502,7 @@ function spawn_fuel()
 	end
 end
 
--- БТР на Полигоне
+-- Р‘РўР  РЅР° РџРѕР»РёРіРѕРЅРµ
 function spawn_military_btr()
 	spawn_military_tech_pack( alife():create("vehicle_btr",vector():set(264.675,0.093,-81.742),886226,1668 ) ,"vehicle_btr")
 	spawn_military_tech_pack( alife():create("vehicle_btr",vector():set(163.397,-0.222,-40.210),733180,1639 ) ,"vehicle_btr")
@@ -1521,7 +1521,7 @@ function spawn_military_tech_pack(obj, spawn_item)
 	local packet = net_packet()
 	obj:STATE_Write(packet)
 
-	-- свойства cse_alife_object
+	-- СЃРІРѕР№СЃС‚РІР° cse_alife_object
 	local game_vertex_id = packet:r_u16()
 	local cse_alife_object__unk1_f32 = packet:r_float()
 	local cse_alife_object__unk2_s32 = packet:r_s32()
@@ -1531,19 +1531,19 @@ function spawn_military_tech_pack(obj, spawn_item)
 	local story_id = packet:r_s32()
 	local cse_alife_object__unk3_s32 = packet:r_s32()
 
-	-- свойства cse_visual
+	-- СЃРІРѕР№СЃС‚РІР° cse_visual
 	local model_visual = packet:r_stringZ()
 	local cse_visual__unk1_u8 = packet:r_u8()
 	local motion_name
 	if spawn_item == "helicopter" then
-		-- свойства cse_motion
+		-- СЃРІРѕР№СЃС‚РІР° cse_motion
 		motion_name = packet:r_stringZ()
 	elseif  spawn_item == "helicopter_prom" then
-		-- свойства cse_motion
+		-- СЃРІРѕР№СЃС‚РІР° cse_motion
 		motion_name = packet:r_stringZ()
 	end
 
-	-- свойства cse_ph_skeleton
+	-- СЃРІРѕР№СЃС‚РІР° cse_ph_skeleton
 	local skeleton_name = packet:r_stringZ()
 	local cse_ph_skeleton__unk1_u8 = packet:r_u8()
 	local cse_ph_skeleton__unk2_u16 = packet:r_u16()
@@ -1552,11 +1552,11 @@ function spawn_military_tech_pack(obj, spawn_item)
 	local engine_sound 
 		
 	if spawn_item == "helicopter" then
-		-- свойства cse_alife_helicopter
+		-- СЃРІРѕР№СЃС‚РІР° cse_alife_helicopter
 		cse_alife_helicopter__unk1_sz = packet:r_stringZ()
 		engine_sound = packet:r_stringZ()
 	elseif spawn_item == "helicopter_prom" then
-		-- свойства cse_alife_helicopter
+		-- СЃРІРѕР№СЃС‚РІР° cse_alife_helicopter
 		cse_alife_helicopter__unk1_sz = packet:r_stringZ()
 		engine_sound = packet:r_stringZ()
 	elseif	spawn_item == "vehicle_btr" then
@@ -1565,8 +1565,8 @@ function spawn_military_tech_pack(obj, spawn_item)
 		health = packet:r_float()
 	end
 	
-	-- теперь заполняем нужные параметры
-	-- свойства cse_alife_object
+	-- С‚РµРїРµСЂСЊ Р·Р°РїРѕР»РЅСЏРµРј РЅСѓР¶РЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹
+	-- СЃРІРѕР№СЃС‚РІР° cse_alife_object
 	packet:w_begin(game_vertex_id)
 	packet:w_float(cse_alife_object__unk1_f32)
 	packet:w_s32(cse_alife_object__unk2_s32)
@@ -1585,7 +1585,7 @@ function spawn_military_tech_pack(obj, spawn_item)
 	packet:w_s32(-1)
 	packet:w_s32(cse_alife_object__unk3_s32)
 
-	-- свойства cse_visual
+	-- СЃРІРѕР№СЃС‚РІР° cse_visual
 	packet:w_stringZ(model_visual)
 	packet:w_u8(cse_visual__unk1_u8)
 	
@@ -1595,20 +1595,20 @@ function spawn_military_tech_pack(obj, spawn_item)
 		packet:w_stringZ(motion_name)		
 	end 
 	
-	-- свойства cse_ph_skeleton
+	-- СЃРІРѕР№СЃС‚РІР° cse_ph_skeleton
 	skeleton_name = "idle"
 	packet:w_stringZ(skeleton_name)
 	packet:w_u8(cse_ph_skeleton__unk1_u8)
 	packet:w_u16(cse_ph_skeleton__unk2_u16)
 
 	if spawn_item == "helicopter" then
-		-- свойства cse_alife_helicopter
+		-- СЃРІРѕР№СЃС‚РІР° cse_alife_helicopter
 		cse_alife_helicopter__unk1_sz = "idle"
 		engine_sound = "alexmx\\helicopter"
 		packet:w_stringZ(cse_alife_helicopter__unk1_sz)
 		packet:w_stringZ(engine_sound)
 	elseif  spawn_item == "helicopter_prom" then
-		-- свойства cse_alife_helicopter
+		-- СЃРІРѕР№СЃС‚РІР° cse_alife_helicopter
 		cse_alife_helicopter__unk1_sz = "idle"
 		engine_sound = "alexmx\\helicopter"
 		packet:w_stringZ(cse_alife_helicopter__unk1_sz)
@@ -1620,7 +1620,7 @@ function spawn_military_tech_pack(obj, spawn_item)
 		health = 1
 		packet:w_float(health)
 	end	
-	-- считываем скорректированные параметры
+	-- СЃС‡РёС‚С‹РІР°РµРј СЃРєРѕСЂСЂРµРєС‚РёСЂРѕРІР°РЅРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹
 	packet:r_seek(0)
 	obj:STATE_Read(packet, packet:w_tell())
 end
@@ -1670,7 +1670,7 @@ function weather_manager()
 	if sync_done==false then return end
 	local hour = level.get_time_hours()
 	local dynlasthour = amk.load_variable("dynlasthour",-1) 
-	--' При такой проверке, если лечь спать в 23 часа, то наступит "вечная ночь"(lsclon)
+	--' РџСЂРё С‚Р°РєРѕР№ РїСЂРѕРІРµСЂРєРµ, РµСЃР»Рё Р»РµС‡СЊ СЃРїР°С‚СЊ РІ 23 С‡Р°СЃР°, С‚Рѕ РЅР°СЃС‚СѓРїРёС‚ "РІРµС‡РЅР°СЏ РЅРѕС‡СЊ"(lsclon)
 	--if dynlasthour<hour or (hour==0 and dynlasthour==23) then
 	if dynlasthour < hour or (dynlasthour == 23 and (hour >= 0 and hour ~= 23)) then
 		local next_weather 
@@ -1696,18 +1696,18 @@ function weather_manager()
 		amk.save_variable("dynlasthour",hour)
 		amk.save_variable("dynweather","amk_"..dynw.."_"..next_weather.."_"..hour)
 	end
-	-- проверим на параллельный мир
-	if has_alife_info("parallel_mg") then	-- мы в параллельном мире
-		if level.get_weather()~="val_for_dead" then -- меняем погоду
+	-- РїСЂРѕРІРµСЂРёРј РЅР° РїР°СЂР°Р»Р»РµР»СЊРЅС‹Р№ РјРёСЂ
+	if has_alife_info("parallel_mg") then	-- РјС‹ РІ РїР°СЂР°Р»Р»РµР»СЊРЅРѕРј РјРёСЂРµ
+		if level.get_weather()~="val_for_dead" then -- РјРµРЅСЏРµРј РїРѕРіРѕРґСѓ
 			level.set_weather("val_for_dead",true)
 		end
 	else
 		if level.get_weather()=="val_for_dead" then 
 			cur_weather = amk.load_variable("dynweather", "amk_clear_clear_"..hour)
-			level.set_weather(cur_weather) -- восстановим погоду		
+			level.set_weather(cur_weather) -- РІРѕСЃСЃС‚Р°РЅРѕРІРёРј РїРѕРіРѕРґСѓ		
 		end
 	end
-	-- закончим проверку
+	-- Р·Р°РєРѕРЅС‡РёРј РїСЂРѕРІРµСЂРєСѓ
 end
 
 
@@ -1896,7 +1896,7 @@ function build_btrs_table(obj)
 end
 
 function firebated(obj, amount, local_direction, who, bone_index)
-	if bone_index>0 and who and IsStalker(who) then --false для отключения
+	if bone_index>0 and who and IsStalker(who) then --false РґР»СЏ РѕС‚РєР»СЋС‡РµРЅРёСЏ
 		local script
 		if IsMonster(obj) then 
 			script=bind_monster
@@ -1936,7 +1936,7 @@ function zomby_blow(obj)
 			h.impulse = 0
 			h.draftsman = db.actor
 			h.direction = vector():set(0,0,0)
-			h:bone("bip01_spine") -- чтобы учитывалась броня
+			h:bone("bip01_spine") -- С‡С‚РѕР±С‹ СѓС‡РёС‚С‹РІР°Р»Р°СЃСЊ Р±СЂРѕРЅСЏ
 			h.power = 1/dist
 			h.type = hit.strike --chemical_burn
 			db.actor:hit(h)
@@ -1960,7 +1960,7 @@ function zomby_blow(obj)
     	h.impulse = 0
 		h.draftsman = db.actor
 		h.direction = vector():set(0,0,0)
-		h:bone("bip01_spine") -- чтобы учитывалась броня
+		h:bone("bip01_spine") -- С‡С‚РѕР±С‹ СѓС‡РёС‚С‹РІР°Р»Р°СЃСЊ Р±СЂРѕРЅСЏ
     	h.power = 1/dist
     	h.type = hit.strike --chemical_burn
 		db.actor:hit(h)

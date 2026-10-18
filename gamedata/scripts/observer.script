@@ -1,12 +1,12 @@
 
 --[[---------------------------------------------------------------------------------------------------------------------------------
  File			: observer.script
- Description	: Наблюдатели
- Copyright		: 2012 © boryan67
+ Description	: РќР°Р±Р»СЋРґР°С‚РµР»Рё
+ Copyright		: 2012 В© boryan67
  Author			: boryan67(Dracula) & Aleksandr44 
  Last edit		: 07.09.2012 
 --]]--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--- Таблицы координат по локациям
+-- РўР°Р±Р»РёС†С‹ РєРѕРѕСЂРґРёРЅР°С‚ РїРѕ Р»РѕРєР°С†РёСЏРј
 local tbl_promzone={
 {
     position={x=-41.834503173828,y=21.306356430054,z=447.01867675781},
@@ -822,12 +822,12 @@ local tbl_pripyat={
     }
 }
 -------------------------------------------------------------------------------
-local observerID	-- ИД НАБЛЮДАТЕЛЯ
+local observerID	-- РР” РќРђР‘Р›Р®Р”РђРўР•Р›РЇ
 -------------------------------------------------------------------------------
 function get_obj()
 	local lev_name = level.name()
 	local tbl = nil
-	-- выбираем таблицу в зависимости от уровня
+	-- РІС‹Р±РёСЂР°РµРј С‚Р°Р±Р»РёС†Сѓ РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ СѓСЂРѕРІРЅСЏ
 	if lev_name=="promzone" then tbl = tbl_promzone
 	elseif lev_name=="dead_city" then tbl = tbl_dead_city
 	elseif lev_name=="dyshlo" then tbl = tbl_dyshlo
@@ -837,9 +837,9 @@ function get_obj()
 	elseif lev_name=="swamp" then tbl = tbl_swamp
 	elseif lev_name=="hiding_road" then tbl = tbl_hiding_road
 	elseif lev_name=="l11_pripyat" then tbl = tbl_pripyat
-	else return	-- подземка, ничего не создаем
+	else return	-- РїРѕРґР·РµРјРєР°, РЅРёС‡РµРіРѕ РЅРµ СЃРѕР·РґР°РµРј
 	end
-	-- ищем ближайшую к актору оффлайновую точку спавна наблюдателя
+	-- РёС‰РµРј Р±Р»РёР¶Р°Р№С€СѓСЋ Рє Р°РєС‚РѕСЂСѓ РѕС„С„Р»Р°Р№РЅРѕРІСѓСЋ С‚РѕС‡РєСѓ СЃРїР°РІРЅР° РЅР°Р±Р»СЋРґР°С‚РµР»СЏ
 	local actor = db.actor
 	if not actor then return end
 	local actor_pos = actor:position()
@@ -854,21 +854,21 @@ function get_obj()
 			pos=vector():set(temp.position.x,temp.position.y,temp.position.z)
 			dist = actor_pos:distance_to(pos)
 			if dist < min_dist and dist > 150 then
-				min_dist = dist	-- запомнили расстояние
-				num_pos = i		-- запомнили позицию в таблице
+				min_dist = dist	-- Р·Р°РїРѕРјРЅРёР»Рё СЂР°СЃСЃС‚РѕСЏРЅРёРµ
+				num_pos = i		-- Р·Р°РїРѕРјРЅРёР»Рё РїРѕР·РёС†РёСЋ РІ С‚Р°Р±Р»РёС†Рµ
 			end
 		end
-		-- если поиск позиции прошел удачно, то спавним наблюдателя
+		-- РµСЃР»Рё РїРѕРёСЃРє РїРѕР·РёС†РёРё РїСЂРѕС€РµР» СѓРґР°С‡РЅРѕ, С‚Рѕ СЃРїР°РІРЅРёРј РЅР°Р±Р»СЋРґР°С‚РµР»СЏ
 		if num_pos then
 			local sim = alife()
 			temp = tbl[num_pos]
 			local sobj = sim:create("observer_set", vector():set(temp.position.x,temp.position.y,temp.position.z), temp.lv, temp.gv)
 			if sobj then
-				obj = level.object_by_id(sobj.id)	-- получаем клиентский объект
+				obj = level.object_by_id(sobj.id)	-- РїРѕР»СѓС‡Р°РµРј РєР»РёРµРЅС‚СЃРєРёР№ РѕР±СЉРµРєС‚
 				if obj then
-					obj:set_relation(game_object.neutral, db.actor)	-- сбрасываем враждебность на всякий случай
+					obj:set_relation(game_object.neutral, db.actor)	-- СЃР±СЂР°СЃС‹РІР°РµРј РІСЂР°Р¶РґРµР±РЅРѕСЃС‚СЊ РЅР° РІСЃСЏРєРёР№ СЃР»СѓС‡Р°Р№
 				end
-				observerID = sobj.id	-- запоминаем ID
+				observerID = sobj.id	-- Р·Р°РїРѕРјРёРЅР°РµРј ID
 				amk.save_variable("observer",observerID)
 			end
 		end
@@ -881,15 +881,15 @@ function del_obj()
 	if observerID==0 then return end
 	local sim = alife()
 	local obj
-	local sobj = sim:object(observerID)	-- получаем серверный объект
-	if sobj then obj = level.object_by_id(sobj.id) end	-- получаем клиентский объект
+	local sobj = sim:object(observerID)	-- РїРѕР»СѓС‡Р°РµРј СЃРµСЂРІРµСЂРЅС‹Р№ РѕР±СЉРµРєС‚
+	if sobj then obj = level.object_by_id(sobj.id) end	-- РїРѕР»СѓС‡Р°РµРј РєР»РёРµРЅС‚СЃРєРёР№ РѕР±СЉРµРєС‚
 	if obj then
-		-- играем партикл в позиции объекта если он в онлайне
+		-- РёРіСЂР°РµРј РїР°СЂС‚РёРєР» РІ РїРѕР·РёС†РёРё РѕР±СЉРµРєС‚Р° РµСЃР»Рё РѕРЅ РІ РѕРЅР»Р°Р№РЅРµ
 		amk_particle.amk_particle({particle="anomaly2\\teleport_idle", pos=obj:position(), sound="anomaly\\teleport_idle"})
 	end
-	if sobj then	-- объект существует
-		sim:release(sobj,true)-- удаляем серверный объект
-		observerID = 0	-- чистим ID
+	if sobj then	-- РѕР±СЉРµРєС‚ СЃСѓС‰РµСЃС‚РІСѓРµС‚
+		sim:release(sobj,true)-- СѓРґР°Р»СЏРµРј СЃРµСЂРІРµСЂРЅС‹Р№ РѕР±СЉРµРєС‚
+		observerID = 0	-- С‡РёСЃС‚РёРј ID
 		amk.save_variable("observer",observerID)
 	end
 end
@@ -899,29 +899,29 @@ function on_start()
 	observerID = amk.load_variable("observer",0)
 	local sobj, obj
 	local sim = alife()
-	if observerID>0 then		-- ID существует
-		sobj = sim:object(observerID)	-- получаем серверный объект
+	if observerID>0 then		-- ID СЃСѓС‰РµСЃС‚РІСѓРµС‚
+		sobj = sim:object(observerID)	-- РїРѕР»СѓС‡Р°РµРј СЃРµСЂРІРµСЂРЅС‹Р№ РѕР±СЉРµРєС‚
 		if sobj then 
-			obj = level.object_by_id(sobj.id) -- получаем клиентский объект
+			obj = level.object_by_id(sobj.id) -- РїРѕР»СѓС‡Р°РµРј РєР»РёРµРЅС‚СЃРєРёР№ РѕР±СЉРµРєС‚
 			if obj then
-				return -- объект в онлайне, не трогаем
-			else	-- объект в оффлайне, нужно его пересоздать
-				del_obj()	-- удаляем наблюдателя
-				if observerID==0 then get_obj() end	-- создаем наблюдателя
+				return -- РѕР±СЉРµРєС‚ РІ РѕРЅР»Р°Р№РЅРµ, РЅРµ С‚СЂРѕРіР°РµРј
+			else	-- РѕР±СЉРµРєС‚ РІ РѕС„С„Р»Р°Р№РЅРµ, РЅСѓР¶РЅРѕ РµРіРѕ РїРµСЂРµСЃРѕР·РґР°С‚СЊ
+				del_obj()	-- СѓРґР°Р»СЏРµРј РЅР°Р±Р»СЋРґР°С‚РµР»СЏ
+				if observerID==0 then get_obj() end	-- СЃРѕР·РґР°РµРј РЅР°Р±Р»СЋРґР°С‚РµР»СЏ
 			end
-		else		-- нештатная ситуация! ИД есть, а объекта нет! 
-			observerID=0	-- обнуляем ИД
+		else		-- РЅРµС€С‚Р°С‚РЅР°СЏ СЃРёС‚СѓР°С†РёСЏ! РР” РµСЃС‚СЊ, Р° РѕР±СЉРµРєС‚Р° РЅРµС‚! 
+			observerID=0	-- РѕР±РЅСѓР»СЏРµРј РР”
 			amk.save_variable("observer",observerID)
 		end		
-	else	-- объекта нет, нужно его создать
-		get_obj()	-- создаем наблюдателя
+	else	-- РѕР±СЉРµРєС‚Р° РЅРµС‚, РЅСѓР¶РЅРѕ РµРіРѕ СЃРѕР·РґР°С‚СЊ
+		get_obj()	-- СЃРѕР·РґР°РµРј РЅР°Р±Р»СЋРґР°С‚РµР»СЏ
 	end
-        if has_alife_info('nablyudatel_spynet') then sar_respawn() end -- спавн Наблюдателей в Саркофаге
+        if has_alife_info('nablyudatel_spynet') then sar_respawn() end -- СЃРїР°РІРЅ РќР°Р±Р»СЋРґР°С‚РµР»РµР№ РІ РЎР°СЂРєРѕС„Р°РіРµ
 end
 -------------------------------------------------------------------------------
 
--- респавн Наблюдателей в Саркофаге
--- таблица координат Наблюдателей
+-- СЂРµСЃРїР°РІРЅ РќР°Р±Р»СЋРґР°С‚РµР»РµР№ РІ РЎР°СЂРєРѕС„Р°РіРµ
+-- С‚Р°Р±Р»РёС†Р° РєРѕРѕСЂРґРёРЅР°С‚ РќР°Р±Р»СЋРґР°С‚РµР»РµР№
 local tbl_sar = {
  [1] = {'nablyudatel_01', vector():set(8.844,49.035,8.748),3417,1378},
  [2] = {'nablyudatel_02', vector():set(7.822,52.244,21.255),3268,1378},
@@ -933,7 +933,7 @@ function sar_respawn()
  local id, sobj, rec
  local sim = alife()
  for n=1, 5 do
-  -- для начала почистим всех существующих Наблюдателей
+  -- РґР»СЏ РЅР°С‡Р°Р»Р° РїРѕС‡РёСЃС‚РёРј РІСЃРµС… СЃСѓС‰РµСЃС‚РІСѓСЋС‰РёС… РќР°Р±Р»СЋРґР°С‚РµР»РµР№
   id = amk.load_variable("sar_observer"..tostring( n), 0)
   if id>0 then
    sobj = sim:object(id)
@@ -942,12 +942,12 @@ function sar_respawn()
     sim:release(sobj,true)
    end
   end
-  -- заспавним снова
+  -- Р·Р°СЃРїР°РІРЅРёРј СЃРЅРѕРІР°
   rec = tbl_sar[n]
-  if not has_alife_info(rec[1]..'_dead') then -- если нет информации о его смерти
-   sobj = sim:create(rec[1], rec[2], rec[3], rec[4]) -- пересоздадим
+  if not has_alife_info(rec[1]..'_dead') then -- РµСЃР»Рё РЅРµС‚ РёРЅС„РѕСЂРјР°С†РёРё Рѕ РµРіРѕ СЃРјРµСЂС‚Рё
+   sobj = sim:create(rec[1], rec[2], rec[3], rec[4]) -- РїРµСЂРµСЃРѕР·РґР°РґРёРј
    if sobj then
-    amk.save_variable("sar_observer"..tostring( n), sobj.id) -- запомним ид
+    amk.save_variable("sar_observer"..tostring( n), sobj.id) -- Р·Р°РїРѕРјРЅРёРј РёРґ
    end
   end
  end

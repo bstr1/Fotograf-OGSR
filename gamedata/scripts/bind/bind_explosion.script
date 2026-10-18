@@ -48,7 +48,7 @@ function explosion_binder:load(reader)
 end
 
 ------------------------- Copyright 2007-2008 DEXXX ---------------------------
--- Атака насекомых чумного зомби
+-- РђС‚Р°РєР° РЅР°СЃРµРєРѕРјС‹С… С‡СѓРјРЅРѕРіРѕ Р·РѕРјР±Рё
 function zombie_insect(p_obj)
 if p_obj then
 

@@ -399,14 +399,14 @@ local obj=alife():create("gold_art",vector():set(-81.021110534668,-0.92528951168
 end
 
 function spawn_level_dark()
-     -- создается переход из ТЕМНОЙ ДОЛИНЫ НА РАДАР
+     -- СЃРѕР·РґР°РµС‚СЃСЏ РїРµСЂРµС…РѕРґ РёР· РўР•РњРќРћР™ Р”РћР›РРќР« РќРђ Р РђР”РђР 
 	if (not has_alife_info(	"saharov_dark_radar" )) then
 level_new.create_level_changer(31000, vector():set(157.544,-4.795,-88.7233),357929, 919,227097, 1914,
         vector():set(660.463,-43.8839,173.0097 ),
         vector():set(0,-0.281389117240906,0),"l10_radar",0)
         db.actor:give_info_portion("saharov_dark_radar")
 	end
-    -- создается переход с РАДАРА в ТЕМНУЮ ДОЛИНУ
+    -- СЃРѕР·РґР°РµС‚СЃСЏ РїРµСЂРµС…РѕРґ СЃ Р РђР”РђР Рђ РІ РўР•РњРќРЈР® Р”РћР›РРќРЈ
 	if (not has_alife_info(	"saharov_radar_dark" )) then
 level_new.create_level_changer(31050, vector():set(660.2858,-43.876,168.832),227063, 1915,359929, 919,
         vector():set(160.9338989,-4.352917,-82.83966),
@@ -416,14 +416,14 @@ level_new.create_level_changer(31050, vector():set(660.2858,-43.876,168.832),227
 end
 
 function spawn_level_agro()
-     -- создается переход с АГРОПРОМА НА ЯНТАРЬ
+     -- СЃРѕР·РґР°РµС‚СЃСЏ РїРµСЂРµС…РѕРґ СЃ РђР“Р РћРџР РћРњРђ РќРђ РЇРќРўРђР Р¬
 	if (not has_alife_info(	"levsha_agro_yan" )) then
 level_new.create_level_changer(31100, vector():set(-129.02766,14.4666,199.999),111251, 522,15229, 1487,
         vector():set(-68.1646,1.669,-357.0758 ),
         vector():set(0.219999998807907,-0.349999994039536,0.62),"l08_yantar",0)
         db.actor:give_info_portion("levsha_agro_yan")
 	end
-    -- создается переход с ЯНТАРЯ НА АГРОПРОМ
+    -- СЃРѕР·РґР°РµС‚СЃСЏ РїРµСЂРµС…РѕРґ СЃ РЇРќРўРђР РЇ РќРђ РђР“Р РћРџР РћРњ
 	if (not has_alife_info(	"levsha_yan_agro" )) then
 level_new.create_level_changer(31150, vector():set(-69.8496,3.838,-362.1278),15229, 1487,117966, 520,
         vector():set(-122.43,11.38,185.53999),
@@ -433,14 +433,14 @@ level_new.create_level_changer(31150, vector():set(-69.8496,3.838,-362.1278),152
 end
 
 function spawn_yan_sarc()
-      -- создается переход с ЯНТАРЯ В САРКОФАГ
+      -- СЃРѕР·РґР°РµС‚СЃСЏ РїРµСЂРµС…РѕРґ СЃ РЇРќРўРђР РЇ Р’ РЎРђР РљРћР¤РђР“
 	if (not has_alife_info(	"zombi_yan_sarc" )) then
 level_new.create_level_changer(31200, vector():set(-25.6117,-18.152,-85.55978 ),29509, 1492,643, 2417,
         vector():set(-6.636368,51.11847,25.6256),
         vector():set(0.14012610912323,0,-0.99013364315033),"l12u_sarcofag",0)
         db.actor:give_info_portion("zombi_yan_sarc")
 	end
-    -- создается переход с САРКОФАГА НА ЯНТАРЬ
+    -- СЃРѕР·РґР°РµС‚СЃСЏ РїРµСЂРµС…РѕРґ СЃ РЎРђР РљРћР¤РђР“Рђ РќРђ РЇРќРўРђР Р¬
 	if (not has_alife_info(	"zombi_sarc_yan" )) then
 level_new.create_level_changer(31250, vector():set(-13.26, 47.71, 46.57 ),200, 2417,29509, 1492,
         vector():set(-25.6117,-18.152,-85.55978),
@@ -450,14 +450,14 @@ level_new.create_level_changer(31250, vector():set(-13.26, 47.71, 46.57 ),200, 2
 end
 
 function spawn_sar_chaes2()
-      -- создается переход из САРКОФАГА НА ЧАЭС2
+      -- СЃРѕР·РґР°РµС‚СЃСЏ РїРµСЂРµС…РѕРґ РёР· РЎРђР РљРћР¤РђР“Рђ РќРђ Р§РђР­РЎ2
 	if (not has_alife_info(	"digger_sar_chaes2" )) then
 level_new.create_level_changer(31300, vector():set(77.10116577,58.2671585,51.8668289 ),6406,2417,53648,  2537,
         vector():set( 67.8906097,5.04050731,97.7711 ),
         vector():set(  0.0,-0.5,0.0 ),"l12_stancia_2",0)
         db.actor:give_info_portion("digger_sar_chaes2")
 	end
-    -- создается переход с ЧАЭС2 в САРКОФАГ
+    -- СЃРѕР·РґР°РµС‚СЃСЏ РїРµСЂРµС…РѕРґ СЃ Р§РђР­РЎ2 РІ РЎРђР РљРћР¤РђР“
 	if (not has_alife_info(	"digger_chaes2_sar" )) then
 level_new.create_level_changer(31320, vector():set( 663.8462524,0.355151146,140.6202697 ),192695,  2623,6321,2417,
         vector():set(85.1118,60.11035,50.743),
@@ -468,14 +468,14 @@ end
 
 
 function spawn_rad_yan()
-      -- создается переход с РАДАРА НА ЯНТАРЬ
+      -- СЃРѕР·РґР°РµС‚СЃСЏ РїРµСЂРµС…РѕРґ СЃ Р РђР”РђР Рђ РќРђ РЇРќРўРђР Р¬
 	if (not has_alife_info(	"info_rad_yan" )) then
 level_new.create_level_changer(31340, vector():set(-33.8359031677246,4.1663,-92.70242 ),469,1959,132440, 1521,
         vector():set(176.82000732,14.0399999,81.319999),
         vector():set(0.0,2.0,0.0),"l08_yantar",0)
         db.actor:give_info_portion("info_rad_yan")
 	end
-    -- создается переход с ЯНТАРЯ НА РАДАР
+    -- СЃРѕР·РґР°РµС‚СЃСЏ РїРµСЂРµС…РѕРґ СЃ РЇРќРўРђР РЇ РќРђ Р РђР”РђР 
 	if (not has_alife_info(	"info_yan_rad" )) then
 level_new.create_level_changer(31350, vector():set(181.97956848,19.407814,83.3477859),132440,1521,794,1959,
         vector():set(-30.9628868103027,2.09963,-91.5933761 ),
@@ -485,14 +485,14 @@ level_new.create_level_changer(31350, vector():set(181.97956848,19.407814,83.347
 end
 
 function spawn_sarc_chaes()
-      -- создается переход с ЧАЭС В САРКОФАГ
+      -- СЃРѕР·РґР°РµС‚СЃСЏ РїРµСЂРµС…РѕРґ СЃ Р§РђР­РЎ Р’ РЎРђР РљРћР¤РђР“
 	if (not has_alife_info(	"info_chaes_sarc" )) then
 level_new.create_level_changer(31370, vector():set(388.24746,0.14821225,65.81998443),169331,2385,101, 2419,
         vector():set(-27.261982,0.2294,40.4672),
         vector():set(0.0,-1.5,0.0),"l12u_sarcofag",0)
         db.actor:give_info_portion("info_chaes_sarc")
 	end
-    -- создается переход из САРКОФАГА НА ЧАЭС
+    -- СЃРѕР·РґР°РµС‚СЃСЏ РїРµСЂРµС…РѕРґ РёР· РЎРђР РљРћР¤РђР“Рђ РќРђ Р§РђР­РЎ
 	if (not has_alife_info(	"info_sarc_chaes" )) then
 level_new.create_level_changer(31390, vector():set(-30.6271,0.232626,45.8944),40, 2403,172158,2385,
         vector():set(393.82781,-0.0035887,63.712),
@@ -502,14 +502,14 @@ level_new.create_level_changer(31390, vector():set(-30.6271,0.232626,45.8944),40
 end
 
 function atp_kordon()
-      -- создается переход с КОРДОНА НА АТП
+      -- СЃРѕР·РґР°РµС‚СЃСЏ РїРµСЂРµС…РѕРґ СЃ РљРћР Р”РћРќРђ РќРђ РђРўРџ
 	if (not has_alife_info(	"info_kordon_atp" )) then
 level_new.create_level_changer(9700, vector():set(-117.3414459,16.527434,134.185),137234,84,2195, 2792,
         vector():set(29.3787,-7.2591,-6.956),
         vector():set(0.50699234008789,0,0.86195057630539 ),"atp_for_test22",0)
         db.actor:give_info_portion("info_kordon_atp")
 	end
-    -- создается переход с АТП НА КОРДОН
+    -- СЃРѕР·РґР°РµС‚СЃСЏ РїРµСЂРµС…РѕРґ СЃ РђРўРџ РќРђ РљРћР Р”РћРќ
 	if (not has_alife_info(	"info_atp_kordon" )) then
 level_new.create_level_changer(9702, vector():set(27.2626438,-6.9951,-15.2436),1207, 2792,137234,84,
         vector():set(-117.3414459,16.527434,134.185),
@@ -519,7 +519,7 @@ level_new.create_level_changer(9702, vector():set(27.2626438,-6.9951,-15.2436),1
 end
 
 function atp_military()
-      -- создается переход с МИЛИТАРИ НА АТП
+      -- СЃРѕР·РґР°РµС‚СЃСЏ РїРµСЂРµС…РѕРґ СЃ РњРР›РРўРђР Р РќРђ РђРўРџ
 	if (not has_alife_info(	"info_military_atp" )) then
 level_new.create_level_changer(31920, vector():set(-269.6032,-22.0931473,245.0633),68097,1786,1207, 2792,
         vector():set(268.886779,-9.673,-19.23756),
@@ -603,11 +603,11 @@ end
 --]]
 
 function add_new_pripyat()
-add_new_lc(833,6188,"На Радар","info_way_pripyat")
+add_new_lc(833,6188,"РќР° Р Р°РґР°СЂ","info_way_pripyat")
 end
 
 function add_new_radar()
-add_new_lc(1007,5240,"На Припять","info_way_radar")
+add_new_lc(1007,5240,"РќР° РџСЂРёРїСЏС‚СЊ","info_way_radar")
 end
 
 function add_new_lc(levch,levchn,levchm,info)
@@ -624,7 +624,7 @@ function add_new_lc(levch,levchn,levchm,info)
 end
 
 function info_received()
-  amk.send_tip("","Новый путь!",0,10,"gen_info")
+  amk.send_tip("","РќРѕРІС‹Р№ РїСѓС‚СЊ!",0,10,"gen_info")
 end
 
 function delete_new_lc(levch,info)
@@ -657,7 +657,7 @@ function set_community(actor, npc)
 	db.actor:set_character_community("monolith", 0, 0)
 end
 
--- Помощь раненому гг монолитовец
+-- РџРѕРјРѕС‰СЊ СЂР°РЅРµРЅРѕРјСѓ РіРі РјРѕРЅРѕР»РёС‚РѕРІРµС†
 
 function help_wounded_mono(npc)
 local snd
@@ -776,7 +776,7 @@ function get_npc_rank(obj)
 	return nil
 end
 
-function max_comp(i1,i2) -- возвращает true если i1 меньше i2
+function max_comp(i1,i2) -- РІРѕР·РІСЂР°С‰Р°РµС‚ true РµСЃР»Рё i1 РјРµРЅСЊС€Рµ i2
 	if wound_id then
 		local sobj = alife():object(wound_id)
 		local sobj_pos = sobj.position
@@ -801,7 +801,7 @@ function add_spot()
    if sim then
        obj = sim:story_object(9704)
        if obj then
-	    level.map_add_object_spot(obj.id, "level_changer", "Управление монолитом")
+	    level.map_add_object_spot(obj.id, "level_changer", "РЈРїСЂР°РІР»РµРЅРёРµ РјРѕРЅРѕР»РёС‚РѕРј")
 	  end 
    end
 end		
@@ -894,47 +894,47 @@ function doctor_speech()
          db.actor:give_info_portion("doctor_info")
 	  end
 	create_re_restr()  
-	news_manager.send_tip(db.actor, "Это Фельдшер, зайди ко мне, есть разговор срочный", nil, nil, 30000)  
+	news_manager.send_tip(db.actor, "Р­С‚Рѕ Р¤РµР»СЊРґС€РµСЂ, Р·Р°Р№РґРё РєРѕ РјРЅРµ, РµСЃС‚СЊ СЂР°Р·РіРѕРІРѕСЂ СЃСЂРѕС‡РЅС‹Р№", nil, nil, 30000)  
 end
 
 function sms_new()
   db.actor:give_info_portion("haron_talk_need")
-    news_manager.send_tip(db.actor, "Это Харон, срочно возвращайся, есть дело", nil, nil, 30000) 
+    news_manager.send_tip(db.actor, "Р­С‚Рѕ РҐР°СЂРѕРЅ, СЃСЂРѕС‡РЅРѕ РІРѕР·РІСЂР°С‰Р°Р№СЃСЏ, РµСЃС‚СЊ РґРµР»Рѕ", nil, nil, 30000) 
 end
 
 function sms_doc()
   db.actor:give_info_portion("doc_talk_need")
-    news_manager.send_tip(db.actor, "Привет, это Фельдшер, зайди ко мне, есть дело, очень срочное", nil, nil, 30000) 
+    news_manager.send_tip(db.actor, "РџСЂРёРІРµС‚, СЌС‚Рѕ Р¤РµР»СЊРґС€РµСЂ, Р·Р°Р№РґРё РєРѕ РјРЅРµ, РµСЃС‚СЊ РґРµР»Рѕ, РѕС‡РµРЅСЊ СЃСЂРѕС‡РЅРѕРµ", nil, nil, 30000) 
 end
 
 function sms_keys()
   db.actor:give_info_portion("keys_talk")
-    news_manager.send_tip(db.actor, "Боец, это Соломон. Есть дело срочное. Жду тебя у перехода в Саркофог, поспеши.", nil, nil, 30000) 
+    news_manager.send_tip(db.actor, "Р‘РѕРµС†, СЌС‚Рѕ РЎРѕР»РѕРјРѕРЅ. Р•СЃС‚СЊ РґРµР»Рѕ СЃСЂРѕС‡РЅРѕРµ. Р–РґСѓ С‚РµР±СЏ Сѓ РїРµСЂРµС…РѕРґР° РІ РЎР°СЂРєРѕС„РѕРі, РїРѕСЃРїРµС€Рё.", nil, nil, 30000) 
 end
 
 function sms_taynik()
   db.actor:give_info_portion("taynik_talk")
-    news_manager.send_tip(db.actor, "Стрелок, иди по дороге вперёд, к северному корпусу, ищи у дороги заваленный вход в катакомбы. Как подойдёшь, я тебе проход открою.", nil, nil, 30000) 
+    news_manager.send_tip(db.actor, "РЎС‚СЂРµР»РѕРє, РёРґРё РїРѕ РґРѕСЂРѕРіРµ РІРїРµСЂС‘Рґ, Рє СЃРµРІРµСЂРЅРѕРјСѓ РєРѕСЂРїСѓСЃСѓ, РёС‰Рё Сѓ РґРѕСЂРѕРіРё Р·Р°РІР°Р»РµРЅРЅС‹Р№ РІС…РѕРґ РІ РєР°С‚Р°РєРѕРјР±С‹. РљР°Рє РїРѕРґРѕР№РґС‘С€СЊ, СЏ С‚РµР±Рµ РїСЂРѕС…РѕРґ РѕС‚РєСЂРѕСЋ.", nil, nil, 30000) 
 end
 
 function sms_graf()
   db.actor:give_info_portion("graf_talk")
-    news_manager.send_tip(db.actor, "Стрелок, это Граф, зайди ко мне, дело есть.", nil, nil, 30000) 
+    news_manager.send_tip(db.actor, "РЎС‚СЂРµР»РѕРє, СЌС‚Рѕ Р“СЂР°С„, Р·Р°Р№РґРё РєРѕ РјРЅРµ, РґРµР»Рѕ РµСЃС‚СЊ.", nil, nil, 30000) 
 end
 
 function sms_klyak()
   db.actor:give_info_portion("klyak_talk")
-    news_manager.send_tip(db.actor, "Стрелок, это Клык, зайди ко мне, есть новости для тебя.", nil, nil, 30000) 
+    news_manager.send_tip(db.actor, "РЎС‚СЂРµР»РѕРє, СЌС‚Рѕ РљР»С‹Рє, Р·Р°Р№РґРё РєРѕ РјРЅРµ, РµСЃС‚СЊ РЅРѕРІРѕСЃС‚Рё РґР»СЏ С‚РµР±СЏ.", nil, nil, 30000) 
 end
 
 function sms_vozvrat()
   db.actor:give_info_portion("vozvrat_talk")
-    news_manager.send_tip(db.actor, "Стрелок, это Призрак, зайди ко мне, насчёт твоих вещей.", nil, nil, 30000) 
+    news_manager.send_tip(db.actor, "РЎС‚СЂРµР»РѕРє, СЌС‚Рѕ РџСЂРёР·СЂР°Рє, Р·Р°Р№РґРё РєРѕ РјРЅРµ, РЅР°СЃС‡С‘С‚ С‚РІРѕРёС… РІРµС‰РµР№.", nil, nil, 30000) 
 end
 
 function sms_solomon()
   db.actor:give_info_portion("info_amk_recipt_shkura")
-news_manager.send_tip(db.actor, "Спасибо тебе Стрелок, я своё слово тоже держу. С уважением, Соломон.", nil, nil, 30000) 
+news_manager.send_tip(db.actor, "РЎРїР°СЃРёР±Рѕ С‚РµР±Рµ РЎС‚СЂРµР»РѕРє, СЏ СЃРІРѕС‘ СЃР»РѕРІРѕ С‚РѕР¶Рµ РґРµСЂР¶Сѓ. РЎ СѓРІР°Р¶РµРЅРёРµРј, РЎРѕР»РѕРјРѕРЅ.", nil, nil, 30000) 
 end
 
 function mervin_vyrubaet()
@@ -1005,7 +1005,7 @@ local obj = alife():create("solomon_mono5",vector():set(-3.7105083465576,4.10073
 end
 
 function prip_atp_spawn()
-      -- создается переход с ПРИПЯТИ НА БОЛОТА
+      -- СЃРѕР·РґР°РµС‚СЃСЏ РїРµСЂРµС…РѕРґ СЃ РџР РРџРЇРўР РќРђ Р‘РћР›РћРўРђ
 	if (not has_alife_info(	"info_prip_atp" )) then
 level_new.create_level_changer(31980, vector():set( -33.3158,-2.4126,-184.56288 ),65184, 2134,
         1778027,
@@ -1022,7 +1022,7 @@ function set_metka1()
   local obj = alife():object(a)
   if obj then
    if obj:section_name()=="aes_case1" then
-    amk.add_spot_on_map(obj.id,"crlc_big","КЕЙС №1")
+    amk.add_spot_on_map(obj.id,"crlc_big","РљР•Р™РЎ в„–1")
     return
    end
   end
@@ -1034,7 +1034,7 @@ function set_metka2()
   local obj = alife():object(a)
   if obj then
    if obj:section_name()=="aes_case2" then
-    amk.add_spot_on_map(obj.id,"crlc_big","КЕЙС №2")
+    amk.add_spot_on_map(obj.id,"crlc_big","РљР•Р™РЎ в„–2")
     return
    end
   end
@@ -1046,7 +1046,7 @@ function set_metka3()
   local obj = alife():object(a)
   if obj then
    if obj:section_name()=="aes_case33" then
-    amk.add_spot_on_map(obj.id,"crlc_big","КЕЙС №3")
+    amk.add_spot_on_map(obj.id,"crlc_big","РљР•Р™РЎ в„–3")
     return
    end
   end
@@ -1274,7 +1274,7 @@ relation_registry.set_community_goodwill ("monolith", "actor", -5000)
 end
 
 ----------
--- чтение формы из нет-пакета
+-- С‡С‚РµРЅРёРµ С„РѕСЂРјС‹ РёР· РЅРµС‚-РїР°РєРµС‚Р°
 ----------
 function r_shape(packet)
 	local s
@@ -1299,7 +1299,7 @@ function r_shape(packet)
 end
 
 ----------
--- запись формы в нет-пакет
+-- Р·Р°РїРёСЃСЊ С„РѕСЂРјС‹ РІ РЅРµС‚-РїР°РєРµС‚
 ----------
 function w_shape(packet, st)
 	local s
@@ -1320,7 +1320,7 @@ function w_shape(packet, st)
 end
 
 ----------
--- перепаковка нет-пакета созданного скриптом рестрикта
+-- РїРµСЂРµРїР°РєРѕРІРєР° РЅРµС‚-РїР°РєРµС‚Р° СЃРѕР·РґР°РЅРЅРѕРіРѕ СЃРєСЂРёРїС‚РѕРј СЂРµСЃС‚СЂРёРєС‚Р°
 ----------
 function rewrite_restrictor(se_obj, custom, radius)
 	local packet = net_packet()
@@ -1460,7 +1460,7 @@ function bratva_zlitsa(actor, npc)
 	   braad_test.friendbratva()
 	   db.actor:disable_info_portion("bratva_spokoina")
 	end
-   news_manager.send_tip(db.actor, "Вы вышли за территорию бара", nil, nil, 30000)	
+   news_manager.send_tip(db.actor, "Р’С‹ РІС‹С€Р»Рё Р·Р° С‚РµСЂСЂРёС‚РѕСЂРёСЋ Р±Р°СЂР°", nil, nil, 30000)	
 end
 
 function winchester_knyaz()
@@ -1521,12 +1521,12 @@ end
 
 function actor_na_mest()
   db.actor:give_info_portion("sveeblov_predatel_begin")
-news_manager.send_tip(db.actor, "Ты на месте, не стрелять, дам сигнал. И не попадайся ему на глаза", nil, nil, 30000) 
+news_manager.send_tip(db.actor, "РўС‹ РЅР° РјРµСЃС‚Рµ, РЅРµ СЃС‚СЂРµР»СЏС‚СЊ, РґР°Рј СЃРёРіРЅР°Р». Р РЅРµ РїРѕРїР°РґР°Р№СЃСЏ РµРјСѓ РЅР° РіР»Р°Р·Р°", nil, nil, 30000) 
 end
 
 function fedya_na_mest()
   db.actor:give_info_portion("fedya_razboinik_est")
-news_manager.send_tip(db.actor, "Попался, вали его!!!", nil, nil, 30000) 
+news_manager.send_tip(db.actor, "РџРѕРїР°Р»СЃСЏ, РІР°Р»Рё РµРіРѕ!!!", nil, nil, 30000) 
 end
 
 function voronin_help()
@@ -1559,7 +1559,7 @@ local snd_obj = xr_sound.get_safe_sound_object([[characters_voice\scenario\bar\d
    snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
    db.actor:give_info_portion("dolg_leader_help_start")   
    end
-news_manager.send_tip(db.actor, "Это Генерал Воронин. Сталкер, выручай, на нашу базу напали бандиты", nil, nil, 30000) 
+news_manager.send_tip(db.actor, "Р­С‚Рѕ Р“РµРЅРµСЂР°Р» Р’РѕСЂРѕРЅРёРЅ. РЎС‚Р°Р»РєРµСЂ, РІС‹СЂСѓС‡Р°Р№, РЅР° РЅР°С€Сѓ Р±Р°Р·Сѓ РЅР°РїР°Р»Рё Р±Р°РЅРґРёС‚С‹", nil, nil, 30000) 
 end
 
 function frienddolg(community1, community2)
@@ -1639,7 +1639,7 @@ function set_metka_ucen()
   local obj = alife():object(a)
   if obj then
    if obj:section_name()=="new_plan" then
-    amk.add_spot_on_map(obj.id,"red_location","МЕШОК ДЛЯ КНЯЗЯ")
+    amk.add_spot_on_map(obj.id,"red_location","РњР•РЁРћРљ Р”Р›РЇ РљРќРЇР—РЇ")
     return
    end
   end
@@ -1671,7 +1671,7 @@ function checks_item(item)
 end
 --------------------------------------------new_check-------------------------------------------
 
-function check_weapon() --функция проверки слотов на наличие оружия
+function check_weapon() --С„СѓРЅРєС†РёСЏ РїСЂРѕРІРµСЂРєРё СЃР»РѕС‚РѕРІ РЅР° РЅР°Р»РёС‡РёРµ РѕСЂСѓР¶РёСЏ
      if db.actor and db.actor:has_info("agro_varayg_one_start") 
        and not db.actor:has_info("agro_varayg_four_done") then 
           local slot = db.actor:active_slot()
@@ -1685,7 +1685,7 @@ end
 
 function seredina_est()
   db.actor:give_info_portion("agro_varayg_seredina_krug")
---    news_manager.send_tip(db.actor, "Всё, возвращайся давай", nil, nil, 30000) 
+--    news_manager.send_tip(db.actor, "Р’СЃС‘, РІРѕР·РІСЂР°С‰Р°Р№СЃСЏ РґР°РІР°Р№", nil, nil, 30000) 
 end
 
 function krugone_spawn()
@@ -1784,7 +1784,7 @@ for a=1,65534 do
   local obj = level.object_by_id(a)
     if obj then
        if obj:section()=="electro_chimera" then
-	   amk.add_spot_on_map(obj.id,"blue_location","Лысая химера") 
+	   amk.add_spot_on_map(obj.id,"blue_location","Р›С‹СЃР°СЏ С…РёРјРµСЂР°") 
 		  end
        end
    end
@@ -1795,7 +1795,7 @@ for a=1,65534 do
    local obj = alife():object(a) 
        if obj then
           if obj and obj:name() == "electro_chimera_ucen" then 
-            amk.add_spot_on_map(obj.id,"blue_location","Лысая химера") 
+            amk.add_spot_on_map(obj.id,"blue_location","Р›С‹СЃР°СЏ С…РёРјРµСЂР°") 
 		  end
        end
    end
@@ -1806,7 +1806,7 @@ for a=1,65534 do
    local obj = alife():object(a) 
        if obj then
           if obj and obj:name() == "gigant_strong_ucen" then 
-            amk.add_spot_on_map(obj.id,"blue_location","Псевдогигант") 
+            amk.add_spot_on_map(obj.id,"blue_location","РџСЃРµРІРґРѕРіРёРіР°РЅС‚") 
 		  end
        end
    end
@@ -1817,7 +1817,7 @@ for a=1,65534 do
    local obj = alife():object(a) 
        if obj then
           if obj and obj:name() == "bloodsucker_strong_ucen" then 
-            amk.add_spot_on_map(obj.id,"blue_location","Кровосос") 
+            amk.add_spot_on_map(obj.id,"blue_location","РљСЂРѕРІРѕСЃРѕСЃ") 
 		  end
        end
    end
@@ -1826,19 +1826,19 @@ end
 function chimera_est()
   db.actor:give_info_portion("ucen_need_metka_chimera_have")
     set_chimera_ucen()
-    news_manager.send_tip(db.actor, "Молодец, Стрелок, с химерой Вы справились успешно", nil, nil, 30000) 
+    news_manager.send_tip(db.actor, "РњРѕР»РѕРґРµС†, РЎС‚СЂРµР»РѕРє, СЃ С…РёРјРµСЂРѕР№ Р’С‹ СЃРїСЂР°РІРёР»РёСЃСЊ СѓСЃРїРµС€РЅРѕ", nil, nil, 30000) 
 end
 
 function gigant_est()
   db.actor:give_info_portion("ucen_need_metka_gigant_have")
     set_gigant_ucen()
-    news_manager.send_tip(db.actor, "Молодец, Стрелок, с псевдогигантом Вы справились успешно", nil, nil, 30000) 
+    news_manager.send_tip(db.actor, "РњРѕР»РѕРґРµС†, РЎС‚СЂРµР»РѕРє, СЃ РїСЃРµРІРґРѕРіРёРіР°РЅС‚РѕРј Р’С‹ СЃРїСЂР°РІРёР»РёСЃСЊ СѓСЃРїРµС€РЅРѕ", nil, nil, 30000) 
 end
 
 function bloodsucker_est()
   db.actor:give_info_portion("ucen_need_metka_bloodsucker_have")
     set_bloodsucker_ucen()
-    news_manager.send_tip(db.actor, "Молодец, Стрелок, с кровососом Вы справились успешно", nil, nil, 30000) 
+    news_manager.send_tip(db.actor, "РњРѕР»РѕРґРµС†, РЎС‚СЂРµР»РѕРє, СЃ РєСЂРѕРІРѕСЃРѕСЃРѕРј Р’С‹ СЃРїСЂР°РІРёР»РёСЃСЊ СѓСЃРїРµС€РЅРѕ", nil, nil, 30000) 
 end
 
 function controler_zasada()
@@ -1881,7 +1881,7 @@ function naem_sahar_spawn()
    end
 yan_wound_ucen()
 ecolog_new()
-   news_manager.send_tip(db.actor, "Это Дэн, они на холме: учёные чуть левее, а справа вояки. Лезь на крышу, оттуда лучше видно.", nil, nil, 30000) 
+   news_manager.send_tip(db.actor, "Р­С‚Рѕ Р”СЌРЅ, РѕРЅРё РЅР° С…РѕР»РјРµ: СѓС‡С‘РЅС‹Рµ С‡СѓС‚СЊ Р»РµРІРµРµ, Р° СЃРїСЂР°РІР° РІРѕСЏРєРё. Р›РµР·СЊ РЅР° РєСЂС‹С€Сѓ, РѕС‚С‚СѓРґР° Р»СѓС‡С€Рµ РІРёРґРЅРѕ.", nil, nil, 30000) 
 end
 
 function nychka_spawn()
@@ -1917,7 +1917,7 @@ function set_spot_ban()
   local obj = alife():object(a)
   if obj then
    if obj:section_name()=="flash_ban" then
-    amk.add_spot_on_map(obj.id,"blue_location","Нычка бандитов")
+    amk.add_spot_on_map(obj.id,"blue_location","РќС‹С‡РєР° Р±Р°РЅРґРёС‚РѕРІ")
     return
    end
   end
@@ -1948,7 +1948,7 @@ function set_community_jila(actor, npc)
 	db.actor:set_character_community("stalker", 0, 0)
 end
 
-------------------------------------------------------------------------------------------------------------------------------------------------------СПАВН АРТОВ-------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------РЎРџРђР’Рќ РђР РўРћР’-------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------
 function check_caterpillar_new()
    if inventory.belt["detector_kruglov"]~=nil and inventory.belt["detector_kruglov"]>0 then 
@@ -1960,7 +1960,7 @@ position.z = position.z
 local obj = alife():create("af_caterpillar_new",
 			position, db.actor:level_vertex_id(), db.actor:game_vertex_id())
 		db.actor:give_info_portion("kruglov_art_spawn")
-    news_manager.send_tip(db.actor, "обнаружен артефакт", nil, nil, 30000)  
+    news_manager.send_tip(db.actor, "РѕР±РЅР°СЂСѓР¶РµРЅ Р°СЂС‚РµС„Р°РєС‚", nil, nil, 30000)  
        end	
     end
 end
@@ -1975,7 +1975,7 @@ position.z = position.z
 local obj = alife():create("af_caterpillar",
 			position, db.actor:level_vertex_id(), db.actor:game_vertex_id())
 		db.actor:give_info_portion("spawn_caterpillar_info1")
-    news_manager.send_tip(db.actor, "обнаружен артефакт", nil, nil, 30000)  
+    news_manager.send_tip(db.actor, "РѕР±РЅР°СЂСѓР¶РµРЅ Р°СЂС‚РµС„Р°РєС‚", nil, nil, 30000)  
        end	
     end
 end
@@ -1990,7 +1990,7 @@ position.z = position.z
 local obj = alife():create("af_caterpillar",
 			position, db.actor:level_vertex_id(), db.actor:game_vertex_id())
 		db.actor:give_info_portion("spawn_caterpillar_info2")
-    news_manager.send_tip(db.actor, "обнаружен артефакт", nil, nil, 30000)  
+    news_manager.send_tip(db.actor, "РѕР±РЅР°СЂСѓР¶РµРЅ Р°СЂС‚РµС„Р°РєС‚", nil, nil, 30000)  
        end	
     end
 end
@@ -2005,7 +2005,7 @@ position.z = position.z
 local obj = alife():create("af_caterpillar",
 			position, db.actor:level_vertex_id(), db.actor:game_vertex_id())
 		db.actor:give_info_portion("spawn_caterpillar_info3")
-    news_manager.send_tip(db.actor, "обнаружен артефакт", nil, nil, 30000)  
+    news_manager.send_tip(db.actor, "РѕР±РЅР°СЂСѓР¶РµРЅ Р°СЂС‚РµС„Р°РєС‚", nil, nil, 30000)  
        end	
     end
 end
@@ -2020,7 +2020,7 @@ position.z = position.z
 local obj = alife():create("af_caterpillar",
 			position, db.actor:level_vertex_id(), db.actor:game_vertex_id())
 		db.actor:give_info_portion("spawn_caterpillar_info4")
-    news_manager.send_tip(db.actor, "обнаружен артефакт", nil, nil, 30000)  
+    news_manager.send_tip(db.actor, "РѕР±РЅР°СЂСѓР¶РµРЅ Р°СЂС‚РµС„Р°РєС‚", nil, nil, 30000)  
        end	
     end
 end
@@ -2035,7 +2035,7 @@ position.z = position.z
 local obj = alife():create("af_caterpillar",
 			position, db.actor:level_vertex_id(), db.actor:game_vertex_id())
 		db.actor:give_info_portion("spawn_caterpillar_info5")
-    news_manager.send_tip(db.actor, "обнаружен артефакт", nil, nil, 30000)  
+    news_manager.send_tip(db.actor, "РѕР±РЅР°СЂСѓР¶РµРЅ Р°СЂС‚РµС„Р°РєС‚", nil, nil, 30000)  
        end	
     end
 end
@@ -2050,7 +2050,7 @@ position.z = position.z
 local obj = alife():create("af_caterpillar",
 			position, db.actor:level_vertex_id(), db.actor:game_vertex_id())
 		db.actor:give_info_portion("spawn_caterpillar_info6")
-    news_manager.send_tip(db.actor, "обнаружен артефакт", nil, nil, 30000)  
+    news_manager.send_tip(db.actor, "РѕР±РЅР°СЂСѓР¶РµРЅ Р°СЂС‚РµС„Р°РєС‚", nil, nil, 30000)  
        end	
     end
 end
@@ -2065,7 +2065,7 @@ position.z = position.z
 local obj = alife():create("af_caterpillar",
 			position, db.actor:level_vertex_id(), db.actor:game_vertex_id())
 		db.actor:give_info_portion("spawn_caterpillar_info7")
-   news_manager.send_tip(db.actor, "обнаружен артефакт", nil, nil, 30000)  
+   news_manager.send_tip(db.actor, "РѕР±РЅР°СЂСѓР¶РµРЅ Р°СЂС‚РµС„Р°РєС‚", nil, nil, 30000)  
        end	
     end
 end
@@ -2080,7 +2080,7 @@ position.z = position.z
 local obj = alife():create("af_caterpillar",
 			position, db.actor:level_vertex_id(), db.actor:game_vertex_id())
 		db.actor:give_info_portion("spawn_caterpillar_info8")
-    news_manager.send_tip(db.actor, "обнаружен артефакт", nil, nil, 30000)  
+    news_manager.send_tip(db.actor, "РѕР±РЅР°СЂСѓР¶РµРЅ Р°СЂС‚РµС„Р°РєС‚", nil, nil, 30000)  
        end	
     end
 end
@@ -2095,7 +2095,7 @@ position.z = position.z
 local obj = alife():create("af_caterpillar",
 			position, db.actor:level_vertex_id(), db.actor:game_vertex_id())
 		db.actor:give_info_portion("spawn_caterpillar_info9")
-    news_manager.send_tip(db.actor, "обнаружен артефакт", nil, nil, 30000)  
+    news_manager.send_tip(db.actor, "РѕР±РЅР°СЂСѓР¶РµРЅ Р°СЂС‚РµС„Р°РєС‚", nil, nil, 30000)  
        end	
     end
 end
@@ -2110,7 +2110,7 @@ position.z = position.z
 local obj = alife():create("af_caterpillar",
 			position, db.actor:level_vertex_id(), db.actor:game_vertex_id())
 		db.actor:give_info_portion("spawn_caterpillar_info10")
-    news_manager.send_tip(db.actor, "обнаружен артефакт", nil, nil, 30000)  
+    news_manager.send_tip(db.actor, "РѕР±РЅР°СЂСѓР¶РµРЅ Р°СЂС‚РµС„Р°РєС‚", nil, nil, 30000)  
        end	
     end
 end
@@ -2125,7 +2125,7 @@ position.z = position.z
 local obj = alife():create("af_caterpillar",
 			position, db.actor:level_vertex_id(), db.actor:game_vertex_id())
 		db.actor:give_info_portion("spawn_caterpillar_info11")
-    news_manager.send_tip(db.actor, "обнаружен артефакт", nil, nil, 30000)  
+    news_manager.send_tip(db.actor, "РѕР±РЅР°СЂСѓР¶РµРЅ Р°СЂС‚РµС„Р°РєС‚", nil, nil, 30000)  
        end	
     end
 end
@@ -2140,7 +2140,7 @@ position.z = position.z
 local obj = alife():create("af_caterpillar",
 			position, db.actor:level_vertex_id(), db.actor:game_vertex_id())
 		db.actor:give_info_portion("spawn_caterpillar_info12")
-    news_manager.send_tip(db.actor, "обнаружен артефакт", nil, nil, 30000)  
+    news_manager.send_tip(db.actor, "РѕР±РЅР°СЂСѓР¶РµРЅ Р°СЂС‚РµС„Р°РєС‚", nil, nil, 30000)  
        end	
     end
 end
@@ -2155,7 +2155,7 @@ position.z = position.z
 local obj = alife():create("af_caterpillar",
 			position, db.actor:level_vertex_id(), db.actor:game_vertex_id())
 		db.actor:give_info_portion("spawn_caterpillar_info13")
-    news_manager.send_tip(db.actor, "обнаружен артефакт", nil, nil, 30000)  
+    news_manager.send_tip(db.actor, "РѕР±РЅР°СЂСѓР¶РµРЅ Р°СЂС‚РµС„Р°РєС‚", nil, nil, 30000)  
        end	
     end
 end
@@ -2170,7 +2170,7 @@ position.z = position.z
 local obj = alife():create("af_caterpillar",
 			position, db.actor:level_vertex_id(), db.actor:game_vertex_id())
 		db.actor:give_info_portion("spawn_caterpillar_info14")
-    news_manager.send_tip(db.actor, "обнаружен артефакт", nil, nil, 30000)  
+    news_manager.send_tip(db.actor, "РѕР±РЅР°СЂСѓР¶РµРЅ Р°СЂС‚РµС„Р°РєС‚", nil, nil, 30000)  
        end	
     end
 end
@@ -2185,7 +2185,7 @@ position.z = position.z
 local obj = alife():create("af_caterpillar",
 			position, db.actor:level_vertex_id(), db.actor:game_vertex_id())
 		db.actor:give_info_portion("spawn_caterpillar_info15")
-    news_manager.send_tip(db.actor, "обнаружен артефакт", nil, nil, 30000)  
+    news_manager.send_tip(db.actor, "РѕР±РЅР°СЂСѓР¶РµРЅ Р°СЂС‚РµС„Р°РєС‚", nil, nil, 30000)  
        end	
     end
 end
@@ -2200,7 +2200,7 @@ position.z = position.z
 local obj = alife():create("af_caterpillar",
 			position, db.actor:level_vertex_id(), db.actor:game_vertex_id())
 		db.actor:give_info_portion("spawn_caterpillar_info16")
-    news_manager.send_tip(db.actor, "обнаружен артефакт", nil, nil, 30000)  
+    news_manager.send_tip(db.actor, "РѕР±РЅР°СЂСѓР¶РµРЅ Р°СЂС‚РµС„Р°РєС‚", nil, nil, 30000)  
        end	
     end
 end
@@ -2215,7 +2215,7 @@ position.z = position.z
 local obj = alife():create("af_caterpillar",
 			position, db.actor:level_vertex_id(), db.actor:game_vertex_id())
 		db.actor:give_info_portion("spawn_caterpillar_info17")
-    news_manager.send_tip(db.actor, "обнаружен артефакт", nil, nil, 30000)  
+    news_manager.send_tip(db.actor, "РѕР±РЅР°СЂСѓР¶РµРЅ Р°СЂС‚РµС„Р°РєС‚", nil, nil, 30000)  
        end	
     end
 end
@@ -2230,7 +2230,7 @@ position.z = position.z
 local obj = alife():create("af_caterpillar",
 			position, db.actor:level_vertex_id(), db.actor:game_vertex_id())
 		db.actor:give_info_portion("spawn_caterpillar_info18")
-    news_manager.send_tip(db.actor, "обнаружен артефакт", nil, nil, 30000)  
+    news_manager.send_tip(db.actor, "РѕР±РЅР°СЂСѓР¶РµРЅ Р°СЂС‚РµС„Р°РєС‚", nil, nil, 30000)  
        end	
     end
 end
@@ -2245,7 +2245,7 @@ position.z = position.z
 local obj = alife():create("af_caterpillar",
 			position, db.actor:level_vertex_id(), db.actor:game_vertex_id())
 		db.actor:give_info_portion("spawn_caterpillar_info19")
-    news_manager.send_tip(db.actor, "обнаружен артефакт", nil, nil, 30000)  
+    news_manager.send_tip(db.actor, "РѕР±РЅР°СЂСѓР¶РµРЅ Р°СЂС‚РµС„Р°РєС‚", nil, nil, 30000)  
        end	
     end
 end
@@ -2260,11 +2260,11 @@ position.z = position.z
 local obj = alife():create("af_caterpillar",
 			position, db.actor:level_vertex_id(), db.actor:game_vertex_id())
 		db.actor:give_info_portion("spawn_caterpillar_info20")
-    news_manager.send_tip(db.actor, "обнаружен артефакт", nil, nil, 30000)  
+    news_manager.send_tip(db.actor, "РѕР±РЅР°СЂСѓР¶РµРЅ Р°СЂС‚РµС„Р°РєС‚", nil, nil, 30000)  
        end	
     end
 end
-----------------------------------------------------------------------------------------------------------------------------------------------------СПАВН АРТОВ-------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------РЎРџРђР’Рќ РђР РўРћР’-------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------
 function contr_art_spawn()
    if level.name()=="l03_agroprom" and not db.actor:has_info("kruglov_art_contr") then
@@ -2300,7 +2300,7 @@ function set_volk_tainik()
   local obj = alife():object(a)
   if obj then
    if obj:section_name()=="volk_pda" then
-    amk.add_spot_on_map(obj.id,"blue_location","Нычка Волка")
+    amk.add_spot_on_map(obj.id,"blue_location","РќС‹С‡РєР° Р’РѕР»РєР°")
     return
    end
   end
@@ -2321,7 +2321,7 @@ end
 
 function knyaz_razborka()
   db.actor:give_info_portion("krest_razborka_speech")
-news_manager.send_tip(db.actor,"На месте? Жди, мало ли что, я этим Чеховским не верю. Креста береги.", nil, nil, 30000) 
+news_manager.send_tip(db.actor,"РќР° РјРµСЃС‚Рµ? Р–РґРё, РјР°Р»Рѕ Р»Рё С‡С‚Рѕ, СЏ СЌС‚РёРј Р§РµС…РѕРІСЃРєРёРј РЅРµ РІРµСЂСЋ. РљСЂРµСЃС‚Р° Р±РµСЂРµРіРё.", nil, nil, 30000) 
 end
 
 function knyaz_set1()
@@ -2381,7 +2381,7 @@ end
 
 function razborka_begin()
   db.actor:give_info_portion("krest_razborka_speech2")
-news_manager.send_tip(db.actor,"Ммать ты спишь что ли? Наших валят. Креста... Креста береги.", nil, nil, 30000) 
+news_manager.send_tip(db.actor,"РњРјР°С‚СЊ С‚С‹ СЃРїРёС€СЊ С‡С‚Рѕ Р»Рё? РќР°С€РёС… РІР°Р»СЏС‚. РљСЂРµСЃС‚Р°... РљСЂРµСЃС‚Р° Р±РµСЂРµРіРё.", nil, nil, 30000) 
 end
 
 function knyaz_set_nazad1()
@@ -2465,7 +2465,7 @@ end
 
 function sms_sidr()
   db.actor:give_info_portion("mayor_yarofeev_vrag")
-    news_manager.send_tip(db.actor, "Это Бармен, зайди ко мне, дело есть.", nil, nil, 30000) 
+    news_manager.send_tip(db.actor, "Р­С‚Рѕ Р‘Р°СЂРјРµРЅ, Р·Р°Р№РґРё РєРѕ РјРЅРµ, РґРµР»Рѕ РµСЃС‚СЊ.", nil, nil, 30000) 
 end
 
 function sidr_lab_spawn()
@@ -2512,9 +2512,9 @@ local obj = alife():create("mil_naem8",vector():set(-193.74069213867,-12.7184619
   end
 end
 
---НЕ ЗАБУДЬ!!!!
+--РќР• Р—РђР‘РЈР”Р¬!!!!
 function zahar_atp_pripyat()
-      -- создается переход с БОЛОТ В ПРИПЯТЬ
+      -- СЃРѕР·РґР°РµС‚СЃСЏ РїРµСЂРµС…РѕРґ СЃ Р‘РћР›РћРў Р’ РџР РРџРЇРўР¬
 	if (not has_alife_info(	"zahar_atp_pripyat_pereh" )) then
 level_new.create_level_changer(32010, vector():set(290.643,6.939,66.954),1779505,3011,65184,2134,
         vector():set(-33.3158,-2.4126,-184.56288),
@@ -2522,7 +2522,7 @@ level_new.create_level_changer(32010, vector():set(290.643,6.939,66.954),1779505
         db.actor:give_info_portion("zahar_atp_pripyat_pereh")
 	end
 end	
---НЕ ЗАБУДЬ!!!!
+--РќР• Р—РђР‘РЈР”Р¬!!!!
 
 function spawn_ammo_shilo()
              local obj = alife():create("ammo_12x70_buck",vector():set(-254.211,1.375,10.877),8265,1424)
@@ -2617,7 +2617,7 @@ function mina_band(obj)
 	  end
    end
 end
-----------------------------------------------------------РАДИАЦИЯ ARC-----------------------------------------------
+----------------------------------------------------------Р РђР”РРђР¦РРЇ ARC-----------------------------------------------
 local inv_arts_radiation = 0
 
 local time_previous = time_global()
@@ -2634,9 +2634,9 @@ function apply_radiation()
   if time_delta >= time_step then
     local delta_radiation = inv_arts_radiation*math.min(5, time_delta/time_step)
     
-    --прибавляем чуть-чуть радиации от box_black
+    --РїСЂРёР±Р°РІР»СЏРµРј С‡СѓС‚СЊ-С‡СѓС‚СЊ СЂР°РґРёР°С†РёРё РѕС‚ box_black
     if db.actor:object("box_black") then
-      delta_radiation =  delta_radiation + 0.004 -- подобрать экспериментальным путем
+      delta_radiation =  delta_radiation + 0.004 -- РїРѕРґРѕР±СЂР°С‚СЊ СЌРєСЃРїРµСЂРёРјРµРЅС‚Р°Р»СЊРЅС‹Рј РїСѓС‚РµРј
     end
 
     if delta_radiation>0 then
@@ -2677,7 +2677,7 @@ params.sid=30135
 amk.write_stalker_params(params,obj)
 end
 
----------------------------------------------------------РАДИАЦИЯ ARC-----------------------------------------------
+---------------------------------------------------------Р РђР”РРђР¦РРЇ ARC-----------------------------------------------
 
 function kogot_rukzak_spawn()
 local obj = alife():create("prov_ruk",vector():set(142.93045043945,5.8323435783386,-245.087890625),341121,966)
@@ -2716,7 +2716,7 @@ function spawn_military_tech_new(obj, spawn_item)
 	local packet = net_packet()
 	obj:STATE_Write(packet)
 
-	-- свойства cse_alife_object
+	-- СЃРІРѕР№СЃС‚РІР° cse_alife_object
 	local game_vertex_id = packet:r_u16()
 	local cse_alife_object__unk1_f32 = packet:r_float()
 	local cse_alife_object__unk2_s32 = packet:r_s32()
@@ -2726,16 +2726,16 @@ function spawn_military_tech_new(obj, spawn_item)
 	local story_id = packet:r_s32()
 	local cse_alife_object__unk3_s32 = packet:r_s32()
 
-	-- свойства cse_visual
+	-- СЃРІРѕР№СЃС‚РІР° cse_visual
 	local model_visual = packet:r_stringZ()
 	local cse_visual__unk1_u8 = packet:r_u8()
 	local motion_name
 	if spawn_item == "helicopter" or "helicopter1" or "helicopter2"  then
-		-- свойства cse_motion
+		-- СЃРІРѕР№СЃС‚РІР° cse_motion
 		motion_name = packet:r_stringZ()
 	end
 
-	-- свойства cse_ph_skeleton
+	-- СЃРІРѕР№СЃС‚РІР° cse_ph_skeleton
 	local skeleton_name = packet:r_stringZ()
 	local cse_ph_skeleton__unk1_u8 = packet:r_u8()
 	local cse_ph_skeleton__unk2_u16 = packet:r_u16()
@@ -2744,15 +2744,15 @@ function spawn_military_tech_new(obj, spawn_item)
 	local engine_sound 
 		
 	if spawn_item =="helicopter" or  "helicopter1" or "helicopter2"  then
-		-- свойства cse_alife_helicopter
+		-- СЃРІРѕР№СЃС‚РІР° cse_alife_helicopter
 		cse_alife_helicopter__unk1_sz = packet:r_stringZ()
 		engine_sound = packet:r_stringZ()
 	elseif	spawn_item == "vehicle_btr" then
 		health = packet:r_float()
 	end
 	
-	-- теперь заполняем нужные параметры
-	-- свойства cse_alife_object
+	-- С‚РµРїРµСЂСЊ Р·Р°РїРѕР»РЅСЏРµРј РЅСѓР¶РЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹
+	-- СЃРІРѕР№СЃС‚РІР° cse_alife_object
 	packet:w_begin(game_vertex_id)
 	packet:w_float(cse_alife_object__unk1_f32)
 	packet:w_s32(cse_alife_object__unk2_s32)
@@ -2771,7 +2771,7 @@ function spawn_military_tech_new(obj, spawn_item)
 	packet:w_s32(-1)
 	packet:w_s32(cse_alife_object__unk3_s32)
 
-	-- свойства cse_visual
+	-- СЃРІРѕР№СЃС‚РІР° cse_visual
 	packet:w_stringZ(model_visual)
 	packet:w_u8(cse_visual__unk1_u8)
 	
@@ -2779,14 +2779,14 @@ function spawn_military_tech_new(obj, spawn_item)
 		packet:w_stringZ(motion_name)		
 	end 
 	
-	-- свойства cse_ph_skeleton
+	-- СЃРІРѕР№СЃС‚РІР° cse_ph_skeleton
 	skeleton_name = "idle"
 	packet:w_stringZ(skeleton_name)
 	packet:w_u8(cse_ph_skeleton__unk1_u8)
 	packet:w_u16(cse_ph_skeleton__unk2_u16)
 
 	if spawn_item =="helicopter" or  "helicopter1" or "helicopter2"  then
-		-- свойства cse_alife_helicopter
+		-- СЃРІРѕР№СЃС‚РІР° cse_alife_helicopter
 		cse_alife_helicopter__unk1_sz = "idle"
 		engine_sound = "alexmx\\helicopter"
 		packet:w_stringZ(cse_alife_helicopter__unk1_sz)
@@ -2795,11 +2795,11 @@ function spawn_military_tech_new(obj, spawn_item)
 		health = 1
 		packet:w_float(health)
 	end	
-	-- считываем скорректированные параметры
+	-- СЃС‡РёС‚С‹РІР°РµРј СЃРєРѕСЂСЂРµРєС‚РёСЂРѕРІР°РЅРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹
 	packet:r_seek(0)
 	obj:STATE_Read(packet, packet:w_tell())
 	
-news_manager.send_tip(db.actor, "Пипец мужики, Вертолёт", nil, nil, 30000)
+news_manager.send_tip(db.actor, "РџРёРїРµС† РјСѓР¶РёРєРё, Р’РµСЂС‚РѕР»С‘С‚", nil, nil, 30000)
 end
 
 function create_car_restr()
@@ -2869,7 +2869,7 @@ function my_proverka()
   if se_obj then
     alife():release(se_obj, true)
   end
-news_manager.send_tip(db.actor, "Видел химеру возле завода", nil, nil, 30000)
+news_manager.send_tip(db.actor, "Р’РёРґРµР» С…РёРјРµСЂСѓ РІРѕР·Р»Рµ Р·Р°РІРѕРґР°", nil, nil, 30000)
 ucen_electro()
 end
 
@@ -2936,7 +2936,7 @@ end
 
 function prizrak_pda()
   db.actor:give_info_portion("prizrak_about_pda_start")
---  news_manager.send_tip(db.actor, "Всё, возвращайся давай", nil, nil, 30000) 
+--  news_manager.send_tip(db.actor, "Р’СЃС‘, РІРѕР·РІСЂР°С‰Р°Р№СЃСЏ РґР°РІР°Р№", nil, nil, 30000) 
 end
 
 function krest_info()
@@ -2978,7 +2978,7 @@ end
 
 function sms_amulet()
   db.actor:give_info_portion("almaz_talk")
-    news_manager.send_tip(db.actor, "Произошёл процесс катализации шести порядковых Амулетов в Амулет-абсолют", nil, nil, 30000) 
+    news_manager.send_tip(db.actor, "РџСЂРѕРёР·РѕС€С‘Р» РїСЂРѕС†РµСЃСЃ РєР°С‚Р°Р»РёР·Р°С†РёРё С€РµСЃС‚Рё РїРѕСЂСЏРґРєРѕРІС‹С… РђРјСѓР»РµС‚РѕРІ РІ РђРјСѓР»РµС‚-Р°Р±СЃРѕР»СЋС‚", nil, nil, 30000) 
 end
 
 function amulet_effect()
@@ -3004,7 +3004,7 @@ function set_povodyr()
   local obj = alife():object(a)
   if obj then
    if obj:section_name()=="dog_povodyr" then
-    amk.add_spot_on_map(obj.id,"blue_location","Поводырь")
+    amk.add_spot_on_map(obj.id,"blue_location","РџРѕРІРѕРґС‹СЂСЊ")
     return
    end
   end

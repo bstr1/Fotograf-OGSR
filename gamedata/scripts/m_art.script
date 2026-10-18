@@ -1,12 +1,12 @@
 --[[ -----------------------------------------------------------------------------------------------
  File       : m_art.script
- Description: таймер спавна и удаления артефакта
- Copyright  : 2010 © Erlik
+ Description: С‚Р°Р№РјРµСЂ СЃРїР°РІРЅР° Рё СѓРґР°Р»РµРЅРёСЏ Р°СЂС‚РµС„Р°РєС‚Р°
+ Copyright  : 2010 В© Erlik
  Author     : Erlik(aka Garry_Galler)
  Last edit  : 19.01.2011 
 --]] -----------------------------------------------------------------------------------------------
 
---*****************************СЛУЖЕБНЫЕ ФУНКЦИИ*************************************
+--*****************************РЎР›РЈР–Р•Р‘РќР«Р• Р¤РЈРќРљР¦РР*************************************
 local console = false
 local send    = false
 
@@ -24,17 +24,17 @@ function Console(fmt, ...)
    end
 end
 
---//--служебная функция для получения отформатированой строки  игровой даты или  игрового времени
+--//--СЃР»СѓР¶РµР±РЅР°СЏ С„СѓРЅРєС†РёСЏ РґР»СЏ РїРѕР»СѓС‡РµРЅРёСЏ РѕС‚С„РѕСЂРјР°С‚РёСЂРѕРІР°РЅРѕР№ СЃС‚СЂРѕРєРё  РёРіСЂРѕРІРѕР№ РґР°С‚С‹ РёР»Рё  РёРіСЂРѕРІРѕРіРѕ РІСЂРµРјРµРЅРё
  function GetTimeOrDate(arg)
- -- передаем аргументы из числа  "Y", "M", "D", h"", "m", "s", "ms" - по одной штуке - смотря какое значение  текущего игрового времени или даты  хотим получить
+ -- РїРµСЂРµРґР°РµРј Р°СЂРіСѓРјРµРЅС‚С‹ РёР· С‡РёСЃР»Р°  "Y", "M", "D", h"", "m", "s", "ms" - РїРѕ РѕРґРЅРѕР№ С€С‚СѓРєРµ - СЃРјРѕС‚СЂСЏ РєР°РєРѕРµ Р·РЅР°С‡РµРЅРёРµ  С‚РµРєСѓС‰РµРіРѕ РёРіСЂРѕРІРѕРіРѕ РІСЂРµРјРµРЅРё РёР»Рё РґР°С‚С‹  С…РѕС‚РёРј РїРѕР»СѓС‡РёС‚СЊ
  local  t = {
- ["Y"] = game.CTime.DateToYear,      --/  2012                  год      
- ["M"] = game.CTime.DateToMonth,     --/    01/2012           месяц
- ["D"] = game.CTime.DateToDay,       --/   01/01/2012    день \месяц\год 
- ["h"] = game.CTime.TimeToHours,     --/   23                    час
- ["m"] = game.CTime.TimeToMinutes,   --/   23:59               часы\минуты
- ["s"] = game.CTime.TimeToSeconds,   --/   23:59:59         часы\минуты\секунды
- ["ms"]= game.CTime.TimeToMilisecs } --/ 23:59:59:999   часы\минуты\секунды\миллисекунды
+ ["Y"] = game.CTime.DateToYear,      --/  2012                  РіРѕРґ      
+ ["M"] = game.CTime.DateToMonth,     --/    01/2012           РјРµСЃСЏС†
+ ["D"] = game.CTime.DateToDay,       --/   01/01/2012    РґРµРЅСЊ \РјРµСЃСЏС†\РіРѕРґ 
+ ["h"] = game.CTime.TimeToHours,     --/   23                    С‡Р°СЃ
+ ["m"] = game.CTime.TimeToMinutes,   --/   23:59               С‡Р°СЃС‹\РјРёРЅСѓС‚С‹
+ ["s"] = game.CTime.TimeToSeconds,   --/   23:59:59         С‡Р°СЃС‹\РјРёРЅСѓС‚С‹\СЃРµРєСѓРЅРґС‹
+ ["ms"]= game.CTime.TimeToMilisecs } --/ 23:59:59:999   С‡Р°СЃС‹\РјРёРЅСѓС‚С‹\СЃРµРєСѓРЅРґС‹\РјРёР»Р»РёСЃРµРєСѓРЅРґС‹
     if t[arg] then
         if arg ==string.lower(arg) then
          return game.get_game_time():timeToString(t[arg])
@@ -48,7 +48,7 @@ end
 
 
 local Calend={31,60,91,121,152,182,213,244,274,305,335}
---// функция сло сравнения дат и получения разницы между ними
+--// С„СѓРЅРєС†РёСЏ СЃР»Рѕ СЃСЂР°РІРЅРµРЅРёСЏ РґР°С‚ Рё РїРѕР»СѓС‡РµРЅРёСЏ СЂР°Р·РЅРёС†С‹ РјРµР¶РґСѓ РЅРёРјРё
 function CompareDate(date_1, date_2)
 local change
    if not date_1 or not date_2 then
@@ -63,9 +63,9 @@ local change
         return tonumber(m2)-tonumber(m)
         end
 
-        if Compare()==0 then  -- если месяц тот же, то просто вычитаем
+        if Compare()==0 then  -- РµСЃР»Рё РјРµСЃСЏС† С‚РѕС‚ Р¶Рµ, С‚Рѕ РїСЂРѕСЃС‚Рѕ РІС‹С‡РёС‚Р°РµРј
         change = current-old
-        else  -- если уже другой месяц - то получаем разницу в днях из таблицы и корректируем ее с учетом прошедших дней
+        else  -- РµСЃР»Рё СѓР¶Рµ РґСЂСѓРіРѕР№ РјРµСЃСЏС† - С‚Рѕ РїРѕР»СѓС‡Р°РµРј СЂР°Р·РЅРёС†Сѓ РІ РґРЅСЏС… РёР· С‚Р°Р±Р»РёС†С‹ Рё РєРѕСЂСЂРµРєС‚РёСЂСѓРµРј РµРµ СЃ СѓС‡РµС‚РѕРј РїСЂРѕС€РµРґС€РёС… РґРЅРµР№
             if  Calend[Compare()] then  
             change = Calend[Compare()] - tonumber(old)+tonumber(current)
                 else
@@ -98,13 +98,13 @@ end
 --==========================================================================================
 --//variable
 --==========================================================================================
-local sSuperArt   = "sverhprovodnik"                           --// предмет по секции
-local sTimeSpawn  = "01:00"                              --// время спавна
-local sTimeDelete = "02:00"                              --// время удаления
-local iLimitDays  = 3                                    --// ограничение на спавна арт - 3 дня
-local bNeedUpdate = ReadPstor("bNeedUpdate", false)      --// флаг необходимости апдейта
+local sSuperArt   = "sverhprovodnik"                           --// РїСЂРµРґРјРµС‚ РїРѕ СЃРµРєС†РёРё
+local sTimeSpawn  = "01:00"                              --// РІСЂРµРјСЏ СЃРїР°РІРЅР°
+local sTimeDelete = "02:00"                              --// РІСЂРµРјСЏ СѓРґР°Р»РµРЅРёСЏ
+local iLimitDays  = 3                                    --// РѕРіСЂР°РЅРёС‡РµРЅРёРµ РЅР° СЃРїР°РІРЅР° Р°СЂС‚ - 3 РґРЅСЏ
+local bNeedUpdate = ReadPstor("bNeedUpdate", false)      --// С„Р»Р°Рі РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚Рё Р°РїРґРµР№С‚Р°
 
-local tPosSpawn=  --// сюда вписать координаты и вертексы для спавна артефакта
+local tPosSpawn=  --// СЃСЋРґР° РІРїРёСЃР°С‚СЊ РєРѕРѕСЂРґРёРЅР°С‚С‹ Рё РІРµСЂС‚РµРєСЃС‹ РґР»СЏ СЃРїР°РІРЅР° Р°СЂС‚РµС„Р°РєС‚Р°
 {
 x  = 0,
 y  = 0,
@@ -113,28 +113,28 @@ lv = 1,
 gv = 1
 }
 
---// функция для активации спавна артефакта -- запускает апдейт
+--// С„СѓРЅРєС†РёСЏ РґР»СЏ Р°РєС‚РёРІР°С†РёРё СЃРїР°РІРЅР° Р°СЂС‚РµС„Р°РєС‚Р° -- Р·Р°РїСѓСЃРєР°РµС‚ Р°РїРґРµР№С‚
 function StartSpawnArt()
     if ReadPstor("ds")==nil then 
-    WritePstor("ds",GetTimeOrDate("D"))    --// запишем дату спавна
-    bNeedUpdate= true                      -- //разрешим апдейт функции
-	WritePstor("bNeedUpdate", bNeedUpdate) --// запишем флаг необходимости апдейта
-    Console("Дата спавна арта =%s| bNeedUpdate=%s ", ReadPstor("ds"), tostring(bNeedUpdate))
+    WritePstor("ds",GetTimeOrDate("D"))    --// Р·Р°РїРёС€РµРј РґР°С‚Сѓ СЃРїР°РІРЅР°
+    bNeedUpdate= true                      -- //СЂР°Р·СЂРµС€РёРј Р°РїРґРµР№С‚ С„СѓРЅРєС†РёРё
+	WritePstor("bNeedUpdate", bNeedUpdate) --// Р·Р°РїРёС€РµРј С„Р»Р°Рі РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚Рё Р°РїРґРµР№С‚Р°
+    Console("Р”Р°С‚Р° СЃРїР°РІРЅР° Р°СЂС‚Р° =%s| bNeedUpdate=%s ", ReadPstor("ds"), tostring(bNeedUpdate))
    end 
 end 
 
---// проверяем не прошел ли уже срок
+--// РїСЂРѕРІРµСЂСЏРµРј РЅРµ РїСЂРѕС€РµР» Р»Рё СѓР¶Рµ СЃСЂРѕРє
 function CheckData()
    if ReadPstor("ds") and CompareDate(ReadPstor("ds"), GetTimeOrDate("D"))>iLimitDays then
    bNeedUpdate = false
    ClearPstor("ds")
    ClearPstor("bNeedUpdate")
-   SendMessage("Срок закончился. Pstor =%s", ReadPstor("ds"))
+   SendMessage("РЎСЂРѕРє Р·Р°РєРѕРЅС‡РёР»СЃСЏ. Pstor =%s", ReadPstor("ds"))
    end
 end 
 
 --==========================================================================================
---// функция проверки условий для спавна и удаления артефакта  - нужно апдейтить 
+--// С„СѓРЅРєС†РёСЏ РїСЂРѕРІРµСЂРєРё СѓСЃР»РѕРІРёР№ РґР»СЏ СЃРїР°РІРЅР° Рё СѓРґР°Р»РµРЅРёСЏ Р°СЂС‚РµС„Р°РєС‚Р°  - РЅСѓР¶РЅРѕ Р°РїРґРµР№С‚РёС‚СЊ 
 --==========================================================================================
 
 function CheckTimeUpdate()
@@ -144,36 +144,36 @@ function CheckTimeUpdate()
   CheckData()
   
   local sGameTime = GetTimeOrDate("m")
---// если время час ночи - спавним
+--// РµСЃР»Рё РІСЂРµРјСЏ С‡Р°СЃ РЅРѕС‡Рё - СЃРїР°РІРЅРёРј
    if sGameTime ==sTimeSpawn and ReadPstor("iArtId", 0)==0 then
        local obj=alife():create(sSuperArt,vector():set(-268.297,-18.055,-25.109),69438,1683)
-	   --// для теста спавним около ГГ
+	   --// РґР»СЏ С‚РµСЃС‚Р° СЃРїР°РІРЅРёРј РѕРєРѕР»Рѕ Р“Р“
 	   --local obj = alife():create(sSuperArt,db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id())
        WritePstor("iArtId", obj.id)
-	   SendMessage("Артефакт id = %s", obj.id)
+	   SendMessage("РђСЂС‚РµС„Р°РєС‚ id = %s", obj.id)
    end
-  	-- если время 2 ночи и в псторе есть айдишка нашего арта 
+  	-- РµСЃР»Рё РІСЂРµРјСЏ 2 РЅРѕС‡Рё Рё РІ РїСЃС‚РѕСЂРµ РµСЃС‚СЊ Р°Р№РґРёС€РєР° РЅР°С€РµРіРѕ Р°СЂС‚Р° 
    local if_true =  sGameTime ==sTimeDelete and ReadPstor("iArtId")
        if if_true then
-	   SendMessage("Артефакт id =%s ", ReadPstor("iArtId"))
+	   SendMessage("РђСЂС‚РµС„Р°РєС‚ id =%s ", ReadPstor("iArtId"))
        local iArtId = ReadPstor("iArtId")
-       --// проверим есть ли у арта владелец
+       --// РїСЂРѕРІРµСЂРёРј РµСЃС‚СЊ Р»Рё Сѓ Р°СЂС‚Р° РІР»Р°РґРµР»РµС†
        local iArtParentId =alife():object(iArtId) and alife():object(iArtId).parent_id
-	      SendMessage("Артефакт parent_id =%s", tostring(iArtParentId))
-      --// если арт существует и у него есть парент ид
+	      SendMessage("РђСЂС‚РµС„Р°РєС‚ parent_id =%s", tostring(iArtParentId))
+      --// РµСЃР»Рё Р°СЂС‚ СЃСѓС‰РµСЃС‚РІСѓРµС‚ Рё Сѓ РЅРµРіРѕ РµСЃС‚СЊ РїР°СЂРµРЅС‚ РёРґ
        if iArtParentId then 
-	   --// то если айди родителя ничейная 
+	   --// С‚Рѕ РµСЃР»Рё Р°Р№РґРё СЂРѕРґРёС‚РµР»СЏ РЅРёС‡РµР№РЅР°СЏ 
 	         if iArtParentId ==65535 then 
-	   --// удаляем объект и чистим пстор
+	   --// СѓРґР°Р»СЏРµРј РѕР±СЉРµРєС‚ Рё С‡РёСЃС‚РёРј РїСЃС‚РѕСЂ
           alife():release(alife():object(iArtId), true)
 		  ClearPstor("iArtId")
-		  SendMessage("Артефакт не был подобран - удаляем. Pstor=%s", tostring(ReadPstor("iArtId")))
+		  SendMessage("РђСЂС‚РµС„Р°РєС‚ РЅРµ Р±С‹Р» РїРѕРґРѕР±СЂР°РЅ - СѓРґР°Р»СЏРµРј. Pstor=%s", tostring(ReadPstor("iArtId")))
 	          elseif iArtParentId ~=65535 then 
-	         --// если объект подобрали - просто чистим пстор
+	         --// РµСЃР»Рё РѕР±СЉРµРєС‚ РїРѕРґРѕР±СЂР°Р»Рё - РїСЂРѕСЃС‚Рѕ С‡РёСЃС‚РёРј РїСЃС‚РѕСЂ
 	         ClearPstor("iArtId")
-			 SendMessage("Артефакт подобран. Pstor =%s",tostring(ReadPstor("iArtId")))
+			 SendMessage("РђСЂС‚РµС„Р°РєС‚ РїРѕРґРѕР±СЂР°РЅ. Pstor =%s",tostring(ReadPstor("iArtId")))
 			end 
-		else  --// на случай если арт куда то пропал
+		else  --// РЅР° СЃР»СѓС‡Р°Р№ РµСЃР»Рё Р°СЂС‚ РєСѓРґР° С‚Рѕ РїСЂРѕРїР°Р»
 		ClearPstor("iArtId") 
 		end
     end

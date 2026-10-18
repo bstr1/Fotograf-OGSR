@@ -1,34 +1,34 @@
 
 local cparm={
-  tgt_color=0, -- подсветка цели: 0-все одноцветные, 1-по отношению
-  tgt_sign=0, -- значок цели: 0-все одинаковые
-  bal_comp=0, -- баллистический вычислитель: 0 -нет, 1-есть
-  tgt_lock=4, -- количество сопровождаемых целей
-  tgt_view=4, -- количество отображаемых целей
-  tgt_range=300, -- дистанция обраружения
-  snd_new_target=[[detectors\contact_9]] -- звук при обнаружении новой цели
+  tgt_color=0, -- РїРѕРґСЃРІРµС‚РєР° С†РµР»Рё: 0-РІСЃРµ РѕРґРЅРѕС†РІРµС‚РЅС‹Рµ, 1-РїРѕ РѕС‚РЅРѕС€РµРЅРёСЋ
+  tgt_sign=0, -- Р·РЅР°С‡РѕРє С†РµР»Рё: 0-РІСЃРµ РѕРґРёРЅР°РєРѕРІС‹Рµ
+  bal_comp=0, -- Р±Р°Р»Р»РёСЃС‚РёС‡РµСЃРєРёР№ РІС‹С‡РёСЃР»РёС‚РµР»СЊ: 0 -РЅРµС‚, 1-РµСЃС‚СЊ
+  tgt_lock=4, -- РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРѕРїСЂРѕРІРѕР¶РґР°РµРјС‹С… С†РµР»РµР№
+  tgt_view=4, -- РєРѕР»РёС‡РµСЃС‚РІРѕ РѕС‚РѕР±СЂР°Р¶Р°РµРјС‹С… С†РµР»РµР№
+  tgt_range=300, -- РґРёСЃС‚Р°РЅС†РёСЏ РѕР±СЂР°СЂСѓР¶РµРЅРёСЏ
+  snd_new_target=[[detectors\contact_9]] -- Р·РІСѓРє РїСЂРё РѕР±РЅР°СЂСѓР¶РµРЅРёРё РЅРѕРІРѕР№ С†РµР»Рё
 }
 
--- Текущее состояние детектора
-local targets={} -- отображаемые цели и соответствующие hud объекты
+-- РўРµРєСѓС‰РµРµ СЃРѕСЃС‚РѕСЏРЅРёРµ РґРµС‚РµРєС‚РѕСЂР°
+local targets={} -- РѕС‚РѕР±СЂР°Р¶Р°РµРјС‹Рµ С†РµР»Рё Рё СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РёРµ hud РѕР±СЉРµРєС‚С‹
 
 local scantime=0
--- Обновляет прицельные метки
+-- РћР±РЅРѕРІР»СЏРµС‚ РїСЂРёС†РµР»СЊРЅС‹Рµ РјРµС‚РєРё
 function update()
   if amk.is_debug then
     create_restore_hud_items()
-    -- сейчас массив targets инициализирован
+    -- СЃРµР№С‡Р°СЃ РјР°СЃСЃРёРІ targets РёРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°РЅ
     if scantime<time_global() then
       scantime=time_global()+1000
-      scan_targets() -- пересканировать всю живность и возможно обновить targets
+      scan_targets() -- РїРµСЂРµСЃРєР°РЅРёСЂРѕРІР°С‚СЊ РІСЃСЋ Р¶РёРІРЅРѕСЃС‚СЊ Рё РІРѕР·РјРѕР¶РЅРѕ РѕР±РЅРѕРІРёС‚СЊ targets
     end
-    track_targets() -- переместить метки целей и, возможно, выбрать другую цель
+    track_targets() -- РїРµСЂРµРјРµСЃС‚РёС‚СЊ РјРµС‚РєРё С†РµР»РµР№ Рё, РІРѕР·РјРѕР¶РЅРѕ, РІС‹Р±СЂР°С‚СЊ РґСЂСѓРіСѓСЋ С†РµР»СЊ
   end
 end
 
 local distupdtime=0
 
-function threat_comp(i1,i2) -- возвращает true если i1 опаснее i2
+function threat_comp(i1,i2) -- РІРѕР·РІСЂР°С‰Р°РµС‚ true РµСЃР»Рё i1 РѕРїР°СЃРЅРµРµ i2
   return i1.threat>i2.threat
 end
 
@@ -45,7 +45,7 @@ function scan_targets()
     local stalker=IsStalker(obj)
     local monster=IsMonster(obj)
     if (stalker or monster) and obj:alive() then
-      -- радиус-вектор цели
+      -- СЂР°РґРёСѓСЃ-РІРµРєС‚РѕСЂ С†РµР»Рё
       local r=obj:position():sub(cpos)
       local dp=r:dotproduct(cdir)
       if r:magnitude()<cparm.tgt_range and id~=db.actor:id() then
@@ -85,21 +85,21 @@ function track_targets()
     local best_r=best_obj and best_obj:bone_position("bip01_head"):sub(cpos)
     local best_dp=best_obj and cdir:dotproduct(best_r)
     if best_obj==nil or best_dp<=0 then
-      -- TODO: убирать метку
+      -- TODO: СѓР±РёСЂР°С‚СЊ РјРµС‚РєСѓ
       tgt.wnd:SetWndPos(-100,-100)
     else
-      -- Рассчитываем экранные координаты
+      -- Р Р°СЃСЃС‡РёС‚С‹РІР°РµРј СЌРєСЂР°РЅРЅС‹Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹
       best_r.y=best_r.y+0.25
       local fov2=device().fov/180*math.pi/2
       local fovmul=math.tan(fov2)/device().aspect_ratio
       local cr,ct=device().cam_right,device().cam_top
-      -- проецируем на экранную плоскость
+      -- РїСЂРѕРµС†РёСЂСѓРµРј РЅР° СЌРєСЂР°РЅРЅСѓСЋ РїР»РѕСЃРєРѕСЃС‚СЊ
       local x=cr:dotproduct(best_r)
       local y=ct:dotproduct(best_r)
-      -- масштабируем по расстоянию и преобразуем в экранные координаты
+      -- РјР°СЃС€С‚Р°Р±РёСЂСѓРµРј РїРѕ СЂР°СЃСЃС‚РѕСЏРЅРёСЋ Рё РїСЂРµРѕР±СЂР°Р·СѓРµРј РІ СЌРєСЂР°РЅРЅС‹Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹
       x=512-32+512/fovmul*x/best_dp
       y=768/2-32-512/fovmul*y/best_dp
-      -- перемещаем метку
+      -- РїРµСЂРµРјРµС‰Р°РµРј РјРµС‚РєСѓ
       tgt.wnd:SetWndPos(x,y)
       if updatedist then
 --        local dist=string.format("%.1f",tgt.dist)
@@ -135,7 +135,7 @@ function play_contact_sound()
   end
 end
 
--- Коллбэк на уход в оффлайн или уничтожение
+-- РљРѕР»Р»Р±СЌРє РЅР° СѓС…РѕРґ РІ РѕС„С„Р»Р°Р№РЅ РёР»Рё СѓРЅРёС‡С‚РѕР¶РµРЅРёРµ
 function net_destroy(npc)
   for i=1,cparm.tgt_view,1 do
     if targets[i] and targets[i].id==npc:id() then

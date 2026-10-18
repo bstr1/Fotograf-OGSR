@@ -136,7 +136,7 @@ function voronin_car_spawn(position, total)
 end
 
 function sms_vorcar()
-	news_manager.send_tip(db.actor, "%c[255,255,75,75]Поставь машину в указанное место!", nil, nil, 12000) 
+	news_manager.send_tip(db.actor, "%c[255,255,75,75]РџРѕСЃС‚Р°РІСЊ РјР°С€РёРЅСѓ РІ СѓРєР°Р·Р°РЅРЅРѕРµ РјРµСЃС‚Рѕ!", nil, nil, 12000) 
 end
 
 function check_voronin_car()
@@ -208,8 +208,8 @@ function del_voronin_car()
 end
 
 ---------------------------------------crows & mouses---------------------------------------
--- таблица геймвертексов и спавна по уровням
--- младший вертекс, старший вертекс, секция спавна1, количество1, секция спавна2(опционально), количество2(опционально)
+-- С‚Р°Р±Р»РёС†Р° РіРµР№РјРІРµСЂС‚РµРєСЃРѕРІ Рё СЃРїР°РІРЅР° РїРѕ СѓСЂРѕРІРЅСЏРј
+-- РјР»Р°РґС€РёР№ РІРµСЂС‚РµРєСЃ, СЃС‚Р°СЂС€РёР№ РІРµСЂС‚РµРєСЃ, СЃРµРєС†РёСЏ СЃРїР°РІРЅР°1, РєРѕР»РёС‡РµСЃС‚РІРѕ1, СЃРµРєС†РёСЏ СЃРїР°РІРЅР°2(РѕРїС†РёРѕРЅР°Р»СЊРЅРѕ), РєРѕР»РёС‡РµСЃС‚РІРѕ2(РѕРїС†РёРѕРЅР°Р»СЊРЅРѕ)
 local game_vertexes={
 	dyshlo = {0,1,"m_crow",50},
 	l05_bar = {169,308,"m_crow",50},
@@ -221,9 +221,9 @@ local game_vertexes={
 	deadcity = {1162,1362,"mouse",50},
 	hiding_road = {1507,1702,"m_crow",50}
 }
--- анализ параметров респавна
+-- Р°РЅР°Р»РёР· РїР°СЂР°РјРµС‚СЂРѕРІ СЂРµСЃРїР°РІРЅР°
 function respawn_aero()
-	-- почистим  сперва всех летунов в игре
+	-- РїРѕС‡РёСЃС‚РёРј  СЃРїРµСЂРІР° РІСЃРµС… Р»РµС‚СѓРЅРѕРІ РІ РёРіСЂРµ
 	local obj, sobj, sect
 	for a=1,65534 do
 		obj=level.object_by_id(a)
@@ -238,31 +238,31 @@ function respawn_aero()
 			end
 		end
 	end
-	-- проверим необходимость создания летунов
-	local lname=level.name()	-- получим имя уровня
-	if not game_vertexes[lname] then return end	-- возврат, если не нужно создавать ворон
-	-- заспавним летунов
+	-- РїСЂРѕРІРµСЂРёРј РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚СЊ СЃРѕР·РґР°РЅРёСЏ Р»РµС‚СѓРЅРѕРІ
+	local lname=level.name()	-- РїРѕР»СѓС‡РёРј РёРјСЏ СѓСЂРѕРІРЅСЏ
+	if not game_vertexes[lname] then return end	-- РІРѕР·РІСЂР°С‚, РµСЃР»Рё РЅРµ РЅСѓР¶РЅРѕ СЃРѕР·РґР°РІР°С‚СЊ РІРѕСЂРѕРЅ
+	-- Р·Р°СЃРїР°РІРЅРёРј Р»РµС‚СѓРЅРѕРІ
 	spawn_aero(game_vertexes[lname][3], game_vertexes[lname][4])
-	-- заспавним дополнительных летунов
+	-- Р·Р°СЃРїР°РІРЅРёРј РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… Р»РµС‚СѓРЅРѕРІ
 	if game_vertexes[lname][5] and game_vertexes[lname][6] then
 		spawn_aero(game_vertexes[lname][5], game_vertexes[lname][6])
 	end
 end
--- респавн летунов
+-- СЂРµСЃРїР°РІРЅ Р»РµС‚СѓРЅРѕРІ
 function spawn_aero(section, amount)	
 	local actor = db.actor
-	local lname=level.name()	-- получим имя уровня
-	local min_gv, max_gv = game_vertexes[lname][1], game_vertexes[lname][2]	-- определили минимальный и максимальный вёртекс уровня	
+	local lname=level.name()	-- РїРѕР»СѓС‡РёРј РёРјСЏ СѓСЂРѕРІРЅСЏ
+	local min_gv, max_gv = game_vertexes[lname][1], game_vertexes[lname][2]	-- РѕРїСЂРµРґРµР»РёР»Рё РјРёРЅРёРјР°Р»СЊРЅС‹Р№ Рё РјР°РєСЃРёРјР°Р»СЊРЅС‹Р№ РІС‘СЂС‚РµРєСЃ СѓСЂРѕРІРЅСЏ	
 	local offset, dist, lv_id, pos, gv_id, g1, min_dist
-	-- создаем летунов
+	-- СЃРѕР·РґР°РµРј Р»РµС‚СѓРЅРѕРІ
 	repeat	
-		offset=vector():set(math.random()*6-3,0,math.random()*6-3)	-- случайный вектор направления
+		offset=vector():set(math.random()*6-3,0,math.random()*6-3)	-- СЃР»СѓС‡Р°Р№РЅС‹Р№ РІРµРєС‚РѕСЂ РЅР°РїСЂР°РІР»РµРЅРёСЏ
 		offset:normalize()
-		dist = math.random(20,130)	-- случайная дистанция	
-		lv_id = level.vertex_in_direction(actor:level_vertex_id(),offset,dist)	-- попытка получить вертекс 
-		if lv_id then	-- вертекс получен
-			pos = level.vertex_position(lv_id)	-- получаем позицию левелвертекса
-			-- найдем ближайший геймвертекс
+		dist = math.random(20,130)	-- СЃР»СѓС‡Р°Р№РЅР°СЏ РґРёСЃС‚Р°РЅС†РёСЏ	
+		lv_id = level.vertex_in_direction(actor:level_vertex_id(),offset,dist)	-- РїРѕРїС‹С‚РєР° РїРѕР»СѓС‡РёС‚СЊ РІРµСЂС‚РµРєСЃ 
+		if lv_id then	-- РІРµСЂС‚РµРєСЃ РїРѕР»СѓС‡РµРЅ
+			pos = level.vertex_position(lv_id)	-- РїРѕР»СѓС‡Р°РµРј РїРѕР·РёС†РёСЋ Р»РµРІРµР»РІРµСЂС‚РµРєСЃР°
+			-- РЅР°Р№РґРµРј Р±Р»РёР¶Р°Р№С€РёР№ РіРµР№РјРІРµСЂС‚РµРєСЃ
 			gv_id = 0
 			min_dist = 100000
 			for a = min_gv, max_gv do
@@ -272,9 +272,9 @@ function spawn_aero(section, amount)
 					gv_id = a
 				end
 			end	
-			pos.y = pos.y + 30	-- поднимем точку спавна вверх
+			pos.y = pos.y + 30	-- РїРѕРґРЅРёРјРµРј С‚РѕС‡РєСѓ СЃРїР°РІРЅР° РІРІРµСЂС…
 			sobj = alife():create(section, pos, lv_id, gv_id)
-			if sobj then amount = amount - 1 end	-- создали и уменьшили счетчик
+			if sobj then amount = amount - 1 end	-- СЃРѕР·РґР°Р»Рё Рё СѓРјРµРЅСЊС€РёР»Рё СЃС‡РµС‚С‡РёРє
 		end		
 	until amount<=0	
 end

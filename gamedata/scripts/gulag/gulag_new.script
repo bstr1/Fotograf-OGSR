@@ -1,7 +1,7 @@
 local t = {}
 
 function load_job(sj, gname, type, squad, groups)
-        --  ŒÕ“–ŒÀ≈– Õ¿ ¿“œ	
+        -- –ö–û–ù–¢–†–û–õ–ï–† –ù–ê –ê–¢–ü	
      if type == "esc_kontr" then
 	    t = { section = "logic@atp_kontr",
 		  idle = 0,
@@ -10,7 +10,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
     end
-	 -- œ—≈¬ƒŒ—Œ¡¿ » œŒƒ ÃŒ—“ŒÃ 	
+	 -- –ü–°–ï–í–î–û–°–û–ë–ê–ö–ò –ü–û–î –ú–û–°–¢–û–ú 	
      if type == "esc_zver_most" then
 	    t = { section = "logic@pseudo1",
 		  idle = 0,
@@ -37,7 +37,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
     end
-	-- ’»Ã≈–¿ ¬ √Œ—“ﬂ’ ” À»—¿ 	
+	-- –•–ò–ú–ï–†–ê –í –ì–û–°–¢–Ø–• –£ –õ–ò–°–ê 	
      if type == "esc_chimera" then
 	    t = { section = "logic@chimeras1",
 		  idle = 0,
@@ -58,7 +58,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end
-    -- œ—≈¬ƒŒ√»√¿Õ“ Õ¿ œ–Œ√”À ≈	
+    -- –ü–°–ï–í–î–û–ì–ò–ì–ê–ù–¢ –ù–ê –ü–†–û–ì–£–õ–ö–ï	
      if type == "esc_giant" then
 	    t = { section = "logic@giants1",
 		  idle = 0,
@@ -73,7 +73,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)	
 	end	
-	-- —ÕŒ– » Õ¿ ¡¿«≈ ¡Œ–Œ¬¿	
+	-- –°–ù–û–†–ö–ò –ù–ê –ë–ê–ó–ï –ë–û–†–û–í–ê	
      if type == "val_snork_new" then
 	    t = { section = "logic@val_snork1",
 		  idle = 0,
@@ -148,7 +148,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)	
 	end	
-	    -- ’¿–ŒÕ »  Œ	
+	    -- –•–ê–†–û–ù –ò –ö–û	
      if type == "haron_mono_lager" then
 	    t = { section = "logic@haron",
 		  idle = 0,
@@ -250,7 +250,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end
-	   -- —ŒÀŒÃŒÕ »  Œ	
+	   -- –°–û–õ–û–ú–û–ù –ò –ö–û	
      if type == "small_mono_aes_lager" then
 	    t = { section = "logic@ambush1",
 		  idle = 0,
@@ -274,7 +274,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end	
-	-- —ŒÀŒÃŒÕ » ¡–¿“»ﬂ
+	-- –°–û–õ–û–ú–û–ù –ò –ë–†–ê–¢–ò–Ø
      if type == "big_mono_aes_lager" then
 	    t = { section = "logic@solomon",
 		  idle = 0,
@@ -371,7 +371,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end	
-	 -- —“¿À ≈–€ Õ¿ ◊¿›—-2	
+	 -- –°–¢–ê–õ–ö–ï–†–´ –ù–ê –ß–ê–≠–°-2	
      if type == "stalker_aes_lager" then
 	    t = { section = "logic@master1",
 		  idle = 0,
@@ -416,7 +416,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end	
-		-- ƒ‹ﬂ  »  Œ
+		-- –î–¨–Ø–ö –ò –ö–û
      if type == "dyak_aes_lager" then
 	    t = { section = "logic@dyak",
 		  idle = 0,
@@ -457,7 +457,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	 end	
-		-- ƒ‹ﬂ  ≈—À» ¬€∆»À » œ–Œ◊¿ﬂ ¡–¿“»ﬂ
+		-- –î–¨–Ø–ö –ï–°–õ–ò –í–´–ñ–ò–õ –ò –ü–†–û–ß–ê–Ø –ë–†–ê–¢–ò–Ø
      if type == "caes_mono_lager" then
 	    t = { section = "logic@boss",
 		  idle = 0,
@@ -561,7 +561,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end	
-	-- ¬Œ≈ÕÕ€≈ —“¿À ≈–€ Õ¿ ◊¿›—	
+	-- –í–û–ï–ù–ù–´–ï –°–¢–ê–õ–ö–ï–†–´ –ù–ê –ß–ê–≠–°	
      if type == "mil_stalker_aes" then
 	    t = { section = "logic@specur1",
 		  idle = 0,
@@ -599,7 +599,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end	
-	-- ƒŒ “Œ–
+	-- –î–û–ö–¢–û–†
      if type == "doctor_lager" then
 	    t = { section = "logic@digg",
 		  idle = 0,
@@ -622,7 +622,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end	
-	-- Ã¿’ŒÕ — ¡–¿“»≈…
+	-- –ú–ê–•–û–ù –° –ë–†–ê–¢–ò–ï–ô
      if type == "mathon_lager" then
 	    t = { section = "logic@math",
 		  idle = 0,
@@ -684,7 +684,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end	
-	-- ¡¿«¿ ¬  »ÕŒ“≈¿“–≈
+	-- –ë–ê–ó–ê –í –ö–ò–ù–û–¢–ï–ê–¢–†–ï
      if type == "monolith_baza" then
 	    t = { section = "logic@mathon",
 		  idle = 0,
@@ -753,7 +753,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end	
-	-- ÃŒÕŒÀ»“ ¬Œ«À≈ ÃŒ√»À€  À€ ¿
+	-- –ú–û–ù–û–õ–ò–¢ –í–û–ó–õ–ï –ú–û–ì–ò–õ–´ –ö–õ–´–ö–ê
 	if type == "monolith_lenin" then
 	    t = { section = "logic@lenin1",
 		  idle = 0,
@@ -805,7 +805,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end	
-	-- Õ¿≈ÃÕ» » ¬ œ–»œﬂ“»
+	-- –ù–ê–ï–ú–ù–ò–ö–ò –í –ü–†–ò–ü–Ø–¢–ò
 	if type == "pripyat_naemnik" then
 	    t = { section = "logic@pri_kil1",
 		  idle = 0,
@@ -864,7 +864,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end	
-	-- œ–»«–¿  ¬ œÀ≈Õ”
+	-- –ü–†–ò–ó–†–ê–ö –í –ü–õ–ï–ù–£
 	if type == "prizrak_plen" then
 	    t = { section = "logic@plen",
 		  idle = 0,
@@ -874,7 +874,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end	
-	-- œ–»«–¿  Õ¿ —¬Œ¡Œƒ≈
+	-- –ü–†–ò–ó–†–ê–ö –ù–ê –°–í–û–ë–û–î–ï
 	if type == "prizrak_sad" then
 	    t = { section = "logic@prizrak",
 		  idle = 0,
@@ -917,7 +917,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end	
-	-- «¿’¿–
+	-- –ó–ê–•–ê–†
 	if type == "atp_zahar_lager" then
 	    t = { section = "logic@zahar_offline",
 		  idle = 0,
@@ -941,7 +941,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end	
-	-- À” ¿ÿ »  Œ ∆ƒ”“ ¿ “≈–¿
+	-- –õ–£–ö–ê–® –ò –ö–û –ñ–î–£–¢ –ê–ö–¢–ï–†–ê
 	if type == "mil_freedom_wait" then
 	t = { section = "logic@leader",
 		  idle = 0,
@@ -1039,7 +1039,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)	
     end	
-    -- À” ¿ÿ »  Œ Õ¿ ¡¿«≈
+    -- –õ–£–ö–ê–® –ò –ö–û –ù–ê –ë–ê–ó–ï
 	if type == "mil_freedom_new" then
 	t = { section = "logic@lucash",
 		  idle = 0,
@@ -1193,7 +1193,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
     end	
-    -- ¡≈À◊”  » ¬Œ≈ÕÕ€≈ Õ¿ ¡¿«≈
+    -- –ë–ï–õ–ß–£–ö –ò –í–û–ï–ù–ù–´–ï –ù–ê –ë–ê–ó–ï
 	if type == "mil_voen_lager" then
 	t = { section = "logic@belchuk",
 		  idle = 0,
@@ -1375,7 +1375,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)	
     end	
-    -- —»ƒŒ–◊”  » ¬Œ≈ÕÕ€≈ Õ¿ ¡¿–‹≈–≈
+    -- –°–ò–î–û–†–ß–£–ö –ò –í–û–ï–ù–ù–´–ï –ù–ê –ë–ê–†–¨–ï–†–ï
 	if type == "mil_voen_barier" then
 	t = { section = "logic@sidorchukof",
 		  idle = 0,
@@ -1608,7 +1608,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)		
     end 
-    -- —¬Œ¡ŒƒŒ¬÷€ Õ¿ ¡¿–‹≈–≈
+    -- –°–í–û–ë–û–î–û–í–¶–´ –ù–ê –ë–ê–†–¨–ï–†–ï
 	if type == "mil_freedom_barier" then
 	t = { section = "logic@keb",
 		  idle = 0,
@@ -1710,7 +1710,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
     end	
-    -- »Õ‘Œ–Ã¿“Œ– » ¡–¿“¬¿
+    -- –ò–ù–§–û–†–ú–ê–¢–û–† –ò –ë–†–ê–¢–í–ê
 	if type == "mil_bratok" then
 	t = { section = "logic@osvedomitel",
 		  idle = 0,
@@ -1869,9 +1869,9 @@ function load_states(gname, type)
 		return function(gulag)
 		   local actor = db.actor
 		   if has_alife_info("actor_na_scladah") then
-			    return 1 -- ·ÂÁ ÍÎ˚Í‡
+			    return 1 -- –±–µ–∑ –∫–ª—ã–∫–∞
 			else
-				return 0 -- Ò ÍÎ˚ÍÓÏ
+				return 0 -- —Å –∫–ª—ã–∫–æ–º
 			end	
 		end
 	end
@@ -1884,11 +1884,11 @@ function load_states(gname, type)
 		return function(gulag)
 			local actor = db.actor
 			if not has_alife_info("atp_zahar_help_start") then
-				return 0 -- ÓÙÙÎ‡ÈÌ
+				return 0 -- –æ—Ñ—Ñ–ª–∞–π–Ω
 			elseif has_alife_info("atp_zahar_help_done") then 
-				return 2 -- ÓÌÎ‡ÈÌ
+				return 2 -- –æ–Ω–ª–∞–π–Ω
 			else
-				return 1 -- ‡ÌÂÌ˚È
+				return 1 -- —Ä–∞–Ω–µ–Ω—ã–π
 			end
 		end
 	end
@@ -1911,9 +1911,9 @@ function load_states(gname, type)
 		return function(gulag)
 		   local actor = db.actor
 		   if has_alife_info("mil_lucash_barier_start") then
-			    return 1 -- ÓÌÎ‡ÈÌ
+			    return 1 -- –æ–Ω–ª–∞–π–Ω
 			else
-				return 0 -- ÓÙÙÎ‡ÈÌ
+				return 0 -- –æ—Ñ—Ñ–ª–∞–π–Ω
 			end	
 		end
 	end

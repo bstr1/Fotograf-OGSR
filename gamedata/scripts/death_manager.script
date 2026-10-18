@@ -1,15 +1,15 @@
 
---' Ключем является группировка персонажа. Значением является таблица, содержашая имена секций предметов.
+--' РљР»СЋС‡РµРј СЏРІР»СЏРµС‚СЃСЏ РіСЂСѓРїРїРёСЂРѕРІРєР° РїРµСЂСЃРѕРЅР°Р¶Р°. Р—РЅР°С‡РµРЅРёРµРј СЏРІР»СЏРµС‚СЃСЏ С‚Р°Р±Р»РёС†Р°, СЃРѕРґРµСЂР¶Р°С€Р°СЏ РёРјРµРЅР° СЃРµРєС†РёР№ РїСЂРµРґРјРµС‚РѕРІ.
 local item_by_community = {}
 
---' Зависимости в спауне предметов. Предмет спауниться только если есть хотя бы один из зависимых.
+--' Р—Р°РІРёСЃРёРјРѕСЃС‚Рё РІ СЃРїР°СѓРЅРµ РїСЂРµРґРјРµС‚РѕРІ. РџСЂРµРґРјРµС‚ СЃРїР°СѓРЅРёС‚СЊСЃСЏ С‚РѕР»СЊРєРѕ РµСЃР»Рё РµСЃС‚СЊ С…РѕС‚СЏ Р±С‹ РѕРґРёРЅ РёР· Р·Р°РІРёСЃРёРјС‹С….
 local item_dependence = {}
 
---' Множители и минимаксы для выпадения вещей в зависимости от уровня
+--' РњРЅРѕР¶РёС‚РµР»Рё Рё РјРёРЅРёРјР°РєСЃС‹ РґР»СЏ РІС‹РїР°РґРµРЅРёСЏ РІРµС‰РµР№ РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ СѓСЂРѕРІРЅСЏ
 local mul_by_level = {}
 local count_by_level = {}
 
---' Предметы, которые нельзя удалять (квестовые например)
+--' РџСЂРµРґРјРµС‚С‹, РєРѕС‚РѕСЂС‹Рµ РЅРµР»СЊР·СЏ СѓРґР°Р»СЏС‚СЊ (РєРІРµСЃС‚РѕРІС‹Рµ РЅР°РїСЂРёРјРµСЂ)
 local always_keep_item = {}
 local always_offs_items = {
 "device_torch",
@@ -51,7 +51,7 @@ local always_offs_items = {
 "vodka",
 "energy_drink"}
 
---' Предметы, относящиеся к патронам. Их надо спаунить другим методом.
+--' РџСЂРµРґРјРµС‚С‹, РѕС‚РЅРѕСЃСЏС‰РёРµСЃСЏ Рє РїР°С‚СЂРѕРЅР°Рј. РС… РЅР°РґРѕ СЃРїР°СѓРЅРёС‚СЊ РґСЂСѓРіРёРј РјРµС‚РѕРґРѕРј.
 local ammo_sections = {}
 
 local death_ini = ini_file("misc\\death_generic.ltx")
@@ -61,7 +61,7 @@ function init_drop_settings()
 	local community_list = { "stalker", "dolg", "freedom", "bandit", "military", "zombied", "ecolog", "killer", "monolith", "arena_enemy", "actor_dolg","bratok","nebo","wanderer","ucheniy","usa","newstalk","hunter","maroder","maroderka","catcher" }	
 
     for k,v in pairs(community_list) do
-        --' Необходимо заполнить таблицу
+        --' РќРµРѕР±С…РѕРґРёРјРѕ Р·Р°РїРѕР»РЅРёС‚СЊ С‚Р°Р±Р»РёС†Сѓ
         item_by_community[v] = {}
         if death_ini:section_exist(v) then
 		    local n = death_ini:line_count(v)
@@ -75,7 +75,7 @@ function init_drop_settings()
         end
     end
 
-    --' Заполняем таблицу зависимостей
+    --' Р—Р°РїРѕР»РЅСЏРµРј С‚Р°Р±Р»РёС†Сѓ Р·Р°РІРёСЃРёРјРѕСЃС‚РµР№
 	local n = death_ini:line_count("item_dependence")
 	local id, value = "", ""
 	for i=0,n-1 do
@@ -87,7 +87,7 @@ function init_drop_settings()
 		end
 	end
 
-	--' Множители и минимаксы для выпадения вещей в зависимости от уровня
+	--' РњРЅРѕР¶РёС‚РµР»Рё Рё РјРёРЅРёРјР°РєСЃС‹ РґР»СЏ РІС‹РїР°РґРµРЅРёСЏ РІРµС‰РµР№ РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ СѓСЂРѕРІРЅСЏ
     local level_name = level.name()
 	
 	if not death_ini:section_exist(level_name) then
@@ -105,7 +105,7 @@ function init_drop_settings()
     local n = death_ini:line_count(item_count_section)
 	for i=0,n-1 do
 		result, id, value	= death_ini:r_line(item_count_section,i,"","")
-        --' Нужно распарсить value в два значения
+        --' РќСѓР¶РЅРѕ СЂР°СЃРїР°СЂСЃРёС‚СЊ value РІ РґРІР° Р·РЅР°С‡РµРЅРёСЏ
         local t = parse_nums(value)
 		if t[1] == nil then
             abort("Error on [death_ini] declaration. Section [%s], line [%s]", item_count_section, tostring(id))
@@ -126,7 +126,7 @@ function init_drop_settings()
         count_by_level[id] = {min = min, max = max}
 	end        
 
- 	--' Предметы, которые нельзя удалять (квестовые например)
+ 	--' РџСЂРµРґРјРµС‚С‹, РєРѕС‚РѕСЂС‹Рµ РЅРµР»СЊР·СЏ СѓРґР°Р»СЏС‚СЊ (РєРІРµСЃС‚РѕРІС‹Рµ РЅР°РїСЂРёРјРµСЂ)
     local n = death_ini:line_count("keep_items")
 	for i=0,n-1 do
 		result, id, value	= death_ini:r_line("keep_items",i,"","")
@@ -135,7 +135,7 @@ function init_drop_settings()
         end
     end
 
-	--' Предметы, относящиеся к патронам. Их надо спаунить другим методом.
+	--' РџСЂРµРґРјРµС‚С‹, РѕС‚РЅРѕСЃСЏС‰РёРµСЃСЏ Рє РїР°С‚СЂРѕРЅР°Рј. РС… РЅР°РґРѕ СЃРїР°СѓРЅРёС‚СЊ РґСЂСѓРіРёРј РјРµС‚РѕРґРѕРј.
     ammo_sections = {}
     local n = death_ini:line_count("ammo_sections")
 	local id, value = "", ""
@@ -153,7 +153,7 @@ function drop_manager:__init(npc)
 end
 function drop_manager:create_release_item()
 	if self.npc == nil then return end
-	--' Спрашиваем у серверного объекта генерились ли предметы
+	--' РЎРїСЂР°С€РёРІР°РµРј Сѓ СЃРµСЂРІРµСЂРЅРѕРіРѕ РѕР±СЉРµРєС‚Р° РіРµРЅРµСЂРёР»РёСЃСЊ Р»Рё РїСЂРµРґРјРµС‚С‹
 	local se_obj = alife():object(self.npc:id())
 	if (se_obj == nil) then return end
 	if se_obj.death_droped == true then
@@ -161,26 +161,26 @@ function drop_manager:create_release_item()
 	end
 	se_obj.death_droped = true
 
-    --' Запускаем итератор на удаление предметов
+    --' Р—Р°РїСѓСЃРєР°РµРј РёС‚РµСЂР°С‚РѕСЂ РЅР° СѓРґР°Р»РµРЅРёРµ РїСЂРµРґРјРµС‚РѕРІ
     self.npc:iterate_inventory(keep_item, self.npc)
 
-    --' Проверка на отсутствие спауна лута
+    --' РџСЂРѕРІРµСЂРєР° РЅР° РѕС‚СЃСѓС‚СЃС‚РІРёРµ СЃРїР°СѓРЅР° Р»СѓС‚Р°
     local ini = self.npc:spawn_ini()
 
     if ini and ini:section_exist("dont_spawn_loot") then
         return
     end
 
-    --' Доспавниваем необходимое количество итемов:
-    --' Необходимо составить список объектов которые могут быть заспавнены для персонажа
+    --' Р”РѕСЃРїР°РІРЅРёРІР°РµРј РЅРµРѕР±С…РѕРґРёРјРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РёС‚РµРјРѕРІ:
+    --' РќРµРѕР±С…РѕРґРёРјРѕ СЃРѕСЃС‚Р°РІРёС‚СЊ СЃРїРёСЃРѕРє РѕР±СЉРµРєС‚РѕРІ РєРѕС‚РѕСЂС‹Рµ РјРѕРіСѓС‚ Р±С‹С‚СЊ Р·Р°СЃРїР°РІРЅРµРЅС‹ РґР»СЏ РїРµСЂСЃРѕРЅР°Р¶Р°
     local spawn_items = item_by_community[self.npc:character_community()]    
     if spawn_items then
       for k,v in pairs(spawn_items) do
-          --' По каждому объекту необходимо получить зависимости		
+          --' РџРѕ РєР°Р¶РґРѕРјСѓ РѕР±СЉРµРєС‚Сѓ РЅРµРѕР±С…РѕРґРёРјРѕ РїРѕР»СѓС‡РёС‚СЊ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё		
           if check_item_dependence(self.npc, k) == true then
-              --' По каждому объекту необходимо получить количество
+              --' РџРѕ РєР°Р¶РґРѕРјСѓ РѕР±СЉРµРєС‚Сѓ РЅРµРѕР±С…РѕРґРёРјРѕ РїРѕР»СѓС‡РёС‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ
               local number = math.ceil(math.random(count_by_level[k].min, count_by_level[k].max))
-              --' Необходимо заспавнить нужное количество.
+              --' РќРµРѕР±С…РѕРґРёРјРѕ Р·Р°СЃРїР°РІРЅРёС‚СЊ РЅСѓР¶РЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ.
 				create_items(self.npc, k, number, v) 
 		  end
       end
@@ -413,7 +413,7 @@ if string.find(self.npc:name(),"atp_barman") then
   db.actor:give_info_portion("band_kill_have")  
 end
 end
---' Функция вызывается для каждого предмета, если вернет false то предмет удалится.
+--' Р¤СѓРЅРєС†РёСЏ РІС‹Р·С‹РІР°РµС‚СЃСЏ РґР»СЏ РєР°Р¶РґРѕРіРѕ РїСЂРµРґРјРµС‚Р°, РµСЃР»Рё РІРµСЂРЅРµС‚ false С‚Рѕ РїСЂРµРґРјРµС‚ СѓРґР°Р»РёС‚СЃСЏ.
 function keep_item(npc, item)
 	local npc_community = npc:character_community()
     if item==nil or alife():object(item:id())==nil then return end
@@ -441,19 +441,19 @@ function keep_item(npc, item)
     local item_in_slot = npc:item_in_slot(1)
     if item_in_slot ~= nil and item_in_slot:id() == item_id then
         item:unload_magazine()
-                --' Тут надо уменьшить кондишн оружия
+                --' РўСѓС‚ РЅР°РґРѕ СѓРјРµРЅСЊС€РёС‚СЊ РєРѕРЅРґРёС€РЅ РѕСЂСѓР¶РёСЏ
                 item:set_condition((math.random(90-kond)+kond)/100)
         return true
     end
     item_in_slot = npc:item_in_slot(2)
     if item_in_slot ~= nil and item_in_slot:id() == item_id then
         item:unload_magazine()
-                --' Тут надо уменьшить кондишн оружия
+                --' РўСѓС‚ РЅР°РґРѕ СѓРјРµРЅСЊС€РёС‚СЊ РєРѕРЅРґРёС€РЅ РѕСЂСѓР¶РёСЏ
                 item:set_condition((math.random(95-kond)+kond)/100)
         return true
     end
 
-	-- удалять ПДА, гитару\гармошку, фонарики и приборы ночного видения, рацию, бинокль.
+	-- СѓРґР°Р»СЏС‚СЊ РџР”Рђ, РіРёС‚Р°СЂСѓ\РіР°СЂРјРѕС€РєСѓ, С„РѕРЅР°СЂРёРєРё Рё РїСЂРёР±РѕСЂС‹ РЅРѕС‡РЅРѕРіРѕ РІРёРґРµРЅРёСЏ, СЂР°С†РёСЋ, Р±РёРЅРѕРєР»СЊ.
 	for a=1,table.getn(always_offs_items),1 do
 		if always_offs_items[a]==section then
 		--if (npc.mark_item_dropped) then
@@ -464,7 +464,7 @@ function keep_item(npc, item)
 	end
 end
 
---' Функция спавнит необходимое число предметов
+--' Р¤СѓРЅРєС†РёСЏ СЃРїР°РІРЅРёС‚ РЅРµРѕР±С…РѕРґРёРјРѕРµ С‡РёСЃР»Рѕ РїСЂРµРґРјРµС‚РѕРІ
 function create_items(npc, section, number, rnd)
 	if npc == nil then return end
     --'printf("create %s of %s", tostring(number), tostring(section))
@@ -479,7 +479,7 @@ function create_items(npc, section, number, rnd)
         end
     else
         for i=1,number do
-			--' Проверяем вероятность появить каждый объект в отдельности
+			--' РџСЂРѕРІРµСЂСЏРµРј РІРµСЂРѕСЏС‚РЅРѕСЃС‚СЊ РїРѕСЏРІРёС‚СЊ РєР°Р¶РґС‹Р№ РѕР±СЉРµРєС‚ РІ РѕС‚РґРµР»СЊРЅРѕСЃС‚Рё
             if math.random(1000) <=  rnd then
 				return alife():create(section,	
 					    npc:position(),
@@ -492,7 +492,7 @@ function create_items(npc, section, number, rnd)
 end
 
 
---' Функция проверяет есть ли хоть один из зависимых объектов у персонажа
+--' Р¤СѓРЅРєС†РёСЏ РїСЂРѕРІРµСЂСЏРµС‚ РµСЃС‚СЊ Р»Рё С…РѕС‚СЊ РѕРґРёРЅ РёР· Р·Р°РІРёСЃРёРјС‹С… РѕР±СЉРµРєС‚РѕРІ Сѓ РїРµСЂСЃРѕРЅР°Р¶Р°
 function check_item_dependence(npc, section)
 	if npc == nil then return end
 	if item_dependence[section] == nil then

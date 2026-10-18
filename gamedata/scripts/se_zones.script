@@ -70,7 +70,7 @@ function se_zone_anom:STATE_Write(packet)
     utils.w_CTime(packet, self.last_spawn_time)
   end 
 end
--- восстановление
+-- РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ
 
 function se_zone_anom:STATE_Read( packet, size )
 --  local p1,p2
@@ -109,7 +109,7 @@ function repack_zone(packet,size)
   local a_radius=0
 	local packet1 = net_packet()
   
-	-- свойства cse_alife_object
+	-- СЃРІРѕР№СЃС‚РІР° cse_alife_object
 	packet1:w_u16(packet:r_u16()) -- game_vertex_id 0
 	packet1:w_float(packet:r_float()) -- cse_alife_object__unk1_f32 2
 	packet1:w_u32(packet:r_u32()) -- cse_alife_object__unk2_u32 6
@@ -121,7 +121,7 @@ function repack_zone(packet,size)
   --amk.mylog(sid)
 	packet1:w_s32(packet:r_s32()) -- se_alife_object__unk3_u32 23
 
-	-- свойства cse_shape
+	-- СЃРІРѕР№СЃС‚РІР° cse_shape
 	local shape_count = packet:r_u8() -- 27
   packet1:w_u8(shape_count)
 	for i=1,shape_count do
@@ -147,26 +147,26 @@ function repack_zone(packet,size)
 		end
 	end
 
-	-- свойства cse_alife_space_restrictor
+	-- СЃРІРѕР№СЃС‚РІР° cse_alife_space_restrictor
   packet:r_u8()
 	packet1:w_u8(0) --  -- restrictor_type -- 45 or 89
   for i=1,size-packet1:r_tell(),1 do
     packet1:w_u8(packet:r_u8())
   end
 --[[
-	-- свойства cse_alife_custom_zone
+	-- СЃРІРѕР№СЃС‚РІР° cse_alife_custom_zone
 	packet1:w_float(packet:r_float()) -- cse_alife_custom_zone__unk1_f32 -- 46 or 90
 	packet1:w_s32(packet:r_s32()) -- cse_alife_custom_zone__unk2_u32 -- 50 or 94
 	packet1:w_s32(packet:r_s32()) -- on_off_mode_enabled_time -- 54 or 98
 	packet1:w_s32(packet:r_s32()) -- on_off_mode_disabled_time -- 58 or 102
 	packet1:w_s32(packet:r_s32()) -- on_off_mode_shift_time -- 62 or 106
 
-	-- свойства cse_alife_anomalous_zone
+	-- СЃРІРѕР№СЃС‚РІР° cse_alife_anomalous_zone
 	packet1:w_float(packet:r_float()) -- offline_interactive_radius -- 66 or 110
 	packet1:w_s16(packet:r_s16()) -- artefact_spawn_places_count -- 70 or 114
 	packet1:w_s32(packet:r_s32()) -- cse_alife_anomalous_zone__unk1_u32 -- 72 or 116
 
-	-- свойства se_zone_anom
+	-- СЃРІРѕР№СЃС‚РІР° se_zone_anom
   local last_spawn_time_present=packet:r_u8() -- 76 or 120
 	packet1:w_u8(last_spawn_time_present)
 
@@ -216,7 +216,7 @@ function se_zone_visual:STATE_Write(packet)
     utils.w_CTime(packet, self.last_spawn_time)
   end 
 end
--- восстановление
+-- РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ
 function se_zone_visual:STATE_Read( packet, size )
   cse_zone_visual.STATE_Read( self, packet, size )
   
@@ -236,7 +236,7 @@ end
 
 
 
---' Рестрикторы
+--' Р РµСЃС‚СЂРёРєС‚РѕСЂС‹
 class "se_restrictor" (cse_alife_space_restrictor)
 function se_restrictor:__init (section) super (section)
 end

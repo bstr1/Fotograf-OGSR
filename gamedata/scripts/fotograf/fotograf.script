@@ -195,7 +195,7 @@ local sect = obj:section()
 end
 
 ----------
--- чтение формы из нет-пакета
+-- С‡С‚РµРЅРёРµ С„РѕСЂРјС‹ РёР· РЅРµС‚-РїР°РєРµС‚Р°
 ----------
 function r_shape(packet)
 	local s
@@ -220,7 +220,7 @@ function r_shape(packet)
 end
 
 ----------
--- запись формы в нет-пакет
+-- Р·Р°РїРёСЃСЊ С„РѕСЂРјС‹ РІ РЅРµС‚-РїР°РєРµС‚
 ----------
 function w_shape(packet, st)
 	local s
@@ -241,7 +241,7 @@ function w_shape(packet, st)
 end
 
 ----------
--- перепаковка нет-пакета созданного скриптом рестрикта
+-- РїРµСЂРµРїР°РєРѕРІРєР° РЅРµС‚-РїР°РєРµС‚Р° СЃРѕР·РґР°РЅРЅРѕРіРѕ СЃРєСЂРёРїС‚РѕРј СЂРµСЃС‚СЂРёРєС‚Р°
 ----------
 function rewrite_restrictor(sobj, custom, radius)
 	local packet = net_packet()
@@ -281,7 +281,7 @@ end
 
 ---------------------------delete_spawn_object------------------------------
 
---Универсальная рабочая функция удаления предмета из инвентаря
+--РЈРЅРёРІРµСЂСЃР°Р»СЊРЅР°СЏ СЂР°Р±РѕС‡Р°СЏ С„СѓРЅРєС†РёСЏ СѓРґР°Р»РµРЅРёСЏ РїСЂРµРґРјРµС‚Р° РёР· РёРЅРІРµРЅС‚Р°СЂСЏ
 function delete_object(section,obj)
 	local sim = alife()
 	if not obj then
@@ -295,18 +295,18 @@ function delete_object(section,obj)
 	end
 end
 
---Сама функция удаления конкретного предмета
+--РЎР°РјР° С„СѓРЅРєС†РёСЏ СѓРґР°Р»РµРЅРёСЏ РєРѕРЅРєСЂРµС‚РЅРѕРіРѕ РїСЂРµРґРјРµС‚Р°
 function delete_fotik1()
 	delete_object("wpn_foto")
 end
 
---Функция спавна предмета в инвентарь
+--Р¤СѓРЅРєС†РёСЏ СЃРїР°РІРЅР° РїСЂРµРґРјРµС‚Р° РІ РёРЅРІРµРЅС‚Р°СЂСЊ
 function spawn_fotik1()
 	local actor = db.actor
 	alife():create("wpn_foto", actor:position(), actor:level_vertex_id(), actor:game_vertex_id(), actor:id())
 end
 
---Удаление безхозного оружия
+--РЈРґР°Р»РµРЅРёРµ Р±РµР·С…РѕР·РЅРѕРіРѕ РѕСЂСѓР¶РёСЏ
 function del_minifake()
 	local sim = alife()
 	local sobj, sect
@@ -1590,7 +1590,7 @@ function enemy_dolg(community1, community2)
 end
 
 function enemy_borovikov()
--- для объекта из аллспавна лучше так:
+-- РґР»СЏ РѕР±СЉРµРєС‚Р° РёР· Р°Р»Р»СЃРїР°РІРЅР° Р»СѓС‡С€Рµ С‚Р°Рє:
 --	local sobj = alife()::object("borovikov")
 --	local id = sobj and sobj.id
 --	local npc = level.object_by_id(id)
@@ -1680,7 +1680,7 @@ sim:create("zombi_stalk7",vector():set(-268.193,10.185,239.227),526701,672)
 sim:create("zombi_stalk8",vector():set(-268.193,10.185,239.227),526701,672)
 end
 
-----------------------------------Фотографирование----------------------------
+----------------------------------Р¤РѕС‚РѕРіСЂР°С„РёСЂРѕРІР°РЅРёРµ----------------------------
 
 local last_load = 0
 
@@ -1723,23 +1723,23 @@ function camera1_update()
 end
 
 function sms_mozhno_foto()
-	news_manager.send_tip(db.actor, "Выбран правильный ракурс для фото. Можно снимать!", nil, nil, 5000) 
+	news_manager.send_tip(db.actor, "Р’С‹Р±СЂР°РЅ РїСЂР°РІРёР»СЊРЅС‹Р№ СЂР°РєСѓСЂСЃ РґР»СЏ С„РѕС‚Рѕ. РњРѕР¶РЅРѕ СЃРЅРёРјР°С‚СЊ!", nil, nil, 5000) 
 end
 
 function sms_vzone()
-	news_manager.send_tip(db.actor, "Вы пришли на точку фотосъёмки.", nil, nil, 5000) 
+	news_manager.send_tip(db.actor, "Р’С‹ РїСЂРёС€Р»Рё РЅР° С‚РѕС‡РєСѓ С„РѕС‚РѕСЃСЉС‘РјРєРё.", nil, nil, 5000) 
 end
 
 function sms_nelzya_foto()
-	news_manager.send_tip(db.actor, "Ракурс не тот, найдите правильный ракурс!", nil, nil, 5000) 
+	news_manager.send_tip(db.actor, "Р Р°РєСѓСЂСЃ РЅРµ С‚РѕС‚, РЅР°Р№РґРёС‚Рµ РїСЂР°РІРёР»СЊРЅС‹Р№ СЂР°РєСѓСЂСЃ!", nil, nil, 5000) 
 end
 
 function sms_sdelal_foto()
-	news_manager.send_tip(db.actor, "Фотоснимок успешно сделан.", nil, nil, 10000) 
+	news_manager.send_tip(db.actor, "Р¤РѕС‚РѕСЃРЅРёРјРѕРє СѓСЃРїРµС€РЅРѕ СЃРґРµР»Р°РЅ.", nil, nil, 10000) 
 end
 
 function sms_nevzone()
-	news_manager.send_tip(db.actor, "Вы потеряли точку для фотосъёмки.\\nВернитесь на точку.", nil, nil, 5000) 
+	news_manager.send_tip(db.actor, "Р’С‹ РїРѕС‚РµСЂСЏР»Рё С‚РѕС‡РєСѓ РґР»СЏ С„РѕС‚РѕСЃСЉС‘РјРєРё.\\nР’РµСЂРЅРёС‚РµСЃСЊ РЅР° С‚РѕС‡РєСѓ.", nil, nil, 5000) 
 end
 
 function spawn_foto_01()
@@ -1831,43 +1831,43 @@ sim:create("metka_foto10",vector():set(69.357,8.459,279.171),181068,602) --pripy
 end
 
 function metka_foto_01()
-	metka_foto("metka_foto1","crlc_foto","Место для фото №1")
+	metka_foto("metka_foto1","crlc_foto","РњРµСЃС‚Рѕ РґР»СЏ С„РѕС‚Рѕ в„–1")
 end
 
 function metka_foto_02()
-	metka_foto("metka_foto2","crlc_foto","Место для фото №2")
+	metka_foto("metka_foto2","crlc_foto","РњРµСЃС‚Рѕ РґР»СЏ С„РѕС‚Рѕ в„–2")
 end
 
 function metka_foto_03()
-	metka_foto("metka_foto3","crlc_foto","Место для фотографирования")
+	metka_foto("metka_foto3","crlc_foto","РњРµСЃС‚Рѕ РґР»СЏ С„РѕС‚РѕРіСЂР°С„РёСЂРѕРІР°РЅРёСЏ")
 end
 
 function metka_foto_04()
-	metka_foto("metka_foto4","crlc_foto","Место для фотографирования")
+	metka_foto("metka_foto4","crlc_foto","РњРµСЃС‚Рѕ РґР»СЏ С„РѕС‚РѕРіСЂР°С„РёСЂРѕРІР°РЅРёСЏ")
 end
 
 function metka_foto_05()
-	metka_foto("metka_foto5","crlc_foto","Место для фотографирования")
+	metka_foto("metka_foto5","crlc_foto","РњРµСЃС‚Рѕ РґР»СЏ С„РѕС‚РѕРіСЂР°С„РёСЂРѕРІР°РЅРёСЏ")
 end
 
 function metka_foto_06()
-	metka_foto("metka_foto6","crlc_foto","Место для фотографирования")
+	metka_foto("metka_foto6","crlc_foto","РњРµСЃС‚Рѕ РґР»СЏ С„РѕС‚РѕРіСЂР°С„РёСЂРѕРІР°РЅРёСЏ")
 end
 
 function metka_foto_07()
-	metka_foto("metka_foto7","crlc_foto","Место для фотографирования")
+	metka_foto("metka_foto7","crlc_foto","РњРµСЃС‚Рѕ РґР»СЏ С„РѕС‚РѕРіСЂР°С„РёСЂРѕРІР°РЅРёСЏ")
 end
 
 function metka_foto_08()
-	metka_foto("metka_foto8","crlc_foto","Место для фотографирования")
+	metka_foto("metka_foto8","crlc_foto","РњРµСЃС‚Рѕ РґР»СЏ С„РѕС‚РѕРіСЂР°С„РёСЂРѕРІР°РЅРёСЏ")
 end
 
 function metka_foto_09()
-	metka_foto("metka_foto9","crlc_foto","Место для фотографирования")
+	metka_foto("metka_foto9","crlc_foto","РњРµСЃС‚Рѕ РґР»СЏ С„РѕС‚РѕРіСЂР°С„РёСЂРѕРІР°РЅРёСЏ")
 end
 
 function metka_foto_10()
-	metka_foto("metka_foto10","crlc_foto","Место для фотографирования")
+	metka_foto("metka_foto10","crlc_foto","РњРµСЃС‚Рѕ РґР»СЏ С„РѕС‚РѕРіСЂР°С„РёСЂРѕРІР°РЅРёСЏ")
 end
 
 function metka_foto(sect,type,text)
@@ -2091,17 +2091,17 @@ end
 
 function teleport_bar_arena()
 	level.add_pp_effector ("teleport.ppe", 25006, false)
-	db.actor:set_actor_position(vector():set(152.576,-21.060,79.153))--телепорт на Арену
+	db.actor:set_actor_position(vector():set(152.576,-21.060,79.153))--С‚РµР»РµРїРѕСЂС‚ РЅР° РђСЂРµРЅСѓ
 end
 
 function teleport_arena_bar1()
 	level.add_pp_effector ("teleport.ppe", 25006, false)
-	db.actor:set_actor_position(vector():set(223.220,-5.049,137.673))--телепорт в Бар1
+	db.actor:set_actor_position(vector():set(223.220,-5.049,137.673))--С‚РµР»РµРїРѕСЂС‚ РІ Р‘Р°СЂ1
 end
 
 function teleport_arena_bar2()
 	level.add_pp_effector ("teleport.ppe", 25006, false)
-	db.actor:set_actor_position(vector():set(150.567,0.098,78.843))--телепорт в Бар2
+	db.actor:set_actor_position(vector():set(150.567,0.098,78.843))--С‚РµР»РµРїРѕСЂС‚ РІ Р‘Р°СЂ2
 end
 
 function levsha_bar_have(task, info)
@@ -2247,7 +2247,7 @@ end
 function sound_heli_prom()
 	local snd_obj = xr_sound.get_safe_sound_object([[new\vertushka_prom]])
 	snd_obj:play(db.actor, 0, sound_object.s2d)
-	news_manager.send_tip(db.actor, "Всем внимание! Засёк вертушку. Чуть севернее фабрики", nil, nil, 10000) 
+	news_manager.send_tip(db.actor, "Р’СЃРµРј РІРЅРёРјР°РЅРёРµ! Р—Р°СЃС‘Рє РІРµСЂС‚СѓС€РєСѓ. Р§СѓС‚СЊ СЃРµРІРµСЂРЅРµРµ С„Р°Р±СЂРёРєРё", nil, nil, 10000) 
 end
 
 -----------------------------lukash_boom-----------------------------
@@ -2255,7 +2255,7 @@ end
 function spawn_pda_boom()
 	local sobj = alife():create("bomba",vector():set(-50.112,3.540,261.312),108130,905)
 	if sobj then
-		amk.save_variable("bomb", sobj.id)	-- pstor хранит только число/строку/логическое - таблицу в pstor не сохранить
+		amk.save_variable("bomb", sobj.id)	-- pstor С…СЂР°РЅРёС‚ С‚РѕР»СЊРєРѕ С‡РёСЃР»Рѕ/СЃС‚СЂРѕРєСѓ/Р»РѕРіРёС‡РµСЃРєРѕРµ - С‚Р°Р±Р»РёС†Сѓ РІ pstor РЅРµ СЃРѕС…СЂР°РЅРёС‚СЊ
 	end
 end
 
@@ -2263,12 +2263,12 @@ function lukash_boom()
 	local sim = alife()
 	local bpos,dist,obj
 	local bomb = amk.load_variable("bomb")
-	if bomb == nil then return end	-- зона bomba_restr зовёт без условий, бомба может быть ещё не заспавнена
+	if bomb == nil then return end	-- Р·РѕРЅР° bomba_restr Р·РѕРІС‘С‚ Р±РµР· СѓСЃР»РѕРІРёР№, Р±РѕРјР±Р° РјРѕР¶РµС‚ Р±С‹С‚СЊ РµС‰С‘ РЅРµ Р·Р°СЃРїР°РІРЅРµРЅР°
 	local id
 	if type(bomb) == "number" then
 		id = bomb
 	else
-		for k,v in pairs(bomb) do id = k end	-- старый формат из сейвов 1.0004: таблица {[id]=имя}
+		for k,v in pairs(bomb) do id = k end	-- СЃС‚Р°СЂС‹Р№ С„РѕСЂРјР°С‚ РёР· СЃРµР№РІРѕРІ 1.0004: С‚Р°Р±Р»РёС†Р° {[id]=РёРјСЏ}
 	end
 	if id == nil then return end
 	local sobj = sim:object(id)
@@ -2276,7 +2276,7 @@ function lukash_boom()
 	if bobj then
 		bpos = bobj:position()
 	elseif sobj then
-		bpos = vector():set(sobj.position.x,sobj.position.y,sobj.position.z)	-- клиентский объект оффлайн - берём координаты с серверного
+		bpos = vector():set(sobj.position.x,sobj.position.y,sobj.position.z)	-- РєР»РёРµРЅС‚СЃРєРёР№ РѕР±СЉРµРєС‚ РѕС„С„Р»Р°Р№РЅ - Р±РµСЂС‘Рј РєРѕРѕСЂРґРёРЅР°С‚С‹ СЃ СЃРµСЂРІРµСЂРЅРѕРіРѕ
 	end
 	if bpos == nil then return end
 	if sobj then
@@ -2284,7 +2284,7 @@ function lukash_boom()
 	end
 	amk.del_variable("bomb")
 	amk_particle.amk_particle({particle="explosions\\explosion_fuelcan",pos=bpos,sound=[[weapons\t_rgd5_explosion]]})
-	--for a=0,65534 do --вариант счастья и для ГГ
+	--for a=0,65534 do --РІР°СЂРёР°РЅС‚ СЃС‡Р°СЃС‚СЊСЏ Рё РґР»СЏ Р“Р“
 	for a = 1, 65534 do
 		obj = level.object_by_id(a)
 		if obj then
@@ -2318,7 +2318,7 @@ function lukash_angar_have(task, info)
 	return false
 end
 
-------------------------------------Расстрел------------------------------------
+------------------------------------Р Р°СЃСЃС‚СЂРµР»------------------------------------
 
 function set_rasstrel1(sid)
 	local npc = level_object_by_sid(30326)
@@ -2478,18 +2478,18 @@ function doctor_pismo_otdal(first_speaker, second_speaker)
 	new_dialog.out_item_much("doctor_pismo",1)
 end
 
---Таймер отложенного диалога
+--РўР°Р№РјРµСЂ РѕС‚Р»РѕР¶РµРЅРЅРѕРіРѕ РґРёР°Р»РѕРіР°
 function check_time_crystalls()
 	amk.g_start_timer("dialog_wait",0,0,25,0)
 end
 
---Проверка на прекондишен
+--РџСЂРѕРІРµСЂРєР° РЅР° РїСЂРµРєРѕРЅРґРёС€РµРЅ
 function check_timer_over(actor,npc)
 	return amk.has_g_timer("dialog_wait") == false
 end
 
 function sms_crystalls()
-	news_manager.send_tip(db.actor, "%c[255,255,75,75]Это Сахаров.\\nЗайдите ко мне, есть важные новости.", nil, nil, 20000) 
+	news_manager.send_tip(db.actor, "%c[255,255,75,75]Р­С‚Рѕ РЎР°С…Р°СЂРѕРІ.\\nР—Р°Р№РґРёС‚Рµ РєРѕ РјРЅРµ, РµСЃС‚СЊ РІР°Р¶РЅС‹Рµ РЅРѕРІРѕСЃС‚Рё.", nil, nil, 20000) 
 end
 
 function antirad_10_have()
@@ -2557,14 +2557,14 @@ function drink_zhorik_pivo(first_speaker, second_speaker)
 	local actor = db.actor
 	local buhnul = false
 	if actor then
-		--проверяем наличие пива у актёра
+		--РїСЂРѕРІРµСЂСЏРµРј РЅР°Р»РёС‡РёРµ РїРёРІР° Сѓ Р°РєС‚С‘СЂР°
 		local has_melnik, has_chernigov = has_drink()
-		--old_melnik предпочтительней
+		--old_melnik РїСЂРµРґРїРѕС‡С‚РёС‚РµР»СЊРЅРµР№
 		if has_melnik then
 			actor:eat(actor:object("old_melnik"))
 			return true
 		end
-		--если old_melnik нет, то пьём chernigov
+		--РµСЃР»Рё old_melnik РЅРµС‚, С‚Рѕ РїСЊС‘Рј chernigov
 		if has_chernigov then
 			actor:eat(actor:object("chernigov"))
 			buhnul = true
@@ -2650,18 +2650,18 @@ function pda_agent_aver_otdal(first_speaker, second_speaker)
 	new_dialog.out_item_much("pda_agent_aver",1)
 end
 
---Таймер отложенного диалога
+--РўР°Р№РјРµСЂ РѕС‚Р»РѕР¶РµРЅРЅРѕРіРѕ РґРёР°Р»РѕРіР°
 function check_time_brown()
 	amk.g_start_timer("brown_wait",0,0,20,0)
 end
 
---Проверка на прекондишен
+--РџСЂРѕРІРµСЂРєР° РЅР° РїСЂРµРєРѕРЅРґРёС€РµРЅ
 function timer_brown_over(actor,npc)
 	return amk.has_g_timer("brown_wait") == false
 end
 
 function sms_brown()
-	news_manager.send_tip(db.actor, "%c[255,255,75,75]Это Браун.\\nЗайди ко мне, Фотограф, мы расшифровали информацию.", nil, nil, 15000) 
+	news_manager.send_tip(db.actor, "%c[255,255,75,75]Р­С‚Рѕ Р‘СЂР°СѓРЅ.\\nР—Р°Р№РґРё РєРѕ РјРЅРµ, Р¤РѕС‚РѕРіСЂР°С„, РјС‹ СЂР°СЃС€РёС„СЂРѕРІР°Р»Рё РёРЅС„РѕСЂРјР°С†РёСЋ.", nil, nil, 15000) 
 end
 
 local action = false
@@ -2744,7 +2744,7 @@ function sd_brown_dal(first_speaker, second_speaker)
 end
 
 function sms_brown_proval()
-	news_manager.send_tip(db.actor, "%c[255,255,75,75]Фотограф не успел сделать фотографии базы.", nil, nil, 15000) 
+	news_manager.send_tip(db.actor, "%c[255,255,75,75]Р¤РѕС‚РѕРіСЂР°С„ РЅРµ СѓСЃРїРµР» СЃРґРµР»Р°С‚СЊ С„РѕС‚РѕРіСЂР°С„РёРё Р±Р°Р·С‹.", nil, nil, 15000) 
 end
 
 function check_time_road()
@@ -2753,7 +2753,7 @@ end
 
 function sms_road()
 	db.actor:give_info_portion("edik_need_help")
-	news_manager.send_tip(db.actor, "Всем, кто меня слышит!\\nНа нас напала стая диких кабанов.\\nПросим помощи.", nil, nil, 15000) 
+	news_manager.send_tip(db.actor, "Р’СЃРµРј, РєС‚Рѕ РјРµРЅСЏ СЃР»С‹С€РёС‚!\\nРќР° РЅР°СЃ РЅР°РїР°Р»Р° СЃС‚Р°СЏ РґРёРєРёС… РєР°Р±Р°РЅРѕРІ.\\nРџСЂРѕСЃРёРј РїРѕРјРѕС‰Рё.", nil, nil, 15000) 
 end
 
 function spawn_road_ataka()
@@ -2838,18 +2838,18 @@ function dron_plasch_otdal(first_speaker, second_speaker)
 	dialogs.relocate_money(first_speaker, 3000,"in")
 end
 
---Таймер отложенного диалога
+--РўР°Р№РјРµСЂ РѕС‚Р»РѕР¶РµРЅРЅРѕРіРѕ РґРёР°Р»РѕРіР°
 function check_time_brown2()
 	amk.g_start_timer("brown2_wait",0,0,20,0)
 end
 
---Проверка на прекондишен
+--РџСЂРѕРІРµСЂРєР° РЅР° РїСЂРµРєРѕРЅРґРёС€РµРЅ
 function timer_brown2_over(actor,npc)
 	return amk.has_g_timer("brown2_wait") == false
 end
 
 function sms_brown2()
-	news_manager.send_tip(db.actor, "%c[255,255,75,75]Это генерал Смит.\\nЗайди ко мне, Фотограф, есть дело.", nil, nil, 15000) 
+	news_manager.send_tip(db.actor, "%c[255,255,75,75]Р­С‚Рѕ РіРµРЅРµСЂР°Р» РЎРјРёС‚.\\nР—Р°Р№РґРё РєРѕ РјРЅРµ, Р¤РѕС‚РѕРіСЂР°С„, РµСЃС‚СЊ РґРµР»Рѕ.", nil, nil, 15000) 
 end
 
 function haron_case_dal(first_speaker, second_speaker)
@@ -2880,7 +2880,7 @@ function del_agents_prom()
 end
 
 function del_agent_prom()
---	 если товарищ из аллспавна, то нужно так:
+--	 РµСЃР»Рё С‚РѕРІР°СЂРёС‰ РёР· Р°Р»Р»СЃРїР°РІРЅР°, С‚Рѕ РЅСѓР¶РЅРѕ С‚Р°Рє:
 --	local sim = alife()
 --	local sobj = sim:object("agent_prom")
 --	if sobj then
@@ -2899,7 +2899,7 @@ function del_agent_prom()
 end
 
 function del_agent_prom_ohr1()
---	 если товарищ из аллспавна, то нужно так:
+--	 РµСЃР»Рё С‚РѕРІР°СЂРёС‰ РёР· Р°Р»Р»СЃРїР°РІРЅР°, С‚Рѕ РЅСѓР¶РЅРѕ С‚Р°Рє:
 --	local sim = alife()
 --	local sobj = sim:object("agent_prom_ohr1")
 --	if sobj then
@@ -2918,7 +2918,7 @@ function del_agent_prom_ohr1()
 end
 
 function del_agent_prom_ohr2()
---	 если товарищ из аллспавна, то нужно так:
+--	 РµСЃР»Рё С‚РѕРІР°СЂРёС‰ РёР· Р°Р»Р»СЃРїР°РІРЅР°, С‚Рѕ РЅСѓР¶РЅРѕ С‚Р°Рє:
 --	local sim = alife()
 --	local sobj = sim:object("agent_prom_ohr2")
 --	if sobj then
@@ -2937,7 +2937,7 @@ function del_agent_prom_ohr2()
 end
 
 function del_agent_prom_ohr3()
---	 если товарищ из аллспавна, то нужно так:
+--	 РµСЃР»Рё С‚РѕРІР°СЂРёС‰ РёР· Р°Р»Р»СЃРїР°РІРЅР°, С‚Рѕ РЅСѓР¶РЅРѕ С‚Р°Рє:
 --	local sim = alife()
 --	local sobj = sim:object("agent_prom_ohr3")
 --	if sobj then
@@ -2968,7 +2968,7 @@ function spawn_metka_lch_prom()
 end
 
 function metka_lch_prom()
-	metka_foto("metka_lch_prom","crlc_small","Место перехода в Лес")
+	metka_foto("metka_lch_prom","crlc_small","РњРµСЃС‚Рѕ РїРµСЂРµС…РѕРґР° РІ Р›РµСЃ")
 end
 
 function del_metka_lch_prom()
@@ -2980,7 +2980,7 @@ function spawn_metka_lch_aver()
 end
 
 function metka_lch_aver()
-	metka_foto("metka_lch_aver","crlc_small","Место перехода на Полигон")
+	metka_foto("metka_lch_aver","crlc_small","РњРµСЃС‚Рѕ РїРµСЂРµС…РѕРґР° РЅР° РџРѕР»РёРіРѕРЅ")
 end
 
 function del_metka_lch_aver()
@@ -2992,7 +2992,7 @@ function spawn_metka_strelka_aver()
 end
 
 function metka_strelka_aver()
-	metka_foto("metka_strelka_aver","crlc_small","Место встречи двух групп наёмников")
+	metka_foto("metka_strelka_aver","crlc_small","РњРµСЃС‚Рѕ РІСЃС‚СЂРµС‡Рё РґРІСѓС… РіСЂСѓРїРї РЅР°С‘РјРЅРёРєРѕРІ")
 end
 
 function del_metka_strelka_aver()
@@ -3009,18 +3009,18 @@ function levsha_crystalls_otdal(first_speaker, second_speaker)
 	new_dialog.out_item_much("wpn_foto",1)
 end
 
---Таймер отложенного диалога
+--РўР°Р№РјРµСЂ РѕС‚Р»РѕР¶РµРЅРЅРѕРіРѕ РґРёР°Р»РѕРіР°
 function check_time_levsha()
 	amk.g_start_timer("levsha_wait",0,10,0,0)
 end
 
---Проверка на прекондишен
+--РџСЂРѕРІРµСЂРєР° РЅР° РїСЂРµРєРѕРЅРґРёС€РµРЅ
 function timer_levsha_over(actor,npc)
 	return amk.has_g_timer("levsha_wait") == false
 end
 
 function sms_levsha()
-	news_manager.send_tip(db.actor, "%c[255,255,75,75]Это Левша.\\nФотограф, у меня всё готово.\\nЗаходи за своей фотокамерой.", nil, nil, 30000) 
+	news_manager.send_tip(db.actor, "%c[255,255,75,75]Р­С‚Рѕ Р›РµРІС€Р°.\\nР¤РѕС‚РѕРіСЂР°С„, Сѓ РјРµРЅСЏ РІСЃС‘ РіРѕС‚РѕРІРѕ.\\nР—Р°С…РѕРґРё Р·Р° СЃРІРѕРµР№ С„РѕС‚РѕРєР°РјРµСЂРѕР№.", nil, nil, 30000) 
 end
 
 function levsha_fotik_dal(first_speaker, second_speaker)
@@ -3120,15 +3120,15 @@ function pashalky_spawn()
 	end
 end
 
--- Процедура детектирования новых аномалий
+-- РџСЂРѕС†РµРґСѓСЂР° РґРµС‚РµРєС‚РёСЂРѕРІР°РЅРёСЏ РЅРѕРІС‹С… Р°РЅРѕРјР°Р»РёР№
 function ZondDrop(obj)
 	local section = obj:section()
 	local actor = db.actor
-	 -- если это наш зонд
+	 -- РµСЃР»Рё СЌС‚Рѕ РЅР°С€ Р·РѕРЅРґ
 	if actor and section and section == "anom_zond" then
-		-- ищем ближайшую аномалию
+		-- РёС‰РµРј Р±Р»РёР¶Р°Р№С€СѓСЋ Р°РЅРѕРјР°Р»РёСЋ
 		local id,pos,radius,dist = amk_anoms.get_nearest_anomaly(actor)
-		-- если есть аномалия
+		-- РµСЃР»Рё РµСЃС‚СЊ Р°РЅРѕРјР°Р»РёСЏ
 		if id then
 			local sect = level.object_by_id(id):section()
 			if sect then
@@ -3148,17 +3148,17 @@ function ZondDrop(obj)
 				elseif string.find(sect,"_gravi") and (radius - dist) > -1 then
 					info = "gravi_first_research"
 				end
-				-- если зонд внутри радиуса аномалии
+				-- РµСЃР»Рё Р·РѕРЅРґ РІРЅСѓС‚СЂРё СЂР°РґРёСѓСЃР° Р°РЅРѕРјР°Р»РёРё
 				if info then
-					-- удаляем зонд
+					-- СѓРґР°Р»СЏРµРј Р·РѕРЅРґ
 					remove_obj(obj,"new\\zond")
 					if not has_alife_info(info) and check_belt("anom_pribor") then
 						actor:give_info_portion(info)
 						sms_new_anom()
 					end
-					-- Сразу проверим на исследование всех видов аномалий и выдадим поршень
+					-- РЎСЂР°Р·Сѓ РїСЂРѕРІРµСЂРёРј РЅР° РёСЃСЃР»РµРґРѕРІР°РЅРёРµ РІСЃРµС… РІРёРґРѕРІ Р°РЅРѕРјР°Р»РёР№ Рё РІС‹РґР°РґРёРј РїРѕСЂС€РµРЅСЊ
 					if not has_alife_info("all_anom_research") and has_alife_info("zharka_first_research") and has_alife_info("galant_first_research") and has_alife_info("buzz_first_research") and has_alife_info("mincer_first_research") and has_alife_info("mosquit_first_research") and has_alife_info("ice_first_research") and has_alife_info("gravi_first_research") then
-						-- все виды аномалий исследованы
+						-- РІСЃРµ РІРёРґС‹ Р°РЅРѕРјР°Р»РёР№ РёСЃСЃР»РµРґРѕРІР°РЅС‹
 						actor:give_info_portion("all_anom_research")
 					end
 				end
@@ -3167,16 +3167,16 @@ function ZondDrop(obj)
 	end
 end
 
--- универсальная функция проверка объекта на поясе
+-- СѓРЅРёРІРµСЂСЃР°Р»СЊРЅР°СЏ С„СѓРЅРєС†РёСЏ РїСЂРѕРІРµСЂРєР° РѕР±СЉРµРєС‚Р° РЅР° РїРѕСЏСЃРµ
 function check_belt(name)
 	return inventory.belt[name] and inventory.belt[name] > 0
 end
--- универсальная функция удаление объекта со звуком
+-- СѓРЅРёРІРµСЂСЃР°Р»СЊРЅР°СЏ С„СѓРЅРєС†РёСЏ СѓРґР°Р»РµРЅРёРµ РѕР±СЉРµРєС‚Р° СЃРѕ Р·РІСѓРєРѕРј
 function remove_obj(obj,sound)
 	if obj then
 		local snd_obj = xr_sound.get_safe_sound_object(sound)
 		snd_obj:play_at_pos(db.actor, db.actor:position())
-		amk.remove_item(obj) -- удаляем объект
+		amk.remove_item(obj) -- СѓРґР°Р»СЏРµРј РѕР±СЉРµРєС‚
 	end
 end
 
@@ -3189,26 +3189,26 @@ function kruglov_pribor_otdal(first_speaker, second_speaker)
 	new_dialog.out_item_much("anom_pribor",1)
 end
 
--- проверка на наличие прибора
+-- РїСЂРѕРІРµСЂРєР° РЅР° РЅР°Р»РёС‡РёРµ РїСЂРёР±РѕСЂР°
 function has_anom_pribor()
 	local actor = db.actor
 	return actor and actor:object("anom_pribor")
 end
 
--- проверка на отсутствие прибора
+-- РїСЂРѕРІРµСЂРєР° РЅР° РѕС‚СЃСѓС‚СЃС‚РІРёРµ РїСЂРёР±РѕСЂР°
 function not_anom_pribor()
 	local actor = db.actor
 	return actor and not actor:object("anom_pribor")
 end
 
--- проверка на наличие зондов
+-- РїСЂРѕРІРµСЂРєР° РЅР° РЅР°Р»РёС‡РёРµ Р·РѕРЅРґРѕРІ
 function has_zond()
 	local actor = db.actor
 	return actor and actor:object("anom_zond")
         and actor:object("anom_pribor")
 end
 
--- проверка на отсутствие зондов
+-- РїСЂРѕРІРµСЂРєР° РЅР° РѕС‚СЃСѓС‚СЃС‚РІРёРµ Р·РѕРЅРґРѕРІ
 function not_zond()
 	local actor = db.actor
 	return actor and not actor:object("anom_zond")
@@ -3237,27 +3237,27 @@ function kruglov_detector_dal(first_speaker, second_speaker)
 	dialogs.relocate_item_section(second_speaker, "detector_advances", "in", 1)
 end
 
---Таймер отложенного диалога
+--РўР°Р№РјРµСЂ РѕС‚Р»РѕР¶РµРЅРЅРѕРіРѕ РґРёР°Р»РѕРіР°
 function check_time_kruglov()
 	amk.g_start_timer("kruglov_wait",0,3,0,0)
 end
 
---Проверка на прекондишен
+--РџСЂРѕРІРµСЂРєР° РЅР° РїСЂРµРєРѕРЅРґРёС€РµРЅ
 function timer_kruglov_over(actor,npc)
 	return amk.has_g_timer("kruglov_wait") == false
 end
 
 function sms_kruglov_detector()
-	news_manager.send_tip(db.actor, "%c[255,255,75,75]Это Круглов.\\nФотограф, твой Детектор Аномалий готов.\\nЗаходи в гости за подарком.", nil, nil, 20000) 
+	news_manager.send_tip(db.actor, "%c[255,255,75,75]Р­С‚Рѕ РљСЂСѓРіР»РѕРІ.\\nР¤РѕС‚РѕРіСЂР°С„, С‚РІРѕР№ Р”РµС‚РµРєС‚РѕСЂ РђРЅРѕРјР°Р»РёР№ РіРѕС‚РѕРІ.\\nР—Р°С…РѕРґРё РІ РіРѕСЃС‚Рё Р·Р° РїРѕРґР°СЂРєРѕРј.", nil, nil, 20000) 
 end
 
---Вывод сообщения о новой аномалии
+--Р’С‹РІРѕРґ СЃРѕРѕР±С‰РµРЅРёСЏ Рѕ РЅРѕРІРѕР№ Р°РЅРѕРјР°Р»РёРё
 function sms_new_anom()
-	news_manager.send_tip(db.actor, "%c[255,255,140,30]Исследован новый тип аномалий.\\n%c[default]Информация доступна для просмотра в ПДА, в разделе 'Аномалии'.", nil, nil, 12000) 
+	news_manager.send_tip(db.actor, "%c[255,255,140,30]РСЃСЃР»РµРґРѕРІР°РЅ РЅРѕРІС‹Р№ С‚РёРї Р°РЅРѕРјР°Р»РёР№.\\n%c[default]РРЅС„РѕСЂРјР°С†РёСЏ РґРѕСЃС‚СѓРїРЅР° РґР»СЏ РїСЂРѕСЃРјРѕС‚СЂР° РІ РџР”Рђ, РІ СЂР°Р·РґРµР»Рµ 'РђРЅРѕРјР°Р»РёРё'.", nil, nil, 12000) 
 end
---вывод сообщения о новом мутанте
+--РІС‹РІРѕРґ СЃРѕРѕР±С‰РµРЅРёСЏ Рѕ РЅРѕРІРѕРј РјСѓС‚Р°РЅС‚Рµ
 function sms_new_mutant()
-	news_manager.send_tip(db.actor, "%c[255,255,140,30]Исследован новый мутант.\\n%c[default]Информация доступна для просмотра в ПДА, в разделе 'Мутанты'.", nil, nil, 12000) 
+	news_manager.send_tip(db.actor, "%c[255,255,140,30]РСЃСЃР»РµРґРѕРІР°РЅ РЅРѕРІС‹Р№ РјСѓС‚Р°РЅС‚.\\n%c[default]РРЅС„РѕСЂРјР°С†РёСЏ РґРѕСЃС‚СѓРїРЅР° РґР»СЏ РїСЂРѕСЃРјРѕС‚СЂР° РІ РџР”Рђ, РІ СЂР°Р·РґРµР»Рµ 'РњСѓС‚Р°РЅС‚С‹'.", nil, nil, 12000) 
 end
 
 function del_haron_new()
@@ -3286,18 +3286,18 @@ function del_brown()
 	end
 end
 
---Таймер отложенного диалога
+--РўР°Р№РјРµСЂ РѕС‚Р»РѕР¶РµРЅРЅРѕРіРѕ РґРёР°Р»РѕРіР°
 function check_time_osvedom()
 	amk.g_start_timer("osvedom_wait",0,0,15,0)
 end
 
---Проверка на прекондишен
+--РџСЂРѕРІРµСЂРєР° РЅР° РїСЂРµРєРѕРЅРґРёС€РµРЅ
 function timer_osvedom_over(actor,npc)
 	return amk.has_g_timer("osvedom_wait") == false
 end
 
 function sms_osvedom()
-	news_manager.send_tip(db.actor, "%c[255,255,75,75]Это Связной.\\nФотограф, есть важная информация для тебя.\\nНайдёшь меня в Аномальном Лесу, в хижине Лесника.", nil, nil, 20000)
+	news_manager.send_tip(db.actor, "%c[255,255,75,75]Р­С‚Рѕ РЎРІСЏР·РЅРѕР№.\\nР¤РѕС‚РѕРіСЂР°С„, РµСЃС‚СЊ РІР°Р¶РЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ РґР»СЏ С‚РµР±СЏ.\\nРќР°Р№РґС‘С€СЊ РјРµРЅСЏ РІ РђРЅРѕРјР°Р»СЊРЅРѕРј Р›РµСЃСѓ, РІ С…РёР¶РёРЅРµ Р›РµСЃРЅРёРєР°.", nil, nil, 20000)
 	db.actor:give_info_portion("osvedom_vyzov1")
 end
 
@@ -3645,7 +3645,7 @@ function wulf_case_otdal(first_speaker, second_speaker)
 	dialogs.relocate_item_section(second_speaker, "filin_pribor", "in", 1)
 end
 
---Таймер отложенного диалога
+--РўР°Р№РјРµСЂ РѕС‚Р»РѕР¶РµРЅРЅРѕРіРѕ РґРёР°Р»РѕРіР°
 function check_time_mg_vyhod()
 	amk.g_start_timer("mg_vyhod_wait",0,0,10,0)
 end
@@ -3658,7 +3658,7 @@ sim:create("metka_vzryv3",vector():set(-105.022,2.188,-66.359),205675,1249)
 end
 
 function sms_mg_vyhod()
-	news_manager.send_tip(db.actor, "%c[255,255,75,75]Это Генрих.\\nВыдвигаемся!", nil, nil, 20000)
+	news_manager.send_tip(db.actor, "%c[255,255,75,75]Р­С‚Рѕ Р“РµРЅСЂРёС….\\nР’С‹РґРІРёРіР°РµРјСЃСЏ!", nil, nil, 20000)
 	db.actor:give_info_portion("mg_vyhod_start") 
 end
 
@@ -3690,7 +3690,7 @@ function mg_vzryv1()
 	local sim = alife()
 	local obj,sobj
 	for a = 1, 65534 do
-		-- ищем на текущем уровне
+		-- РёС‰РµРј РЅР° С‚РµРєСѓС‰РµРј СѓСЂРѕРІРЅРµ
 		obj = level.object_by_id(a)
 		if obj and obj:section() == "metka_vzryv1" then
 			amk_particle.amk_particle({particle="explosions\\explosion_fuelcan", pos=obj:position(), sound="weapons\\t_rgd5_explosion"})
@@ -3707,7 +3707,7 @@ function mg_vzryv2()
 	local sim = alife()
 	local obj,sobj
 	for a = 1, 65534 do
-		-- ищем на текущем уровне
+		-- РёС‰РµРј РЅР° С‚РµРєСѓС‰РµРј СѓСЂРѕРІРЅРµ
 		obj = level.object_by_id(a)
 		if obj and obj:section() == "metka_vzryv2" then
 			amk_particle.amk_particle({particle="explosions\\explosion_fuelcan", pos=obj:position(), sound="weapons\\t_rgd5_explosion"})
@@ -3724,7 +3724,7 @@ function mg_vzryv3()
 	local sim = alife()
 	local obj,sobj
 	for a = 1, 65534 do
-		-- ищем на текущем уровне
+		-- РёС‰РµРј РЅР° С‚РµРєСѓС‰РµРј СѓСЂРѕРІРЅРµ
 		obj = level.object_by_id(a)
 		if obj and obj:section() == "metka_vzryv3" then
 			amk_particle.amk_particle({particle="explosions\\explosion_fuelcan", pos=obj:position(), sound="weapons\\t_rgd5_explosion"})
@@ -3964,9 +3964,9 @@ function brown_shoot()
 	snd_obj:play(db.actor, 0, sound_object.s2d)
 end
 
-------------Убивание солдат на базе на Полигоне------------
+------------РЈР±РёРІР°РЅРёРµ СЃРѕР»РґР°С‚ РЅР° Р±Р°Р·Рµ РЅР° РџРѕР»РёРіРѕРЅРµ------------
 
---таблица объектов для киляния
+--С‚Р°Р±Р»РёС†Р° РѕР±СЉРµРєС‚РѕРІ РґР»СЏ РєРёР»СЏРЅРёСЏ
 local baza_tbl={
 ["road_bandana"] = true,
 ["road_bandana1"] = true,
@@ -3996,20 +3996,20 @@ local baza_tbl={
 ["baza_ukr_ohr2"] = true
 }
 
---Вызов убийства по таблице baza_tbl
+--Р’С‹Р·РѕРІ СѓР±РёР№СЃС‚РІР° РїРѕ С‚Р°Р±Р»РёС†Рµ baza_tbl
 function kill_baza_nps()
 	kill_group(baza_tbl)
 end
 
---Собственно убийство группы
+--РЎРѕР±СЃС‚РІРµРЅРЅРѕ СѓР±РёР№СЃС‚РІРѕ РіСЂСѓРїРїС‹
 function kill_group(tbl)
 	local obj,sect
 	for a = 1, 65534 do
 		obj = level.object_by_id(a)
 		sect = obj and obj:section()
-		-- cовпадение с таблицей по секции
+		-- cРѕРІРїР°РґРµРЅРёРµ СЃ С‚Р°Р±Р»РёС†РµР№ РїРѕ СЃРµРєС†РёРё
 		if tbl[sect] then
-			--это НПС и он еще живой
+			--СЌС‚Рѕ РќРџРЎ Рё РѕРЅ РµС‰Рµ Р¶РёРІРѕР№
 			if IsStalker(obj) and obj:alive() then
 				obj:kill(obj)
 			end
@@ -4017,17 +4017,17 @@ function kill_group(tbl)
 	end
 end
 
---------------------Блокировка движения актёра----------------------
+--------------------Р‘Р»РѕРєРёСЂРѕРІРєР° РґРІРёР¶РµРЅРёСЏ Р°РєС‚С‘СЂР°----------------------
 
---Блокировка движения
+--Р‘Р»РѕРєРёСЂРѕРІРєР° РґРІРёР¶РµРЅРёСЏ
 function no_move()
-	--запрет управления
+	--Р·Р°РїСЂРµС‚ СѓРїСЂР°РІР»РµРЅРёСЏ
 	level.disable_input()
 end
 
---Разблокировка движения
+--Р Р°Р·Р±Р»РѕРєРёСЂРѕРІРєР° РґРІРёР¶РµРЅРёСЏ
 function restore_move()
-	--разрешение управления
+	--СЂР°Р·СЂРµС€РµРЅРёРµ СѓРїСЂР°РІР»РµРЅРёСЏ
 	level.enable_input()
 end
 
@@ -4102,22 +4102,22 @@ function ploymar_dva_spawn()
      alife():create("uchen_061",vector():set(263.490,-12.661,123.003),884278,1671)
 end
 
---Таймер отложенного диалога
+--РўР°Р№РјРµСЂ РѕС‚Р»РѕР¶РµРЅРЅРѕРіРѕ РґРёР°Р»РѕРіР°
 function check_time_ploymar()
 	amk.g_start_timer("ploymar_wait",0,0,5,0)
 end
 
---Проверка на прекондишен
+--РџСЂРѕРІРµСЂРєР° РЅР° РїСЂРµРєРѕРЅРґРёС€РµРЅ
 function check_ploymar_over(actor,npc)
 	return amk.has_g_timer("ploymar_wait") == false
 end
 
 function sms_ploymar()
-	news_manager.send_tip(db.actor, "%c[255,255,75,75]Это Браун.\\nЗайди ко мне, есть новые сведения.", nil, nil, 20000) 
+	news_manager.send_tip(db.actor, "%c[255,255,75,75]Р­С‚Рѕ Р‘СЂР°СѓРЅ.\\nР—Р°Р№РґРё РєРѕ РјРЅРµ, РµСЃС‚СЊ РЅРѕРІС‹Рµ СЃРІРµРґРµРЅРёСЏ.", nil, nil, 20000) 
 db.actor:give_info_portion("ploymar_finish")
 end
 
-function enemy_ploymar() --справочная функция
+function enemy_ploymar() --СЃРїСЂР°РІРѕС‡РЅР°СЏ С„СѓРЅРєС†РёСЏ
 	local npc
 	for i = 1, 65534 do
 		npc = level.object_by_id(i)
@@ -4180,14 +4180,14 @@ end
 
 function teleport_antivyhod1()
 level.add_pp_effector ("teleport.ppe", 25005, false)
-db.actor:set_actor_position(vector():set(-88.123,-16.462,-70.389))--недалеко от лаза
+db.actor:set_actor_position(vector():set(-88.123,-16.462,-70.389))--РЅРµРґР°Р»РµРєРѕ РѕС‚ Р»Р°Р·Р°
 local snd_obj = xr_sound.get_safe_sound_object([[anomaly\teleport_work_1]])
 snd_obj:play(db.actor, 0, sound_object.s2d)
 end
 
 function teleport_antivyhod2()
 level.add_pp_effector ("teleport.ppe", 25005, false)
-db.actor:set_actor_position(vector():set(-70.685,-6.874,-71.567))--обратно на пол в тайнике
+db.actor:set_actor_position(vector():set(-70.685,-6.874,-71.567))--РѕР±СЂР°С‚РЅРѕ РЅР° РїРѕР» РІ С‚Р°Р№РЅРёРєРµ
 local snd_obj = xr_sound.get_safe_sound_object([[anomaly\teleport_work_1]])
 snd_obj:play(db.actor, 0, sound_object.s2d)
 db.actor:give_info_portion("actor_otbrosilo")
@@ -4216,7 +4216,7 @@ function ograblenie_aground()
 	level.add_cam_effector("camera_effects\\prison_1.anm", 25, false, "")
 	level.add_pp_effector("yantar_underground_psi.ppe", 2007, false)
 	level.add_pp_effector("total_recall.ppe", 2008, false)
-        actor:set_actor_position(vector():set(-70.685,-6.874,-71.567))--на пол в тайнике
+        actor:set_actor_position(vector():set(-70.685,-6.874,-71.567))--РЅР° РїРѕР» РІ С‚Р°Р№РЅРёРєРµ
         actor:set_actor_direction(vector():set(0,0,0))
 	local snd_obj = xr_sound.get_safe_sound_object([[characters_voice\human_01\stalker\states\breath\breath_2]])
 	snd_obj:play(db.actor, 0, sound_object.s2d)
@@ -4239,7 +4239,7 @@ function del_mihas_und()
 	end
 end
 
---Таймер отложенного диалога
+--РўР°Р№РјРµСЂ РѕС‚Р»РѕР¶РµРЅРЅРѕРіРѕ РґРёР°Р»РѕРіР°
 function check_time_taynik()
 	amk.g_start_timer("taynik_wait",0,0,1,0)
 end
@@ -4282,18 +4282,18 @@ function del_mihas_zapiski()
 	end
 end
 
---Таймер отложенного диалога
+--РўР°Р№РјРµСЂ РѕС‚Р»РѕР¶РµРЅРЅРѕРіРѕ РґРёР°Р»РѕРіР°
 function check_time_brown_dva()
 	amk.g_start_timer("brown_dva_wait",0,0,15,0)
 end
 
---Проверка на прекондишен
+--РџСЂРѕРІРµСЂРєР° РЅР° РїСЂРµРєРѕРЅРґРёС€РµРЅ
 function check_brown_dva_over(actor,npc)
 	return amk.has_g_timer("brown_dva_wait") == false
 end
 
 function sms_brown_dva()
-	news_manager.send_tip(db.actor, "%c[255,255,75,75]Фотограф, Это Браун.\\nЗайди ко мне, информация с ноутбука расшифрована.", nil, nil, 20000) 
+	news_manager.send_tip(db.actor, "%c[255,255,75,75]Р¤РѕС‚РѕРіСЂР°С„, Р­С‚Рѕ Р‘СЂР°СѓРЅ.\\nР—Р°Р№РґРё РєРѕ РјРЅРµ, РёРЅС„РѕСЂРјР°С†РёСЏ СЃ РЅРѕСѓС‚Р±СѓРєР° СЂР°СЃС€РёС„СЂРѕРІР°РЅР°.", nil, nil, 20000) 
 end
 
 function brown_six_dialog_dal(first_speaker, second_speaker)
@@ -4313,7 +4313,7 @@ function spawn_trup_x18()
 end
 
 function sms_codedoor_x18()
-news_manager.send_tip(db.actor, "%c[255,255,75,75]Код для двери: 19475", nil, nil, 20000) 
+news_manager.send_tip(db.actor, "%c[255,255,75,75]РљРѕРґ РґР»СЏ РґРІРµСЂРё: 19475", nil, nil, 20000) 
 end
 
 function brown_six_dialog_nagrada(first_speaker, second_speaker)
@@ -4426,7 +4426,7 @@ function set_metka_povodyr()
   local obj = alife():object(a)
   if obj then
    if obj:section_name()=="pseudodog_povodyr" then
-    amk.add_spot_on_map(obj.id,"blue_location","Поводырь")
+    amk.add_spot_on_map(obj.id,"blue_location","РџРѕРІРѕРґС‹СЂСЊ")
     return
    end
   end
@@ -4485,22 +4485,22 @@ function brown_seven_dialog_nagrada(first_speaker, second_speaker)
         flamethrower.relocate_n_items_section(second_speaker, "grenade_f1", "in", 5)
 end
 
---Таймер отложенного диалога
+--РўР°Р№РјРµСЂ РѕС‚Р»РѕР¶РµРЅРЅРѕРіРѕ РґРёР°Р»РѕРіР°
 function brown_dyshlo_wait()
    amk.g_start_timer("brown_dyshlo",0,0,30,0)
 end
 
---Проверка на прекондишен
+--РџСЂРѕРІРµСЂРєР° РЅР° РїСЂРµРєРѕРЅРґРёС€РµРЅ
 function timer_dyshlo_over(actor,npc)
    return amk.has_g_timer("brown_dyshlo") == false
 end
 
 function sms_brown_dyshlo()
-   news_manager.send_tip(db.actor, "%c[255,255,75,75]Это Браун.\\nЗайди ко мне, Фотограф,\\nесть важные новости по 'Червоне Дышло'.", nil, nil, 15000)
+   news_manager.send_tip(db.actor, "%c[255,255,75,75]Р­С‚Рѕ Р‘СЂР°СѓРЅ.\\nР—Р°Р№РґРё РєРѕ РјРЅРµ, Р¤РѕС‚РѕРіСЂР°С„,\\nРµСЃС‚СЊ РІР°Р¶РЅС‹Рµ РЅРѕРІРѕСЃС‚Рё РїРѕ 'Р§РµСЂРІРѕРЅРµ Р”С‹С€Р»Рѕ'.", nil, nil, 15000)
 db.actor:give_info_portion("brown_timer_dyshlo_over") 
 end
 
-------------Убивание наёмников на фабрике в Червоне Дышло------------
+------------РЈР±РёРІР°РЅРёРµ РЅР°С‘РјРЅРёРєРѕРІ РЅР° С„Р°Р±СЂРёРєРµ РІ Р§РµСЂРІРѕРЅРµ Р”С‹С€Р»Рѕ------------
 
 function kill_dyshlo_killers(first_speaker, second_speaker)
 	local sim = alife()
@@ -4574,7 +4574,7 @@ function mamasha_spawn()
    alife():create("mamasha",vector():set(83.162,-0.995,85.644),1074414,747)
 end
 
-function zapadlo_spawn() -- Для теста
+function zapadlo_spawn() -- Р”Р»СЏ С‚РµСЃС‚Р°
    alife():create("zapadlo",vector():set(107.596,30.039,-145.233),407868,0)
    alife():create("taynik_zapadlo",vector():set(107.618,30.039,-144.480),407868,0)
 end
@@ -4653,18 +4653,18 @@ function brown_x10_spawn()
 alife():create("brown_tri",vector():set(16.719,-8.989,25.268),8421,351)
 end
 
--- спавн Шубина в X10
+-- СЃРїР°РІРЅ РЁСѓР±РёРЅР° РІ X10
 function shubin_x10_spawn(param1, param2)
-    local pos = vector():set(18.103,-8.991,26.314) --зададим позицию
-	local sobj = alife():create("shubin_x10",pos,8514,351) --создадим Шубина
+    local pos = vector():set(18.103,-8.991,26.314) --Р·Р°РґР°РґРёРј РїРѕР·РёС†РёСЋ
+	local sobj = alife():create("shubin_x10",pos,8514,351) --СЃРѕР·РґР°РґРёРј РЁСѓР±РёРЅР°
         if sobj then
-		amk.save_variable("ShubinX10ID", sobj.id) --сохраняем ИД		
-		level.add_pp_effector ("blink.ppe", 9115, false) --создадим вспышку
+		amk.save_variable("ShubinX10ID", sobj.id) --СЃРѕС…СЂР°РЅСЏРµРј РР”		
+		level.add_pp_effector ("blink.ppe", 9115, false) --СЃРѕР·РґР°РґРёРј РІСЃРїС‹С€РєСѓ
 		amk_particle.amk_particle({particle="anomaly2\\group_items\\mauv_shubin", pos=pos, sound="$no_sound",true})
 	end
 end
 
--- удаление Шубина в X10
+-- СѓРґР°Р»РµРЅРёРµ РЁСѓР±РёРЅР° РІ X10
 function del_shubin_x10(actor, obj)
 	local shubinx10_id = amk.load_variable("ShubinX10ID", nil)
 	if shubinx10_id then
@@ -4674,8 +4674,8 @@ function del_shubin_x10(actor, obj)
 			local pos = obj:position()
 			amk_particle.amk_particle({particle="anomaly2\\group_items\\mauv_shubin_exit", pos=pos, sound="$no_sound"})
 		end
-		if sobj then --Шубин в Х10 существует
-			alife():release(sobj,true) --удаляем серверный объект
+		if sobj then --РЁСѓР±РёРЅ РІ РҐ10 СЃСѓС‰РµСЃС‚РІСѓРµС‚
+			alife():release(sobj,true) --СѓРґР°Р»СЏРµРј СЃРµСЂРІРµСЂРЅС‹Р№ РѕР±СЉРµРєС‚
 			amk.del_variable("ShubinX10ID")
 			if has_alife_info("shubin_enemy2") then 
 			local snd_obj = xr_sound.get_safe_sound_object([[characters_voice\scenario\backup\shubin_wound]])
@@ -4767,7 +4767,7 @@ function actor_loshara_shubin()
 end
 
 function sms_plichko_dyshlo()
-   news_manager.send_tip(db.actor, "%c[255,255,75,75]Это сержант Пличко.\\nЗайди ко мне, Фотограф,\\nесть важное дело.", nil, nil, 15000) 
+   news_manager.send_tip(db.actor, "%c[255,255,75,75]Р­С‚Рѕ СЃРµСЂР¶Р°РЅС‚ РџР»РёС‡РєРѕ.\\nР—Р°Р№РґРё РєРѕ РјРЅРµ, Р¤РѕС‚РѕРіСЂР°С„,\\nРµСЃС‚СЊ РІР°Р¶РЅРѕРµ РґРµР»Рѕ.", nil, nil, 15000) 
 end
 
 function killers6_dyshlo_spawn()
@@ -4961,7 +4961,7 @@ end
 
 ---------------------------------------last_part---------------------------------
 
---Таймер отложенного диалога
+--РўР°Р№РјРµСЂ РѕС‚Р»РѕР¶РµРЅРЅРѕРіРѕ РґРёР°Р»РѕРіР°
 function check_prip_zadan()
 	amk.g_start_timer("prip_zadan",0,0,1,0)
 end
@@ -5000,18 +5000,18 @@ local npc = level_object_by_sid(30185)
     npc:set_relation (game_object.enemy, db.actor)
 end
 
---Таймер отложенного диалога
+--РўР°Р№РјРµСЂ РѕС‚Р»РѕР¶РµРЅРЅРѕРіРѕ РґРёР°Р»РѕРіР°
 function check_foto_smith()
 	amk.g_start_timer("smith_foto_wait",0,0,7,0)
 end
 
---Проверка на прекондишен
+--РџСЂРѕРІРµСЂРєР° РЅР° РїСЂРµРєРѕРЅРґРёС€РµРЅ
 function timer_smith_foto_over(actor,npc)
 	return amk.has_g_timer("smith_foto_wait") == false
 end
 
 function sms_foto_smith()
-	news_manager.send_tip(db.actor, "%c[255,255,75,75]Это генерал Смит.\\nЗайди ко мне, Фотограф, давненько не виделись.", nil, nil, 20000) 
+	news_manager.send_tip(db.actor, "%c[255,255,75,75]Р­С‚Рѕ РіРµРЅРµСЂР°Р» РЎРјРёС‚.\\nР—Р°Р№РґРё РєРѕ РјРЅРµ, Р¤РѕС‚РѕРіСЂР°С„, РґР°РІРЅРµРЅСЊРєРѕ РЅРµ РІРёРґРµР»РёСЃСЊ.", nil, nil, 20000) 
 end
 
 function del_shubin3()
@@ -5155,18 +5155,18 @@ function del_brown_sar()
 	end
 end
 
--- спавн Шубина в Саркофаге
+-- СЃРїР°РІРЅ РЁСѓР±РёРЅР° РІ РЎР°СЂРєРѕС„Р°РіРµ
 function shubin_sar_spawn(param1, param2)
-    local pos = vector():set(49.600,16.874,29.251) --зададим позицию
-	local sobj = alife():create("shubin_sar",pos,8680,1423) --создадим Шубина
+    local pos = vector():set(49.600,16.874,29.251) --Р·Р°РґР°РґРёРј РїРѕР·РёС†РёСЋ
+	local sobj = alife():create("shubin_sar",pos,8680,1423) --СЃРѕР·РґР°РґРёРј РЁСѓР±РёРЅР°
         if sobj then
-		amk.save_variable("ShubinSarID", sobj.id) --сохраняем ИД		
-		level.add_pp_effector ("blink.ppe", 9115, false) --создадим вспышку
+		amk.save_variable("ShubinSarID", sobj.id) --СЃРѕС…СЂР°РЅСЏРµРј РР”		
+		level.add_pp_effector ("blink.ppe", 9115, false) --СЃРѕР·РґР°РґРёРј РІСЃРїС‹С€РєСѓ
 		--amk_particle.amk_particle({particle="anomaly2\\group_items\\mauv_shubin", pos=pos, sound="$no_sound",true})
 	end
 end
 
--- удаление Шубина в Саркофаге
+-- СѓРґР°Р»РµРЅРёРµ РЁСѓР±РёРЅР° РІ РЎР°СЂРєРѕС„Р°РіРµ
 function del_shubin_sar(actor, obj)
 	local shubinsar_id = amk.load_variable("ShubinSarID", nil)
 	if shubinsar_id then
@@ -5176,8 +5176,8 @@ function del_shubin_sar(actor, obj)
 			local pos = obj:position()
 			amk_particle.amk_particle({particle="anomaly2\\group_items\\mauv_shubin_exit", pos=pos, sound="$no_sound"})
 		end
-		if sobj then --Шубин в Саркофаге существует
-			alife():release(sobj,true) --удаляем серверный объект
+		if sobj then --РЁСѓР±РёРЅ РІ РЎР°СЂРєРѕС„Р°РіРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚
+			alife():release(sobj,true) --СѓРґР°Р»СЏРµРј СЃРµСЂРІРµСЂРЅС‹Р№ РѕР±СЉРµРєС‚
 			amk.del_variable("ShubinSarID")
 			if has_alife_info("shubin_sar_enemy") then 
 			local snd_obj = xr_sound.get_safe_sound_object([[characters_voice\scenario\backup\shubin_wound]])
@@ -5187,7 +5187,7 @@ function del_shubin_sar(actor, obj)
 	end
 end
 
-------------------------Телепортация от SPY.NET к кодовой двери------------------------
+------------------------РўРµР»РµРїРѕСЂС‚Р°С†РёСЏ РѕС‚ SPY.NET Рє РєРѕРґРѕРІРѕР№ РґРІРµСЂРё------------------------
 
 function trans_actor_sar()
 	local actor = db.actor
@@ -5229,7 +5229,7 @@ local snd_obj = xr_sound.get_safe_sound_object([[weapons\deagle\deagle_shot]])
 snd_obj:play(db.actor, 0, sound_object.s2d)
 end
 
--- забьем до смерти всех монолитовцев в округе
+-- Р·Р°Р±СЊРµРј РґРѕ СЃРјРµСЂС‚Рё РІСЃРµС… РјРѕРЅРѕР»РёС‚РѕРІС†РµРІ РІ РѕРєСЂСѓРіРµ
 function kill_monolith()
  local obj
  for a=1, 65534 do
@@ -5324,7 +5324,7 @@ local custom = "[logic]\ncfg = scripts\\foto\\restr\\bluetree1_restr.ltx"
 rewrite_restrictor(sobj, custom,1)
 end
 
----------------------------Призраки----------------------------
+---------------------------РџСЂРёР·СЂР°РєРё----------------------------
 
 function spawn_inv_bluetree()
 local sim = alife()

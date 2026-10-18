@@ -1,6 +1,6 @@
---' Модуль сна $DreamMod '--
+--' РњРѕРґСѓР»СЊ СЃРЅР° $DreamMod '--
 ---' revision and adaptation for NS_2012 lsclon 29.12.12 '---
---' Антисмерть - проверка на снижение показателя жизни и наличия кровотечения '--
+--' РђРЅС‚РёСЃРјРµСЂС‚СЊ - РїСЂРѕРІРµСЂРєР° РЅР° СЃРЅРёР¶РµРЅРёРµ РїРѕРєР°Р·Р°С‚РµР»СЏ Р¶РёР·РЅРё Рё РЅР°Р»РёС‡РёСЏ РєСЂРѕРІРѕС‚РµС‡РµРЅРёСЏ '--
 
 class "ar_sleep" (cse_alife_creature_actor)
 
@@ -18,7 +18,7 @@ end
 
 function add_to_binder(actor,ini,scheme,section,storage)
 	local new_action = ar_sleep(actor,storage)
-	-- Регистрируем все actions, в которых будет вызван метод update()
+	-- Р РµРіРёСЃС‚СЂРёСЂСѓРµРј РІСЃРµ actions, РІ РєРѕС‚РѕСЂС‹С… Р±СѓРґРµС‚ РІС‹Р·РІР°РЅ РјРµС‚РѕРґ update()
 	xr_logic.subscribe_action_for_events(actor,storage,new_action)
 end
 

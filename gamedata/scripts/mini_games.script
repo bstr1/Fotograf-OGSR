@@ -2,61 +2,61 @@
 
 --[[ -----------------------------------------------------------------------------------------------
  File           : mini_games.script
- Description    : Мини игры
- Copyright      : 2011 © Stalk15 
+ Description    : РњРёРЅРё РёРіСЂС‹
+ Copyright      : 2011 В© Stalk15 
  Author         : Stalk15
  Last edit      : 26.02.2011 
 
 --]] -----------------------------------------------------------------------------------------------
 
 local tCards = {
-	[6.001]="card_six_с",
+	[6.001]="card_six_СЃ",
 	[6.002]="card_six_p",
 	[6.003]="card_six_b",
 	[6.004]="card_six_k",
 
-	[7.001]="card_seven_с",
+	[7.001]="card_seven_СЃ",
 	[7.002]="card_seven_p",
 	[7.003]="card_seven_b",
 	[7.004]="card_seven_k",
 
-	[8.001]="card_eight_с",
+	[8.001]="card_eight_СЃ",
 	[8.002]="card_eight_p",
 	[8.003]="card_eight_b",
 	[8.004]="card_eight_k",
 
-	[9.001]="card_nine_с",
+	[9.001]="card_nine_СЃ",
 	[9.002]="card_nine_p",
 	[9.003]="card_nine_b",
 	[9.004]="card_nine_k",
 
-	[10.001]="card_ten_с",
+	[10.001]="card_ten_СЃ",
 	[10.002]="card_ten_p",
 	[10.003]="card_ten_b",
 	[10.004]="card_ten_k",
 
-	[2.001]="card_valet_с",
+	[2.001]="card_valet_СЃ",
 	[2.002]="card_valet_p",
 	[2.003]="card_valet_b",
 	[2.004]="card_valet_k",
 	
-	[3.001]="card_dama_с",
+	[3.001]="card_dama_СЃ",
 	[3.002]="card_dama_p",
 	[3.003]="card_dama_b",
 	[3.004]="card_dama_k",
 	
-	[4.001]="card_king_с",
+	[4.001]="card_king_СЃ",
 	[4.002]="card_king_p",
 	[4.003]="card_king_b",
 	[4.004]="card_king_k",
 	
-	[11.001]="card_tuz_с",
+	[11.001]="card_tuz_СЃ",
 	[11.002]="card_tuz_p",
 	[11.003]="card_tuz_b",
 	[11.004]="card_tuz_k"
 }
 
----///////////////////////////////////////// Игра "21 Очко"/////////////////////////////////////////---
+---///////////////////////////////////////// РРіСЂР° "21 РћС‡РєРѕ"/////////////////////////////////////////---
 
 local Btn1, Btn2, Btn3, Btn4, Btn5
 local ActorPoints, NpcPoints = 0, 0
@@ -83,7 +83,7 @@ function card_game_21p:InitControls()
     xml:InitStatic("card_game_21p:picture_21p", self)
 	xml:InitStatic("card_game_21p:txt_stavka", self)
 	self.edit_stavka = xml:InitEditBox("card_game_21p:edit_box", self)
-	--/Кнопки
+	--/РљРЅРѕРїРєРё
 	self:Register(xml:Init3tButton("card_game_21p:btn_start_game", self), "btn_start_game")
 	self:Register(xml:Init3tButton("card_game_21p:take_card", self), "take_card")	
 	self:Register(xml:Init3tButton("card_game_21p:perevod_hoda", self), "perevod_hoda")
@@ -111,7 +111,7 @@ end
 function card_game_21p:card_game_21_start()
   local text = self.edit_stavka:GetText()
 	if tonumber(text) > 5000 or tonumber(text) < 500 or db.actor:money() < tonumber(text) then
-		level.start_stop_menu(mini_games.GameMessege("Минимальная ставка - 500, максимальная - 5000.", "Не корректная ставка или у Вас нет таких денег!"), true)
+		level.start_stop_menu(mini_games.GameMessege("РњРёРЅРёРјР°Р»СЊРЅР°СЏ СЃС‚Р°РІРєР° - 500, РјР°РєСЃРёРјР°Р»СЊРЅР°СЏ - 5000.", "РќРµ РєРѕСЂСЂРµРєС‚РЅР°СЏ СЃС‚Р°РІРєР° РёР»Рё Сѓ Р’Р°СЃ РЅРµС‚ С‚Р°РєРёС… РґРµРЅРµРі!"), true)
 		return false
 	end
 	Stavka = tonumber(text)
@@ -246,12 +246,12 @@ local NpcCard2
 		self:add_npc_card(tNpcCards[i])
 	end
 	if ActorPoints == NpcPoints or ActorPoints > 21 and NpcPoints > 21 then
-		level.start_stop_menu(mini_games.GameMessege("Ваши очки: " ..math.floor(ActorPoints).. " . Очки соперника: ".. math.floor(NpcPoints), "Ничья!"), true)
+		level.start_stop_menu(mini_games.GameMessege("Р’Р°С€Рё РѕС‡РєРё: " ..math.floor(ActorPoints).. " . РћС‡РєРё СЃРѕРїРµСЂРЅРёРєР°: ".. math.floor(NpcPoints), "РќРёС‡СЊСЏ!"), true)
 	elseif ActorPoints > NpcPoints and ActorPoints < 22 or NpcPoints > 21 and ActorPoints < 22 then
-		level.start_stop_menu(mini_games.GameMessege("Ваши очки: " ..math.floor(ActorPoints).. " . Очки соперника: ".. math.floor(NpcPoints).. ". Получены деньги:"..Stavka, "Вы выиграли!"), true)
+		level.start_stop_menu(mini_games.GameMessege("Р’Р°С€Рё РѕС‡РєРё: " ..math.floor(ActorPoints).. " . РћС‡РєРё СЃРѕРїРµСЂРЅРёРєР°: ".. math.floor(NpcPoints).. ". РџРѕР»СѓС‡РµРЅС‹ РґРµРЅСЊРіРё:"..Stavka, "Р’С‹ РІС‹РёРіСЂР°Р»Рё!"), true)
 		db.actor:give_money(Stavka)
 	elseif ActorPoints < NpcPoints and NpcPoints < 22 or ActorPoints > 21 and NpcPoints < 22 then
-		level.start_stop_menu(mini_games.GameMessege("Ваши очки: " ..math.floor(ActorPoints).. " . Очки соперника: ".. math.floor(NpcPoints).. ". Потеряны деньги:"..Stavka, "Вы проиграли!"), true)
+		level.start_stop_menu(mini_games.GameMessege("Р’Р°С€Рё РѕС‡РєРё: " ..math.floor(ActorPoints).. " . РћС‡РєРё СЃРѕРїРµСЂРЅРёРєР°: ".. math.floor(NpcPoints).. ". РџРѕС‚РµСЂСЏРЅС‹ РґРµРЅСЊРіРё:"..Stavka, "Р’С‹ РїСЂРѕРёРіСЂР°Р»Рё!"), true)
 		db.actor:give_money(-Stavka)
 	end
   Btn4:Enable(true)
@@ -356,44 +356,44 @@ function game_21p_start()
 end
 
 
----------------------------------------------- Игра "Вопросы" ---------------------------------------------------------
+---------------------------------------------- РРіСЂР° "Р’РѕРїСЂРѕСЃС‹" ---------------------------------------------------------
 local tQuestions = {
-	[1] = {"question_1", "Собака", "Кровосос", "Псевдопес", "Кабан"},
-	[2] = {"question_2", "Трамплин", "Воронка", "Жгучий пух", "Электра"},
-	[3] = {"question_3", "Жгучий пух", "Трамплин", "Холодец", "Неизвестно"},
+	[1] = {"question_1", "РЎРѕР±Р°РєР°", "РљСЂРѕРІРѕСЃРѕСЃ", "РџСЃРµРІРґРѕРїРµСЃ", "РљР°Р±Р°РЅ"},
+	[2] = {"question_2", "РўСЂР°РјРїР»РёРЅ", "Р’РѕСЂРѕРЅРєР°", "Р–РіСѓС‡РёР№ РїСѓС…", "Р­Р»РµРєС‚СЂР°"},
+	[3] = {"question_3", "Р–РіСѓС‡РёР№ РїСѓС…", "РўСЂР°РјРїР»РёРЅ", "РҐРѕР»РѕРґРµС†", "РќРµРёР·РІРµСЃС‚РЅРѕ"},
 	[4] = {"question_4", "4", "3", "2", "1"},
-	[5] = {"question_5", "Слизь", "Слюда", "Каменный цветок", "Ни какой"},
-	[6] = {"question_6", "Золотая рыбка", "Лунный свет", "Нет такого", "Колобок"},
-	[7] = {"question_7", "Бульдог", "Кабан", "Теленок", "Свинья"},
-	[8] = {"question_8", "Собак", "Свиней", "Зайцев", "Волков"},
-	[9] = {"question_9", "Оба правы", "2-ой Сталкер", "Ни кто не прав", "1-ый Сталкер"},
-	[10] = {"question_10", "Лифт", "Машина времени", "Ржавые волосы", "Гейзер"},
-	[11] = {"question_11", "Душа", "Морской еж", "Колобок", "Лунный свет"},
-	[12] = {"question_12", "Жгучий пух", "Холодец", "Карусель", "Электра"},
+	[5] = {"question_5", "РЎР»РёР·СЊ", "РЎР»СЋРґР°", "РљР°РјРµРЅРЅС‹Р№ С†РІРµС‚РѕРє", "РќРё РєР°РєРѕР№"},
+	[6] = {"question_6", "Р—РѕР»РѕС‚Р°СЏ СЂС‹Р±РєР°", "Р›СѓРЅРЅС‹Р№ СЃРІРµС‚", "РќРµС‚ С‚Р°РєРѕРіРѕ", "РљРѕР»РѕР±РѕРє"},
+	[7] = {"question_7", "Р‘СѓР»СЊРґРѕРі", "РљР°Р±Р°РЅ", "РўРµР»РµРЅРѕРє", "РЎРІРёРЅСЊСЏ"},
+	[8] = {"question_8", "РЎРѕР±Р°Рє", "РЎРІРёРЅРµР№", "Р—Р°Р№С†РµРІ", "Р’РѕР»РєРѕРІ"},
+	[9] = {"question_9", "РћР±Р° РїСЂР°РІС‹", "2-РѕР№ РЎС‚Р°Р»РєРµСЂ", "РќРё РєС‚Рѕ РЅРµ РїСЂР°РІ", "1-С‹Р№ РЎС‚Р°Р»РєРµСЂ"},
+	[10] = {"question_10", "Р›РёС„С‚", "РњР°С€РёРЅР° РІСЂРµРјРµРЅРё", "Р Р¶Р°РІС‹Рµ РІРѕР»РѕСЃС‹", "Р“РµР№Р·РµСЂ"},
+	[11] = {"question_11", "Р”СѓС€Р°", "РњРѕСЂСЃРєРѕР№ РµР¶", "РљРѕР»РѕР±РѕРє", "Р›СѓРЅРЅС‹Р№ СЃРІРµС‚"},
+	[12] = {"question_12", "Р–РіСѓС‡РёР№ РїСѓС…", "РҐРѕР»РѕРґРµС†", "РљР°СЂСѓСЃРµР»СЊ", "Р­Р»РµРєС‚СЂР°"},
 	[13] = {"question_13", "1", "2", "3", "4"},
-	[14] = {"question_14", "Воронка", "Ржавые волосы", "Карусель", "Трамплин"},
-	[15] = {"question_15", "Монолит", "Экологи", "Военные", "Наемники"},
-	[16] = {"question_16", "Боров", "Клык", "Макс", "Призрак"},
-	[17] = {"question_17", "Призрак", "Швид", "Семецкий", "Клык"},
-	[18] = {"question_18", "Абакан", "ГП37", "ИЛ86", "'Гроза'"},
-	[19] = {"question_19", "Винторез", "СВД", "ФТ 200М", "СВУ"},
-	[20] = {"question_20", "Ласточка", "Нет названия", "Крепление 'П-1'", "Планка 'Пикатини'"},
+	[14] = {"question_14", "Р’РѕСЂРѕРЅРєР°", "Р Р¶Р°РІС‹Рµ РІРѕР»РѕСЃС‹", "РљР°СЂСѓСЃРµР»СЊ", "РўСЂР°РјРїР»РёРЅ"},
+	[15] = {"question_15", "РњРѕРЅРѕР»РёС‚", "Р­РєРѕР»РѕРіРё", "Р’РѕРµРЅРЅС‹Рµ", "РќР°РµРјРЅРёРєРё"},
+	[16] = {"question_16", "Р‘РѕСЂРѕРІ", "РљР»С‹Рє", "РњР°РєСЃ", "РџСЂРёР·СЂР°Рє"},
+	[17] = {"question_17", "РџСЂРёР·СЂР°Рє", "РЁРІРёРґ", "РЎРµРјРµС†РєРёР№", "РљР»С‹Рє"},
+	[18] = {"question_18", "РђР±Р°РєР°РЅ", "Р“Рџ37", "РР›86", "'Р“СЂРѕР·Р°'"},
+	[19] = {"question_19", "Р’РёРЅС‚РѕСЂРµР·", "РЎР’Р”", "Р¤Рў 200Рњ", "РЎР’РЈ"},
+	[20] = {"question_20", "Р›Р°СЃС‚РѕС‡РєР°", "РќРµС‚ РЅР°Р·РІР°РЅРёСЏ", "РљСЂРµРїР»РµРЅРёРµ 'Рџ-1'", "РџР»Р°РЅРєР° 'РџРёРєР°С‚РёРЅРё'"},
 	[21] = {"question_21", "1", "2", "3", "4"},
-	[22] = {"question_22", "МИ-28", "МИ-24", "МИ-6", "МИ-8"},
-	[23] = {"question_23", "M203", "ПСО-1", "Вопрос не верен", "ГП-25 'Костёр'"},
+	[22] = {"question_22", "РњР-28", "РњР-24", "РњР-6", "РњР-8"},
+	[23] = {"question_23", "M203", "РџРЎРћ-1", "Р’РѕРїСЂРѕСЃ РЅРµ РІРµСЂРµРЅ", "Р“Рџ-25 'РљРѕСЃС‚С‘СЂ'"},
 	[24] = {"question_24", "1950", "1952", "1986", "1974"},
-	[25] = {"question_25", "ПМм", "Фора-12Мк2", "Кора-919", "Марта"},
-	[26] = {"question_26", "Черный ястреб", "ХПСС-1м", "Кора-919", "Фора-12Мк2"},
-	[27] = {"question_27", "УДП Компакт", "Кора-919", "Марта", "ХПСС-1м"},
-	[28] = {"question_28", "Сталкеры-Одиночки", "Экологи", "Бандиты", "Свобода"},
+	[25] = {"question_25", "РџРњРј", "Р¤РѕСЂР°-12РњРє2", "РљРѕСЂР°-919", "РњР°СЂС‚Р°"},
+	[26] = {"question_26", "Р§РµСЂРЅС‹Р№ СЏСЃС‚СЂРµР±", "РҐРџРЎРЎ-1Рј", "РљРѕСЂР°-919", "Р¤РѕСЂР°-12РњРє2"},
+	[27] = {"question_27", "РЈР”Рџ РљРѕРјРїР°РєС‚", "РљРѕСЂР°-919", "РњР°СЂС‚Р°", "РҐРџРЎРЎ-1Рј"},
+	[28] = {"question_28", "РЎС‚Р°Р»РєРµСЂС‹-РћРґРёРЅРѕС‡РєРё", "Р­РєРѕР»РѕРіРё", "Р‘Р°РЅРґРёС‚С‹", "РЎРІРѕР±РѕРґР°"},
 	[29] = {"question_29", "1", "4", "5", "3"},
-	[30] = {"question_30", "Трамплин", "Воронка", "Холодец", "Карусель"}
+	[30] = {"question_30", "РўСЂР°РјРїР»РёРЅ", "Р’РѕСЂРѕРЅРєР°", "РҐРѕР»РѕРґРµС†", "РљР°СЂСѓСЃРµР»СЊ"}
 }
 
 local WinSumma, NowQueFromAll = 0, 0
 local SelectQuestion = 1
 local tUsedQuestions = {}
-local CoefUpWinSumma = 1.25              --/Коефицент, увеличивающий выигрыш при каждом правильном ответе
+local CoefUpWinSumma = 1.25              --/РљРѕРµС„РёС†РµРЅС‚, СѓРІРµР»РёС‡РёРІР°СЋС‰РёР№ РІС‹РёРіСЂС‹С€ РїСЂРё РєР°Р¶РґРѕРј РїСЂР°РІРёР»СЊРЅРѕРј РѕС‚РІРµС‚Рµ
 
 class "game_voprosy" (CUIScriptWnd)
 function game_voprosy:__init() super()
@@ -454,7 +454,7 @@ function GetQuestion()
 		btn_quit_q:Enable(true)
 		btn_next_que:Enable(false)
 		db.actor:give_money(WinSumma)
-		level.start_stop_menu(mini_games.GameMessege("Победа! Получены деньги: "..WinSumma, "Вы выиграли!"), true)
+		level.start_stop_menu(mini_games.GameMessege("РџРѕР±РµРґР°! РџРѕР»СѓС‡РµРЅС‹ РґРµРЅСЊРіРё: "..WinSumma, "Р’С‹ РІС‹РёРіСЂР°Р»Рё!"), true)
 		return false
 	end
 		if #tUsedQuestions < #tQuestions then
@@ -547,14 +547,14 @@ function game_voprosy:on_game_info()
 	end
 		self.text_GInfo1 = CUIStatic()
 		self.text_GInfo1:Init(-190,400,650,30)
-		self.text_GInfo1:SetText("Текущий выигрыш: "..WinSumma)
+		self.text_GInfo1:SetText("РўРµРєСѓС‰РёР№ РІС‹РёРіСЂС‹С€: "..WinSumma)
 		self.text_GInfo1:SetFont(GetFontGraffiti22Russian())
 		self.text_GInfo1:SetTextAlign(2)
 		self.wind_v:AttachChild (self.text_GInfo1)
 
 		self.text_GInfo2 = CUIStatic()
 		self.text_GInfo2:Init(-200,375,650,30)
-		self.text_GInfo2:SetText("Текущий вопрос:".." "..NowQueFromAll.." ".."из 30")
+		self.text_GInfo2:SetText("РўРµРєСѓС‰РёР№ РІРѕРїСЂРѕСЃ:".." "..NowQueFromAll.." ".."РёР· 30")
 		self.text_GInfo2:SetFont(GetFontGraffiti22Russian())
 		self.text_GInfo2:SetTextAlign(2)
 		self.wind_v:AttachChild (self.text_GInfo2)
@@ -586,7 +586,7 @@ function game_voprosy:on_otvet(Btn)
 		btn_next_que:Enable(true)
 	else
 		btn_quit_q:Enable(true)
-		level.start_stop_menu(mini_games.GameMessege("Неудача!", "Вы проиграли!"), true)
+		level.start_stop_menu(mini_games.GameMessege("РќРµСѓРґР°С‡Р°!", "Р’С‹ РїСЂРѕРёРіСЂР°Р»Рё!"), true)
 		self:DetachChild (self.text_q)
 	end
 end
@@ -610,7 +610,7 @@ function game_questions_start()
     level.start_stop_menu(mini_games.game_voprosy(), true)
 end
 
----------------------------------------------- Игра "Угадай, где шарик" ---------------------------------------------------------
+---------------------------------------------- РРіСЂР° "РЈРіР°РґР°Р№, РіРґРµ С€Р°СЂРёРє" ---------------------------------------------------------
 local tPosBall = {
 	[1] = {110, 130},
 	[2] = {240, 130},
@@ -688,7 +688,7 @@ function MGame_WhereBall:btn_start()
 end
 
 function MGame_WhereBall:error_stavka()
-	level.start_stop_menu(mini_games.GameMessege("Минимальная ставка - 500, максимальная - 1000.", "Не корректная ставка или у Вас нет таких денег!"), true)
+	level.start_stop_menu(mini_games.GameMessege("РњРёРЅРёРјР°Р»СЊРЅР°СЏ СЃС‚Р°РІРєР° - 500, РјР°РєСЃРёРјР°Р»СЊРЅР°СЏ - 1000.", "РќРµ РєРѕСЂСЂРµРєС‚РЅР°СЏ СЃС‚Р°РІРєР° РёР»Рё Сѓ Р’Р°СЃ РЅРµС‚ С‚Р°РєРёС… РґРµРЅРµРі!"), true)
 end
 
 function MGame_WhereBall:btn_select_ball_1()
@@ -705,10 +705,10 @@ end
 
 function MGame_WhereBall:select_ball(n)
 	if SelectedPosBall == n then
-		level.start_stop_menu(mini_games.GameMessege("Вы угадали! Получены деньги: ".." "..StavkaWBG, "Вы выиграли!"), true)
+		level.start_stop_menu(mini_games.GameMessege("Р’С‹ СѓРіР°РґР°Р»Рё! РџРѕР»СѓС‡РµРЅС‹ РґРµРЅСЊРіРё: ".." "..StavkaWBG, "Р’С‹ РІС‹РёРіСЂР°Р»Рё!"), true)
 		db.actor:give_money(StavkaWBG)
 	else
-		level.start_stop_menu(mini_games.GameMessege("Вы не угадали! Потеряны деньги: ".." "..StavkaWBG, "Вы проиграли!"), true)
+		level.start_stop_menu(mini_games.GameMessege("Р’С‹ РЅРµ СѓРіР°РґР°Р»Рё! РџРѕС‚РµСЂСЏРЅС‹ РґРµРЅСЊРіРё: ".." "..StavkaWBG, "Р’С‹ РїСЂРѕРёРіСЂР°Р»Рё!"), true)
 		db.actor:give_money(-StavkaWBG)
 	end
   btn_play_else:Enable(true)
@@ -753,7 +753,7 @@ function game_where_ball_start()
     level.start_stop_menu(mini_games.MGame_WhereBall(), true)
 end
 
----------------------------------------------- Игра "Угадай число" ---------------------------------------------------------
+---------------------------------------------- РРіСЂР° "РЈРіР°РґР°Р№ С‡РёСЃР»Рѕ" ---------------------------------------------------------
 local GuessedNum, MessGuessedNum, PGuessNum, CPUPGuessNum, StavkaWN = 0, false, 0, 0, 0
 
 class "MGame_WhatNum" (CUIScriptWnd)
@@ -801,7 +801,7 @@ end
 function MGame_WhatNum:btn_start()
   local GNum = tonumber(self.edit_stavka:GetText())
 	if GNum > 2000 or GNum < 500 or db.actor:money() < GNum then
-		level.start_stop_menu(mini_games.GameMessege("Минимальная ставка - 500, максимальная - 2000.", "Не корректная ставка или у Вас нет таких денег!"), true)
+		level.start_stop_menu(mini_games.GameMessege("РњРёРЅРёРјР°Р»СЊРЅР°СЏ СЃС‚Р°РІРєР° - 500, РјР°РєСЃРёРјР°Р»СЊРЅР°СЏ - 2000.", "РќРµ РєРѕСЂСЂРµРєС‚РЅР°СЏ СЃС‚Р°РІРєР° РёР»Рё Сѓ Р’Р°СЃ РЅРµС‚ С‚Р°РєРёС… РґРµРЅРµРі!"), true)
 		return false
 	else
 		StavkaWN = GNum
@@ -823,30 +823,30 @@ function MGame_WhatNum:btn_guess_num()
 		self.Wind_WhatNum:DetachChild (self.Help)
 		self.Help = CUIStatic()
 		self.Help:Init(-50,120,650,30)
-		self.Help:SetText("Введите число и нажмите 'Загадать'")
+		self.Help:SetText("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ Рё РЅР°Р¶РјРёС‚Рµ 'Р—Р°РіР°РґР°С‚СЊ'")
 		self.Help:SetFont(GetFontLetterica18Russian())
 		self.Help:SetTextAlign(2)
 		self.Wind_WhatNum:AttachChild (self.Help)
 		return false
 	end
 	if GNum < GuessedNum then
-		level.start_stop_menu(mini_games.GameMessege("Нужно число побольше!", "Неправильно!"), true)
+		level.start_stop_menu(mini_games.GameMessege("РќСѓР¶РЅРѕ С‡РёСЃР»Рѕ РїРѕР±РѕР»СЊС€Рµ!", "РќРµРїСЂР°РІРёР»СЊРЅРѕ!"), true)
 	else
-		level.start_stop_menu(mini_games.GameMessege("Нужно число поменьше!", "Неправильно!"), true)
+		level.start_stop_menu(mini_games.GameMessege("РќСѓР¶РЅРѕ С‡РёСЃР»Рѕ РїРѕРјРµРЅСЊС€Рµ!", "РќРµРїСЂР°РІРёР»СЊРЅРѕ!"), true)
 	end
 end
 
 function MGame_WhatNum:btn_on_guess_num()
 	CPUPGuessNum = math.random(math.random(2, 5), math.random(6, 9))
-	local Txt = "Ваши попытки:".." "..PGuessNum..", соперника:".." "..CPUPGuessNum
+	local Txt = "Р’Р°С€Рё РїРѕРїС‹С‚РєРё:".." "..PGuessNum..", СЃРѕРїРµСЂРЅРёРєР°:".." "..CPUPGuessNum
 	if CPUPGuessNum < PGuessNum then
-		level.start_stop_menu(mini_games.GameMessege(Txt.." Потеряны деньги:"..StavkaWN, "Вы проиграли!"), true)
+		level.start_stop_menu(mini_games.GameMessege(Txt.." РџРѕС‚РµСЂСЏРЅС‹ РґРµРЅСЊРіРё:"..StavkaWN, "Р’С‹ РїСЂРѕРёРіСЂР°Р»Рё!"), true)
 		db.actor:give_money(-StavkaWN)
 	elseif CPUPGuessNum > PGuessNum then
-		level.start_stop_menu(mini_games.GameMessege(Txt.." Получены деньги:"..StavkaWN, "Вы выиграли!"), true)
+		level.start_stop_menu(mini_games.GameMessege(Txt.." РџРѕР»СѓС‡РµРЅС‹ РґРµРЅСЊРіРё:"..StavkaWN, "Р’С‹ РІС‹РёРіСЂР°Р»Рё!"), true)
 		db.actor:give_money(StavkaWN)
 	else
-		level.start_stop_menu(mini_games.GameMessege(Txt, "Ничья!"), true)
+		level.start_stop_menu(mini_games.GameMessege(Txt, "РќРёС‡СЊСЏ!"), true)
 	end
 	btn_on_guess_num:Enable(false)
 	btn_play_else_WN:Enable(true)
@@ -887,14 +887,14 @@ function MGame_WhatNum:on_game_info()
 	if not MessGuessedNum then
 		self.NumGuessed = CUIStatic()
 		self.NumGuessed:Init(-170,385,650,30)
-		self.NumGuessed:SetText("Число загадано")
+		self.NumGuessed:SetText("Р§РёСЃР»Рѕ Р·Р°РіР°РґР°РЅРѕ")
 		self.NumGuessed:SetFont(GetFontGraffiti32Russian())
 		self.NumGuessed:SetTextAlign(2)
 		self.Wind_WhatNum:AttachChild (self.NumGuessed)
 		
 		self.Help = CUIStatic()
 		self.Help:Init(-50,120,650,30)
-		self.Help:SetText("Введите число и нажмите 'Угадать'")
+		self.Help:SetText("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ Рё РЅР°Р¶РјРёС‚Рµ 'РЈРіР°РґР°С‚СЊ'")
 		self.Help:SetFont(GetFontLetterica18Russian())
 		self.Help:SetTextAlign(2)
 		self.Wind_WhatNum:AttachChild (self.Help)
@@ -904,7 +904,7 @@ function MGame_WhatNum:on_game_info()
 		self.Wind_WhatNum:DetachChild (self.text_GInfo2)
 		self.text_GInfo2 = CUIStatic()
 		self.text_GInfo2:Init(-200,375,650,30)
-		self.text_GInfo2:SetText("Использовано".." "..PGuessNum.." ".."попыток")
+		self.text_GInfo2:SetText("РСЃРїРѕР»СЊР·РѕРІР°РЅРѕ".." "..PGuessNum.." ".."РїРѕРїС‹С‚РѕРє")
 		self.text_GInfo2:SetFont(GetFontGraffiti22Russian())
 		self.text_GInfo2:SetTextAlign(2)
 		self.Wind_WhatNum:AttachChild (self.text_GInfo2)
@@ -916,15 +916,15 @@ function game_what_num_start()
 end
 --======================================================================================--
 local mini_games_phr_0, mini_games_phr_1, mini_games_phr_2, mini_games_phr_3, mini_games_phr_4, mini_games_phr_5, mini_games_phr_6, mini_games_phr_7, mini_games_phr_8 =
-"Сыграем во что-нибудь?",
-"Могу предложить тебе несколько игр на деньги: '21 очко', 'Угадай, где шарик', 'Угадай число'.",
-"Давай сыграем в '21 очко'.",
-"'Тест на знание зоны'. Давай-ка я попробую ответить.",
-"'Угадай, где шарик'.",
-"'Угадай число'.",
-"Хорошо, но сначала ты должен заплатить одну тысячу за эту игру.",
-"Нет проблем, держи деньги.",
-"Я передумал."
+"РЎС‹РіСЂР°РµРј РІРѕ С‡С‚Рѕ-РЅРёР±СѓРґСЊ?",
+"РњРѕРіСѓ РїСЂРµРґР»РѕР¶РёС‚СЊ С‚РµР±Рµ РЅРµСЃРєРѕР»СЊРєРѕ РёРіСЂ РЅР° РґРµРЅСЊРіРё: '21 РѕС‡РєРѕ', 'РЈРіР°РґР°Р№, РіРґРµ С€Р°СЂРёРє', 'РЈРіР°РґР°Р№ С‡РёСЃР»Рѕ'.",
+"Р”Р°РІР°Р№ СЃС‹РіСЂР°РµРј РІ '21 РѕС‡РєРѕ'.",
+"'РўРµСЃС‚ РЅР° Р·РЅР°РЅРёРµ Р·РѕРЅС‹'. Р”Р°РІР°Р№-РєР° СЏ РїРѕРїСЂРѕР±СѓСЋ РѕС‚РІРµС‚РёС‚СЊ.",
+"'РЈРіР°РґР°Р№, РіРґРµ С€Р°СЂРёРє'.",
+"'РЈРіР°РґР°Р№ С‡РёСЃР»Рѕ'.",
+"РҐРѕСЂРѕС€Рѕ, РЅРѕ СЃРЅР°С‡Р°Р»Р° С‚С‹ РґРѕР»Р¶РµРЅ Р·Р°РїР»Р°С‚РёС‚СЊ РѕРґРЅСѓ С‚С‹СЃСЏС‡Сѓ Р·Р° СЌС‚Сѓ РёРіСЂСѓ.",
+"РќРµС‚ РїСЂРѕР±Р»РµРј, РґРµСЂР¶Рё РґРµРЅСЊРіРё.",
+"РЇ РїРµСЂРµРґСѓРјР°Р»."
 
 function init_mini_games_phr_dlg(dlg)
     phr0 = dlg:AddPhrase(mini_games_phr_0, "0", "-1", -10000)

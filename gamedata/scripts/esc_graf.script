@@ -235,7 +235,7 @@ function set_metka_pekar()
   local obj = alife():object(a)
   if obj then
    if obj:section_name()=="metka_pekar" then
-    amk.add_spot_on_map(obj.id,"crlc_small","Пекарь")
+    amk.add_spot_on_map(obj.id,"crlc_small","РџРµРєР°СЂСЊ")
     return
    end
   end
@@ -263,11 +263,11 @@ amk.write_stalker_params(params,obj)
 end
 
 function spawn_muka()
-  local obj=alife():create("muka",vector():set(-231.770,-21.710,202.461),99850,1765)--за печкой_1
-  local obj=alife():create("muka",vector():set(-242.384,-22.075,229.921),91597,1764)--за печкой_2
-  local obj=alife():create("muka",vector():set(-214.597,-20.405,240.297),113857,1765)--в амбаре
-  local obj=alife():create("muka",vector():set(-271.925,-27.485,243.798),66349,1786)--в подвале
-  local obj=alife():create("muka",vector():set(-328.536,-22.455,195.573),20335,1839)--у костра
+  local obj=alife():create("muka",vector():set(-231.770,-21.710,202.461),99850,1765)--Р·Р° РїРµС‡РєРѕР№_1
+  local obj=alife():create("muka",vector():set(-242.384,-22.075,229.921),91597,1764)--Р·Р° РїРµС‡РєРѕР№_2
+  local obj=alife():create("muka",vector():set(-214.597,-20.405,240.297),113857,1765)--РІ Р°РјР±Р°СЂРµ
+  local obj=alife():create("muka",vector():set(-271.925,-27.485,243.798),66349,1786)--РІ РїРѕРґРІР°Р»Рµ
+  local obj=alife():create("muka",vector():set(-328.536,-22.455,195.573),20335,1839)--Сѓ РєРѕСЃС‚СЂР°
 end
 
 function spawn_fantom_pekar()
@@ -1077,7 +1077,7 @@ function spawn_killer_attak()
   local obj=alife():create("esc_killer_attak13",vector():set(231.718,-0.011,4.701),59268,1262)
   local obj=alife():create("esc_killer_attak14",vector():set(218.702,-0.007,14.062),54111,1175)
   local obj=alife():create("esc_killer_attak15",vector():set(218.702,-0.007,14.062),54111,1175)
-  news_manager.send_tip(db.actor, "Стрелок, это Боров. На южный блокпост Бара напали наёмники, выручай, я знаю, ты где то рядом!", nil, nil, 20000) 
+  news_manager.send_tip(db.actor, "РЎС‚СЂРµР»РѕРє, СЌС‚Рѕ Р‘РѕСЂРѕРІ. РќР° СЋР¶РЅС‹Р№ Р±Р»РѕРєРїРѕСЃС‚ Р‘Р°СЂР° РЅР°РїР°Р»Рё РЅР°С‘РјРЅРёРєРё, РІС‹СЂСѓС‡Р°Р№, СЏ Р·РЅР°СЋ, С‚С‹ РіРґРµ С‚Рѕ СЂСЏРґРѕРј!", nil, nil, 20000) 
 end
 
 function bar_help_have(task, info)
@@ -1435,7 +1435,7 @@ function vypolzen_agroprom()
   local obj=alife():create("vypolzen_agro",vector():set(-200.519,6.464,17.533),36689,537)
   local obj=alife():create("vypolzen_agro",vector():set(-200.519,6.464,17.533),36689,537)
   local obj=alife():create("vypolzen_agro",vector():set(-196.218,2.546,89.596),40279,678)
-  local obj=alife():create("vypolzen_agro",vector():set(-196.218,2.546,89.596),40279,678) --вагончик
+  local obj=alife():create("vypolzen_agro",vector():set(-196.218,2.546,89.596),40279,678) --РІР°РіРѕРЅС‡РёРє
   local obj=alife():create("vypolzen_agro",vector():set(-197.101,2.476,95.134),39592,678)
   local obj=alife():create("vypolzen_agro",vector():set(-197.101,2.476,95.134),39592,678)
 end
@@ -1737,7 +1737,7 @@ function spawn_artefact_new()
   local obj=alife():create("af_dummy_battery_red",vector():set(-134.642,1.080,169.555),41001,1318)
 end
 
-function spawn_fantom_bunker()--после взятия схемы подземных коммуникаций
+function spawn_fantom_bunker()--РїРѕСЃР»Рµ РІР·СЏС‚РёСЏ СЃС…РµРјС‹ РїРѕРґР·РµРјРЅС‹С… РєРѕРјРјСѓРЅРёРєР°С†РёР№
   local obj=alife():create("esc_fantom",vector():set(-7.076,-34.479,15.786),1582,2481)
   local obj=alife():create("esc_fantom",vector():set(8.326,-34.237,8.353),2344,2513)
   local obj=alife():create("esc_fantom",vector():set(-7.202,-34.473,29.339),1600,2512)
@@ -1746,7 +1746,7 @@ function spawn_fantom_bunker()--после взятия схемы подземных коммуникаций
   local obj=alife():create("esc_fantom",vector():set(-10.963,-34.410,31.747),1454,2482)
 end
 
-function spawn_fantom_x10()--после взятия системника и доков из х-10 для Призрака
+function spawn_fantom_x10()--РїРѕСЃР»Рµ РІР·СЏС‚РёСЏ СЃРёСЃС‚РµРјРЅРёРєР° Рё РґРѕРєРѕРІ РёР· С…-10 РґР»СЏ РџСЂРёР·СЂР°РєР°
   local obj=alife():create("esc_killer_new3",vector():set(-2.847,-7.451,-64.387),5158,2662)
   local obj=alife():create("esc_killer_new3",vector():set(3.489,-7.453,-77.799),6847,2661)
   local obj=alife():create("esc_killer_new3",vector():set(-18.147,-9.550,-46.046),3672,2664)
@@ -1767,7 +1767,7 @@ function spawn_fantom_x10()--после взятия системника и доков из х-10 для Призрак
   local obj=alife():create("esc_fantom",vector():set(-28.241,-21.837,41.092),2478,2747)
 end
 
-function spawn_fantom_radar1()--у перехода с Радара на АС
+function spawn_fantom_radar1()--Сѓ РїРµСЂРµС…РѕРґР° СЃ Р Р°РґР°СЂР° РЅР° РђРЎ
   local obj=alife():create("esc_killer_new3",vector():set(575.419,-53.243,-401.214),203053,1868)
   local obj=alife():create("esc_killer_new3",vector():set(567.830,-50.071,-379.744),199180,1878)
   local obj=alife():create("esc_killer_new3",vector():set(592.320,-51.629,-388.732),210580,1878)
@@ -1776,7 +1776,7 @@ function spawn_fantom_radar1()--у перехода с Радара на АС
   local obj=alife():create("esc_killer_new3",vector():set(601.492,-51.469,-346.827),215064,1880)
 end
 
-function spawn_fantom_bar()--у перехода с Бара на Свалку
+function spawn_fantom_bar()--Сѓ РїРµСЂРµС…РѕРґР° СЃ Р‘Р°СЂР° РЅР° РЎРІР°Р»РєСѓ
   local obj=alife():create("esc_killer_td",vector():set(370.172,11.744,-429.410),84170,1289)
   local obj=alife():create("esc_killer_td",vector():set(370.172,11.744,-429.410),84170,1289)
   local obj=alife():create("esc_killer_td",vector():set(397.370,11.343,-443.480),91443,1289)
@@ -1785,7 +1785,7 @@ function spawn_fantom_bar()--у перехода с Бара на Свалку
   local obj=alife():create("esc_maroder",vector():set(415.350,14.354,-438.139),98096,1289)
 end
 
-function spawn_fantom_svalka1()--у перехода со Свалки на Агро
+function spawn_fantom_svalka1()--Сѓ РїРµСЂРµС…РѕРґР° СЃРѕ РЎРІР°Р»РєРё РЅР° РђРіСЂРѕ
   local obj=alife():create("esc_maroder",vector():set(-261.285,0.737,-7.440),6076,311)
   local obj=alife():create("esc_killer_td",vector():set(-244.157,0.565,-10.336),10604,309)
   local obj=alife():create("esc_killer_td",vector():set(-250.991,2.441,-26.360),8574,309)
@@ -1793,7 +1793,7 @@ function spawn_fantom_svalka1()--у перехода со Свалки на Агро
   local obj=alife():create("esc_killer_td",vector():set(-250.991,2.441,-26.360),8574,309)
 end
 
-function spawn_fantom_svalka2()--у перехода со Свалки на Кордон
+function spawn_fantom_svalka2()--Сѓ РїРµСЂРµС…РѕРґР° СЃРѕ РЎРІР°Р»РєРё РЅР° РљРѕСЂРґРѕРЅ
   local obj=alife():create("esc_maroder",vector():set(20.953,0.487,-254.714),193499,262)
   local obj=alife():create("esc_killer_td",vector():set(-13.161,0.433,-225.296),164832,265)
   local obj=alife():create("esc_killer_td",vector():set(12.533,1.700,-220.172),185605,265)
@@ -1801,7 +1801,7 @@ function spawn_fantom_svalka2()--у перехода со Свалки на Кордон
   local obj=alife():create("esc_killer_td",vector():set(12.533,1.700,-220.172),185605,265)
 end
 
-function spawn_fantom_rostok1()--у перехода с Ростока на Янтарь
+function spawn_fantom_rostok1()--Сѓ РїРµСЂРµС…РѕРґР° СЃ Р РѕСЃС‚РѕРєР° РЅР° РЇРЅС‚Р°СЂСЊ
   local obj=alife():create("esc_killer_new1",vector():set(-137.238,-6.001,-107.104),40595,1407)
   local obj=alife():create("esc_killer_new2",vector():set(-137.238,-6.001,-107.104),40595,1407)
   local obj=alife():create("esc_killer_old",vector():set(-213.101,0.045,-45.737),23859,1401)
@@ -1810,14 +1810,14 @@ function spawn_fantom_rostok1()--у перехода с Ростока на Янтарь
   local obj=alife():create("esc_killer_new2",vector():set(-227.321,-0.001,-60.125),19107,1401)
 end
 
-function spawn_fantom_ac()--у перехода с АС в Бар
+function spawn_fantom_ac()--Сѓ РїРµСЂРµС…РѕРґР° СЃ РђРЎ РІ Р‘Р°СЂ
   local obj=alife():create("esc_killer_new3",vector():set(-332.692,-25.536,46.571),17713,1546)
   local obj=alife():create("esc_killer_new3",vector():set(-327.868,-25.287,56.147),21107,1546)
   local obj=alife():create("esc_killer_new3",vector():set(-332.692,-25.536,46.571),17713,1546)
   local obj=alife():create("esc_killer_new3",vector():set(-327.868,-25.287,56.147),21107,1546)
 end
 
-function spawn_fantom_radar2()--подальше от входа на АС
+function spawn_fantom_radar2()--РїРѕРґР°Р»СЊС€Рµ РѕС‚ РІС…РѕРґР° РЅР° РђРЎ
   local obj=alife():create("esc_fantom",vector():set(592.240,-52.143,-283.345),210665,1883)
   local obj=alife():create("esc_fantom",vector():set(600.153,-53.850,-255.437),214474,1863)
   local obj=alife():create("esc_fantom",vector():set(575.257,-54.286,-259.467),203089,1863)
@@ -1826,7 +1826,7 @@ function spawn_fantom_radar2()--подальше от входа на АС
   local obj=alife():create("esc_fantom",vector():set(575.257,-54.286,-259.467),203089,1863)
 end
 
-function spawn_fantom_yantar()--у перехода с Янтаря на Радар
+function spawn_fantom_yantar()--Сѓ РїРµСЂРµС…РѕРґР° СЃ РЇРЅС‚Р°СЂСЏ РЅР° Р Р°РґР°СЂ
   local obj=alife():create("esc_fantom",vector():set(119.267,0.666,81.000),104341,1521)
   local obj=alife():create("esc_fantom",vector():set(100.044,0.236,19.811),91966,1518)
   local obj=alife():create("esc_fantom",vector():set(123.804,2.320,-2.160),107354,1524)
@@ -1834,7 +1834,7 @@ function spawn_fantom_yantar()--у перехода с Янтаря на Радар
   local obj=alife():create("esc_fantom",vector():set(123.804,2.320,-2.160),107354,1524)
 end
 
-function spawn_fantom_rostok2()--у перехода с Ростока в Бар
+function spawn_fantom_rostok2()--Сѓ РїРµСЂРµС…РѕРґР° СЃ Р РѕСЃС‚РѕРєР° РІ Р‘Р°СЂ
   local obj=alife():create("esc_maroder",vector():set(2.308,-0.652,139.217),65909,1415)
   local obj=alife():create("esc_maroder",vector():set(24.592,-0.012,127.313),66949,1414)
   local obj=alife():create("esc_killer_td",vector():set(2.308,-0.652,139.217),65909,1415)
@@ -1854,7 +1854,7 @@ function spawn_snake_eye()
 local obj=alife():create("af_snake_eye",vector():set(552.751,-50.520,-36.600),192189,2043)
 end
 
-function spawn_klondayk()--Клондайк артефактов
+function spawn_klondayk()--РљР»РѕРЅРґР°Р№Рє Р°СЂС‚РµС„Р°РєС‚РѕРІ
 local obj=alife():create("af_cristall",vector():set(190.526,5.345,-359.187),387916,938)
 local obj=alife():create("af_spirit_1",vector():set(191.481,5.093,-360.930),388539,938)
 local obj=alife():create("af_armor_2",vector():set(189.628,4.896,-362.038),387561,938)
@@ -1870,11 +1870,11 @@ end
 
 ---------------------------------spiders-------------------------------------
 
-function spawn_spider1()--Агро проводник
+function spawn_spider1()--РђРіСЂРѕ РїСЂРѕРІРѕРґРЅРёРє
 local obj=alife():create("spider_agro",vector():set(128.924,3.230,-206.777),361811,431)
 end
 
-function spawn_spider2()--Рыжий лес
+function spawn_spider2()--Р С‹Р¶РёР№ Р»РµСЃ
 local obj=alife():create("spider_les",vector():set(373.856,-49.730,-237.446),106112,2080)
 local obj=alife():create("spider_les",vector():set(413.670,-48.803,-227.824),131172,2108)
 local obj=alife():create("spider_les",vector():set(334.717,-47.901,-125.067),84263,2093)
@@ -1882,15 +1882,15 @@ local obj=alife():create("wolk_radar",vector():set(413.670,-48.803,-227.824),131
 local obj=alife():create("wolk_radar",vector():set(334.717,-47.901,-125.067),84263,2093)
 end
 
-function spawn_spider3()--Х10 после сумасшедшего профессора
+function spawn_spider3()--РҐ10 РїРѕСЃР»Рµ СЃСѓРјР°СЃС€РµРґС€РµРіРѕ РїСЂРѕС„РµСЃСЃРѕСЂР°
 local obj=alife():create("spider_x10",vector():set(-1.941,-7.430,-78.968),5274,2661)
 end
 
-function spawn_spider33()--Х10 после сумасшедшего профессора
+function spawn_spider33()--РҐ10 РїРѕСЃР»Рµ СЃСѓРјР°СЃС€РµРґС€РµРіРѕ РїСЂРѕС„РµСЃСЃРѕСЂР°
 local obj=alife():create("spider_mini_x10",vector():set(-1.941,-7.350,-78.968),5274,2661)
 end
 
-function spawn_spider4()--Чаэс финал
+function spawn_spider4()--Р§Р°СЌСЃ С„РёРЅР°Р»
 local obj=alife():create("spider_final",vector():set(824.188,-0.003,-32.871),357644,2296)
 local obj=alife():create("spider_final",vector():set(813.678,-0.011,-16.927),353048,2296)
 local obj=alife():create("spider_final",vector():set(832.321,0.001,-81.274),361337,2308)
@@ -2056,7 +2056,7 @@ function delete_osoznanny1()
     end
 end
 
-function spawn_spider5()--Х16 после точки
+function spawn_spider5()--РҐ16 РїРѕСЃР»Рµ С‚РѕС‡РєРё
 local obj=alife():create("spider_x16",vector():set(-55.576,-19.088,-104.992),19947,1456)
 end
 
@@ -2092,7 +2092,7 @@ sim:release(se_obj, true)
 end
 end
 
-function spawn_spider_sar()--Саркофаг финал
+function spawn_spider_sar()--РЎР°СЂРєРѕС„Р°Рі С„РёРЅР°Р»
 local obj=alife():create("spider_sar1",vector():set(12.366,13.315,-20.156),3859,2451)
 local obj=alife():create("spider_sar1",vector():set(-0.388,12.280,12.374),1627,2445)
 local obj=alife():create("spider_sar2",vector():set(57.747,12.030,8.228),9607,2437)

@@ -1,4 +1,4 @@
---Vergas разгрузка
+--Vergas СЂР°Р·РіСЂСѓР·РєР°
 local lost_id = -1
 
 local slot_1 = 0
@@ -7,21 +7,21 @@ local medic  = 0
 local bint   = 0
 
 function lose_item(obj)
-	--потеря разгрузки
+	--РїРѕС‚РµСЂСЏ СЂР°Р·РіСЂСѓР·РєРё
 	if obj:section() == "razgruzka" then
-		lost_id = obj:id() --признак, что объект именно разгрузка
+		lost_id = obj:id() --РїСЂРёР·РЅР°Рє, С‡С‚Рѕ РѕР±СЉРµРєС‚ РёРјРµРЅРЅРѕ СЂР°Р·РіСЂСѓР·РєР°
 	else
-		lost_id = -1       --признак того что объект не разгрузка
+		lost_id = -1       --РїСЂРёР·РЅР°Рє С‚РѕРіРѕ С‡С‚Рѕ РѕР±СЉРµРєС‚ РЅРµ СЂР°Р·РіСЂСѓР·РєР°
 	end
 end
 
 function used_item()
 	if (lost_id > 0) and (alife():object(lost_id)==nil) then
-		used_razgruzka()	-- объект не выбросили. а использовали
+		used_razgruzka()	-- РѕР±СЉРµРєС‚ РЅРµ РІС‹Р±СЂРѕСЃРёР»Рё. Р° РёСЃРїРѕР»СЊР·РѕРІР°Р»Рё
 	end
 end
 
-function used_razgruzka() --использование разгрузки
+function used_razgruzka() --РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ СЂР°Р·РіСЂСѓР·РєРё
 	lost_id = -1
 	slot_1 = ammo_slot(1)
 	slot_2 = ammo_slot(2)
@@ -45,7 +45,7 @@ function spawn_item_in_inv(spawn_item,npc)
 end
 
 function ammo_slot(slot)
-		g_obj = db.actor:item_in_slot(slot)  -- оружие в слоте
+		g_obj = db.actor:item_in_slot(slot)  -- РѕСЂСѓР¶РёРµ РІ СЃР»РѕС‚Рµ
 	if g_obj ~= nil then
 		sl = g_obj:get_ammo_total() - g_obj:get_ammo_in_magazine()
 	else

@@ -118,231 +118,231 @@ function add_lchanger_location()
 	if sim then
 		local obj = sim:story_object(20015)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Мёртвый Город")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ РњС‘СЂС‚РІС‹Р№ Р“РѕСЂРѕРґ")
 		end
                  obj = sim:story_object(20016)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Бар")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ Р‘Р°СЂ")
 		end
                 obj = sim:story_object(20017)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Лес")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ Р›РµСЃ")
 		end 
 		obj = sim:story_object(20018)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Бар")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ Р‘Р°СЂ")
 		end
 		obj = sim:story_object(20019)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Лес")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ Р›РµСЃ")
 		end
 		obj = sim:story_object(20020)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Мёртвый Город")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ РњС‘СЂС‚РІС‹Р№ Р“РѕСЂРѕРґ")
 		end
 		obj = sim:story_object(20021)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В подземелья НИИ Агропром")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ РїРѕРґР·РµРјРµР»СЊСЏ РќРР РђРіСЂРѕРїСЂРѕРј")
 		end
 		obj = sim:story_object(20022)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "На Болота")
+			level.map_add_object_spot(obj.id, "level_changer", "РќР° Р‘РѕР»РѕС‚Р°")
 		end
 		obj = sim:story_object(20023)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В подземелья НИИ Агропром")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ РїРѕРґР·РµРјРµР»СЊСЏ РќРР РђРіСЂРѕРїСЂРѕРј")
 		end
 		obj = sim:story_object(20024)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Промзону")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ РџСЂРѕРјР·РѕРЅСѓ")
 		end
 		obj = sim:story_object(20025)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Х-16")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ РҐ-16")
 		end
 		obj = sim:story_object(20026)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В подземелья НИИ Агропром")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ РїРѕРґР·РµРјРµР»СЊСЏ РќРР РђРіСЂРѕРїСЂРѕРј")
 		end
 		obj = sim:story_object(20027)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Червоне Дышло")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ Р§РµСЂРІРѕРЅРµ Р”С‹С€Р»Рѕ")
 		end
 		obj = sim:story_object(20028)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Х-16")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ РҐ-16")
 		end
 		obj = sim:story_object(20029)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Х-10")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ РҐ-10")
 		end
 		obj = sim:story_object(20030)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Х-16")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ РҐ-16")
 		end
 		obj = sim:story_object(20031)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Х-18")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ РҐ-18")
 		end
 		obj = sim:story_object(20032)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Х-10")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ РҐ-10")
 		end
 		obj = sim:story_object(20033)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Лес")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ Р›РµСЃ")
 		end
             obj = sim:story_object(20034)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Х-18")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ РҐ-18")
 		end 
             obj = sim:story_object(20035)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Червоне Дышло")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ Р§РµСЂРІРѕРЅРµ Р”С‹С€Р»Рѕ")
 		end  
             obj = sim:story_object(20036)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Лес")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ Р›РµСЃ")
 		end
             obj = sim:story_object(20037)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Припять")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ РџСЂРёРїСЏС‚СЊ")
 		end
             obj = sim:story_object(20038)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Червоне Дышло")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ Р§РµСЂРІРѕРЅРµ Р”С‹С€Р»Рѕ")
 		end
             obj = sim:story_object(20039)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Пещеру")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ РџРµС‰РµСЂСѓ")
 		end
             obj = sim:story_object(20040)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Припять")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ РџСЂРёРїСЏС‚СЊ")
 		end
             obj = sim:story_object(20041)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Саркофаг")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ РЎР°СЂРєРѕС„Р°Рі")
 		end 
             obj = sim:story_object(20042)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Пещеру")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ РџРµС‰РµСЂСѓ")
 		end 
             obj = sim:story_object(20045)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Лес")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ Р›РµСЃ")
 		end
             obj = sim:story_object(20046)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "На Болота")
+			level.map_add_object_spot(obj.id, "level_changer", "РќР° Р‘РѕР»РѕС‚Р°")
 		end  
             obj = sim:story_object(20047)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Лес")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ Р›РµСЃ")
 		end   
             obj = sim:story_object(30219)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Промзону")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ РџСЂРѕРјР·РѕРЅСѓ")
 		end
             obj = sim:story_object(30220)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "На Испытательный Полигон")
+			level.map_add_object_spot(obj.id, "level_changer", "РќР° РСЃРїС‹С‚Р°С‚РµР»СЊРЅС‹Р№ РџРѕР»РёРіРѕРЅ")
 		end   
             obj = sim:story_object(30225)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Промзону")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ РџСЂРѕРјР·РѕРЅСѓ")
 		end   
             obj = sim:story_object(30226)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "На Болота")
+			level.map_add_object_spot(obj.id, "level_changer", "РќР° Р‘РѕР»РѕС‚Р°")
 		end 
             obj = sim:story_object(30227)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Х-18")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ РҐ-18")
 		end 
             obj = sim:story_object(30228)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Х-16")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ РҐ-16")
 		end 
             obj = sim:story_object(30229)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Х-10")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ РҐ-10")
 		end   
             obj = sim:story_object(30230)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Промзону")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ РџСЂРѕРјР·РѕРЅСѓ")
 		end   
             obj = sim:story_object(30233)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В подземелье НИИ Агропром")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ РїРѕРґР·РµРјРµР»СЊРµ РќРР РђРіСЂРѕРїСЂРѕРј")
 		end 
             obj = sim:story_object(30234)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Саркофаг")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ РЎР°СЂРєРѕС„Р°Рі")
 		end   
             obj = sim:story_object(30237)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "На Испытательный Полигон")
+			level.map_add_object_spot(obj.id, "level_changer", "РќР° РСЃРїС‹С‚Р°С‚РµР»СЊРЅС‹Р№ РџРѕР»РёРіРѕРЅ")
 		end
             obj = sim:story_object(30238)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Бар")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ Р‘Р°СЂ")
 		end 
             obj = sim:story_object(30239)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Лес")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ Р›РµСЃ")
 		end
             obj = sim:story_object(30240)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Миротворческий Корпус")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ РњРёСЂРѕС‚РІРѕСЂС‡РµСЃРєРёР№ РљРѕСЂРїСѓСЃ")
 		end 
             obj = sim:story_object(30241)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "На Испытательный Полигон")
+			level.map_add_object_spot(obj.id, "level_changer", "РќР° РСЃРїС‹С‚Р°С‚РµР»СЊРЅС‹Р№ РџРѕР»РёРіРѕРЅ")
 		end 
             obj = sim:story_object(30242)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Лес")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ Р›РµСЃ")
 		end 
             obj = sim:story_object(30243)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Лес")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ Р›РµСЃ")
 		end 
             obj = sim:story_object(30246)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Саркофаг")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ РЎР°СЂРєРѕС„Р°Рі")
 		end 
             obj = sim:story_object(30301)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "На Испытательный Полигон")
+			level.map_add_object_spot(obj.id, "level_changer", "РќР° РСЃРїС‹С‚Р°С‚РµР»СЊРЅС‹Р№ РџРѕР»РёРіРѕРЅ")
 		end
             obj = sim:story_object(30302)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Червоне Дышло")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ Р§РµСЂРІРѕРЅРµ Р”С‹С€Р»Рѕ")
 		end    
             obj = sim:story_object(30306)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В подземелье НИИ Агропром")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ РїРѕРґР·РµРјРµР»СЊРµ РќРР РђРіСЂРѕРїСЂРѕРј")
 		end
             obj = sim:story_object(30307)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "На Болота")
+			level.map_add_object_spot(obj.id, "level_changer", "РќР° Р‘РѕР»РѕС‚Р°")
 		end
             obj = sim:story_object(30308)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Бар")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ Р‘Р°СЂ")
 		end
             obj = sim:story_object(30309)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Саркофаг")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ РЎР°СЂРєРѕС„Р°Рі")
 		end
             obj = sim:story_object(30346)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "На Испытательный Полигон")
+			level.map_add_object_spot(obj.id, "level_changer", "РќР° РСЃРїС‹С‚Р°С‚РµР»СЊРЅС‹Р№ РџРѕР»РёРіРѕРЅ")
 		end
             obj = sim:story_object(30347)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Миротворческий Корпус")
+			level.map_add_object_spot(obj.id, "level_changer", "Р’ РњРёСЂРѕС‚РІРѕСЂС‡РµСЃРєРёР№ РљРѕСЂРїСѓСЃ")
 		end
 	end
 end

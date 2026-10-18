@@ -34,7 +34,7 @@ end
 end
 
 ----------
--- чтение формы из нет-пакета
+-- С‡С‚РµРЅРёРµ С„РѕСЂРјС‹ РёР· РЅРµС‚-РїР°РєРµС‚Р°
 ----------
 function r_shape(packet)
 	local s
@@ -59,7 +59,7 @@ function r_shape(packet)
 end
 
 ----------
--- запись формы в нет-пакет
+-- Р·Р°РїРёСЃСЊ С„РѕСЂРјС‹ РІ РЅРµС‚-РїР°РєРµС‚
 ----------
 function w_shape(packet, st)
 	local s
@@ -80,7 +80,7 @@ function w_shape(packet, st)
 end
 
 ----------
--- перепаковка нет-пакета созданного скриптом рестрикта
+-- РїРµСЂРµРїР°РєРѕРІРєР° РЅРµС‚-РїР°РєРµС‚Р° СЃРѕР·РґР°РЅРЅРѕРіРѕ СЃРєСЂРёРїС‚РѕРј СЂРµСЃС‚СЂРёРєС‚Р°
 ----------
 function rewrite_restrictor(se_obj, custom, radius)
 	local packet = net_packet()
@@ -2468,7 +2468,7 @@ custom = "[logic]\ncfg = scripts\\ambient\\brainlab\\amb28_restr.ltx"
 rewrite_restrictor(se_obj, custom, 1.4)
 end 
 
---------------------------------х10-------------------------------------
+--------------------------------С…10-------------------------------------
 
 function create_ambbunk_restr()
 local se_obj = alife():create("space_restrictor",vector():set(-18.564,-9.551,1.536),3741,442)
@@ -3043,7 +3043,7 @@ local snd_obj = xr_sound.get_safe_sound_object([[ambient\new\actor_killers_2]])
 snd_obj:play(db.actor, 0, sound_object.s2d)
 end 
 
------------------С Новым 2012-м Годом!!!!----------------------
+-----------------РЎ РќРѕРІС‹Рј 2012-Рј Р“РѕРґРѕРј!!!!----------------------
 ------------------------deadcity-------------------------------------
 
 function create_ambdead_restr() 
@@ -3491,7 +3491,7 @@ function del_restr(actor, obj, p)
     end
 end
 
---------------------------тайники по историям---------------------
+--------------------------С‚Р°Р№РЅРёРєРё РїРѕ РёСЃС‚РѕСЂРёСЏРј---------------------
 
 local tbl_hlam_ruk={
 {

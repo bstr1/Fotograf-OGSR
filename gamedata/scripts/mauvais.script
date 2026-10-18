@@ -123,7 +123,7 @@ function timer_music_prom04()
    amk.g_start_timer("music_prom04",0,0,3,0)
 end
 
-function music_prom05() --пока не использовано
+function music_prom05() --РїРѕРєР° РЅРµ РёСЃРїРѕР»СЊР·РѕРІР°РЅРѕ
    local snd_obj = xr_sound.get_safe_sound_object([[mauvais\04_promzone\05_enter4]])
    snd_obj:play(db.actor, 0, sound_object.s2d)
 end

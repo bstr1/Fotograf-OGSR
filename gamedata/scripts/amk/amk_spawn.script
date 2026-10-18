@@ -1,7 +1,7 @@
 --
--- Либа спавна
+-- Р›РёР±Р° СЃРїР°РІРЅР°
 --
--- Названия карт
+-- РќР°Р·РІР°РЅРёСЏ РєР°СЂС‚
 --[[
 local levels_names =
 {
@@ -24,7 +24,7 @@ local levels_names =
 	l12u_control_monolith=1,
 	l12u_sarcofag=1
 }]]
---Список точек для спавна по уровням
+--РЎРїРёСЃРѕРє С‚РѕС‡РµРє РґР»СЏ СЃРїР°РІРЅР° РїРѕ СѓСЂРѕРІРЅСЏРј
 local maps =
 {
 	x18_1 = { x_pos = -13.74, y_pos = -10.82, z_pos = -4.30, level_vid = 1249, game_vid = 151 },
@@ -59,22 +59,22 @@ local spot_monsters={
 --level.name()
 local work_monster_lib =
 {
-	bloodsucker_normal = "bloodsucker_normal",	--Кровосос
-	burer_weak = "burer_weak",	--Бюрер
-	cat_weak = "cat_weak",	--Кот-баюн
-	chimera_weak = "chimera_weak",	--Химера
-	dog_normal = "dog_normal",	--Собака
-	fracture_weak = "fracture_weak",	--Излом
-	m_controller_normal = "m_controller_normal",	--Контролер
-	pseudodog_normal = "pseudodog_normal",	--Псевдособака
-	snork_normal = "snork_normal",	--Снорк
-	tushkano_normal = "tushkano_normal",	--Тушкан
-	--секция зомби
-	zombie_normal = "zombie_normal",	--Зомби гражданский
-	zombie_strong = "zombie_strong",	--Зомби призрак
-	zombie_trup = "zombie_trup",	--Ходячий труп, чрезвычайно живучий
-	zombie_trup2 = "zombie_trup2",	--Ходячий труп2, чрезвычайно живучий
-	zombie_weak = "zombie_weak"	--Зомби труп с лоботомией (слабый)
+	bloodsucker_normal = "bloodsucker_normal",	--РљСЂРѕРІРѕСЃРѕСЃ
+	burer_weak = "burer_weak",	--Р‘СЋСЂРµСЂ
+	cat_weak = "cat_weak",	--РљРѕС‚-Р±Р°СЋРЅ
+	chimera_weak = "chimera_weak",	--РҐРёРјРµСЂР°
+	dog_normal = "dog_normal",	--РЎРѕР±Р°РєР°
+	fracture_weak = "fracture_weak",	--РР·Р»РѕРј
+	m_controller_normal = "m_controller_normal",	--РљРѕРЅС‚СЂРѕР»РµСЂ
+	pseudodog_normal = "pseudodog_normal",	--РџСЃРµРІРґРѕСЃРѕР±Р°РєР°
+	snork_normal = "snork_normal",	--РЎРЅРѕСЂРє
+	tushkano_normal = "tushkano_normal",	--РўСѓС€РєР°РЅ
+	--СЃРµРєС†РёСЏ Р·РѕРјР±Рё
+	zombie_normal = "zombie_normal",	--Р—РѕРјР±Рё РіСЂР°Р¶РґР°РЅСЃРєРёР№
+	zombie_strong = "zombie_strong",	--Р—РѕРјР±Рё РїСЂРёР·СЂР°Рє
+	zombie_trup = "zombie_trup",	--РҐРѕРґСЏС‡РёР№ С‚СЂСѓРї, С‡СЂРµР·РІС‹С‡Р°Р№РЅРѕ Р¶РёРІСѓС‡РёР№
+	zombie_trup2 = "zombie_trup2",	--РҐРѕРґСЏС‡РёР№ С‚СЂСѓРї2, С‡СЂРµР·РІС‹С‡Р°Р№РЅРѕ Р¶РёРІСѓС‡РёР№
+	zombie_weak = "zombie_weak"	--Р—РѕРјР±Рё С‚СЂСѓРї СЃ Р»РѕР±РѕС‚РѕРјРёРµР№ (СЃР»Р°Р±С‹Р№)
 	--
 }
 

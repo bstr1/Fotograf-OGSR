@@ -1,4 +1,4 @@
---===========Телепорты в разные места===================
+--===========РўРµР»РµРїРѕСЂС‚С‹ РІ СЂР°Р·РЅС‹Рµ РјРµСЃС‚Р°===================
 --enter_prip()
 --enter_bar()
 --enter_limansk()
@@ -12,28 +12,28 @@
 
 --kordon, novice village
 --teleportate(-200.95087,-19.90391,-137.85629)
---==============Телепортация по уровню==================
+--==============РўРµР»РµРїРѕСЂС‚Р°С†РёСЏ РїРѕ СѓСЂРѕРІРЅСЋ==================
     -- db.actor:set_actor_position(vector():set(x,y,z))
     -- db.actor:set_actor_direction(dir)
 -- -- --   db.actor:set_actor_direction(-dir:getH()) --??
 
---========= Функция телепортации в пределах уровня======
+--========= Р¤СѓРЅРєС†РёСЏ С‚РµР»РµРїРѕСЂС‚Р°С†РёРё РІ РїСЂРµРґРµР»Р°С… СѓСЂРѕРІРЅСЏ======
 
 	--function teleportate(x,y,z)
 	--(8.342,-21.392,40.248),8149,2758
 	--(8.608,-21.393,40.109),8149,2758
 -- local a = vector()
-	-- Задаем координаты
+	-- Р—Р°РґР°РµРј РєРѕРѕСЂРґРёРЅР°С‚С‹
 	--==================--
-	-- Болота, хутор мстителей
+	-- Р‘РѕР»РѕС‚Р°, С…СѓС‚РѕСЂ РјСЃС‚РёС‚РµР»РµР№
 --	a.x = 615.28076171875,2
 --	a.y = 2.57928943634033
 --	a.z = 419.633544921875
---рюкзак с гранатометом на милитари
+--СЂСЋРєР·Р°Рє СЃ РіСЂР°РЅР°С‚РѕРјРµС‚РѕРј РЅР° РјРёР»РёС‚Р°СЂРё
 --[[	a.x = -274.669860839844
 	a.y = -27.5451145172119
 	a.z = 245.542663574219]]
-	-- Дер.новичков
+	-- Р”РµСЂ.РЅРѕРІРёС‡РєРѕРІ
 --[[	a.x = -200.95087
 	a.y = -19.90391
 	a.z = -137.85629	]]
@@ -45,7 +45,7 @@
 --[[	a.x=-3.064
 	a.y=-4.263
 	a.z=191.348]]
-	--== Сама телепортация
+	--== РЎР°РјР° С‚РµР»РµРїРѕСЂС‚Р°С†РёСЏ
 -- db.actor:set_actor_position(a)
 
 
@@ -65,7 +65,7 @@
 --db.actor:give_info_portion("agr_factory_spawn_spetsnaz")
 --========================================================
 
---============= Кордон, деревня новичков
+--============= РљРѕСЂРґРѕРЅ, РґРµСЂРµРІРЅСЏ РЅРѕРІРёС‡РєРѕРІ
 function enter_escape()
 spawn_level_changer.create_level_changer(14105, db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(),	 
                     	51688,
@@ -75,7 +75,7 @@ spawn_level_changer.create_level_changer(14105, db.actor:position(), db.actor:le
 						"l01_escape",
                       0)
 end
---============= Кордон, за железкой
+--============= РљРѕСЂРґРѕРЅ, Р·Р° Р¶РµР»РµР·РєРѕР№
 function enter_escape()
 spawn_level_changer.create_level_changer(990000, db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(),	 
                     	574761,
@@ -177,7 +177,7 @@ spawn_level_changer.create_level_changer(9842, db.actor:position(), db.actor:lev
 						"l05_bar",
                       0)
 end
---===============Телепорт в Лиманске
+--===============РўРµР»РµРїРѕСЂС‚ РІ Р›РёРјР°РЅСЃРєРµ
 function enter_limansk()
 spawn_level_changer.create_level_changer(14104, db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(),
 			46539,
@@ -187,7 +187,7 @@ spawn_level_changer.create_level_changer(14104, db.actor:position(), db.actor:le
 			"limansk",
 			0)
 end
---===========Удаляем телепорты===================
+--===========РЈРґР°Р»СЏРµРј С‚РµР»РµРїРѕСЂС‚С‹===================
 --spawn_level_changer.remove_old_teleport()
 --function remove_old_teleport()
 --	local sim = alife()
@@ -212,60 +212,60 @@ end
 --	end
 --	local actor = db.actor
 --9842 9814 
---===============Метки============================
+--===============РњРµС‚РєРё============================
 --for a=1,65534 do
 --local obj = alife():object(a) 
 
 --if obj then
 
---ставим метку на Кота
+--СЃС‚Р°РІРёРј РјРµС‚РєСѓ РЅР° РљРѕС‚Р°
 --if obj and obj:name() == "kot" then 
---amk.add_spot_on_map(obj.id,"green_location","Кот")
+--amk.add_spot_on_map(obj.id,"green_location","РљРѕС‚")
 --end
 
---ставим метку на смарт Кота
+--СЃС‚Р°РІРёРј РјРµС‚РєСѓ РЅР° СЃРјР°СЂС‚ РљРѕС‚Р°
 --if obj and obj:name() == "bar_kot" then 
---amk.add_spot_on_map(obj.id,"green_location","Смарт Кот")
+--amk.add_spot_on_map(obj.id,"green_location","РЎРјР°СЂС‚ РљРѕС‚")
 --end
 
---ставим метку на Раби
+--СЃС‚Р°РІРёРј РјРµС‚РєСѓ РЅР° Р Р°Р±Рё
 --if obj and obj:name() == "rabi" then 
---amk.add_spot_on_map(obj.id,"green_location","Рабинович")
+--amk.add_spot_on_map(obj.id,"green_location","Р Р°Р±РёРЅРѕРІРёС‡")
 --end
 
---На Луиса
+--РќР° Р›СѓРёСЃР°
 --if obj and obj:name() == "brat_luis" then
---amk.add_spot_on_map(obj.id,"green_location","Брат Луис")
+--amk.add_spot_on_map(obj.id,"green_location","Р‘СЂР°С‚ Р›СѓРёСЃ")
 --end
 
---на Француза
+--РЅР° Р¤СЂР°РЅС†СѓР·Р°
 --if obj and obj:name() == "francuz" then
---amk.add_spot_on_map(obj.id,"green_location","Француз")
+--amk.add_spot_on_map(obj.id,"green_location","Р¤СЂР°РЅС†СѓР·")
 --end
 
 --end
 --end
---========Устанавливаем погоду==============
+--========РЈСЃС‚Р°РЅР°РІР»РёРІР°РµРј РїРѕРіРѕРґСѓ==============
 --local str="default_weather_clear_12"
 --if system_ini():line_exist("weathers",str) then	
 --	level.set_weather(str,true)
---	news_manager.send_tip(db.actor,"Установлена погода:"..str,nil,nil,1000)
+--	news_manager.send_tip(db.actor,"РЈСЃС‚Р°РЅРѕРІР»РµРЅР° РїРѕРіРѕРґР°:"..str,nil,nil,1000)
 --else
---	news_manager.send_tip(db.actor,"Нет такой секции:"..str,nil,nil,1000)
+--	news_manager.send_tip(db.actor,"РќРµС‚ С‚Р°РєРѕР№ СЃРµРєС†РёРё:"..str,nil,nil,1000)
 --end
---========Устанавливаем отношения враг-друг и репутацию у непися===========
+--========РЈСЃС‚Р°РЅР°РІР»РёРІР°РµРј РѕС‚РЅРѕС€РµРЅРёСЏ РІСЂР°Рі-РґСЂСѓРі Рё СЂРµРїСѓС‚Р°С†РёСЋ Сѓ РЅРµРїРёСЃСЏ===========
 	-- for id,obj in pairs(db.creatures) do
-	    -- local text="esc_akim"  --здесь секция непися (или часть секции)
+	    -- local text="esc_akim"  --Р·РґРµСЃСЊ СЃРµРєС†РёСЏ РЅРµРїРёСЃСЏ (РёР»Рё С‡Р°СЃС‚СЊ СЃРµРєС†РёРё)
 	    -- local stalker=IsStalker(obj)
 	    -- if (stalker) and obj:alive() and string.find(obj:name(),text) then
 	      -- local rel = obj:relation(db.actor)
-	      -- amk.send_tip("Непись: "..obj:name()..", было отн: "..rel.." репа: "..db.actor:character_reputation().." ","SetNpcGoodwill",0,10,"gen_info") -- rel: "..rel.." 
+	      -- amk.send_tip("РќРµРїРёСЃСЊ: "..obj:name()..", Р±С‹Р»Рѕ РѕС‚РЅ: "..rel.." СЂРµРїР°: "..db.actor:character_reputation().." ","SetNpcGoodwill",0,10,"gen_info") -- rel: "..rel.." 
 	   -- obj:set_goodwill(1000,db.actor)
 	      -- obj:set_relation(game_object.friend, db.actor)
 	--	db.actor:change_character_reputation(10)
 --	      local rel = obj:relation(db.actor)
---	      amk.send_tip("Непись: "..obj:name()..", стало отн: "..rel.."  репа: "..db.actor:character_reputation().." ","SetNpcGoodwill",0,10,"gen_info")
-	--    amk.send_tip("Непись: "..obj:id().." ","Cheat: SetNpcGoodwill",0,10,"gen_info")
+--	      amk.send_tip("РќРµРїРёСЃСЊ: "..obj:name()..", СЃС‚Р°Р»Рѕ РѕС‚РЅ: "..rel.."  СЂРµРїР°: "..db.actor:character_reputation().." ","SetNpcGoodwill",0,10,"gen_info")
+	--    amk.send_tip("РќРµРїРёСЃСЊ: "..obj:id().." ","Cheat: SetNpcGoodwill",0,10,"gen_info")
 	--    obj:relation(db.actor)==game_object.neutral
 	
 --	    end
@@ -282,11 +282,11 @@ for id,obj in pairs(db.creatures) do
 
 	   local sobj=alife():object(obj:id())
 	   alife():release(sobj, true)
-	   amk.send_tip("Удалили "..obj:name(),"Удалятель от Shadowman",0,10,"gen_info")
+	   amk.send_tip("РЈРґР°Р»РёР»Рё "..obj:name(),"РЈРґР°Р»СЏС‚РµР»СЊ РѕС‚ Shadowman",0,10,"gen_info")
 	end
 end]]
 
---========Удаляем консервы==========
+--========РЈРґР°Р»СЏРµРј РєРѕРЅСЃРµСЂРІС‹==========
 function release_koncepv()
 -- get_console():execute("flush")
 -- local num_conserv=0
@@ -295,7 +295,7 @@ function release_koncepv()
 --  local obj = alife():object(a)
 --   if obj then
 --    if string.find(obj:name(),"object_koncepva") then
---amk.send_tip("Нашли "..obj:name(),"Удалятель неудаляющий",0,10,"gen_info")	
+--amk.send_tip("РќР°С€Р»Рё "..obj:name(),"РЈРґР°Р»СЏС‚РµР»СЊ РЅРµСѓРґР°Р»СЏСЋС‰РёР№",0,10,"gen_info")	
 --	alife():release(obj)
 --	num_conserv=num_conserv+1
 --    end
@@ -305,10 +305,10 @@ function release_koncepv()
 --    end
 --  end
 -- end
--- amk.send_tip("Удалили негодных консервов "..num_conserv.." банок. Говна "..num_govna.." куч.","Нет мусору на локациях!",0,10,"gen_info")
+-- amk.send_tip("РЈРґР°Р»РёР»Рё РЅРµРіРѕРґРЅС‹С… РєРѕРЅСЃРµСЂРІРѕРІ "..num_conserv.." Р±Р°РЅРѕРє. Р“РѕРІРЅР° "..num_govna.." РєСѓС‡.","РќРµС‚ РјСѓСЃРѕСЂСѓ РЅР° Р»РѕРєР°С†РёСЏС…!",0,10,"gen_info")
 -- get_console():execute("flush")
 end
---================Ящички Бака============
+--================РЇС‰РёС‡РєРё Р‘Р°РєР°============
 --[[local tabl_boxes={
 [l03u_agr_underground]=5958,
 [l04u_labx18]=6411,
@@ -374,7 +374,7 @@ for i, se_name in ipairs(bad_object_names) do
 	
 	local obj_pos =se_name..": x = "..se_obj.position.x.." y = "..se_obj.position.y.." z = "..se_obj.position.z
 	local text = obj_pos
---	local text = se_name.."; координаты: " ..pos	--.." уровень="..game.translate_string(map)
+--	local text = se_name.."; РєРѕРѕСЂРґРёРЅР°С‚С‹: " ..pos	--.." СѓСЂРѕРІРµРЅСЊ="..game.translate_string(map)
 	get_console():execute("load ~#I#:"..string.format(text))
   end
 end
@@ -402,12 +402,12 @@ function bad_wpn_search1()
 --		if string.find(obj:name(),"wpn_") then
 		if string.find(obj:name(),"wpn_") and sim:level_name(ggraph:vertex(obj.m_game_vertex_id):level_id())=="l10_radar" then
 			local map=sim:level_name(ggraph:vertex(obj.m_game_vertex_id):level_id())
-			local text = "on ground: "..obj:name().." уровень="..game.translate_string(map).." m_game_vertex = "..m_game_vertex
+			local text = "on ground: "..obj:name().." СѓСЂРѕРІРµРЅСЊ="..game.translate_string(map).." m_game_vertex = "..m_game_vertex
 			get_console():execute("load ~#I#:"..string.format(text))
 			if ggraph:valid_vertex_id(m_game_vertex) == true then				
 				get_console():execute("load ~#I#:"..string.format(text))
 			else
-				text2 = "вертекс!"..m_game_vertex
+				text2 = "РІРµСЂС‚РµРєСЃ!"..m_game_vertex
 				text = text.."  "..text2
 				get_console():execute("load ~#I#:"..string.format(text))
 			end
@@ -425,7 +425,7 @@ function bad_wpn_search1()
 			for i=1,CountBoxes do
 			  if tabl_boxes_levels[i] == tostring(map) then
 				if parent:id() == tabl_boxes_id[i] then
-					local text =game.translate_string(map)..": ствол в ящике= "..obj:name()
+					local text =game.translate_string(map)..": СЃС‚РІРѕР» РІ СЏС‰РёРєРµ= "..obj:name()
 					rx_ai.printf(text)
 				end
 			  end
@@ -437,7 +437,7 @@ function bad_wpn_search1()
 	local map=sim:level_name(ggraph:vertex(obj.m_game_vertex_id):level_id())
 	local boxid=tostring(id)
 	local text="["..map.."]="..boxid
-	local text = boxid.." уровень="..game.translate_string(map)
+	local text = boxid.." СѓСЂРѕРІРµРЅСЊ="..game.translate_string(map)
 	rx_ai.printf(text)
 
 	end
@@ -448,12 +448,12 @@ end
 	for id=0,65535 do
 	if id==26556 then
 		sim:release(obj)
-		text="Удален ящик на радаре"
+		text="РЈРґР°Р»РµРЅ СЏС‰РёРє РЅР° СЂР°РґР°СЂРµ"
 		rx_ai.printf(text)		
 	end
 	end
 ]]
---========Проверяем имена секций трупов в радиусе а-лайфа ===========
+--========РџСЂРѕРІРµСЂСЏРµРј РёРјРµРЅР° СЃРµРєС†РёР№ С‚СЂСѓРїРѕРІ РІ СЂР°РґРёСѓСЃРµ Р°-Р»Р°Р№С„Р° ===========
 --local corps_names = {"rad_curve_road_high_guard2", "rad_curve_road_mid_guard2", "rad_curve_road_mid_guard1", "rad_curve_road_high_guard1" }
 --[[	for id,obj in pairs(db.creatures) do
 --	for id=0,65535 do
@@ -465,17 +465,17 @@ end
 --			else
 --				isAlive = obj.alive
 --			end
-	--	    local text="esc_akim"  --здесь секция непися (или часть секции)
+	--	    local text="esc_akim"  --Р·РґРµСЃСЊ СЃРµРєС†РёСЏ РЅРµРїРёСЃСЏ (РёР»Рё С‡Р°СЃС‚СЊ СЃРµРєС†РёРё)
 			local stalker=IsStalker(obj)
 			if (stalker) and not obj:alive() then -- and string.find(obj:name(),"_stalker_respawn_")
 				local dist = obj:position():distance_to(db.actor:position())
-				local text = "Труп: "..obj:name().." расст: "..dist
+				local text = "РўСЂСѓРї: "..obj:name().." СЂР°СЃСЃС‚: "..dist
 				get_console():execute("load ~#I#:"..string.format(text))
 			end
 		end
 	end
 	get_console():execute("flush")]]
---=============== Нетпакет ===============
+--=============== РќРµС‚РїР°РєРµС‚ ===============
 function netpacket_pda_()
 local tabl_varnames={
 "m_teleport_6",
@@ -573,22 +573,22 @@ local tabl_varnames={
 		local value = db.storage[pda_id].pstor[varname]
 		-- if value~=0 and value~=nil then
 		if value~=nil then
-			local text = tabl_varnames[i]..": значение - "..tostring(value)
+			local text = tabl_varnames[i]..": Р·РЅР°С‡РµРЅРёРµ - "..tostring(value)
 			get_console():execute("load ~#I#:"..string.format(text))
-			--чистим "левые" артмоды
+			--С‡РёСЃС‚РёРј "Р»РµРІС‹Рµ" Р°СЂС‚РјРѕРґС‹
 --[[			amk.del_variable(tabl_varnames[i])
-			local text = tabl_varnames[i]..": значение - "..tostring(value)
+			local text = tabl_varnames[i]..": Р·РЅР°С‡РµРЅРёРµ - "..tostring(value)
 			get_console():execute("load ~#I#:"..string.format(text))]]
 		end
 	end
 	get_console():execute("flush")
 end
 
---== Тестируем шмон актора
+--== РўРµСЃС‚РёСЂСѓРµРј С€РјРѕРЅ Р°РєС‚РѕСЂР°
 --braad_test.release_actor_items()
 --braad_test.clear_actor(db.actor)
 
---========= Принудительно записываем лог-файл ============
+--========= РџСЂРёРЅСѓРґРёС‚РµР»СЊРЅРѕ Р·Р°РїРёСЃС‹РІР°РµРј Р»РѕРі-С„Р°Р№Р» ============
 -- get_console():execute("flush")
 
 --[[    if not has_alife_info("storyline_actor_start") then
@@ -598,26 +598,26 @@ end
 	end]]
 		
 	--1) sak.nepis_umer() +
-		--выдать	bar_ivancov_rg6_start
+		--РІС‹РґР°С‚СЊ	bar_ivancov_rg6_start
 --[[		local text="bar_ivancov_rg6_start"
 		db.actor:give_info_portion(text)
-		amk.send_tip(text.." добавлено.","Cheat: Add Info",0,15,"gen_info")		]]
-		--убийство иванцова - bar_dolg_ivancov_umer : проверить, что провален (bar_ivancov_rg6_fail)
+		amk.send_tip(text.." РґРѕР±Р°РІР»РµРЅРѕ.","Cheat: Add Info",0,15,"gen_info")		]]
+		--СѓР±РёР№СЃС‚РІРѕ РёРІР°РЅС†РѕРІР° - bar_dolg_ivancov_umer : РїСЂРѕРІРµСЂРёС‚СЊ, С‡С‚Рѕ РїСЂРѕРІР°Р»РµРЅ (bar_ivancov_rg6_fail)
 	--2)braad_test.new_info() +
-		--на агро: подойти к базе вояк
-		--выдать kot_agro_mono_start
+		--РЅР° Р°РіСЂРѕ: РїРѕРґРѕР№С‚Рё Рє Р±Р°Р·Рµ РІРѕСЏРє
+		--РІС‹РґР°С‚СЊ kot_agro_mono_start
 --[[		local text="kot_agro_mono_start"
 		db.actor:give_info_portion(text)
-		amk.send_tip(text.." добавлено.","Cheat: Add Info",0,15,"gen_info")]]
-		--проверить спавн монолитовцев
+		amk.send_tip(text.." РґРѕР±Р°РІР»РµРЅРѕ.","Cheat: Add Info",0,15,"gen_info")]]
+		--РїСЂРѕРІРµСЂРёС‚СЊ СЃРїР°РІРЅ РјРѕРЅРѕР»РёС‚РѕРІС†РµРІ
 	--3)meceniy_utils.on_actor_update_callback()
-		--проверить ЧУ
+		--РїСЂРѕРІРµСЂРёС‚СЊ Р§РЈ
 	--4)meceniy_work.set_invisible() +
-		--проверить meceniy_outfit_new - невидимость и удаление оружия из слота
+		--РїСЂРѕРІРµСЂРёС‚СЊ meceniy_outfit_new - РЅРµРІРёРґРёРјРѕСЃС‚СЊ Рё СѓРґР°Р»РµРЅРёРµ РѕСЂСѓР¶РёСЏ РёР· СЃР»РѕС‚Р°
 		--alife():create("meceniy_outfit_new",db.actor:position(),db.actor:level_vertex_id(),db.actor:game_vertex_id(),db.actor:id())
 	--5)sak.out_teleport()
 --		sak.get_kordon_yantar()
-		--уйти с кордона, проверить, что удалился
+		--СѓР№С‚Рё СЃ РєРѕСЂРґРѕРЅР°, РїСЂРѕРІРµСЂРёС‚СЊ, С‡С‚Рѕ СѓРґР°Р»РёР»СЃСЏ
 		
 		
 --[[for id=0,65535 do
@@ -628,7 +628,7 @@ end
 		local map=sim:level_name(ggraph:vertex(obj.m_game_vertex_id):level_id())
 		local boxid=tostring(id)
 		local text="["..map.."]="..boxid
-		local text = boxid.." уровень="..game.translate_string(map)
+		local text = boxid.." СѓСЂРѕРІРµРЅСЊ="..game.translate_string(map)
 		get_console():execute("load ~#I#:"..string.format(text))
 	end
 end]]
@@ -665,7 +665,7 @@ for i=0,65535 do
 		end
 	end
 end
-amk.send_tip("Удалили всего: "..total_removed.." монстров","Удалялка",0,10,"gen_info")]]
+amk.send_tip("РЈРґР°Р»РёР»Рё РІСЃРµРіРѕ: "..total_removed.." РјРѕРЅСЃС‚СЂРѕРІ","РЈРґР°Р»СЏР»РєР°",0,10,"gen_info")]]
 
 --[[function monstr_kil()
   if level.name() ~= "l07_military" then
@@ -715,7 +715,7 @@ end]]
 --alife():create("m_controller_normal",vector():set(a.x-1+math.random()*2,a.y,a.z-1+math.random()*2),vid,gvid,65535)
 
 -- local varnames = {"wounded_state", "wounded_sound","wounded_fight","wounded_victim"}
---ставим метку на охотника
+--СЃС‚Р°РІРёРј РјРµС‚РєСѓ РЅР° РѕС…РѕС‚РЅРёРєР°
 -- for a=1,65534 do
 --[[	local bad_object_names = {"fracture_strong13078", "pseudodog_strong18225", "zombie_normal18231", "psy_dog_radar36627", "pseudodog_strong40993", "zombie_normal41004", "chimera_strong44043", "psy_dog_radar46966", "electro_chimera47047", "zombie_normal47072", "zombie_normal47076", "zombie_normal47077"}
 local i, se_name, se_obj, pos
@@ -726,7 +726,7 @@ for i, se_name in ipairs(bad_object_names) do
 		-- local npc_id = obj:id()
 		alife():release(obj, true)
 		if not obj then
-			get_console():execute("load ~#I#:"..string.format("удалён объект: "..se_name))
+			get_console():execute("load ~#I#:"..string.format("СѓРґР°Р»С‘РЅ РѕР±СЉРµРєС‚: "..se_name))
 		else
 			local npc = level.object_by_id(npc_id)
 			if npc then
@@ -738,10 +738,10 @@ for i, se_name in ipairs(bad_object_names) do
 				h:bone("bip01_spine")
 				h.type = hit.fire_wound
 				npc:hit(h)
-				get_console():execute("load ~#I#:"..string.format("найден объект: "..se_name))
+				get_console():execute("load ~#I#:"..string.format("РЅР°Р№РґРµРЅ РѕР±СЉРµРєС‚: "..se_name))
 				alife():release(npc, true)
 				if not npc then
-					get_console():execute("load ~#I#:"..string.format("удалён объект: "..se_name))
+					get_console():execute("load ~#I#:"..string.format("СѓРґР°Р»С‘РЅ РѕР±СЉРµРєС‚: "..se_name))
 				end
 			end
 		end
@@ -749,7 +749,7 @@ for i, se_name in ipairs(bad_object_names) do
 		-- amk.make_suicide(npc)
 		
 		-- switch_online(obj)
-		-- amk.add_spot_on_map(obj.id,"green_location","Лёня Бард")		
+		-- amk.add_spot_on_map(obj.id,"green_location","Р›С‘РЅСЏ Р‘Р°СЂРґ")		
 		-- local text = obj:name()
 		-- get_console():execute("load ~#I#:"..string.format(text))
 
@@ -759,7 +759,7 @@ end]]
 		-- amk.make_suicide(npc)
 		
 		-- switch_online(obj)
-		-- amk.add_spot_on_map(npc.id,"red_location","Охотник")
+		-- amk.add_spot_on_map(npc.id,"red_location","РћС…РѕС‚РЅРёРє")
 		-- local text = obj:name()
 		-- get_console():execute("load ~#I#:"..string.format(text))
 		
@@ -769,7 +769,7 @@ end]]
 			-- amk.make_suicide(npc)
 		-- end
 -- get_console():execute("flush")
---============ Выполняем без игры =========--
+--============ Р’С‹РїРѕР»РЅСЏРµРј Р±РµР· РёРіСЂС‹ =========--
 -- sleep_manager.main(1)
 -- level.set_time_factor(1000)
 -- local obj = alife():object(0)
@@ -782,7 +782,7 @@ end]]
 	  a = db.actor:position()
 	  vid = db.actor:level_vertex_id()
 	  gvid = db.actor:game_vertex_id()
-	  text = "Позиция:\\nX= "..a.x.."\\nY= "..a.y.."\\nZ= "..a.z.."\\nlevel_vertex= "..vid.."\\ngame_vertex_id= "..gvid
+	  text = "РџРѕР·РёС†РёСЏ:\\nX= "..a.x.."\\nY= "..a.y.."\\nZ= "..a.z.."\\nlevel_vertex= "..vid.."\\ngame_vertex_id= "..gvid
 	  news_manager.send_tip(db.actor, text, nil, nil, 30000)
 	  get_console():execute(string.format("(%.3f,%.3f,%.3f),%d,%d",a.x,a.y,a.z,vid,gvid))	  
 	end

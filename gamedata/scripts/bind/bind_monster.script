@@ -26,7 +26,7 @@ end
 function generic_object_binder:reinit()
 	object_binder.reinit(self)
 
-	-- У торговца нет поддержки перемещения
+	-- РЈ С‚РѕСЂРіРѕРІС†Р° РЅРµС‚ РїРѕРґРґРµСЂР¶РєРё РїРµСЂРµРјРµС‰РµРЅРёСЏ
 	if self.object:clsid() ~= clsid.script_trader then
 		self.object:set_patrol_extrapolate_callback(generic_object_binder.extrapolate_callback, self)
 	end
@@ -76,7 +76,7 @@ function generic_object_binder:update(delta)
 			end
 		end
 
-	-- Апдейт торговли
+	-- РђРїРґРµР№С‚ С‚РѕСЂРіРѕРІР»Рё
 	if self.object:clsid() == clsid.script_trader then
 		trade_manager.update(self.object)
 	end
@@ -161,7 +161,7 @@ function generic_object_binder:update(delta)
 					h.type = hit.telepatic
 					h.power = 0.02
 					h.impulse = 0.0
-					h:bone("bip01_spine") -- чтобы учитывалась броня
+					h:bone("bip01_spine") -- С‡С‚РѕР±С‹ СѓС‡РёС‚С‹РІР°Р»Р°СЃСЊ Р±СЂРѕРЅСЏ
 					h.draftsman = self.object
 					h.direction = self.object:direction()
 					db.actor:hit(h)
@@ -192,7 +192,7 @@ function generic_object_binder:update(delta)
 	local blowout=amk.load_variable("blowout",0)
 	if blowout==3 and (not self.control_override) then
 		if not self.object:action() then
-			-- Захватываем зверушку
+			-- Р—Р°С…РІР°С‚С‹РІР°РµРј Р·РІРµСЂСѓС€РєСѓ
 			xr_logic.mob_capture(self.object,true)
 			self.control_override=true
 		end
@@ -203,7 +203,7 @@ function generic_object_binder:update(delta)
 			action(self.object, anim(anim.lie_idle, 0), sound(snd), cond(cond.sound_end))
 		end
 	elseif self.control_override and blowout~=3 then
-		-- отпускаем зверушку
+		-- РѕС‚РїСѓСЃРєР°РµРј Р·РІРµСЂСѓС€РєСѓ
 		self.control_override=nil
 		xr_logic.mob_release(self.object)
 	elseif self.st.active_section ~= nil then
@@ -421,7 +421,7 @@ function generic_object_binder:net_destroy()
 	db.del_obj(self.object)
 	db.storage[self.object:id()] = nil
 
-	-- АМК. Очистка рестрикторов
+	-- РђРњРљ. РћС‡РёСЃС‚РєР° СЂРµСЃС‚СЂРёРєС‚РѕСЂРѕРІ
 	local id=self.object:id()
 	object_binder.net_destroy(self)
 	local sobj=alife():object(id)
@@ -430,7 +430,7 @@ function generic_object_binder:net_destroy()
 		tbl.crvu32u16u2={}
 		amk.write_monster_params(tbl,sobj)
 	else
-		-- Выход из игры.
+		-- Р’С‹С…РѕРґ РёР· РёРіСЂС‹.
 	end	
 	
 end 

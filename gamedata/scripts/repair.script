@@ -3,7 +3,7 @@ local note = nil
 function use_repkit()
 if note and type(note) == "number" then
 if not level.object_by_id(note) then
-level.start_stop_menu(interfase.ui_repair(), true) --запускаем меню
+level.start_stop_menu(interfase.ui_repair(), true) --Р·Р°РїСѓСЃРєР°РµРј РјРµРЅСЋ
 alife():create("repair_kit", db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(), db.actor:id())
 end
 note = nil
@@ -15,7 +15,7 @@ note = nil
 end
 end
  
-function DeleteItem(iId) --добавляем функцию удаления предмета из инвентаря
+function DeleteItem(iId) --РґРѕР±Р°РІР»СЏРµРј С„СѓРЅРєС†РёСЋ СѓРґР°Р»РµРЅРёСЏ РїСЂРµРґРјРµС‚Р° РёР· РёРЅРІРµРЅС‚Р°СЂСЏ
     if iId then
         local seObj=alife():object(iId)
         if seObj then alife():release(seObj,true) 
@@ -25,10 +25,10 @@ end
 
 function repair_wpn_1()
     local item_in_slot = db.actor:item_in_slot(1)
-    local medusa = db.actor:object("ks_absolut_05") --и везде добавим проверку на Абсолют
+    local medusa = db.actor:object("ks_absolut_05") --Рё РІРµР·РґРµ РґРѕР±Р°РІРёРј РїСЂРѕРІРµСЂРєСѓ РЅР° РђР±СЃРѕР»СЋС‚
     if item_in_slot ~= nil and 1 > item_in_slot:condition() and medusa then 
        item_in_slot:set_condition(1)
-       DeleteItem(medusa:id()) --удаляем артефакт после ремонта
+       DeleteItem(medusa:id()) --СѓРґР°Р»СЏРµРј Р°СЂС‚РµС„Р°РєС‚ РїРѕСЃР»Рµ СЂРµРјРѕРЅС‚Р°
     end    
 end
 
@@ -48,16 +48,16 @@ function repair_armora()
 	end
 end
 
---/ спавн предметов в инвентори
+--/ СЃРїР°РІРЅ РїСЂРµРґРјРµС‚РѕРІ РІ РёРЅРІРµРЅС‚РѕСЂРё
 function spawn_item_in_inv(section,npc)
 	if npc == nil then npc = db.actor end
 	return alife():create(section, npc:position(), npc:level_vertex_id(), npc:game_vertex_id(), npc:id())
 end
 
---функция вызываемая из дропа
+--С„СѓРЅРєС†РёСЏ РІС‹Р·С‹РІР°РµРјР°СЏ РёР· РґСЂРѕРїР°
 function use_repair(obj)
 if obj:section() == "repair_kit" then
-note = obj --если наша вещь, то запомнить его userdata
+note = obj --РµСЃР»Рё РЅР°С€Р° РІРµС‰СЊ, С‚Рѕ Р·Р°РїРѕРјРЅРёС‚СЊ РµРіРѕ userdata
 end
 end
 

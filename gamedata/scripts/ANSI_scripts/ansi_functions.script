@@ -1,10 +1,10 @@
--- Функции, требующие ANSI кодировки скрипта.
+-- Р¤СѓРЅРєС†РёРё, С‚СЂРµР±СѓСЋС‰РёРµ ANSI РєРѕРґРёСЂРѕРІРєРё СЃРєСЂРёРїС‚Р°.
 
---===================[string.lower и string.upper с поддержкой русских букв]====================
+--===================[string.lower Рё string.upper СЃ РїРѕРґРґРµСЂР¶РєРѕР№ СЂСѓСЃСЃРєРёС… Р±СѓРєРІ]====================
 do
 	local lower = string.lower
 	string.lower = function(s)
-		return lower(s:gsub("([А-Я])",function(c) return string.char(c:byte()+32) end):gsub("Ё", "ё"))
+		return lower(s:gsub("([Рђ-РЇ])",function(c) return string.char(c:byte()+32) end):gsub("РЃ", "С‘"))
 	end
 	string.lowerW = function(s)
 		return game.StringToUTF8(string.lower(game.StringFromUTF8(s)))
@@ -12,7 +12,7 @@ do
 	--
 	local upper = string.upper
 	string.upper = function(s)
-		return upper(s:gsub("([а-я])",function(c) return string.char(c:byte()-32) end):gsub("ё", "Ё"))
+		return upper(s:gsub("([Р°-СЏ])",function(c) return string.char(c:byte()-32) end):gsub("С‘", "РЃ"))
 	end
 	string.upperW = function(s)
 		return game.StringToUTF8(string.upper(game.StringFromUTF8(s)))

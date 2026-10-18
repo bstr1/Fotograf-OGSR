@@ -165,7 +165,7 @@ end
 
 function sms_skit()
   db.actor:give_info_portion("postovoy_talk")
-    news_manager.send_tip(db.actor, "Всё, мы пришли. Иди поговори с Лэйлой.", nil, nil, 20000) 
+    news_manager.send_tip(db.actor, "Р’СЃС‘, РјС‹ РїСЂРёС€Р»Рё. РРґРё РїРѕРіРѕРІРѕСЂРё СЃ Р›СЌР№Р»РѕР№.", nil, nil, 20000) 
 end
 
 ----------------------------------lesnik--------------------------------------
@@ -218,7 +218,7 @@ flamethrower.relocate_n_items_section(second_speaker, "ammo_11.43x23_fmj", "in",
 end
 
 function sahar_vas_nagrad(first_speaker, second_speaker)
-dialogs.relocate_money(first_speaker, 2000,"in") --получаем деньги в награду
+dialogs.relocate_money(first_speaker, 2000,"in") --РїРѕР»СѓС‡Р°РµРј РґРµРЅСЊРіРё РІ РЅР°РіСЂР°РґСѓ
 end
 
 function sahar_lekarstvo(first_speaker, second_speaker)
@@ -396,7 +396,7 @@ end
 
 function mandra2_otdal(first_speaker, second_speaker)
 new_dialog.out_item_much("mandra",3)
-dialogs.relocate_money(first_speaker, 45000,"in") --получаем деньги в награду
+dialogs.relocate_money(first_speaker, 45000,"in") --РїРѕР»СѓС‡Р°РµРј РґРµРЅСЊРіРё РІ РЅР°РіСЂР°РґСѓ
 end
 
 ---------------------------------------grig--------------------------------------------------
@@ -714,7 +714,7 @@ function set_metka_kostolom()
   local obj = alife():object(a)
   if obj then
    if obj:section_name()=="metka_kostolom" then
-    amk.add_spot_on_map(obj.id,"crlc_big","Логово Болотной твари")
+    amk.add_spot_on_map(obj.id,"crlc_big","Р›РѕРіРѕРІРѕ Р‘РѕР»РѕС‚РЅРѕР№ С‚РІР°СЂРё")
     return
    end
   end
@@ -857,7 +857,7 @@ end
 
 function sms_zahar()
   db.actor:give_info_portion("zahar_talk")
-    news_manager.send_tip(db.actor, "Поговорить с Захаром.", nil, nil, 20000) 
+    news_manager.send_tip(db.actor, "РџРѕРіРѕРІРѕСЂРёС‚СЊ СЃ Р—Р°С…Р°СЂРѕРј.", nil, nil, 20000) 
 end
 
 function spawn_zahar_dogs()
@@ -944,7 +944,7 @@ new_dialog.out_item_much("cognac",5)
 end
 
 function brown_money(first_speaker, second_speaker)
-dialogs.relocate_money(first_speaker, 20000,"in") --получаем деньги в награду
+dialogs.relocate_money(first_speaker, 20000,"in") --РїРѕР»СѓС‡Р°РµРј РґРµРЅСЊРіРё РІ РЅР°РіСЂР°РґСѓ
 end
 
 function spawn_foster_dogs()
@@ -1072,7 +1072,7 @@ function set_metka_fab()
   local obj = alife():object(a)
   if obj then
    if obj:section_name()=="metka_fab" then
-    amk.add_spot_on_map(obj.id,"crlc_big","Место, где пропали разведчики")
+    amk.add_spot_on_map(obj.id,"crlc_big","РњРµСЃС‚Рѕ, РіРґРµ РїСЂРѕРїР°Р»Рё СЂР°Р·РІРµРґС‡РёРєРё")
     return
    end
   end
@@ -1834,7 +1834,7 @@ function set_metka_reciver()
   local obj = alife():object(a)
   if obj then
    if obj:section_name()=="doc_peredatchik" then
-    amk.add_spot_on_map(obj.id,"crlc_big","Передатчик Доктора")
+    amk.add_spot_on_map(obj.id,"crlc_big","РџРµСЂРµРґР°С‚С‡РёРє Р”РѕРєС‚РѕСЂР°")
     return
    end
   end
@@ -1887,7 +1887,7 @@ function set_metka_zahar()
   local obj = alife():object(a)
   if obj then
    if obj:section_name()=="zahar_box" then
-    amk.add_spot_on_map(obj.id,"crlc_big","Контейнер Захара")
+    amk.add_spot_on_map(obj.id,"crlc_big","РљРѕРЅС‚РµР№РЅРµСЂ Р—Р°С…Р°СЂР°")
     return
    end
   end
@@ -1998,7 +1998,7 @@ function set_metka_vano()
   local obj = alife():object(a)
   if obj then
    if obj:section_name()=="box_vano" then
-    amk.add_spot_on_map(obj.id,"crlc_big","Ящик с минами")
+    amk.add_spot_on_map(obj.id,"crlc_big","РЇС‰РёРє СЃ РјРёРЅР°РјРё")
     return
    end
   end
@@ -2107,7 +2107,7 @@ function set_metka_nato()
   local obj = alife():object(a)
   if obj then
    if obj:section_name()=="brown_mafon" then
-    amk.add_spot_on_map(obj.id,"crlc_small","Бронежилеты")
+    amk.add_spot_on_map(obj.id,"crlc_small","Р‘СЂРѕРЅРµР¶РёР»РµС‚С‹")
     return
    end
   end
@@ -2214,7 +2214,7 @@ function set_metka_maloy()
   local obj = alife():object(a)
   if obj then
    if obj:section_name()=="maroder_yang" then
-    amk.add_spot_on_map(obj.id,"crlc_small","Мародёры")
+    amk.add_spot_on_map(obj.id,"crlc_small","РњР°СЂРѕРґС‘СЂС‹")
     return
    end
   end

@@ -1,4 +1,4 @@
---Ôóíêöèè äëÿ êâåñòà íà îãíåì¸ò.
+--Ð¤ÑƒÐ½ÐºÑ†Ð¸Ð¸ Ð´Ð»Ñ ÐºÐ²ÐµÑÑ‚Ð° Ð½Ð° Ð¾Ð³Ð½ÐµÐ¼Ñ‘Ñ‚.
 -- flamethrower.script
 local min_fuel = 150
 local max_fuel = 300
@@ -131,7 +131,7 @@ function set_metka()
   local obj = alife():object(a)
   if obj then
    if obj:section_name()=="trubka" then
-    amk.add_spot_on_map(obj.id,"red_location","Òðóáêà")
+    amk.add_spot_on_map(obj.id,"red_location","Ð¢Ñ€ÑƒÐ±ÐºÐ°")
     return
    end
   end
@@ -292,7 +292,7 @@ local params=amk.read_stalker_params(obj)
 params.custom="[logic]\nactive=walker\n[walker]\npath_walk = garb_tambovski_path\npath_look = garb_tambovski_look\non_info= {+find_815} nil\ncombat_ignore_cond=always"
 params.sid=481516
 amk.write_stalker_params(params,obj)
-amk.add_spot_on_map(obj.id,'green_location','Ë¸õà Òàìáîâñêèé')
+amk.add_spot_on_map(obj.id,'green_location','Ð›Ñ‘Ñ…Ð° Ð¢Ð°Ð¼Ð±Ð¾Ð²ÑÐºÐ¸Ð¹')
 end
 
 
@@ -443,7 +443,7 @@ function calc_reload(first_speaker, second_speaker)
 			if mm == 1 then
 			dialogs.relocate_item_section(trader, "amk_kanistra", "out")
 			dialogs.relocate_item_section(trader, "amk_ballon", "out")
---rpm â êîíôèãå 300, çíà÷èò ïîëìèíóòû - 150, à ìèíóòà 300.
+--rpm Ð² ÐºÐ¾Ð½Ñ„Ð¸Ð³Ðµ 300, Ð·Ð½Ð°Ñ‡Ð¸Ñ‚ Ð¿Ð¾Ð»Ð¼Ð¸Ð½ÑƒÑ‚Ñ‹ - 150, Ð° Ð¼Ð¸Ð½ÑƒÑ‚Ð° 300.
 			amk.save_variable("flame_reload_count", min_fuel)
 			elseif mm >= 2 then
 			flamethrower.relocate_n_items_section(trader, "amk_kanistra", "out", 2)

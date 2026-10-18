@@ -31,7 +31,7 @@ function main()
 
 --		heli:heli_go_by_patrol_path( "way_raid_heli" )
 		heli:heli_go_by_patrol_path( "heli_way_1" )
-		wait( 1000 ) -- �⮡� update �ࠡ�⠫ � ���⮫��
+		wait( 1000 ) -- зв®Ўл update ба Ў®в « г ўҐав®«св 
 
 		local t = heli:heli_last_point_time() * 1000
 
@@ -59,7 +59,7 @@ function main()
 --[[
 	while active do
 		heli:heli_go_to_point( path:point( pnt + 1 ), path:point( pnt ), 0 )
-		wait( 200 ) -- �⮡� update �ࠡ�⠫ � ���⮫��
+		wait( 200 ) -- зв®Ўл update ба Ў®в « г ўҐав®«св 
 
 		local t = heli:heli_last_point_time() * 1000
 		if not start then

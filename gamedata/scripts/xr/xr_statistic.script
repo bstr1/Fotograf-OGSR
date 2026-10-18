@@ -88,7 +88,7 @@ local sect_alias = {
         vodyanoy4 = "zombie_strong",
         vodyanoy5 = "zombie_strong",
         vodyanoy6 = "zombie_strong",
-	--[[ -- алиасы не нужны
+	--[[ -- Р°Р»РёР°СЃС‹ РЅРµ РЅСѓР¶РЅС‹
 	psy_dog_weak = "psy_dog",
 	psy_dog_normal = "psy_dog",
 	psy_dog_strong = "psy_dog", ]]

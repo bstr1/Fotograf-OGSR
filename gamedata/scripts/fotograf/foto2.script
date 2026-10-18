@@ -1,5 +1,5 @@
 ----------
--- чтение формы из нет-пакета --------------------------Restrictors------------------
+-- С‡С‚РµРЅРёРµ С„РѕСЂРјС‹ РёР· РЅРµС‚-РїР°РєРµС‚Р° --------------------------Restrictors------------------
 ----------
 function r_shape(packet)
 	local s
@@ -24,7 +24,7 @@ function r_shape(packet)
 end
 
 ----------
--- запись формы в нет-пакет
+-- Р·Р°РїРёСЃСЊ С„РѕСЂРјС‹ РІ РЅРµС‚-РїР°РєРµС‚
 ----------
 function w_shape(packet, st)
 	local s
@@ -45,7 +45,7 @@ function w_shape(packet, st)
 end
 
 ----------
--- перепаковка нет-пакета созданного скриптом рестрикта
+-- РїРµСЂРµРїР°РєРѕРІРєР° РЅРµС‚-РїР°РєРµС‚Р° СЃРѕР·РґР°РЅРЅРѕРіРѕ СЃРєСЂРёРїС‚РѕРј СЂРµСЃС‚СЂРёРєС‚Р°
 ----------
 function rewrite_restrictor(sobj, custom, radius)
 	local packet = net_packet()
@@ -171,8 +171,8 @@ function create_anom(name_anom, posit_anom, lvid_anom, gvid_anom, radius_anom, p
  packet:w_u32(get_story_id_not_replay()) 
 
  -- cse_shape 
- packet:w_u8(1) -- количество фигур 
- packet:w_u8(0) -- тип фигуры: сфера 
+ packet:w_u8(1) -- РєРѕР»РёС‡РµСЃС‚РІРѕ С„РёРіСѓСЂ 
+ packet:w_u8(0) -- С‚РёРї С„РёРіСѓСЂС‹: СЃС„РµСЂР° 
  packet:w_vec3(vector():set(0, 0, 0)) 
  if radius_anom ~= nil then 
  packet:w_float(radius_anom) 
@@ -322,7 +322,7 @@ end
 function info_cal(info_id)
 	local actor = db.actor
 	if info_id and actor and string.sub(info_id, 1, 3) ~= "ui_" then
-		get_console():execute(string.format('load ~[ex_test] Получен инфопоршень: %s',info_id))
+		get_console():execute(string.format('load ~[ex_test] РџРѕР»СѓС‡РµРЅ РёРЅС„РѕРїРѕСЂС€РµРЅСЊ: %s',info_id))
 	end
 end
 
@@ -341,17 +341,17 @@ function poet_docs_otdal(info_id)
 end
 
 function create_level_changer(
-p_story_id,   -- STORY_ID нового level_changer (понадобится нам позже)
-p_position,   -- вектор, координаты точки, в которой будет располагаться центр нового level_changer
-p_lvertex_id, -- level_vertext_id - идентифицируют уровень, на котором будет создан level_changer
+p_story_id,   -- STORY_ID РЅРѕРІРѕРіРѕ level_changer (РїРѕРЅР°РґРѕР±РёС‚СЃСЏ РЅР°Рј РїРѕР·Р¶Рµ)
+p_position,   -- РІРµРєС‚РѕСЂ, РєРѕРѕСЂРґРёРЅР°С‚С‹ С‚РѕС‡РєРё, РІ РєРѕС‚РѕСЂРѕР№ Р±СѓРґРµС‚ СЂР°СЃРїРѕР»Р°РіР°С‚СЊСЃСЏ С†РµРЅС‚СЂ РЅРѕРІРѕРіРѕ level_changer
+p_lvertex_id, -- level_vertext_id - РёРґРµРЅС‚РёС„РёС†РёСЂСѓСЋС‚ СѓСЂРѕРІРµРЅСЊ, РЅР° РєРѕС‚РѕСЂРѕРј Р±СѓРґРµС‚ СЃРѕР·РґР°РЅ level_changer
 p_gvertex_id, -- game_vertext_id
 
-p_dest_lv,    -- level_vertex_id - идентифицируют уровень, на который level_changer будет перебрасывать игрока 
+p_dest_lv,    -- level_vertex_id - РёРґРµРЅС‚РёС„РёС†РёСЂСѓСЋС‚ СѓСЂРѕРІРµРЅСЊ, РЅР° РєРѕС‚РѕСЂС‹Р№ level_changer Р±СѓРґРµС‚ РїРµСЂРµР±СЂР°СЃС‹РІР°С‚СЊ РёРіСЂРѕРєР° 
 p_dest_gv,    -- game_vertex_id
-p_dest_pos,   -- координаты точки, в которой на новом уровне окажется игрок
-p_dest_dir,   -- направрение взгляда игрока
-p_dest_level, -- название уровня, например "L11_Pripyat"
-p_silent      -- следует задать 1, чтобы подавить вопрос о смене уровня (автоматический переход)
+p_dest_pos,   -- РєРѕРѕСЂРґРёРЅР°С‚С‹ С‚РѕС‡РєРё, РІ РєРѕС‚РѕСЂРѕР№ РЅР° РЅРѕРІРѕРј СѓСЂРѕРІРЅРµ РѕРєР°Р¶РµС‚СЃСЏ РёРіСЂРѕРє
+p_dest_dir,   -- РЅР°РїСЂР°РІСЂРµРЅРёРµ РІР·РіР»СЏРґР° РёРіСЂРѕРєР°
+p_dest_level, -- РЅР°Р·РІР°РЅРёРµ СѓСЂРѕРІРЅСЏ, РЅР°РїСЂРёРјРµСЂ "L11_Pripyat"
+p_silent      -- СЃР»РµРґСѓРµС‚ Р·Р°РґР°С‚СЊ 1, С‡С‚РѕР±С‹ РїРѕРґР°РІРёС‚СЊ РІРѕРїСЂРѕСЃ Рѕ СЃРјРµРЅРµ СѓСЂРѕРІРЅСЏ (Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРёР№ РїРµСЂРµС…РѕРґ)
 )
 
 local sobj = alife():create("level_changer",p_position,p_lvertex_id,p_gvertex_id)
@@ -407,11 +407,11 @@ packet:w_u32( bit_not(193) ) -- object_flags = -193 = 0xFFFFFF3E
 packet:w_stringZ(custom_data)
 packet:w_u32(p_story_id) -- story_id
 packet:w_u32(spawn_story_id)
-packet:w_u8(1) -- количество фигур
--- packet:w_u8(0) -- тип фигуры: сфера
+packet:w_u8(1) -- РєРѕР»РёС‡РµСЃС‚РІРѕ С„РёРіСѓСЂ
+-- packet:w_u8(0) -- С‚РёРї С„РёРіСѓСЂС‹: СЃС„РµСЂР°
 -- packet:w_vec3(vector():set(0, 0, 0)) -- sphere_center
 -- packet:w_float(3.0)
-packet:w_u8(1) -- тип фигуры: box
+packet:w_u8(1) -- С‚РёРї С„РёРіСѓСЂС‹: box
 packet:w_float(2) -- axis_x_x
 packet:w_float(0) -- axis_x_y
 packet:w_float(0) -- axis_x_z
@@ -428,7 +428,7 @@ packet:w_u8(3) -- restrictor_type
 packet:w_u16(p_dest_gv) -- destination game_vertex_id
 packet:w_s32(p_dest_lv) -- destination level_vertex_id
 packet:w_vec3(p_dest_pos) -- destination position
-packet:w_vec3(p_dest_dir) -- destination direction (направление взгляда)
+packet:w_vec3(p_dest_dir) -- destination direction (РЅР°РїСЂР°РІР»РµРЅРёРµ РІР·РіР»СЏРґР°)
 packet:w_stringZ(p_dest_level) -- destination level name
 packet:w_stringZ("start_actor_02") -- some string, always const
 packet:w_u8(p_silent) -- 1 for silent level changing
@@ -468,31 +468,31 @@ function c_lc_5()
 	create_level_changer(65005,actor:position(),actor:level_vertex_id(),actor:game_vertex_id(),7072,324,vector():set(114.979,24.538,-19.755),vector():set(0.999,0,-0.009),"l08u_brainlab",1)
 end
 
---x16-МГ
+--x16-РњР“
 function c_lc_6()
 	local actor = db.actor
 	create_level_changer(65006,actor:position(),actor:level_vertex_id(),actor:game_vertex_id(),27780,1179,vector():set(-333.241,-0.247,-168.744),vector():set(0,0,0),"deadcity",1)
 end
 
----МГ-ЧД
+---РњР“-Р§Р”
 function c_lc_7()
 	local actor = db.actor
 	create_level_changer(65007,actor:position(),actor:level_vertex_id(),actor:game_vertex_id(),27598,0,vector():set(-244.599,13.413,-266.352),vector():set(0,0,0),"dyshlo",1)
 end
 
---ЧД-Prip
+--Р§Р”-Prip
 function c_lc_8()
 	local actor = db.actor
 	create_level_changer(65008,actor:position(),actor:level_vertex_id(),actor:game_vertex_id(),597,480,vector():set(-160.858,-2.397,33.403),vector():set(0,0,0),"l11_pripyat",1)
 end
 
---Prip-Х10
+--Prip-РҐ10
 function c_lc_9()
 	local actor = db.actor
 	create_level_changer(65009,actor:position(),actor:level_vertex_id(),actor:game_vertex_id(),3073,337,vector():set(-22.33,-8.989,15.783),vector():set(0.033, 0,0.99),"l10u_bunker",1)
 end
 
---Х10-X18
+--РҐ10-X18
 function c_lc_10()
 	local actor = db.actor
 	create_level_changer(65010,actor:position(),actor:level_vertex_id(),actor:game_vertex_id(),2980,110,vector():set(1.729,9.31,-5.005),vector():set(0.033,0,0.99),"l04u_labx18",1)
@@ -570,7 +570,7 @@ function del_zov2()
 end
 
 function noise_message()
-	news_manager.send_tip(db.actor,"НУ КАК ВЫ МОЖЕТЕ СЛУШАТЬ РАДИО С ТАКИМИ ПОМЕХАМИ???\\nЖЕЛАЮЩИЕ ПОМОЧЬ С РЕМОНТОМ РАДИОУЗЛА,\\nОБРАЩАЙТЕСЬ В БАР К ДЯДЕ МИШЕ.",nil,nil,30000)
+	news_manager.send_tip(db.actor,"РќРЈ РљРђРљ Р’Р« РњРћР–Р•РўР• РЎР›РЈРЁРђРўР¬ Р РђР”РРћ РЎ РўРђРљРРњР РџРћРњР•РҐРђРњР???\\nР–Р•Р›РђР®Р©РР• РџРћРњРћР§Р¬ РЎ Р Р•РњРћРќРўРћРњ Р РђР”РРћРЈР—Р›Рђ,\\nРћР‘Р РђР©РђР™РўР•РЎР¬ Р’ Р‘РђР  Рљ Р”РЇР”Р• РњРРЁР•.",nil,nil,30000)
 end
 
 function create_noise_restr()
@@ -725,7 +725,7 @@ function korona_out(task,objective)
 	if has_alife_info("korona_shep") then
 		if new_dialog.item_much("korona",1) ~= true then
 			db.actor:give_info_portion("korona_dropped")
-			-- закроем окно инвентаря если оно открыто
+			-- Р·Р°РєСЂРѕРµРј РѕРєРЅРѕ РёРЅРІРµРЅС‚Р°СЂСЏ РµСЃР»Рё РѕРЅРѕ РѕС‚РєСЂС‹С‚Рѕ
 			local inv_wnd =level.main_input_receiver()
 			if inv_wnd then
 				inv_wnd:GetHolder():start_stop_menu(inv_wnd, true)
@@ -942,7 +942,7 @@ function restr_tp1_spawn()
 	end
 end
 
-function tp1_spawn()--в конце бара
+function tp1_spawn()--РІ РєРѕРЅС†Рµ Р±Р°СЂР°
 	local sim = alife()
 	local custom
 	local sobj = sim:create("space_restrictor",vector():set(421.006,14.576,-431.737),98890,290)
@@ -1020,7 +1020,7 @@ function restr_tp2_spawn()
 	snd_obj:play(db.actor, 0, sound_object.s2d)
 end
 
---в конце промзоны
+--РІ РєРѕРЅС†Рµ РїСЂРѕРјР·РѕРЅС‹
 function tp2_spawn()
 	alife():create("c_tp2",vector():set(-1.906,16.041,-397.443),186226,942)
 end
@@ -1089,7 +1089,7 @@ function restr_tp3_spawn()
 	end
 end
 
---в конце болота
+--РІ РєРѕРЅС†Рµ Р±РѕР»РѕС‚Р°
 function tp3_spawn()
 	alife():create("c_tp3",vector():set(187.277,3.235,-296.235),1556404,798)
 end
@@ -1122,7 +1122,7 @@ function tp3b_del()
 	end
 end
 
---lc to МК
+--lc to РњРљ
 function restr_tele3_spawn()
 	local sobj = alife():create("space_restrictor",vector():set(198.753,4.032,-295.714),1580658,798)
 	if sobj then
@@ -1160,7 +1160,7 @@ function restr_tp4_spawn()
 	snd_obj:play(db.actor, 0, sound_object.s2d)
 end
 
---в конце MK
+--РІ РєРѕРЅС†Рµ MK
 function tp4_spawn()
 	alife():create("c_tp4",vector():set(34.053,-6.658,411.091),997737,734)
 end
@@ -1244,7 +1244,7 @@ function restr_tp5_spawn()
 	end
 end
 
---в конце hr
+--РІ РєРѕРЅС†Рµ hr
 function tp5_spawn()
 	alife():create("c_tp5",vector():set(453.835,-0.077,122.050),1062917,1701)
 end
@@ -1309,7 +1309,7 @@ function restr_tp6_spawn()
 	snd_obj:play(db.actor, 0, sound_object.s2d)
 end
 
---в конце x16
+--РІ РєРѕРЅС†Рµ x16
 function tp6_spawn()
 	alife():create("c_tp6",vector():set(-41.530,19.181,5.610),2693,310)
 end
@@ -1342,7 +1342,7 @@ function tp6b_del()
 	end
 end
 
---lc to МГ
+--lc to РњР“
 function restr_tele6_spawn()
 	local sobj = alife():create("space_restrictor",vector():set(-41.637,19.183,9.410),2704,310)
 	if sobj then
@@ -1363,7 +1363,7 @@ function ruk6_spawn()
 	alife():create("ruk6",vector():set(-333.888,-0.082,-177.817),27388,1179)
 end
 
---pre_restrict_МГ
+--pre_restrict_РњР“
 function restr_tp7_spawn()
 	local sim = alife()
 	local sobj = sim:create("space_restrictor",vector():set(11.667,-9.688,211.098),305794,1246)
@@ -1374,12 +1374,12 @@ function restr_tp7_spawn()
 	sobj = sim:create("space_restrictor",vector():set(-100.964,2.789,-11.237),209906,1239)
 	if sobj then
 		custom = "[logic]\ncfg = scripts\\ambient\\deadcity\\amb76_restr.ltx"
-		---мертвый город---
+		---РјРµСЂС‚РІС‹Р№ РіРѕСЂРѕРґ---
 		rewrite_restrictor(sobj,custom,279)
 	end
 end
 
---в конце МГ
+--РІ РєРѕРЅС†Рµ РњР“
 function tp7_spawn()
 	alife():create("c_tp7",vector():set(13.833,-9.698,223.375),307586,1316)
 end
@@ -1412,7 +1412,7 @@ function tp7b_del()
 	end
 end
 
---lc to ЧД
+--lc to Р§Р”
 function restr_tele7_spawn()
 	local sobj = alife():create("space_restrictor",vector():set(14.851,-9.853,233.936),308208,1316)
 	if sobj then
@@ -1433,7 +1433,7 @@ function ruk7_spawn()
 	alife():create("ruk7",vector():set(-251.305,14.134,-273.351),20656,0)
 end
 
---pre_restrict_ЧД
+--pre_restrict_Р§Р”
 function restr_tp8_spawn()
 	local sobj = alife():create("space_restrictor",vector():set(191.280,16.660,226.035),499198,1)
 	if sobj then
@@ -1442,7 +1442,7 @@ function restr_tp8_spawn()
 	end
 end
 
---в конце ЧД
+--РІ РєРѕРЅС†Рµ Р§Р”
 function tp8_spawn()
 	alife():create("c_tp8",vector():set(203.522,16.659,235.675),513034,1)
 end
@@ -1507,12 +1507,12 @@ function restr_tp9_spawn()
 	sobj = sim:create("space_restrictor",vector():set(177.227,-2.218,99.123),255738,560)
 	if sobj then
 		custom = "[logic]\ncfg = scripts\\ambient\\pripyat\\amb79_restr.ltx"
-		---после взятия подсказки_8---
+		---РїРѕСЃР»Рµ РІР·СЏС‚РёСЏ РїРѕРґСЃРєР°Р·РєРё_8---
 		rewrite_restrictor(sobj,custom,340)
 	end
 end
 
---в конце prip
+--РІ РєРѕРЅС†Рµ prip
 function tp9_spawn()
 	alife():create("c_tp9",vector():set(133.309,-2.392,-61.647),235492,580)
 end
@@ -1564,7 +1564,7 @@ function restr_tele9b_spawn()
 	sobj = sim:create("space_restrictor",vector():set(-22.735,-8.990,19.207),3077,336)
 	if sobj then
 		custom = "[logic]\ncfg = scripts\\ambient\\bunker\\amb38_restr.ltx"
-		---появление в х10---
+		---РїРѕСЏРІР»РµРЅРёРµ РІ С…10---
 		rewrite_restrictor(sobj,custom,5)
 	end
 end
@@ -1588,7 +1588,7 @@ function restr_tp10_spawn()
 	end
 end
 
---в конце x10
+--РІ РєРѕРЅС†Рµ x10
 function tp10_spawn()
 	alife():create("c_tp10",vector():set(-31.031,-23.516,-10.385),2196,372)
 end
@@ -1651,7 +1651,7 @@ function restr_tp11_spawn()
 	end
 end
 
---в конце x18
+--РІ РєРѕРЅС†Рµ x18
 function tp11_spawn()
 	alife():create("c_tp11",vector():set(16.111,-12.430,7.262),5239,157)
 end
@@ -1719,7 +1719,7 @@ function tp12_spawn()
 	local sobj = sim:create("space_restrictor",vector():set(-407.158,0.919,59.520),167528,777)
 	if sobj then
 		custom = "[logic]\ncfg = scripts\\ambient\\aver\\amb40_restr.ltx"
-		---грета---
+		---РіСЂРµС‚Р°---
 		rewrite_restrictor(sobj,custom,7.0)
 	end
 	sobj = sim:create("space_restrictor",vector():set(-370.873,3.945,59.765),230680,777)
@@ -1835,7 +1835,7 @@ function pnv_yes()
 end
 
 function kurs()
-	news_manager.send_tip(db.actor,"Не ходи кругами. Придерживайся какого-нибудь курса.",nil,nil,15000)
+	news_manager.send_tip(db.actor,"РќРµ С…РѕРґРё РєСЂСѓРіР°РјРё. РџСЂРёРґРµСЂР¶РёРІР°Р№СЃСЏ РєР°РєРѕРіРѕ-РЅРёР±СѓРґСЊ РєСѓСЂСЃР°.",nil,nil,15000)
 end
 
 function gg_zub()
@@ -1844,15 +1844,15 @@ function gg_zub()
 end
 
 
--- Нанесение хита и обездвиживание
+-- РќР°РЅРµСЃРµРЅРёРµ С…РёС‚Р° Рё РѕР±РµР·РґРІРёР¶РёРІР°РЅРёРµ
 function power_off()
-	--наносим пси-удар
+	--РЅР°РЅРѕСЃРёРј РїСЃРё-СѓРґР°СЂ
 	--boryan67.GG_hit()
-	--обездвиживание
+	--РѕР±РµР·РґРІРёР¶РёРІР°РЅРёРµ
 	db.actor.power = -db.actor.power + 0.05
 end
 
--- засада в МК
+-- Р·Р°СЃР°РґР° РІ РњРљ
 function mk_zasada_del()
 	local sim = alife()
 	local obj,sobj
@@ -1876,7 +1876,7 @@ function mk_zasada_change()
 	power_off()
 end	
 
--- постановка засады в МК
+-- РїРѕСЃС‚Р°РЅРѕРІРєР° Р·Р°СЃР°РґС‹ РІ РњРљ
 function set_mk_zasada()
 	local sim = alife()
 	local sobj = sim:create("space_restrictor",vector():set(-22.961,10.252,-235.437),907014,728)
@@ -1907,7 +1907,7 @@ function mk_essential()
 	db.actor:set_actor_direction(vector():set(0.788163,0.000000,0.615467))
 end
 
--- Засада в Промзоне
+-- Р—Р°СЃР°РґР° РІ РџСЂРѕРјР·РѕРЅРµ
 
 
 function prom_zasada_change()
@@ -1932,7 +1932,7 @@ function pooo_sound()
    snd_obj:play(db.actor, 0, sound_object.s2d)
 end
 
--- Засада в МГ
+-- Р—Р°СЃР°РґР° РІ РњР“
 function mg_zasada_del()
 	local sim = alife()
 	local obj,sobj
@@ -2010,7 +2010,7 @@ function sms_spawn()
 	if sobj then
 		local custom = "[logic]\ncfg = scripts\\new\\restr\\sms_komb.ltx"
 		rewrite_restrictor(sobj,custom,5)
-		news_manager.send_tip(db.actor,"Поднимись справа от входа в туннель до дерева. Там и найдёшь свой костюмчик.",nil,nil,30000)
+		news_manager.send_tip(db.actor,"РџРѕРґРЅРёРјРёСЃСЊ СЃРїСЂР°РІР° РѕС‚ РІС…РѕРґР° РІ С‚СѓРЅРЅРµР»СЊ РґРѕ РґРµСЂРµРІР°. РўР°Рј Рё РЅР°Р№РґС‘С€СЊ СЃРІРѕР№ РєРѕСЃС‚СЋРјС‡РёРє.",nil,nil,30000)
 	end
 end
 
@@ -2076,21 +2076,21 @@ function spawn_restrov()
 end
 
 function message_to_sahar()
-	news_manager.send_tip(db.actor, "%c[10,5,255,10]Профессор, это Фотограф! Я нашёл вашу летающую штуковину, но рядом никого из людей нет. Одни монстры.", nil, nil, 20000)
+	news_manager.send_tip(db.actor, "%c[10,5,255,10]РџСЂРѕС„РµСЃСЃРѕСЂ, СЌС‚Рѕ Р¤РѕС‚РѕРіСЂР°С„! РЇ РЅР°С€С‘Р» РІР°С€Сѓ Р»РµС‚Р°СЋС‰СѓСЋ С€С‚СѓРєРѕРІРёРЅСѓ, РЅРѕ СЂСЏРґРѕРј РЅРёРєРѕРіРѕ РёР· Р»СЋРґРµР№ РЅРµС‚. РћРґРЅРё РјРѕРЅСЃС‚СЂС‹.", nil, nil, 20000)
 end
 
 function sms_sah_flesh()
-	news_manager.send_tip(db.actor, "%c[10,5,255,10]Профессор, это Фотограф! Я обнаружил труп академика. Сожалею. У него только есть флешка с какой-то информацией. Отдам её вашему коллеге Ормонту. Он, слава Богу, жив.", nil, nil, 30000)
+	news_manager.send_tip(db.actor, "%c[10,5,255,10]РџСЂРѕС„РµСЃСЃРѕСЂ, СЌС‚Рѕ Р¤РѕС‚РѕРіСЂР°С„! РЇ РѕР±РЅР°СЂСѓР¶РёР» С‚СЂСѓРї Р°РєР°РґРµРјРёРєР°. РЎРѕР¶Р°Р»РµСЋ. РЈ РЅРµРіРѕ С‚РѕР»СЊРєРѕ РµСЃС‚СЊ С„Р»РµС€РєР° СЃ РєР°РєРѕР№-С‚Рѕ РёРЅС„РѕСЂРјР°С†РёРµР№. РћС‚РґР°Рј РµС‘ РІР°С€РµРјСѓ РєРѕР»Р»РµРіРµ РћСЂРјРѕРЅС‚Сѓ. РћРЅ, СЃР»Р°РІР° Р‘РѕРіСѓ, Р¶РёРІ.", nil, nil, 30000)
 end
 
 function message_from_sahar_2()
-	news_manager.send_tip(db.actor, "%c[0,128,128,255]Фотограф, это Сахаров. Мы высылали спасательную команду на вертолёте в тот район, но они разбились. Ещё один мой коллега профессор Ормонт еле выкарабкался и прячется недалеко от разбившейся вертушки. Я ему постоянно шлю сообщения, что вы идёте к нему на помощь.  Уважаемый, я Вас очень прошу отыскать его. Должно быть он серьёзно ранен и ждёт любой человеческой помощи.", nil, "saharov", 20000)
+	news_manager.send_tip(db.actor, "%c[0,128,128,255]Р¤РѕС‚РѕРіСЂР°С„, СЌС‚Рѕ РЎР°С…Р°СЂРѕРІ. РњС‹ РІС‹СЃС‹Р»Р°Р»Рё СЃРїР°СЃР°С‚РµР»СЊРЅСѓСЋ РєРѕРјР°РЅРґСѓ РЅР° РІРµСЂС‚РѕР»С‘С‚Рµ РІ С‚РѕС‚ СЂР°Р№РѕРЅ, РЅРѕ РѕРЅРё СЂР°Р·Р±РёР»РёСЃСЊ. Р•С‰С‘ РѕРґРёРЅ РјРѕР№ РєРѕР»Р»РµРіР° РїСЂРѕС„РµСЃСЃРѕСЂ РћСЂРјРѕРЅС‚ РµР»Рµ РІС‹РєР°СЂР°Р±РєР°Р»СЃСЏ Рё РїСЂСЏС‡РµС‚СЃСЏ РЅРµРґР°Р»РµРєРѕ РѕС‚ СЂР°Р·Р±РёРІС€РµР№СЃСЏ РІРµСЂС‚СѓС€РєРё. РЇ РµРјСѓ РїРѕСЃС‚РѕСЏРЅРЅРѕ С€Р»СЋ СЃРѕРѕР±С‰РµРЅРёСЏ, С‡С‚Рѕ РІС‹ РёРґС‘С‚Рµ Рє РЅРµРјСѓ РЅР° РїРѕРјРѕС‰СЊ.  РЈРІР°Р¶Р°РµРјС‹Р№, СЏ Р’Р°СЃ РѕС‡РµРЅСЊ РїСЂРѕС€Сѓ РѕС‚С‹СЃРєР°С‚СЊ РµРіРѕ. Р”РѕР»Р¶РЅРѕ Р±С‹С‚СЊ РѕРЅ СЃРµСЂСЊС‘Р·РЅРѕ СЂР°РЅРµРЅ Рё Р¶РґС‘С‚ Р»СЋР±РѕР№ С‡РµР»РѕРІРµС‡РµСЃРєРѕР№ РїРѕРјРѕС‰Рё.", nil, "saharov", 20000)
    local snd_obj = xr_sound.get_safe_sound_object([[mauvais\08_dyshlo\ormont_poisk]])
    snd_obj:play(db.actor, 0, sound_object.s2d)
 end
 
 function sms_flesh_back()
-	news_manager.send_tip(db.actor, "%c[0,128,128,255]Фотограф, это Сахаров. Я бесконечно благодарен Вам за помощь. Передайте, пожалуйста, флешку Ормонту. Ещё раз спасибо за всё.", nil, "saharov", 25000)
+	news_manager.send_tip(db.actor, "%c[0,128,128,255]Р¤РѕС‚РѕРіСЂР°С„, СЌС‚Рѕ РЎР°С…Р°СЂРѕРІ. РЇ Р±РµСЃРєРѕРЅРµС‡РЅРѕ Р±Р»Р°РіРѕРґР°СЂРµРЅ Р’Р°Рј Р·Р° РїРѕРјРѕС‰СЊ. РџРµСЂРµРґР°Р№С‚Рµ, РїРѕР¶Р°Р»СѓР№СЃС‚Р°, С„Р»РµС€РєСѓ РћСЂРјРѕРЅС‚Сѓ. Р•С‰С‘ СЂР°Р· СЃРїР°СЃРёР±Рѕ Р·Р° РІСЃС‘.", nil, "saharov", 25000)
 end
 
 function blast()
@@ -2166,20 +2166,20 @@ function island_skala()
 end
 
 function scan_monster()
-	local dist = 30	-- дистанция в метрах
+	local dist = 30	-- РґРёСЃС‚Р°РЅС†РёСЏ РІ РјРµС‚СЂР°С…
 	local actor = db.actor
 	local obj, sobj
 	if not actor or not actor:alive() then
 		return
 	end
 	for a = 1,65535 do
-		obj = level.object_by_id(a)	-- ищем на уровне
+		obj = level.object_by_id(a)	-- РёС‰РµРј РЅР° СѓСЂРѕРІРЅРµ
 		sobj = alife():object(a)
 		if sobj and obj and IsMonster(sobj) and obj:alive() and obj:position():distance_to(actor:position()) < dist then
-			return	-- есть хоть один живой в радиусе
+			return	-- РµСЃС‚СЊ С…РѕС‚СЊ РѕРґРёРЅ Р¶РёРІРѕР№ РІ СЂР°РґРёСѓСЃРµ
 		end
 	end
-	-- нет живых монстров в радиусе
+	-- РЅРµС‚ Р¶РёРІС‹С… РјРѕРЅСЃС‚СЂРѕРІ РІ СЂР°РґРёСѓСЃРµ
 	if not has_alife_info("enable_voice") then
 		actor:give_info_portion("enable_voice")
 	end
@@ -2211,42 +2211,42 @@ local tbl_marksman = {
 	sect = "marksman4"
     }
 }
--- создаем случайного стрелка
+-- СЃРѕР·РґР°РµРј СЃР»СѓС‡Р°Р№РЅРѕРіРѕ СЃС‚СЂРµР»РєР°
 function marksman_rnd()
-	-- при каждом вызове добиваемся гарантированного неповторения
-	local x = amk.load_variable("marksman",nil)	-- читаем переменную
+	-- РїСЂРё РєР°Р¶РґРѕРј РІС‹Р·РѕРІРµ РґРѕР±РёРІР°РµРјСЃСЏ РіР°СЂР°РЅС‚РёСЂРѕРІР°РЅРЅРѕРіРѕ РЅРµРїРѕРІС‚РѕСЂРµРЅРёСЏ
+	local x = amk.load_variable("marksman",nil)	-- С‡РёС‚Р°РµРј РїРµСЂРµРјРµРЅРЅСѓСЋ
 	local y
 	repeat
-		y = math.random(table.getn(tbl_marksman))	-- выбираем случайного стрелка
-	until x ~= y	-- повторяем если совпало
-	amk.save_variable("marksman",y)	-- сохраняем значение
-	local a = tbl_marksman[y]	-- получаем данные из таблицы
+		y = math.random(table.getn(tbl_marksman))	-- РІС‹Р±РёСЂР°РµРј СЃР»СѓС‡Р°Р№РЅРѕРіРѕ СЃС‚СЂРµР»РєР°
+	until x ~= y	-- РїРѕРІС‚РѕСЂСЏРµРј РµСЃР»Рё СЃРѕРІРїР°Р»Рѕ
+	amk.save_variable("marksman",y)	-- СЃРѕС…СЂР°РЅСЏРµРј Р·РЅР°С‡РµРЅРёРµ
+	local a = tbl_marksman[y]	-- РїРѕР»СѓС‡Р°РµРј РґР°РЅРЅС‹Рµ РёР· С‚Р°Р±Р»РёС†С‹
 	local sim = alife()
-	local sobj = sim:create(a.sect, vector():set(a.position.x,a.position.y,a.position.z), a.lv, a.gv)	-- создаем стрелка	
+	local sobj = sim:create(a.sect, vector():set(a.position.x,a.position.y,a.position.z), a.lv, a.gv)	-- СЃРѕР·РґР°РµРј СЃС‚СЂРµР»РєР°	
 	if sobj then
-		amk.save_variable("marksman_id",sobj.id)	-- запоминаем ID	
+		amk.save_variable("marksman_id",sobj.id)	-- Р·Р°РїРѕРјРёРЅР°РµРј ID	
 	end
 end
--- удаляем стрелка если он смотался
+-- СѓРґР°Р»СЏРµРј СЃС‚СЂРµР»РєР° РµСЃР»Рё РѕРЅ СЃРјРѕС‚Р°Р»СЃСЏ
 function marksman_del()
-	amk.del_variable("marksman")	-- удаляем переменную
-	local sobj_id = amk.load_variable("marksman_id",nil)	-- читаем ид
+	amk.del_variable("marksman")	-- СѓРґР°Р»СЏРµРј РїРµСЂРµРјРµРЅРЅСѓСЋ
+	local sobj_id = amk.load_variable("marksman_id",nil)	-- С‡РёС‚Р°РµРј РёРґ
 	if sobj_id then
 		local sim = alife()
-		local sobj = sim:object(sobj_id)	-- получаем серверный объект
+		local sobj = sim:object(sobj_id)	-- РїРѕР»СѓС‡Р°РµРј СЃРµСЂРІРµСЂРЅС‹Р№ РѕР±СЉРµРєС‚
 		if sobj then
-			sim:release(sobj,true)	-- удаляем серверный объект
+			sim:release(sobj,true)	-- СѓРґР°Р»СЏРµРј СЃРµСЂРІРµСЂРЅС‹Р№ РѕР±СЉРµРєС‚
 		end
-		amk.del_variable("marksman_id")	-- удаляем переменную
+		amk.del_variable("marksman_id")	-- СѓРґР°Р»СЏРµРј РїРµСЂРµРјРµРЅРЅСѓСЋ
 	end
 end
--- зачищаем переменные стрелка если он убит
+-- Р·Р°С‡РёС‰Р°РµРј РїРµСЂРµРјРµРЅРЅС‹Рµ СЃС‚СЂРµР»РєР° РµСЃР»Рё РѕРЅ СѓР±РёС‚
 function marksman_clear()
-	amk.del_variable("marksman")	-- удаляем переменную
-	amk.del_variable("marksman_id")	-- удаляем переменную
+	amk.del_variable("marksman")	-- СѓРґР°Р»СЏРµРј РїРµСЂРµРјРµРЅРЅСѓСЋ
+	amk.del_variable("marksman_id")	-- СѓРґР°Р»СЏРµРј РїРµСЂРµРјРµРЅРЅСѓСЋ
 end
 
---Таймер ожидания появления острова
+--РўР°Р№РјРµСЂ РѕР¶РёРґР°РЅРёСЏ РїРѕСЏРІР»РµРЅРёСЏ РѕСЃС‚СЂРѕРІР°
 function check_time_ostrov()
 	amk.g_start_timer("ostrov_wait",0,0,0.4,0)
 end
@@ -2271,7 +2271,7 @@ function orm_for_del()
 	end
 end
 
---Таймер ожидания инфо о переходе
+--РўР°Р№РјРµСЂ РѕР¶РёРґР°РЅРёСЏ РёРЅС„Рѕ Рѕ РїРµСЂРµС…РѕРґРµ
 function check_time_ormont()
 	amk.g_start_timer("ormont_wait",0,0,2,0)
 end
@@ -2404,7 +2404,7 @@ function kontry_enemy_less()
 end
 
     local tbl_sect = {
-	['catcher_vhod3'] = true,	-- дополнить по образу и подобию
+	['catcher_vhod3'] = true,	-- РґРѕРїРѕР»РЅРёС‚СЊ РїРѕ РѕР±СЂР°Р·Сѓ Рё РїРѕРґРѕР±РёСЋ
 	['catcher_vhod2'] = true,
 	['catcher_vhod1'] = true,
 	['catcher_prison1'] = true,
@@ -2494,7 +2494,7 @@ local tbl_exo = {
     gv=1018
     }
 }
--- спавним экзу
+-- СЃРїР°РІРЅРёРј СЌРєР·Сѓ
 function exo_spawn(...)
 	local a = tbl_exo[math.random(table.getn(tbl_exo))]
 	alife():create("exo_outfit", vector():set(a.position.x,a.position.y,a.position.z), a.lv, a.gv)

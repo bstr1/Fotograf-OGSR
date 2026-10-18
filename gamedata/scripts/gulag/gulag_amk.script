@@ -2,7 +2,7 @@ local t = {}
 
 function load_job(sj, gname, type, squad, groups)	
 
-	-- √”À¿√ ¬Œ≈ÕÕ€’ Õ¿ Õ¿—€œ»
+	-- –ì–£–õ–ê–ì –í–û–ï–ù–ù–´–• –ù–ê –ù–ê–°–´–ü–ò
 	if type == "amk_embankment" then
 		t = { section = "logic@amk_embankment_soldier1",
 			idle = 0,
@@ -61,7 +61,7 @@ function load_job(sj, gname, type, squad, groups)
 	end
 	
 	
-	-- √”À¿√ Ã»Õ»-¡¿–¿ Õ¿ —¬¿À ≈
+	-- –ì–£–õ–ê–ì –ú–ò–ù–ò-–ë–ê–†–ê –ù–ê –°–í–ê–õ–ö–ï
 	if type == "amk_mini_bar" then
 		t = { section = "logic@amk_mini_bar_kulinar",
 			idle = 0,

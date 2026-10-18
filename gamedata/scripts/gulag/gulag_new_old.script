@@ -1,7 +1,7 @@
 local t = {}
 
 function load_job(sj, gname, type, squad, groups)	
-     -- ÑÀÕÀ ÑÏÀÑÀÅÒ ÄĞÓÇÅÉ
+     -- Ğ¡ĞĞ¥Ğ Ğ¡ĞŸĞĞ¡ĞĞ•Ğ¢ Ğ”Ğ Ğ£Ğ—Ğ•Ğ™
 	if type == "bar_stalker_saha" then
 	    t = { section = "logic@saha",
 		  idle = 0,
@@ -64,7 +64,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end
-    -- ÑÒÀËÊÅĞÛ Â ÁÀĞÅ
+    -- Ğ¡Ğ¢ĞĞ›ĞšĞ•Ğ Ğ« Ğ’ Ğ‘ĞĞ Ğ•
 	if type == "bar_stalker" then
        t = { section = "logic@bar_stalker1",
 		  idle = 0,
@@ -99,7 +99,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)	
 	end	
-	-- ÁĞÀÒÂÀ Â ÁÀĞÅ
+	-- Ğ‘Ğ ĞĞ¢Ğ’Ğ Ğ’ Ğ‘ĞĞ Ğ•
 	if type == "bar_bratok" then
 	   t = { section = "logic@knyaz",
 		  idle = 0,
@@ -280,7 +280,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)	
     end	
-    -- ÃÓËÀÃ ÍÀÅÌÍÈÊÎÂ ÍÀ ÀÃĞÎÏĞÎÌÅ
+    -- Ğ“Ğ£Ğ›ĞĞ“ ĞĞĞ•ĞœĞĞ˜ĞšĞĞ’ ĞĞ ĞĞ“Ğ ĞĞŸĞ ĞĞœĞ•
 	if type == "agr_killer" then
          t = { section = "logic@killer1",
 		  idle = 0,
@@ -459,7 +459,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)	
     end	
-     -- ËÅÂØÀ ÍÀ ÀÃĞÎÏĞÎÌÅ
+     -- Ğ›Ğ•Ğ’Ğ¨Ğ ĞĞ ĞĞ“Ğ ĞĞŸĞ ĞĞœĞ•
 	if type == "agr_levsha_larger" then
 		t = { section = "logic@agr_levsha",
 			idle = 0,
@@ -476,7 +476,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end	
-    -- ËÅÂØÀ ÍÀ ÑÊËÀÄÀÕ
+    -- Ğ›Ğ•Ğ’Ğ¨Ğ ĞĞ Ğ¡ĞšĞ›ĞĞ”ĞĞ¥
 	if type == "mil_levsha_larger" then
 		t = { section = "logic@mil_levsha",
 			idle = 0,
@@ -487,7 +487,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end	  
-    -- ÂÎÅÍÍÛÅ ÑÒÀËÊÅĞÛ ÍÀ ĞÀÄÀĞÅ
+    -- Ğ’ĞĞ•ĞĞĞ«Ğ• Ğ¡Ğ¢ĞĞ›ĞšĞ•Ğ Ğ« ĞĞ Ğ ĞĞ”ĞĞ Ğ•
 	if type == "radar_military_lager" then
          t = { section = "logic@rad_milit1",
 		  idle = 0,
@@ -522,7 +522,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)	
 	end	
-	-- ÍÅÁÎ ÍÀ ĞÀÄÀĞÅ
+	-- ĞĞ•Ğ‘Ğ ĞĞ Ğ ĞĞ”ĞĞ Ğ•
 	if type == "radar_nebo_lager" then
 	   t = { section = "logic@sveeblov_of",
 		  idle = 0,
@@ -605,7 +605,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end	
-	 -- ÁÀÍÄÈÒÛ ÍÀ ÇÀÏĞÀÂÊÅ Â ÒÅÌÍÎÉ ÄÎËÈÍÅ
+	 -- Ğ‘ĞĞĞ”Ğ˜Ğ¢Ğ« ĞĞ Ğ—ĞĞŸĞ ĞĞ’ĞšĞ• Ğ’ Ğ¢Ğ•ĞœĞĞĞ™ Ğ”ĞĞ›Ğ˜ĞĞ•
 	if type == "val_bandit_lager" then
          t = { section = "logic@bandit_zaprav1",
 		  idle = 0,
@@ -664,7 +664,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end	
-	-- ÑÒÀËÊÅĞÛ Â ÀÍÃÀĞÅ ÍÀ ÑÂÀËÊÅ
+	-- Ğ¡Ğ¢ĞĞ›ĞšĞ•Ğ Ğ« Ğ’ ĞĞĞ“ĞĞ Ğ• ĞĞ Ğ¡Ğ’ĞĞ›ĞšĞ•
 	if type == "gar_new_stalk" then
          t = { section = "logic@stalk_gar1",
 		  idle = 0,
@@ -723,7 +723,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end	
-	-- ÊĞÎÂÎÑÎÑÛ ÍÀ ÑÂÀËÊÅ 	
+	-- ĞšĞ ĞĞ’ĞĞ¡ĞĞ¡Ğ« ĞĞ Ğ¡Ğ’ĞĞ›ĞšĞ• 	
      if type == "gar_bloodsucker_new" then
 	    t = { section = "logic@bloods1",
 		  idle = 0,
@@ -744,7 +744,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end
-	-- ÁÅÑ È ÊÎ
+	-- Ğ‘Ğ•Ğ¡ Ğ˜ ĞšĞ
 	if type == "agr_bes_lager" then
 	t = { section = "logic@bes",
 		  idle = 0,
@@ -855,7 +855,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end	
-	-- ÄÎËÃ Â ÒÅÌÍÎÉ ÄÎËÈÍÅ
+	-- Ğ”ĞĞ›Ğ“ Ğ’ Ğ¢Ğ•ĞœĞĞĞ™ Ğ”ĞĞ›Ğ˜ĞĞ•
 	if type == "val_dolg_voronin" then
 	t = { section = "logic@dolg_leader",
 		  idle = 0,
@@ -984,7 +984,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end	
-	-- ÑÒÀËÊÅĞÛ ÏÎÄ ÀÃĞÎÏĞÎÌÎÌ
+	-- Ğ¡Ğ¢ĞĞ›ĞšĞ•Ğ Ğ« ĞŸĞĞ” ĞĞ“Ğ ĞĞŸĞ ĞĞœĞĞœ
 	if type == "agr_und_lager" then
 	t = { section = "logic@agro_varayg",
 		  idle = 0,
@@ -1022,7 +1022,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end	
-	-- ÄÎËÃ ÍÀ ÑÂÀËÊÅ
+	-- Ğ”ĞĞ›Ğ“ ĞĞ Ğ¡Ğ’ĞĞ›ĞšĞ•
 	if type == "gar_new_dolg" then
          t = { section = "logic@quad_dolg1",
 		  idle = 0,
@@ -1057,7 +1057,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)	
 	end	
-	-- ÁÀÍÄÈÒÛ ÍÀ ÑÂÀËÊÅ
+	-- Ğ‘ĞĞĞ”Ğ˜Ğ¢Ğ« ĞĞ Ğ¡Ğ’ĞĞ›ĞšĞ•
 	if type == "gar_new_bandit" then
          t = { section = "logic@new_bandit1",
 		  idle = 0,
@@ -1102,7 +1102,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end	
-	-- ÍÅÁÎ ÎÕĞÀÍßÅÒ Ó×ÅÍÛÕ
+	-- ĞĞ•Ğ‘Ğ ĞĞ¥Ğ ĞĞĞ¯Ğ•Ğ¢ Ğ£Ğ§Ğ•ĞĞ«Ğ¥
 	if type == "ucen_bunker_nebo" then
 	t = { section = "logic@dan",
 		  idle = 0,
@@ -1156,7 +1156,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end
-    -- ÄÎĞÎÍÈÍ Â ÄÎËÈÍÅ
+    -- Ğ”ĞĞ ĞĞĞ˜Ğ Ğ’ Ğ”ĞĞ›Ğ˜ĞĞ•
 	if type == "val_ucen_lager" then
 	t = { section = "logic@doronin",
 		  idle = 0,
@@ -1181,7 +1181,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end	
-	-- ÄÎĞÎÍÈÍ ÍÀ ßÍÒÀĞÅ
+	-- Ğ”ĞĞ ĞĞĞ˜Ğ ĞĞ Ğ¯ĞĞ¢ĞĞ Ğ•
 	if type == "yan_wound_ucen_lager" then
 	t = { section = "logic@doronin_yan",
 		  idle = 0,
@@ -1206,7 +1206,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end	
-	-- ÂÎÅÍÍÛÅ ÎÕĞÀÍßŞÒ ÄÎĞÎÍÈÍÀ
+	-- Ğ’ĞĞ•ĞĞĞ«Ğ• ĞĞ¥Ğ ĞĞĞ¯Ğ®Ğ¢ Ğ”ĞĞ ĞĞĞ˜ĞĞ
 	if type == "add_specnaz_lager" then
 	t = { section = "logic@add_specnaz1",
 		  idle = 0,
@@ -1242,7 +1242,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end	
-	-- ÆÈËÀ
+	-- Ğ–Ğ˜Ğ›Ğ
 	if type == "val_gila_lager" then
 	    t = { section = "logic@gila_offline",
 		  idle = 0,
@@ -1275,7 +1275,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end	
-	-- ÂÎËÊ È ÑÒÀËÊÅĞÛ
+	-- Ğ’ĞĞ›Ğš Ğ˜ Ğ¡Ğ¢ĞĞ›ĞšĞ•Ğ Ğ«
 	if type == "esc_fabrika_nebo" then
 		t = { section = "logic@esc_wolf",
 			idle = 0,
@@ -1393,7 +1393,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end
-	-- ÒÎËÈÊ
+	-- Ğ¢ĞĞ›Ğ˜Ğš
 	if type == "esc_tolik_nebo" then
 	    t = { section = "logic@esc_tolik_offline",
 		  idle = 0,
@@ -1410,7 +1410,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end	
-	-- ÏÅÒĞÓÕÀ
+	-- ĞŸĞ•Ğ¢Ğ Ğ£Ğ¥Ğ
 	if type == "esc_petruha_nebo" then
 	    t = { section = "logic@esc_petruha_offline",
 		  idle = 0,
@@ -1427,7 +1427,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end	
-	-- ÁÀÍÄÈÒÛ Â ËÀÃÅĞÅ ÍÎÂÈ×ÊÎÂ
+	-- Ğ‘ĞĞĞ”Ğ˜Ğ¢Ğ« Ğ’ Ğ›ĞĞ“Ğ•Ğ Ğ• ĞĞĞ’Ğ˜Ğ§ĞšĞĞ’
 	if type == "esc_derevna_lager" then
 	    t = { section = "logic@derevna_ban1",
 		  idle = 0,
@@ -1514,7 +1514,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end
-    -- ÊĞÅÑÒ È ÁĞÀÒÊÈ ÍÀ ÑÂÀËÊÅ
+    -- ĞšĞ Ğ•Ğ¡Ğ¢ Ğ˜ Ğ‘Ğ ĞĞ¢ĞšĞ˜ ĞĞ Ğ¡Ğ’ĞĞ›ĞšĞ•
 	if type == "gar_krest_lager" then
 	    t = { section = "logic@krest_offline",
 		  idle = 0,
@@ -1598,7 +1598,7 @@ function load_job(sj, gname, type, squad, groups)
         }
 		table.insert(sj, t)
 	end	
-    -- ÁÀÍÄÈÒÛ ÍÀ ĞÎÑÒÎÊÅ
+    -- Ğ‘ĞĞĞ”Ğ˜Ğ¢Ğ« ĞĞ Ğ ĞĞ¡Ğ¢ĞĞšĞ•
 	if type == "rost_zasada_lager" then	
 	t = { section = "logic@shilo_offline",
 		  idle = 0,
@@ -1775,7 +1775,7 @@ function load_job(sj, gname, type, squad, groups)
         }
 		table.insert(sj, t)			
    end	
-   -- ÊËÛÊ ÍÀ ÑÊËÀÄÀÕ
+   -- ĞšĞ›Ğ«Ğš ĞĞ Ğ¡ĞšĞ›ĞĞ”ĞĞ¥
 	if type == "mil_klyak_lager" then
 	    t = { section = "logic@mil_klyak_offline",
 		  idle = 0,
@@ -1794,7 +1794,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end	
-    -- ÑÏÅÖÍÀÇ ÌÎÍÎËÈÒÎÂÑÊÈÉ ÍÀ ĞÀÄÀĞÅ
+    -- Ğ¡ĞŸĞ•Ğ¦ĞĞĞ— ĞœĞĞĞĞ›Ğ˜Ğ¢ĞĞ’Ğ¡ĞšĞ˜Ğ™ ĞĞ Ğ ĞĞ”ĞĞ Ğ•
 	if type == "radar_mono_krug" then
 	    t = { section = "logic@rad_mono_krug1",
 		  idle = 0,
@@ -1837,7 +1837,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)	
 	end	
-	-- ÊÎÃÎÒÜ Â ÁÀĞÅ
+	-- ĞšĞĞ“ĞĞ¢Ğ¬ Ğ’ Ğ‘ĞĞ Ğ•
 	if type == "bar_kogot_lager" then
 	    t = { section = "logic@bar_kogot",
 		  idle = 0,
@@ -1848,7 +1848,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end	
-	-- ÊÎÃÎÒÜ Â ÏËÅÍÓ Â ÒÅÌÍÎÉ ÄÎËÈÍÅ
+	-- ĞšĞĞ“ĞĞ¢Ğ¬ Ğ’ ĞŸĞ›Ğ•ĞĞ£ Ğ’ Ğ¢Ğ•ĞœĞĞĞ™ Ğ”ĞĞ›Ğ˜ĞĞ•
 	if type == "dark_kogot_lager" then
 	    t = { section = "logic@dark_kogot_offline",
 		  idle = 0,
@@ -1867,7 +1867,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end	
-	-- ÔĞÈÌÅÍ
+	-- Ğ¤Ğ Ğ˜ĞœĞ•Ğ
 	if type == "esc_freeman_lager" then
 	    t = { section = "logic@freeman_sleep",
 		  idle = 0,
@@ -1910,7 +1910,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end	
-	-- ÂÀËÅÒ ÍÀ ÊÎĞÄÎÍÅ
+	-- Ğ’ĞĞ›Ğ•Ğ¢ ĞĞ ĞšĞĞ Ğ”ĞĞĞ•
 	if type == "esc_valet_lager" then
 	    t = { section = "logic@valet_offline",
 		  idle = 0,
@@ -1963,7 +1963,7 @@ function load_job(sj, gname, type, squad, groups)
 		}
 		table.insert(sj, t)
 	end	
-	-- ÌÎÍÀÕ
+	-- ĞœĞĞĞĞ¥
 	if type == "monach_lager" then
 	    t = { section = "logic@monach_offline",
 		  idle = 0,
@@ -1989,9 +1989,9 @@ function load_states(gname, type)
 		return function(gulag)
 		   local actor = db.actor
 		   if has_alife_info("bar_knyaz_daet_dobro") then
-			    return 1 -- Ó êîñòğà
+			    return 1 -- Ğ£ ĞºĞ¾ÑÑ‚Ñ€Ğ°
 			else
-				return 0 -- â òşğüìå
+				return 0 -- Ğ² Ñ‚ÑÑ€ÑŒĞ¼Ğµ
 			end	
 		end
 	end
@@ -2009,9 +2009,9 @@ function load_states(gname, type)
 		return function(gulag)
 		   local actor = db.actor
 		   if has_alife_info("bes_help_levsha_done") then
-			    return 1 -- ñâîáîäåí
+			    return 1 -- ÑĞ²Ğ¾Ğ±Ğ¾Ğ´ĞµĞ½
 			else
-				return 0 -- â òşğüìå
+				return 0 -- Ğ² Ñ‚ÑÑ€ÑŒĞ¼Ğµ
 			end	
 		end
 	end
@@ -2034,9 +2034,9 @@ function load_states(gname, type)
 		return function(gulag)
 		   local actor = db.actor
 		   if has_alife_info("actor_na_radare") then
-			    return 1 -- îíëàéí
+			    return 1 -- Ğ¾Ğ½Ğ»Ğ°Ğ¹Ğ½
 			else
-				return 0 -- îôôëàéí
+				return 0 -- Ğ¾Ñ„Ñ„Ğ»Ğ°Ğ¹Ğ½
 			end	
 		end
 	end
@@ -2059,9 +2059,9 @@ function load_states(gname, type)
 		return function(gulag)
 		   local actor = db.actor
 		   if has_alife_info("bes_smart_done") then
-			    return 1 -- îòäûõ
+			    return 1 -- Ğ¾Ñ‚Ğ´Ñ‹Ñ…
 			else
-				return 0 -- ğàáîòà
+				return 0 -- Ñ€Ğ°Ğ±Ğ¾Ñ‚Ğ°
 			end	
 		end
 	end
@@ -2109,11 +2109,11 @@ function load_states(gname, type)
 		return function(gulag)
 			local actor = db.actor
 			if not has_alife_info("voronin_nychka_start") then
-				return 0 -- îôôëàéí
+				return 0 -- Ğ¾Ñ„Ñ„Ğ»Ğ°Ğ¹Ğ½
 			elseif has_alife_info("voronin_nychka_jila") then 
-				return 2 -- ó äîëãà
+				return 2 -- Ñƒ Ğ´Ğ¾Ğ»Ğ³Ğ°
 			else
-				return 1 -- îäèí
+				return 1 -- Ğ¾Ğ´Ğ¸Ğ½
 			end
 		end
 	end
@@ -2121,9 +2121,9 @@ function load_states(gname, type)
 		return function(gulag)
 		   local actor = db.actor
 		   if has_alife_info("derevna_stalker_done") then
-			    return 1 -- äåğåâíÿ
+			    return 1 -- Ğ´ĞµÑ€ĞµĞ²Ğ½Ñ
 			else
-				return 0 -- ôàáğèêà
+				return 0 -- Ñ„Ğ°Ğ±Ñ€Ğ¸ĞºĞ°
 			end	
 		end
 	end
@@ -2131,9 +2131,9 @@ function load_states(gname, type)
 		return function(gulag)
 		   local actor = db.actor
 		   if has_alife_info("actor_na_kordon") then
-			    return 1 -- îôôëàéí
+			    return 1 -- Ğ¾Ñ„Ñ„Ğ»Ğ°Ğ¹Ğ½
 			else
-				return 0 -- îíëàéí
+				return 0 -- Ğ¾Ğ½Ğ»Ğ°Ğ¹Ğ½
 			end	
 		end
 	end
@@ -2141,9 +2141,9 @@ function load_states(gname, type)
 		return function(gulag)
 		   local actor = db.actor
 		   if has_alife_info("actor_na_kordon") then
-			    return 1 -- îôôëàéí
+			    return 1 -- Ğ¾Ñ„Ñ„Ğ»Ğ°Ğ¹Ğ½
 			else
-				return 0 -- îíëàéí
+				return 0 -- Ğ¾Ğ½Ğ»Ğ°Ğ¹Ğ½
 			end	
 		end
 	end
@@ -2156,11 +2156,11 @@ function load_states(gname, type)
 		return function(gulag)
 			local actor = db.actor
 			if not has_alife_info("krest_razborka_spawn") then
-				return 0 -- îôôëàéí
+				return 0 -- Ğ¾Ñ„Ñ„Ğ»Ğ°Ğ¹Ğ½
 			elseif has_alife_info("krest_razborka_have") then 
-				return 2 -- ó êîñòğà
+				return 2 -- Ñƒ ĞºĞ¾ÑÑ‚Ñ€Ğ°
 			else
-				return 1 -- íà ğàçáîğêå
+				return 1 -- Ğ½Ğ° Ñ€Ğ°Ğ·Ğ±Ğ¾Ñ€ĞºĞµ
 			end
 		end
 	end
@@ -2168,11 +2168,11 @@ function load_states(gname, type)
 		return function(gulag)
 			local actor = db.actor
 			if not has_alife_info("kruglov_case_spawn") then
-				return 0 -- îôôëàéí
+				return 0 -- Ğ¾Ñ„Ñ„Ğ»Ğ°Ğ¹Ğ½
 			elseif has_alife_info("kruglov_case_have") then 
-				return 2 -- âîçëå âõîäà â áàğ
+				return 2 -- Ğ²Ğ¾Ğ·Ğ»Ğµ Ğ²Ñ…Ğ¾Ğ´Ğ° Ğ² Ğ±Ğ°Ñ€
 			else
-				return 1 -- ãğàáèì
+				return 1 -- Ğ³Ñ€Ğ°Ğ±Ğ¸Ğ¼
 			end
 		end
 	end
@@ -2180,9 +2180,9 @@ function load_states(gname, type)
 		return function(gulag)
 		   local actor = db.actor
 		   if has_alife_info("mil_klyak_help_start") then
-			    return 1 -- îíëàéí
+			    return 1 -- Ğ¾Ğ½Ğ»Ğ°Ğ¹Ğ½
 			else
-				return 0 -- îôôëàéí
+				return 0 -- Ğ¾Ñ„Ñ„Ğ»Ğ°Ğ¹Ğ½
 			end	
 		end
 	end
@@ -2200,9 +2200,9 @@ function load_states(gname, type)
 		return function(gulag)
 		   local actor = db.actor
 		   if has_alife_info("barman_work_begin") then
-			    return 1 -- îíëàéí
+			    return 1 -- Ğ¾Ğ½Ğ»Ğ°Ğ¹Ğ½
 			else
-				return 0 -- îôôëàéí
+				return 0 -- Ğ¾Ñ„Ñ„Ğ»Ğ°Ğ¹Ğ½
 			end	
 		end
 	end
@@ -2210,15 +2210,15 @@ function load_states(gname, type)
 		return function(gulag)
 			local actor = db.actor
 			if not has_alife_info("freeman_turist_speak1") then
-				return 0 -- ñïèì
+				return 0 -- ÑĞ¿Ğ¸Ğ¼
 			elseif has_alife_info("freeman_turist_speak1") and not has_alife_info("freeman_turist_speak2") then 
-				return 1 -- áåæèì äî ïåğâîé òî÷êè	
+				return 1 -- Ğ±ĞµĞ¶Ğ¸Ğ¼ Ğ´Ğ¾ Ğ¿ĞµÑ€Ğ²Ğ¾Ğ¹ Ñ‚Ğ¾Ñ‡ĞºĞ¸	
 			elseif has_alife_info("freeman_turist_speak2") and not has_alife_info("freeman_turist_speak3") then 
-				return 2 -- áåæèì äî âòîğîé òî÷êè
+				return 2 -- Ğ±ĞµĞ¶Ğ¸Ğ¼ Ğ´Ğ¾ Ğ²Ñ‚Ğ¾Ñ€Ğ¾Ğ¹ Ñ‚Ğ¾Ñ‡ĞºĞ¸
 			elseif has_alife_info("freeman_turist_speak3") and not has_alife_info("freeman_turist_have") then 
-				return 3 -- âîçâğàùàåìñÿ
+				return 3 -- Ğ²Ğ¾Ğ·Ğ²Ñ€Ğ°Ñ‰Ğ°ĞµĞ¼ÑÑ
             elseif has_alife_info("freeman_turist_have") then 
-				return 4 -- â äîìèêå				
+				return 4 -- Ğ² Ğ´Ğ¾Ğ¼Ğ¸ĞºĞµ				
 			end
 		end
 	end
@@ -2226,15 +2226,15 @@ function load_states(gname, type)
 		return function(gulag)
 			local actor = db.actor
 			if not has_alife_info("krest_work_start") then
-				return 0 -- îôôëàéí
+				return 0 -- Ğ¾Ñ„Ñ„Ğ»Ğ°Ğ¹Ğ½
 			elseif has_alife_info("krest_work_start") and not has_alife_info("krest_work_begin") then
-				return 1 -- æäåì èãğîêà	
+				return 1 -- Ğ¶Ğ´ĞµĞ¼ Ğ¸Ğ³Ñ€Ğ¾ĞºĞ°	
 			elseif has_alife_info("krest_work_begin") and not has_alife_info("krest_work_spawn") then
-				return 2 -- óõîäèì
+				return 2 -- ÑƒÑ…Ğ¾Ğ´Ğ¸Ğ¼
 			elseif has_alife_info("krest_work_spawn") and not has_alife_info("krest_work_vertolet") then
-				return 3 -- ïåğåæèäàåì âåğòîëåò
+				return 3 -- Ğ¿ĞµÑ€ĞµĞ¶Ğ¸Ğ´Ğ°ĞµĞ¼ Ğ²ĞµÑ€Ñ‚Ğ¾Ğ»ĞµÑ‚
 			elseif has_alife_info("krest_work_vertolet") then 
-				return 4 -- èäåì ê ïåğåõîäó					
+				return 4 -- Ğ¸Ğ´ĞµĞ¼ Ğº Ğ¿ĞµÑ€ĞµÑ…Ğ¾Ğ´Ñƒ					
 			end
 		end
 	end
@@ -2247,9 +2247,9 @@ function load_states(gname, type)
 		return function(gulag)
 		   local actor = db.actor
 		   if has_alife_info("klyak_about_pda") then
-			    return 1 -- îíëàéí
+			    return 1 -- Ğ¾Ğ½Ğ»Ğ°Ğ¹Ğ½
 			else
-				return 0 -- îôôëàéí
+				return 0 -- Ğ¾Ñ„Ñ„Ğ»Ğ°Ğ¹Ğ½
 			end	
 		end
 	end

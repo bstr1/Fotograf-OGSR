@@ -1,15 +1,15 @@
 --[[---------------------------------------------------------------------------------------------------------------------------------
  File			: boryan67.script
- Description	: Процедуры вызова периодических аккустических и визуальных глюков у ГГ, вирусное заражение и контроль жажды.
- Copyright		: 2013 © boryan67
+ Description	: РџСЂРѕС†РµРґСѓСЂС‹ РІС‹Р·РѕРІР° РїРµСЂРёРѕРґРёС‡РµСЃРєРёС… Р°РєРєСѓСЃС‚РёС‡РµСЃРєРёС… Рё РІРёР·СѓР°Р»СЊРЅС‹С… РіР»СЋРєРѕРІ Сѓ Р“Р“, РІРёСЂСѓСЃРЅРѕРµ Р·Р°СЂР°Р¶РµРЅРёРµ Рё РєРѕРЅС‚СЂРѕР»СЊ Р¶Р°Р¶РґС‹.
+ Copyright		: 2013 В© boryan67
  Author			: boryan67(Dracula) - scripts & _Val_ - sounds
  Last edit		: 28.11.2013
 --]]------------------------------------------------------------------------------------------------------------------------------------
-local game_diff = level.get_game_difficulty()		-- текущая сложность игры 0-3
-local coeff_diff = 4-game_diff				-- коэффициет обратный сложности 1-4
-local MaxTime = 900 * level.get_time_factor()		-- Максимальное время ожидания глюка в секундах реального времени
-local MinTime = 600 * level.get_time_factor()		-- Минимальное время ожидания глюка в секундах реального времени
--- Счетчики для глюков
+local game_diff = level.get_game_difficulty()		-- С‚РµРєСѓС‰Р°СЏ СЃР»РѕР¶РЅРѕСЃС‚СЊ РёРіСЂС‹ 0-3
+local coeff_diff = 4-game_diff				-- РєРѕСЌС„С„РёС†РёРµС‚ РѕР±СЂР°С‚РЅС‹Р№ СЃР»РѕР¶РЅРѕСЃС‚Рё 1-4
+local MaxTime = 900 * level.get_time_factor()		-- РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ РІСЂРµРјСЏ РѕР¶РёРґР°РЅРёСЏ РіР»СЋРєР° РІ СЃРµРєСѓРЅРґР°С… СЂРµР°Р»СЊРЅРѕРіРѕ РІСЂРµРјРµРЅРё
+local MinTime = 600 * level.get_time_factor()		-- РњРёРЅРёРјР°Р»СЊРЅРѕРµ РІСЂРµРјСЏ РѕР¶РёРґР°РЅРёСЏ РіР»СЋРєР° РІ СЃРµРєСѓРЅРґР°С… СЂРµР°Р»СЊРЅРѕРіРѕ РІСЂРµРјРµРЅРё
+-- РЎС‡РµС‚С‡РёРєРё РґР»СЏ РіР»СЋРєРѕРІ
 local GlukTimer_1 = math.random(MinTime,MaxTime)
 local GlukTimer_2 = math.random(MinTime,MaxTime)
 local GlukTimer_3 = math.random(MinTime,MaxTime)
@@ -21,31 +21,31 @@ local GlukCount_1 = 0
 local GlukCount_2 = 0
 local GlukCount_3 = 0
 
--- Переменные для кристалла- телепортера----------------------------
-local RndTeleportEnable = false		-- признак разрешения телепортации
-local RndTeleportPos = vector()		-- координаты точки телепортации
+-- РџРµСЂРµРјРµРЅРЅС‹Рµ РґР»СЏ РєСЂРёСЃС‚Р°Р»Р»Р°- С‚РµР»РµРїРѕСЂС‚РµСЂР°----------------------------
+local RndTeleportEnable = false		-- РїСЂРёР·РЅР°Рє СЂР°Р·СЂРµС€РµРЅРёСЏ С‚РµР»РµРїРѕСЂС‚Р°С†РёРё
+local RndTeleportPos = vector()		-- РєРѕРѕСЂРґРёРЅР°С‚С‹ С‚РѕС‡РєРё С‚РµР»РµРїРѕСЂС‚Р°С†РёРё
 --------------------------------------------------------------------
-local GlukHron = 100/(game_diff+1)	-- количество "приходов" для перехода в хроническую форму глюкавости (максимум 255)
-local is_debug = false				-- true/false - включение/отключение вывода отладочной информации на экран
-local OldSec=" "					-- предыдущее значение игровых секунд
-local NowSec=" "					-- текущее значение игровых секунд
-local OldPos = vector()				-- предыдущая позиция ГГ для определения бега
-local GG_Move = 0					-- текущая скорость ГГ (< 0.1 - стоит, > 1 - бежит)
-local MaxReplicGG = 15				-- регулятор частоты произносимых ГГ реплик (30 - 50%, 60 - 100%)
---признаки наличия у ГГ кристаллов----------------------------------
+local GlukHron = 100/(game_diff+1)	-- РєРѕР»РёС‡РµСЃС‚РІРѕ "РїСЂРёС…РѕРґРѕРІ" РґР»СЏ РїРµСЂРµС…РѕРґР° РІ С…СЂРѕРЅРёС‡РµСЃРєСѓСЋ С„РѕСЂРјСѓ РіР»СЋРєР°РІРѕСЃС‚Рё (РјР°РєСЃРёРјСѓРј 255)
+local is_debug = false				-- true/false - РІРєР»СЋС‡РµРЅРёРµ/РѕС‚РєР»СЋС‡РµРЅРёРµ РІС‹РІРѕРґР° РѕС‚Р»Р°РґРѕС‡РЅРѕР№ РёРЅС„РѕСЂРјР°С†РёРё РЅР° СЌРєСЂР°РЅ
+local OldSec=" "					-- РїСЂРµРґС‹РґСѓС‰РµРµ Р·РЅР°С‡РµРЅРёРµ РёРіСЂРѕРІС‹С… СЃРµРєСѓРЅРґ
+local NowSec=" "					-- С‚РµРєСѓС‰РµРµ Р·РЅР°С‡РµРЅРёРµ РёРіСЂРѕРІС‹С… СЃРµРєСѓРЅРґ
+local OldPos = vector()				-- РїСЂРµРґС‹РґСѓС‰Р°СЏ РїРѕР·РёС†РёСЏ Р“Р“ РґР»СЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ Р±РµРіР°
+local GG_Move = 0					-- С‚РµРєСѓС‰Р°СЏ СЃРєРѕСЂРѕСЃС‚СЊ Р“Р“ (< 0.1 - СЃС‚РѕРёС‚, > 1 - Р±РµР¶РёС‚)
+local MaxReplicGG = 15				-- СЂРµРіСѓР»СЏС‚РѕСЂ С‡Р°СЃС‚РѕС‚С‹ РїСЂРѕРёР·РЅРѕСЃРёРјС‹С… Р“Р“ СЂРµРїР»РёРє (30 - 50%, 60 - 100%)
+--РїСЂРёР·РЅР°РєРё РЅР°Р»РёС‡РёСЏ Сѓ Р“Р“ РєСЂРёСЃС‚Р°Р»Р»РѕРІ----------------------------------
 local has_absolut,has_talisman,has_obereg = 0,0,false
 --------------------------------------------------------------------
-local DivCount = 0					-- Предделитель для жажды
-local DrinkCount = 0				-- Счетчик жажды
-local InfectCount = 0				-- Счетчик заразы
-local OverEnable = true				-- Разрешение проверки
-local Overload = false				-- Признак перегрузки
-local Bor67_1 = 0					-- Время действия вакцины
-local Bor67_2 = 0					-- Порог срабатывания
+local DivCount = 0					-- РџСЂРµРґРґРµР»РёС‚РµР»СЊ РґР»СЏ Р¶Р°Р¶РґС‹
+local DrinkCount = 0				-- РЎС‡РµС‚С‡РёРє Р¶Р°Р¶РґС‹
+local InfectCount = 0				-- РЎС‡РµС‚С‡РёРє Р·Р°СЂР°Р·С‹
+local OverEnable = true				-- Р Р°Р·СЂРµС€РµРЅРёРµ РїСЂРѕРІРµСЂРєРё
+local Overload = false				-- РџСЂРёР·РЅР°Рє РїРµСЂРµРіСЂСѓР·РєРё
+local Bor67_1 = 0					-- Р’СЂРµРјСЏ РґРµР№СЃС‚РІРёСЏ РІР°РєС†РёРЅС‹
+local Bor67_2 = 0					-- РџРѕСЂРѕРі СЃСЂР°Р±Р°С‚С‹РІР°РЅРёСЏ
 local Bor67_3 = 0					-- reserved
 local Bor67_4 = 0					-- reserved
 
---Амбиентные звуки монстров
+--РђРјР±РёРµРЅС‚РЅС‹Рµ Р·РІСѓРєРё РјРѕРЅСЃС‚СЂРѕРІ
 local Gluk_sounds1={
 "monsters\\cat\\attack_hit",
 "monsters\\cat\\idle",
@@ -100,7 +100,7 @@ local Gluk_sounds1={
 "monsters\\zombie\\zombie_attack_7",
 "monsters\\zombie\\zombie_attack_8"
 }
--- Звуки посторонние
+-- Р—РІСѓРєРё РїРѕСЃС‚РѕСЂРѕРЅРЅРёРµ
 local Gluk_sounds2={
 "ambient\\gluki\\gluki_1",
 "ambient\\gluki\\gluki_2",
@@ -133,7 +133,7 @@ local Gluk_sounds2={
 "ambient\\gluki\\gluki_29",
 "ambient\\gluki\\gluki_30"
 }
--- Звуки ГГ при разворотах
+-- Р—РІСѓРєРё Р“Р“ РїСЂРё СЂР°Р·РІРѕСЂРѕС‚Р°С…
 local Gluk_sounds3={
 "actor\\pain_1",
 "ambient\\gluki\\gluks_1",
@@ -149,7 +149,7 @@ local Gluk_sounds3={
 "ambient\\gluki\\gluks_8",
 "ambient\\gluki\\gluks_9"
 }
--- Звуки ГГ при телепортировании
+-- Р—РІСѓРєРё Р“Р“ РїСЂРё С‚РµР»РµРїРѕСЂС‚РёСЂРѕРІР°РЅРёРё
 local Gluk_sounds4={
 "ambient\\gluki\\glukt_1",
 "ambient\\gluki\\glukt_2",
@@ -168,7 +168,7 @@ function GlukUpdate()
 	if actor == nil or not actor:alive() then return end
 	local now =game.get_game_time():timeToString(game.CTime.TimeToSeconds)
 	if now == nil then return end
-	NowSec = string.sub(now,7,8) -- получаем секунды
+	NowSec = string.sub(now,7,8) -- РїРѕР»СѓС‡Р°РµРј СЃРµРєСѓРЅРґС‹
 	game_diff = level.get_game_difficulty()		
 	coeff_diff = 4-game_diff
 	if OldSec==NowSec then
@@ -179,16 +179,16 @@ function GlukUpdate()
 		end	
 		return 
 	end
--- Прошла секунда игрового времени		
+-- РџСЂРѕС€Р»Р° СЃРµРєСѓРЅРґР° РёРіСЂРѕРІРѕРіРѕ РІСЂРµРјРµРЅРё		
 	OldSec = NowSec
 	OverEnable=true
-	GG_Move = GGspeed() -- определяем скорость движения ГГ
-	DrinkUpdate() -- проверяем жажду
-	InfectUpdate() -- проверяем заразу
-	-- проверяем наличие кристаллов у ГГ
+	GG_Move = GGspeed() -- РѕРїСЂРµРґРµР»СЏРµРј СЃРєРѕСЂРѕСЃС‚СЊ РґРІРёР¶РµРЅРёСЏ Р“Р“
+	DrinkUpdate() -- РїСЂРѕРІРµСЂСЏРµРј Р¶Р°Р¶РґСѓ
+	InfectUpdate() -- РїСЂРѕРІРµСЂСЏРµРј Р·Р°СЂР°Р·Сѓ
+	-- РїСЂРѕРІРµСЂСЏРµРј РЅР°Р»РёС‡РёРµ РєСЂРёСЃС‚Р°Р»Р»РѕРІ Сѓ Р“Р“
 	has_absolut,has_talisman,has_obereg = 0,0,false
 	actor:iterate_inventory(SearchItems,actor)
-	-- если есть оберег, то лечим и не глючим
+	-- РµСЃР»Рё РµСЃС‚СЊ РѕР±РµСЂРµРі, С‚Рѕ Р»РµС‡РёРј Рё РЅРµ РіР»СЋС‡РёРј
 	if has_obereg then 
 		GlukCount_1=0
 		GlukCount_2=0
@@ -196,7 +196,7 @@ function GlukUpdate()
 		return 
 	end
         if has_alife_info("parallel_mg") then return end		
--- звуки монстров
+-- Р·РІСѓРєРё РјРѕРЅСЃС‚СЂРѕРІ
 	if has_absolut>2 or GlukCount_1 >= GlukHron then
 		if GlukTimer_1>0 then 
 			GlukTimer_1=GlukTimer_1-has_absolut
@@ -204,10 +204,10 @@ function GlukUpdate()
 		else 
 			if GlukCount_1 < GlukHron then GlukCount_1=GlukCount_1+1 end
 			SoundGluk(Gluk_sounds1, nil, nil)
-			GlukTimer_1=math.random(MinTime,MaxTime) -- регулировка частоты эффекта
+			GlukTimer_1=math.random(MinTime,MaxTime) -- СЂРµРіСѓР»РёСЂРѕРІРєР° С‡Р°СЃС‚РѕС‚С‹ СЌС„С„РµРєС‚Р°
 		end
 	end
--- прочие звуки
+-- РїСЂРѕС‡РёРµ Р·РІСѓРєРё
 	if has_absolut>0 or GlukCount_2 >= GlukHron then
 		if GlukTimer_2>0 then 
 			GlukTimer_2=GlukTimer_2-has_absolut
@@ -215,37 +215,37 @@ function GlukUpdate()
 		else 
 			if GlukCount_2 < GlukHron then GlukCount_2=GlukCount_2+1 end
 			SoundGluk(Gluk_sounds2, nil, "actor")
-			GlukTimer_2=math.random(MinTime,MaxTime) -- регулировка частоты эффекта
+			GlukTimer_2=math.random(MinTime,MaxTime) -- СЂРµРіСѓР»РёСЂРѕРІРєР° С‡Р°СЃС‚РѕС‚С‹ СЌС„С„РµРєС‚Р°
 		end
 	end
--- видеоглюки
+-- РІРёРґРµРѕРіР»СЋРєРё
 	if has_talisman>0 then
 		if GlukTimer_3>0 then 
 			GlukTimer_3=GlukTimer_3-has_talisman
 		else 
 			VisualGluk(nil)
-			GlukTimer_3=math.random(MinTime,MaxTime) -- регулировка частоты эффекта
+			GlukTimer_3=math.random(MinTime,MaxTime) -- СЂРµРіСѓР»РёСЂРѕРІРєР° С‡Р°СЃС‚РѕС‚С‹ СЌС„С„РµРєС‚Р°
 		end
 	end
--- развороты
+-- СЂР°Р·РІРѕСЂРѕС‚С‹
 	if has_talisman>2 then
 		if GlukTimer_4>0 then 
 			GlukTimer_4=GlukTimer_4-has_talisman
 		else 
 			RndDirection(1)
-			GlukTimer_4=math.random(MinTime,MaxTime) -- регулировка частоты эффекта
+			GlukTimer_4=math.random(MinTime,MaxTime) -- СЂРµРіСѓР»РёСЂРѕРІРєР° С‡Р°СЃС‚РѕС‚С‹ СЌС„С„РµРєС‚Р°
 		end
 	end
--- телепорт
+-- С‚РµР»РµРїРѕСЂС‚
 	if has_talisman>3 then
 		if GlukTimer_5>0 then 
 			GlukTimer_5=GlukTimer_5-has_talisman			
 		else 
 			RndTeleport()
-			GlukTimer_5=math.random(MinTime,MaxTime) -- регулировка частоты эффекта
+			GlukTimer_5=math.random(MinTime,MaxTime) -- СЂРµРіСѓР»РёСЂРѕРІРєР° С‡Р°СЃС‚РѕС‚С‹ СЌС„С„РµРєС‚Р°
 		end
 	end
--- псевдоаномалии
+-- РїСЃРµРІРґРѕР°РЅРѕРјР°Р»РёРё
 	if has_absolut>4 or GlukCount_3 >= GlukHron then
 		if GlukTimer_6>0 then 
 			GlukTimer_6=GlukTimer_6-has_absolut
@@ -253,7 +253,7 @@ function GlukUpdate()
 		else 
 			if GlukCount_3 < GlukHron then GlukCount_3=GlukCount_3+1 end
 			RndParticles(nil)
-			GlukTimer_6=math.random(MinTime,MaxTime) -- регулировка частоты эффекта
+			GlukTimer_6=math.random(MinTime,MaxTime) -- СЂРµРіСѓР»РёСЂРѕРІРєР° С‡Р°СЃС‚РѕС‚С‹ СЌС„С„РµРєС‚Р°
 		end
 	end
 end
@@ -332,7 +332,7 @@ function VisualGluk(num)
 		level.add_pp_effector("yantar_underground_psi.ppe", 9120, false)
 	end
 	if is_debug  then 
-		local text = "Эффект "..tostring(num)
+		local text = "Р­С„С„РµРєС‚ "..tostring(num)
 		news_manager.send_tip(db.actor, text, nil, nil, 10000) 
 	end
 end
@@ -411,7 +411,7 @@ function RndParticles(num)
 	end
 end
 
--- определение прекондишена для диалога на лечение
+-- РѕРїСЂРµРґРµР»РµРЅРёРµ РїСЂРµРєРѕРЅРґРёС€РµРЅР° РґР»СЏ РґРёР°Р»РѕРіР° РЅР° Р»РµС‡РµРЅРёРµ
 function GGHron()
 	if GlukCount_1>=GlukHron then return true 
 	elseif GlukCount_2>=GlukHron then return true 
@@ -420,7 +420,7 @@ function GGHron()
 	return false 
 end
 --------------------------------------------------------------------
--- лечение ГГ от хронических глюков
+-- Р»РµС‡РµРЅРёРµ Р“Р“ РѕС‚ С…СЂРѕРЅРёС‡РµСЃРєРёС… РіР»СЋРєРѕРІ
 function GGnoHron()
 	GlukCount_1=0
 	GlukCount_2=0
@@ -449,7 +449,7 @@ function GGspeed()
 	return temp
 end
 --------------------------------------------------------------------
--- Отработка жажды у ГГ
+-- РћС‚СЂР°Р±РѕС‚РєР° Р¶Р°Р¶РґС‹ Сѓ Р“Р“
 --------------------------------------------------------------------
 local tbl_food ={
 ["bread_a"]="new\\inv_baton",
@@ -515,102 +515,102 @@ local tbl_multiportions = {
 ["paek22"]="paek23"
 }
 --------------------------------------------------------------------
--- Прекондишены по заражению
+-- РџСЂРµРєРѕРЅРґРёС€РµРЅС‹ РїРѕ Р·Р°СЂР°Р¶РµРЅРёСЋ
 --------------------------------------------------------------------
--- Вернет true если ГГ хоть чуть-чуть заражен
+-- Р’РµСЂРЅРµС‚ true РµСЃР»Рё Р“Р“ С…РѕС‚СЊ С‡СѓС‚СЊ-С‡СѓС‚СЊ Р·Р°СЂР°Р¶РµРЅ
 function virus_present()
  return InfectCount>0
 end
--- Вернет true если ГГ заражен до зеленого значка и более
+-- Р’РµСЂРЅРµС‚ true РµСЃР»Рё Р“Р“ Р·Р°СЂР°Р¶РµРЅ РґРѕ Р·РµР»РµРЅРѕРіРѕ Р·РЅР°С‡РєР° Рё Р±РѕР»РµРµ
 function virus_green()
  return InfectCount>4000
 end
 --------------------------------------------------------------------
--- Использование объекта
+-- РСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ РѕР±СЉРµРєС‚Р°
 --------------------------------------------------------------------
 function use_object(obj)
     local sect = obj:section()
-	-- Изменения жажды в зависимости от того - съели/выпили что-нибудь
+	-- РР·РјРµРЅРµРЅРёСЏ Р¶Р°Р¶РґС‹ РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ С‚РѕРіРѕ - СЃСЉРµР»Рё/РІС‹РїРёР»Рё С‡С‚Рѕ-РЅРёР±СѓРґСЊ
 	if not sect then return end
-	-- проверим, это хавчик?
+	-- РїСЂРѕРІРµСЂРёРј, СЌС‚Рѕ С…Р°РІС‡РёРє?
 	if tbl_food[sect] ~= nil then
-		-- проиграем звуки для еды
-		local snd_obj = xr_sound.get_safe_sound_object(tbl_food[sect])	-- получаем звуковой объект
-		snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)	-- проигрываем звук в голове ГГ	
-		-- увеличиваем счетчик
+		-- РїСЂРѕРёРіСЂР°РµРј Р·РІСѓРєРё РґР»СЏ РµРґС‹
+		local snd_obj = xr_sound.get_safe_sound_object(tbl_food[sect])	-- РїРѕР»СѓС‡Р°РµРј Р·РІСѓРєРѕРІРѕР№ РѕР±СЉРµРєС‚
+		snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)	-- РїСЂРѕРёРіСЂС‹РІР°РµРј Р·РІСѓРє РІ РіРѕР»РѕРІРµ Р“Р“	
+		-- СѓРІРµР»РёС‡РёРІР°РµРј СЃС‡РµС‚С‡РёРє
 		if DrinkCount<60535 then DrinkCount=DrinkCount+5000 
 		else DrinkCount=65450
 		end
-	-- проверим, это питьё?
+	-- РїСЂРѕРІРµСЂРёРј, СЌС‚Рѕ РїРёС‚СЊС‘?
 	elseif tbl_drink[sect] ~= nil then	
-		-- проиграем звуки для питья
-		local snd_obj = xr_sound.get_safe_sound_object(tbl_drink[sect])	-- получаем звуковой объект
-		snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)	-- проигрываем звук в голове ГГ	
-		-- обработаем счетчик
-		if DrinkCount> 20000 then DrinkCount=DrinkCount-20000 -- уменьшаем, если напиток
+		-- РїСЂРѕРёРіСЂР°РµРј Р·РІСѓРєРё РґР»СЏ РїРёС‚СЊСЏ
+		local snd_obj = xr_sound.get_safe_sound_object(tbl_drink[sect])	-- РїРѕР»СѓС‡Р°РµРј Р·РІСѓРєРѕРІРѕР№ РѕР±СЉРµРєС‚
+		snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)	-- РїСЂРѕРёРіСЂС‹РІР°РµРј Р·РІСѓРє РІ РіРѕР»РѕРІРµ Р“Р“	
+		-- РѕР±СЂР°Р±РѕС‚Р°РµРј СЃС‡РµС‚С‡РёРє
+		if DrinkCount> 20000 then DrinkCount=DrinkCount-20000 -- СѓРјРµРЅСЊС€Р°РµРј, РµСЃР»Рё РЅР°РїРёС‚РѕРє
 		else DrinkCount=0
 		end
-		-- обработаем случай с вакциной
-		if has_alife_info("GG_vacsina") and sect == "mineral" then -- если ГГ уже принял вакцину и запил эту гадость
-			db.actor:disable_info_portion("GG_vacsina")	-- забираем поршень - эту порцию вакцины уже запили
-			Bor67_1 = 900	-- вакцинация на 15 минут (900 секунд)
-			InfectCount=0	-- изгоняем заразу
+		-- РѕР±СЂР°Р±РѕС‚Р°РµРј СЃР»СѓС‡Р°Р№ СЃ РІР°РєС†РёРЅРѕР№
+		if has_alife_info("GG_vacsina") and sect == "mineral" then -- РµСЃР»Рё Р“Р“ СѓР¶Рµ РїСЂРёРЅСЏР» РІР°РєС†РёРЅСѓ Рё Р·Р°РїРёР» СЌС‚Сѓ РіР°РґРѕСЃС‚СЊ
+			db.actor:disable_info_portion("GG_vacsina")	-- Р·Р°Р±РёСЂР°РµРј РїРѕСЂС€РµРЅСЊ - СЌС‚Сѓ РїРѕСЂС†РёСЋ РІР°РєС†РёРЅС‹ СѓР¶Рµ Р·Р°РїРёР»Рё
+			Bor67_1 = 900	-- РІР°РєС†РёРЅР°С†РёСЏ РЅР° 15 РјРёРЅСѓС‚ (900 СЃРµРєСѓРЅРґ)
+			InfectCount=0	-- РёР·РіРѕРЅСЏРµРј Р·Р°СЂР°Р·Сѓ
 			if not has_alife_info("GG_recover_2")  and not has_alife_info("GG_recover_1") then 
-				db.actor:give_info_portion("GG_recover_2") -- выдаем поршень излечения	вакциной
+				db.actor:give_info_portion("GG_recover_2") -- РІС‹РґР°РµРј РїРѕСЂС€РµРЅСЊ РёР·Р»РµС‡РµРЅРёСЏ	РІР°РєС†РёРЅРѕР№
 			end 
-		-- обработаем случай с настойкой
+		-- РѕР±СЂР°Р±РѕС‚Р°РµРј СЃР»СѓС‡Р°Р№ СЃ РЅР°СЃС‚РѕР№РєРѕР№
 		elseif sect=="nastoyka" then
-			-- закроем окно инвентаря если оно открыто
+			-- Р·Р°РєСЂРѕРµРј РѕРєРЅРѕ РёРЅРІРµРЅС‚Р°СЂСЏ РµСЃР»Рё РѕРЅРѕ РѕС‚РєСЂС‹С‚Рѕ
 			local inv_wnd = level.main_input_receiver()
 			if inv_wnd then
 				inv_wnd:GetHolder():start_stop_menu(inv_wnd, true)
 			end
-			game.start_tutorial("gluk_01")	-- прокрутим фильмец
+			game.start_tutorial("gluk_01")	-- РїСЂРѕРєСЂСѓС‚РёРј С„РёР»СЊРјРµС†
 		end	
-	-- проверим, это лекарство?
+	-- РїСЂРѕРІРµСЂРёРј, СЌС‚Рѕ Р»РµРєР°СЂСЃС‚РІРѕ?
 	elseif tbl_medik[sect] ~= nil then
-		-- проиграем звуки для лекарств
-		local snd_obj = xr_sound.get_safe_sound_object(tbl_medik[sect])	-- получаем звуковой объект
-		snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)	-- проигрываем звук в голове ГГ	
-		-- Гоняем заразу
-		if virus_present() then 	-- если заражение имеет место быть
+		-- РїСЂРѕРёРіСЂР°РµРј Р·РІСѓРєРё РґР»СЏ Р»РµРєР°СЂСЃС‚РІ
+		local snd_obj = xr_sound.get_safe_sound_object(tbl_medik[sect])	-- РїРѕР»СѓС‡Р°РµРј Р·РІСѓРєРѕРІРѕР№ РѕР±СЉРµРєС‚
+		snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)	-- РїСЂРѕРёРіСЂС‹РІР°РµРј Р·РІСѓРє РІ РіРѕР»РѕРІРµ Р“Р“	
+		-- Р“РѕРЅСЏРµРј Р·Р°СЂР°Р·Сѓ
+		if virus_present() then 	-- РµСЃР»Рё Р·Р°СЂР°Р¶РµРЅРёРµ РёРјРµРµС‚ РјРµСЃС‚Рѕ Р±С‹С‚СЊ
 			if sect=="medkit_army" then
 				if InfectCount>3000 then
 					InfectCount=InfectCount-3000	
 				else 
-					InfectCount = 1	-- до конца не лечим
+					InfectCount = 1	-- РґРѕ РєРѕРЅС†Р° РЅРµ Р»РµС‡РёРј
 				end			
 			elseif sect=="medkit_scientic" then
 				if InfectCount>6000 then
-					InfectCount=InfectCount-6000	-- до конца не лечим
+					InfectCount=InfectCount-6000	-- РґРѕ РєРѕРЅС†Р° РЅРµ Р»РµС‡РёРј
 				else
-					InfectCount=0	-- изгоняем заразу
-					if not has_alife_info("GG_recover_1") and not has_alife_info("GG_recover_2") then db.actor:give_info_portion("GG_recover_1") end -- выдаем поршень излечения аптечкой
+					InfectCount=0	-- РёР·РіРѕРЅСЏРµРј Р·Р°СЂР°Р·Сѓ
+					if not has_alife_info("GG_recover_1") and not has_alife_info("GG_recover_2") then db.actor:give_info_portion("GG_recover_1") end -- РІС‹РґР°РµРј РїРѕСЂС€РµРЅСЊ РёР·Р»РµС‡РµРЅРёСЏ Р°РїС‚РµС‡РєРѕР№
 				end
 			elseif sect=="vacsina" then 
 				if not has_alife_info("GG_vacsina") then 
-					db.actor:give_info_portion("GG_vacsina") -- выдаем поршень - ГГ принял вакцину
+					db.actor:give_info_portion("GG_vacsina") -- РІС‹РґР°РµРј РїРѕСЂС€РµРЅСЊ - Р“Р“ РїСЂРёРЅСЏР» РІР°РєС†РёРЅСѓ
 					local snd_obj = xr_sound.get_safe_sound_object([[new\vacsina]])
-					snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)	-- выдаем реплику о воде
+					snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)	-- РІС‹РґР°РµРј СЂРµРїР»РёРєСѓ Рѕ РІРѕРґРµ
 				end 
 			end
 		end
 	end
-	-- проверим на мультипорционность и создадим нужную порцию в рюкзаке
+	-- РїСЂРѕРІРµСЂРёРј РЅР° РјСѓР»СЊС‚РёРїРѕСЂС†РёРѕРЅРЅРѕСЃС‚СЊ Рё СЃРѕР·РґР°РґРёРј РЅСѓР¶РЅСѓСЋ РїРѕСЂС†РёСЋ РІ СЂСЋРєР·Р°РєРµ
 	if tbl_multiportions[sect] ~= nil then
 		local sobj=alife():create(tbl_multiportions[sect], db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(), db.actor:id())
 	end
-	-- дуем в дудку
+	-- РґСѓРµРј РІ РґСѓРґРєСѓ
 	if sect=="dudka" then
-		-- закроем окно инвентаря
+		-- Р·Р°РєСЂРѕРµРј РѕРєРЅРѕ РёРЅРІРµРЅС‚Р°СЂСЏ
 		inv_wnd = level.main_input_receiver()
 		if inv_wnd then
 			inv_wnd:GetHolder():start_stop_menu(inv_wnd, true)
 		end	
-		local lname=level.name()	-- получим имя уровня
+		local lname=level.name()	-- РїРѕР»СѓС‡РёРј РёРјСЏ СѓСЂРѕРІРЅСЏ
 		local sound
-		if lname=="l11_pripyat" or lname=="promzone" or lname=="deadcity" then	-- для локаций с мышами
-			level.disable_input()	-- обездвижим актера
+		if lname=="l11_pripyat" or lname=="promzone" or lname=="deadcity" then	-- РґР»СЏ Р»РѕРєР°С†РёР№ СЃ РјС‹С€Р°РјРё
+			level.disable_input()	-- РѕР±РµР·РґРІРёР¶РёРј Р°РєС‚РµСЂР°
 			amk.start_timer("dudka_timer", 15)
 			level.add_cam_effector("camera_effects\\prison_1.anm", 25, false)
 			level.add_pp_effector("total_recall.ppe", 9118, false)
@@ -620,7 +620,7 @@ function use_object(obj)
 				db.actor:give_info_portion("krisalov_dudka_used") 
 				sound = sound_object("ambient\\new\\actor_dudka")
 			end
-		else	-- для локаций без мышей
+		else	-- РґР»СЏ Р»РѕРєР°С†РёР№ Р±РµР· РјС‹С€РµР№
 			play_particle({particle="mauvais\\dudka_wrong", pos=db.actor:bone_position("bip01_head"), sound="anomaly\\rat_dudka_wrong"})
 			if not has_alife_info("krisalov_dudka_wrong") then 
 				db.actor:give_info_portion("krisalov_dudka_wrong") 
@@ -630,9 +630,9 @@ function use_object(obj)
 		if sound then
 			sound:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
 		end	
-	-- или в другую дудку
+	-- РёР»Рё РІ РґСЂСѓРіСѓСЋ РґСѓРґРєСѓ
 	elseif sect=="dudka_shu" then
-		-- закроем окно инвентаря
+		-- Р·Р°РєСЂРѕРµРј РѕРєРЅРѕ РёРЅРІРµРЅС‚Р°СЂСЏ
 		inv_wnd = level.main_input_receiver()
 		if inv_wnd then
 			inv_wnd:GetHolder():start_stop_menu(inv_wnd, true)
@@ -641,29 +641,29 @@ function use_object(obj)
 		if sound then
 			sound:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
 		end	
-		if not has_alife_info("krest_dudka_used") then db.actor:give_info_portion("krest_dudka_used") end	-- выдаем поршень использования
-	-- это прибор Живец-1
+		if not has_alife_info("krest_dudka_used") then db.actor:give_info_portion("krest_dudka_used") end	-- РІС‹РґР°РµРј РїРѕСЂС€РµРЅСЊ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ
+	-- СЌС‚Рѕ РїСЂРёР±РѕСЂ Р–РёРІРµС†-1
 	elseif sect=="pribor_zh" then
-		-- закроем окно инвентаря
+		-- Р·Р°РєСЂРѕРµРј РѕРєРЅРѕ РёРЅРІРµРЅС‚Р°СЂСЏ
 		inv_wnd = level.main_input_receiver()
 		if inv_wnd then
 			inv_wnd:GetHolder():start_stop_menu(inv_wnd, true)
 		end	
-		-- включаем эффеторы применения прибора
+		-- РІРєР»СЋС‡Р°РµРј СЌС„С„РµС‚РѕСЂС‹ РїСЂРёРјРµРЅРµРЅРёСЏ РїСЂРёР±РѕСЂР°
 		level.add_cam_effector("camera_effects\\surge_01.anm", 25, false)
 		level.add_cam_effector("camera_effects\\surge_02.anm", 26, false)
 		level.add_pp_effector("sk_corpse.ppe", 2003, false)
-	-- это статуя
+	-- СЌС‚Рѕ СЃС‚Р°С‚СѓСЏ
 	elseif sect=="statya" then
-		-- закроем окно инвентаря
+		-- Р·Р°РєСЂРѕРµРј РѕРєРЅРѕ РёРЅРІРµРЅС‚Р°СЂСЏ
 		inv_wnd = level.main_input_receiver()
 		if inv_wnd then
 			inv_wnd:GetHolder():start_stop_menu(inv_wnd, true)
 		end
 		game.start_tutorial("statya")
-	-- это артефакт в МГ
+	-- СЌС‚Рѕ Р°СЂС‚РµС„Р°РєС‚ РІ РњР“
 	elseif sect=="evergy2_true" then
-		-- закроем окно инвентаря
+		-- Р·Р°РєСЂРѕРµРј РѕРєРЅРѕ РёРЅРІРµРЅС‚Р°СЂСЏ
 		inv_wnd = level.main_input_receiver()
 		if inv_wnd then
 			inv_wnd:GetHolder():start_stop_menu(inv_wnd, true)
@@ -672,7 +672,7 @@ function use_object(obj)
 	end
 end
 --------------------------------------------------------------------
-local tbl_infect={		-- кашель и чихи (не изменять, привязка к числу)
+local tbl_infect={		-- РєР°С€РµР»СЊ Рё С‡РёС…Рё (РЅРµ РёР·РјРµРЅСЏС‚СЊ, РїСЂРёРІСЏР·РєР° Рє С‡РёСЃР»Сѓ)
 "ambient\\actor_gripp\\actor_gripp_1",
 "ambient\\actor_gripp\\actor_gripp_2",
 "ambient\\actor_gripp\\actor_gripp_3",
@@ -683,50 +683,50 @@ local tbl_infect={		-- кашель и чихи (не изменять, привязка к числу)
 "ambient\\actor_gripp\\chih_111",
 "ambient\\actor_gripp\\chih_211"
 }
-local tbl_replik_0={		-- реплики начального уровня
+local tbl_replik_0={		-- СЂРµРїР»РёРєРё РЅР°С‡Р°Р»СЊРЅРѕРіРѕ СѓСЂРѕРІРЅСЏ
 "ambient\\actor_gripp\\actor_grippreplik_0_1",
 "ambient\\actor_gripp\\actor_grippreplik_0_2",
 "ambient\\actor_gripp\\actor_grippreplik_0_3"
 }
-local tbl_replik_1={		-- реплики зеленого уровня
+local tbl_replik_1={		-- СЂРµРїР»РёРєРё Р·РµР»РµРЅРѕРіРѕ СѓСЂРѕРІРЅСЏ
 "ambient\\actor_gripp\\actor_grippreplik_1_0",
 "ambient\\actor_gripp\\actor_grippreplik_1_1"
 }
 local FirstRun=true
 function InfectUpdate()
-	if Bor67_1 > 0 then Bor67_1 = Bor67_1 - 1 end	-- если действует вакцина, то уменьшаем время действия
-	if InfectCount>0 and InfectCount<65535 then -- если заражен, то прогрессируем
+	if Bor67_1 > 0 then Bor67_1 = Bor67_1 - 1 end	-- РµСЃР»Рё РґРµР№СЃС‚РІСѓРµС‚ РІР°РєС†РёРЅР°, С‚Рѕ СѓРјРµРЅСЊС€Р°РµРј РІСЂРµРјСЏ РґРµР№СЃС‚РІРёСЏ
+	if InfectCount>0 and InfectCount<65535 then -- РµСЃР»Рё Р·Р°СЂР°Р¶РµРЅ, С‚Рѕ РїСЂРѕРіСЂРµСЃСЃРёСЂСѓРµРј
 		InfectCount=InfectCount+1 
-		if has_alife_info("GG_recover_1") then db.actor:disable_info_portion("GG_recover_1") end -- опять заразился, забираем поршень излечения
-		if has_alife_info("GG_recover_2") then db.actor:disable_info_portion("GG_recover_2") end -- опять заразился, забираем поршень излечения
-	else	-- иначе проверяем на источник заражения
-		if level.name()=="l08u_brainlab" or level.name()=="l04u_labx18" or level.name()=="l10u_bunker" or level.name()=="l03u_agr_underground" then	-- если подземка
+		if has_alife_info("GG_recover_1") then db.actor:disable_info_portion("GG_recover_1") end -- РѕРїСЏС‚СЊ Р·Р°СЂР°Р·РёР»СЃСЏ, Р·Р°Р±РёСЂР°РµРј РїРѕСЂС€РµРЅСЊ РёР·Р»РµС‡РµРЅРёСЏ
+		if has_alife_info("GG_recover_2") then db.actor:disable_info_portion("GG_recover_2") end -- РѕРїСЏС‚СЊ Р·Р°СЂР°Р·РёР»СЃСЏ, Р·Р°Р±РёСЂР°РµРј РїРѕСЂС€РµРЅСЊ РёР·Р»РµС‡РµРЅРёСЏ
+	else	-- РёРЅР°С‡Рµ РїСЂРѕРІРµСЂСЏРµРј РЅР° РёСЃС‚РѕС‡РЅРёРє Р·Р°СЂР°Р¶РµРЅРёСЏ
+		if level.name()=="l08u_brainlab" or level.name()=="l04u_labx18" or level.name()=="l10u_bunker" or level.name()=="l03u_agr_underground" then	-- РµСЃР»Рё РїРѕРґР·РµРјРєР°
 			local actor = db.actor
-			if actor and Bor67_1==0 then	-- если вакцина не действует
-				InfectCount=1	-- подземка, вакцина не действует, считаем, что заразились
-				local outfit=actor:get_current_outfit()	-- проверяем костюмчик
+			if actor and Bor67_1==0 then	-- РµСЃР»Рё РІР°РєС†РёРЅР° РЅРµ РґРµР№СЃС‚РІСѓРµС‚
+				InfectCount=1	-- РїРѕРґР·РµРјРєР°, РІР°РєС†РёРЅР° РЅРµ РґРµР№СЃС‚РІСѓРµС‚, СЃС‡РёС‚Р°РµРј, С‡С‚Рѕ Р·Р°СЂР°Р·РёР»РёСЃСЊ
+				local outfit=actor:get_current_outfit()	-- РїСЂРѕРІРµСЂСЏРµРј РєРѕСЃС‚СЋРјС‡РёРє
 				if outfit then
-					local sect=outfit:section()	-- получаем тип костюма
+					local sect=outfit:section()	-- РїРѕР»СѓС‡Р°РµРј С‚РёРї РєРѕСЃС‚СЋРјР°
 					if sect=="ecolog_outfit" or sect=="protection_outfit" or sect=="white_outfit" or sect=="super_outfit" then
-						local cond=outfit:condition()	-- получаем дырявость костюма
-						if cond and cond>0.7 then InfectCount=0 end	-- костюм не поврежден, обнуляем заразу
+						local cond=outfit:condition()	-- РїРѕР»СѓС‡Р°РµРј РґС‹СЂСЏРІРѕСЃС‚СЊ РєРѕСЃС‚СЋРјР°
+						if cond and cond>0.7 then InfectCount=0 end	-- РєРѕСЃС‚СЋРј РЅРµ РїРѕРІСЂРµР¶РґРµРЅ, РѕР±РЅСѓР»СЏРµРј Р·Р°СЂР°Р·Сѓ
 					end
 				end
 			end
 		end
 	end	
-	-- Начинаем обработку 
+	-- РќР°С‡РёРЅР°РµРј РѕР±СЂР°Р±РѕС‚РєСѓ 
 	local hud = get_hud()
 	local custom_static
 	local snd_obj
-	if InfectCount>0 then	-- если заражение есть
-		-- Кашляем периодически
+	if InfectCount>0 then	-- РµСЃР»Рё Р·Р°СЂР°Р¶РµРЅРёРµ РµСЃС‚СЊ
+		-- РљР°С€Р»СЏРµРј РїРµСЂРёРѕРґРёС‡РµСЃРєРё
 		if InfectTimer > 0 then
 			InfectTimer = InfectTimer -1
 		else
 			InfectTimer = math.random(90,270)
 			local temp = math.random(1,table.getn(tbl_infect))
-			if temp>7 then	-- чихаем
+			if temp>7 then	-- С‡РёС…Р°РµРј
 				level.add_cam_effector("camera_effects\\hit_back.anm", 33334, false, "")
 				level.add_cam_effector("camera_effects\\hit_back.anm", 33335, false, "")
 				level.add_cam_effector("camera_effects\\hit_back.anm", 33336, false, "")
@@ -734,31 +734,31 @@ function InfectUpdate()
 				level.add_cam_effector("camera_effects\\hit_back.anm", 33338, false, "")
 				level.add_cam_effector("camera_effects\\hit_back.anm", 33339, false, "")
 				level.add_cam_effector("camera_effects\\hit_back.anm", 33340, false, "")
-				VisualGluk(13)	-- сильно чихнули
-			else	-- кашляем
+				VisualGluk(13)	-- СЃРёР»СЊРЅРѕ С‡РёС…РЅСѓР»Рё
+			else	-- РєР°С€Р»СЏРµРј
 				level.add_cam_effector("camera_effects\\hit_back.anm", 33334, false, "")
 				local tmp = math.random()
-				if tmp>0.5 then	-- величиваем амплитуду
+				if tmp>0.5 then	-- РІРµР»РёС‡РёРІР°РµРј Р°РјРїР»РёС‚СѓРґСѓ
 					level.add_cam_effector("camera_effects\\hit_back.anm", 33335, false, "")
-					VisualGluk(5)	-- краснеет в глазах
+					VisualGluk(5)	-- РєСЂР°СЃРЅРµРµС‚ РІ РіР»Р°Р·Р°С…
 				end
 			end	
 			SoundGluk(tbl_infect, temp, "actor")
 		end
 	end
-	-- Начальный уровень заражения
+	-- РќР°С‡Р°Р»СЊРЅС‹Р№ СѓСЂРѕРІРµРЅСЊ Р·Р°СЂР°Р¶РµРЅРёСЏ
 	if InfectCount >1000 then
 		if not has_alife_info("boryan_infect_0") then 
 			db.actor:give_info_portion("boryan_infect_0")
-			local temp = math.random(1,table.getn(tbl_replik_0))	-- выбираем фразу
-			SoundGluk(tbl_replik_0, temp, "actor")	-- произносим фразу
+			local temp = math.random(1,table.getn(tbl_replik_0))	-- РІС‹Р±РёСЂР°РµРј С„СЂР°Р·Сѓ
+			SoundGluk(tbl_replik_0, temp, "actor")	-- РїСЂРѕРёР·РЅРѕСЃРёРј С„СЂР°Р·Сѓ
 		end
 	else
 		if has_alife_info("boryan_infect_0") then
 			db.actor:disable_info_portion("boryan_infect_0")
 		end
 	end
-	-- Первый уровень зеленый
+	-- РџРµСЂРІС‹Р№ СѓСЂРѕРІРµРЅСЊ Р·РµР»РµРЅС‹Р№
 	if InfectCount >4000 then
 		if FirstRun then
 			level.add_pp_effector("yantar_underground_psi.ppe", 33333, true)
@@ -766,8 +766,8 @@ function InfectUpdate()
 		end
 		if not has_alife_info("boryan_infect_1") then 
 			db.actor:give_info_portion("boryan_infect_1")
-			local temp = math.random(1,table.getn(tbl_replik_1))	-- выбираем фразу
-			SoundGluk(tbl_replik_1, temp, "actor")		-- произносим фразу
+			local temp = math.random(1,table.getn(tbl_replik_1))	-- РІС‹Р±РёСЂР°РµРј С„СЂР°Р·Сѓ
+			SoundGluk(tbl_replik_1, temp, "actor")		-- РїСЂРѕРёР·РЅРѕСЃРёРј С„СЂР°Р·Сѓ
 			level.add_pp_effector("yantar_underground_psi.ppe", 33333, true)
 			level.set_pp_effector_factor(33333, 0.25)
 		end
@@ -775,7 +775,7 @@ function InfectUpdate()
 		if custom_static == nil then
 			hud:AddCustomStatic("infect_green", true)
 		end
-		InfectTimer = InfectTimer -1	-- учащаем кашель
+		InfectTimer = InfectTimer -1	-- СѓС‡Р°С‰Р°РµРј РєР°С€РµР»СЊ
 	else
 		if has_alife_info("boryan_infect_1") then
 			db.actor:disable_info_portion("boryan_infect_1")
@@ -786,7 +786,7 @@ function InfectUpdate()
 			hud:RemoveCustomStatic("infect_green", true)
 		end
 	end
-	-- Второй уровень желтый
+	-- Р’С‚РѕСЂРѕР№ СѓСЂРѕРІРµРЅСЊ Р¶РµР»С‚С‹Р№
 	if InfectCount >8000 then
 		if FirstRun then
 			level.set_pp_effector_factor(33333, 0.5)
@@ -805,8 +805,8 @@ function InfectUpdate()
 		if custom_static == nil then
 			hud:AddCustomStatic("infect_yellow", true)
 		end
-		InfectTimer = InfectTimer -1	-- учащаем кашель
-		if db.actor.power>0.12 then db.actor.power = -0.005 end -- ограничиваем потерю сил
+		InfectTimer = InfectTimer -1	-- СѓС‡Р°С‰Р°РµРј РєР°С€РµР»СЊ
+		if db.actor.power>0.12 then db.actor.power = -0.005 end -- РѕРіСЂР°РЅРёС‡РёРІР°РµРј РїРѕС‚РµСЂСЋ СЃРёР»
 	else
 		if has_alife_info("boryan_infect_2") then
 			db.actor:disable_info_portion("boryan_infect_2")
@@ -816,7 +816,7 @@ function InfectUpdate()
 			hud:RemoveCustomStatic("infect_yellow", true)
 		end
 	end
-	-- Третий уровень красный
+	-- РўСЂРµС‚РёР№ СѓСЂРѕРІРµРЅСЊ РєСЂР°СЃРЅС‹Р№
 	if InfectCount >12000 then
 		if FirstRun then
 			level.set_pp_effector_factor(33333, 0.75)
@@ -835,9 +835,9 @@ function InfectUpdate()
 		if custom_static == nil then
 			hud:AddCustomStatic("infect_red", true)
 		end	
-		InfectTimer = InfectTimer -1	-- учащаем кашель
-		if db.actor.power>0.12 then db.actor.power = -0.0025 end -- ограничиваем потерю сил
-		if db.actor.health>0.12 then db.actor.health = -0.0025 end -- ограничиваем потерю здоровья		
+		InfectTimer = InfectTimer -1	-- СѓС‡Р°С‰Р°РµРј РєР°С€РµР»СЊ
+		if db.actor.power>0.12 then db.actor.power = -0.0025 end -- РѕРіСЂР°РЅРёС‡РёРІР°РµРј РїРѕС‚РµСЂСЋ СЃРёР»
+		if db.actor.health>0.12 then db.actor.health = -0.0025 end -- РѕРіСЂР°РЅРёС‡РёРІР°РµРј РїРѕС‚РµСЂСЋ Р·РґРѕСЂРѕРІСЊСЏ		
 	else
 		if has_alife_info("boryan_infect_3") then
 			db.actor:disable_info_portion("boryan_infect_3")
@@ -847,7 +847,7 @@ function InfectUpdate()
 			hud:RemoveCustomStatic("infect_red", true)
 		end
 	end
-	-- Четвертый уровень критический
+	-- Р§РµС‚РІРµСЂС‚С‹Р№ СѓСЂРѕРІРµРЅСЊ РєСЂРёС‚РёС‡РµСЃРєРёР№
 	if InfectCount >16000 then
 		if FirstRun then
 			level.set_pp_effector_factor(33333, 1.0)
@@ -858,15 +858,15 @@ function InfectUpdate()
 			snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
 			level.set_pp_effector_factor(33333, 1.0)
 		end	
-		InfectTimer = InfectTimer -1	-- учащаем кашель
-		if db.actor.power>0.12 then db.actor.power = -0.0025 end -- ограничиваем потерю сил
-		if db.actor.health>0.12 then db.actor.health = -0.0025 end -- ограничиваем потерю здоровья		
+		InfectTimer = InfectTimer -1	-- СѓС‡Р°С‰Р°РµРј РєР°С€РµР»СЊ
+		if db.actor.power>0.12 then db.actor.power = -0.0025 end -- РѕРіСЂР°РЅРёС‡РёРІР°РµРј РїРѕС‚РµСЂСЋ СЃРёР»
+		if db.actor.health>0.12 then db.actor.health = -0.0025 end -- РѕРіСЂР°РЅРёС‡РёРІР°РµРј РїРѕС‚РµСЂСЋ Р·РґРѕСЂРѕРІСЊСЏ		
 	else
 		if has_alife_info("boryan_infect_4") then
 			db.actor:disable_info_portion("boryan_infect_4")
 		end
 	end
-	-- Все! Утонул в соплях...
+	-- Р’СЃРµ! РЈС‚РѕРЅСѓР» РІ СЃРѕРїР»СЏС…...
 	if InfectCount >20000 then
 		amk.make_suicide(db.actor)
 	end
@@ -879,18 +879,18 @@ function DrinkUpdate()
 	local custom_static
 	local PowerHit
 	local snd_obj
-	-- Тормозим рост счетчика жажды с помощью предделителя
+	-- РўРѕСЂРјРѕР·РёРј СЂРѕСЃС‚ СЃС‡РµС‚С‡РёРєР° Р¶Р°Р¶РґС‹ СЃ РїРѕРјРѕС‰СЊСЋ РїСЂРµРґРґРµР»РёС‚РµР»СЏ
 	DivCount = DivCount +1
-	if DivCount>=2 then 		 		-- тормозим в 2 раза
-		DivCount = 0				-- сбрасываем предделитель
-		-- Прошло 2 секунды - увеличиваем жажду
-		if GG_Move>0.1 and DrinkCount<65535 then DrinkCount=DrinkCount+1 end -- если идем, то сохнем 
-		if GG_Move>1 and DrinkCount<65533 then DrinkCount=DrinkCount+2 end -- если бежим, то сохнем быстрее
+	if DivCount>=2 then 		 		-- С‚РѕСЂРјРѕР·РёРј РІ 2 СЂР°Р·Р°
+		DivCount = 0				-- СЃР±СЂР°СЃС‹РІР°РµРј РїСЂРµРґРґРµР»РёС‚РµР»СЊ
+		-- РџСЂРѕС€Р»Рѕ 2 СЃРµРєСѓРЅРґС‹ - СѓРІРµР»РёС‡РёРІР°РµРј Р¶Р°Р¶РґСѓ
+		if GG_Move>0.1 and DrinkCount<65535 then DrinkCount=DrinkCount+1 end -- РµСЃР»Рё РёРґРµРј, С‚Рѕ СЃРѕС…РЅРµРј 
+		if GG_Move>1 and DrinkCount<65533 then DrinkCount=DrinkCount+2 end -- РµСЃР»Рё Р±РµР¶РёРј, С‚Рѕ СЃРѕС…РЅРµРј Р±С‹СЃС‚СЂРµРµ
 	end
-	-- урон нарастает постепенно
-	PowerHit=DrinkCount/3276750 -- В пределе 65535/3276750=0,02
-	if db.actor.power>0.1 then db.actor.power = -(PowerHit) end -- ограничиваем потерю сил
-	-- Первый уровень зеленый
+	-- СѓСЂРѕРЅ РЅР°СЂР°СЃС‚Р°РµС‚ РїРѕСЃС‚РµРїРµРЅРЅРѕ
+	PowerHit=DrinkCount/3276750 -- Р’ РїСЂРµРґРµР»Рµ 65535/3276750=0,02
+	if db.actor.power>0.1 then db.actor.power = -(PowerHit) end -- РѕРіСЂР°РЅРёС‡РёРІР°РµРј РїРѕС‚РµСЂСЋ СЃРёР»
+	-- РџРµСЂРІС‹Р№ СѓСЂРѕРІРµРЅСЊ Р·РµР»РµРЅС‹Р№
 	if DrinkCount>8191 then 
 		if not has_alife_info("boryan_drink_1") then 
 			db.actor:give_info_portion("boryan_drink_1")
@@ -926,9 +926,9 @@ function DrinkUpdate()
 			db.actor:disable_info_portion("boryan_drink_2")
 		end
 	end
-	-- жажда сильная - начинаем терять здоровье
+	-- Р¶Р°Р¶РґР° СЃРёР»СЊРЅР°СЏ - РЅР°С‡РёРЅР°РµРј С‚РµСЂСЏС‚СЊ Р·РґРѕСЂРѕРІСЊРµ
 	if DrinkCount>24575 then 
-		if db.actor.health>0.1 then db.actor.health = -(PowerHit)/4 end -- ограничиваем потерю здоровья
+		if db.actor.health>0.1 then db.actor.health = -(PowerHit)/4 end -- РѕРіСЂР°РЅРёС‡РёРІР°РµРј РїРѕС‚РµСЂСЋ Р·РґРѕСЂРѕРІСЊСЏ
 		if not has_alife_info("boryan_drink_3") then 
 			db.actor:give_info_portion("boryan_drink_3")
 			snd_obj = xr_sound.get_safe_sound_object([[ambient\gluki\actor_voda3]])
@@ -1012,7 +1012,7 @@ function DrinkUpdate()
 		end
 	end
 	
-	-- Преддверие смерти
+	-- РџСЂРµРґРґРІРµСЂРёРµ СЃРјРµСЂС‚Рё
 	if DrinkCount>65450 and DrinkCount<65534 then
 		if not has_alife_info("boryan_drink_9") then
 			db.actor:give_info_portion("boryan_drink_9")
@@ -1024,7 +1024,7 @@ function DrinkUpdate()
 			db.actor:disable_info_portion("boryan_drink_9")
 		end
 	end	
-	-- Смерть от жажды
+	-- РЎРјРµСЂС‚СЊ РѕС‚ Р¶Р°Р¶РґС‹
 	if DrinkCount>65534 then
 		amk.make_suicide(db.actor)
 	end
@@ -1058,7 +1058,7 @@ function check_all_actor_items(actor, item)
                         packet = net_packet()
                         cse_alife_item_ammo.STATE_Write(se_obj, packet)
                         packet:r_seek(packet:w_tell() - 2)
-                        count = packet:r_u16() -- кол-во боеприпаса в пачке --
+                        count = packet:r_u16() -- РєРѕР»-РІРѕ Р±РѕРµРїСЂРёРїР°СЃР° РІ РїР°С‡РєРµ --
                         add_weight = Get_ammo_weight(section, count)
                     else
                         add_weight = get_ini:r_float(section, "inv_weight")
@@ -1071,8 +1071,8 @@ function check_all_actor_items(actor, item)
 end
 
 function Get_ammo_weight(section, count)
-    local count_in_box = 0 -- кол-во патронов в полной пачке --
-    local box_weight = 0     -- вес полной пачки патронов --
+    local count_in_box = 0 -- РєРѕР»-РІРѕ РїР°С‚СЂРѕРЅРѕРІ РІ РїРѕР»РЅРѕР№ РїР°С‡РєРµ --
+    local box_weight = 0     -- РІРµСЃ РїРѕР»РЅРѕР№ РїР°С‡РєРё РїР°С‚СЂРѕРЅРѕРІ --
     if get_ini:section_exist(section) then
         if get_ini:line_exist(section, "inv_weight") then
             box_weight = get_ini:r_float(section, "inv_weight")
@@ -1132,7 +1132,7 @@ function Analise()
 			end 
 		end
 	end
-	-- Перезапуск скан-таймера
+	-- РџРµСЂРµР·Р°РїСѓСЃРє СЃРєР°РЅ-С‚Р°Р№РјРµСЂР°
 	if not amk.has_g_timer("scan_timer") then
 		set_scan_timer()
 	end
@@ -1140,59 +1140,59 @@ function Analise()
 end
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
--- сообщения об удачном ограблении нычки
+-- СЃРѕРѕР±С‰РµРЅРёСЏ РѕР± СѓРґР°С‡РЅРѕРј РѕРіСЂР°Р±Р»РµРЅРёРё РЅС‹С‡РєРё
 local tbl_good = {
-"Вау, как мне повезло сегодня! Такой хабар с нычки чей-то снял - просто Клондайк! Низкий поклон за труды, продолжай в том же духе!",
-"Кто же так хабар ценный нычет? Я легко нашел и забрал. Спасибо тебе, лошара безмозглый, ножки дедушкины пожалел!",
-"Тиха украинская ночь, но сало надо перепрятать. Сопля зеленая, перепрятал твой хабар неподалеку - попробуй найди!",
-"Не перевелись еще дебилы на Земле! Если бы не они - пришлось бы деду старому ножками далеко в Зону топать. Хороший хабар насобирал, подсобил дедушке старому. Было ваше - стало наше.",
-"Учишь вас, учишь нычки делать - одни двойки! Хабар хороший поднял сейчас в одной и не употел совсем! Молодцом, кретин!",
-"Ага! От меня не спрячешь! Я спинным мозгом нычки чую! Давай-давай, собирай побольше, я заберу!",
-"Хорошая попытка была от деда хабар спрятать, но не вышло. Нет такого места, чтобы дед не унюхал. Прячь лучше.",
-"Вот ужо свезло так свезло! И топать никуда не пришлось. С километр прошел всего и такую нычку почистил - неделю бухать толпой можно!",
-"Не знаю чью схованку обобрал, но доволен! Старался ты, терпило вонючий, а дедушка взял и забрал. Потей дальше.",
-"Хорошо пашешь, сталкер, да плохо прячешь! Порадовал старика, уродец. Поищи теперь свой хабар. Учись прятать у старших!",
-"Вот спасибо, ребятушки. Хороший хабарок припрятали. Порадовали старика. Сегодня выпью за ваше здоровье.",
-"Сынок, а что хабарок-то бедный такой? Продай ботинки, купи очки. Может, тебе капель глазных подкинуть?",
-"Ой-ё-ёй! Вот это хабар! Вот это жирно! Сынок, ты на рюкзачке-то имя своё напиши. Внуча моя тебе грамоту выправит. В баре под стекло повесишь. Будет тебе всеобщий почёт и уважение.",
-"Я смотрю, ты ценные вещи в одну кучу кладешь? Молодец, дедушкины ноги беречь надо. Продолжай собирать, не ленись, дедушка тобой доволен.",
-"Спасибо доброму Робину Гуду, который хабар оставляет повсюду! Мужик, всё равно ты бы столько не съел, да и диета тебе не помешает."
+"Р’Р°Сѓ, РєР°Рє РјРЅРµ РїРѕРІРµР·Р»Рѕ СЃРµРіРѕРґРЅСЏ! РўР°РєРѕР№ С…Р°Р±Р°СЂ СЃ РЅС‹С‡РєРё С‡РµР№-С‚Рѕ СЃРЅСЏР» - РїСЂРѕСЃС‚Рѕ РљР»РѕРЅРґР°Р№Рє! РќРёР·РєРёР№ РїРѕРєР»РѕРЅ Р·Р° С‚СЂСѓРґС‹, РїСЂРѕРґРѕР»Р¶Р°Р№ РІ С‚РѕРј Р¶Рµ РґСѓС…Рµ!",
+"РљС‚Рѕ Р¶Рµ С‚Р°Рє С…Р°Р±Р°СЂ С†РµРЅРЅС‹Р№ РЅС‹С‡РµС‚? РЇ Р»РµРіРєРѕ РЅР°С€РµР» Рё Р·Р°Р±СЂР°Р». РЎРїР°СЃРёР±Рѕ С‚РµР±Рµ, Р»РѕС€Р°СЂР° Р±РµР·РјРѕР·РіР»С‹Р№, РЅРѕР¶РєРё РґРµРґСѓС€РєРёРЅС‹ РїРѕР¶Р°Р»РµР»!",
+"РўРёС…Р° СѓРєСЂР°РёРЅСЃРєР°СЏ РЅРѕС‡СЊ, РЅРѕ СЃР°Р»Рѕ РЅР°РґРѕ РїРµСЂРµРїСЂСЏС‚Р°С‚СЊ. РЎРѕРїР»СЏ Р·РµР»РµРЅР°СЏ, РїРµСЂРµРїСЂСЏС‚Р°Р» С‚РІРѕР№ С…Р°Р±Р°СЂ РЅРµРїРѕРґР°Р»РµРєСѓ - РїРѕРїСЂРѕР±СѓР№ РЅР°Р№РґРё!",
+"РќРµ РїРµСЂРµРІРµР»РёСЃСЊ РµС‰Рµ РґРµР±РёР»С‹ РЅР° Р—РµРјР»Рµ! Р•СЃР»Рё Р±С‹ РЅРµ РѕРЅРё - РїСЂРёС€Р»РѕСЃСЊ Р±С‹ РґРµРґСѓ СЃС‚Р°СЂРѕРјСѓ РЅРѕР¶РєР°РјРё РґР°Р»РµРєРѕ РІ Р—РѕРЅСѓ С‚РѕРїР°С‚СЊ. РҐРѕСЂРѕС€РёР№ С…Р°Р±Р°СЂ РЅР°СЃРѕР±РёСЂР°Р», РїРѕРґСЃРѕР±РёР» РґРµРґСѓС€РєРµ СЃС‚Р°СЂРѕРјСѓ. Р‘С‹Р»Рѕ РІР°С€Рµ - СЃС‚Р°Р»Рѕ РЅР°С€Рµ.",
+"РЈС‡РёС€СЊ РІР°СЃ, СѓС‡РёС€СЊ РЅС‹С‡РєРё РґРµР»Р°С‚СЊ - РѕРґРЅРё РґРІРѕР№РєРё! РҐР°Р±Р°СЂ С…РѕСЂРѕС€РёР№ РїРѕРґРЅСЏР» СЃРµР№С‡Р°СЃ РІ РѕРґРЅРѕР№ Рё РЅРµ СѓРїРѕС‚РµР» СЃРѕРІСЃРµРј! РњРѕР»РѕРґС†РѕРј, РєСЂРµС‚РёРЅ!",
+"РђРіР°! РћС‚ РјРµРЅСЏ РЅРµ СЃРїСЂСЏС‡РµС€СЊ! РЇ СЃРїРёРЅРЅС‹Рј РјРѕР·РіРѕРј РЅС‹С‡РєРё С‡СѓСЋ! Р”Р°РІР°Р№-РґР°РІР°Р№, СЃРѕР±РёСЂР°Р№ РїРѕР±РѕР»СЊС€Рµ, СЏ Р·Р°Р±РµСЂСѓ!",
+"РҐРѕСЂРѕС€Р°СЏ РїРѕРїС‹С‚РєР° Р±С‹Р»Р° РѕС‚ РґРµРґР° С…Р°Р±Р°СЂ СЃРїСЂСЏС‚Р°С‚СЊ, РЅРѕ РЅРµ РІС‹С€Р»Рѕ. РќРµС‚ С‚Р°РєРѕРіРѕ РјРµСЃС‚Р°, С‡С‚РѕР±С‹ РґРµРґ РЅРµ СѓРЅСЋС…Р°Р». РџСЂСЏС‡СЊ Р»СѓС‡С€Рµ.",
+"Р’РѕС‚ СѓР¶Рѕ СЃРІРµР·Р»Рѕ С‚Р°Рє СЃРІРµР·Р»Рѕ! Р С‚РѕРїР°С‚СЊ РЅРёРєСѓРґР° РЅРµ РїСЂРёС€Р»РѕСЃСЊ. РЎ РєРёР»РѕРјРµС‚СЂ РїСЂРѕС€РµР» РІСЃРµРіРѕ Рё С‚Р°РєСѓСЋ РЅС‹С‡РєСѓ РїРѕС‡РёСЃС‚РёР» - РЅРµРґРµР»СЋ Р±СѓС…Р°С‚СЊ С‚РѕР»РїРѕР№ РјРѕР¶РЅРѕ!",
+"РќРµ Р·РЅР°СЋ С‡СЊСЋ СЃС…РѕРІР°РЅРєСѓ РѕР±РѕР±СЂР°Р», РЅРѕ РґРѕРІРѕР»РµРЅ! РЎС‚Р°СЂР°Р»СЃСЏ С‚С‹, С‚РµСЂРїРёР»Рѕ РІРѕРЅСЋС‡РёР№, Р° РґРµРґСѓС€РєР° РІР·СЏР» Рё Р·Р°Р±СЂР°Р». РџРѕС‚РµР№ РґР°Р»СЊС€Рµ.",
+"РҐРѕСЂРѕС€Рѕ РїР°С€РµС€СЊ, СЃС‚Р°Р»РєРµСЂ, РґР° РїР»РѕС…Рѕ РїСЂСЏС‡РµС€СЊ! РџРѕСЂР°РґРѕРІР°Р» СЃС‚Р°СЂРёРєР°, СѓСЂРѕРґРµС†. РџРѕРёС‰Рё С‚РµРїРµСЂСЊ СЃРІРѕР№ С…Р°Р±Р°СЂ. РЈС‡РёСЃСЊ РїСЂСЏС‚Р°С‚СЊ Сѓ СЃС‚Р°СЂС€РёС…!",
+"Р’РѕС‚ СЃРїР°СЃРёР±Рѕ, СЂРµР±СЏС‚СѓС€РєРё. РҐРѕСЂРѕС€РёР№ С…Р°Р±Р°СЂРѕРє РїСЂРёРїСЂСЏС‚Р°Р»Рё. РџРѕСЂР°РґРѕРІР°Р»Рё СЃС‚Р°СЂРёРєР°. РЎРµРіРѕРґРЅСЏ РІС‹РїСЊСЋ Р·Р° РІР°С€Рµ Р·РґРѕСЂРѕРІСЊРµ.",
+"РЎС‹РЅРѕРє, Р° С‡С‚Рѕ С…Р°Р±Р°СЂРѕРє-С‚Рѕ Р±РµРґРЅС‹Р№ С‚Р°РєРѕР№? РџСЂРѕРґР°Р№ Р±РѕС‚РёРЅРєРё, РєСѓРїРё РѕС‡РєРё. РњРѕР¶РµС‚, С‚РµР±Рµ РєР°РїРµР»СЊ РіР»Р°Р·РЅС‹С… РїРѕРґРєРёРЅСѓС‚СЊ?",
+"РћР№-С‘-С‘Р№! Р’РѕС‚ СЌС‚Рѕ С…Р°Р±Р°СЂ! Р’РѕС‚ СЌС‚Рѕ Р¶РёСЂРЅРѕ! РЎС‹РЅРѕРє, С‚С‹ РЅР° СЂСЋРєР·Р°С‡РєРµ-С‚Рѕ РёРјСЏ СЃРІРѕС‘ РЅР°РїРёС€Рё. Р’РЅСѓС‡Р° РјРѕСЏ С‚РµР±Рµ РіСЂР°РјРѕС‚Сѓ РІС‹РїСЂР°РІРёС‚. Р’ Р±Р°СЂРµ РїРѕРґ СЃС‚РµРєР»Рѕ РїРѕРІРµСЃРёС€СЊ. Р‘СѓРґРµС‚ С‚РµР±Рµ РІСЃРµРѕР±С‰РёР№ РїРѕС‡С‘С‚ Рё СѓРІР°Р¶РµРЅРёРµ.",
+"РЇ СЃРјРѕС‚СЂСЋ, С‚С‹ С†РµРЅРЅС‹Рµ РІРµС‰Рё РІ РѕРґРЅСѓ РєСѓС‡Сѓ РєР»Р°РґРµС€СЊ? РњРѕР»РѕРґРµС†, РґРµРґСѓС€РєРёРЅС‹ РЅРѕРіРё Р±РµСЂРµС‡СЊ РЅР°РґРѕ. РџСЂРѕРґРѕР»Р¶Р°Р№ СЃРѕР±РёСЂР°С‚СЊ, РЅРµ Р»РµРЅРёСЃСЊ, РґРµРґСѓС€РєР° С‚РѕР±РѕР№ РґРѕРІРѕР»РµРЅ.",
+"РЎРїР°СЃРёР±Рѕ РґРѕР±СЂРѕРјСѓ Р РѕР±РёРЅСѓ Р“СѓРґСѓ, РєРѕС‚РѕСЂС‹Р№ С…Р°Р±Р°СЂ РѕСЃС‚Р°РІР»СЏРµС‚ РїРѕРІСЃСЋРґСѓ! РњСѓР¶РёРє, РІСЃС‘ СЂР°РІРЅРѕ С‚С‹ Р±С‹ СЃС‚РѕР»СЊРєРѕ РЅРµ СЃСЉРµР», РґР° Рё РґРёРµС‚Р° С‚РµР±Рµ РЅРµ РїРѕРјРµС€Р°РµС‚."
 }
 
--- Верка Заподлянка
+-- Р’РµСЂРєР° Р—Р°РїРѕРґР»СЏРЅРєР°
 local tbl_1 = {
-"Эй, Фотограф! ",
-"Фотограф, гадина! ",
-"Эй, ты, лошара с фотиком! ",
-"Фотограф, обломись, гад! ",
-"Фотограф, а ты в натуре тварь бесхребетная! ",
-"Алё! Фотограф! Скоро встретимся на узкой дорожке! "
+"Р­Р№, Р¤РѕС‚РѕРіСЂР°С„! ",
+"Р¤РѕС‚РѕРіСЂР°С„, РіР°РґРёРЅР°! ",
+"Р­Р№, С‚С‹, Р»РѕС€Р°СЂР° СЃ С„РѕС‚РёРєРѕРј! ",
+"Р¤РѕС‚РѕРіСЂР°С„, РѕР±Р»РѕРјРёСЃСЊ, РіР°Рґ! ",
+"Р¤РѕС‚РѕРіСЂР°С„, Р° С‚С‹ РІ РЅР°С‚СѓСЂРµ С‚РІР°СЂСЊ Р±РµСЃС…СЂРµР±РµС‚РЅР°СЏ! ",
+"РђР»С‘! Р¤РѕС‚РѕРіСЂР°С„! РЎРєРѕСЂРѕ РІСЃС‚СЂРµС‚РёРјСЃСЏ РЅР° СѓР·РєРѕР№ РґРѕСЂРѕР¶РєРµ! "
 }
 local tbl_2 = {
-"Ты жив еще, засранец? ",
-"Ну ты дебил! ",
-"Хлебало заткни и сюда слушай, урод! ",
-"Где тебя носит, скотина газетная? ",
-"Руки-ноги ещё целы?! Топчешь Зону? ",
-"Ты еще не сдох, падла? "
+"РўС‹ Р¶РёРІ РµС‰Рµ, Р·Р°СЃСЂР°РЅРµС†? ",
+"РќСѓ С‚С‹ РґРµР±РёР»! ",
+"РҐР»РµР±Р°Р»Рѕ Р·Р°С‚РєРЅРё Рё СЃСЋРґР° СЃР»СѓС€Р°Р№, СѓСЂРѕРґ! ",
+"Р“РґРµ С‚РµР±СЏ РЅРѕСЃРёС‚, СЃРєРѕС‚РёРЅР° РіР°Р·РµС‚РЅР°СЏ? ",
+"Р СѓРєРё-РЅРѕРіРё РµС‰С‘ С†РµР»С‹?! РўРѕРїС‡РµС€СЊ Р—РѕРЅСѓ? ",
+"РўС‹ РµС‰Рµ РЅРµ СЃРґРѕС…, РїР°РґР»Р°? "
 }
 local tbl_3 = {
-"Дедушка мой любимый вором был, по понятиям жил, а я - беспредельщица. Капец твоему хабару пришел. ",
-"Было ваше - стало наше. Ха-ха! Это тебе за деда моего расплата! ",
-"Я тебе не дедушка мой, вор в законе! Выгребла все до нитки - обломись, идиот! ",
-"Хабарок твой прикарманила и не подавилась, а ты жри дерьмо, недоумок! ",
-"Дедушка мне говорил, что ты, недоносок, ныкать хабар не умеешь, но я в шоке! Ты бы еще его прямо на дороге бросил! ",
-"Ну что, терпила, нагорбатился? А я почистила твой схрон. Давай-давай, вкалывай, лопоухий. "
+"Р”РµРґСѓС€РєР° РјРѕР№ Р»СЋР±РёРјС‹Р№ РІРѕСЂРѕРј Р±С‹Р», РїРѕ РїРѕРЅСЏС‚РёСЏРј Р¶РёР», Р° СЏ - Р±РµСЃРїСЂРµРґРµР»СЊС‰РёС†Р°. РљР°РїРµС† С‚РІРѕРµРјСѓ С…Р°Р±Р°СЂСѓ РїСЂРёС€РµР». ",
+"Р‘С‹Р»Рѕ РІР°С€Рµ - СЃС‚Р°Р»Рѕ РЅР°С€Рµ. РҐР°-С…Р°! Р­С‚Рѕ С‚РµР±Рµ Р·Р° РґРµРґР° РјРѕРµРіРѕ СЂР°СЃРїР»Р°С‚Р°! ",
+"РЇ С‚РµР±Рµ РЅРµ РґРµРґСѓС€РєР° РјРѕР№, РІРѕСЂ РІ Р·Р°РєРѕРЅРµ! Р’С‹РіСЂРµР±Р»Р° РІСЃРµ РґРѕ РЅРёС‚РєРё - РѕР±Р»РѕРјРёСЃСЊ, РёРґРёРѕС‚! ",
+"РҐР°Р±Р°СЂРѕРє С‚РІРѕР№ РїСЂРёРєР°СЂРјР°РЅРёР»Р° Рё РЅРµ РїРѕРґР°РІРёР»Р°СЃСЊ, Р° С‚С‹ Р¶СЂРё РґРµСЂСЊРјРѕ, РЅРµРґРѕСѓРјРѕРє! ",
+"Р”РµРґСѓС€РєР° РјРЅРµ РіРѕРІРѕСЂРёР», С‡С‚Рѕ С‚С‹, РЅРµРґРѕРЅРѕСЃРѕРє, РЅС‹РєР°С‚СЊ С…Р°Р±Р°СЂ РЅРµ СѓРјРµРµС€СЊ, РЅРѕ СЏ РІ С€РѕРєРµ! РўС‹ Р±С‹ РµС‰Рµ РµРіРѕ РїСЂСЏРјРѕ РЅР° РґРѕСЂРѕРіРµ Р±СЂРѕСЃРёР»! ",
+"РќСѓ С‡С‚Рѕ, С‚РµСЂРїРёР»Р°, РЅР°РіРѕСЂР±Р°С‚РёР»СЃСЏ? Рђ СЏ РїРѕС‡РёСЃС‚РёР»Р° С‚РІРѕР№ СЃС…СЂРѕРЅ. Р”Р°РІР°Р№-РґР°РІР°Р№, РІРєР°Р»С‹РІР°Р№, Р»РѕРїРѕСѓС…РёР№. "
 }
 local tbl_4 = {
-"Ты мне лучше не попадайся! Я тебе глаз на жопу натяну и моргать заставлю! ",
-"Ты теперь ходи, да поглядывай! Я за тобой слежу, гад. Жди заточку в почку! ",
-"Ты спи спокойно, полужмур. Перо под ребро я тебе обещаю! Вешайся, пока я тебя, как барана, не зарезала! ",
-"Найду тебя - с живого шкуру сниму и гулять по Зоне отправлю! Молись, чтобы ты сдох раньше! ",
-"Попадись мне только! Выпотрошу, как карася, рыба безмозглая! ",
-"Попадешься, я тебе такую фотосессию устрою! Кровью харкать будешь, а я на твоих костях спляшу! "
+"РўС‹ РјРЅРµ Р»СѓС‡С€Рµ РЅРµ РїРѕРїР°РґР°Р№СЃСЏ! РЇ С‚РµР±Рµ РіР»Р°Р· РЅР° Р¶РѕРїСѓ РЅР°С‚СЏРЅСѓ Рё РјРѕСЂРіР°С‚СЊ Р·Р°СЃС‚Р°РІР»СЋ! ",
+"РўС‹ С‚РµРїРµСЂСЊ С…РѕРґРё, РґР° РїРѕРіР»СЏРґС‹РІР°Р№! РЇ Р·Р° С‚РѕР±РѕР№ СЃР»РµР¶Сѓ, РіР°Рґ. Р–РґРё Р·Р°С‚РѕС‡РєСѓ РІ РїРѕС‡РєСѓ! ",
+"РўС‹ СЃРїРё СЃРїРѕРєРѕР№РЅРѕ, РїРѕР»СѓР¶РјСѓСЂ. РџРµСЂРѕ РїРѕРґ СЂРµР±СЂРѕ СЏ С‚РµР±Рµ РѕР±РµС‰Р°СЋ! Р’РµС€Р°Р№СЃСЏ, РїРѕРєР° СЏ С‚РµР±СЏ, РєР°Рє Р±Р°СЂР°РЅР°, РЅРµ Р·Р°СЂРµР·Р°Р»Р°! ",
+"РќР°Р№РґСѓ С‚РµР±СЏ - СЃ Р¶РёРІРѕРіРѕ С€РєСѓСЂСѓ СЃРЅРёРјСѓ Рё РіСѓР»СЏС‚СЊ РїРѕ Р—РѕРЅРµ РѕС‚РїСЂР°РІР»СЋ! РњРѕР»РёСЃСЊ, С‡С‚РѕР±С‹ С‚С‹ СЃРґРѕС… СЂР°РЅСЊС€Рµ! ",
+"РџРѕРїР°РґРёСЃСЊ РјРЅРµ С‚РѕР»СЊРєРѕ! Р’С‹РїРѕС‚СЂРѕС€Сѓ, РєР°Рє РєР°СЂР°СЃСЏ, СЂС‹Р±Р° Р±РµР·РјРѕР·РіР»Р°СЏ! ",
+"РџРѕРїР°РґРµС€СЊСЃСЏ, СЏ С‚РµР±Рµ С‚Р°РєСѓСЋ С„РѕС‚РѕСЃРµСЃСЃРёСЋ СѓСЃС‚СЂРѕСЋ! РљСЂРѕРІСЊСЋ С…Р°СЂРєР°С‚СЊ Р±СѓРґРµС€СЊ, Р° СЏ РЅР° С‚РІРѕРёС… РєРѕСЃС‚СЏС… СЃРїР»СЏС€Сѓ! "
 }
--- таблица точек спавна деда по наземным локациям
+-- С‚Р°Р±Р»РёС†Р° С‚РѕС‡РµРє СЃРїР°РІРЅР° РґРµРґР° РїРѕ РЅР°Р·РµРјРЅС‹Рј Р»РѕРєР°С†РёСЏРј
 local tbl_zapadlo = {
 ["predbannik"] = 	{position={x=-25.900024414063,y=-3.0912072658539,z=-237.30001831055},lv=902443,gv=729},
 ["hiding_road"] = 	{position={x=-58.100006103516,y=-2.7727353572845,z=-104.29998779297},lv=371207,gv=1567},
@@ -1204,28 +1204,28 @@ local tbl_zapadlo = {
 ["dyshlo"] = 		{position={x=107.76541137695,y=30.038436889648,z=-145.60406494141},lv=407867,gv=0},
 ["l11_pripyat"] = 	{position={x=142.10000610352,y=-0.93236100673676,z=-27.299987792969},lv=241059,gv=575}
 }
--- Респавн Западло
+-- Р РµСЃРїР°РІРЅ Р—Р°РїР°РґР»Рѕ
 function zapadlo_respawn(box_id)
 	local zapadlo_id = amk.load_variable("ZapadloID", nil)
-	-- создадим на локации с ограбленным ящиком если она наземная
+	-- СЃРѕР·РґР°РґРёРј РЅР° Р»РѕРєР°С†РёРё СЃ РѕРіСЂР°Р±Р»РµРЅРЅС‹Рј СЏС‰РёРєРѕРј РµСЃР»Рё РѕРЅР° РЅР°Р·РµРјРЅР°СЏ
 	if box_id then
 		local pobj = alife():object(box_id)
 		if pobj then
-			local map=alife():level_name(game_graph():vertex(pobj.m_game_vertex_id):level_id())	-- получаем имя уровня
+			local map=alife():level_name(game_graph():vertex(pobj.m_game_vertex_id):level_id())	-- РїРѕР»СѓС‡Р°РµРј РёРјСЏ СѓСЂРѕРІРЅСЏ
 			if map then
-				local a = tbl_zapadlo[map]	-- получаем координаты из таблицы	
-				if a then	-- если координаты получены, значит наземная лока
-					-- если дед уже существует, то сперва удалим
+				local a = tbl_zapadlo[map]	-- РїРѕР»СѓС‡Р°РµРј РєРѕРѕСЂРґРёРЅР°С‚С‹ РёР· С‚Р°Р±Р»РёС†С‹	
+				if a then	-- РµСЃР»Рё РєРѕРѕСЂРґРёРЅР°С‚С‹ РїРѕР»СѓС‡РµРЅС‹, Р·РЅР°С‡РёС‚ РЅР°Р·РµРјРЅР°СЏ Р»РѕРєР°
+					-- РµСЃР»Рё РґРµРґ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚, С‚Рѕ СЃРїРµСЂРІР° СѓРґР°Р»РёРј
 					if zapadlo_id then
 						local sobj = alife():object(zapadlo_id)
-						if sobj then	-- дед существует
-							alife():release(sobj,true)-- удаляем серверный объект
+						if sobj then	-- РґРµРґ СЃСѓС‰РµСЃС‚РІСѓРµС‚
+							alife():release(sobj,true)-- СѓРґР°Р»СЏРµРј СЃРµСЂРІРµСЂРЅС‹Р№ РѕР±СЉРµРєС‚
 						end	
 					end
-					-- и создадим заново
-					local sobj = alife():create("zapadlo", vector():set(a.position.x,a.position.y,a.position.z), a.lv, a.gv)	-- создаем деда
+					-- Рё СЃРѕР·РґР°РґРёРј Р·Р°РЅРѕРІРѕ
+					local sobj = alife():create("zapadlo", vector():set(a.position.x,a.position.y,a.position.z), a.lv, a.gv)	-- СЃРѕР·РґР°РµРј РґРµРґР°
 					if sobj then
-						amk.save_variable("ZapadloID", sobj.id)	-- сохраняем ИД
+						amk.save_variable("ZapadloID", sobj.id)	-- СЃРѕС…СЂР°РЅСЏРµРј РР”
 					end
 				end
 			end
@@ -1233,53 +1233,53 @@ function zapadlo_respawn(box_id)
 	end
 end
 
--- проверка на деда в онлайне
+-- РїСЂРѕРІРµСЂРєР° РЅР° РґРµРґР° РІ РѕРЅР»Р°Р№РЅРµ
 function zapadlo_online()
 	local zapadlo_id = amk.load_variable("ZapadloID", nil)
 	return zapadlo_id ~= nil and level.object_by_id(zapadlo_id) ~= nil
 end
--- зачистка после гибели деда из инфопоршня
+-- Р·Р°С‡РёСЃС‚РєР° РїРѕСЃР»Рµ РіРёР±РµР»Рё РґРµРґР° РёР· РёРЅС„РѕРїРѕСЂС€РЅСЏ
 function zapadlo_clear()
-	amk.del_variable("ZapadloID")	-- удаляем ИД деда
-	-- удалим Верку, если была создана
+	amk.del_variable("ZapadloID")	-- СѓРґР°Р»СЏРµРј РР” РґРµРґР°
+	-- СѓРґР°Р»РёРј Р’РµСЂРєСѓ, РµСЃР»Рё Р±С‹Р»Р° СЃРѕР·РґР°РЅР°
 	local verka_id = amk.load_variable("VerkaID", nil)
 	if verka_id then
-		amk.del_variable("VerkaID")	-- удаляем ИД Верки
+		amk.del_variable("VerkaID")	-- СѓРґР°Р»СЏРµРј РР” Р’РµСЂРєРё
 		local sobj = alife():object(verka_id)
 		if sobj then
-			alife():release(sobj,true)-- удаляем внучку
+			alife():release(sobj,true)-- СѓРґР°Р»СЏРµРј РІРЅСѓС‡РєСѓ
 		end
 	end
 end
--- ранение внучки
+-- СЂР°РЅРµРЅРёРµ РІРЅСѓС‡РєРё
 function verka_wound()
 	if not has_alife_info("kill_verka") then
 		kill_actor()
-		-- проигрываем фразу деда
+		-- РїСЂРѕРёРіСЂС‹РІР°РµРј С„СЂР°Р·Сѓ РґРµРґР°
 		snd_obj = xr_sound.get_safe_sound_object([[new\zapadlo_sdohni]])
 		snd_obj:play_at_pos(db.actor, db.actor:position())
 	end
 end
--- смерть внучки
+-- СЃРјРµСЂС‚СЊ РІРЅСѓС‡РєРё
 function verka_dead()
 	kill_actor()
-	-- проигрываем фразу деда
+	-- РїСЂРѕРёРіСЂС‹РІР°РµРј С„СЂР°Р·Сѓ РґРµРґР°
 	snd_obj = xr_sound.get_safe_sound_object([[new\zapadlo_verka]])
 	snd_obj:play_at_pos(db.actor, db.actor:position())
 end
--- убийство ГГ
+-- СѓР±РёР№СЃС‚РІРѕ Р“Р“
 function kill_actor()
 	local actor = db.actor
-	actor:give_info_portion("zapadlo_enemy")	-- дед разозлился
-	-- проигрываем выстрел из ППШ
+	actor:give_info_portion("zapadlo_enemy")	-- РґРµРґ СЂР°Р·РѕР·Р»РёР»СЃСЏ
+	-- РїСЂРѕРёРіСЂС‹РІР°РµРј РІС‹СЃС‚СЂРµР» РёР· РџРџРЁ
 	local snd_obj = xr_sound.get_safe_sound_object([[weapons\92fs_fire_1p_outdoor]])
 	snd_obj:play_at_pos(db.actor, db.actor:position())
-	-- создадим рядом деда
-	local offset=vector():set(math.random()*6-3,0,math.random()*6-3)	-- создадим случайный вектор направления
+	-- СЃРѕР·РґР°РґРёРј СЂСЏРґРѕРј РґРµРґР°
+	local offset=vector():set(math.random()*6-3,0,math.random()*6-3)	-- СЃРѕР·РґР°РґРёРј СЃР»СѓС‡Р°Р№РЅС‹Р№ РІРµРєС‚РѕСЂ РЅР°РїСЂР°РІР»РµРЅРёСЏ
 	offset:normalize()
-	local lv_id = level.vertex_in_direction(actor:level_vertex_id(),offset,2)	-- Получаем ближайшую доступную точку в 2 метрах от ГГ
-	local pos = level.vertex_position(lv_id)	-- получаем позицию левелвертекса
-	-- подбираем геймвертекс
+	local lv_id = level.vertex_in_direction(actor:level_vertex_id(),offset,2)	-- РџРѕР»СѓС‡Р°РµРј Р±Р»РёР¶Р°Р№С€СѓСЋ РґРѕСЃС‚СѓРїРЅСѓСЋ С‚РѕС‡РєСѓ РІ 2 РјРµС‚СЂР°С… РѕС‚ Р“Р“
+	local pos = level.vertex_position(lv_id)	-- РїРѕР»СѓС‡Р°РµРј РїРѕР·РёС†РёСЋ Р»РµРІРµР»РІРµСЂС‚РµРєСЃР°
+	-- РїРѕРґР±РёСЂР°РµРј РіРµР№РјРІРµСЂС‚РµРєСЃ
 	local gv_id = 0
 	local min_dist = 100000
 	local g1
@@ -1290,28 +1290,28 @@ function kill_actor()
 			gv_id = a
 		end
 	end	
-	local sobj = alife():create("zapadlo", pos, lv_id, gv_id)	-- создаем деда
-	amk.make_suicide(db.actor)	-- убиваем актора
+	local sobj = alife():create("zapadlo", pos, lv_id, gv_id)	-- СЃРѕР·РґР°РµРј РґРµРґР°
+	amk.make_suicide(db.actor)	-- СѓР±РёРІР°РµРј Р°РєС‚РѕСЂР°
 end
--- Создание Харона в МГ
+-- РЎРѕР·РґР°РЅРёРµ РҐР°СЂРѕРЅР° РІ РњР“
 function haron_spawn()
 	local sobj = alife():create("haronchik", vector():set(-296.28750610352,9.6740570068359,-172.44869995117),49266,1199)
 	if sobj then
-		amk.save_variable("HaronID", sobj.id)	-- сохраняем ИД
+		amk.save_variable("HaronID", sobj.id)	-- СЃРѕС…СЂР°РЅСЏРµРј РР”
 	end
 end
--- Создание Верки в МГ
+-- РЎРѕР·РґР°РЅРёРµ Р’РµСЂРєРё РІ РњР“
 function verka_spawn()
 	local sobj = alife():create("verka", vector():set(-71.179534912109,1.2130371332169,-242.8204498291),236993,1259)
 	if sobj then
-		amk.save_variable("VerkaID", sobj.id)	-- сохраняем ИД
+		amk.save_variable("VerkaID", sobj.id)	-- СЃРѕС…СЂР°РЅСЏРµРј РР”
 	end
 end
--- прекондишн наличия ремкомплектов у ГГ
+-- РїСЂРµРєРѕРЅРґРёС€РЅ РЅР°Р»РёС‡РёСЏ СЂРµРјРєРѕРјРїР»РµРєС‚РѕРІ Сѓ Р“Р“
 function has_repboxes(first_speaker, second_speaker)
 	return db.actor:object("repbox_s1")~=nil and db.actor:object("repbox_s2")~=nil and db.actor:object("repbox_s6")~=nil 
 end
--- передача ремкомплектов Харону
+-- РїРµСЂРµРґР°С‡Р° СЂРµРјРєРѕРјРїР»РµРєС‚РѕРІ РҐР°СЂРѕРЅСѓ
 function transfer_repboxes(first_speaker, second_speaker)
 	local obj
 	obj = db.actor:object("repbox_s1")
@@ -1327,7 +1327,7 @@ function transfer_repboxes(first_speaker, second_speaker)
 		first_speaker:transfer_item(obj,second_speaker)
 	end
 end
--- Удаление Харона
+-- РЈРґР°Р»РµРЅРёРµ РҐР°СЂРѕРЅР°
 function del_haronchik()
 	local haron_id = amk.load_variable("HaronID", nil)
 	if haron_id then
@@ -1337,12 +1337,12 @@ function del_haronchik()
 			play_particle({particle="anomaly2\\teleport_idle", pos=obj:position(), sound="anomaly\\teleport_idle"})
 		end
 		if sobj then
-			alife():release(sobj,true)-- удаляем Харона
+			alife():release(sobj,true)-- СѓРґР°Р»СЏРµРј РҐР°СЂРѕРЅР°
 		end	
-		amk.del_variable("HaronID")	-- удаляем ИД Харона
+		amk.del_variable("HaronID")	-- СѓРґР°Р»СЏРµРј РР” РҐР°СЂРѕРЅР°
 	end	
 end
--- Удаление Верки
+-- РЈРґР°Р»РµРЅРёРµ Р’РµСЂРєРё
 function del_verka()
 	local verka_id = amk.load_variable("VerkaID", nil)
 	if verka_id then
@@ -1352,45 +1352,45 @@ function del_verka()
 			play_particle({particle="anomaly2\\teleport_idle", pos=obj:position(), sound="anomaly\\teleport_idle"})
 		end
 		if sobj then
-			alife():release(sobj,true)-- удаляем Верку
+			alife():release(sobj,true)-- СѓРґР°Р»СЏРµРј Р’РµСЂРєСѓ
 		end	
-		amk.del_variable("VerkaID")	-- удаляем ИД Верки
+		amk.del_variable("VerkaID")	-- СѓРґР°Р»СЏРµРј РР” Р’РµСЂРєРё
 	end		
 end
 
--- создание клада деда Западло
+-- СЃРѕР·РґР°РЅРёРµ РєР»Р°РґР° РґРµРґР° Р—Р°РїР°РґР»Рѕ
 function zapadlo_habar(first_speaker, second_speaker)
 	local sobj = alife():create("prip_1_ruk", vector():set(31.910470962524,2.5804259777069,-139.71539306641),141425,459)
 end
 
-local scan_max = 100 	-- максимальное значение содержимого нычки	
-local scan_min = 50 	-- минимальное значение содержимого нычки	
-local scan_step = 10	-- шаг изменения
--- поиск нычек
+local scan_max = 100 	-- РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ СЃРѕРґРµСЂР¶РёРјРѕРіРѕ РЅС‹С‡РєРё	
+local scan_min = 50 	-- РјРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ СЃРѕРґРµСЂР¶РёРјРѕРіРѕ РЅС‹С‡РєРё	
+local scan_step = 10	-- С€Р°Рі РёР·РјРµРЅРµРЅРёСЏ
+-- РїРѕРёСЃРє РЅС‹С‡РµРє
 function scan_habar()
-	if not has_alife_info("kill_zapadlo") and zapadlo_online() then return end -- дед живой в онлайне
-	if has_alife_info("kill_zapadlo") and has_alife_info("verka_out") then return end -- дед убит, Верки нет в Зоне
+	if not has_alife_info("kill_zapadlo") and zapadlo_online() then return end -- РґРµРґ Р¶РёРІРѕР№ РІ РѕРЅР»Р°Р№РЅРµ
+	if has_alife_info("kill_zapadlo") and has_alife_info("verka_out") then return end -- РґРµРґ СѓР±РёС‚, Р’РµСЂРєРё РЅРµС‚ РІ Р—РѕРЅРµ
 	local boxes = {}
 	local sim = alife()
 	local sobj, map, pobj
     for a=1,65535,1 do
 		sobj=sim:object(a)
-		if sobj and sobj.parent_id ~= nil then	-- если у объекта есть хозяин
-			pobj = sim:object(sobj.parent_id) -- получаем хозяина
+		if sobj and sobj.parent_id ~= nil then	-- РµСЃР»Рё Сѓ РѕР±СЉРµРєС‚Р° РµСЃС‚СЊ С…РѕР·СЏРёРЅ
+			pobj = sim:object(sobj.parent_id) -- РїРѕР»СѓС‡Р°РµРј С…РѕР·СЏРёРЅР°
 			if pobj then
 				if pobj:section_name()=="inventory_box" or pobj:section_name()=="treasure_item" or pobj:section_name()=="m_inventory_box" or
 					(has_alife_info("kill_zapadlo") and (pobj:section_name()=="ioffe" or pobj:section_name()=="hunter_trup" or pobj:section_name()=="wulf_trup" or
 					pobj:section_name()=="maroder_trup" or pobj:section_name()=="lavrov_trup" or pobj:section_name()=="ivanov_trup"or 
 					pobj:section_name()=="palatka_trup" or pobj:section_name()=="trup_x18")) 
 					then
-					-- проверка на локацию.
+					-- РїСЂРѕРІРµСЂРєР° РЅР° Р»РѕРєР°С†РёСЋ.
 					if pobj.m_game_vertex_id and game_graph():valid_vertex_id(pobj.m_game_vertex_id) then
-						map=sim:level_name(game_graph():vertex(pobj.m_game_vertex_id):level_id())	-- получаем имя уровня
-						if map ~= level.name() then	-- если не на текущем уровне
-							if not boxes[pobj.id] then	-- если еще нет ящика, то создадим его
+						map=sim:level_name(game_graph():vertex(pobj.m_game_vertex_id):level_id())	-- РїРѕР»СѓС‡Р°РµРј РёРјСЏ СѓСЂРѕРІРЅСЏ
+						if map ~= level.name() then	-- РµСЃР»Рё РЅРµ РЅР° С‚РµРєСѓС‰РµРј СѓСЂРѕРІРЅРµ
+							if not boxes[pobj.id] then	-- РµСЃР»Рё РµС‰Рµ РЅРµС‚ СЏС‰РёРєР°, С‚Рѕ СЃРѕР·РґР°РґРёРј РµРіРѕ
 								boxes[pobj.id] = {sobj.id}
 							else
-								table.insert(boxes[pobj.id],sobj.id)	-- иначе, вписывем объект в ящик
+								table.insert(boxes[pobj.id],sobj.id)	-- РёРЅР°С‡Рµ, РІРїРёСЃС‹РІРµРј РѕР±СЉРµРєС‚ РІ СЏС‰РёРє
 							end
 						end
 					end
@@ -1398,48 +1398,48 @@ function scan_habar()
 			end
 		end
     end
-	-- ищем самый богатый ящик
+	-- РёС‰РµРј СЃР°РјС‹Р№ Р±РѕРіР°С‚С‹Р№ СЏС‰РёРє
 	local box_id, max_item, count = 0, 0, 0
 	if boxes then
 		for k,v in pairs(boxes) do
 			if boxes[k] then
-				count = table.getn(boxes[k])	-- получаем количество предметов в ящике
+				count = table.getn(boxes[k])	-- РїРѕР»СѓС‡Р°РµРј РєРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРµРґРјРµС‚РѕРІ РІ СЏС‰РёРєРµ
 				if count>max_item then
-					if has_alife_info("kill_zapadlo") then	-- Верка Заподлянка в деле
-						box_id = k	-- запоминаем ид ящика
-						max_item = count	-- запоминаем число предметов
-					else		-- дед в деле
-						if count>Bor67_2 then	-- действует по понятиям
-							box_id = k	-- запоминаем ид ящика
-							max_item = count	-- запоминаем число предметов
+					if has_alife_info("kill_zapadlo") then	-- Р’РµСЂРєР° Р—Р°РїРѕРґР»СЏРЅРєР° РІ РґРµР»Рµ
+						box_id = k	-- Р·Р°РїРѕРјРёРЅР°РµРј РёРґ СЏС‰РёРєР°
+						max_item = count	-- Р·Р°РїРѕРјРёРЅР°РµРј С‡РёСЃР»Рѕ РїСЂРµРґРјРµС‚РѕРІ
+					else		-- РґРµРґ РІ РґРµР»Рµ
+						if count>Bor67_2 then	-- РґРµР№СЃС‚РІСѓРµС‚ РїРѕ РїРѕРЅСЏС‚РёСЏРј
+							box_id = k	-- Р·Р°РїРѕРјРёРЅР°РµРј РёРґ СЏС‰РёРєР°
+							max_item = count	-- Р·Р°РїРѕРјРёРЅР°РµРј С‡РёСЃР»Рѕ РїСЂРµРґРјРµС‚РѕРІ
 						end
 					end
 				end
 			end
 		end
 	end
-	-- действия по результатам отбора
-	local rnd_time = math.random(5,25)	-- время задержки смс
-	local sms = tbl_good[math.random(table.getn(tbl_good))].." Дед Западло."	-- получили случайное сообщение
-	if box_id>0 then	-- есть подходящий ящик	
-		if has_alife_info("kill_zapadlo") then	-- если дед убит
-			-- конструируем случайную фразу.
-			sms = tbl_1[math.random(1,table.getn(tbl_1))]..tbl_2[math.random(1,table.getn(tbl_2))]..tbl_3[math.random(1,table.getn(tbl_3))]..tbl_4[math.random(1,table.getn(tbl_4))].."Верка Заподлянка."
-		else		-- дед живой					
-			if has_alife_info("haron_start_dialog_start") then -- если знакомство с Хароном произошло
-				zapadlo_respawn(box_id)	-- создаем деда
-				if has_alife_info("zapadlo_dialog_1_done") and not has_alife_info("zapadlo_robbery_2") then -- это ограбление ГГ после первой беседы
-					db.actor:give_info_portion("zapadlo_robbery_2")	-- блокируем повторный вызов
-					local txt = "Фотограф, кроме тебя мне не к кому обратиться.\\nНайди меня, есть серьезный разговор. Дед Западло."
-					news_manager.send_tip(db.actor, txt, 40, "stalker", 20000)	-- отправляем сообщение для ГГ
+	-- РґРµР№СЃС‚РІРёСЏ РїРѕ СЂРµР·СѓР»СЊС‚Р°С‚Р°Рј РѕС‚Р±РѕСЂР°
+	local rnd_time = math.random(5,25)	-- РІСЂРµРјСЏ Р·Р°РґРµСЂР¶РєРё СЃРјСЃ
+	local sms = tbl_good[math.random(table.getn(tbl_good))].." Р”РµРґ Р—Р°РїР°РґР»Рѕ."	-- РїРѕР»СѓС‡РёР»Рё СЃР»СѓС‡Р°Р№РЅРѕРµ СЃРѕРѕР±С‰РµРЅРёРµ
+	if box_id>0 then	-- РµСЃС‚СЊ РїРѕРґС…РѕРґСЏС‰РёР№ СЏС‰РёРє	
+		if has_alife_info("kill_zapadlo") then	-- РµСЃР»Рё РґРµРґ СѓР±РёС‚
+			-- РєРѕРЅСЃС‚СЂСѓРёСЂСѓРµРј СЃР»СѓС‡Р°Р№РЅСѓСЋ С„СЂР°Р·Сѓ.
+			sms = tbl_1[math.random(1,table.getn(tbl_1))]..tbl_2[math.random(1,table.getn(tbl_2))]..tbl_3[math.random(1,table.getn(tbl_3))]..tbl_4[math.random(1,table.getn(tbl_4))].."Р’РµСЂРєР° Р—Р°РїРѕРґР»СЏРЅРєР°."
+		else		-- РґРµРґ Р¶РёРІРѕР№					
+			if has_alife_info("haron_start_dialog_start") then -- РµСЃР»Рё Р·РЅР°РєРѕРјСЃС‚РІРѕ СЃ РҐР°СЂРѕРЅРѕРј РїСЂРѕРёР·РѕС€Р»Рѕ
+				zapadlo_respawn(box_id)	-- СЃРѕР·РґР°РµРј РґРµРґР°
+				if has_alife_info("zapadlo_dialog_1_done") and not has_alife_info("zapadlo_robbery_2") then -- СЌС‚Рѕ РѕРіСЂР°Р±Р»РµРЅРёРµ Р“Р“ РїРѕСЃР»Рµ РїРµСЂРІРѕР№ Р±РµСЃРµРґС‹
+					db.actor:give_info_portion("zapadlo_robbery_2")	-- Р±Р»РѕРєРёСЂСѓРµРј РїРѕРІС‚РѕСЂРЅС‹Р№ РІС‹Р·РѕРІ
+					local txt = "Р¤РѕС‚РѕРіСЂР°С„, РєСЂРѕРјРµ С‚РµР±СЏ РјРЅРµ РЅРµ Рє РєРѕРјСѓ РѕР±СЂР°С‚РёС‚СЊСЃСЏ.\\nРќР°Р№РґРё РјРµРЅСЏ, РµСЃС‚СЊ СЃРµСЂСЊРµР·РЅС‹Р№ СЂР°Р·РіРѕРІРѕСЂ. Р”РµРґ Р—Р°РїР°РґР»Рѕ."
+					news_manager.send_tip(db.actor, txt, 40, "stalker", 20000)	-- РѕС‚РїСЂР°РІР»СЏРµРј СЃРѕРѕР±С‰РµРЅРёРµ РґР»СЏ Р“Р“
 				end 
 			end
 		end
-		-- блокируем смс в подземках
-		if tbl_zapadlo[level.name()]~=nil then	-- наземная лока
-			news_manager.send_tip(db.actor, sms, rnd_time, "stalker", 20000)	-- отправляем сообщение
+		-- Р±Р»РѕРєРёСЂСѓРµРј СЃРјСЃ РІ РїРѕРґР·РµРјРєР°С…
+		if tbl_zapadlo[level.name()]~=nil then	-- РЅР°Р·РµРјРЅР°СЏ Р»РѕРєР°
+			news_manager.send_tip(db.actor, sms, rnd_time, "stalker", 20000)	-- РѕС‚РїСЂР°РІР»СЏРµРј СЃРѕРѕР±С‰РµРЅРёРµ
 		end
-		-- чистим ящик
+		-- С‡РёСЃС‚РёРј СЏС‰РёРє
 		local tmp = boxes[box_id]
 		for b=1,table.getn(tmp) do
 			sobj=sim:object(tmp[b])
@@ -1447,24 +1447,24 @@ function scan_habar()
 				sim:release(sobj,true)
 			end
 		end
-		Bor67_2 = scan_max	-- восстанавливаем порог
-	else	-- нет пригодного ящика
+		Bor67_2 = scan_max	-- РІРѕСЃСЃС‚Р°РЅР°РІР»РёРІР°РµРј РїРѕСЂРѕРі
+	else	-- РЅРµС‚ РїСЂРёРіРѕРґРЅРѕРіРѕ СЏС‰РёРєР°
 		if not has_alife_info("kill_zapadlo") then
-			local sms = tbl_good[math.random(table.getn(tbl_good))].." Дед Западло."	-- получили случайное сообщение
-			news_manager.send_tip(db.actor, sms, rnd_time, "stalker", 20000)	-- отправляем сообщение
-			Bor67_2 = Bor67_2 - scan_step	-- уменьшаем порог
-			if Bor67_2 < scan_min then Bor67_2 = scan_min end	-- ограничиваем снижение порога
+			local sms = tbl_good[math.random(table.getn(tbl_good))].." Р”РµРґ Р—Р°РїР°РґР»Рѕ."	-- РїРѕР»СѓС‡РёР»Рё СЃР»СѓС‡Р°Р№РЅРѕРµ СЃРѕРѕР±С‰РµРЅРёРµ
+			news_manager.send_tip(db.actor, sms, rnd_time, "stalker", 20000)	-- РѕС‚РїСЂР°РІР»СЏРµРј СЃРѕРѕР±С‰РµРЅРёРµ
+			Bor67_2 = Bor67_2 - scan_step	-- СѓРјРµРЅСЊС€Р°РµРј РїРѕСЂРѕРі
+			if Bor67_2 < scan_min then Bor67_2 = scan_min end	-- РѕРіСЂР°РЅРёС‡РёРІР°РµРј СЃРЅРёР¶РµРЅРёРµ РїРѕСЂРѕРіР°
 		end
 	end	
 end
--- установка таймера шмона
+-- СѓСЃС‚Р°РЅРѕРІРєР° С‚Р°Р№РјРµСЂР° С€РјРѕРЅР°
 function set_scan_timer()
-	math.randomseed (device ():time_global ())	-- улучшаем случайность
-	amk.g_start_timer("scan_timer", 1, math.random(0,23), math.random(0,59))	-- не меньше суток и не больше двух
-	if Bor67_2 == 0 then Bor67_2 = scan_max end	-- Начальная установка
+	math.randomseed (device ():time_global ())	-- СѓР»СѓС‡С€Р°РµРј СЃР»СѓС‡Р°Р№РЅРѕСЃС‚СЊ
+	amk.g_start_timer("scan_timer", 1, math.random(0,23), math.random(0,59))	-- РЅРµ РјРµРЅСЊС€Рµ СЃСѓС‚РѕРє Рё РЅРµ Р±РѕР»СЊС€Рµ РґРІСѓС…
+	if Bor67_2 == 0 then Bor67_2 = scan_max end	-- РќР°С‡Р°Р»СЊРЅР°СЏ СѓСЃС‚Р°РЅРѕРІРєР°
 end
 --------------------------------------------------------------------
--- Сохранение/загрузка параметров
+-- РЎРѕС…СЂР°РЅРµРЅРёРµ/Р·Р°РіСЂСѓР·РєР° РїР°СЂР°РјРµС‚СЂРѕРІ
 --------------------------------------------------------------------
 function save(p)
 	p:w_u8(GlukCount_1)
@@ -1473,8 +1473,8 @@ function save(p)
 	p:w_u8(GlukCount_3)
 	p:w_u16(DrinkCount)
 	p:w_u16(InfectCount)
-	p:w_u16(Bor67_1)	-- Время действия вакцины
-	p:w_u16(Bor67_2)	-- Порог срабатывания
+	p:w_u16(Bor67_1)	-- Р’СЂРµРјСЏ РґРµР№СЃС‚РІРёСЏ РІР°РєС†РёРЅС‹
+	p:w_u16(Bor67_2)	-- РџРѕСЂРѕРі СЃСЂР°Р±Р°С‚С‹РІР°РЅРёСЏ
 	p:w_u16(Bor67_3)	-- reserved
 end
 --------------------------------------------------------------------
@@ -1485,78 +1485,78 @@ function load(r)
 	GlukCount_3 = r:r_u8()
 	DrinkCount = r:r_u16()
 	InfectCount = r:r_u16()
-	Bor67_1 = r:r_u16()	-- Время действия вакцины
-	Bor67_2 = r:r_u16()	-- Порог срабатывания
+	Bor67_1 = r:r_u16()	-- Р’СЂРµРјСЏ РґРµР№СЃС‚РІРёСЏ РІР°РєС†РёРЅС‹
+	Bor67_2 = r:r_u16()	-- РџРѕСЂРѕРі СЃСЂР°Р±Р°С‚С‹РІР°РЅРёСЏ
 	Bor67_3 = r:r_u16()	-- reserved
 end
 --------------------------------------------------------------------
--- Трое друзей Бритого
--- первый друг 
-function have_1(first_speaker, second_speaker)	-- Эдик
+-- РўСЂРѕРµ РґСЂСѓР·РµР№ Р‘СЂРёС‚РѕРіРѕ
+-- РїРµСЂРІС‹Р№ РґСЂСѓРі 
+function have_1(first_speaker, second_speaker)	-- Р­РґРёРє
 	if has_alife_info("info_target21") and not has_alife_info("britiy_has_1") then return true end
 	return false
 end
--- второй друг 
-function have_2(first_speaker, second_speaker)	-- Грек
+-- РІС‚РѕСЂРѕР№ РґСЂСѓРі 
+function have_2(first_speaker, second_speaker)	-- Р“СЂРµРє
 	if has_alife_info("info_target81") and not has_alife_info("britiy_has_2") then return true end
 	return false
 end
--- третий друг 
-function have_3(first_speaker, second_speaker)	-- Бром
+-- С‚СЂРµС‚РёР№ РґСЂСѓРі 
+function have_3(first_speaker, second_speaker)	-- Р‘СЂРѕРј
 	if has_alife_info("info_target31") and not has_alife_info("britiy_has_3") then return true end
 	return false
 end
--- нет друзей
+-- РЅРµС‚ РґСЂСѓР·РµР№
 function have_nothing(first_speaker, second_speaker)
 	return not have_1() and not have_2() and not have_3()
 end
--- есть друзья и фотик
+-- РµСЃС‚СЊ РґСЂСѓР·СЊСЏ Рё С„РѕС‚РёРє
 function searh_friend(first_speaker, second_speaker)
 	local actor = db.actor
 	return (not has_alife_info("britiy_has_1") or not has_alife_info("britiy_has_2") or not has_alife_info("britiy_has_3")) and (actor:object("wpn_foto") ~= nil or actor:object("wpn_foto1") ~= nil)
 end
---приз 1
+--РїСЂРёР· 1
 function priz1(first_speaker, second_speaker)
 	dialogs.relocate_item_section(second_speaker,"repbox_s1","in")
 end
---приз 2
+--РїСЂРёР· 2
 function priz2(first_speaker, second_speaker)
 	dialogs.relocate_item_section(second_speaker,"repbox_s2","in")
 end
---приз 3
+--РїСЂРёР· 3
 function priz3(first_speaker, second_speaker)
 	dialogs.relocate_item_section(second_speaker,"repbox_s6","in")
 end
--- Награда от Дзяо--------------------------------------------------
+-- РќР°РіСЂР°РґР° РѕС‚ Р”Р·СЏРѕ--------------------------------------------------
 local count_fotos = 0
--- проверка, сколько ГГ сдал фоток для газеты
+-- РїСЂРѕРІРµСЂРєР°, СЃРєРѕР»СЊРєРѕ Р“Р“ СЃРґР°Р» С„РѕС‚РѕРє РґР»СЏ РіР°Р·РµС‚С‹
 function check_fotos(first_speaker, second_speaker)
 	local info
 	local actor = db.actor
 	count_fotos = 0
-	-- подсчитываем количество отснятых перцев
+	-- РїРѕРґСЃС‡РёС‚С‹РІР°РµРј РєРѕР»РёС‡РµСЃС‚РІРѕ РѕС‚СЃРЅСЏС‚С‹С… РїРµСЂС†РµРІ
 	for a=1,100,1 do
 		info = "info_target"..tostring(a)
 		if has_alife_info(info) then count_fotos = count_fotos + 1 end
 	end
-	-- проверяем остаток в инвентаре
-	actor:iterate_inventory(find_items, actor)	-- перебираем инвентарь ГГ
+	-- РїСЂРѕРІРµСЂСЏРµРј РѕСЃС‚Р°С‚РѕРє РІ РёРЅРІРµРЅС‚Р°СЂРµ
+	actor:iterate_inventory(find_items, actor)	-- РїРµСЂРµР±РёСЂР°РµРј РёРЅРІРµРЅС‚Р°СЂСЊ Р“Р“
 	return count_fotos>=50
 end
 function find_items(actor, item)
     if item:section()=="foto_news" then count_fotos = count_fotos - 1 end
 end
--- получение награды
+-- РїРѕР»СѓС‡РµРЅРёРµ РЅР°РіСЂР°РґС‹
 function get_priz(first_speaker, second_speaker)
 	dialogs.relocate_item_section(second_speaker,"medalka","in")
 end
--- Воронин и немцы--------------------------------------------------
--- проверка наличия фотика
+-- Р’РѕСЂРѕРЅРёРЅ Рё РЅРµРјС†С‹--------------------------------------------------
+-- РїСЂРѕРІРµСЂРєР° РЅР°Р»РёС‡РёСЏ С„РѕС‚РёРєР°
 function has_fotik(first_speaker, second_speaker)
 	local actor = db.actor
 	return actor:object("wpn_foto") ~= nil or actor:object("wpn_foto1") ~= nil
 end
--- не отснял никого
+-- РЅРµ РѕС‚СЃРЅСЏР» РЅРёРєРѕРіРѕ
 function gans_nothing(first_speaker, second_speaker)
 	local info
 	count_fotos = 0
@@ -1566,7 +1566,7 @@ function gans_nothing(first_speaker, second_speaker)
 	end
 	return count_fotos == 0
 end
--- отснял всех
+-- РѕС‚СЃРЅСЏР» РІСЃРµС…
 function gans_all(first_speaker, second_speaker)
 	local info
 	count_fotos = 0
@@ -1576,7 +1576,7 @@ function gans_all(first_speaker, second_speaker)
 	end
 	return count_fotos == 7
 end
--- отснял командование
+-- РѕС‚СЃРЅСЏР» РєРѕРјР°РЅРґРѕРІР°РЅРёРµ
 function gans_comand(first_speaker, second_speaker)
 	local info
 	count_fotos = 0
@@ -1586,7 +1586,7 @@ function gans_comand(first_speaker, second_speaker)
 	end
 	return count_fotos == 4 and not gans_all()
 end
--- хоть кого-то отснял
+-- С…РѕС‚СЊ РєРѕРіРѕ-С‚Рѕ РѕС‚СЃРЅСЏР»
 function gans_foto(first_speaker, second_speaker)
 	local info
 	count_fotos = 0
@@ -1596,15 +1596,15 @@ function gans_foto(first_speaker, second_speaker)
 	end
 	return count_fotos > 0 and not gans_all() and not gans_comand()
 end
--- получение награды
+-- РїРѕР»СѓС‡РµРЅРёРµ РЅР°РіСЂР°РґС‹
 function voronin_priz(first_speaker, second_speaker)
 	dialogs.relocate_item_section(second_speaker,"wpn_ak47_m","in")
 	flamethrower.relocate_n_items_section(second_speaker,"ammo_7.62x39_fmj","in",5)
 end
 
---==================Добрый Шубин=================
+--==================Р”РѕР±СЂС‹Р№ РЁСѓР±РёРЅ=================
 
--- Таблица возможных мест появления Шубина
+-- РўР°Р±Р»РёС†Р° РІРѕР·РјРѕР¶РЅС‹С… РјРµСЃС‚ РїРѕСЏРІР»РµРЅРёСЏ РЁСѓР±РёРЅР°
 local tbl_shubin = {
 -- l03u_agr_underground
 {position={x=-102.53340148926,y=-16.450317382813,z=-101.25010681152},lv=1372,gv=6,radius=7},
@@ -1643,27 +1643,27 @@ local tbl_shubin = {
 {position={x=8.5127582550049,y=4.1358633041382,z=-20.794361114502},lv=3935,gv=116,radius=7}
 }
 
--- спавн рестрикторов
+-- СЃРїР°РІРЅ СЂРµСЃС‚СЂРёРєС‚РѕСЂРѕРІ
 function shubin_restr()
 	local sobj, a
 	local custom = "[logic]\ncfg = scripts\\new\\restr\\shubin_restr.ltx" 
 	for n=1, table.getn(tbl_shubin) do
-		a = tbl_shubin[n]		-- получаем запись из таблицы
+		a = tbl_shubin[n]		-- РїРѕР»СѓС‡Р°РµРј Р·Р°РїРёСЃСЊ РёР· С‚Р°Р±Р»РёС†С‹
 		sobj = alife():create("space_restrictor", vector():set(a.position.x,a.position.y,a.position.z), a.lv, a.gv)
 		val_test.rewrite_restrictor(sobj, custom, a.radius)	
 	end
-	-- установка телепорт-заглушки в Х-16
+	-- СѓСЃС‚Р°РЅРѕРІРєР° С‚РµР»РµРїРѕСЂС‚-Р·Р°РіР»СѓС€РєРё РІ РҐ-16
 	custom = "[logic]\ncfg = scripts\\foto\\restr\\x16_restr.ltx" 	
 	sobj = alife():create("space_restrictor", vector():set(-120.749,14.863,-18.322), 84, 309)
 	val_test.rewrite_restrictor(sobj, custom, 2.5)
 end
 
--- таблица случайных подарков
+-- С‚Р°Р±Р»РёС†Р° СЃР»СѓС‡Р°Р№РЅС‹С… РїРѕРґР°СЂРєРѕРІ
 local tbl_priz = {
 "chernigov", "old_melnik", "vodka", "bread", "conserva", "kolbasa", "oreh", "oliv", "sard", "tush", "galet", "galet_s", "ogirki", "meat", "shprots", "pashtet", "pringles", "zel_goroshek", "gribki", "kilka", "konfeta"
 }
 
--- анализ нуждается ли ГГ в помощи
+-- Р°РЅР°Р»РёР· РЅСѓР¶РґР°РµС‚СЃСЏ Р»Рё Р“Р“ РІ РїРѕРјРѕС‰Рё
 function need_help(actor, obj)
 	local actor = db.actor
 	if actor.health < 0.75 or actor:get_bleeding() > 0.5 or InfectCount >4000 or actor.radiation > 0.3 or actor.power < 0.5 or DrinkCount > 8200 then
@@ -1675,7 +1675,7 @@ function need_help(actor, obj)
 	end
 end
 
--- Шубин спешит на помощь
+-- РЁСѓР±РёРЅ СЃРїРµС€РёС‚ РЅР° РїРѕРјРѕС‰СЊ
 function shubin_help(actor, obj)
 	local item =nil
 	-----
@@ -1695,15 +1695,15 @@ function shubin_help(actor, obj)
 		gvid = obj:game_vertex_id()
 		remove_shubin()
 		if item then
-		sobj = alife():create(item, pos, lvid, gvid)	-- создадим предмет
+		sobj = alife():create(item, pos, lvid, gvid)	-- СЃРѕР·РґР°РґРёРј РїСЂРµРґРјРµС‚
 		end
-		-- бросим случайных предметов 		
+		-- Р±СЂРѕСЃРёРј СЃР»СѓС‡Р°Р№РЅС‹С… РїСЂРµРґРјРµС‚РѕРІ 		
 		for a = 1, coeff_diff do
 		item = tbl_priz[math.random(table.getn(tbl_priz))]
-		sobj = alife():create(item, pos, lvid, gvid)	-- создадим предмет у Шубина			
+		sobj = alife():create(item, pos, lvid, gvid)	-- СЃРѕР·РґР°РґРёРј РїСЂРµРґРјРµС‚ Сѓ РЁСѓР±РёРЅР°			
 		end			
 	end
-	-- если это первая встреча, то произносим реплику
+	-- РµСЃР»Рё СЌС‚Рѕ РїРµСЂРІР°СЏ РІСЃС‚СЂРµС‡Р°, С‚Рѕ РїСЂРѕРёР·РЅРѕСЃРёРј СЂРµРїР»РёРєСѓ
 	if not has_alife_info("shubin_first_help") then 
 		db.actor:give_info_portion("shubin_first_help")	
 		local snd_obj = xr_sound.get_safe_sound_object([[characters_voice\scenario\backup\actor_shubin_1]])
@@ -1711,7 +1711,7 @@ function shubin_help(actor, obj)
 	end 
 end
 
--- спавн Шубина
+-- СЃРїР°РІРЅ РЁСѓР±РёРЅР°
 function create_shubin(actor, obj)
 	local pos, lvid, gvid, sobj
 	if obj then
@@ -1720,14 +1720,14 @@ function create_shubin(actor, obj)
 		gvid = obj:game_vertex_id()
 		sobj = alife():create("shubin", pos, lvid, gvid)
 		if sobj then
-			amk.save_variable("ShubinID", sobj.id)	-- сохраняем ИД		
-			level.add_pp_effector ("blink.ppe", 9112, false)	-- создадим вспышку
+			amk.save_variable("ShubinID", sobj.id)	-- СЃРѕС…СЂР°РЅСЏРµРј РР”		
+			level.add_pp_effector ("blink.ppe", 9112, false)	-- СЃРѕР·РґР°РґРёРј РІСЃРїС‹С€РєСѓ
 			play_particle({particle="anomaly2\\group_items\\mauv_shubin", pos=pos, sound="$no_sound",true})
 		end	
 	end
 end
 
--- удаление Шубина
+-- СѓРґР°Р»РµРЅРёРµ РЁСѓР±РёРЅР°
 function remove_shubin(actor, obj)
 	local shubin_id = amk.load_variable("ShubinID", nil)
 	if shubin_id then
@@ -1737,8 +1737,8 @@ function remove_shubin(actor, obj)
 			local pos = obj:position()
 			play_particle({particle="anomaly2\\group_items\\mauv_shubin_exit", pos=pos, sound="$no_sound"})
 		end
-		if sobj then	-- Шубин существует
-			alife():release(sobj,true)-- удаляем серверный объект
+		if sobj then	-- РЁСѓР±РёРЅ СЃСѓС‰РµСЃС‚РІСѓРµС‚
+			alife():release(sobj,true)-- СѓРґР°Р»СЏРµРј СЃРµСЂРІРµСЂРЅС‹Р№ РѕР±СЉРµРєС‚
 			amk.del_variable("ShubinID")
 			if has_alife_info("shubin_enemy") then 
 				local snd_obj = xr_sound.get_safe_sound_object([[characters_voice\scenario\backup\shubin_wound]])
@@ -1748,13 +1748,13 @@ function remove_shubin(actor, obj)
 	end
 end
 
--- вопль Шубина
+-- РІРѕРїР»СЊ РЁСѓР±РёРЅР°
 function shubin_oy(actor, obj)
 	local snd_obj = xr_sound.get_safe_sound_object([[characters_voice\scenario\backup\shubin_oy]])
 	snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)	
 end
 
--- наносим хит от Шубина
+-- РЅР°РЅРѕСЃРёРј С…РёС‚ РѕС‚ РЁСѓР±РёРЅР°
 function GG_hit()
     local actor=db.actor
 	if actor then 
@@ -1774,7 +1774,7 @@ function GG_hit()
 end
 
 --------------------------------------------------------------------
--- телепорт-заглушка в Х-16
+-- С‚РµР»РµРїРѕСЂС‚-Р·Р°РіР»СѓС€РєР° РІ РҐ-16
 --------------------------------------------------------------------
 function x16_teleport()
 	local actor = db.actor
@@ -1791,76 +1791,76 @@ function x16_teleport()
 end
 
 --------------------------------------------------------------------
--- майор Шпак и Дульсинея
+-- РјР°Р№РѕСЂ РЁРїР°Рє Рё Р”СѓР»СЊСЃРёРЅРµСЏ
 --------------------------------------------------------------------
--- проверка наличия ящика водки
+-- РїСЂРѕРІРµСЂРєР° РЅР°Р»РёС‡РёСЏ СЏС‰РёРєР° РІРѕРґРєРё
 function actor_vodka_have(first_speaker, second_speaker)
 	return new_dialog.item_much("vodka",20) ~= false
 end
 
--- первый обмен
+-- РїРµСЂРІС‹Р№ РѕР±РјРµРЅ
 function shpak_transfer_1(first_speaker, second_speaker)
 	new_dialog.out_item_much("vodka",20)
 	flamethrower.relocate_n_items_section(second_speaker,"ammo_5.45x39_ap","in",20)
-	amk.g_start_timer("shpak_timer", 0, math.random(8,12), 0)	-- заводим таймер до второго диалога на 8 - 12 часов
+	amk.g_start_timer("shpak_timer", 0, math.random(8,12), 0)	-- Р·Р°РІРѕРґРёРј С‚Р°Р№РјРµСЂ РґРѕ РІС‚РѕСЂРѕРіРѕ РґРёР°Р»РѕРіР° РЅР° 8 - 12 С‡Р°СЃРѕРІ
 end
 
--- проверка наличия Винтореза
+-- РїСЂРѕРІРµСЂРєР° РЅР°Р»РёС‡РёСЏ Р’РёРЅС‚РѕСЂРµР·Р°
 function actor_vss_have(first_speaker, second_speaker)
 	return new_dialog.item_much("wpn_vintorez",1) ~= false
 end
 
--- второй обмен
+-- РІС‚РѕСЂРѕР№ РѕР±РјРµРЅ
 function shpak_transfer_2(first_speaker, second_speaker)
-	new_dialog.out_item_much("wpn_vintorez",1)	-- передаем Винторез
+	new_dialog.out_item_much("wpn_vintorez",1)	-- РїРµСЂРµРґР°РµРј Р’РёРЅС‚РѕСЂРµР·
 	dialogs.relocate_item_section(second_speaker,"wpn_rpg7","in")	
 	flamethrower.relocate_n_items_section(second_speaker,"ammo_og-7b","in",5)
-	amk.g_start_timer("shpak_timer", 0, math.random(8,12), 0)	-- заводим таймер до третьего диалога на 8 - 12 часов
+	amk.g_start_timer("shpak_timer", 0, math.random(8,12), 0)	-- Р·Р°РІРѕРґРёРј С‚Р°Р№РјРµСЂ РґРѕ С‚СЂРµС‚СЊРµРіРѕ РґРёР°Р»РѕРіР° РЅР° 8 - 12 С‡Р°СЃРѕРІ
 end
 
--- получаем подарочки для Дуни
+-- РїРѕР»СѓС‡Р°РµРј РїРѕРґР°СЂРѕС‡РєРё РґР»СЏ Р”СѓРЅРё
 function shpak_transfer_3(first_speaker, second_speaker)
 	dialogs.relocate_item_section(second_speaker,"beloe","in")
 	dialogs.relocate_item_section(second_speaker,"kagor","in")
 	dialogs.relocate_item_section(second_speaker,"konfeta","in")
 end
 
--- проверка наличия подарков для Дуни
+-- РїСЂРѕРІРµСЂРєР° РЅР°Р»РёС‡РёСЏ РїРѕРґР°СЂРєРѕРІ РґР»СЏ Р”СѓРЅРё
 function actor_present_have(first_speaker, second_speaker)
 	return new_dialog.item_much("beloe",1) ~= false and new_dialog.item_much("kagor",1) ~= false and new_dialog.item_much("konfeta",1) ~= false
 end
 
--- передача подарков Дуне
+-- РїРµСЂРµРґР°С‡Р° РїРѕРґР°СЂРєРѕРІ Р”СѓРЅРµ
 function transfer_present(first_speaker, second_speaker)
 	new_dialog.out_item_much("beloe",1)
 	new_dialog.out_item_much("kagor",1)
 	new_dialog.out_item_much("konfeta",1)
 end
 
--- проверка наличия литра водки
+-- РїСЂРѕРІРµСЂРєР° РЅР°Р»РёС‡РёСЏ Р»РёС‚СЂР° РІРѕРґРєРё
 function actor_litra_have(first_speaker, second_speaker)
 	return new_dialog.item_much("vodka",2) ~= false
 end
 
--- получение суточного довольствия
+-- РїРѕР»СѓС‡РµРЅРёРµ СЃСѓС‚РѕС‡РЅРѕРіРѕ РґРѕРІРѕР»СЊСЃС‚РІРёСЏ
 function transfer_ration(first_speaker, second_speaker)
-	-- содержимое суточного пайка
+	-- СЃРѕРґРµСЂР¶РёРјРѕРµ СЃСѓС‚РѕС‡РЅРѕРіРѕ РїР°Р№РєР°
 	local tbl_ration = {
 	"paek1", "mineral", "mineral", "medkit_army", "antirad", "bandage", "bandage", "ammo_5.45x39_fmj",
 	"ammo_5.45x39_fmj", "ammo_vog-25", "ammo_vog-25", "grenade_rgd5", "grenade_f1"
 	}
 	local sobj
-	-- получаем паек
+	-- РїРѕР»СѓС‡Р°РµРј РїР°РµРє
 	for a=1,table.getn(tbl_ration) do
 		dialogs.relocate_item_section(second_speaker,tbl_ration[a],"in")
 	end
 	if  new_dialog.item_much("vodka",2) ~= false then 
-		new_dialog.out_item_much("vodka",2)	-- отдаем литру водки
+		new_dialog.out_item_much("vodka",2)	-- РѕС‚РґР°РµРј Р»РёС‚СЂСѓ РІРѕРґРєРё
 	end
-	amk.g_start_timer("shpak_timer", 1, 0, 0)	-- заводим таймер на сутки
+	amk.g_start_timer("shpak_timer", 1, 0, 0)	-- Р·Р°РІРѕРґРёРј С‚Р°Р№РјРµСЂ РЅР° СЃСѓС‚РєРё
 end
 
--- проверка наличия Шпака в онлайне
+-- РїСЂРѕРІРµСЂРєР° РЅР°Р»РёС‡РёСЏ РЁРїР°РєР° РІ РѕРЅР»Р°Р№РЅРµ
 function shpak_online()
 	local npc = level_object_by_sid(30254)
 	if npc then
@@ -1869,49 +1869,49 @@ function shpak_online()
 	return false
 end
 
--- обработчик таймеров Шпака
+-- РѕР±СЂР°Р±РѕС‚С‡РёРє С‚Р°Р№РјРµСЂРѕРІ РЁРїР°РєР°
 function shpak_timer_done()
-	-- это первый вызов таймера?
+	-- СЌС‚Рѕ РїРµСЂРІС‹Р№ РІС‹Р·РѕРІ С‚Р°Р№РјРµСЂР°?
 	if not has_alife_info("shpak_timer1") then db.actor:give_info_portion("shpak_timer1")
-	-- это второй вызов таймера?
+	-- СЌС‚Рѕ РІС‚РѕСЂРѕР№ РІС‹Р·РѕРІ С‚Р°Р№РјРµСЂР°?
 	elseif not has_alife_info("shpak_timer2") then 		
-		if shpak_online() then	-- если Шпак в онлайне, то отложим событие на час
+		if shpak_online() then	-- РµСЃР»Рё РЁРїР°Рє РІ РѕРЅР»Р°Р№РЅРµ, С‚Рѕ РѕС‚Р»РѕР¶РёРј СЃРѕР±С‹С‚РёРµ РЅР° С‡Р°СЃ
 			amk.g_start_timer("shpak_timer", 0, 1, 0)
-		else	-- иначе, начинаются у Шпака проблемы		
+		else	-- РёРЅР°С‡Рµ, РЅР°С‡РёРЅР°СЋС‚СЃСЏ Сѓ РЁРїР°РєР° РїСЂРѕР±Р»РµРјС‹		
 			db.actor:give_info_portion("shpak_timer2")
-			local txt = "Фотограф, у меня большие проблемы.\\nСрочно нужна твоя помощь!\\nС уважением, майор Шпак."
-			news_manager.send_tip(db.actor, txt, nil, nil, 20000)	-- отправляем сообщение для ГГ
-			local sobj = alife():create("dunya", vector():set(-317.342,11.413,60.872), 462787, 797)	-- создаем Дульсинею
+			local txt = "Р¤РѕС‚РѕРіСЂР°С„, Сѓ РјРµРЅСЏ Р±РѕР»СЊС€РёРµ РїСЂРѕР±Р»РµРјС‹.\\nРЎСЂРѕС‡РЅРѕ РЅСѓР¶РЅР° С‚РІРѕСЏ РїРѕРјРѕС‰СЊ!\\nРЎ СѓРІР°Р¶РµРЅРёРµРј, РјР°Р№РѕСЂ РЁРїР°Рє."
+			news_manager.send_tip(db.actor, txt, nil, nil, 20000)	-- РѕС‚РїСЂР°РІР»СЏРµРј СЃРѕРѕР±С‰РµРЅРёРµ РґР»СЏ Р“Р“
+			local sobj = alife():create("dunya", vector():set(-317.342,11.413,60.872), 462787, 797)	-- СЃРѕР·РґР°РµРј Р”СѓР»СЊСЃРёРЅРµСЋ
 			if sobj then
-				amk.save_variable("DunyaID", sobj.id)	-- сохраняем ИД
+				amk.save_variable("DunyaID", sobj.id)	-- СЃРѕС…СЂР°РЅСЏРµРј РР”
 			end
 		end
-	else	-- это регулярный вызов таймера получения суточного пайка
-		db.actor:give_info_portion("shpak_timer3")	-- разрешаем получение пайка
+	else	-- СЌС‚Рѕ СЂРµРіСѓР»СЏСЂРЅС‹Р№ РІС‹Р·РѕРІ С‚Р°Р№РјРµСЂР° РїРѕР»СѓС‡РµРЅРёСЏ СЃСѓС‚РѕС‡РЅРѕРіРѕ РїР°Р№РєР°
+		db.actor:give_info_portion("shpak_timer3")	-- СЂР°Р·СЂРµС€Р°РµРј РїРѕР»СѓС‡РµРЅРёРµ РїР°Р№РєР°
 	end
 end
 
--- перемещаем Дуню в домик
+-- РїРµСЂРµРјРµС‰Р°РµРј Р”СѓРЅСЋ РІ РґРѕРјРёРє
 function relocate_dunya()
-	local id = amk.load_variable("DunyaID",nil)	-- читаем ИД Дуни
+	local id = amk.load_variable("DunyaID",nil)	-- С‡РёС‚Р°РµРј РР” Р”СѓРЅРё
 	if id then
 		local sobj = alife():object(id) 
 		if sobj then
-			alife():release(sobj,true)-- удаляем Дуню
+			alife():release(sobj,true)-- СѓРґР°Р»СЏРµРј Р”СѓРЅСЋ
 		end	
-		amk.del_variable("DunyaID")	-- чистим переменную
-		sobj = alife():create("dunya", vector():set(196.530,2.798,-38.109), 1576466, 799)	-- создаем Дульсинею2
-		-- запускаем таймер ожидания до следующего диалога
-		amk.g_start_timer("dunya_timer", 0, 5, 0)	-- заводим таймер на 5 часов
+		amk.del_variable("DunyaID")	-- С‡РёСЃС‚РёРј РїРµСЂРµРјРµРЅРЅСѓСЋ
+		sobj = alife():create("dunya", vector():set(196.530,2.798,-38.109), 1576466, 799)	-- СЃРѕР·РґР°РµРј Р”СѓР»СЊСЃРёРЅРµСЋ2
+		-- Р·Р°РїСѓСЃРєР°РµРј С‚Р°Р№РјРµСЂ РѕР¶РёРґР°РЅРёСЏ РґРѕ СЃР»РµРґСѓСЋС‰РµРіРѕ РґРёР°Р»РѕРіР°
+		amk.g_start_timer("dunya_timer", 0, 5, 0)	-- Р·Р°РІРѕРґРёРј С‚Р°Р№РјРµСЂ РЅР° 5 С‡Р°СЃРѕРІ
 	end
 end
 
--- зачистка Дуни
+-- Р·Р°С‡РёСЃС‚РєР° Р”СѓРЅРё
 function clear_dunya()
 	amk.del_variable("DunyaID")
 end 
 
--- проверки на предметы
+-- РїСЂРѕРІРµСЂРєРё РЅР° РїСЂРµРґРјРµС‚С‹
 function CheckItems()
 	local actor = db.actor
 	if not actor then return end
@@ -1923,23 +1923,23 @@ function CheckItems()
 		actor:disable_info_portion("dunya_monpansie")	
 	end
 end
--- проверка сбора коллекции образцов мутантов
+-- РїСЂРѕРІРµСЂРєР° СЃР±РѕСЂР° РєРѕР»Р»РµРєС†РёРё РѕР±СЂР°Р·С†РѕРІ РјСѓС‚Р°РЅС‚РѕРІ
 local tbl_mutant = {
-	['mutant_boar_leg'] = true,	-- кабан
-	['mutant_dog_tail'] = true,	-- слепая собака
-	['mutant_psevdodog_tail'] = true,	-- псевдособака
-	['mutant_tail_cat'] = true,	-- псевдокот
-	['mutant_psevdogigant_hand'] = true,	-- псевдогигант
-	['mutant_chimera_kogot'] = true,	-- химера
-	['mutant_flesh_eye'] = true,	-- плоть
-	['vypolzen_hrebet'] = true,	-- болотный выползень
-	['tarakan_lich1'] = true, 	-- таракан
-	['mutant_krovosos_jaw'] = true, 	-- кровосос
-	['mutant_snork_leg'] = true, 	-- снорк 
-	['mutant_face_tushkano'] = true, 	-- тушкан
-	['mutant_hand_kontroler'] = true, 	-- контролер 
-	['mutant_burer_hand'] = true,	-- бюрер
-	['izlom_hand'] = true 	-- излом
+	['mutant_boar_leg'] = true,	-- РєР°Р±Р°РЅ
+	['mutant_dog_tail'] = true,	-- СЃР»РµРїР°СЏ СЃРѕР±Р°РєР°
+	['mutant_psevdodog_tail'] = true,	-- РїСЃРµРІРґРѕСЃРѕР±Р°РєР°
+	['mutant_tail_cat'] = true,	-- РїСЃРµРІРґРѕРєРѕС‚
+	['mutant_psevdogigant_hand'] = true,	-- РїСЃРµРІРґРѕРіРёРіР°РЅС‚
+	['mutant_chimera_kogot'] = true,	-- С…РёРјРµСЂР°
+	['mutant_flesh_eye'] = true,	-- РїР»РѕС‚СЊ
+	['vypolzen_hrebet'] = true,	-- Р±РѕР»РѕС‚РЅС‹Р№ РІС‹РїРѕР»Р·РµРЅСЊ
+	['tarakan_lich1'] = true, 	-- С‚Р°СЂР°РєР°РЅ
+	['mutant_krovosos_jaw'] = true, 	-- РєСЂРѕРІРѕСЃРѕСЃ
+	['mutant_snork_leg'] = true, 	-- СЃРЅРѕСЂРє 
+	['mutant_face_tushkano'] = true, 	-- С‚СѓС€РєР°РЅ
+	['mutant_hand_kontroler'] = true, 	-- РєРѕРЅС‚СЂРѕР»РµСЂ 
+	['mutant_burer_hand'] = true,	-- Р±СЋСЂРµСЂ
+	['izlom_hand'] = true 	-- РёР·Р»РѕРј
 }
 function check_mutant(...)
 	local actor = db.actor
@@ -1951,11 +1951,11 @@ function check_mutant(...)
 	end
 	return true
 end
--- проверка монпансье
+-- РїСЂРѕРІРµСЂРєР° РјРѕРЅРїР°РЅСЃСЊРµ
 function check_monpansie(...)
 	return new_dialog.item_much("sweets",2) ~= false 
 end
--- обмен частей монстров на деньги
+-- РѕР±РјРµРЅ С‡Р°СЃС‚РµР№ РјРѕРЅСЃС‚СЂРѕРІ РЅР° РґРµРЅСЊРіРё
 function dunya_transfer_1(first_speaker, second_speaker)
 	for k,v in pairs(tbl_mutant) do
 		if db.actor:object(k) then
@@ -1968,7 +1968,7 @@ function dunya_transfer_1(first_speaker, second_speaker)
 		sound:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
 	end
 end
--- получение биорадара
+-- РїРѕР»СѓС‡РµРЅРёРµ Р±РёРѕСЂР°РґР°СЂР°
 function dunya_transfer_2(first_speaker, second_speaker)
 	new_dialog.out_item_much("sweets",2)
 	dialogs.relocate_item_section(second_speaker,"bioradar","in")
@@ -1978,33 +1978,33 @@ function dunya_transfer_2(first_speaker, second_speaker)
 	end
 end
 --------------------------------------------------------------------
--- прекондишн для спавна из диалога, например
+-- РїСЂРµРєРѕРЅРґРёС€РЅ РґР»СЏ СЃРїР°РІРЅР° РёР· РґРёР°Р»РѕРіР°, РЅР°РїСЂРёРјРµСЂ
 function spawn_time(first_speaker, second_speaker)
     return level.get_time_hours() >= 23 and has_alife_info("german_spasenie_gotovo") and level.name()=="hiding_road"
 end
--- проверка условий для спавна из спавн
+-- РїСЂРѕРІРµСЂРєР° СѓСЃР»РѕРІРёР№ РґР»СЏ СЃРїР°РІРЅР° РёР· СЃРїР°РІРЅ
 function spawn_time_action(first_speaker, second_speaker)
 	if spawn_time() then
-		-- собственно спавн
-		news_manager.send_tip(db.actor,"spawn_time") -- отладка, удалить
+		-- СЃРѕР±СЃС‚РІРµРЅРЅРѕ СЃРїР°РІРЅ
+		news_manager.send_tip(db.actor,"spawn_time") -- РѕС‚Р»Р°РґРєР°, СѓРґР°Р»РёС‚СЊ
 	end
 end
 --------------------------------------------------------------------
--- Отладочные функции
--- Вывод на экран счетчика заражения
+-- РћС‚Р»Р°РґРѕС‡РЅС‹Рµ С„СѓРЅРєС†РёРё
+-- Р’С‹РІРѕРґ РЅР° СЌРєСЂР°РЅ СЃС‡РµС‚С‡РёРєР° Р·Р°СЂР°Р¶РµРЅРёСЏ
 function debug_zaraza()
-	news_manager.send_tip(db.actor, "Уровень заражения "..tostring(InfectCount), nil, nil, 30000)
-	news_manager.send_tip(db.actor, "Уровень вакцины "..tostring(Bor67_1), nil, nil, 30000)
+	news_manager.send_tip(db.actor, "РЈСЂРѕРІРµРЅСЊ Р·Р°СЂР°Р¶РµРЅРёСЏ "..tostring(InfectCount), nil, nil, 30000)
+	news_manager.send_tip(db.actor, "РЈСЂРѕРІРµРЅСЊ РІР°РєС†РёРЅС‹ "..tostring(Bor67_1), nil, nil, 30000)
 end
--- Вывод на экран счетчика жажды
+-- Р’С‹РІРѕРґ РЅР° СЌРєСЂР°РЅ СЃС‡РµС‚С‡РёРєР° Р¶Р°Р¶РґС‹
 function debug_drink()
-	news_manager.send_tip(db.actor, "Уровень жажды "..tostring(DrinkCount), nil, nil, 30000)
+	news_manager.send_tip(db.actor, "РЈСЂРѕРІРµРЅСЊ Р¶Р°Р¶РґС‹ "..tostring(DrinkCount), nil, nil, 30000)
 end
--- Вывод на экран счетчика вакцины
+-- Р’С‹РІРѕРґ РЅР° СЌРєСЂР°РЅ СЃС‡РµС‚С‡РёРєР° РІР°РєС†РёРЅС‹
 function debug_vacsina()
-	news_manager.send_tip(db.actor, "Уровень вакцины "..tostring(Bor67_1), nil, nil, 30000)
+	news_manager.send_tip(db.actor, "РЈСЂРѕРІРµРЅСЊ РІР°РєС†РёРЅС‹ "..tostring(Bor67_1), nil, nil, 30000)
 end
--- Вывод на экран счетчиков глюков
+-- Р’С‹РІРѕРґ РЅР° СЌРєСЂР°РЅ СЃС‡РµС‚С‡РёРєРѕРІ РіР»СЋРєРѕРІ
 function debug_glooks()
 	news_manager.send_tip(db.actor, "GlukCount_1 "..tostring(GlukCount_1), nil, nil, 30000)
 	news_manager.send_tip(db.actor, "GlukCount_2 "..tostring(GlukCount_2), nil, nil, 30000)

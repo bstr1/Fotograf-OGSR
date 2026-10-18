@@ -1,14 +1,14 @@
 --[[ -----------------------------------------------------------------------------------------------
  File           : hud_med.script
- Description    : Àïòå÷êè íà õóäå
- Copyright      : 2011 © Erlik 
+ Description    : ÐÐ¿Ñ‚ÐµÑ‡ÐºÐ¸ Ð½Ð° Ñ…ÑƒÐ´Ðµ
+ Copyright      : 2011 Â© Erlik 
  Author         : Erlik (aka Garry_Galler)
  Last edit      : 10.01.2011 
 
 --]] -----------------------------------------------------------------------------------------------
 
 
---// äåáàãîâûé âûâîä èíôû
+--// Ð´ÐµÐ±Ð°Ð³Ð¾Ð²Ñ‹Ð¹ Ð²Ñ‹Ð²Ð¾Ð´ Ð¸Ð½Ñ„Ñ‹
 local console  = false
 function Console(fmt,...)
    if console then  
@@ -16,17 +16,17 @@ function Console(fmt,...)
    end
 end 
 
-local iCountUpdate=0  --// ñ÷åò÷èê öèêëîâ àïäåéòà
-local tCUIStatic  ={} --// òàáëèöà äëÿ õðàíåíèÿ ññûëîê íà ñòàòèêè
-local hud = get_hud() --// ññûëêà íà ýêçåìïëÿð êëàññà õóäà 
+local iCountUpdate=0  --// ÑÑ‡ÐµÑ‚Ñ‡Ð¸Ðº Ñ†Ð¸ÐºÐ»Ð¾Ð² Ð°Ð¿Ð´ÐµÐ¹Ñ‚Ð°
+local tCUIStatic  ={} --// Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ð° Ð´Ð»Ñ Ñ…Ñ€Ð°Ð½ÐµÐ½Ð¸Ñ ÑÑÑ‹Ð»Ð¾Ðº Ð½Ð° ÑÑ‚Ð°Ñ‚Ð¸ÐºÐ¸
+local hud = get_hud() --// ÑÑÑ‹Ð»ÐºÐ° Ð½Ð° ÑÐºÐ·ÐµÐ¼Ð¿Ð»ÑÑ€ ÐºÐ»Ð°ÑÑÐ° Ñ…ÑƒÐ´Ð° 
 
-local X = false and 990  --// åñëè true ñòðîèòü ïî âåðòèêàëè â ïðàâîì âåðõíåì óãëó 
-local Y = true and 740  --//åñëè true ñòðîèòü ïî ãîðèçîíòàëè âíèçó 
---// Âàæíî: èçìåíÿÿ true íà false â îäíîì ïàðàìåòðå îáÿçàòåëüíî ïîìåíÿéòå ëîãè÷åñêîå çíà÷åíèå íà ïðîòèâîïîëîæíîå â äðóãîì
+local X = false and 990  --// ÐµÑÐ»Ð¸ true ÑÑ‚Ñ€Ð¾Ð¸Ñ‚ÑŒ Ð¿Ð¾ Ð²ÐµÑ€Ñ‚Ð¸ÐºÐ°Ð»Ð¸ Ð² Ð¿Ñ€Ð°Ð²Ð¾Ð¼ Ð²ÐµÑ€Ñ…Ð½ÐµÐ¼ ÑƒÐ³Ð»Ñƒ 
+local Y = true and 740  --//ÐµÑÐ»Ð¸ true ÑÑ‚Ñ€Ð¾Ð¸Ñ‚ÑŒ Ð¿Ð¾ Ð³Ð¾Ñ€Ð¸Ð·Ð¾Ð½Ñ‚Ð°Ð»Ð¸ Ð²Ð½Ð¸Ð·Ñƒ 
+--// Ð’Ð°Ð¶Ð½Ð¾: Ð¸Ð·Ð¼ÐµÐ½ÑÑ true Ð½Ð° false Ð² Ð¾Ð´Ð½Ð¾Ð¼ Ð¿Ð°Ñ€Ð°Ð¼ÐµÑ‚Ñ€Ðµ Ð¾Ð±ÑÐ·Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ Ð¿Ð¾Ð¼ÐµÐ½ÑÐ¹Ñ‚Ðµ Ð»Ð¾Ð³Ð¸Ñ‡ÐµÑÐºÐ¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð½Ð° Ð¿Ñ€Ð¾Ñ‚Ð¸Ð²Ð¾Ð¿Ð¾Ð»Ð¾Ð¶Ð½Ð¾Ðµ Ð² Ð´Ñ€ÑƒÐ³Ð¾Ð¼
 
-local bDefolt =true--// èñïîëüçîâàòü ëè åäèíûå öâåòà -true  èëè äëÿ êàæäîãî ñâîé -false 
+local bDefolt =true--// Ð¸ÑÐ¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÑŒ Ð»Ð¸ ÐµÐ´Ð¸Ð½Ñ‹Ðµ Ñ†Ð²ÐµÑ‚Ð° -true  Ð¸Ð»Ð¸ Ð´Ð»Ñ ÐºÐ°Ð¶Ð´Ð¾Ð³Ð¾ ÑÐ²Ð¾Ð¹ -false 
 
---// òàáëèöà êîîðäèíàò ñòàòèêîâ ïî îñè X --ãîðèçîíòàëüíûé âûâîä
+--// Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ð° ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚ ÑÑ‚Ð°Ñ‚Ð¸ÐºÐ¾Ð² Ð¿Ð¾ Ð¾ÑÐ¸ X --Ð³Ð¾Ñ€Ð¸Ð·Ð¾Ð½Ñ‚Ð°Ð»ÑŒÐ½Ñ‹Ð¹ Ð²Ñ‹Ð²Ð¾Ð´
 local tPosXItems ={
 medkit          =560, 
 medkit_scientic =530, 
@@ -35,7 +35,7 @@ antirad         =470,
 bandage         =440 
 }
 
---// òàáëèöà êîîðäèíàò ñòàòèêîâ ïî îñè Y --âåðòèêàëüíûé âûâîä
+--// Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ð° ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚ ÑÑ‚Ð°Ñ‚Ð¸ÐºÐ¾Ð² Ð¿Ð¾ Ð¾ÑÐ¸ Y --Ð²ÐµÑ€Ñ‚Ð¸ÐºÐ°Ð»ÑŒÐ½Ñ‹Ð¹ Ð²Ñ‹Ð²Ð¾Ð´
 local tPosYItems ={
 medkit          =30, 
 medkit_scientic =60, 
@@ -43,22 +43,22 @@ medkit_army     =90,
 antirad         =120,
 bandage         =150
 }
---// òàáëèöà öâåòîâ òåêñòà ñòàòèêîâ
+--// Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ð° Ñ†Ð²ÐµÑ‚Ð¾Ð² Ñ‚ÐµÐºÑÑ‚Ð° ÑÑ‚Ð°Ñ‚Ð¸ÐºÐ¾Ð²
 local tColor ={
-medkit          ={255,0,127,255},     -- ëàçóðíûé
-medkit_scientic ={255,205,92,92},     --êàøàòàíîâûé
-medkit_army     ={255,199,21,133},    --ôèîëåòîâî -êðàñíûé
-antirad         ={255,255,36,0},      --àëûé
+medkit          ={255,0,127,255},     -- Ð»Ð°Ð·ÑƒÑ€Ð½Ñ‹Ð¹
+medkit_scientic ={255,205,92,92},     --ÐºÐ°ÑˆÐ°Ñ‚Ð°Ð½Ð¾Ð²Ñ‹Ð¹
+medkit_army     ={255,199,21,133},    --Ñ„Ð¸Ð¾Ð»ÐµÑ‚Ð¾Ð²Ð¾ -ÐºÑ€Ð°ÑÐ½Ñ‹Ð¹
+antirad         ={255,255,36,0},      --Ð°Ð»Ñ‹Ð¹
 bandage         ={255,0,255,0},
---defolt          ={255,255,255,0},     -- æåëòûé
---defolt          ={255,255,70,0},    --êèíîâàðü(êîðè÷íåâî-îðàíæåâûé)
---defolt          ={255,255,255,255}, --áåëûé
---defolt          ={255,255,0,51},      --êàðìèíîâî-êðàñíûé
-defolt          ={255,255,215,0},      --çîëîòèñòûé
---defolt          ={255,0,255,0},      --çåëåíûé
+--defolt          ={255,255,255,0},     -- Ð¶ÐµÐ»Ñ‚Ñ‹Ð¹
+--defolt          ={255,255,70,0},    --ÐºÐ¸Ð½Ð¾Ð²Ð°Ñ€ÑŒ(ÐºÐ¾Ñ€Ð¸Ñ‡Ð½ÐµÐ²Ð¾-Ð¾Ñ€Ð°Ð½Ð¶ÐµÐ²Ñ‹Ð¹)
+--defolt          ={255,255,255,255}, --Ð±ÐµÐ»Ñ‹Ð¹
+--defolt          ={255,255,0,51},      --ÐºÐ°Ñ€Ð¼Ð¸Ð½Ð¾Ð²Ð¾-ÐºÑ€Ð°ÑÐ½Ñ‹Ð¹
+defolt          ={255,255,215,0},      --Ð·Ð¾Ð»Ð¾Ñ‚Ð¸ÑÑ‚Ñ‹Ð¹
+--defolt          ={255,0,255,0},      --Ð·ÐµÐ»ÐµÐ½Ñ‹Ð¹
 }
 
---// ñ÷åò÷èê àïòå÷åê è àíòèðàäîâ â èíâåíòàðå
+--// ÑÑ‡ÐµÑ‚Ñ‡Ð¸Ðº Ð°Ð¿Ñ‚ÐµÑ‡ÐµÐº Ð¸ Ð°Ð½Ñ‚Ð¸Ñ€Ð°Ð´Ð¾Ð² Ð² Ð¸Ð½Ð²ÐµÐ½Ñ‚Ð°Ñ€Ðµ
 function  GetMedkitNum()
 local actor = db.actor
 local tCountItems = {medkit=0, medkit_scientic=0, medkit_army=0, antirad =0, bandage=0, all=0}
@@ -78,9 +78,9 @@ local cnt = actor:object_count()
 return tCountItems
 end
 
---// âûâîäèì äàííûå íà õóä
+--// Ð²Ñ‹Ð²Ð¾Ð´Ð¸Ð¼ Ð´Ð°Ð½Ð½Ñ‹Ðµ Ð½Ð° Ñ…ÑƒÐ´
 function HudShowMed()
-    --// åñëè ÃÃ äàë äóáà óáèðàåì ñòàòèêè
+    --// ÐµÑÐ»Ð¸ Ð“Ð“ Ð´Ð°Ð» Ð´ÑƒÐ±Ð° ÑƒÐ±Ð¸Ñ€Ð°ÐµÐ¼ ÑÑ‚Ð°Ñ‚Ð¸ÐºÐ¸
     local bRemove = not db.actor:alive()
     if bRemove then
         if next(tCUIStatic) then 
@@ -90,10 +90,10 @@ function HudShowMed()
 		    tCUIStatic={} 
         end 
     return end
-    --// èíà÷å âûâîäèì
+    --// Ð¸Ð½Ð°Ñ‡Ðµ Ð²Ñ‹Ð²Ð¾Ð´Ð¸Ð¼
     if next(tCUIStatic)==nil and not bRemove then
 
-    --// ïîëó÷àåì êîîðäèàíòû èç êîíôèãà
+    --// Ð¿Ð¾Ð»ÑƒÑ‡Ð°ÐµÐ¼ ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð°Ð½Ñ‚Ñ‹ Ð¸Ð· ÐºÐ¾Ð½Ñ„Ð¸Ð³Ð°
     local function GetDataTextures(sSection)
     local ini    = system_ini()
 	local x      = ini:r_u32     (sSection, "inv_grid_x")*50
@@ -115,29 +115,29 @@ function HudShowMed()
     st:InitTexture("ui\\ui_icon_equipment")
     st:SetOriginalRect(GetDataTextures(k))
 	st:SetStretchTexture(true)
-    --st:SetFont(GetFontGraffiti22Russian())  -- ñëèøêîì êðóïíûé
-	--st:SetFont(GetFontGraffiti19Russian()) -- æèðíîâàòûé
-	--st:SetFont(GetFontLetterica16Russian()) -- ìåëêèé è íåäîñòàòî÷íî ÷åòêèé
+    --st:SetFont(GetFontGraffiti22Russian())  -- ÑÐ»Ð¸ÑˆÐºÐ¾Ð¼ ÐºÑ€ÑƒÐ¿Ð½Ñ‹Ð¹
+	--st:SetFont(GetFontGraffiti19Russian()) -- Ð¶Ð¸Ñ€Ð½Ð¾Ð²Ð°Ñ‚Ñ‹Ð¹
+	--st:SetFont(GetFontLetterica16Russian()) -- Ð¼ÐµÐ»ÐºÐ¸Ð¹ Ð¸ Ð½ÐµÐ´Ð¾ÑÑ‚Ð°Ñ‚Ð¾Ñ‡Ð½Ð¾ Ñ‡ÐµÑ‚ÐºÐ¸Ð¹
 	--st:SetFont(GetFontLetterica18Russian())
-	st:SetFont(GetFontSmall()) -- ìåëêèé, íî î÷åíü ÷åòêèé - ñàìîå òî
+	st:SetFont(GetFontSmall()) -- Ð¼ÐµÐ»ÐºÐ¸Ð¹, Ð½Ð¾ Ð¾Ñ‡ÐµÐ½ÑŒ Ñ‡ÐµÑ‚ÐºÐ¸Ð¹ - ÑÐ°Ð¼Ð¾Ðµ Ñ‚Ð¾
 	--st:SetFont(GetFontMedium())
-	--st:SetFont(GetFontArialN21Russian()) -- íå ñóùåñòâóåò
+	--st:SetFont(GetFontArialN21Russian()) -- Ð½Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚
 	if bDefolt then
     st:SetTextColor(unpack(tColor.defolt))
 	else
 	st:SetTextColor(unpack(tColor[k]))
 	end
-	st:SetTextAlign(0) -- âûðàâíÿåì òåêñò: 0-ëåâûé êðàé,  1-öåíòð, 2-ïðàâûé êðàé,	
-	st:SetTextY(-5)   -- ïîäíèìåì öèôðû íàä èêîíêàìè
-	--st:SetTextX(-5)   -- è ÷óòü-÷óòü ñäâèíåì öèôðû âëåâî
+	st:SetTextAlign(0) -- Ð²Ñ‹Ñ€Ð°Ð²Ð½ÑÐµÐ¼ Ñ‚ÐµÐºÑÑ‚: 0-Ð»ÐµÐ²Ñ‹Ð¹ ÐºÑ€Ð°Ð¹,  1-Ñ†ÐµÐ½Ñ‚Ñ€, 2-Ð¿Ñ€Ð°Ð²Ñ‹Ð¹ ÐºÑ€Ð°Ð¹,	
+	st:SetTextY(-5)   -- Ð¿Ð¾Ð´Ð½Ð¸Ð¼ÐµÐ¼ Ñ†Ð¸Ñ„Ñ€Ñ‹ Ð½Ð°Ð´ Ð¸ÐºÐ¾Ð½ÐºÐ°Ð¼Ð¸
+	--st:SetTextX(-5)   -- Ð¸ Ñ‡ÑƒÑ‚ÑŒ-Ñ‡ÑƒÑ‚ÑŒ ÑÐ´Ð²Ð¸Ð½ÐµÐ¼ Ñ†Ð¸Ñ„Ñ€Ñ‹ Ð²Ð»ÐµÐ²Ð¾
     hud:AddDialogToRender(st)
-	Console("Ñòàòèê èíèöèèðîâàí")
+	Console("Ð¡Ñ‚Ð°Ñ‚Ð¸Ðº Ð¸Ð½Ð¸Ñ†Ð¸Ð¸Ñ€Ð¾Ð²Ð°Ð½")
 	tCUIStatic[k]=st
 	end 
 end
     iCountUpdate= iCountUpdate+1
 	Console(iCountUpdate)
-	-- // âûâîäèì êîë-âî ïðåäìåòîâ
+	-- // Ð²Ñ‹Ð²Ð¾Ð´Ð¸Ð¼ ÐºÐ¾Ð»-Ð²Ð¾ Ð¿Ñ€ÐµÐ´Ð¼ÐµÑ‚Ð¾Ð²
     if  next(tCUIStatic) and iCountUpdate>=50 then
     local t= GetMedkitNum()
         for k, v in pairs(tCUIStatic) do 

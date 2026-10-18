@@ -85,8 +85,8 @@ packet:w_u32(get_story_id_not_replay())
 packet:w_u32(get_story_id_not_replay())
 
 -- cse_shape
-packet:w_u8(1) -- количество фигур
-packet:w_u8(0) -- тип фигуры: сфера
+packet:w_u8(1) -- РєРѕР»РёС‡РµСЃС‚РІРѕ С„РёРіСѓСЂ
+packet:w_u8(0) -- С‚РёРї С„РёРіСѓСЂС‹: СЃС„РµСЂР°
 packet:w_vec3(vector():set(0, 0, 0))
 if radius_anom ~= nil then
 packet:w_float(radius_anom)
@@ -122,7 +122,7 @@ obj:STATE_Read(packet, packet:w_tell())
 
 end
 
------------------------------------спавним кристалл аномалии и арты-----------------------------------
+-----------------------------------СЃРїР°РІРЅРёРј РєСЂРёСЃС‚Р°Р»Р» Р°РЅРѕРјР°Р»РёРё Рё Р°СЂС‚С‹-----------------------------------
 
 function spawn_ostrov_zone()
 this.create_anom('zone_ostrov', vector():set(-140.657,14.587,180.358),139623,1, 1, 1)

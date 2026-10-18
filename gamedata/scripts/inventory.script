@@ -17,7 +17,7 @@ function update()
 	if debug == true and belt_status == true then get_console():execute("belt_status=false") end
 	belt_status = false
 
-	-- Ñïàâíèì ðàçäåëÿþùèé åëåìåíò
+	-- Ð¡Ð¿Ð°Ð²Ð½Ð¸Ð¼ Ñ€Ð°Ð·Ð´ÐµÐ»ÑÑŽÑ‰Ð¸Ð¹ ÐµÐ»ÐµÐ¼ÐµÐ½Ñ‚
 	if (separator_spawned == false) then
 		alife():create(separator,
 			db.actor:position(),
@@ -33,11 +33,11 @@ function update()
 	belt_id = {}
 	flag = 0
 
-	-- Ñêàíèðóåì èíâåíòàðü
+	-- Ð¡ÐºÐ°Ð½Ð¸Ñ€ÑƒÐµÐ¼ Ð¸Ð½Ð²ÐµÐ½Ñ‚Ð°Ñ€ÑŒ
 	db.actor:inventory_for_each(scan_inv)
 	need_update = false
 
-	-- Óäàëÿåì ðàçäåëÿþùèé åëåìåíò
+	-- Ð£Ð´Ð°Ð»ÑÐµÐ¼ Ñ€Ð°Ð·Ð´ÐµÐ»ÑÑŽÑ‰Ð¸Ð¹ ÐµÐ»ÐµÐ¼ÐµÐ½Ñ‚
 	db.actor:inventory_for_each(del_separator)
 	separator_spawned = false
 
@@ -51,7 +51,7 @@ function update()
 	end
 end
 
--- Ïåðåáîð ïðåäìåòîâ èíâåíòàðÿ
+-- ÐŸÐµÑ€ÐµÐ±Ð¾Ñ€ Ð¿Ñ€ÐµÐ´Ð¼ÐµÑ‚Ð¾Ð² Ð¸Ð½Ð²ÐµÐ½Ñ‚Ð°Ñ€Ñ
 function scan_inv(item)
 	local section = item:section()
 
@@ -70,7 +70,7 @@ function scan_inv(item)
 	end
 end
 
--- Äîáàâëåíèå â òàáëèöó
+-- Ð”Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð² Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñƒ
 function insert_to_table(tbl, section)
 	if tbl[section] == nil then
 		tbl[section] = 1
@@ -79,7 +79,7 @@ function insert_to_table(tbl, section)
 	end
 end
 
--- Óäàëåíèå ðàçäåëÿþùåãî ïðåäìåòà
+-- Ð£Ð´Ð°Ð»ÐµÐ½Ð¸Ðµ Ñ€Ð°Ð·Ð´ÐµÐ»ÑÑŽÑ‰ÐµÐ³Ð¾ Ð¿Ñ€ÐµÐ´Ð¼ÐµÑ‚Ð°
 function del_separator(item)
 	if item:section() == separator then
 		alife():release(alife():object(item:id()), true)
@@ -87,7 +87,7 @@ function del_separator(item)
 	end
 end
 
--- Îïðåäåëåíèå íàëå÷èÿ ïðåäìåòà â îäíîì èç ñëîòîâ
+-- ÐžÐ¿Ñ€ÐµÐ´ÐµÐ»ÐµÐ½Ð¸Ðµ Ð½Ð°Ð»ÐµÑ‡Ð¸Ñ Ð¿Ñ€ÐµÐ´Ð¼ÐµÑ‚Ð° Ð² Ð¾Ð´Ð½Ð¾Ð¼ Ð¸Ð· ÑÐ»Ð¾Ñ‚Ð¾Ð²
 function slot_item(item)
 	for i=0,12 do
 		local obj = db.actor:item_in_slot(i)
@@ -99,7 +99,7 @@ function slot_item(item)
 	return nil
 end
 
--- Ïîäíÿòèå ïðåäìåòà
+-- ÐŸÐ¾Ð´Ð½ÑÑ‚Ð¸Ðµ Ð¿Ñ€ÐµÐ´Ð¼ÐµÑ‚Ð°
 function on_item_take(item)
 	if item:section() == separator then return end
 
@@ -114,7 +114,7 @@ function on_item_take(item)
 	end
 end
 
--- Âûáðîñ ïðåäìåòà
+-- Ð’Ñ‹Ð±Ñ€Ð¾Ñ Ð¿Ñ€ÐµÐ´Ð¼ÐµÑ‚Ð°
 function on_item_drop(item)
 	if item:section() == separator then return end
 
@@ -129,7 +129,7 @@ function on_item_drop(item)
 	end
 end
 
--- Îòêðûòèå/çàêðûòèå èíâåíòàðÿ
+-- ÐžÑ‚ÐºÑ€Ñ‹Ñ‚Ð¸Ðµ/Ð·Ð°ÐºÑ€Ñ‹Ñ‚Ð¸Ðµ Ð¸Ð½Ð²ÐµÐ½Ñ‚Ð°Ñ€Ñ
 function on_inventory_info(info_id)
 	if info_id == "ui_inventory" then
 		inventory_open = true
@@ -144,31 +144,31 @@ end
 
 function check_blood()
 --   if belt_status == true then
-      if belt["af_blood"]~=nil and belt["af_blood"]>0 then -- òî åñòü êîãäà ïàðàìåòð ïîÿñà[af_blood] ðàâåí 1, 2, 3.. Ñêîëüêî íàâåñèøü Êàìíåé.
---             amk.send_tip("Êðîâü Êàìíÿ íà ïîÿñå")
+      if belt["af_blood"]~=nil and belt["af_blood"]>0 then -- Ñ‚Ð¾ ÐµÑÑ‚ÑŒ ÐºÐ¾Ð³Ð´Ð° Ð¿Ð°Ñ€Ð°Ð¼ÐµÑ‚Ñ€ Ð¿Ð¾ÑÑÐ°[af_blood] Ñ€Ð°Ð²ÐµÐ½ 1, 2, 3.. Ð¡ÐºÐ¾Ð»ÑŒÐºÐ¾ Ð½Ð°Ð²ÐµÑÐ¸ÑˆÑŒ ÐšÐ°Ð¼Ð½ÐµÐ¹.
+--             amk.send_tip("ÐšÑ€Ð¾Ð²ÑŒ ÐšÐ°Ð¼Ð½Ñ Ð½Ð° Ð¿Ð¾ÑÑÐµ")
           end
 --   end
 end
 
--- òàáëèöà äåòåêòîðîâ
+-- Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ð° Ð´ÐµÑ‚ÐµÐºÑ‚Ð¾Ñ€Ð¾Ð²
 local detectors = {
 	['detector_elite_sak'] = true,
 	['detector_advances'] = true,
 	['detector_elite'] = true
 	}
--- òàáëèöà äåòåêòîðîâ íà ïîÿñ
+-- Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ð° Ð´ÐµÑ‚ÐµÐºÑ‚Ð¾Ñ€Ð¾Ð² Ð½Ð° Ð¿Ð¾ÑÑ
 local det_belt = {
 	['detector_elite_sak_tobelt'] = true,
 	['detector_advances_tobelt'] = true,
 	['detector_elite_tobelt'] = true
 	}
--- òàáëèöà ïîäìåíû äëÿ ïîÿñà(äëÿ êàæäîãî äåòåêòîðà èììèòàòîð â íàçâàíèè èìååò ñóôôèêñ "_relief")
+-- Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ð° Ð¿Ð¾Ð´Ð¼ÐµÐ½Ñ‹ Ð´Ð»Ñ Ð¿Ð¾ÑÑÐ°(Ð´Ð»Ñ ÐºÐ°Ð¶Ð´Ð¾Ð³Ð¾ Ð´ÐµÑ‚ÐµÐºÑ‚Ð¾Ñ€Ð° Ð¸Ð¼Ð¼Ð¸Ñ‚Ð°Ñ‚Ð¾Ñ€ Ð² Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ð¸ Ð¸Ð¼ÐµÐµÑ‚ ÑÑƒÑ„Ñ„Ð¸ÐºÑ "_relief")
 local relief = {
 	['detector_elite_sak_relief'] = true,
 	['detector_advances_relief'] = true,
 	['detector_elite_relief'] = true
 	}
--- òàáëèöà ïîäìåíû â ðþêçàêå(äëÿ êàæäîãî äåòåêòîðà èììèòàòîð â íàçâàíèè èìååò ñóôôèêñ "_rukzak")
+-- Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ð° Ð¿Ð¾Ð´Ð¼ÐµÐ½Ñ‹ Ð² Ñ€ÑŽÐºÐ·Ð°ÐºÐµ(Ð´Ð»Ñ ÐºÐ°Ð¶Ð´Ð¾Ð³Ð¾ Ð´ÐµÑ‚ÐµÐºÑ‚Ð¾Ñ€Ð° Ð¸Ð¼Ð¼Ð¸Ñ‚Ð°Ñ‚Ð¾Ñ€ Ð² Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ð¸ Ð¸Ð¼ÐµÐµÑ‚ ÑÑƒÑ„Ñ„Ð¸ÐºÑ "_rukzak")
 local rukzak = {
 	['detector_elite_sak_rukzak'] = true,
 	['detector_advances_rukzak'] = true,
@@ -177,18 +177,18 @@ local rukzak = {
 
 function check_detectors()
 	local detector,dell_obj,sect,sobj
-	-- ïåðåáîð ïî èäàì:
+	-- Ð¿ÐµÑ€ÐµÐ±Ð¾Ñ€ Ð¿Ð¾ Ð¸Ð´Ð°Ð¼:
 	for k, v in pairs(belt_id) do
 		sobj = alife():object(k)
 		if sobj then
 			sect = sobj:section_name()
-			-- åñëè ýòî äåòåêòîð - óäàëèòü, ïîäìåíèòü.
-			-- íà ïîÿñå
+			-- ÐµÑÐ»Ð¸ ÑÑ‚Ð¾ Ð´ÐµÑ‚ÐµÐºÑ‚Ð¾Ñ€ - ÑƒÐ´Ð°Ð»Ð¸Ñ‚ÑŒ, Ð¿Ð¾Ð´Ð¼ÐµÐ½Ð¸Ñ‚ÑŒ.
+			-- Ð½Ð° Ð¿Ð¾ÑÑÐµ
 			if (detectors[sect] or det_belt[sect]) and belt[sect] ~= nil and belt[sect] > 0 then
 				dell_obj = sobj
 				detector = sect..'_relief'
 				belt[sect] = belt[sect] - 1
-			-- â ðþêçàêå
+			-- Ð² Ñ€ÑŽÐºÐ·Ð°ÐºÐµ
 			elseif (detectors[sect] or det_belt[sect]) or (relief[sect] and belt[sect] == nil) then
 				dell_obj = sobj
 				detector = sect..'_rukzak'
@@ -203,17 +203,17 @@ end
 
 function repair_detectors()
 	local detector,dell_obj,len,sect,sobj
-	-- ïåðåáîð ïî èäàì:
+	-- Ð¿ÐµÑ€ÐµÐ±Ð¾Ñ€ Ð¿Ð¾ Ð¸Ð´Ð°Ð¼:
 	for k, v in pairs(belt_id) do
 		sobj = alife():object(k)
 		if sobj then
 			sect = sobj:section_name()
-			-- åñëè ýòî ôàëüø_äåòåêòîð - óäàëèòü, ïîäìåíèòü.
+			-- ÐµÑÐ»Ð¸ ÑÑ‚Ð¾ Ñ„Ð°Ð»ÑŒÑˆ_Ð´ÐµÑ‚ÐµÐºÑ‚Ð¾Ñ€ - ÑƒÐ´Ð°Ð»Ð¸Ñ‚ÑŒ, Ð¿Ð¾Ð´Ð¼ÐµÐ½Ð¸Ñ‚ÑŒ.
 			if relief[sect] or rukzak[sect] or (det_belt[sect] and belt[sect] == nil) then
 				len = string.len(sect)
-				-- â ðþêçàêå
+				-- Ð² Ñ€ÑŽÐºÐ·Ð°ÐºÐµ
 				detector = string.sub(sect,1,len-7)
-				-- íà ïîÿñå
+				-- Ð½Ð° Ð¿Ð¾ÑÑÐµ
 				if belt[sect] ~= nil and belt[sect] > 0 then
 					detector = detector..'_tobelt'
 				end

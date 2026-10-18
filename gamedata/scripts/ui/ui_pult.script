@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
---/ Интерфейс меню для активации бомбы
+--/ РРЅС‚РµСЂС„РµР№СЃ РјРµРЅСЋ РґР»СЏ Р°РєС‚РёРІР°С†РёРё Р±РѕРјР±С‹
 ---------------------------------------------------------------------------------------------------
 
 class "ui_pult" (CUIScriptWnd)
@@ -16,21 +16,21 @@ function ui_pult:InitControls()
 	local win = {x = 0, y = 0, width =  260, height = 300}
 	win.x = (scr.width  - win.width )/2 + 25
 	win.y = (scr.height - win.height)/2 + 50
-	self:Init(win.x, win.y, win.width, win.height) --/ координаты левого верхнего угла и ширина-высота
+	self:Init(win.x, win.y, win.width, win.height) --/ РєРѕРѕСЂРґРёРЅР°С‚С‹ Р»РµРІРѕРіРѕ РІРµСЂС…РЅРµРіРѕ СѓРіР»Р° Рё С€РёСЂРёРЅР°-РІС‹СЃРѕС‚Р°
 	self:Enable(true)
-	local xml = CScriptXmlInit() --/ файл-описатель элементов
+	local xml = CScriptXmlInit() --/ С„Р°Р№Р»-РѕРїРёСЃР°С‚РµР»СЊ СЌР»РµРјРµРЅС‚РѕРІ
 	xml:ParseFile("ui_pult.xml")
-	xml:InitStatic("background", self) --/ рамка
-	--xml:InitStatic("back_video", self) --/ видео на заднем плане
-	self:Register(xml:Init3tButton("caption", self),"caption") --/ заголовок
-	--/ кнопки
+	xml:InitStatic("background", self) --/ СЂР°РјРєР°
+	--xml:InitStatic("back_video", self) --/ РІРёРґРµРѕ РЅР° Р·Р°РґРЅРµРј РїР»Р°РЅРµ
+	self:Register(xml:Init3tButton("caption", self),"caption") --/ Р·Р°РіРѕР»РѕРІРѕРє
+	--/ РєРЅРѕРїРєРё
 	self:Register(xml:Init3tButton("btn_1",   self),"btn_1")
 	self:Register(xml:Init3tButton("btn_2",   self),"btn_2")
-	self:Register(xml:Init3tButton("btn_quit", self),"btn_quit") --/ кнопка выхода
+	self:Register(xml:Init3tButton("btn_quit", self),"btn_quit") --/ РєРЅРѕРїРєР° РІС‹С…РѕРґР°
 end
 
 function ui_pult:InitCallBacks()
-	--/ интерактивные элементы, при определенном действии выполняется заданная функция
+	--/ РёРЅС‚РµСЂР°РєС‚РёРІРЅС‹Рµ СЌР»РµРјРµРЅС‚С‹, РїСЂРё РѕРїСЂРµРґРµР»РµРЅРЅРѕРј РґРµР№СЃС‚РІРёРё РІС‹РїРѕР»РЅСЏРµС‚СЃСЏ Р·Р°РґР°РЅРЅР°СЏ С„СѓРЅРєС†РёСЏ
 	self:AddCallback("btn_quit", ui_events.BUTTON_CLICKED, self.on_quit, self)
 	self:AddCallback("btn_1",    ui_events.BUTTON_CLICKED, self.pult_1, self)
 	self:AddCallback("btn_2",    ui_events.BUTTON_CLICKED, self.pult_2, self)
@@ -38,13 +38,13 @@ function ui_pult:InitCallBacks()
 
 function ui_pult:on_quit()
 	self:GetHolder():start_stop_menu(self,true)
-	--get_console():execute("main_menu off") --/ закрываем и родительское main_menu
+	--get_console():execute("main_menu off") --/ Р·Р°РєСЂС‹РІР°РµРј Рё СЂРѕРґРёС‚РµР»СЊСЃРєРѕРµ main_menu
 end
 
 function ui_pult:OnKeyboard(dik, keyboard_action)
 	CUIScriptWnd.OnKeyboard(self,dik,keyboard_action)
 	if keyboard_action == ui_events.WINDOW_KEY_PRESSED then
-		if     dik == DIK_keys.DIK_ESCAPE  then self:on_quit() --/ на выходе - Esc
+		if     dik == DIK_keys.DIK_ESCAPE  then self:on_quit() --/ РЅР° РІС‹С…РѕРґРµ - Esc
 		elseif dik == DIK_keys.DIK_NUMPAD1 then self:pult_1()
 		elseif dik == DIK_keys.DIK_NUMPAD3 then self:pult_2()
 	end
