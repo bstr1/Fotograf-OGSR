@@ -1,0 +1,495 @@
+[amk_ballon]:explosive_fuelcan
+visual                         = amk\amk_ballon.ogf
+inv_name                       = amk_ballon_name
+inv_name_short                 = amk_ballon_name_short
+inv_weight                     = 8
+description                    = amk_ballon_opisalovo
+inv_grid_width                 = 2
+inv_grid_height                = 2
+inv_grid_x                     = 10
+inv_grid_y                     = 36
+can_take                       = true
+cost                           = 7000
+
+
+[amk_kanistra]:explosive_fuelcan
+visual                         = physics\balon\kanistra
+inv_name                       = amk_kanistra_name
+inv_name_short                 = amk_kanistra_name_short
+inv_weight                     = 8
+description                    = amk_kanistra_opisalovo
+inv_grid_width                 = 2
+inv_grid_height                = 2
+inv_grid_x                     = 8
+inv_grid_y                     = 36
+can_take                       = true
+cost                           = 3000
+
+
+[amk_kanistro]:explosive_fuelcan
+visual                         = physics\balon\kanistro
+inv_name                       = amk_kanistro_name
+inv_name_short                 = amk_kanistro_name_short
+inv_weight                     = 8
+description                    = amk_kanistro_opisalovo
+inv_grid_width                 = 2
+inv_grid_height                = 2
+inv_grid_x                     = 20
+inv_grid_y                     = 34
+can_take                       = true
+cost                           = 3500
+
+
+[key_car1]:identity_immunities
+class                          = II_ATTCH
+cform                          = skeleton
+
+visual                         = equipments\item_minipda.ogf
+radius                         = 1
+
+quest_item                     = true
+
+description                    = "Ключи от 'Лэнд Ровера'."
+
+inv_name                       = "Ключи от машины"
+inv_name_short                 = "Ключи от машины"
+inv_weight                     = 0.1
+
+inv_grid_width                 = 1
+inv_grid_height                = 1
+inv_grid_x                     = 13
+inv_grid_y                     = 34
+cost                           = 100
+
+
+[key_car2]:identity_immunities
+class                          = II_ATTCH
+cform                          = skeleton
+
+visual                         = equipments\item_minipda.ogf
+radius                         = 1
+
+quest_item                     = true
+
+description                    = "Ключи от 'Нивы' генерала Воронина."
+
+inv_name                       = "Ключи от машины"
+inv_name_short                 = "Ключи от машины"
+inv_weight                     = 0.1
+
+inv_grid_width                 = 1
+inv_grid_height                = 1
+inv_grid_x                     = 29
+inv_grid_y                     = 27
+cost                           = 120
+
+
+[key_car3]:identity_immunities
+class                          = II_ATTCH
+cform                          = skeleton
+
+visual                         = equipments\item_minipda.ogf
+radius                         = 1
+;script_binding                = stalker.object_init
+quest_item                     = true
+
+description                    = "Ключи от 'Нивы' лейтенанта Полищука."
+
+inv_name                       = "Ключи от машины"
+inv_name_short                 = "Ключи от машины"
+inv_weight                     = 0.1
+
+inv_grid_width                 = 1
+inv_grid_height                = 1
+inv_grid_x                     = 29
+inv_grid_y                     = 28
+cost                           = 150
+
+
+[matras]:identity_immunities 
+class                          = II_ANTIR
+cform                          = skeleton
+
+visual                         = equipments\item_spalnik.ogf
+description                    = enc_amk_matras
+
+inv_name                       = amk_matras
+inv_name_short                 = amk_matras_s
+inv_weight                     = 1
+
+inv_grid_width                 = 2
+inv_grid_height                = 2
+inv_grid_x                     = 12
+inv_grid_y                     = 29
+cost                           = 5000
+
+; eatable item
+eat_health                     = 0
+eat_satiety                    = 0
+eat_power                      = 0
+eat_radiation                  = 0
+eat_alcohol                    = 0
+wounds_heal_perc               = 0
+eat_portions_num               = 1
+
+; food item
+animation_slot                 = 4
+
+;hud item
+hud                            = wpn_vodka_hud
+
+
+[repbox_s1]:matras
+visual                         = amk\repbox1.ogf
+description                    = enc_amk_repbox_01
+
+inv_name                       = amk_repbox_01
+inv_name_short                 = amk_repbox_01_s
+inv_weight                     = 1.6
+
+inv_grid_width                 = 2
+inv_grid_height                = 2
+inv_grid_x                     = 36
+inv_grid_y                     = 39
+cost                           = 2800
+
+
+[repbox_s2]:matras
+visual                         = amk\repbox2.ogf
+description                    = enc_amk_repbox_02
+
+inv_name                       = amk_repbox_02
+inv_name_short                 = amk_repbox_02_s
+inv_weight                     = 2.4
+
+inv_grid_width                 = 2
+inv_grid_height                = 2
+inv_grid_x                     = 38
+inv_grid_y                     = 39
+cost                           = 6200
+
+
+[repbox_s6]:matras
+visual                         = amk\repbox6.ogf
+description                    = enc_amk_repbox_06
+
+inv_name                       = amk_repbox_06
+inv_name_short                 = amk_repbox_06_s
+inv_weight                     = 4.6
+
+inv_grid_width                 = 2
+inv_grid_height                = 2
+inv_grid_x                     = 34
+inv_grid_y                     = 39
+cost                           = 15300
+
+
+[space_restrictor_skunk]
+class                          = SPC_RS_S
+script_binding                 = bind_restrictor.bind
+
+
+[treasure_item]:matras
+visual                         = equipments\item_rukzak.ogf
+description                    = enc_amk_ruksak
+inv_name                       = amk_ruksak
+inv_name_short                 = amk_ruksak_s
+
+inv_grid_width                 = 2
+inv_grid_height                = 3
+inv_grid_x                     = 39
+inv_grid_y                     = 36
+
+
+[treasure_seif]:matras
+visual                         = physics\box\seif_01
+description                    = enc_amk_ruksak
+inv_name                       = amk_ruksak
+inv_name_short                 = amk_ruksak_s
+
+inv_grid_width                 = 3
+inv_grid_height                = 3
+inv_grid_x                     = 9
+inv_grid_y                     = 35
+
+
+[inventory_seif]
+GroupControlSection            = spawn_group
+discovery_dependency           = 
+$spawn                         = "amk_mod_matras\inventory seif"
+class                          = O_INVBOX
+cform                          = skeleton
+visual                         = physics\box\seif_01
+script_binding                 = bind_physic_object.init
+
+
+[m_inventory_seif]:inventory_seif
+visual                         = physics\box\seif_01
+radius                         = 1
+
+
+[m_sak_resiver_yantar]:inventory_seif
+visual                         = equipments\item_transiver
+radius                         = 0
+
+
+[separator]:bread
+inv_grid_width                 = 0
+inv_grid_height                = 0
+inv_weight                     = 0
+
+
+[way1]:bread
+inv_grid_width                 = 0
+inv_grid_height                = 0
+inv_weight                     = 0
+
+
+[way2]:bread
+inv_grid_width                 = 0
+inv_grid_height                = 0
+inv_weight                     = 0
+
+
+[amk_metka]:ammo_base
+class                          = AMMO
+cform                          = skeleton
+
+visual                         = equipments\item_amk_gps.ogf
+description                    = enc_amk_metka
+
+cost                           = 500
+
+box_size                       = 1 ;50
+
+inv_name                       = amk_metka
+inv_name_short                 = amk_metka_s
+inv_weight                     = 0.05
+
+inv_grid_width                 = 1
+inv_grid_height                = 1
+inv_grid_x                     = 11
+inv_grid_y                     = 22
+
+k_dist                         = 1
+k_disp                         = 3
+k_hit                          = 1.4
+k_impulse                      = 1.2
+k_pierce                       = 1.35
+impair                         = 1.15
+buck_shot                      = 1
+tracer                         = off
+wm_size                        = 0.05
+
+
+[amk_zapiska]:ammo_base
+class                          = AMMO
+cform                          = skeleton
+
+visual                         = amk\item_zapiska.ogf
+description                    = 
+
+radius                         = 1
+cost                           = 100
+
+inv_name                       = amk_zapiska
+inv_name_short                 = amk_zapiska_s
+inv_weight                     = 0.1
+
+inv_grid_width                 = 2
+inv_grid_height                = 1
+inv_grid_x                     = 6
+inv_grid_y                     = 19
+
+box_size                       = 1
+
+k_dist                         = 1
+k_disp                         = 3
+k_hit                          = 1.4
+k_impulse                      = 1.2
+k_pierce                       = 1.35
+impair                         = 1.15
+buck_shot                      = 1
+tracer                         = off
+wm_size                        = 0.05
+
+
+[prip_zapiska]:ammo_base
+class                          = AMMO
+cform                          = skeleton
+
+visual                         = amk\item_zapiska.ogf
+description                    = prip_zapiska
+
+radius                         = 1
+cost                           = 100
+
+inv_name                       = amk_zapiska
+inv_name_short                 = amk_zapiska_s
+inv_weight                     = 0.1
+
+inv_grid_width                 = 2
+inv_grid_height                = 1
+inv_grid_x                     = 6
+inv_grid_y                     = 19
+
+box_size                       = 1
+
+k_dist                         = 1
+k_disp                         = 3
+k_hit                          = 1.4
+k_impulse                      = 1.2
+k_pierce                       = 1.35
+impair                         = 1.15
+buck_shot                      = 1
+tracer                         = off
+wm_size                        = 0.05
+
+[x16_zapiska]:ammo_base
+class                          = AMMO
+cform                          = skeleton
+
+visual                         = amk\item_zapiska.ogf
+description                    = x16_zapiska
+
+radius                         = 1
+cost                           = 100
+
+inv_name                       = amk_zapiska
+inv_name_short                 = amk_zapiska_s
+inv_weight                     = 0.1
+
+inv_grid_width                 = 2
+inv_grid_height                = 1
+inv_grid_x                     = 6
+inv_grid_y                     = 19
+
+box_size                       = 1
+
+k_dist                         = 1
+k_disp                         = 3
+k_hit                          = 1.4
+k_impulse                      = 1.2
+k_pierce                       = 1.35
+impair                         = 1.15
+buck_shot                      = 1
+tracer                         = off
+wm_size                        = 0.05
+
+[dyshlo_zapiska]:ammo_base
+class                          = AMMO
+cform                          = skeleton
+
+visual                         = amk\item_zapiska.ogf
+description                    = dyshlo_zapiska
+
+radius                         = 1
+cost                           = 100
+
+inv_name                       = amk_zapiska
+inv_name_short                 = amk_zapiska_s
+inv_weight                     = 0.1
+
+inv_grid_width                 = 2
+inv_grid_height                = 1
+inv_grid_x                     = 6
+inv_grid_y                     = 19
+
+box_size                       = 1
+
+k_dist                         = 1
+k_disp                         = 3
+k_hit                          = 1.4
+k_impulse                      = 1.2
+k_pierce                       = 1.35
+impair                         = 1.15
+buck_shot                      = 1
+tracer                         = off
+wm_size                        = 0.05
+
+
+[prom_zapiska]:ammo_base
+class                          = AMMO
+cform                          = skeleton
+
+visual                         = amk\item_zapiska.ogf
+description                    = prom_zapiska
+
+radius                         = 1
+cost                           = 100
+
+inv_name                       = amk_zapiska
+inv_name_short                 = amk_zapiska_s
+inv_weight                     = 0.1
+
+inv_grid_width                 = 2
+inv_grid_height                = 1
+inv_grid_x                     = 6
+inv_grid_y                     = 19
+
+box_size                       = 1
+
+k_dist                         = 1
+k_disp                         = 3
+k_hit                          = 1.4
+k_impulse                      = 1.2
+k_pierce                       = 1.35
+impair                         = 1.15
+buck_shot                      = 1
+tracer                         = off
+wm_size                        = 0.05
+
+
+[mk_zapiska]:ammo_base
+class                          = AMMO
+cform                          = skeleton
+
+visual                         = amk\item_zapiska.ogf
+description                    = mk_zapiska
+
+radius                         = 1
+cost                           = 100
+
+inv_name                       = amk_zapiska
+inv_name_short                 = amk_zapiska_s
+inv_weight                     = 0.1
+
+inv_grid_width                 = 2
+inv_grid_height                = 1
+inv_grid_x                     = 6
+inv_grid_y                     = 19
+
+box_size                       = 1
+
+k_dist                         = 1
+k_disp                         = 3
+k_hit                          = 1.4
+k_impulse                      = 1.2
+k_pierce                       = 1.35
+impair                         = 1.15
+buck_shot                      = 1
+tracer                         = off
+wm_size                        = 0.05
+
+
+[oceanic815]:vodka
+inv_name                       = energy_drink_name_dbeer
+inv_name_short                 = energy_drink_name_dbeer_short
+visual                         = amk\item_zapiska2.ogf
+description                    = enc_equipment_energydrinka
+cost                           = 750
+
+inv_grid_width                 = 1
+inv_grid_height                = 1
+inv_grid_x                     = 40
+inv_grid_y                     = 35
+inv_weight                     = 0.3
+
+eat_health                     = 0
+eat_satiety                    = 0.01
+eat_power                      = 0
+eat_radiation                  = -0.3
+eat_alcohol                    = 0.3
+wounds_heal_perc               = 0
+eat_portions_num               = -1
+

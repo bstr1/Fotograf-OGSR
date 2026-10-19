@@ -15,6 +15,7 @@
 #include "moveable.ltx"
 
 #include "creatures\actor.ltx"
+#include "tuning\ogse_config.ltx"
 
 #include "misc\zones.ltx"
 #include "misc\postprocess.ltx"
@@ -72,7 +73,7 @@ ang_speed2                      = 7.0
 ang_speed3                      = 2.0
 
 [texture_desc]
-files                           = ui_icons_map, ui_common, ui_old_textures, ui_ingame, ui_map_description, ui_mainmenu, ui_statistics, ui_hud, ui_numpad, ui_inventory, ui_inventory2, ui_iconstotal, ui_pda, ui_icons_npc, ui_npc_monster, ui_npc_unique, ui_buy_menu, ui_asus_intro, amk_ui_base, ui_razgruzka, amk_pda, amk_pda_blank, ui_mini_games_textures, ui_mini_games_textures2, ui_npc_foto 
+files                           = ui_icons_map, ui_common, ui_old_textures, ui_ingame, ui_map_description, ui_mainmenu, ui_statistics, ui_hud, ui_numpad, ui_inventory, ui_inventory2, ui_iconstotal, ui_pda, ui_icons_npc, ui_npc_monster, ui_npc_unique, ui_buy_menu, ui_asus_intro, amk_ui_base, amk_pda, amk_pda_blank, ui_mini_games_textures, ui_mini_games_textures2, ui_npc_foto, ui_icon_equipment_6, ui_icon_equipment_7
 
 [info_portions]
 ;список xml файлов, содержащих info_portions
@@ -98,8 +99,6 @@ script_func                     = ;trader_job.artefacts_task_list_text
 
 [game_tasks]
 files                           = game_tasks
-
-#include "inventory_sect.ltx"
 
 [lights_hanging_lamp]
 GroupControlSection             = spawn_group
@@ -552,4 +551,3 @@ swing_fast_speed                = 0.5;1
 
 #include "weapons\grenadier.ltx"
 #include "medic.ltx"
-#include "misc\razgruzka.ltx"

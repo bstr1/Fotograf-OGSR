@@ -8,7 +8,7 @@
 		</list>
 	</properties_box>
 	
-	<main x=0 y=0 width=1024 height=768/>
+	<main x="0" y="0" width="1024" height="768"/>
 	
 	<belt_slots x="0" y="-800" width="1024" height="172">  <!-- 80 -->
 		<texture>ui_slots_belt</texture>		
@@ -21,11 +21,11 @@
 
 	</back>
 
-<test x=0 y=0 width=200 height=200>
+<test x="0" y="0" width="200" height="200">
 		<texture>amk_test</texture>
 	</test>
 
-	<bottom_static x=0 y=736 width=1024 height=32 >
+	<bottom_static x="0" y="736" width="1024" height="32" >
 		<texture>ui\ui_bottom_background</texture>
 	</bottom_static>
       
@@ -36,7 +36,7 @@
     <!-- *** РёР·РјРµРЅРµРЅРѕ РґР»СЏ AMK *** -->
 
     <dragdrop_belt x="365" y="396" width="360" height="61"
-            cell_width = "30" cell_height="30" rows_num="2" cols_num="8"/>
+            cell_width = "30" cell_height="30" rows_num="2" cols_num="10"/>
 
     <dragdrop_outfit x="110" y="40" width="104" height="260" 
             cell_width = "57" cell_height="57" rows_num="4" cols_num="4" 
@@ -124,7 +124,7 @@
 		
 	</outfit_info>
 
-	<static_personal x=1 y=285 width=100 height=260/>
+	<static_personal x="1" y="285" width="100" height="260"/>
 
     <rank x="736" y="272" width="75" height="65">
 		<texture>ui_inventory_rank</texture>
@@ -168,7 +168,7 @@
     </progress_bar_rank>
     
     <time_static x="15" y="730" width="200" height="30">        
-		<texture x=0 y=0 width=190 height=36>ui\ui_dg_time</texture>
+		<texture x="0" y="0" width="190" height="36">ui\ui_dg_time</texture>
         <text x="20" y="9" font="letterica16" r="240" g="217" b="182" a="255">ui_inv_time</text>
 	</time_static>
 

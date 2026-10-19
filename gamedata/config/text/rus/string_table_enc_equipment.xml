@@ -3,9 +3,6 @@
 
 #include "text\rus\string_table_amk_matras.xml"
 #include "text\rus\string_table_amk_metka.xml"
-<? Vergas разгрузка========================ON==================?>
-#include "text\rus\string_table_razgruzka.xml"
-<? Vergas разгрузка========================ON==================?>
 
 <string id="enc_bioradar">
 		<text>Детектор Жизненных Форм - прототип новейшего прибора для обнаружения различных форм жизни по теплу, движению, запаху, пси-волнам и т.д., то есть любых живых организмов. Работает в радиусе около 50 метров.</text>

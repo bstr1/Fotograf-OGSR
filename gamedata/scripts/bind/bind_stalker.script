@@ -307,12 +307,9 @@ function actor_binder:on_item_take(obj)
 end
 ----------------------------------------------------------------------------------------------------------------------
 function actor_binder:on_item_drop(obj)
-    -- Vergas ogg-player==================ON=================
-    -- razgruzka_v.lose_item(obj)
     anom_remover.on_item_drop(obj)
     -- bomba_test.drop_pult(obj)
     repair.use_repair(obj)
-    -- Vergas ogg-player==================OFF================
     level_tasks.proceed(self.object)
     -- xr_effects.func_test()
     local item = obj

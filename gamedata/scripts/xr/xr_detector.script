@@ -33,9 +33,6 @@ function actor_detector:actor_exit()
 	printf("LEVEL BORDER ENTER")
 end
 function actor_detector:update()
-	-- Vergas ogg-player==================ON=================
-		razgruzka_v.used_item()
-	-- Vergas ogg-player==================OFF================
 	--' Апдейтим игрока и устанавливаем действия.
 	if self.init_time == -1 then
 		return

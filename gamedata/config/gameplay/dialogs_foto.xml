@@ -1943,7 +1943,7 @@
 				<action>fotograf.sd_brown_dal</action>
 				<action>fotograf.metka_foto_01</action>
                 <action>fotograf.metka_foto_02</action>
-                <action>dialogs.break_dialog</action>
+                <!-- <action>dialogs.break_dialog</action> -->
 				</phrase>
         </phrase_list>
       </dialog>	  
