@@ -4,7 +4,7 @@
 
 <!--------------------------barman_new------------------------>
     <specific_character id="barman_new" team_default = "1">
-        <name>Яша Донецкий</name>
+        <name>РЇС€Р° Р”РѕРЅРµС†РєРёР№</name>
         <icon>ui_npc_baron</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -35,7 +35,7 @@
 	
 <!--------------------------mamasha------------------------>
     <specific_character id="mamasha" team_default = "1">
-        <name>Мамаша</name>
+        <name>РњР°РјР°С€Р°</name>
         <icon>ui_npc_u_babka_blue</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -411,8 +411,8 @@
 		<name>GENERATE_NAME_lieutenant</name>
 		<icon>ui_npc_u_stalker_militari_1</icon>
 		<map_icon x="2" y="2"></map_icon>
-		<bio> Военный сталкер. Хорошо вооружен и очень опасен.
-		Детальная информация недоступна.</bio>
+		<bio> Р’РѕРµРЅРЅС‹Р№ СЃС‚Р°Р»РєРµСЂ. РҐРѕСЂРѕС€Рѕ РІРѕРѕСЂСѓР¶РµРЅ Рё РѕС‡РµРЅСЊ РѕРїР°СЃРµРЅ.
+		Р”РµС‚Р°Р»СЊРЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ РЅРµРґРѕСЃС‚СѓРїРЅР°.</bio>
 
 		<class>military_green</class>
 		<community>military</community>
@@ -446,8 +446,8 @@
 		<name>GENERATE_NAME_lieutenant</name>
 		<icon>ui_npc_u_stalker_militari_2</icon>
 		<map_icon x="2" y="2"></map_icon>
-		<bio>Военный сталкер-ветеран. Очень хорошо вооружен, защищен и очень опасен.
-		Детальная информация недоступна.</bio>
+		<bio>Р’РѕРµРЅРЅС‹Р№ СЃС‚Р°Р»РєРµСЂ-РІРµС‚РµСЂР°РЅ. РћС‡РµРЅСЊ С…РѕСЂРѕС€Рѕ РІРѕРѕСЂСѓР¶РµРЅ, Р·Р°С‰РёС‰РµРЅ Рё РѕС‡РµРЅСЊ РѕРїР°СЃРµРЅ.
+		Р”РµС‚Р°Р»СЊРЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ РЅРµРґРѕСЃС‚СѓРїРЅР°.</bio>
 
 		
 		<class>military_black</class>
@@ -560,7 +560,7 @@
   <!--------------------------- komandir_polischuk ----------------------->
   
   <specific_character id="komandir_polischuk" team_default = "1">
-    <name>Лейтенант Полищук</name>
+    <name>Р›РµР№С‚РµРЅР°РЅС‚ РџРѕР»РёС‰СѓРє</name>
     <icon>ui_npc_u_soldier_beret</icon>
     <map_icon x="2" y="0"></map_icon>
     <bio>sim_soldier_commander_bio</bio>
@@ -600,7 +600,7 @@
   <!--------------------------- komandir_petrenko ----------------------->
   
   <specific_character id="komandir_petrenko" team_default = "1">
-    <name>Полковник Петренко</name>
+    <name>РџРѕР»РєРѕРІРЅРёРє РџРµС‚СЂРµРЅРєРѕ</name>
     <icon>ui_npc_rus_petrenko</icon>
     <map_icon x="2" y="0"></map_icon>
     <bio>sim_soldier_commander_bio</bio>
@@ -643,7 +643,7 @@
   <!--------------------------- komandir_krasavskiy ----------------------->
   
   <specific_character id="komandir_krasavskiy" team_default = "1">
-    <name>Капитан Красавский</name>
+    <name>РљР°РїРёС‚Р°РЅ РљСЂР°СЃР°РІСЃРєРёР№</name>
     <icon>ui_npc_u_soldier_beret_2</icon>
     <map_icon x="2" y="0"></map_icon>
     <bio>sim_soldier_commander_bio</bio>
@@ -685,7 +685,7 @@
   <!--------------------------- komandir_shpak ----------------------->
   
   <specific_character id="komandir_shpak" team_default = "1">
-    <name>Майор Шпак</name>
+    <name>РњР°Р№РѕСЂ РЁРїР°Рє</name>
     <icon>ui_npc_u_soldier_beret_2</icon>
     <map_icon x="2" y="0"></map_icon>
     <bio>sim_soldier_commander_bio</bio>
@@ -734,7 +734,7 @@
   <!--------------------------- shpak ----------------------->
   
   <specific_character id="shpak" team_default = "1">
-    <name>Майор Шпак</name>
+    <name>РњР°Р№РѕСЂ РЁРїР°Рє</name>
     <icon>ui_npc_u_soldier_beret_2</icon>
     <map_icon x="2" y="0"></map_icon>
     <bio>sim_soldier_commander_bio</bio>
@@ -782,7 +782,7 @@
   <!--------------------------- komandir_voronin ----------------------->
   
   <specific_character id="komandir_voronin" team_default = "1">
-    <name>Генерал Воронин</name>
+    <name>Р“РµРЅРµСЂР°Р» Р’РѕСЂРѕРЅРёРЅ</name>
     <icon>ui_npc_rus_voronin</icon>
     <map_icon x="2" y="0"></map_icon>
     <bio>sim_soldier_commander_bio</bio>
@@ -870,7 +870,7 @@
   
 <!--------------------------------uchen_kaymanov------------------------------>
 	<specific_character id="uchen_kaymanov" team_default = "1">
-		<name>Профессор Кайманов</name>
+		<name>РџСЂРѕС„РµСЃСЃРѕСЂ РљР°Р№РјР°РЅРѕРІ</name>
 		<icon>ui_npc_kaymanov</icon>
 		<map_icon x="7" y="0"></map_icon>
 		<bio>yan_saharov_bio</bio>
@@ -906,7 +906,7 @@
   
 <!--------------------------------uchen_01------------------------------>
 	<specific_character id="uchen_01" team_default = "1">
-		<name>Доцент Флейшманн</name>
+		<name>Р”РѕС†РµРЅС‚ Р¤Р»РµР№С€РјР°РЅРЅ</name>
 		<icon>ui_npc_fleyshmann</icon>
 		<map_icon x="7" y="0"></map_icon>
 		<bio>yan_saharov_bio</bio>
@@ -936,7 +936,7 @@
 
 <!--------------------------------uchen_02------------------------------>
 	<specific_character id="uchen_02" team_default = "1">
-		<name>Лаборант Семёнов</name>
+		<name>Р›Р°Р±РѕСЂР°РЅС‚ РЎРµРјС‘РЅРѕРІ</name>
 		<icon>ui_npc_semenov</icon>
 		<map_icon x="7" y="0"></map_icon>
 		<bio>yan_saharov_bio</bio>
@@ -966,7 +966,7 @@
   
 <!--------------------------------uchen_03------------------------------>
 	<specific_character id="uchen_03" team_default = "1">
-		<name>Лаборант Гуревич</name>
+		<name>Р›Р°Р±РѕСЂР°РЅС‚ Р“СѓСЂРµРІРёС‡</name>
 		<icon>ui_npc_gurevich</icon>
 		<map_icon x="7" y="0"></map_icon>
 		<bio>yan_saharov_bio</bio>
@@ -996,7 +996,7 @@
 
 <!--------------------------------uchen_04------------------------------>
 	<specific_character id="uchen_04" team_default = "1">
-		<name>Доцент Ройзманн</name>
+		<name>Р”РѕС†РµРЅС‚ Р РѕР№Р·РјР°РЅРЅ</name>
 		<icon>ui_npc_royzmann</icon>
 		<map_icon x="7" y="0"></map_icon>
 		<bio>yan_saharov_bio</bio>
@@ -1026,7 +1026,7 @@
 
 <!--------------------------------uchen_05------------------------------>
 	<specific_character id="uchen_05" team_default = "1">
-		<name>Дроздов</name>
+		<name>Р”СЂРѕР·РґРѕРІ</name>
 		<icon>ui_npc_drozdov</icon>
 		<map_icon x="7" y="0"></map_icon>
 		<bio>yan_saharov_bio</bio>
@@ -1060,7 +1060,7 @@
 
 <!--------------------------------uchen_06------------------------------>
 	<specific_character id="uchen_06" team_default = "1">
-		<name>Профессор Плоймар</name>
+		<name>РџСЂРѕС„РµСЃСЃРѕСЂ РџР»РѕР№РјР°СЂ</name>
 		<icon>ui_npc_ptashkin</icon>
 		<map_icon x="7" y="0"></map_icon>
 		<bio>yan_saharov_bio</bio>
@@ -1090,7 +1090,7 @@
 
 <!--------------------------------uchen_061------------------------------>
 	<specific_character id="uchen_061" team_default = "1">
-		<name>Профессор Плоймар</name>
+		<name>РџСЂРѕС„РµСЃСЃРѕСЂ РџР»РѕР№РјР°СЂ</name>
 		<icon>ui_npc_ptashkin</icon>
 		<map_icon x="7" y="0"></map_icon>
 		<bio>yan_saharov_bio</bio>
@@ -1124,7 +1124,7 @@
 <!---------------------------lavrov_trup--------------------------->
 
 	<specific_character id="lavrov_trup" team_default = "1">
-		<name>Доцент Лавров</name>
+		<name>Р”РѕС†РµРЅС‚ Р›Р°РІСЂРѕРІ</name>
 		<icon>ui_npc_uchen_white</icon>
 		<map_icon x="7" y="0"></map_icon>
 		<bio>ros_ecolog_guard_bio</bio>
@@ -1153,7 +1153,7 @@
 
 <!----------------------------haron_new----------------------->  
 	<specific_character id="haron_new" team_default = "1">
-		    <name>Харон</name>
+		    <name>РҐР°СЂРѕРЅ</name>
 		<icon>ui_npc_haron</icon>
 		<map_icon x="5" y="0"></map_icon>
 		<bio>gar_stalker_regular_bio</bio>
@@ -1190,7 +1190,7 @@
 
 <!----------------------------haron_dva----------------------->  
 	<specific_character id="haron_dva" team_default = "1">
-		    <name>Харон</name>
+		    <name>РҐР°СЂРѕРЅ</name>
 		<icon>ui_npc_haron</icon>
 		<map_icon x="5" y="0"></map_icon>
 		<bio>gar_stalker_regular_bio</bio>
@@ -1835,7 +1835,7 @@
 <!---------------------------bratok_02----------------------->
 	
 	<specific_character id="bratok_02" team_default = "1">
-		<name>Жила</name>
+		<name>Р–РёР»Р°</name>
 		<icon>ui_npc_u_stalker_bandit_2</icon>
 		<map_icon x="3" y="2"></map_icon>
 		<bio>val_bandit_general_bio</bio>
@@ -2464,7 +2464,7 @@
 <!---------------------------krysolov----------------------->
 	
 	<specific_character id="krysolov" team_default = "1">
-		<name>Крысолов</name>
+		<name>РљСЂС‹СЃРѕР»РѕРІ</name>
 		<icon>ui_npc_krysolov</icon>
 		<map_icon x="3" y="2"></map_icon>
 		<bio>val_bandit_general_bio</bio>
@@ -2507,7 +2507,7 @@
 <!---------------------------borovikov----------------------->
 	
 	<specific_character id="borovikov" team_default = "1">
-		<name>Боря Серов</name>
+		<name>Р‘РѕСЂСЏ РЎРµСЂРѕРІ</name>
 		<icon>ui_npc_u_stalker_bandit_borov</icon>
 		<map_icon x="0" y="0"></map_icon>
 		<bio>val_borov_bio</bio>
@@ -3981,7 +3981,7 @@
  <!---------------------------killer_spetsnaz---------------------->
 
   <specific_character id="killer_spetsnaz" team_default = "1">
-    <name>Киллер</name>
+    <name>РљРёР»Р»РµСЂ</name>
     <icon>ui_npc_u_soldier_spetsnaz</icon>
     <map_icon x="2" y="2"></map_icon>
     <bio>sim_soldier_specnaz_bio</bio>
@@ -4017,7 +4017,7 @@
  <!---------------------------killer_spetsnaz1---------------------->
 
   <specific_character id="killer_spetsnaz1" team_default = "1">
-    <name>Киллер</name>
+    <name>РљРёР»Р»РµСЂ</name>
     <icon>ui_npc_u_soldier_spetsnaz</icon>
     <map_icon x="2" y="2"></map_icon>
     <bio>sim_soldier_specnaz_bio</bio>
@@ -4054,7 +4054,7 @@
  <!---------------------------killer_spetsnaz2---------------------->
 
   <specific_character id="killer_spetsnaz2" team_default = "1">
-    <name>Киллер</name>
+    <name>РљРёР»Р»РµСЂ</name>
     <icon>ui_npc_u_soldier_spetsnaz</icon>
     <map_icon x="2" y="2"></map_icon>
     <bio>sim_soldier_specnaz_bio</bio>
@@ -4410,7 +4410,7 @@
 <!---------------------------tank-----------------------> 
   
 <specific_character id="tank" team_default="1">
-		<name>Уберсолдат</name>
+		<name>РЈР±РµСЂСЃРѕР»РґР°С‚</name>
 		<icon>ui_npc_tank</icon>
 		<map_icon x="1" y="2"></map_icon>
 		<bio>val_soldier_regular_bio</bio>
@@ -4440,7 +4440,7 @@
 <!---------------------------uchen_x18--------------------------->
 
 	<specific_character id="uchen_x18" team_default = "1">
-		<name>Лаборант</name>
+		<name>Р›Р°Р±РѕСЂР°РЅС‚</name>
 		<icon>ui_npc_uchen_white</icon>
 		<map_icon x="7" y="0"></map_icon>
 		<bio>ros_ecolog_guard_bio</bio>
@@ -4469,7 +4469,7 @@
 <!---------------------------iskatel-----------------------> 
   
 <specific_character id="iskatel" team_default="1">
-		<name>Варвар</name>
+		<name>Р’Р°СЂРІР°СЂ</name>
 		<icon>ui_npc_iskatel</icon>
 		<map_icon x="1" y="2"></map_icon>
 		<bio>sim_stalker_general_bio</bio>
@@ -4505,7 +4505,7 @@
 <!---------------------------barnie-----------------------> 
   
 <specific_character id="barnie" team_default="1">
-		<name>Цыган</name>
+		<name>Р¦С‹РіР°РЅ</name>
 		<icon>ui_npc_barnie</icon>
 		<map_icon x="1" y="2"></map_icon>
 		<bio>sim_stalker_general_bio</bio>
@@ -4540,7 +4540,7 @@
 <!--------------------------genrih------------------------>
 
     <specific_character id="genrih" team_default = "1">
-        <name>Генрих</name>
+        <name>Р“РµРЅСЂРёС…</name>
         <icon>ui_npc_solomon</icon>
 		<map_icon x="3" y="0"></map_icon>
 		<bio>sim_stalker_general_bio</bio>
@@ -4577,7 +4577,7 @@
 <!---------------------------yurgen---------------------->
 
 <specific_character id="yurgen" team_default="1">
-		<name>Юрген</name>
+		<name>Р®СЂРіРµРЅ</name>
 		<icon>ui_npc_iuda</icon>
 		<map_icon x="3" y="2"></map_icon>
 		<bio>sim_stalker_general_bio</bio>
@@ -4612,7 +4612,7 @@
 <!---------------------------jagger---------------------->
 
 <specific_character id="jagger" team_default="1">
-		<name>Джаггер</name>
+		<name>Р”Р¶Р°РіРіРµСЂ</name>
 		<icon>ui_npc_jagger</icon>
 		<map_icon x="3" y="2"></map_icon>
 		<bio>sim_stalker_general_bio</bio>
@@ -4648,7 +4648,7 @@
 <!---------------------------nemec_maska---------------------->
 
 <specific_character id="nemec_maska" team_default="1">
-		<name>Спецназовец</name>
+		<name>РЎРїРµС†РЅР°Р·РѕРІРµС†</name>
 		<icon>ui_npc_u_stalker_mo_elite</icon>
 		<map_icon x="3" y="2"></map_icon>
 		<bio>sim_stalker_general_bio</bio>
@@ -4684,7 +4684,7 @@
 <!---------------------------missis_uchen---------------------->
 
 <specific_character id="missis_uchen" team_default = "1">
-    <name>Гертруда</name>
+    <name>Р“РµСЂС‚СЂСѓРґР°</name>
     <icon>ui_npc_mamasha</icon>
     <map_icon x="3" y="2"></map_icon>
     <bio>yan_Ecolog</bio>
@@ -4719,7 +4719,7 @@
 <!---------------------------uchen_mg---------------------->
 
 <specific_character id="uchen_mg" team_default = "1">
-    <name>Немецкий учёный</name>
+    <name>РќРµРјРµС†РєРёР№ СѓС‡С‘РЅС‹Р№</name>
     <icon>ui_npc_uchen_yellow</icon>
     <map_icon x="3" y="2"></map_icon>
     <bio>yan_Ecolog</bio>
@@ -4754,7 +4754,7 @@
 <!---------------------------ivanov_trup--------------------------->
 
 	<specific_character id="ivanov_trup" team_default = "1">
-		<name>Доцент Иванов</name>
+		<name>Р”РѕС†РµРЅС‚ РРІР°РЅРѕРІ</name>
 		<icon>ui_npc_uchen_white</icon>
 		<map_icon x="7" y="0"></map_icon>
 		<bio>ros_ecolog_guard_bio</bio>
@@ -4789,7 +4789,7 @@
 <!---------------------------wulf_trup--------------------------->
 
 	<specific_character id="wulf_trup" team_default = "1">
-		<name>Доктор Вульф</name>
+		<name>Р”РѕРєС‚РѕСЂ Р’СѓР»СЊС„</name>
 		<icon>ui_npc_uchen_yellow</icon>
 		<map_icon x="7" y="0"></map_icon>
 		<bio>ros_ecolog_guard_bio</bio>
@@ -4824,7 +4824,7 @@
 <!---------------------------trup_x18--------------------------->
 
 	<specific_character id="trup_x18" team_default = "1">
-		<name>Лаборант Данилов</name>
+		<name>Р›Р°Р±РѕСЂР°РЅС‚ Р”Р°РЅРёР»РѕРІ</name>
 		<icon>ui_npc_uchen_white</icon>
 		<map_icon x="7" y="0"></map_icon>
 		<bio>ros_ecolog_guard_bio</bio>
@@ -4858,7 +4858,7 @@
 <!---------------------------palatka_trup--------------------------->
 
 	<specific_character id="palatka_trup" team_default = "1">
-		<name>Гладиатор</name>
+		<name>Р“Р»Р°РґРёР°С‚РѕСЂ</name>
 		<icon>ui_npc_u_zombie_fresh_2</icon>
 		<map_icon x="7" y="0"></map_icon>
 		<bio>ros_ecolog_guard_bio</bio>
@@ -4890,7 +4890,7 @@
 <!---------------------------petrograf---------------------->
 
 <specific_character id="petrograf" team_default = "1">
-    <name>Петрограф</name>
+    <name>РџРµС‚СЂРѕРіСЂР°С„</name>
     <icon>ui_npc_uchen_10</icon>
     <map_icon x="3" y="2"></map_icon>
     <bio>sim_stalker_general_bio</bio>
@@ -4924,7 +4924,7 @@
 <!---------------------------wpn_trup_x16--------------------------->
 
 	<specific_character id="wpn_trup_x16" team_default = "1">
-		<name>Неизвестный учёный</name>
+		<name>РќРµРёР·РІРµСЃС‚РЅС‹Р№ СѓС‡С‘РЅС‹Р№</name>
 		<icon>ui_npc_u_stalker_ecolog</icon>
 		<map_icon x="7" y="0"></map_icon>
 		<bio>ros_ecolog_guard_bio</bio>
@@ -4956,7 +4956,7 @@
 <!---------------------------wpn_trup_x10--------------------------->
 
 	<specific_character id="wpn_trup_x10" team_default = "1">
-		<name>Неизвестный учёный</name>
+		<name>РќРµРёР·РІРµСЃС‚РЅС‹Р№ СѓС‡С‘РЅС‹Р№</name>
 		<icon>ui_npc_u_stalker_ecolog_military</icon>
 		<map_icon x="7" y="0"></map_icon>
 		<bio>ros_ecolog_guard_bio</bio>

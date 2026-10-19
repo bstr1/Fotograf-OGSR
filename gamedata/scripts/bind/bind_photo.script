@@ -158,8 +158,9 @@ function photo_binder:net_spawn(data)
 	self.target = nil
 	self.last_ammo_elapsed = 0
 	self.last_in_slot = false
-	self.new_target = false
 	self.new_target_id = nil
+	self.oid = self.object:id()
+	self.sect = self.object:section()
 	active_photo_binder = self
 	return true
 end
@@ -215,7 +216,9 @@ function photo_binder:net_destroy()
 	self.rbutton_pressed = false
 	self.lbutton_pressed = false
 	tbl_photo = {}
-	if active_photo_binder == self then active_photo_binder = nil end
+	if active_photo_binder_id and active_photo_binder_id == self.object:id() then
+		active_photo_binder_id = nil
+	end
 	object_binder.net_destroy(self)
 end
 
@@ -360,10 +363,13 @@ function photo_binder:OnRemove()
 end
 
 
----------------------------------------------------------------------------------------------
--- Called every frame from actor_binder:update (weapon binder updates too rarely)
 function update_photo_from_actor(delta)
 	local pb = active_photo_binder
-	if not pb then return end
+	if not pb or pb.oid == nil then return end
+	local o = level.object_by_id(pb.oid)
+	if o == nil or o:section() ~= pb.sect then
+		active_photo_binder = nil
+		return
+	end
 	pb:frame_update(delta)
 end

@@ -2,7 +2,7 @@
 
 <game_information_portions>
 
-<!-- ïîðøíè Áðèòûé -->
+<!-- Ð¿Ð¾Ñ€ÑˆÐ½Ð¸ Ð‘Ñ€Ð¸Ñ‚Ñ‹Ð¹ -->
 <info_portion id="britiy_dialog_foto_end"></info_portion>
 <info_portion id="britiy_foto_start"></info_portion>
 <info_portion id="britiy_has_1"></info_portion>
@@ -11,12 +11,12 @@
 
 <info_portion id="brityi_foto"></info_portion>
 
-<!-- ïîðøíè Äçÿî -->
+<!-- Ð¿Ð¾Ñ€ÑˆÐ½Ð¸ Ð”Ð·ÑÐ¾ -->
 <info_portion id="dzyao_priz"></info_portion>
-<!-- ïîðøíè Âîðîíèí -->
+<!-- Ð¿Ð¾Ñ€ÑˆÐ½Ð¸ Ð’Ð¾Ñ€Ð¾Ð½Ð¸Ð½ -->
 <info_portion id="voronin_gans"></info_portion>
 
-<!-- ïîðøíè Ïåòðîãðàô -->
+<!-- Ð¿Ð¾Ñ€ÑˆÐ½Ð¸ ÐŸÐµÑ‚Ñ€Ð¾Ð³Ñ€Ð°Ñ„ -->
 <info_portion id="petrograf_start">	
 	<action>petrograf.create_petrograf</action> 
 </info_portion>
@@ -29,7 +29,7 @@
 <info_portion id="petrograf_dialog_2_done"></info_portion>
 <info_portion id="transfer_perdonit"></info_portion>
 
-<!-- ïîðøíè Çàïàäëî -->
+<!-- Ð¿Ð¾Ñ€ÑˆÐ½Ð¸ Ð—Ð°Ð¿Ð°Ð´Ð»Ð¾ -->
 <info_portion id="kill_zapadlo">	
 	<action>boryan67.zapadlo_clear</action> 
 </info_portion>
@@ -52,7 +52,7 @@
 <info_portion id="haron_dialog_2_done"></info_portion>
 <info_portion id="haron_dialog_3_done"></info_portion>
 
-<!-- ïîðøíè Øóáèí -->
+<!-- Ð¿Ð¾Ñ€ÑˆÐ½Ð¸ Ð¨ÑƒÐ±Ð¸Ð½ -->
 <info_portion id="shubin_start"></info_portion>
 <info_portion id="shubin_enemy">	
 	<action>boryan67.remove_shubin</action> 
@@ -74,7 +74,7 @@
 <task>codes_taynik</task>
 </info_portion>
 
-<!-- ïîðøíè Øïàê -->
+<!-- Ð¿Ð¾Ñ€ÑˆÐ½Ð¸ Ð¨Ð¿Ð°Ðº -->
 <info_portion id="shpak_dialog_1_done"></info_portion>
 <info_portion id="shpak_dialog_2_done"></info_portion>
 <info_portion id="shpak_dialog_3_done"></info_portion>
@@ -93,7 +93,7 @@
 <info_portion id="shpak_vintorez">
 	<task>shpak_vss</task>
 </info_portion>
-<!-- ïîðøíè Äóíÿ -->
+<!-- Ð¿Ð¾Ñ€ÑˆÐ½Ð¸ Ð”ÑƒÐ½Ñ -->
 <info_portion id="dunya_dialog_1_done"></info_portion>
 <info_portion id="dunya_dialog_2_done"></info_portion>
 <info_portion id="dunya_dialog_3_done"></info_portion>
@@ -113,7 +113,7 @@
 	<action>boryan67.clear_dunya</action>
 </info_portion>
 <info_portion id="dunya_enemy"></info_portion>
-<!-- ïîðøíè Êðûñîëîâ -->
+<!-- Ð¿Ð¾Ñ€ÑˆÐ½Ð¸ ÐšÑ€Ñ‹ÑÐ¾Ð»Ð¾Ð² -->
 <info_portion id="krisalov_dialog_1_done"></info_portion>
 <info_portion id="krisalov_dudka">
 	<task>nastoyka</task>
@@ -133,11 +133,11 @@
 <info_portion id="zone_mouse_release">
 	<action>foto.mouse_release</action>
 </info_portion>
-<!-- ïîðøíè êðåñòû Øóáèíà -->
+<!-- Ð¿Ð¾Ñ€ÑˆÐ½Ð¸ ÐºÑ€ÐµÑÑ‚Ñ‹ Ð¨ÑƒÐ±Ð¸Ð½Ð° -->
 <info_portion id="krest_find_disable"></info_portion>
 <info_portion id="krest_dudka_used"></info_portion>
 <info_portion id="krest_finish"></info_portion>
-<!-- ïîðøíè ÌÃ ïàðàëëåëüíûé ìèð -->
+<!-- Ð¿Ð¾Ñ€ÑˆÐ½Ð¸ ÐœÐ“ Ð¿Ð°Ñ€Ð°Ð»Ð»ÐµÐ»ÑŒÐ½Ñ‹Ð¹ Ð¼Ð¸Ñ€ -->
 <info_portion id="parallel_mg"></info_portion>
 <info_portion id="mg_1_jump"></info_portion>
 <info_portion id="mg_2_jump"></info_portion>
@@ -152,13 +152,13 @@
 <info_portion id="petro_dialog_2_done"></info_portion>
 <info_portion id="varvara_dialog_1_done"></info_portion>
 <info_portion id="petro_enemy"></info_portion>
-<!-- ïîðøíè Ëåñíèê -->
+<!-- Ð¿Ð¾Ñ€ÑˆÐ½Ð¸ Ð›ÐµÑÐ½Ð¸Ðº -->
 <info_portion id="ded_dialog_1_done"></info_portion>
 <info_portion id="ded_dialog_2_done"></info_portion>
 <info_portion id="ded_nastoyka">
 	<task>nastoyka_les</task>
 </info_portion>
-<!-- Ëàáèðèíò Ìàêñà -->
+<!-- Ð›Ð°Ð±Ð¸Ñ€Ð¸Ð½Ñ‚ ÐœÐ°ÐºÑÐ° -->
 <info_portion id="max_no_entrance"></info_portion>
 <info_portion id="max_no_exit"></info_portion>
 <info_portion id="max_block_end"></info_portion>

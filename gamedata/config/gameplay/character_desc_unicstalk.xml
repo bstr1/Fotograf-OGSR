@@ -3,7 +3,7 @@
 <xml>
 <!---------------------------dunya-------------------------->	
 	<specific_character id="dunya" team_default = "1">
-		<name>Дульсинея Тобольская</name>
+		<name>Р”СѓР»СЊСЃРёРЅРµСЏ РўРѕР±РѕР»СЊСЃРєР°СЏ</name>
 		<icon>ui_npc_katya</icon>
 		<bio>sim_stalker_general_bio</bio>
 
@@ -40,7 +40,7 @@
 
 <!---------------------------shubin-------------------------->	
 	<specific_character id="shubin" team_default = "1">
-		<name>Добрый Шубин</name>
+		<name>Р”РѕР±СЂС‹Р№ РЁСѓР±РёРЅ</name>
 		<icon>ui_npc_mechanik_0</icon>
 		<bio>sim_stalker_general_bio</bio>
 
@@ -72,7 +72,7 @@
 
 <!---------------------------shubin_dva-------------------------->	
 	<specific_character id="shubin_dva" team_default = "1">
-		<name>Добрый Шубин</name>
+		<name>Р”РѕР±СЂС‹Р№ РЁСѓР±РёРЅ</name>
 		<icon>ui_npc_mechanik</icon>
 		<bio>sim_stalker_general_bio</bio>
 
@@ -106,7 +106,7 @@
 
 <!---------------------------shubin_sar-------------------------->	
 	<specific_character id="shubin_sar" team_default = "1">
-		<name>Добрый Шубин</name>
+		<name>Р”РѕР±СЂС‹Р№ РЁСѓР±РёРЅ</name>
 		<icon>ui_npc_mechanik_0</icon>
 		<bio>sim_stalker_general_bio</bio>
 
@@ -139,7 +139,7 @@
 
 <!---------------------------zapadlo-------------------------->	
 	<specific_character id="zapadlo" team_default = "1">
-		<name>Дед Западло</name>
+		<name>Р”РµРґ Р—Р°РїР°РґР»Рѕ</name>
 		<icon>ui_npc_starik</icon>
 		<bio>sim_stalker_general_bio</bio>
 
@@ -176,7 +176,7 @@
 
 <!---------------------------verka-------------------------->	
 	<specific_character id="verka" team_default = "1">
-		<name>Верка Заподлянка</name>
+		<name>Р’РµСЂРєР° Р—Р°РїРѕРґР»СЏРЅРєР°</name>
 		<icon>ui_npc_verka</icon>
 		<bio>sim_stalker_general_bio</bio>
 
@@ -209,7 +209,7 @@
 
 <!-------------------------------osvedom------------------------------->	
 	<specific_character id="osvedom" team_default = "1">
-		<name>Связной</name>
+		<name>РЎРІСЏР·РЅРѕР№</name>
 		<icon>ui_npc_osvedom</icon>
 		<bio>sim_stalker_general_bio</bio>
 
@@ -242,7 +242,7 @@
 
 <!------------------------------osvedom_new--------------------------------->	
 	<specific_character id="osvedom_new" team_default = "1">
-		<name>Связной</name>
+		<name>РЎРІСЏР·РЅРѕР№</name>
 		<icon>ui_npc_osvedom</icon>
 		<bio>sim_stalker_general_bio</bio>
 
@@ -278,7 +278,7 @@
 
 <!-----------------------------osvedom_dva------------------------------->	
 	<specific_character id="osvedom_dva" team_default = "1">
-		<name>Связной</name>
+		<name>РЎРІСЏР·РЅРѕР№</name>
 		<icon>ui_npc_osvedom</icon>
 		<bio>sim_stalker_general_bio</bio>
 
@@ -313,7 +313,7 @@
 
 <!----------------------agent_prom-------------------->
     <specific_character id="agent_prom" team_default = "1">
-        <name>Агент</name>
+        <name>РђРіРµРЅС‚</name>
         <icon>ui_npc_u_stalker_ki_informator</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -347,7 +347,7 @@
 
 <!----------------------agent_prom_ohr1-------------------->
     <specific_character id="agent_prom_ohr1" team_default = "1">
-        <name>Охранник агента</name>
+        <name>РћС…СЂР°РЅРЅРёРє Р°РіРµРЅС‚Р°</name>
         <icon>ui_npc_u_stalker_ki_antigas</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -380,7 +380,7 @@
 
 <!----------------------agent_prom_ohr2-------------------->
     <specific_character id="agent_prom_ohr2" team_default = "1">
-        <name>Охранник агента</name>
+        <name>РћС…СЂР°РЅРЅРёРє Р°РіРµРЅС‚Р°</name>
         <icon>ui_npc_u_stalker_ki_mask</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -413,7 +413,7 @@
 	
 <!----------------------agent_prom_ohr3-------------------->
     <specific_character id="agent_prom_ohr3" team_default = "1">
-        <name>Охранник агента</name>
+        <name>РћС…СЂР°РЅРЅРёРє Р°РіРµРЅС‚Р°</name>
         <icon>ui_npc_u_stalker_ki_head_1</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -446,7 +446,7 @@
 
 <!----------------------agent_aver-------------------->
     <specific_character id="agent_aver" team_default = "1">
-        <name>Агент</name>
+        <name>РђРіРµРЅС‚</name>
         <icon>ui_npc_u_stalker_ki_informator</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -481,7 +481,7 @@
 
 <!----------------------agent_aver_ohr1-------------------->
     <specific_character id="agent_aver_ohr1" team_default = "1">
-        <name>Охранник агента</name>
+        <name>РћС…СЂР°РЅРЅРёРє Р°РіРµРЅС‚Р°</name>
         <icon>ui_npc_u_stalker_ki_antigas</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -514,7 +514,7 @@
 
 <!----------------------agent_aver_ohr2-------------------->
     <specific_character id="agent_aver_ohr2" team_default = "1">
-        <name>Охранник агента</name>
+        <name>РћС…СЂР°РЅРЅРёРє Р°РіРµРЅС‚Р°</name>
         <icon>ui_npc_u_stalker_ki_mask</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -547,7 +547,7 @@
 	
 <!----------------------agent_aver_ohr3-------------------->
     <specific_character id="agent_aver_ohr3" team_default = "1">
-        <name>Охранник агента</name>
+        <name>РћС…СЂР°РЅРЅРёРє Р°РіРµРЅС‚Р°</name>
         <icon>ui_npc_u_stalker_ki_head_1</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -580,7 +580,7 @@
 
 <!----------------------agent_mk-------------------->
     <specific_character id="agent_mk" team_default = "1">
-        <name>Агент</name>
+        <name>РђРіРµРЅС‚</name>
         <icon>ui_npc_u_stalker_mo_mask</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -615,7 +615,7 @@
 	
 <!----------------------agent_mk_ohr-------------------->
     <specific_character id="agent_mk_ohr" team_default = "1">
-        <name>Охранник Агента</name>
+        <name>РћС…СЂР°РЅРЅРёРє РђРіРµРЅС‚Р°</name>
         <icon>ui_npc_u_stalker_mo_mask</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -650,7 +650,7 @@
 
 <!----------------------brigadir-------------------->
     <specific_character id="brigadir" team_default = "1">
-        <name>Бригадир</name>
+        <name>Р‘СЂРёРіР°РґРёСЂ</name>
         <icon>ui_npc_borodach</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -722,7 +722,7 @@
 	
 <!----------------------novichok_05-------------------->
     <specific_character id="novichok_05" team_default = "1">
-        <name>Вадик</name>
+        <name>Р’Р°РґРёРє</name>
         <icon>ui_npc_u_green_stalker_7</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -758,7 +758,7 @@
 		
 <!----------------------novichok_06-------------------->
     <specific_character id="novichok_06" team_default = "1">
-        <name>Бритый</name>
+        <name>Р‘СЂРёС‚С‹Р№</name>
         <icon>ui_npc_u_stalker_petruha</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>esc_petruha_bio</bio>
@@ -796,7 +796,7 @@
 	
 <!----------------------novichok_09-------------------->
     <specific_character id="novichok_09" team_default = "1">
-        <name>Семён</name>
+        <name>РЎРµРјС‘РЅ</name>
         <icon>ui_npc_u_green_stalker_11</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -829,7 +829,7 @@
 
 <!----------------------neytral_05-------------------->
     <specific_character id="neytral_05" team_default = "1">
-        <name>Эдик</name>
+        <name>Р­РґРёРє</name>
         <icon>ui_npc_u_stalker_djonni</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -870,7 +870,7 @@
 
 <!----------------------neytral_07-------------------->
     <specific_character id="neytral_07" team_default = "1">
-        <name>Лёха</name>
+        <name>Р›С‘С…Р°</name>
         <icon>ui_npc_u_stalker_neytral_hood_2</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -942,7 +942,7 @@
 
 <!----------------------neytral_09-------------------->
     <specific_character id="neytral_09" team_default = "1">
-        <name>Флинт</name>
+        <name>Р¤Р»РёРЅС‚</name>
         <icon>ui_npc_u_stalker_neytral_balon_5</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -978,7 +978,7 @@
 
 <!----------------------neytral_10-------------------->
     <specific_character id="neytral_10" team_default = "1">
-        <name>Димос</name>
+        <name>Р”РёРјРѕСЃ</name>
         <icon>ui_npc_u_stalker_neytral_rukzak_3</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>esc_fanat_bio</bio>
@@ -1014,7 +1014,7 @@
 
 <!----------------------neytral_16-------------------->
     <specific_character id="neytral_16" team_default = "1">
-        <name>Женёк</name>
+        <name>Р–РµРЅС‘Рє</name>
         <icon>ui_npc_u_stalker_neytral_rukzak_1</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -1087,7 +1087,7 @@
 
 <!----------------------neytral_20-------------------->
     <specific_character id="neytral_20" team_default = "1">
-        <name>Павлик</name>
+        <name>РџР°РІР»РёРє</name>
         <icon>ui_npc_u_stalker_pavlik</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -1123,7 +1123,7 @@
 
 <!----------------------neytral_new_01-------------------->
     <specific_character id="neytral_new_01" team_default = "1">
-        <name>Левша</name>
+        <name>Р›РµРІС€Р°</name>
         <icon>ui_npc_u_stalker_hellcar</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -1165,7 +1165,7 @@
 	
 <!----------------------neytral_new_02-------------------->
     <specific_character id="neytral_new_02" team_default = "1">
-        <name>Санчо</name>
+        <name>РЎР°РЅС‡Рѕ</name>
         <icon>ui_npc_u_tsezar</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -1203,7 +1203,7 @@
 
 <!----------------------neytral_new_05-------------------->
     <specific_character id="neytral_new_05" team_default = "1">
-        <name>Юра</name>
+        <name>Р®СЂР°</name>
         <icon>ui_npc_u_stalker_3_rozh2</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -1241,7 +1241,7 @@
 
 <!----------------------digger_05-------------------->
     <specific_character id="digger_05" team_default = "1">
-        <name>Бром</name>
+        <name>Р‘СЂРѕРј</name>
         <icon>ui_npc_u_stalker_2_rozh1</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -1281,7 +1281,7 @@
 	
 <!----------------------digger_06-------------------->
     <specific_character id="digger_06" team_default = "1">
-        <name>Шершень</name>
+        <name>РЁРµСЂС€РµРЅСЊ</name>
         <icon>ui_npc_u_stalker_2_usi</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -1387,7 +1387,7 @@
 
 <!----------------------prizrak-------------------->
     <specific_character id="prizrak" team_default = "1">
-        <name>Призрак</name>
+        <name>РџСЂРёР·СЂР°Рє</name>
         <icon>ui_npc_u_stalker_prizrak</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -1423,7 +1423,7 @@
 
 <!---------------------------dron----------------------->
 	<specific_character id="dron" team_default = "1">
-		<name>Дрон</name>
+		<name>Р”СЂРѕРЅ</name>
 		<icon>ui_npc_u_green_stalker_6</icon>
 		<map_icon x="3" y="2"></map_icon>
 		<bio>sim_bandit_master_fraer_bio</bio>
@@ -1459,7 +1459,7 @@
 
 <!---------------------------babay----------------------->
 	<specific_character id="babay" team_default = "1">
-		<name>Бабай</name>
+		<name>Р‘Р°Р±Р°Р№</name>
 		<icon>ui_npc_u_green_stalker_3</icon>
 		<map_icon x="3" y="2"></map_icon>
 		<bio>sim_bandit_master_fraer_bio</bio>
@@ -1495,7 +1495,7 @@
 	
 <!----------------------greta-------------------->
     <specific_character id="greta" team_default = "1">
-        <name>Грета</name>
+        <name>Р“СЂРµС‚Р°</name>
         <icon>ui_npc_greta</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -1672,7 +1672,7 @@
 	
 <!---------------------------kock----------------------->	
 <specific_character id="kock" team_default = "1">
-		<name>Джанго</name>		
+		<name>Р”Р¶Р°РЅРіРѕ</name>		
 		<icon>ui_npc_u_stalker_sv_cook</icon>
 		<map_icon x="5" y="0"></map_icon>
 		<bio>mil_Svoboda_cook_bio</bio>
@@ -1746,7 +1746,7 @@
 
 <!----------------------povar-------------------->
     <specific_character id="povar" team_default = "1">
-        <name>Повар</name>
+        <name>РџРѕРІР°СЂ</name>
         <icon>ui_npc_povar</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -1783,7 +1783,7 @@
 <!-------------------------- kladovschik ------------------------>	
 
 <specific_character id="kladovschik" team_default = "1">
-    <name>Кладовщик</name>
+    <name>РљР»Р°РґРѕРІС‰РёРє</name>
     <icon>ui_npc_u_soldier_bandana_5</icon>
     <map_icon x="1" y="2"></map_icon>
     <bio>sim_soldier_regular_bio</bio>
@@ -1817,7 +1817,7 @@
   
 <!--------------------------feldsher--------------------------->	
 	<specific_character id="feldsher" team_default = "1">
-		<name>Фельдшер</name>
+		<name>Р¤РµР»СЊРґС€РµСЂ</name>
 		<icon>ui_npc_u_stalker_amerikanec</icon>
 		<bio>sim_stalker_general_bio</bio>
 
@@ -1852,7 +1852,7 @@
 
 <!---------------------------zhorik----------------------->
 	<specific_character id="zhorik" team_default = "1">
-		<name>Жорик</name>
+		<name>Р–РѕСЂРёРє</name>
 		<icon>ui_npc_zhorik</icon>
 		<map_icon x="3" y="2"></map_icon>
 		<bio>val_bandit_general_bio</bio>
@@ -1886,7 +1886,7 @@
 <!--------------------agro_und_marodery------------------->
 <!------------------------mihas_und----------------------->
 	<specific_character id="mihas_und" team_default = "1">
-		<name>Михась Стихоплёт</name>
+		<name>РњРёС…Р°СЃСЊ РЎС‚РёС…РѕРїР»С‘С‚</name>
 		<icon>ui_npc_koldun</icon>
 		<map_icon x="5" y="0"></map_icon>
 		<bio>gar_stalker_regular_bio</bio>
@@ -1920,7 +1920,7 @@
 
 <!------------------------genetik_und----------------------->
 	<specific_character id="genetik_und" team_default = "1">
-		<name>Генетик Аксёнов</name>
+		<name>Р“РµРЅРµС‚РёРє РђРєСЃС‘РЅРѕРІ</name>
 		<icon>ui_npc_medik</icon>
 		<map_icon x="3" y="2"></map_icon>
 		<bio>gar_stalker_regular_bio</bio>
@@ -1952,7 +1952,7 @@
 
 <!------------------------aksenov_und----------------------->
 	<specific_character id="aksenov_und" team_default = "1">
-		<name>Вова Аксёнов</name>
+		<name>Р’РѕРІР° РђРєСЃС‘РЅРѕРІ</name>
 		<icon>ui_npc_bomzh</icon>
 		<map_icon x="3" y="2"></map_icon>
 		<bio>gar_stalker_regular_bio</bio>
@@ -1986,7 +1986,7 @@
 
 <!------------------------shmel_und----------------------->
 	<specific_character id="shmel_und" team_default = "1">
-		<name>Шмель</name>
+		<name>РЁРјРµР»СЊ</name>
 		<icon>ui_npc_shmel</icon>
 		<map_icon x="3" y="2"></map_icon>
 		<bio>gar_stalker_regular_bio</bio>
@@ -2275,7 +2275,7 @@
 <!--------------------------PMC_killers---------------------->
 <!---------------------------pmc_leader---------------------->
 	<specific_character id="pmc_leader" team_default = "1">
-		<name>Фагот</name>
+		<name>Р¤Р°РіРѕС‚</name>
 		<icon>ui_npc_pmc_leader</icon>
 		<map_icon x="2" y="3"></map_icon>
 		<bio>sim_stalker_general_bio</bio>
@@ -2311,7 +2311,7 @@
 
 <!---------------------------pmc_face---------------------->
 	<specific_character id="pmc_face" team_default = "1">
-		<name>Густав</name>
+		<name>Р“СѓСЃС‚Р°РІ</name>
 		<icon>ui_npc_pmc_face</icon>
 		<map_icon x="2" y="3"></map_icon>
 		<bio>sim_stalker_general_bio</bio>
@@ -2349,7 +2349,7 @@
 	
 <!---------------------------pmc_gas---------------------->
 	<specific_character id="pmc_gas" team_default = "1">
-		<name>Неизвестный киллер</name>
+		<name>РќРµРёР·РІРµСЃС‚РЅС‹Р№ РєРёР»Р»РµСЂ</name>
 		<icon>ui_npc_pmc_gas</icon>
 		<map_icon x="2" y="3"></map_icon>
 		<bio>sim_stalker_general_bio</bio>
@@ -2386,7 +2386,7 @@
 
 <!---------------------------pmc_gas1---------------------->
 	<specific_character id="pmc_gas1" team_default = "1">
-		<name>Неизвестный киллер</name>
+		<name>РќРµРёР·РІРµСЃС‚РЅС‹Р№ РєРёР»Р»РµСЂ</name>
 		<icon>ui_npc_pmc_gas</icon>
 		<map_icon x="2" y="3"></map_icon>
 		<bio>sim_stalker_general_bio</bio>
@@ -2423,7 +2423,7 @@
 
 <!---------------------------pmc_gas_kap---------------------->
 	<specific_character id="pmc_gas_kap" team_default = "1">
-		<name>Неизвестный киллер</name>
+		<name>РќРµРёР·РІРµСЃС‚РЅС‹Р№ РєРёР»Р»РµСЂ</name>
 		<icon>ui_npc_pmc_gas_kap</icon>
 		<map_icon x="2" y="3"></map_icon>
 		<bio>sim_stalker_general_bio</bio>
@@ -2459,7 +2459,7 @@
 
 <!---------------------------pmc_gas_kap1---------------------->
 	<specific_character id="pmc_gas_kap1" team_default = "1">
-		<name>Неизвестный киллер</name>
+		<name>РќРµРёР·РІРµСЃС‚РЅС‹Р№ РєРёР»Р»РµСЂ</name>
 		<icon>ui_npc_pmc_gas_kap</icon>
 		<map_icon x="2" y="3"></map_icon>
 		<bio>sim_stalker_general_bio</bio>
@@ -2495,7 +2495,7 @@
 
 <!---------------------------pmc_gas_kap2---------------------->
 	<specific_character id="pmc_gas_kap2" team_default = "1">
-		<name>Неизвестный киллер</name>
+		<name>РќРµРёР·РІРµСЃС‚РЅС‹Р№ РєРёР»Р»РµСЂ</name>
 		<icon>ui_npc_pmc_gas_kap</icon>
 		<map_icon x="2" y="3"></map_icon>
 		<bio>sim_stalker_general_bio</bio>
@@ -2531,7 +2531,7 @@
 
 <!---------------------------pmc_leader2---------------------->
 	<specific_character id="pmc_leader2" team_default = "1">
-		<name>Джафар</name>
+		<name>Р”Р¶Р°С„Р°СЂ</name>
 		<icon>ui_npc_pmc_leader2</icon>
 		<map_icon x="2" y="3"></map_icon>
 		<bio>sim_stalker_general_bio</bio>
@@ -2569,7 +2569,7 @@
 <!--------------------------pashka------------------------>
 
     <specific_character id="pashka" team_default = "1">
-        <name>Пашка</name>
+        <name>РџР°С€РєР°</name>
         <icon>ui_npc_pashka</icon>
 		<map_icon x="3" y="0"></map_icon>
 		<bio>sim_stalker_general_bio</bio>
@@ -2599,10 +2599,10 @@
 <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>						
     </specific_character>
 	
-<!-----------------------------Призраки--------------------------->	
+<!-----------------------------РџСЂРёР·СЂР°РєРё--------------------------->	
 <!---------------------------shubin_tree-------------------------->	
 	<specific_character id="shubin_tree" team_default = "1">
-		<name>Добрый Шубин</name>
+		<name>Р”РѕР±СЂС‹Р№ РЁСѓР±РёРЅ</name>
 		<icon>ui_npc_mechanik_0</icon>
 		<bio>sim_stalker_general_bio</bio>
 
@@ -2632,7 +2632,7 @@
 
 <!---------------------------bandit_tree-------------------------->	
 	<specific_character id="bandit_tree" team_default = "1">
-		<name>Ключник</name>
+		<name>РљР»СЋС‡РЅРёРє</name>
 		<icon>ui_npc_inv</icon>
 		<bio>sim_stalker_general_bio</bio>
 
@@ -2661,7 +2661,7 @@
 
 <!---------------------------barnie_tree-------------------------->	
 	<specific_character id="barnie_tree" team_default = "1">
-		<name>Бродяга</name>
+		<name>Р‘СЂРѕРґСЏРіР°</name>
 		<icon>ui_npc_inv</icon>
 		<bio>sim_stalker_general_bio</bio>
 
@@ -2690,7 +2690,7 @@
 
 <!---------------------------kepka_tree-------------------------->	
 	<specific_character id="kepka_tree" team_default = "1">
-		<name>Молчун</name>
+		<name>РњРѕР»С‡СѓРЅ</name>
 		<icon>ui_npc_inv</icon>
 		<bio>sim_stalker_general_bio</bio>
 
@@ -2719,7 +2719,7 @@
 
 <!---------------------------kontra_tree-------------------------->	
 	<specific_character id="kontra_tree" team_default = "1">
-		<name>Доцент</name>
+		<name>Р”РѕС†РµРЅС‚</name>
 		<icon>ui_npc_inv</icon>
 		<bio>sim_stalker_general_bio</bio>
 
@@ -2748,7 +2748,7 @@
 
 <!---------------------------matilda_tree-------------------------->	
 	<specific_character id="matilda_tree" team_default = "1">
-		<name>Матильда</name>
+		<name>РњР°С‚РёР»СЊРґР°</name>
 		<icon>ui_npc_inv</icon>
 		<bio>sim_stalker_general_bio</bio>
 
@@ -2777,7 +2777,7 @@
 
 <!---------------------------shmel_tree-------------------------->	
 	<specific_character id="shmel_tree" team_default = "1">
-		<name>Кабановский</name>
+		<name>РљР°Р±Р°РЅРѕРІСЃРєРёР№</name>
 		<icon>ui_npc_inv</icon>
 		<bio>sim_stalker_general_bio</bio>
 
@@ -2806,7 +2806,7 @@
 
 <!---------------------------snork_tree-------------------------->	
 	<specific_character id="snork_tree" team_default = "1">
-		<name>Колька</name>
+		<name>РљРѕР»СЊРєР°</name>
 		<icon>ui_npc_inv</icon>
 		<bio>sim_stalker_general_bio</bio>
 
@@ -2835,7 +2835,7 @@
 
 <!---------------------------stalker_tree-------------------------->	
 	<specific_character id="stalker_tree" team_default = "1">
-		<name>Митька</name>
+		<name>РњРёС‚СЊРєР°</name>
 		<icon>ui_npc_inv</icon>
 		<bio>sim_stalker_general_bio</bio>
 
@@ -2864,7 +2864,7 @@
 
 <!---------------------------zombi_tree-------------------------->	
 	<specific_character id="zombi_tree" team_default = "1">
-		<name>Фёдор Михалыч</name>
+		<name>Р¤С‘РґРѕСЂ РњРёС…Р°Р»С‹С‡</name>
 		<icon>ui_npc_inv</icon>
 		<bio>sim_stalker_general_bio</bio>
 

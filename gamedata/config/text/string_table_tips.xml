@@ -1,13 +1,13 @@
 
-<!-- таблица строк-подсказок -->
+<!-- С‚Р°Р±Р»РёС†Р° СЃС‚СЂРѕРє-РїРѕРґСЃРєР°Р·РѕРє -->
 <string_table>
 	<string id="inventory_item_use">
 		<text>Pickup item (default E)</text>
-		<text ln="rus">Поднять предмет (по-умолчанию 'E')</text>
+		<text ln="rus">РџРѕРґРЅСЏС‚СЊ РїСЂРµРґРјРµС‚ (РїРѕ-СѓРјРѕР»С‡Р°РЅРёСЋ 'E')</text>
 	</string>
 	<string id="character_use">
 		<text>Talk with the person (default E)</text>
-		<text ln="rus">Говорить (по-умолчанию 'E')</text>
+		<text ln="rus">Р“РѕРІРѕСЂРёС‚СЊ (РїРѕ-СѓРјРѕР»С‡Р°РЅРёСЋ 'E')</text>
 	</string>
 	<string id="dead_character_use">
 		<text>Search corpse (default E)</text>

@@ -140,7 +140,7 @@ function actor_binder:reinit()
     self.object:set_callback(callback.level_border_exit, self.level_border_exit, self)
     self.object:set_callback(callback.take_item_from_box, self.take_item_from_box, self)
     -- added by boryan67
-    self.object:set_callback(callback.use_object, self.use_object, self)
+    -- self.object:set_callback(callback.use_object, self.use_object, self)
     self.object:set_callback(callback.death, self.death_callback, self)
 	self.object:set_callback( callback.use_object, self.on_use_object, self )
     self.object:set_callback(callback.on_level_map_click, self.on_level_map_click, self)
@@ -149,9 +149,9 @@ end
 -- added by boryan67
 ----------------------------------------------------------------------------------------------------------------------
 -- Использование объекта
-function actor_binder:use_object(obj)
-    boryan67.use_object(obj)
-end
+-- function actor_binder:use_object(obj)
+    -- boryan67.use_object(obj)
+-- end
 ----------------------------------------------------------------------------------------------------------------------
 controllerSoundPresentOnDeath = false
 function actor_binder:death_callback(victim, who)
@@ -769,6 +769,7 @@ function actor_binder:on_key_hold(key, bind)
 end
 
 function actor_binder:on_use_object( obj )
+  boryan67.use_object(obj)
   local sobj = alife():object( obj:id() )
   if sobj then
     self.am:call( "on_use", obj, sobj )

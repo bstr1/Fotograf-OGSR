@@ -161,12 +161,12 @@
         </phrase_list>
     </dialog>
 
-	<!-- Îáìåí ïðåäìåòàìè ñ ÍÏÑ -->
+	<!-- ÐžÐ±Ð¼ÐµÐ½ Ð¿Ñ€ÐµÐ´Ð¼ÐµÑ‚Ð°Ð¼Ð¸ Ñ ÐÐŸÐ¡ -->
 		<dialog id="dm_dialog_exchanging_items">
 		  <init_func>exchanging_items.init_exchanging_items_dialog</init_func> 
         </dialog>
 
-	<!--------- Ìèíèèãðû --------->		
+	<!--------- ÐœÐ¸Ð½Ð¸Ð¸Ð³Ñ€Ñ‹ --------->		
     <dialog id="mini_games_dialog">
           <init_func>mini_games.init_mini_games_phr_dlg</init_func> 
     </dialog>

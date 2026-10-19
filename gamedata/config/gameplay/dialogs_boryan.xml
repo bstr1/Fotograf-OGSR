@@ -1,6 +1,6 @@
 
 <game_dialogs>
-	<!-- Äèàëîã ñ Áðèòûì î åãî äðóçüÿõ -->
+	<!-- Ð”Ð¸Ð°Ð»Ð¾Ð³ Ñ Ð‘Ñ€Ð¸Ñ‚Ñ‹Ð¼ Ð¾ ÐµÐ³Ð¾ Ð´Ñ€ÑƒÐ·ÑŒÑÑ… -->
 	<dialog id="britiy_friend">
 		<has_info>info_target18</has_info>
 		<dont_has_info>britiy_dialog_foto_end</dont_has_info> 
@@ -65,13 +65,13 @@
 			</phrase>			
         </phrase_list>		
 	</dialog>	
-	<!--Áðèòûé ñìîòðèò ôîòêè--------------------------------------------->  
+	<!--Ð‘Ñ€Ð¸Ñ‚Ñ‹Ð¹ ÑÐ¼Ð¾Ñ‚Ñ€Ð¸Ñ‚ Ñ„Ð¾Ñ‚ÐºÐ¸--------------------------------------------->  
 	<dialog id="britiy_foto">
 		<has_info>britiy_foto_start</has_info>
 		<precondition>boryan67.searh_friend</precondition>
 	    <phrase_list>
 			<phrase id="0">
-                <text>britiy_foto_0</text>	<!-- ïîñìîòðè ôîòêè-->
+                <text>britiy_foto_0</text>	<!-- Ð¿Ð¾ÑÐ¼Ð¾Ñ‚Ñ€Ð¸ Ñ„Ð¾Ñ‚ÐºÐ¸-->
 				<next>1</next>
 				<next>2</next>
 				<next>3</next>
@@ -80,47 +80,47 @@
 			
 			<phrase id="1">
 				<precondition>boryan67.have_1</precondition>
-                <text>britiy_foto_1</text>	<!-- åñòü 1-->
+                <text>britiy_foto_1</text>	<!-- ÐµÑÑ‚ÑŒ 1-->
 				<next>5</next>
 			</phrase>
 			
 			<phrase id="2">
 				<precondition>boryan67.have_2</precondition>
-                <text>britiy_foto_2</text>	<!-- åñòü 2-->
+                <text>britiy_foto_2</text>	<!-- ÐµÑÑ‚ÑŒ 2-->
 				<next>7</next>
 			</phrase>
 			
 			<phrase id="3">
 				<precondition>boryan67.have_3</precondition>
-                <text>britiy_foto_3</text>	<!-- åñòü 3-->
+                <text>britiy_foto_3</text>	<!-- ÐµÑÑ‚ÑŒ 3-->
 				<next>9</next>
 			</phrase>
 			
 			<phrase id="4">
 				<precondition>boryan67.have_nothing</precondition>
-                <text>britiy_foto_nothing</text>	<!-- íè÷åãî íåò-->
+                <text>britiy_foto_nothing</text>	<!-- Ð½Ð¸Ñ‡ÐµÐ³Ð¾ Ð½ÐµÑ‚-->
 			</phrase>
-			<!-- ðåàêöèÿ íà ñîîòâåòñòâóþùèõ ïåðöåâ-->
+			<!-- Ñ€ÐµÐ°ÐºÑ†Ð¸Ñ Ð½Ð° ÑÐ¾Ð¾Ñ‚Ð²ÐµÑ‚ÑÑ‚Ð²ÑƒÑŽÑ‰Ð¸Ñ… Ð¿ÐµÑ€Ñ†ÐµÐ²-->
 			<!-- 1 -->
 			<phrase id="5">
-                <text>britiy_foto_1_1</text>	<!-- ýòî 1-->
+                <text>britiy_foto_1_1</text>	<!-- ÑÑ‚Ð¾ 1-->
 				<next>6</next>
 			</phrase>
 
 			<phrase id="6">
-                <text>britiy_foto_1_2</text>	<!-- áëàãîäàðíîñòü 1-->
+                <text>britiy_foto_1_2</text>	<!-- Ð±Ð»Ð°Ð³Ð¾Ð´Ð°Ñ€Ð½Ð¾ÑÑ‚ÑŒ 1-->
 				<action>boryan67.priz1</action>
 				<give_info>britiy_has_1</give_info>
 				<next>11</next>
 			</phrase>
 			<!-- 2 -->
 			<phrase id="7">
-                <text>britiy_foto_2_1</text>	<!-- ýòî 2-->
+                <text>britiy_foto_2_1</text>	<!-- ÑÑ‚Ð¾ 2-->
 				<next>8</next>
 			</phrase>
 
 			<phrase id="8">
-                <text>britiy_foto_2_2</text>	<!-- áëàãîäàðíîñòü 2-->
+                <text>britiy_foto_2_2</text>	<!-- Ð±Ð»Ð°Ð³Ð¾Ð´Ð°Ñ€Ð½Ð¾ÑÑ‚ÑŒ 2-->
 				<action>boryan67.priz2</action>
 				<give_info>britiy_has_2</give_info>
 				<next>11</next>
@@ -128,19 +128,19 @@
 
 			<!-- 3 -->
 			<phrase id="9">
-                <text>britiy_foto_3_1</text>	<!-- ýòî 3-->
+                <text>britiy_foto_3_1</text>	<!-- ÑÑ‚Ð¾ 3-->
 				<next>10</next>
 			</phrase>
 
 			<phrase id="10">
-                <text>britiy_foto_3_2</text>	<!-- áëàãîäàðíîñòü 3-->
+                <text>britiy_foto_3_2</text>	<!-- Ð±Ð»Ð°Ð³Ð¾Ð´Ð°Ñ€Ð½Ð¾ÑÑ‚ÑŒ 3-->
 				<action>boryan67.priz3</action>
 				<give_info>britiy_has_3</give_info>
 				<next>11</next>
 			</phrase>
 			
 			<phrase id="11">
-                <text>britiy_foto_11</text>	<!-- åùå ðàç ïîñìîòðè ôîòêè-->
+                <text>britiy_foto_11</text>	<!-- ÐµÑ‰Ðµ Ñ€Ð°Ð· Ð¿Ð¾ÑÐ¼Ð¾Ñ‚Ñ€Ð¸ Ñ„Ð¾Ñ‚ÐºÐ¸-->
 				<next>1</next>
 				<next>2</next>
 				<next>3</next>
@@ -148,7 +148,7 @@
 			</phrase>
         </phrase_list>
 	</dialog>	 
-	<!-- äèàëîã ñ Äçÿî î íàãðàäå --------------------------------------------->  
+	<!-- Ð´Ð¸Ð°Ð»Ð¾Ð³ Ñ Ð”Ð·ÑÐ¾ Ð¾ Ð½Ð°Ð³Ñ€Ð°Ð´Ðµ --------------------------------------------->  
 	<dialog id="pruha_priz_dialog">
 		<dont_has_info>dzyao_priz</dont_has_info> 
 		<precondition>boryan67.check_fotos</precondition>
@@ -197,7 +197,7 @@
         </phrase_list>	
 	</dialog>
 	
-	<!--Äèàëîã ñ Âîðîíèíûì î íåìöàõ----------------------------------------------->  
+	<!--Ð”Ð¸Ð°Ð»Ð¾Ð³ Ñ Ð’Ð¾Ñ€Ð¾Ð½Ð¸Ð½Ñ‹Ð¼ Ð¾ Ð½ÐµÐ¼Ñ†Ð°Ñ…----------------------------------------------->  
 	<dialog id="voronin_gans_dialog">
 		<dont_has_info>voronin_gans</dont_has_info> 
 		<has_info>german_spasenie_gotovo</has_info>
@@ -293,7 +293,7 @@
 			</phrase>			
         </phrase_list>		
 	</dialog>
-	<!--Äèàëîã ñ Ïåòðîãðàôîì î Ïåðäîíèòå----------------------------------------------->
+	<!--Ð”Ð¸Ð°Ð»Ð¾Ð³ Ñ ÐŸÐµÑ‚Ñ€Ð¾Ð³Ñ€Ð°Ñ„Ð¾Ð¼ Ð¾ ÐŸÐµÑ€Ð´Ð¾Ð½Ð¸Ñ‚Ðµ----------------------------------------------->
 <dialog id="petrograf_dialog_0">
 	<dont_has_info>petrograf_dialog_0_done</dont_has_info>
     <phrase_list>
@@ -415,7 +415,7 @@
 		
     </phrase_list>	
 </dialog>
-	<!--Äèàëîã ñ Ïåòðîãðàôîì î êîëëåêöèè ìèíåðàëîâ----------------------------------------------->
+	<!--Ð”Ð¸Ð°Ð»Ð¾Ð³ Ñ ÐŸÐµÑ‚Ñ€Ð¾Ð³Ñ€Ð°Ñ„Ð¾Ð¼ Ð¾ ÐºÐ¾Ð»Ð»ÐµÐºÑ†Ð¸Ð¸ Ð¼Ð¸Ð½ÐµÑ€Ð°Ð»Ð¾Ð²----------------------------------------------->
 <dialog id="petrograf_dialog_1">
 	<dont_has_info>petrograf_dialog_1_done</dont_has_info>
 	<has_info>perdonit_enable</has_info>
@@ -457,7 +457,7 @@
         </phrase>		
     </phrase_list>	
 </dialog>
-	<!--Äèàëîã ñ Ïåòðîãðàôîì î ñáîðå è ïåðåäà÷à êîëëåêöèè ìèíåðàëîâ----------------------------------------------->	
+	<!--Ð”Ð¸Ð°Ð»Ð¾Ð³ Ñ ÐŸÐµÑ‚Ñ€Ð¾Ð³Ñ€Ð°Ñ„Ð¾Ð¼ Ð¾ ÑÐ±Ð¾Ñ€Ðµ Ð¸ Ð¿ÐµÑ€ÐµÐ´Ð°Ñ‡Ð° ÐºÐ¾Ð»Ð»ÐµÐºÑ†Ð¸Ð¸ Ð¼Ð¸Ð½ÐµÑ€Ð°Ð»Ð¾Ð²----------------------------------------------->	
 <dialog id="petrograf_dialog_2">
 	<dont_has_info>petrograf_dialog_2_done</dont_has_info>
 	<has_info>petrograf_collect</has_info>
@@ -486,7 +486,7 @@
         </phrase>		
     </phrase_list>	
 </dialog>
-	<!--Äèàëîã ñ Ïåòðîãðàôîì î íàõîæäåíèè è ïåðåäà÷à Ïåðäîíèòà----------------------------------------------->
+	<!--Ð”Ð¸Ð°Ð»Ð¾Ð³ Ñ ÐŸÐµÑ‚Ñ€Ð¾Ð³Ñ€Ð°Ñ„Ð¾Ð¼ Ð¾ Ð½Ð°Ñ…Ð¾Ð¶Ð´ÐµÐ½Ð¸Ð¸ Ð¸ Ð¿ÐµÑ€ÐµÐ´Ð°Ñ‡Ð° ÐŸÐµÑ€Ð´Ð¾Ð½Ð¸Ñ‚Ð°----------------------------------------------->
 <dialog id="petrograf_dialog_3">
 	<precondition>petrograf.has_perdonit</precondition>	
     <phrase_list>
@@ -521,7 +521,7 @@
         </phrase>		
     </phrase_list>	
 </dialog>
-	<!--Ïåðâûé äèàëîã ñ äåäîì Çàïàäëî----------------------------------------------->
+	<!--ÐŸÐµÑ€Ð²Ñ‹Ð¹ Ð´Ð¸Ð°Ð»Ð¾Ð³ Ñ Ð´ÐµÐ´Ð¾Ð¼ Ð—Ð°Ð¿Ð°Ð´Ð»Ð¾----------------------------------------------->
 <dialog id="zapadlo_dialog_1">
 	<dont_has_info>zapadlo_dialog_1_done</dont_has_info>	
     <phrase_list>
@@ -611,7 +611,7 @@
         </phrase>		
     </phrase_list>	
 </dialog>	
-	<!--Âòîðîé äèàëîã ñ äåäîì Çàïàäëî----------------------------------------------->
+	<!--Ð’Ñ‚Ð¾Ñ€Ð¾Ð¹ Ð´Ð¸Ð°Ð»Ð¾Ð³ Ñ Ð´ÐµÐ´Ð¾Ð¼ Ð—Ð°Ð¿Ð°Ð´Ð»Ð¾----------------------------------------------->
 <dialog id="zapadlo_dialog_2">
 	<has_info>zapadlo_robbery_2</has_info>
 	<dont_has_info>zapadlo_dialog_2_done</dont_has_info>	
@@ -684,7 +684,7 @@
         </phrase>		
     </phrase_list>	
 </dialog>
-	<!--Ïåðâûé äèàëîã ñ Õàðîíîì â ÌÃ----------------------------------------------->
+	<!--ÐŸÐµÑ€Ð²Ñ‹Ð¹ Ð´Ð¸Ð°Ð»Ð¾Ð³ Ñ Ð¥Ð°Ñ€Ð¾Ð½Ð¾Ð¼ Ð² ÐœÐ“----------------------------------------------->
 <dialog id="haron_dialog_1">
 	<has_info>zapadlo_dialog_2_done</has_info>
 	<dont_has_info>haron_dialog_1_done</dont_has_info>	
@@ -719,7 +719,7 @@
         </phrase>		
     </phrase_list>	
 </dialog>	
-	<!--Âòîðîé äèàëîã ñ Õàðîíîì â ÌÃ----------------------------------------------->
+	<!--Ð’Ñ‚Ð¾Ñ€Ð¾Ð¹ Ð´Ð¸Ð°Ð»Ð¾Ð³ Ñ Ð¥Ð°Ñ€Ð¾Ð½Ð¾Ð¼ Ð² ÐœÐ“----------------------------------------------->
 <dialog id="haron_dialog_2">
 	<has_info>haron_dialog_1_done</has_info>
 	<precondition>boryan67.has_repboxes</precondition>
@@ -756,7 +756,7 @@
         </phrase>		
     </phrase_list>	
 </dialog>
-	<!--Òðåòèé äèàëîã ñ äåäîì Çàïàäëî----------------------------------------------->
+	<!--Ð¢Ñ€ÐµÑ‚Ð¸Ð¹ Ð´Ð¸Ð°Ð»Ð¾Ð³ Ñ Ð´ÐµÐ´Ð¾Ð¼ Ð—Ð°Ð¿Ð°Ð´Ð»Ð¾----------------------------------------------->
 <dialog id="zapadlo_dialog_3">
 	<has_info>haron_dialog_2_done</has_info>
 	<dont_has_info>zapadlo_dialog_3_done</dont_has_info>	
@@ -792,7 +792,7 @@
         </phrase>
     </phrase_list>	
 </dialog>
-	<!--Äèàëîã ñ âíó÷êîé----------------------------------------------->
+	<!--Ð”Ð¸Ð°Ð»Ð¾Ð³ Ñ Ð²Ð½ÑƒÑ‡ÐºÐ¾Ð¹----------------------------------------------->
 <dialog id="verka_dialog_1">
 	<dont_has_info>verka_dialog_1_done</dont_has_info>	
     <phrase_list>
@@ -822,11 +822,11 @@
         </phrase>
 		<phrase id="6">
 			<text>verka_1_6</text>
-			<give_info>verka_dialog_1_done</give_info>	<!-- Ïðèçíàê äëÿ Âåðêè ê íà÷àëó äâèæåíèÿ ê Õàðîíó-->
+			<give_info>verka_dialog_1_done</give_info>	<!-- ÐŸÑ€Ð¸Ð·Ð½Ð°Ðº Ð´Ð»Ñ Ð’ÐµÑ€ÐºÐ¸ Ðº Ð½Ð°Ñ‡Ð°Ð»Ñƒ Ð´Ð²Ð¸Ð¶ÐµÐ½Ð¸Ñ Ðº Ð¥Ð°Ñ€Ð¾Ð½Ñƒ-->
         </phrase>
     </phrase_list>	
 </dialog>
-	<!--Òðåòèé äèàëîã ñ Õàðîíîì â ÌÃ----------------------------------------------->
+	<!--Ð¢Ñ€ÐµÑ‚Ð¸Ð¹ Ð´Ð¸Ð°Ð»Ð¾Ð³ Ñ Ð¥Ð°Ñ€Ð¾Ð½Ð¾Ð¼ Ð² ÐœÐ“----------------------------------------------->
 <dialog id="haron_dialog_3">
 	<has_info>verka_dialog_1_done</has_info>
 	<has_info>verka_na_meste</has_info>
@@ -850,11 +850,11 @@
         </phrase>
 		<phrase id="4">
 			<text>verka_4_4</text>
-			<give_info>haron_dialog_3_done</give_info>	<!-- Ïðèçíàê äëÿ Âåðêè è Õàðîíà äëÿ äâèæåíèÿ íà âûõîä-->		
+			<give_info>haron_dialog_3_done</give_info>	<!-- ÐŸÑ€Ð¸Ð·Ð½Ð°Ðº Ð´Ð»Ñ Ð’ÐµÑ€ÐºÐ¸ Ð¸ Ð¥Ð°Ñ€Ð¾Ð½Ð° Ð´Ð»Ñ Ð´Ð²Ð¸Ð¶ÐµÐ½Ð¸Ñ Ð½Ð° Ð²Ñ‹Ñ…Ð¾Ð´-->		
         </phrase>		
     </phrase_list>	
 </dialog>
-	<!--×åòâåðòûé äèàëîã ñ äåäîì Çàïàäëî----------------------------------------------->
+	<!--Ð§ÐµÑ‚Ð²ÐµÑ€Ñ‚Ñ‹Ð¹ Ð´Ð¸Ð°Ð»Ð¾Ð³ Ñ Ð´ÐµÐ´Ð¾Ð¼ Ð—Ð°Ð¿Ð°Ð´Ð»Ð¾----------------------------------------------->
 <dialog id="zapadlo_dialog_4">
 	<has_info>verka_out</has_info>
 	<dont_has_info>zapadlo_dialog_4_done</dont_has_info>	
@@ -883,7 +883,7 @@
     </phrase_list>	
 </dialog>
 
-	<!--Äèàëîã 1 ñ ìàéîðîì Øïàê ----------------------------------------------->
+	<!--Ð”Ð¸Ð°Ð»Ð¾Ð³ 1 Ñ Ð¼Ð°Ð¹Ð¾Ñ€Ð¾Ð¼ Ð¨Ð¿Ð°Ðº ----------------------------------------------->
 <dialog id="shpak_dialog_1">
 	<dont_has_info>shpak_dialog_1_done</dont_has_info>	
     <phrase_list>
@@ -931,7 +931,7 @@
         </phrase>		
     </phrase_list>	
 </dialog>	
-	<!--Äèàëîã 2 ñ ìàéîðîì Øïàê ----------------------------------------------->
+	<!--Ð”Ð¸Ð°Ð»Ð¾Ð³ 2 Ñ Ð¼Ð°Ð¹Ð¾Ñ€Ð¾Ð¼ Ð¨Ð¿Ð°Ðº ----------------------------------------------->
 <dialog id="shpak_dialog_2">
 	<dont_has_info>shpak_dialog_2_done</dont_has_info>
 	<has_info>shpak_vodka</has_info>
@@ -952,7 +952,7 @@
         </phrase>		
     </phrase_list>	
 </dialog>	
-	<!--Äèàëîã 3 ñ ìàéîðîì Øïàê ----------------------------------------------->
+	<!--Ð”Ð¸Ð°Ð»Ð¾Ð³ 3 Ñ Ð¼Ð°Ð¹Ð¾Ñ€Ð¾Ð¼ Ð¨Ð¿Ð°Ðº ----------------------------------------------->
 <dialog id="shpak_dialog_3">
 	<dont_has_info>shpak_dialog_3_done</dont_has_info>
 	<has_info>shpak_timer1</has_info>	
@@ -1001,7 +1001,7 @@
         </phrase>		
     </phrase_list>	
 </dialog>
-	<!--Äèàëîã 4 ñ ìàéîðîì Øïàê ----------------------------------------------->
+	<!--Ð”Ð¸Ð°Ð»Ð¾Ð³ 4 Ñ Ð¼Ð°Ð¹Ð¾Ñ€Ð¾Ð¼ Ð¨Ð¿Ð°Ðº ----------------------------------------------->
 <dialog id="shpak_dialog_4">
 	<dont_has_info>shpak_dialog_4_done</dont_has_info>
 	<has_info>shpak_vintorez</has_info>
@@ -1026,7 +1026,7 @@
         </phrase>		
     </phrase_list>	
 </dialog>
-	<!--Äèàëîã 5 ñ ìàéîðîì Øïàê ïðî Äóíþ ----------------------------------------------->
+	<!--Ð”Ð¸Ð°Ð»Ð¾Ð³ 5 Ñ Ð¼Ð°Ð¹Ð¾Ñ€Ð¾Ð¼ Ð¨Ð¿Ð°Ðº Ð¿Ñ€Ð¾ Ð”ÑƒÐ½ÑŽ ----------------------------------------------->
 <dialog id="shpak_dialog_5">
 	<dont_has_info>shpak_dialog_5_done</dont_has_info>
 	<has_info>shpak_timer2</has_info>
@@ -1094,7 +1094,7 @@
         </phrase>		
     </phrase_list>	
 </dialog>
-	<!--Äèàëîã 6 ñ ìàéîðîì Øïàê, Äóíÿ ìåðòâà ----------------------------------------------->
+	<!--Ð”Ð¸Ð°Ð»Ð¾Ð³ 6 Ñ Ð¼Ð°Ð¹Ð¾Ñ€Ð¾Ð¼ Ð¨Ð¿Ð°Ðº, Ð”ÑƒÐ½Ñ Ð¼ÐµÑ€Ñ‚Ð²Ð° ----------------------------------------------->
 <dialog id="shpak_dialog_6">
 	<dont_has_info>shpak_dialog_6_done</dont_has_info>
 	<has_info>dunya_dead</has_info>
@@ -1138,7 +1138,7 @@
 		</phrase>
     </phrase_list>	
 </dialog>
-	<!--Äèàëîã 7 ñ ìàéîðîì Øïàê, Äóíÿ æèâà ----------------------------------------------->
+	<!--Ð”Ð¸Ð°Ð»Ð¾Ð³ 7 Ñ Ð¼Ð°Ð¹Ð¾Ñ€Ð¾Ð¼ Ð¨Ð¿Ð°Ðº, Ð”ÑƒÐ½Ñ Ð¶Ð¸Ð²Ð° ----------------------------------------------->
 <dialog id="shpak_dialog_7">
 	<dont_has_info>shpak_dialog_7_done</dont_has_info>
 	<dont_has_info>dunya_dead</dont_has_info>
@@ -1175,7 +1175,7 @@
         </phrase>
     </phrase_list>	
 </dialog>
-	<!--Äèàëîã 8 ñ ìàéîðîì Øïàê, ïîëó÷åíèå ïàéêà ----------------------------------------------->
+	<!--Ð”Ð¸Ð°Ð»Ð¾Ð³ 8 Ñ Ð¼Ð°Ð¹Ð¾Ñ€Ð¾Ð¼ Ð¨Ð¿Ð°Ðº, Ð¿Ð¾Ð»ÑƒÑ‡ÐµÐ½Ð¸Ðµ Ð¿Ð°Ð¹ÐºÐ° ----------------------------------------------->
 <dialog id="shpak_dialog_8">
 	<has_info>shpak_timer3</has_info>
 	<precondition>boryan67.actor_litra_have</precondition>	
@@ -1195,7 +1195,7 @@
         </phrase>
     </phrase_list>	
 </dialog>
-	<!--Äèàëîã 1 ñ Äóíåé ----------------------------------------------->
+	<!--Ð”Ð¸Ð°Ð»Ð¾Ð³ 1 Ñ Ð”ÑƒÐ½ÐµÐ¹ ----------------------------------------------->
 <dialog id="dunya_dialog_1">
 	<has_info>shpak_dialog_5_done</has_info>
 	<dont_has_info>dunya_dialog_1_done</dont_has_info>
@@ -1271,7 +1271,7 @@
         </phrase>
     </phrase_list>	
 </dialog>
-	<!--Äèàëîã 2 ñ Äóíåé ----------------------------------------------->
+	<!--Ð”Ð¸Ð°Ð»Ð¾Ð³ 2 Ñ Ð”ÑƒÐ½ÐµÐ¹ ----------------------------------------------->
 <dialog id="dunya_dialog_2">
 	<has_info>dunya_doshla</has_info>
 	<dont_has_info>dunya_dialog_2_done</dont_has_info>
@@ -1316,7 +1316,7 @@
     </phrase_list>	
 </dialog>
 
-	<!--Äèàëîã 1 ñ Êðûñîëîâîì ----------------------------------------------->
+	<!--Ð”Ð¸Ð°Ð»Ð¾Ð³ 1 Ñ ÐšÑ€Ñ‹ÑÐ¾Ð»Ð¾Ð²Ð¾Ð¼ ----------------------------------------------->
 <dialog id="krisalov_dialog_1">
 	<dont_has_info>krisalov_dialog_1_done</dont_has_info>
     <phrase_list>
@@ -1415,7 +1415,7 @@
     </phrase_list>	
 </dialog>
 
-	<!--Äèàëîã 2 ñ Êðûñîëîâîì ----------------------------------------------->
+	<!--Ð”Ð¸Ð°Ð»Ð¾Ð³ 2 Ñ ÐšÑ€Ñ‹ÑÐ¾Ð»Ð¾Ð²Ð¾Ð¼ ----------------------------------------------->
 <dialog id="krisalov_dialog_2">
 	<dont_has_info>krisalov_dialog_2_done</dont_has_info>
 	<has_info>krisalov_dudka</has_info>
@@ -1506,7 +1506,7 @@
     </phrase_list>	
 </dialog>
 
-	<!--Äèàëîã 3 ñ Êðûñîëîâîì ----------------------------------------------->
+	<!--Ð”Ð¸Ð°Ð»Ð¾Ð³ 3 Ñ ÐšÑ€Ñ‹ÑÐ¾Ð»Ð¾Ð²Ð¾Ð¼ ----------------------------------------------->
 <dialog id="krisalov_dialog_3">
 	<dont_has_info>krisalov_dialog_3_done</dont_has_info>
 	<has_info>krisalov_timer</has_info>
@@ -1573,7 +1573,7 @@
     </phrase_list>	
 </dialog>
 
-	<!--Äèàëîã 4 ñ Êðûñîëîâîì ----------------------------------------------->
+	<!--Ð”Ð¸Ð°Ð»Ð¾Ð³ 4 Ñ ÐšÑ€Ñ‹ÑÐ¾Ð»Ð¾Ð²Ð¾Ð¼ ----------------------------------------------->
 <dialog id="krisalov_dialog_4">
 	<dont_has_info>krisalov_dialog_4_done</dont_has_info>
 	<has_info>drink_badyaga</has_info>
@@ -1599,7 +1599,7 @@
     </phrase_list>	
 </dialog>
 
-	<!--Äèàëîã 5 ñ Êðûñîëîâîì ----------------------------------------------->
+	<!--Ð”Ð¸Ð°Ð»Ð¾Ð³ 5 Ñ ÐšÑ€Ñ‹ÑÐ¾Ð»Ð¾Ð²Ð¾Ð¼ ----------------------------------------------->
 <dialog id="krisalov_dialog_5">
 	<dont_has_info>krisalov_dialog_5_done</dont_has_info>
 	<has_info>krisalov_timer1</has_info>
@@ -1622,7 +1622,7 @@
     </phrase_list>
 </dialog>
 
-	<!--Äèàëîã 6 ñ Êðûñîëîâîì ----------------------------------------------->
+	<!--Ð”Ð¸Ð°Ð»Ð¾Ð³ 6 Ñ ÐšÑ€Ñ‹ÑÐ¾Ð»Ð¾Ð²Ð¾Ð¼ ----------------------------------------------->
 <dialog id="krisalov_dialog_6">
 	<precondition>foto.mouse_have</precondition>
 	<has_info>krisalov_dialog_4_done</has_info>
@@ -1649,7 +1649,7 @@
     </phrase_list>
 </dialog>
 
-	<!--Äèàëîã 3 ñ Øóáèíûì î êðåñòàõ ----------------------------------------------->
+	<!--Ð”Ð¸Ð°Ð»Ð¾Ð³ 3 Ñ Ð¨ÑƒÐ±Ð¸Ð½Ñ‹Ð¼ Ð¾ ÐºÑ€ÐµÑÑ‚Ð°Ñ… ----------------------------------------------->
 <dialog id="shubin_dialog_3">
 	<dont_has_info>shubin_dialog_3_done</dont_has_info>
 	<has_info>brown5_dialog_start</has_info>
@@ -1720,7 +1720,7 @@
     </phrase_list>
 </dialog>
 
-	<!--Äèàëîã 4 ñ Øóáèíûì ñäà÷à êðåñòîâ ----------------------------------------------->
+	<!--Ð”Ð¸Ð°Ð»Ð¾Ð³ 4 Ñ Ð¨ÑƒÐ±Ð¸Ð½Ñ‹Ð¼ ÑÐ´Ð°Ñ‡Ð° ÐºÑ€ÐµÑÑ‚Ð¾Ð² ----------------------------------------------->
 <dialog id="shubin_dialog_4">
 	<dont_has_info>shubin_dialog_4_done</dont_has_info>
     <has_info>krest_finish</has_info>
@@ -1759,7 +1759,7 @@
 	</phrase_list>
 </dialog>
 
-    <!--Äèàëîã 1 ñ Ñåðãååì Àíäðååâè÷åì ïîèñê èñòî÷íèêà ýíåðãèè ----------------------------------------------->
+    <!--Ð”Ð¸Ð°Ð»Ð¾Ð³ 1 Ñ Ð¡ÐµÑ€Ð³ÐµÐµÐ¼ ÐÐ½Ð´Ñ€ÐµÐµÐ²Ð¸Ñ‡ÐµÐ¼ Ð¿Ð¾Ð¸ÑÐº Ð¸ÑÑ‚Ð¾Ñ‡Ð½Ð¸ÐºÐ° ÑÐ½ÐµÑ€Ð³Ð¸Ð¸ ----------------------------------------------->
 	<dialog id="petrovige_dialog_1"> 
 	<dont_has_info>petro_dialog_1_done</dont_has_info>
 	    <phrase_list>
@@ -1832,7 +1832,7 @@
         </phrase_list>		
 	</dialog>
 
-<!--Äèàëîã 2 ñ Ñåðãååì Àíäðååâè÷åì ñäà÷à êâåñòà ----------------------------------------------->
+<!--Ð”Ð¸Ð°Ð»Ð¾Ð³ 2 Ñ Ð¡ÐµÑ€Ð³ÐµÐµÐ¼ ÐÐ½Ð´Ñ€ÐµÐµÐ²Ð¸Ñ‡ÐµÐ¼ ÑÐ´Ð°Ñ‡Ð° ÐºÐ²ÐµÑÑ‚Ð° ----------------------------------------------->
 	<dialog id="petrovige_dialog_2">
 		<has_info>petro_dialog_1_done</has_info>
 		<dont_has_info>petro_dialog_2_done</dont_has_info> 
@@ -1864,7 +1864,7 @@
         </phrase_list>		
 	</dialog>
 	
-<!--Äèàëîã 2 ñ Âàðâàðîé ----------------------------------------------->
+<!--Ð”Ð¸Ð°Ð»Ð¾Ð³ 2 Ñ Ð’Ð°Ñ€Ð²Ð°Ñ€Ð¾Ð¹ ----------------------------------------------->
 	<dialog id="varvara_dialog_1">
 		<dont_has_info>mg_unlock</dont_has_info> 
 	    <phrase_list>
@@ -1905,7 +1905,7 @@
         </phrase_list>		
 	</dialog>
 
-<!--Äèàëîã 1 ñ Âàðâàðîé ----------------------------------------------->
+<!--Ð”Ð¸Ð°Ð»Ð¾Ð³ 1 Ñ Ð’Ð°Ñ€Ð²Ð°Ñ€Ð¾Ð¹ ----------------------------------------------->
 	<dialog id="varvara_dialog_0">
 		<dont_has_info>varvara_dialog_1_done</dont_has_info> 
 	    <phrase_list>
@@ -1945,7 +1945,7 @@
         </phrase_list>		
 	</dialog>	
 	
-<!--Äèàëîã 1 ñ Ëåñíèêîì ----------------------------------------------->
+<!--Ð”Ð¸Ð°Ð»Ð¾Ð³ 1 Ñ Ð›ÐµÑÐ½Ð¸ÐºÐ¾Ð¼ ----------------------------------------------->
 	<dialog id="ded_dialog_1">
 		<dont_has_info>ded_dialog_1_done</dont_has_info> 
 		<has_info>ded_start_dialog_start</has_info>
@@ -1980,7 +1980,7 @@
         </phrase_list>		
 	</dialog>	
 
-<!--Äèàëîã 2 ñ Ëåñíèêîì ----------------------------------------------->
+<!--Ð”Ð¸Ð°Ð»Ð¾Ð³ 2 Ñ Ð›ÐµÑÐ½Ð¸ÐºÐ¾Ð¼ ----------------------------------------------->
 	<dialog id="ded_dialog_2">
 		<dont_has_info>ded_dialog_2_done</dont_has_info> 
 		<has_info>ded_nastoyka</has_info>
@@ -1999,7 +1999,7 @@
 	</dialog>		
 
 
-<!--Äèàëîã 1 ñ Ìàêñîì ----------------------------------------------->
+<!--Ð”Ð¸Ð°Ð»Ð¾Ð³ 1 Ñ ÐœÐ°ÐºÑÐ¾Ð¼ ----------------------------------------------->
 	<dialog id="max_dialog_labirint1">
 		<dont_has_info>max_dialog_1_done</dont_has_info> 
 		<has_info>pda_agent_prom_have</has_info>
@@ -2043,7 +2043,7 @@
 	</dialog>		
 
 
-<!--Äèàëîã 2 ñ Ìàêñîì ----------------------------------------------->
+<!--Ð”Ð¸Ð°Ð»Ð¾Ð³ 2 Ñ ÐœÐ°ÐºÑÐ¾Ð¼ ----------------------------------------------->
 	<dialog id="max_dialog_labirint2">
 		<dont_has_info>max_ruk_otdal</dont_has_info> 
 		<has_info>max_ruk_start</has_info>
@@ -2066,7 +2066,7 @@
         </phrase_list>		
 	</dialog>	
 
-	<!--Äèàëîã 3 ñ Äóíåé ----------------------------------------------->
+	<!--Ð”Ð¸Ð°Ð»Ð¾Ð³ 3 Ñ Ð”ÑƒÐ½ÐµÐ¹ ----------------------------------------------->
 	<dialog id="dunya_dialog_3">
 		<dont_has_info>dunya_dialog_3_done</dont_has_info> 
 		<has_info>dunya_collect_enable</has_info>
@@ -2100,7 +2100,7 @@
         </phrase_list>		
 	</dialog>
 	
-	<!--Äèàëîã 4 ñ Äóíåé ----------------------------------------------->
+	<!--Ð”Ð¸Ð°Ð»Ð¾Ð³ 4 Ñ Ð”ÑƒÐ½ÐµÐ¹ ----------------------------------------------->
 	<dialog id="dunya_dialog_4">
 		<dont_has_info>dunya_collect_otdal</dont_has_info> 
 		<has_info>dunya_collect_done</has_info>
@@ -2131,7 +2131,7 @@
         </phrase_list>		
 	</dialog>
 
-	<!--Äèàëîã 5 ñ Äóíåé ----------------------------------------------->
+	<!--Ð”Ð¸Ð°Ð»Ð¾Ð³ 5 Ñ Ð”ÑƒÐ½ÐµÐ¹ ----------------------------------------------->
 	<dialog id="dunya_dialog_5">
 		<dont_has_info>dunya_monpansie_otdal</dont_has_info> 
 		<has_info>dunya_monpansie_done</has_info>

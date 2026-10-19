@@ -2,51 +2,51 @@
 ------------------anom_research---------------------
 
 <game_task id="anom_research" version="1">
-<title>Исследовать аномалии.</title>
+<title>РСЃСЃР»РµРґРѕРІР°С‚СЊ Р°РЅРѕРјР°Р»РёРё.</title>
 <objective>
-<text>Исследовать аномалии.</text>
+<text>РСЃСЃР»РµРґРѕРІР°С‚СЊ Р°РЅРѕРјР°Р»РёРё.</text>
 <icon>ui_iconsTotal_bar_resque_information</icon>
 <infoportion_complete>kruglov_anoms_dialog_done</infoportion_complete>
 <article>anoms_research</article>
 </objective>
 <objective>
-<text>Исследовать аномалию «Жарка».</text>
+<text>РСЃСЃР»РµРґРѕРІР°С‚СЊ Р°РЅРѕРјР°Р»РёСЋ В«Р–Р°СЂРєР°В».</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>zharka_first_research</infoportion_complete>
 </objective>
 <objective>
-<text>Исследовать аномалию «Ведьмин студень».</text>
+<text>РСЃСЃР»РµРґРѕРІР°С‚СЊ Р°РЅРѕРјР°Р»РёСЋ В«Р’РµРґСЊРјРёРЅ СЃС‚СѓРґРµРЅСЊВ».</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>galant_first_research</infoportion_complete>
 </objective>
 <objective>
-<text>Исследовать аномалию «Студень».</text>
+<text>РСЃСЃР»РµРґРѕРІР°С‚СЊ Р°РЅРѕРјР°Р»РёСЋ В«РЎС‚СѓРґРµРЅСЊВ».</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>buzz_first_research</infoportion_complete>
 </objective>
 <objective>
-<text>Исследовать аномалию «Карусель».</text>
+<text>РСЃСЃР»РµРґРѕРІР°С‚СЊ Р°РЅРѕРјР°Р»РёСЋ В«РљР°СЂСѓСЃРµР»СЊВ».</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>mincer_first_research</infoportion_complete>
 </objective>
 <objective>
-<text>Исследовать аномалию «Трамплин».</text>
+<text>РСЃСЃР»РµРґРѕРІР°С‚СЊ Р°РЅРѕРјР°Р»РёСЋ В«РўСЂР°РјРїР»РёРЅВ».</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>mosquit_first_research</infoportion_complete>
 </objective>
 <objective>
-<text>Исследовать аномалию «Снежка».</text>
+<text>РСЃСЃР»РµРґРѕРІР°С‚СЊ Р°РЅРѕРјР°Р»РёСЋ В«РЎРЅРµР¶РєР°В».</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>ice_first_research</infoportion_complete>
 </objective>
 <objective>
-<text>Исследовать аномалию «Воронка».</text>
+<text>РСЃСЃР»РµРґРѕРІР°С‚СЊ Р°РЅРѕРјР°Р»РёСЋ В«Р’РѕСЂРѕРЅРєР°В».</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>gravi_first_research</infoportion_complete>
 </objective>
 <objective>
-<text>Вернуться к Круглову</text>
-<map_location_type hint="Круглов">blue_location</map_location_type>
+<text>Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє РљСЂСѓРіР»РѕРІСѓ</text>
+<map_location_type hint="РљСЂСѓРіР»РѕРІ">blue_location</map_location_type>
 <object_story_id>kruglov_swamp</object_story_id>
 <infoportion_complete>kruglov_anoms_dialog_done</infoportion_complete>
 </objective>
@@ -55,16 +55,16 @@
 ---------------------------foto-------------------------------
 
 <game_task id="smith_start">
-<title>Поговорить с генералом Смитом.</title>
+<title>РџРѕРіРѕРІРѕСЂРёС‚СЊ СЃ РіРµРЅРµСЂР°Р»РѕРј РЎРјРёС‚РѕРј.</title>
 <objective>
-     <text>Поговорить с генералом Смитом.</text>
+     <text>РџРѕРіРѕРІРѕСЂРёС‚СЊ СЃ РіРµРЅРµСЂР°Р»РѕРј РЎРјРёС‚РѕРј.</text>
      <icon>ui_usa_smith</icon>
      <infoportion_complete>smith_start_dialog_start</infoportion_complete>
      </objective>
 <objective>
-<text>Поговорить с генералом Смитом.</text>
+<text>РџРѕРіРѕРІРѕСЂРёС‚СЊ СЃ РіРµРЅРµСЂР°Р»РѕРј РЎРјРёС‚РѕРј.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
-<map_location_type hint="Генерал Смит">blue_location</map_location_type>
+<map_location_type hint="Р“РµРЅРµСЂР°Р» РЎРјРёС‚">blue_location</map_location_type>
 <object_story_id>smith</object_story_id>
 <infoportion_complete>smith_start_dialog_start</infoportion_complete>
        </objective>
@@ -72,16 +72,16 @@
 
 
 <game_task id="smith_brityi">
-<title>Найти Бритого.</title>
+<title>РќР°Р№С‚Рё Р‘СЂРёС‚РѕРіРѕ.</title>
 <objective>
-     <text>Найти Бритого.</text>
+     <text>РќР°Р№С‚Рё Р‘СЂРёС‚РѕРіРѕ.</text>
      <icon>ui_npc_u_stalker_petruha</icon>
      <infoportion_complete>brityi_pogovoril</infoportion_complete>
      </objective>
 <objective>
-<text>Найти Бритого.</text>
+<text>РќР°Р№С‚Рё Р‘СЂРёС‚РѕРіРѕ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
-<map_location_type hint="Бритый">blue_location</map_location_type>
+<map_location_type hint="Р‘СЂРёС‚С‹Р№">blue_location</map_location_type>
 <object_story_id>novichok_06</object_story_id>
 <infoportion_complete>brityi_pogovoril</infoportion_complete>
        </objective>
@@ -89,27 +89,27 @@
 
 
 <game_task id="vertushka_mesto">
-<title>Обследовать место падения вертолёта.</title>
+<title>РћР±СЃР»РµРґРѕРІР°С‚СЊ РјРµСЃС‚Рѕ РїР°РґРµРЅРёСЏ РІРµСЂС‚РѕР»С‘С‚Р°.</title>
 <objective>
-<text>Обследовать место падения вертолёта.</text>
+<text>РћР±СЃР»РµРґРѕРІР°С‚СЊ РјРµСЃС‚Рѕ РїР°РґРµРЅРёСЏ РІРµСЂС‚РѕР»С‘С‚Р°.</text>
 <icon>ui_iconsTotal_krest</icon>
 <infoportion_complete>brityi_mesto</infoportion_complete>
 <infoportion_fail>brityi_dead</infoportion_fail>
 <article>vertushka_nayti</article>
 </objective>
 <objective>
-<text>Добраться с "Бритым" до места падения.</text>
+<text>Р”РѕР±СЂР°С‚СЊСЃСЏ СЃ "Р‘СЂРёС‚С‹Рј" РґРѕ РјРµСЃС‚Р° РїР°РґРµРЅРёСЏ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>mesto_dobralsya</infoportion_complete>
 </objective>
 <objective>
-<text>Обследовать местность.</text>
+<text>РћР±СЃР»РµРґРѕРІР°С‚СЊ РјРµСЃС‚РЅРѕСЃС‚СЊ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>mesto_obsledoval</infoportion_complete>
 </objective>
 <objective>
-<text>Поговорить с "Бритым".</text>
-<map_location_type hint="Бритый">blue_location</map_location_type>
+<text>РџРѕРіРѕРІРѕСЂРёС‚СЊ СЃ "Р‘СЂРёС‚С‹Рј".</text>
+<map_location_type hint="Р‘СЂРёС‚С‹Р№">blue_location</map_location_type>
 <object_story_id>novihok_06</object_story_id>
 <infoportion_complete>brityi_mesto</infoportion_complete>
 </objective>
@@ -117,16 +117,16 @@
 
 
 <game_task id="brityi_sidor">
-<title>Встретиться с Сидоровичем.</title>
+<title>Р’СЃС‚СЂРµС‚РёС‚СЊСЃСЏ СЃ РЎРёРґРѕСЂРѕРІРёС‡РµРј.</title>
 <objective>
-     <text>Встретиться с Сидоровичем.</text>
+     <text>Р’СЃС‚СЂРµС‚РёС‚СЊСЃСЏ СЃ РЎРёРґРѕСЂРѕРІРёС‡РµРј.</text>
      <icon>ui_iconsTotal_esc_trader_job</icon>
      <infoportion_complete>sidor_vstretilsya</infoportion_complete>
      </objective>
 <objective>
-<text>Встретиться с Сидоровичем.</text>
+<text>Р’СЃС‚СЂРµС‚РёС‚СЊСЃСЏ СЃ РЎРёРґРѕСЂРѕРІРёС‡РµРј.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
-<map_location_type hint="Торговец">blue_location</map_location_type>
+<map_location_type hint="РўРѕСЂРіРѕРІРµС†">blue_location</map_location_type>
 <object_story_id>sidor</object_story_id>
 <infoportion_complete>sidor_vstretilsya</infoportion_complete>
        </objective>
@@ -134,16 +134,16 @@
 
 
 <game_task id="sidor_brigadir">
-<title>Встретиться с Бригадиром.</title>
+<title>Р’СЃС‚СЂРµС‚РёС‚СЊСЃСЏ СЃ Р‘СЂРёРіР°РґРёСЂРѕРј.</title>
 <objective>
-     <text>Встретиться с Бригадиром.</text>
+     <text>Р’СЃС‚СЂРµС‚РёС‚СЊСЃСЏ СЃ Р‘СЂРёРіР°РґРёСЂРѕРј.</text>
      <icon>ui_npc_brigadir</icon>
      <infoportion_complete>brigadir_vstretilsya</infoportion_complete>
      </objective>
 <objective>
-<text>Встретиться с Бригадиром.</text>
+<text>Р’СЃС‚СЂРµС‚РёС‚СЊСЃСЏ СЃ Р‘СЂРёРіР°РґРёСЂРѕРј.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
-<map_location_type hint="Бригадир">blue_location</map_location_type>
+<map_location_type hint="Р‘СЂРёРіР°РґРёСЂ">blue_location</map_location_type>
 <object_story_id>brigadir</object_story_id>
 <infoportion_complete>brigadir_vstretilsya</infoportion_complete>
        </objective>
@@ -151,20 +151,20 @@
 
 
 <game_task id="maroder_oblava">
-<title>Найти мародёров.</title>
+<title>РќР°Р№С‚Рё РјР°СЂРѕРґС‘СЂРѕРІ.</title>
 <objective>
-<text>Найти мародёров.</text>
+<text>РќР°Р№С‚Рё РјР°СЂРѕРґС‘СЂРѕРІ.</text>
 <icon>ui_npc_maroder_mask</icon>
 <infoportion_complete>brigadir_start_dialog_est</infoportion_complete>
 </objective>
 <objective>
-<text>Разобраться с мародёрами и добыть ПДА главаря.</text>
+<text>Р Р°Р·РѕР±СЂР°С‚СЊСЃСЏ СЃ РјР°СЂРѕРґС‘СЂР°РјРё Рё РґРѕР±С‹С‚СЊ РџР”Рђ РіР»Р°РІР°СЂСЏ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <function_complete>fotograf.maloy_pda_have</function_complete>
 </objective>
 <objective>
-<text>Принести ПДА главаря Бригадиру.</text>
-<map_location_type hint="Бригадир">blue_location</map_location_type>
+<text>РџСЂРёРЅРµСЃС‚Рё РџР”Рђ РіР»Р°РІР°СЂСЏ Р‘СЂРёРіР°РґРёСЂСѓ.</text>
+<map_location_type hint="Р‘СЂРёРіР°РґРёСЂ">blue_location</map_location_type>
 <object_story_id>brigadir</object_story_id>
 <infoportion_complete>brigadir_start_dialog_est</infoportion_complete>
 </objective>
@@ -172,16 +172,16 @@
 
 
 <game_task id="fotik_est">
-<title>Вернуться к генералу Смиту.</title>
+<title>Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє РіРµРЅРµСЂР°Р»Сѓ РЎРјРёС‚Сѓ.</title>
 <objective>
-     <text>Вернуться к генералу Смиту.</text>
+     <text>Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє РіРµРЅРµСЂР°Р»Сѓ РЎРјРёС‚Сѓ.</text>
      <icon>ui_usa_smith</icon>
      <infoportion_complete>smith_fotik_start</infoportion_complete>
      </objective>
 <objective>
-<text>Вернуться к генералу Смиту.</text>
+<text>Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє РіРµРЅРµСЂР°Р»Сѓ РЎРјРёС‚Сѓ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
-<map_location_type hint="Генерал Смит">blue_location</map_location_type>
+<map_location_type hint="Р“РµРЅРµСЂР°Р» РЎРјРёС‚">blue_location</map_location_type>
 <object_story_id>smith</object_story_id>
 <infoportion_complete>smith_fotik_start</infoportion_complete>
        </objective>
@@ -189,16 +189,16 @@
 
 
 <game_task id="smith_brown">
-<title>Найти полковника Брауна.</title>
+<title>РќР°Р№С‚Рё РїРѕР»РєРѕРІРЅРёРєР° Р‘СЂР°СѓРЅР°.</title>
 <objective>
-     <text>Найти полковника Брауна.</text>
+     <text>РќР°Р№С‚Рё РїРѕР»РєРѕРІРЅРёРєР° Р‘СЂР°СѓРЅР°.</text>
      <icon>ui_usa_brown</icon>
      <infoportion_complete>brown_start_dialog_start</infoportion_complete>
      </objective>
 <objective>
-<text>Найти полковника Брауна.</text>
+<text>РќР°Р№С‚Рё РїРѕР»РєРѕРІРЅРёРєР° Р‘СЂР°СѓРЅР°.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
-<map_location_type hint="Полковник Браун">blue_location</map_location_type>
+<map_location_type hint="РџРѕР»РєРѕРІРЅРёРє Р‘СЂР°СѓРЅ">blue_location</map_location_type>
 <object_story_id>brown</object_story_id>
 <infoportion_complete>brown_start_dialog_start</infoportion_complete>
        </objective>
@@ -206,15 +206,15 @@
 
 
 <game_task id="vybratsya_izpeschery">
-<title>Найти переход из Пещеры в Саркофаг.</title>
+<title>РќР°Р№С‚Рё РїРµСЂРµС…РѕРґ РёР· РџРµС‰РµСЂС‹ РІ РЎР°СЂРєРѕС„Р°Рі.</title>
 <objective>
-     <text>Найти переход из Пещеры в Саркофаг.</text>
+     <text>РќР°Р№С‚Рё РїРµСЂРµС…РѕРґ РёР· РџРµС‰РµСЂС‹ РІ РЎР°СЂРєРѕС„Р°Рі.</text>
      <icon>ui_iconsTotal_locations</icon>
      <infoportion_complete>vybralsya_izpeschery</infoportion_complete>
      <article>peschera_karta</article>
      </objective>
 <objective>
-<text>Найти переход из Пещеры в Саркофаг.</text>
+<text>РќР°Р№С‚Рё РїРµСЂРµС…РѕРґ РёР· РџРµС‰РµСЂС‹ РІ РЎР°СЂРєРѕС„Р°Рі.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>vybralsya_izpeschery</infoportion_complete>
        </objective>
@@ -222,22 +222,22 @@
 
 
 <game_task id="dron_plasch">
-<title>Раздобыть для Дрона кожаный плащ.</title>
+<title>Р Р°Р·РґРѕР±С‹С‚СЊ РґР»СЏ Р”СЂРѕРЅР° РєРѕР¶Р°РЅС‹Р№ РїР»Р°С‰.</title>
 <objective>
-<text>Раздобыть для Дрона кожаный плащ.</text>
+<text>Р Р°Р·РґРѕР±С‹С‚СЊ РґР»СЏ Р”СЂРѕРЅР° РєРѕР¶Р°РЅС‹Р№ РїР»Р°С‰.</text>
 <icon>ui_iconsTotal_found_thing</icon>
 <infoportion_complete>dron_start_dialog_done</infoportion_complete>
 <infoportion_fail>dron_dead</infoportion_fail>
 </objective>
 <objective>
-<text>Раздобыть для Дрона в деревне братков кожаный плащ.</text>
+<text>Р Р°Р·РґРѕР±С‹С‚СЊ РґР»СЏ Р”СЂРѕРЅР° РІ РґРµСЂРµРІРЅРµ Р±СЂР°С‚РєРѕРІ РєРѕР¶Р°РЅС‹Р№ РїР»Р°С‰.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <function_complete>fotograf.dron_plasch_have</function_complete>
 <infoportion_set_complete>dron_start_dialog_have</infoportion_set_complete>
 </objective>
 <objective>
-<text>Принести плащ Дрону.</text>
-<map_location_type hint="Дрон">blue_location</map_location_type>
+<text>РџСЂРёРЅРµСЃС‚Рё РїР»Р°С‰ Р”СЂРѕРЅСѓ.</text>
+<map_location_type hint="Р”СЂРѕРЅ">blue_location</map_location_type>
 <object_story_id>dron</object_story_id>
 <infoportion_complete>dron_start_dialog_done</infoportion_complete>
 </objective>
@@ -245,16 +245,16 @@
 
 
 <game_task id="levsha_vstrecha">
-<title>Поговорить с Левшой.</title>
+<title>РџРѕРіРѕРІРѕСЂРёС‚СЊ СЃ Р›РµРІС€РѕР№.</title>
 <objective>
-     <text>Поговорить с Левшой.</text>
+     <text>РџРѕРіРѕРІРѕСЂРёС‚СЊ СЃ Р›РµРІС€РѕР№.</text>
      <icon>ui_npc_u_stalker_hellcar</icon>
      <infoportion_complete>levsha_vstrecha</infoportion_complete>
      </objective>
 <objective>
-<text>Поговорить с Левшой.</text>
+<text>РџРѕРіРѕРІРѕСЂРёС‚СЊ СЃ Р›РµРІС€РѕР№.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
-<map_location_type hint="Левша">blue_location</map_location_type>
+<map_location_type hint="Р›РµРІС€Р°">blue_location</map_location_type>
 <object_story_id>bar_ataka_01</object_story_id>
 <infoportion_complete>levsha_vstrecha</infoportion_complete>
        </objective>
@@ -262,33 +262,33 @@
 
 
 <game_task id="levsha_zahvat_bar">
-<title>Захватить Бар.</title>
+<title>Р—Р°С…РІР°С‚РёС‚СЊ Р‘Р°СЂ.</title>
 <objective>
-<text>Захватить Бар.</text>
+<text>Р—Р°С…РІР°С‚РёС‚СЊ Р‘Р°СЂ.</text>
 <icon>ui_iconsTotal_eliminate_lager</icon>
 <infoportion_complete>levsha_start_dialog_done</infoportion_complete>
 <infoportion_fail>levsha_bar_proval</infoportion_fail>
 <article>levsha_bar_zahvat</article>
 </objective>
 <objective>
-<text>Помочь сталкерам зачистить территорию "Бара" от мутантов.</text>
+<text>РџРѕРјРѕС‡СЊ СЃС‚Р°Р»РєРµСЂР°Рј Р·Р°С‡РёСЃС‚РёС‚СЊ С‚РµСЂСЂРёС‚РѕСЂРёСЋ "Р‘Р°СЂР°" РѕС‚ РјСѓС‚Р°РЅС‚РѕРІ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <function_complete>fotograf.levsha_bar_have</function_complete>
 <infoportion_set_complete>levsha_start_dialog_have</infoportion_set_complete>
 </objective>
 <objective>
-<text>Поговорить с Левшой.</text>
-<map_location_type hint="Левша">blue_location</map_location_type>
+<text>РџРѕРіРѕРІРѕСЂРёС‚СЊ СЃ Р›РµРІС€РѕР№.</text>
+<map_location_type hint="Р›РµРІС€Р°">blue_location</map_location_type>
 <object_story_id>bar_ataka_01</object_story_id>
 <infoportion_complete>levsha_start_dialog_est</infoportion_complete>
 </objective>
 <objective>
-<text>Освободить диггеров.</text>
+<text>РћСЃРІРѕР±РѕРґРёС‚СЊ РґРёРіРіРµСЂРѕРІ.</text>
 <infoportion_complete>levsha_start_dialog_dig</infoportion_complete>
 </objective>
 <objective>
-<text>Вернуться к Левше.</text>
-<map_location_type hint="Левша">blue_location</map_location_type>
+<text>Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє Р›РµРІС€Рµ.</text>
+<map_location_type hint="Р›РµРІС€Р°">blue_location</map_location_type>
 <object_story_id>bar_ataka_01</object_story_id>
 <infoportion_complete>levsha_start_dialog_done</infoportion_complete>
 </objective>
@@ -296,22 +296,22 @@
 
 
 <game_task id="levsha_crystalls">
-<title>Найти два кристалла.</title>
+<title>РќР°Р№С‚Рё РґРІР° РєСЂРёСЃС‚Р°Р»Р»Р°.</title>
 <objective>
-<text>Найти два кристалла.</text>
+<text>РќР°Р№С‚Рё РґРІР° РєСЂРёСЃС‚Р°Р»Р»Р°.</text>
 <icon>ui_iconsTotal_artefact</icon>
 <infoportion_complete>levsha_one_dialog_est</infoportion_complete>
 <article>levsha_cryst</article>
 </objective>
 <objective>
-<text>Найти два кристалла для модернизации фотокамеры.</text>
+<text>РќР°Р№С‚Рё РґРІР° РєСЂРёСЃС‚Р°Р»Р»Р° РґР»СЏ РјРѕРґРµСЂРЅРёР·Р°С†РёРё С„РѕС‚РѕРєР°РјРµСЂС‹.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <function_complete>fotograf.levsha_crystalls_have</function_complete>
 <infoportion_set_complete>levsha_one_dialog_have</infoportion_set_complete>
 </objective>
 <objective>
-<text>Принести два кристалла Левше.</text>
-<map_location_type hint="Левша">blue_location</map_location_type>
+<text>РџСЂРёРЅРµСЃС‚Рё РґРІР° РєСЂРёСЃС‚Р°Р»Р»Р° Р›РµРІС€Рµ.</text>
+<map_location_type hint="Р›РµРІС€Р°">blue_location</map_location_type>
 <object_story_id>bar_ataka_01</object_story_id>
 <infoportion_complete>levsha_one_dialog_est</infoportion_complete>
 </objective>
@@ -319,16 +319,16 @@
 
 
 <game_task id="lukash_vstrecha">
-<title>Найти Лукаша.</title>
+<title>РќР°Р№С‚Рё Р›СѓРєР°С€Р°.</title>
 <objective>
-     <text>Найти Лукаша.</text>
+     <text>РќР°Р№С‚Рё Р›СѓРєР°С€Р°.</text>
      <icon>ui_npc_u_stalker_sv_leader</icon>
      <infoportion_complete>lukash_vstrecha_done</infoportion_complete>
      </objective>
 <objective>
-<text>Найти Лукаша.</text>
+<text>РќР°Р№С‚Рё Р›СѓРєР°С€Р°.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
-<map_location_type hint="Лукаш">blue_location</map_location_type>
+<map_location_type hint="Р›СѓРєР°С€">blue_location</map_location_type>
 <object_story_id>lukash</object_story_id>
 <infoportion_complete>lukash_vstrecha_done</infoportion_complete>
        </objective>
@@ -336,22 +336,22 @@
 
 
 <game_task id="lukash_bomba">
-<title>Отнести ПДА Шершню</title>
+<title>РћС‚РЅРµСЃС‚Рё РџР”Рђ РЁРµСЂС€РЅСЋ</title>
 <objective>
-<text>Отнести ПДА Шершню</text>
+<text>РћС‚РЅРµСЃС‚Рё РџР”Рђ РЁРµСЂС€РЅСЋ</text>
 <icon>ui_iconsTotal_found_thing</icon>
 <infoportion_complete>lukash_start_dialog_done</infoportion_complete>
 </objective>
 <objective>
-<text>Отнести Шершню ПДА от Лукаша</text>
+<text>РћС‚РЅРµСЃС‚Рё РЁРµСЂС€РЅСЋ РџР”Рђ РѕС‚ Р›СѓРєР°С€Р°</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
-<map_location_type hint="Шершень">blue_location</map_location_type>
+<map_location_type hint="РЁРµСЂС€РµРЅСЊ">blue_location</map_location_type>
 <object_story_id>digger_06</object_story_id>
 <infoportion_complete>shershen_start_dialog_start</infoportion_complete>
 </objective>
 <objective>
-<text>Вернуться к Лукашу</text>
-<map_location_type hint="Лукаш">blue_location</map_location_type>
+<text>Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє Р›СѓРєР°С€Сѓ</text>
+<map_location_type hint="Р›СѓРєР°С€">blue_location</map_location_type>
 <object_story_id>lukash</object_story_id>
 <infoportion_complete>lukash_start_dialog_done</infoportion_complete>
 </objective>
@@ -359,58 +359,58 @@
 
 
 <game_task id="lukash_angar">
-<title>Сопроводить дезертиров на фабрику.</title>
+<title>РЎРѕРїСЂРѕРІРѕРґРёС‚СЊ РґРµР·РµСЂС‚РёСЂРѕРІ РЅР° С„Р°Р±СЂРёРєСѓ.</title>
 <objective>
-     <text>Сопроводить дезертиров на фабрику.</text>
+     <text>РЎРѕРїСЂРѕРІРѕРґРёС‚СЊ РґРµР·РµСЂС‚РёСЂРѕРІ РЅР° С„Р°Р±СЂРёРєСѓ.</text>
      <icon>ui_iconsTotal_eliminate_lager</icon>
      <infoportion_complete>lukash_first_dialog_done</infoportion_complete>
      <infoportion_fail>lukash_ubitt</infoportion_fail>
      </objective>
 <objective>
-<text>Сопроводить Лукаша и его бойцов на заброшенную фабрику.</text>
+<text>РЎРѕРїСЂРѕРІРѕРґРёС‚СЊ Р›СѓРєР°С€Р° Рё РµРіРѕ Р±РѕР№С†РѕРІ РЅР° Р·Р°Р±СЂРѕС€РµРЅРЅСѓСЋ С„Р°Р±СЂРёРєСѓ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <function_complete>fotograf.lukash_angar_have</function_complete>
 <infoportion_set_complete>lukash_first_dialog_have</infoportion_set_complete>
        </objective>
 <objective>
-<text>Поговорить с Лукашем.</text>
-<map_location_type hint="Лукаш">blue_location</map_location_type>
+<text>РџРѕРіРѕРІРѕСЂРёС‚СЊ СЃ Р›СѓРєР°С€РµРј.</text>
+<map_location_type hint="Р›СѓРєР°С€">blue_location</map_location_type>
 <object_story_id>lukash</object_story_id>
 <infoportion_complete>lukash_first_dialog_done</infoportion_complete>
        </objective>
       </game_task>
 	    
 <game_task id="prom_desant">
-<title>Помочь защитить фабрику.</title>
+<title>РџРѕРјРѕС‡СЊ Р·Р°С‰РёС‚РёС‚СЊ С„Р°Р±СЂРёРєСѓ.</title>
 <objective>
-     <text>Помочь защитить фабрику.</text>
+     <text>РџРѕРјРѕС‡СЊ Р·Р°С‰РёС‚РёС‚СЊ С„Р°Р±СЂРёРєСѓ.</text>
      <icon>ui_iconsTotal_eliminate_lager</icon>
      <infoportion_complete>prom_desant_done</infoportion_complete>
      <infoportion_fail>prom_desant_proval</infoportion_fail>
      </objective>
 <objective>
-<text>Помочь дезертирам отбить атаку на фабрику.</text>
+<text>РџРѕРјРѕС‡СЊ РґРµР·РµСЂС‚РёСЂР°Рј РѕС‚Р±РёС‚СЊ Р°С‚Р°РєСѓ РЅР° С„Р°Р±СЂРёРєСѓ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <function_complete>fotograf.prom_desant_have</function_complete>
 <infoportion_set_complete>prom_desant_have</infoportion_set_complete>
        </objective>
 <objective>
-<text>Поговорить с Максом.</text>
+<text>РџРѕРіРѕРІРѕСЂРёС‚СЊ СЃ РњР°РєСЃРѕРј.</text>
 <infoportion_complete>prom_desant_done</infoportion_complete>
        </objective>
       </game_task>	  
 	  
 <game_task id="vasil_govorit">
-<title>Найти Васильева.</title>
+<title>РќР°Р№С‚Рё Р’Р°СЃРёР»СЊРµРІР°.</title>
 <objective>
-     <text>Найти Васильева.</text>
+     <text>РќР°Р№С‚Рё Р’Р°СЃРёР»СЊРµРІР°.</text>
      <icon>ui_npc_vasil</icon>
      <infoportion_complete>vasil_nayden</infoportion_complete>
      </objective>
 <objective>
-<text>Найти Васильева.</text>
+<text>РќР°Р№С‚Рё Р’Р°СЃРёР»СЊРµРІР°.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
-<map_location_type hint="Доцент Васильев">blue_location</map_location_type>
+<map_location_type hint="Р”РѕС†РµРЅС‚ Р’Р°СЃРёР»СЊРµРІ">blue_location</map_location_type>
 <object_story_id>vasil_swamp</object_story_id>
 <infoportion_complete>vasil_nayden</infoportion_complete>
        </objective>
@@ -418,16 +418,16 @@
 
 
 <game_task id="doctor_govorit">
-<title>Встретиться с Доктором.</title>
+<title>Р’СЃС‚СЂРµС‚РёС‚СЊСЃСЏ СЃ Р”РѕРєС‚РѕСЂРѕРј.</title>
 <objective>
-     <text>Встретиться с Доктором.</text>
+     <text>Р’СЃС‚СЂРµС‚РёС‚СЊСЃСЏ СЃ Р”РѕРєС‚РѕСЂРѕРј.</text>
      <icon>ui_npc_u_doktor</icon>
      <infoportion_complete>doctor_nayden</infoportion_complete>
      </objective>
 <objective>
-<text>Встретиться с Доктором.</text>
+<text>Р’СЃС‚СЂРµС‚РёС‚СЊСЃСЏ СЃ Р”РѕРєС‚РѕСЂРѕРј.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
-<map_location_type hint="Доктор">blue_location</map_location_type>
+<map_location_type hint="Р”РѕРєС‚РѕСЂ">blue_location</map_location_type>
 <object_story_id>swamp_doctor</object_story_id>
 <infoportion_complete>doctor_nayden</infoportion_complete>
        </objective>
@@ -435,27 +435,27 @@
 
 
 <game_task id="lavrov_iskat">
-<title>Разыскать доцента Лаврова.</title>
+<title>Р Р°Р·С‹СЃРєР°С‚СЊ РґРѕС†РµРЅС‚Р° Р›Р°РІСЂРѕРІР°.</title>
 <objective>
-<text>Разыскать доцента Лаврова.</text>
+<text>Р Р°Р·С‹СЃРєР°С‚СЊ РґРѕС†РµРЅС‚Р° Р›Р°РІСЂРѕРІР°.</text>
 <icon>ui_iconsTotal_yan_find_scientist_semenov</icon>
 <infoportion_complete>sahar_tri_dialog_start</infoportion_complete>
 <article>lavrov_poisk</article>
 </objective>
 <objective>
-<text>Найти доцента Лаврова или узнать что с ним случилось.</text>
+<text>РќР°Р№С‚Рё РґРѕС†РµРЅС‚Р° Р›Р°РІСЂРѕРІР° РёР»Рё СѓР·РЅР°С‚СЊ С‡С‚Рѕ СЃ РЅРёРј СЃР»СѓС‡РёР»РѕСЃСЊ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <function_complete>fotograf.lavrov_pda_have</function_complete>
 <infoportion_set_complete>lavrov_pda_have</infoportion_set_complete>
 </objective>
 <objective>
-<text>Зайти к Доктору.</text>
+<text>Р—Р°Р№С‚Рё Рє Р”РѕРєС‚РѕСЂСѓ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>doctor_tri_dialog_start</infoportion_complete>
 </objective>
 <objective>
-<text>Вернуться к Сахарову с информацией.</text>
-<map_location_type hint="Сахаров">blue_location</map_location_type>
+<text>Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє РЎР°С…Р°СЂРѕРІСѓ СЃ РёРЅС„РѕСЂРјР°С†РёРµР№.</text>
+<map_location_type hint="РЎР°С…Р°СЂРѕРІ">blue_location</map_location_type>
 <object_story_id>uchen_saharov</object_story_id>
 <infoportion_complete>sahar_tri_dialog_start</infoportion_complete>
 </objective>
@@ -463,16 +463,16 @@
 
 
 <game_task id="doctor_zapiska">
-<title>Передать Сахарову записку от Доктора.</title>
+<title>РџРµСЂРµРґР°С‚СЊ РЎР°С…Р°СЂРѕРІСѓ Р·Р°РїРёСЃРєСѓ РѕС‚ Р”РѕРєС‚РѕСЂР°.</title>
 <objective>
-     <text>Передать Сахарову записку от Доктора.</text>
+     <text>РџРµСЂРµРґР°С‚СЊ РЎР°С…Р°СЂРѕРІСѓ Р·Р°РїРёСЃРєСѓ РѕС‚ Р”РѕРєС‚РѕСЂР°.</text>
      <icon>ui_iconsTotal_bar_darklab_documents</icon>
      <infoportion_complete>sahar_four_dialog_start</infoportion_complete>
      </objective>
 <objective>
-<text>Передать Сахарову записку от Доктора.</text>
+<text>РџРµСЂРµРґР°С‚СЊ РЎР°С…Р°СЂРѕРІСѓ Р·Р°РїРёСЃРєСѓ РѕС‚ Р”РѕРєС‚РѕСЂР°.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
-<map_location_type hint="Сахаров">blue_location</map_location_type>
+<map_location_type hint="РЎР°С…Р°СЂРѕРІ">blue_location</map_location_type>
 <object_story_id>uchen_saharov</object_story_id>
 <infoportion_complete>sahar_four_dialog_start</infoportion_complete>
        </objective>
@@ -480,56 +480,56 @@
 
 
 <game_task id="agent_mk">
-<title>Найти и обезвредить агента.</title>
+<title>РќР°Р№С‚Рё Рё РѕР±РµР·РІСЂРµРґРёС‚СЊ Р°РіРµРЅС‚Р°.</title>
 <objective>
-<text>Найти и обезвредить агента.</text>
+<text>РќР°Р№С‚Рё Рё РѕР±РµР·РІСЂРµРґРёС‚СЊ Р°РіРµРЅС‚Р°.</text>
 <icon>ui_iconsTotal_esc_dinamit_to_volk</icon>
 <infoportion_complete>brown_start_dialog_done</infoportion_complete>
 <infoportion_fail>agent_mk_proval</infoportion_fail>
 <article>agent_mk</article>
 </objective>
 <objective>
-<text>Выяснить время и место прохода в Зону группы наёмников.</text>
+<text>Р’С‹СЏСЃРЅРёС‚СЊ РІСЂРµРјСЏ Рё РјРµСЃС‚Рѕ РїСЂРѕС…РѕРґР° РІ Р—РѕРЅСѓ РіСЂСѓРїРїС‹ РЅР°С‘РјРЅРёРєРѕРІ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>brown_start_dialog_have</infoportion_complete>
 </objective>
 <objective>
-<text>Обнаружить тайную тропу, по которой наёмникам удаётся обходить все посты и кордоны.</text>
+<text>РћР±РЅР°СЂСѓР¶РёС‚СЊ С‚Р°Р№РЅСѓСЋ С‚СЂРѕРїСѓ, РїРѕ РєРѕС‚РѕСЂРѕР№ РЅР°С‘РјРЅРёРєР°Рј СѓРґР°С‘С‚СЃСЏ РѕР±С…РѕРґРёС‚СЊ РІСЃРµ РїРѕСЃС‚С‹ Рё РєРѕСЂРґРѕРЅС‹.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>brown_start_dialog_mesto</infoportion_complete>
 </objective>
 <objective>
-<text>Обезвредить агента и забрать его ПДА.</text>
+<text>РћР±РµР·РІСЂРµРґРёС‚СЊ Р°РіРµРЅС‚Р° Рё Р·Р°Р±СЂР°С‚СЊ РµРіРѕ РџР”Рђ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <function_complete>fotograf.pda_agent_mk_have</function_complete>
 <infoportion_set_complete>pda_agent_mk_have</infoportion_set_complete>
 </objective>
 <objective>
-<text>Вернуться к полковнику Брауну.</text>
-<map_location_type hint="Браун">blue_location</map_location_type>
+<text>Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє РїРѕР»РєРѕРІРЅРёРєСѓ Р‘СЂР°СѓРЅСѓ.</text>
+<map_location_type hint="Р‘СЂР°СѓРЅ">blue_location</map_location_type>
 <object_story_id>brown</object_story_id>
 <infoportion_complete>brown_start_dialog_done</infoportion_complete>
 </objective>
 </game_task>
 
 <game_task id="borya_antirad">
-<title>Раздобыть 10 антирадов.</title>
+<title>Р Р°Р·РґРѕР±С‹С‚СЊ 10 Р°РЅС‚РёСЂР°РґРѕРІ.</title>
 <objective>
-<text>Раздобыть 10 антирадов.</text>
+<text>Р Р°Р·РґРѕР±С‹С‚СЊ 10 Р°РЅС‚РёСЂР°РґРѕРІ.</text>
 <icon>ui_iconsTotal_esc_blockpost_case_to_trader</icon>
 <infoportion_complete>borya_start_dialog_done</infoportion_complete>
 <infoportion_fail>bratok_enemy</infoportion_fail>
 <article>borya_antirad</article>
 </objective>
 <objective>
-<text>Раздобыть десять антирадов для Бори Серова.</text>
+<text>Р Р°Р·РґРѕР±С‹С‚СЊ РґРµСЃСЏС‚СЊ Р°РЅС‚РёСЂР°РґРѕРІ РґР»СЏ Р‘РѕСЂРё РЎРµСЂРѕРІР°.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <function_complete>fotograf.antirad_10_have</function_complete>
 <infoportion_set_complete>borya_start_dialog_have</infoportion_set_complete>
 </objective>
 <objective>
-<text>Принести антирады Боре.</text>
-<map_location_type hint="Боря Серов">blue_location</map_location_type>
+<text>РџСЂРёРЅРµСЃС‚Рё Р°РЅС‚РёСЂР°РґС‹ Р‘РѕСЂРµ.</text>
+<map_location_type hint="Р‘РѕСЂСЏ РЎРµСЂРѕРІ">blue_location</map_location_type>
 <object_story_id>borovikov</object_story_id>
 <infoportion_complete>borya_start_dialog_done</infoportion_complete>
 </objective>
@@ -537,22 +537,22 @@
 
 
 <game_task id="havchik_klad">
-<title>Раздобыть провизию для кладовщика.</title>
+<title>Р Р°Р·РґРѕР±С‹С‚СЊ РїСЂРѕРІРёР·РёСЋ РґР»СЏ РєР»Р°РґРѕРІС‰РёРєР°.</title>
 <objective>
-<text>Раздобыть провизию для кладовщика.</text>
+<text>Р Р°Р·РґРѕР±С‹С‚СЊ РїСЂРѕРІРёР·РёСЋ РґР»СЏ РєР»Р°РґРѕРІС‰РёРєР°.</text>
 <icon>ui_iconsTotal_found_thing</icon>
 <infoportion_complete>kladovschik_start_dialog_done</infoportion_complete>
 <infoportion_fail>soldaty_enemy</infoportion_fail>
 </objective>
 <objective>
-<text>Раздобыть для кладовщика: две бутылки водки, баночку сгущёнки, маринованные грибы и банку солёных огурцов.</text>
+<text>Р Р°Р·РґРѕР±С‹С‚СЊ РґР»СЏ РєР»Р°РґРѕРІС‰РёРєР°: РґРІРµ Р±СѓС‚С‹Р»РєРё РІРѕРґРєРё, Р±Р°РЅРѕС‡РєСѓ СЃРіСѓС‰С‘РЅРєРё, РјР°СЂРёРЅРѕРІР°РЅРЅС‹Рµ РіСЂРёР±С‹ Рё Р±Р°РЅРєСѓ СЃРѕР»С‘РЅС‹С… РѕРіСѓСЂС†РѕРІ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <function_complete>fotograf.havchik_have</function_complete>
 <infoportion_set_complete>havchik_have</infoportion_set_complete>
 </objective>
 <objective>
-<text>Принести провизию Кладовщику.</text>
-<map_location_type hint="Кладовщик">blue_location</map_location_type>
+<text>РџСЂРёРЅРµСЃС‚Рё РїСЂРѕРІРёР·РёСЋ РљР»Р°РґРѕРІС‰РёРєСѓ.</text>
+<map_location_type hint="РљР»Р°РґРѕРІС‰РёРє">blue_location</map_location_type>
 <object_story_id>kladovschik</object_story_id>
 <infoportion_complete>kladovschik_start_dialog_done</infoportion_complete>
 </objective>
@@ -560,21 +560,21 @@
 
 
 <game_task id="glushak_nayti">
-<title>Раздобыть глушитель для МП-5.</title>
+<title>Р Р°Р·РґРѕР±С‹С‚СЊ РіР»СѓС€РёС‚РµР»СЊ РґР»СЏ РњРџ-5.</title>
 <objective>
-<text>Раздобыть глушитель для МП-5.</text>
+<text>Р Р°Р·РґРѕР±С‹С‚СЊ РіР»СѓС€РёС‚РµР»СЊ РґР»СЏ РњРџ-5.</text>
 <icon>ui_iconsTotal_found_thing</icon>
 <infoportion_complete>dusha_dialog_done</infoportion_complete>
 <infoportion_fail>bratok_enemy</infoportion_fail>
 </objective>
 <objective>
-<text>Раздобыть глушитель для МП-5 по просьбе братка из магазина.</text>
+<text>Р Р°Р·РґРѕР±С‹С‚СЊ РіР»СѓС€РёС‚РµР»СЊ РґР»СЏ РњРџ-5 РїРѕ РїСЂРѕСЃСЊР±Рµ Р±СЂР°С‚РєР° РёР· РјР°РіР°Р·РёРЅР°.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <function_complete>fotograf.glushak_have</function_complete>
 <infoportion_set_complete>dusha_dialog_have</infoportion_set_complete>
 </objective>
 <objective>
-<text>Отдать глушитель заказчику.</text>
+<text>РћС‚РґР°С‚СЊ РіР»СѓС€РёС‚РµР»СЊ Р·Р°РєР°Р·С‡РёРєСѓ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>dusha_dialog_done</infoportion_complete>
 </objective>
@@ -582,21 +582,21 @@
 
 
 <game_task id="recepts_01">
-<title>Провести преобразования в четырёх пси-зонах первого порядка.</title>
+<title>РџСЂРѕРІРµСЃС‚Рё РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ РІ С‡РµС‚С‹СЂС‘С… РїСЃРё-Р·РѕРЅР°С… РїРµСЂРІРѕРіРѕ РїРѕСЂСЏРґРєР°.</title>
 <objective>
-<text>Провести преобразования в четырёх пси-зонах первого порядка.</text>
+<text>РџСЂРѕРІРµСЃС‚Рё РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ РІ С‡РµС‚С‹СЂС‘С… РїСЃРё-Р·РѕРЅР°С… РїРµСЂРІРѕРіРѕ РїРѕСЂСЏРґРєР°.</text>
 <icon>ui_iconsTotal_tutorial_find_artefact</icon>
 <infoportion_complete>sbor_recepts_ks_done</infoportion_complete>
 <article>recepts_ks</article>
 </objective>
 <objective>
-<text>Провести процессы преобразования кристаллов в четырёх видах пси-зон первого порядка.</text>
+<text>РџСЂРѕРІРµСЃС‚Рё РїСЂРѕС†РµСЃСЃС‹ РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ РєСЂРёСЃС‚Р°Р»Р»РѕРІ РІ С‡РµС‚С‹СЂС‘С… РІРёРґР°С… РїСЃРё-Р·РѕРЅ РїРµСЂРІРѕРіРѕ РїРѕСЂСЏРґРєР°.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>recept_one_est</infoportion_complete>
 </objective>
 <objective>
-<text>Вернуться к Сахарову.</text>
-<map_location_type hint="Сахаров">blue_location</map_location_type>
+<text>Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє РЎР°С…Р°СЂРѕРІСѓ.</text>
+<map_location_type hint="РЎР°С…Р°СЂРѕРІ">blue_location</map_location_type>
 <object_story_id>uchen_saharov</object_story_id>
 <infoportion_complete>sbor_recepts_ks_done</infoportion_complete>
 </objective>
@@ -604,21 +604,21 @@
 
 
 <game_task id="recepts_02">
-<title>Провести преобразования в двух пси-зонах второго порядка.</title>
+<title>РџСЂРѕРІРµСЃС‚Рё РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ РІ РґРІСѓС… РїСЃРё-Р·РѕРЅР°С… РІС‚РѕСЂРѕРіРѕ РїРѕСЂСЏРґРєР°.</title>
 <objective>
-<text>Провести преобразования в двух пси-зонах второго порядка.</text>
+<text>РџСЂРѕРІРµСЃС‚Рё РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ РІ РґРІСѓС… РїСЃРё-Р·РѕРЅР°С… РІС‚РѕСЂРѕРіРѕ РїРѕСЂСЏРґРєР°.</text>
 <icon>ui_iconsTotal_tutorial_find_artefact</icon>
 <infoportion_complete>sbor_recepts_tn_done</infoportion_complete>
 <article>recepts_tn</article>
 </objective>
 <objective>
-<text>Провести процессы преобразования кристаллов в двух видах пси-зон второго порядка.</text>
+<text>РџСЂРѕРІРµСЃС‚Рё РїСЂРѕС†РµСЃСЃС‹ РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ РєСЂРёСЃС‚Р°Р»Р»РѕРІ РІ РґРІСѓС… РІРёРґР°С… РїСЃРё-Р·РѕРЅ РІС‚РѕСЂРѕРіРѕ РїРѕСЂСЏРґРєР°.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>recept_two_est</infoportion_complete>
 </objective>
 <objective>
-<text>Вернуться к Сахарову.</text>
-<map_location_type hint="Сахаров">blue_location</map_location_type>
+<text>Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє РЎР°С…Р°СЂРѕРІСѓ.</text>
+<map_location_type hint="РЎР°С…Р°СЂРѕРІ">blue_location</map_location_type>
 <object_story_id>uchen_saharov</object_story_id>
 <infoportion_complete>sbor_recepts_tn_done</infoportion_complete>
 </objective>
@@ -626,21 +626,21 @@
 
 
 <game_task id="recepts_03">
-<title>Провести преобразования в двух пси-зонах третьего порядка.</title>
+<title>РџСЂРѕРІРµСЃС‚Рё РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ РІ РґРІСѓС… РїСЃРё-Р·РѕРЅР°С… С‚СЂРµС‚СЊРµРіРѕ РїРѕСЂСЏРґРєР°.</title>
 <objective>
-<text>Провести преобразования в двух пси-зонах третьего порядка.</text>
+<text>РџСЂРѕРІРµСЃС‚Рё РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ РІ РґРІСѓС… РїСЃРё-Р·РѕРЅР°С… С‚СЂРµС‚СЊРµРіРѕ РїРѕСЂСЏРґРєР°.</text>
 <icon>ui_iconsTotal_tutorial_find_artefact</icon>
 <infoportion_complete>sbor_recepts_og_done</infoportion_complete>
 <article>recepts_og</article>
 </objective>
 <objective>
-<text>Провести процессы преобразования кристаллов в двух видах пси-зон третьего порядка.</text>
+<text>РџСЂРѕРІРµСЃС‚Рё РїСЂРѕС†РµСЃСЃС‹ РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ РєСЂРёСЃС‚Р°Р»Р»РѕРІ РІ РґРІСѓС… РІРёРґР°С… РїСЃРё-Р·РѕРЅ С‚СЂРµС‚СЊРµРіРѕ РїРѕСЂСЏРґРєР°.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>recept_tri_est</infoportion_complete>
 </objective>
 <objective>
-<text>Вернуться к Сахарову.</text>
-<map_location_type hint="Сахаров">blue_location</map_location_type>
+<text>Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє РЎР°С…Р°СЂРѕРІСѓ.</text>
+<map_location_type hint="РЎР°С…Р°СЂРѕРІ">blue_location</map_location_type>
 <object_story_id>uchen_saharov</object_story_id>
 <infoportion_complete>sbor_recepts_og_done</infoportion_complete>
 </objective>
@@ -648,16 +648,16 @@
 
 
 <game_task id="voronin_poligon">
-<title>Встретиться с генералом Ворониным.</title>
+<title>Р’СЃС‚СЂРµС‚РёС‚СЊСЃСЏ СЃ РіРµРЅРµСЂР°Р»РѕРј Р’РѕСЂРѕРЅРёРЅС‹Рј.</title>
 <objective>
-     <text>Встретиться с генералом Ворониным.</text>
+     <text>Р’СЃС‚СЂРµС‚РёС‚СЊСЃСЏ СЃ РіРµРЅРµСЂР°Р»РѕРј Р’РѕСЂРѕРЅРёРЅС‹Рј.</text>
      <icon>ui_npc_rus_voronin</icon>
      <infoportion_complete>voronin_start_dialog_start</infoportion_complete>
      </objective>
 <objective>
-<text>Поговорить с генералом Ворониным.</text>
+<text>РџРѕРіРѕРІРѕСЂРёС‚СЊ СЃ РіРµРЅРµСЂР°Р»РѕРј Р’РѕСЂРѕРЅРёРЅС‹Рј.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
-<map_location_type hint="Воронин">blue_location</map_location_type>
+<map_location_type hint="Р’РѕСЂРѕРЅРёРЅ">blue_location</map_location_type>
 <object_story_id>komandir_voronin</object_story_id>
 <infoportion_complete>voronin_start_dialog_start</infoportion_complete>
        </objective>
@@ -665,16 +665,16 @@
 
 
 <game_task id="povar_havchik">
-<title>Отнести посылку Полищуку.</title>
+<title>РћС‚РЅРµСЃС‚Рё РїРѕСЃС‹Р»РєСѓ РџРѕР»РёС‰СѓРєСѓ.</title>
 <objective>
-     <text>Отнести посылку Полищуку.</text>
+     <text>РћС‚РЅРµСЃС‚Рё РїРѕСЃС‹Р»РєСѓ РџРѕР»РёС‰СѓРєСѓ.</text>
      <icon>ui_iconsTotal_found_thing</icon>
      <infoportion_complete>polischuk_start_dialog_start</infoportion_complete>
      </objective>
 <objective>
-<text>Отнести лейтенанту Полищуку провизию от Повара.</text>
+<text>РћС‚РЅРµСЃС‚Рё Р»РµР№С‚РµРЅР°РЅС‚Сѓ РџРѕР»РёС‰СѓРєСѓ РїСЂРѕРІРёР·РёСЋ РѕС‚ РџРѕРІР°СЂР°.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
-<map_location_type hint="Полищук">blue_location</map_location_type>
+<map_location_type hint="РџРѕР»РёС‰СѓРє">blue_location</map_location_type>
 <object_story_id>polischuk</object_story_id>
 <infoportion_complete>polischuk_start_dialog_start</infoportion_complete>
        </objective>
@@ -682,22 +682,22 @@
 
 
 <game_task id="road_ataka">
-<title>Помочь Диггерам отбиться от кабанов.</title>
+<title>РџРѕРјРѕС‡СЊ Р”РёРіРіРµСЂР°Рј РѕС‚Р±РёС‚СЊСЃСЏ РѕС‚ РєР°Р±Р°РЅРѕРІ.</title>
 <objective>
-     <text>Помочь Диггерам отбиться от кабанов.</text>
+     <text>РџРѕРјРѕС‡СЊ Р”РёРіРіРµСЂР°Рј РѕС‚Р±РёС‚СЊСЃСЏ РѕС‚ РєР°Р±Р°РЅРѕРІ.</text>
      <icon>ui_npc_monster_mutant_boar</icon>
      <infoportion_complete>edik_need_done</infoportion_complete>
 	 <infoportion_fail>edik_proval</infoportion_fail>
      </objective>
 <objective>
-<text>Отбить атаку кабанов на деревню Диггеров.</text>
+<text>РћС‚Р±РёС‚СЊ Р°С‚Р°РєСѓ РєР°Р±Р°РЅРѕРІ РЅР° РґРµСЂРµРІРЅСЋ Р”РёРіРіРµСЂРѕРІ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <function_complete>fotograf.edik_need_have</function_complete>
 <infoportion_set_complete>edik_need_have</infoportion_set_complete>
        </objective>
 <objective>
-<text>Поговорить с Эдиком.</text>
-<map_location_type hint="Эдик">blue_location</map_location_type>
+<text>РџРѕРіРѕРІРѕСЂРёС‚СЊ СЃ Р­РґРёРєРѕРј.</text>
+<map_location_type hint="Р­РґРёРє">blue_location</map_location_type>
 <object_story_id>djonny</object_story_id>
 <infoportion_complete>edik_need_done</infoportion_complete>
        </objective>
@@ -705,22 +705,22 @@
 
 
 <game_task id="edik_aptechki">
-<title>Раздобыть три армейские аптечки.</title>
+<title>Р Р°Р·РґРѕР±С‹С‚СЊ С‚СЂРё Р°СЂРјРµР№СЃРєРёРµ Р°РїС‚РµС‡РєРё.</title>
 <objective>
-<text>Раздобыть три армейские аптечки.</text>
+<text>Р Р°Р·РґРѕР±С‹С‚СЊ С‚СЂРё Р°СЂРјРµР№СЃРєРёРµ Р°РїС‚РµС‡РєРё.</text>
 <icon>ui_iconsTotal_esc_blockpost_case_to_trader</icon>
 <infoportion_complete>dezertir_plan_dialog_have</infoportion_complete>
 <infoportion_fail>edik_dead</infoportion_fail>
 </objective>
 <objective>
-<text>Раздобыть три армейские аптечки для Эдика.</text>
+<text>Р Р°Р·РґРѕР±С‹С‚СЊ С‚СЂРё Р°СЂРјРµР№СЃРєРёРµ Р°РїС‚РµС‡РєРё РґР»СЏ Р­РґРёРєР°.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <function_complete>fotograf.edik_aptechki_have</function_complete>
 <infoportion_set_complete>edik_aptechki_have</infoportion_set_complete>
 </objective>
 <objective>
-<text>Принести три армейские аптечки Эдику.</text>
-<map_location_type hint="Эдик">blue_location</map_location_type>
+<text>РџСЂРёРЅРµСЃС‚Рё С‚СЂРё Р°СЂРјРµР№СЃРєРёРµ Р°РїС‚РµС‡РєРё Р­РґРёРєСѓ.</text>
+<map_location_type hint="Р­РґРёРє">blue_location</map_location_type>
 <object_story_id>djonny</object_story_id>
 <infoportion_complete>dezertir_plan_dialog_have</infoportion_complete>
 </objective>
@@ -728,26 +728,26 @@
 
 
 <game_task id="foto_poligon">
-<title>Провести разведку на Испытательном Полигоне.</title>
+<title>РџСЂРѕРІРµСЃС‚Рё СЂР°Р·РІРµРґРєСѓ РЅР° РСЃРїС‹С‚Р°С‚РµР»СЊРЅРѕРј РџРѕР»РёРіРѕРЅРµ.</title>
 <objective>
-<text>Провести разведку на Испытательном Полигоне.</text>
+<text>РџСЂРѕРІРµСЃС‚Рё СЂР°Р·РІРµРґРєСѓ РЅР° РСЃРїС‹С‚Р°С‚РµР»СЊРЅРѕРј РџРѕР»РёРіРѕРЅРµ.</text>
 <icon>ui_iconsTotal_eliminate_lager</icon>
 <infoportion_complete>brown_two_dialog_done</infoportion_complete>
 <infoportion_fail>brown_total_proval</infoportion_fail>
 </objective>
 <objective>
-<text>Осуществить фотосъёмку украинской военной базы с ключевых точек.</text>
+<text>РћСЃСѓС‰РµСЃС‚РІРёС‚СЊ С„РѕС‚РѕСЃСЉС‘РјРєСѓ СѓРєСЂР°РёРЅСЃРєРѕР№ РІРѕРµРЅРЅРѕР№ Р±Р°Р·С‹ СЃ РєР»СЋС‡РµРІС‹С… С‚РѕС‡РµРє.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>brown_two_dialog_have</infoportion_complete>
 </objective>
 <objective>
-<text>Проникнуть на украинскую военную базу и узнать о подземной лаборатории.</text>
+<text>РџСЂРѕРЅРёРєРЅСѓС‚СЊ РЅР° СѓРєСЂР°РёРЅСЃРєСѓСЋ РІРѕРµРЅРЅСѓСЋ Р±Р°Р·Сѓ Рё СѓР·РЅР°С‚СЊ Рѕ РїРѕРґР·РµРјРЅРѕР№ Р»Р°Р±РѕСЂР°С‚РѕСЂРёРё.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>brown_two_dialog_vhod</infoportion_complete>
 </objective>
 <objective>
-<text>Вернуться к Брауну.</text>
-<map_location_type hint="Браун">blue_location</map_location_type>
+<text>Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє Р‘СЂР°СѓРЅСѓ.</text>
+<map_location_type hint="Р‘СЂР°СѓРЅ">blue_location</map_location_type>
 <object_story_id>brown</object_story_id>
 <infoportion_complete>brown_two_dialog_done</infoportion_complete>
 </objective>
@@ -755,26 +755,26 @@
 
 
 <game_task id="drozdov_vstrecha">
-<title>Провести усовершенствование фотокамеры.</title>
+<title>РџСЂРѕРІРµСЃС‚Рё СѓСЃРѕРІРµСЂС€РµРЅСЃС‚РІРѕРІР°РЅРёРµ С„РѕС‚РѕРєР°РјРµСЂС‹.</title>
 <objective>
-     <text>Провести усовершенствование фотокамеры.</text>
+     <text>РџСЂРѕРІРµСЃС‚Рё СѓСЃРѕРІРµСЂС€РµРЅСЃС‚РІРѕРІР°РЅРёРµ С„РѕС‚РѕРєР°РјРµСЂС‹.</text>
      <icon>ui_fotokamera</icon>
      <infoportion_complete>smith_two_dialog_have</infoportion_complete>
      </objective>
 <objective>
-     <text>Поговорить с учёным Дроздовым.</text>
+     <text>РџРѕРіРѕРІРѕСЂРёС‚СЊ СЃ СѓС‡С‘РЅС‹Рј Р”СЂРѕР·РґРѕРІС‹Рј.</text>
      <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
      <infoportion_complete>drozdov_start_dialog_start</infoportion_complete>
      </objective>
 <objective>
-     <text>Модернизировать фотокамеру.</text>
+     <text>РњРѕРґРµСЂРЅРёР·РёСЂРѕРІР°С‚СЊ С„РѕС‚РѕРєР°РјРµСЂСѓ.</text>
      <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
      <infoportion_complete>fotokamera_upgrade</infoportion_complete>
      </objective>
 <objective>
-<text>Вернуться к генералу Смиту.</text>
+<text>Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє РіРµРЅРµСЂР°Р»Сѓ РЎРјРёС‚Сѓ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
-<map_location_type hint="Генерал Смит">blue_location</map_location_type>
+<map_location_type hint="Р“РµРЅРµСЂР°Р» РЎРјРёС‚">blue_location</map_location_type>
 <object_story_id>smith</object_story_id>
 <infoportion_complete>smith_two_dialog_have</infoportion_complete>
        </objective>
@@ -782,23 +782,23 @@
 
 
 <game_task id="voronin_aver">
-<title>Поговорить с генералом Ворониным.</title>
+<title>РџРѕРіРѕРІРѕСЂРёС‚СЊ СЃ РіРµРЅРµСЂР°Р»РѕРј Р’РѕСЂРѕРЅРёРЅС‹Рј.</title>
 <objective>
-     <text>Поговорить с генералом Ворониным.</text>
+     <text>РџРѕРіРѕРІРѕСЂРёС‚СЊ СЃ РіРµРЅРµСЂР°Р»РѕРј Р’РѕСЂРѕРЅРёРЅС‹Рј.</text>
      <icon>ui_npc_rus_voronin</icon>
      <infoportion_complete>brown_tri_dialog_gotovo</infoportion_complete>
      </objective>
 <objective>
-<text>Поговорить с генералом Ворониным о переходе в Лес.</text>
+<text>РџРѕРіРѕРІРѕСЂРёС‚СЊ СЃ РіРµРЅРµСЂР°Р»РѕРј Р’РѕСЂРѕРЅРёРЅС‹Рј Рѕ РїРµСЂРµС…РѕРґРµ РІ Р›РµСЃ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
-<map_location_type hint="Воронин">blue_location</map_location_type>
+<map_location_type hint="Р’РѕСЂРѕРЅРёРЅ">blue_location</map_location_type>
 <object_story_id>komandir_voronin</object_story_id>
 <infoportion_complete>voronin_one_dialog_start</infoportion_complete>
        </objective>
 <objective>
-<text>Вернуться к полковнику Брауну.</text>
+<text>Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє РїРѕР»РєРѕРІРЅРёРєСѓ Р‘СЂР°СѓРЅСѓ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
-<map_location_type hint="Браун">blue_location</map_location_type>
+<map_location_type hint="Р‘СЂР°СѓРЅ">blue_location</map_location_type>
 <object_story_id>brown</object_story_id>
 <infoportion_complete>brown_tri_dialog_gotovo</infoportion_complete>
        </objective>
@@ -806,14 +806,14 @@
 
 
 <game_task id="haron_case">
-<title>Отнести посылку Лукашу.</title>
+<title>РћС‚РЅРµСЃС‚Рё РїРѕСЃС‹Р»РєСѓ Р›СѓРєР°С€Сѓ.</title>
 <objective>
-     <text>Отнести посылку лукашу.</text>
+     <text>РћС‚РЅРµСЃС‚Рё РїРѕСЃС‹Р»РєСѓ Р»СѓРєР°С€Сѓ.</text>
      <icon>ui_iconsTotal_found_thing</icon>
      <infoportion_complete>haron_case_otdal</infoportion_complete>
      </objective>
 <objective>
-<text>Передать Лукашу контейнер от Харона.</text>
+<text>РџРµСЂРµРґР°С‚СЊ Р›СѓРєР°С€Сѓ РєРѕРЅС‚РµР№РЅРµСЂ РѕС‚ РҐР°СЂРѕРЅР°.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>haron_case_otdal</infoportion_complete>
        </objective>
@@ -821,16 +821,16 @@
 
 
 <game_task id="voronin_perehod">
-<title>Поговорить с генералом Ворониным.</title>
+<title>РџРѕРіРѕРІРѕСЂРёС‚СЊ СЃ РіРµРЅРµСЂР°Р»РѕРј Р’РѕСЂРѕРЅРёРЅС‹Рј.</title>
 <objective>
-     <text>Поговорить с генералом Ворониным.</text>
+     <text>РџРѕРіРѕРІРѕСЂРёС‚СЊ СЃ РіРµРЅРµСЂР°Р»РѕРј Р’РѕСЂРѕРЅРёРЅС‹Рј.</text>
      <icon>ui_npc_rus_voronin</icon>
      <infoportion_complete>voronin_one_dialog_est</infoportion_complete>
      </objective>
 <objective>
-<text>Поговорить с генералом Ворониным.</text>
+<text>РџРѕРіРѕРІРѕСЂРёС‚СЊ СЃ РіРµРЅРµСЂР°Р»РѕРј Р’РѕСЂРѕРЅРёРЅС‹Рј.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
-<map_location_type hint="Воронин">blue_location</map_location_type>
+<map_location_type hint="Р’РѕСЂРѕРЅРёРЅ">blue_location</map_location_type>
 <object_story_id>komandir_voronin</object_story_id>
 <infoportion_complete>voronin_one_dialog_est</infoportion_complete>
        </objective>
@@ -838,100 +838,100 @@
 
 
 <game_task id="mousetrap_task">
-<title>Предотвратить начало операции "Мышеловка".</title>
+<title>РџСЂРµРґРѕС‚РІСЂР°С‚РёС‚СЊ РЅР°С‡Р°Р»Рѕ РѕРїРµСЂР°С†РёРё "РњС‹С€РµР»РѕРІРєР°".</title>
 <objective>
-<text>Предотвратить начало операции "Мышеловка".</text>
+<text>РџСЂРµРґРѕС‚РІСЂР°С‚РёС‚СЊ РЅР°С‡Р°Р»Рѕ РѕРїРµСЂР°С†РёРё "РњС‹С€РµР»РѕРІРєР°".</text>
 <icon>ui_iconsTotal_eliminate_lager</icon>
 <infoportion_complete>mousetrap_finish</infoportion_complete>
 <infoportion_fail>mousetrap_proval</infoportion_fail>
 </objective>
 <objective>
-<text>Найти место перехода из Промзоны в Лес.</text>
+<text>РќР°Р№С‚Рё РјРµСЃС‚Рѕ РїРµСЂРµС…РѕРґР° РёР· РџСЂРѕРјР·РѕРЅС‹ РІ Р›РµСЃ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>prom_tochka_vstrechi</infoportion_complete>
 </objective>
 <objective>
-<text>Дождаться, когда наёмники придут к переходу в Лес.</text>
+<text>Р”РѕР¶РґР°С‚СЊСЃСЏ, РєРѕРіРґР° РЅР°С‘РјРЅРёРєРё РїСЂРёРґСѓС‚ Рє РїРµСЂРµС…РѕРґСѓ РІ Р›РµСЃ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>agent_prom_uhodit</infoportion_complete>
 </objective>
 <objective>
-<text>Добыть ПДА главаря первой группы наёмников и узнать координаты места встречи двух групп.</text>
+<text>Р”РѕР±С‹С‚СЊ РџР”Рђ РіР»Р°РІР°СЂСЏ РїРµСЂРІРѕР№ РіСЂСѓРїРїС‹ РЅР°С‘РјРЅРёРєРѕРІ Рё СѓР·РЅР°С‚СЊ РєРѕРѕСЂРґРёРЅР°С‚С‹ РјРµСЃС‚Р° РІСЃС‚СЂРµС‡Рё РґРІСѓС… РіСЂСѓРїРї.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <function_complete>fotograf.pda_agent_prom_have</function_complete>
 <infoportion_set_complete>pda_agent_prom_have</infoportion_set_complete>
 </objective>
 <objective>
-<text>Найти место встречи двух групп наёмников.</text>
+<text>РќР°Р№С‚Рё РјРµСЃС‚Рѕ РІСЃС‚СЂРµС‡Рё РґРІСѓС… РіСЂСѓРїРї РЅР°С‘РјРЅРёРєРѕРІ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>aver_tochka_vstrechi</infoportion_complete>
 </objective>
 <objective>
-<text>Дождаться, когда наёмники придут на место встречи.</text>
+<text>Р”РѕР¶РґР°С‚СЊСЃСЏ, РєРѕРіРґР° РЅР°С‘РјРЅРёРєРё РїСЂРёРґСѓС‚ РЅР° РјРµСЃС‚Рѕ РІСЃС‚СЂРµС‡Рё.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>agent_aver_uhodit</infoportion_complete>
 </objective>
 <objective>
-<text>Добыть ПДА главаря второй группы наёмников.</text>
+<text>Р”РѕР±С‹С‚СЊ РџР”Рђ РіР»Р°РІР°СЂСЏ РІС‚РѕСЂРѕР№ РіСЂСѓРїРїС‹ РЅР°С‘РјРЅРёРєРѕРІ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <function_complete>fotograf.pda_agent_aver_have</function_complete>
 <infoportion_set_complete>pda_agent_aver_have</infoportion_set_complete>
 </objective>
 <objective>
-<text>Передать полученную информацию связному Брауна.</text>
-<map_location_type hint="Связной">blue_location</map_location_type>
+<text>РџРµСЂРµРґР°С‚СЊ РїРѕР»СѓС‡РµРЅРЅСѓСЋ РёРЅС„РѕСЂРјР°С†РёСЋ СЃРІСЏР·РЅРѕРјСѓ Р‘СЂР°СѓРЅР°.</text>
+<map_location_type hint="РЎРІСЏР·РЅРѕР№">blue_location</map_location_type>
 <object_story_id>osvedom</object_story_id>
 <infoportion_complete>mousetrap_finish</infoportion_complete>
 </objective>
 </game_task>
 
 <game_task id="osvedom_vyzov_01">
-<title>Встретиться со Связным.</title>
+<title>Р’СЃС‚СЂРµС‚РёС‚СЊСЃСЏ СЃРѕ РЎРІСЏР·РЅС‹Рј.</title>
 <objective>
-     <text>Встретиться со Связным.</text>
+     <text>Р’СЃС‚СЂРµС‚РёС‚СЊСЃСЏ СЃРѕ РЎРІСЏР·РЅС‹Рј.</text>
      <icon>ui_npc_osvedom</icon>
      <infoportion_complete>osvedom_vstrecha1</infoportion_complete>
      </objective>
 <objective>
-<text>Встретиться со Связным в Аномальном лесу в домике Лесника.</text>
+<text>Р’СЃС‚СЂРµС‚РёС‚СЊСЃСЏ СЃРѕ РЎРІСЏР·РЅС‹Рј РІ РђРЅРѕРјР°Р»СЊРЅРѕРј Р»РµСЃСѓ РІ РґРѕРјРёРєРµ Р›РµСЃРЅРёРєР°.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>osvedom_vstrecha1</infoportion_complete>
        </objective>
       </game_task>
 	  
 <game_task id="main_task">
-<title>Найти источник энергии или убедиться, что его не существует.</title>
+<title>РќР°Р№С‚Рё РёСЃС‚РѕС‡РЅРёРє СЌРЅРµСЂРіРёРё РёР»Рё СѓР±РµРґРёС‚СЊСЃСЏ, С‡С‚Рѕ РµРіРѕ РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚.</title>
 <objective>
-     <text>Найти источник энергии или убедиться, что его не существует.</text>
+     <text>РќР°Р№С‚Рё РёСЃС‚РѕС‡РЅРёРє СЌРЅРµСЂРіРёРё РёР»Рё СѓР±РµРґРёС‚СЊСЃСЏ, С‡С‚Рѕ РµРіРѕ РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚.</text>
      <icon>ui_iconsTotal_bar_radar_deactivate</icon>
      <infoportion_complete>main_task_finish</infoportion_complete>
 	 <infoportion_fail>main_task_fail</infoportion_fail>
 	 <article>main_task_zadan</article>
      </objective>
 <objective>
-<text>Найти источник неиссякаемой энергии или убедиться, что его не существует.</text>
+<text>РќР°Р№С‚Рё РёСЃС‚РѕС‡РЅРёРє РЅРµРёСЃСЃСЏРєР°РµРјРѕР№ СЌРЅРµСЂРіРёРё РёР»Рё СѓР±РµРґРёС‚СЊСЃСЏ, С‡С‚Рѕ РµРіРѕ РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>main_task_have</infoportion_complete>
        </objective>
 <objective>	   
-<text>Вернуться к генералу Смиту.</text>
+<text>Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє РіРµРЅРµСЂР°Р»Сѓ РЎРјРёС‚Сѓ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
-<map_location_type hint="Генерал Смит">blue_location</map_location_type>
+<map_location_type hint="Р“РµРЅРµСЂР°Р» РЎРјРёС‚">blue_location</map_location_type>
 <object_story_id>smith</object_story_id>
 <infoportion_complete>main_task_finish</infoportion_complete>
        </objective>	   
       </game_task>	  
 
 <game_task id="main_foto">
-<title>Провести фотосъёмку ключевых объектов.</title>
+<title>РџСЂРѕРІРµСЃС‚Рё С„РѕС‚РѕСЃСЉС‘РјРєСѓ РєР»СЋС‡РµРІС‹С… РѕР±СЉРµРєС‚РѕРІ.</title>
 <objective>
-     <text>Провести фотосъёмку ключевых объектов.</text>
+     <text>РџСЂРѕРІРµСЃС‚Рё С„РѕС‚РѕСЃСЉС‘РјРєСѓ РєР»СЋС‡РµРІС‹С… РѕР±СЉРµРєС‚РѕРІ.</text>
      <icon>ui_fotokamera</icon>
      <infoportion_complete>vse_foto_sdelal</infoportion_complete>
 	 <article>main_foto_zadan</article>
      </objective>
 <objective>
-     <text>Сфотографировать несколько ключевых объектов по заданию генерала Смита.</text>
+     <text>РЎС„РѕС‚РѕРіСЂР°С„РёСЂРѕРІР°С‚СЊ РЅРµСЃРєРѕР»СЊРєРѕ РєР»СЋС‡РµРІС‹С… РѕР±СЉРµРєС‚РѕРІ РїРѕ Р·Р°РґР°РЅРёСЋ РіРµРЅРµСЂР°Р»Р° РЎРјРёС‚Р°.</text>
      <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 	 <function_complete>fotograf.fotki_have</function_complete>
      <infoportion_complete>vse_foto_sdelal</infoportion_complete>
@@ -939,683 +939,683 @@
       </game_task>
 
 <game_task id="german_spasenie">
-<title>Помочь немецким учёным выбраться из Мёртвого Города.</title>
+<title>РџРѕРјРѕС‡СЊ РЅРµРјРµС†РєРёРј СѓС‡С‘РЅС‹Рј РІС‹Р±СЂР°С‚СЊСЃСЏ РёР· РњС‘СЂС‚РІРѕРіРѕ Р“РѕСЂРѕРґР°.</title>
 <objective>
-<text>Помочь немецким учёным выбраться из Мёртвого Города.</text>
+<text>РџРѕРјРѕС‡СЊ РЅРµРјРµС†РєРёРј СѓС‡С‘РЅС‹Рј РІС‹Р±СЂР°С‚СЊСЃСЏ РёР· РњС‘СЂС‚РІРѕРіРѕ Р“РѕСЂРѕРґР°.</text>
 <icon>ui_iconsTotal_bar_resque_information_2</icon>
 <infoportion_complete>german_spasenie_finish</infoportion_complete>
 <infoportion_fail>mg_vyhod_proval</infoportion_fail>
 <article>german_spasenie_zadan</article>
 </objective>
 <objective>
-<text>Узнать у Сутулого о проводнике.</text>
+<text>РЈР·РЅР°С‚СЊ Сѓ РЎСѓС‚СѓР»РѕРіРѕ Рѕ РїСЂРѕРІРѕРґРЅРёРєРµ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>sut_start_dialog_done</infoportion_complete>
 </objective>
 <objective>
-<text>Найти проводника.</text>
+<text>РќР°Р№С‚Рё РїСЂРѕРІРѕРґРЅРёРєР°.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>filin_vstrecha</infoportion_complete>
 </objective>
 <objective>
-<text>Добраться до Мёртвого Города.</text>
+<text>Р”РѕР±СЂР°С‚СЊСЃСЏ РґРѕ РњС‘СЂС‚РІРѕРіРѕ Р“РѕСЂРѕРґР°.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>german_mg_spawn</infoportion_complete>
 </objective>
 <objective>
-<text>Найти в Мёртвом Городе немецких учёных и спецназ сопровождения.</text>
+<text>РќР°Р№С‚Рё РІ РњС‘СЂС‚РІРѕРј Р“РѕСЂРѕРґРµ РЅРµРјРµС†РєРёС… СѓС‡С‘РЅС‹С… Рё СЃРїРµС†РЅР°Р· СЃРѕРїСЂРѕРІРѕР¶РґРµРЅРёСЏ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
-<map_location_type hint="Генрих">blue_location</map_location_type>
+<map_location_type hint="Р“РµРЅСЂРёС…">blue_location</map_location_type>
 <object_story_id>genrih</object_story_id>
 <infoportion_complete>genrih_vstrecha</infoportion_complete>
 </objective>
 <objective>
-<text>Вывести немецких учёных из города.</text>
+<text>Р’С‹РІРµСЃС‚Рё РЅРµРјРµС†РєРёС… СѓС‡С‘РЅС‹С… РёР· РіРѕСЂРѕРґР°.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>german_spasenie_gotovo</infoportion_complete>
 </objective>
 <objective>
-<text>Встретиться со Связным в Баре.</text>
+<text>Р’СЃС‚СЂРµС‚РёС‚СЊСЃСЏ СЃРѕ РЎРІСЏР·РЅС‹Рј РІ Р‘Р°СЂРµ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>german_spasenie_finish</infoportion_complete>
 </objective>
 </game_task> 	  
   
 <game_task id="hunter_case">
-<title>Найти контейнер охотника.</title>
+<title>РќР°Р№С‚Рё РєРѕРЅС‚РµР№РЅРµСЂ РѕС…РѕС‚РЅРёРєР°.</title>
 <objective>
-<text>Найти контейнер охотника.</text>
+<text>РќР°Р№С‚Рё РєРѕРЅС‚РµР№РЅРµСЂ РѕС…РѕС‚РЅРёРєР°.</text>
 <icon>ui_iconsTotal_esc_blockpost_case_to_trader</icon>
 <infoportion_complete>sut_start_dialog_done</infoportion_complete>
 <article>hunter_case_zadan</article>
 </objective>
 <objective>
-<text>Найти труп охотника и забрать из его вещей контейнер.</text>
+<text>РќР°Р№С‚Рё С‚СЂСѓРї РѕС…РѕС‚РЅРёРєР° Рё Р·Р°Р±СЂР°С‚СЊ РёР· РµРіРѕ РІРµС‰РµР№ РєРѕРЅС‚РµР№РЅРµСЂ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <function_complete>fotograf.hunter_case_have</function_complete>
 <infoportion_set_complete>sut_start_dialog_have</infoportion_set_complete>
 </objective>
 <objective>
-<text>Принести контейнер охотника Сутулому.</text>
+<text>РџСЂРёРЅРµСЃС‚Рё РєРѕРЅС‚РµР№РЅРµСЂ РѕС…РѕС‚РЅРёРєР° РЎСѓС‚СѓР»РѕРјСѓ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
-<map_location_type hint="Сутулый">blue_location</map_location_type>
+<map_location_type hint="РЎСѓС‚СѓР»С‹Р№">blue_location</map_location_type>
 <object_story_id>sutuly</object_story_id>
 <infoportion_complete>sut_start_dialog_done</infoportion_complete>
 </objective>
 </game_task>
 
 <game_task id="filin_vino">
-<title>Раздобыть две бутылки вина для Филина.</title>
+<title>Р Р°Р·РґРѕР±С‹С‚СЊ РґРІРµ Р±СѓС‚С‹Р»РєРё РІРёРЅР° РґР»СЏ Р¤РёР»РёРЅР°.</title>
 <objective>
-<text>Раздобыть две бутылки вина для Филина.</text>
+<text>Р Р°Р·РґРѕР±С‹С‚СЊ РґРІРµ Р±СѓС‚С‹Р»РєРё РІРёРЅР° РґР»СЏ Р¤РёР»РёРЅР°.</text>
 <icon>ui_iconsTotal_found_thing</icon>
 <infoportion_complete>filin_vino_dialog_done</infoportion_complete>
 <article>filin_vino_zadan</article>
 </objective>
 <objective>
-<text>Отправиться на Болота и раздобыть у учёных вино.</text>
+<text>РћС‚РїСЂР°РІРёС‚СЊСЃСЏ РЅР° Р‘РѕР»РѕС‚Р° Рё СЂР°Р·РґРѕР±С‹С‚СЊ Сѓ СѓС‡С‘РЅС‹С… РІРёРЅРѕ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <function_complete>fotograf.filin_vino_have</function_complete>
 <infoportion_set_complete>filin_vino_have</infoportion_set_complete>
 </objective>
 <objective>
-<text>Принести две бутылки вина Филину.</text>
+<text>РџСЂРёРЅРµСЃС‚Рё РґРІРµ Р±СѓС‚С‹Р»РєРё РІРёРЅР° Р¤РёР»РёРЅСѓ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
-<map_location_type hint="Филин">blue_location</map_location_type>
+<map_location_type hint="Р¤РёР»РёРЅ">blue_location</map_location_type>
 <object_story_id>filin</object_story_id>
 <infoportion_complete>filin_vino_dialog_done</infoportion_complete>
 </objective>
 </game_task>
 
 <game_task id="filin_helper">
-<title>Принести прибор-приёмник и передатчик Филину.</title>
+<title>РџСЂРёРЅРµСЃС‚Рё РїСЂРёР±РѕСЂ-РїСЂРёС‘РјРЅРёРє Рё РїРµСЂРµРґР°С‚С‡РёРє Р¤РёР»РёРЅСѓ.</title>
 <objective>
-<text>Принести прибор-приёмник и передатчик Филину.</text>
+<text>РџСЂРёРЅРµСЃС‚Рё РїСЂРёР±РѕСЂ-РїСЂРёС‘РјРЅРёРє Рё РїРµСЂРµРґР°С‚С‡РёРє Р¤РёР»РёРЅСѓ.</text>
 <icon>ui_iconsTotal_yan_find_scientist</icon>
 <infoportion_complete>filin_pribory_done</infoportion_complete>
 <article>poisk_helper</article>
 </objective>
 <objective>
-<text>Найти Джаггера и забрать у него передатчик.</text>
+<text>РќР°Р№С‚Рё Р”Р¶Р°РіРіРµСЂР° Рё Р·Р°Р±СЂР°С‚СЊ Сѓ РЅРµРіРѕ РїРµСЂРµРґР°С‚С‡РёРє.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <function_complete>fotograf.filin_pribor_have</function_complete>
 <infoportion_set_complete>filin_pribor_have</infoportion_set_complete>
 </objective>
 <objective>
-<text>Отыскать в Лесу прибор-приёмник.</text>
+<text>РћС‚С‹СЃРєР°С‚СЊ РІ Р›РµСЃСѓ РїСЂРёР±РѕСЂ-РїСЂРёС‘РјРЅРёРє.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <function_complete>fotograf.filin_priemnik_have</function_complete>
 <infoportion_set_complete>filin_priemnik_have</infoportion_set_complete>
 </objective>
 <objective>
-<text>Вернуться к Филину.</text>
+<text>Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє Р¤РёР»РёРЅСѓ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
-<map_location_type hint="Филин">blue_location</map_location_type>
+<map_location_type hint="Р¤РёР»РёРЅ">blue_location</map_location_type>
 <object_story_id>filin</object_story_id>
 <infoportion_complete>filin_pribory_done</infoportion_complete>
 </objective>
 </game_task>
 
 <game_task id="brom_likvidator">
-<title>Найти артефакт Ликвидатор.</title>
+<title>РќР°Р№С‚Рё Р°СЂС‚РµС„Р°РєС‚ Р›РёРєРІРёРґР°С‚РѕСЂ.</title>
 <objective>
-<text>Найти артефакт Ликвидатор.</text>
+<text>РќР°Р№С‚Рё Р°СЂС‚РµС„Р°РєС‚ Р›РёРєРІРёРґР°С‚РѕСЂ.</text>
 <icon>ui_iconsTotal_artefacts</icon>
 <infoportion_complete>brom_mg_dialog_done</infoportion_complete>
 </objective>
 <objective>
-<text>Отыскать в Мёртвом Городе красную палатку и обыскать её.</text>
+<text>РћС‚С‹СЃРєР°С‚СЊ РІ РњС‘СЂС‚РІРѕРј Р“РѕСЂРѕРґРµ РєСЂР°СЃРЅСѓСЋ РїР°Р»Р°С‚РєСѓ Рё РѕР±С‹СЃРєР°С‚СЊ РµС‘.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <function_complete>fotograf.brom_mg_dialog_have</function_complete>
 <infoportion_set_complete>brom_mg_dialog_have</infoportion_set_complete>
 </objective>
 <objective>
-<text>Принести Ликвидатор Аномалий Брому.</text>
+<text>РџСЂРёРЅРµСЃС‚Рё Р›РёРєРІРёРґР°С‚РѕСЂ РђРЅРѕРјР°Р»РёР№ Р‘СЂРѕРјСѓ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>brom_mg_dialog_done</infoportion_complete>
 </objective>
 </game_task>
 
 <game_task id="wulf_poisk">
-<title>Найти материалы исследований.</title>
+<title>РќР°Р№С‚Рё РјР°С‚РµСЂРёР°Р»С‹ РёСЃСЃР»РµРґРѕРІР°РЅРёР№.</title>
 <objective>
-<text>Найти материалы исследований.</text>
+<text>РќР°Р№С‚Рё РјР°С‚РµСЂРёР°Р»С‹ РёСЃСЃР»РµРґРѕРІР°РЅРёР№.</text>
 <icon>ui_npc_mamasha</icon>
 <infoportion_complete>madam_one_dialog_start</infoportion_complete>
 </objective>
 <objective>
-<text>Найти труп учёного и забрать у него материалы исследований.</text>
+<text>РќР°Р№С‚Рё С‚СЂСѓРї СѓС‡С‘РЅРѕРіРѕ Рё Р·Р°Р±СЂР°С‚СЊ Сѓ РЅРµРіРѕ РјР°С‚РµСЂРёР°Р»С‹ РёСЃСЃР»РµРґРѕРІР°РЅРёР№.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <function_complete>fotograf.wulf_case_have</function_complete>
 <infoportion_set_complete>wulf_case_have</infoportion_set_complete>
 </objective>
 <objective>
-<text>Принести материалы исследований Гертруде.</text>
+<text>РџСЂРёРЅРµСЃС‚Рё РјР°С‚РµСЂРёР°Р»С‹ РёСЃСЃР»РµРґРѕРІР°РЅРёР№ Р“РµСЂС‚СЂСѓРґРµ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
-<map_location_type hint="Гертруда">blue_location</map_location_type>
+<map_location_type hint="Р“РµСЂС‚СЂСѓРґР°">blue_location</map_location_type>
 <object_story_id>missis_uchen</object_story_id>
 <infoportion_complete>madam_one_dialog_start</infoportion_complete>
 </objective>
 </game_task>
 
 <game_task id="jagger_vstrecha">
-<title>Встретиться с Джаггером.</title>
+<title>Р’СЃС‚СЂРµС‚РёС‚СЊСЃСЏ СЃ Р”Р¶Р°РіРіРµСЂРѕРј.</title>
 <objective>
-     <text>Встретиться с Джаггером.</text>
+     <text>Р’СЃС‚СЂРµС‚РёС‚СЊСЃСЏ СЃ Р”Р¶Р°РіРіРµСЂРѕРј.</text>
      <icon>ui_npc_jagger</icon>
      <infoportion_complete>jagger_vstretil</infoportion_complete>
      </objective>
 <objective>
-<text>Встретиться с Джаггером в здании Горкома.</text>
+<text>Р’СЃС‚СЂРµС‚РёС‚СЊСЃСЏ СЃ Р”Р¶Р°РіРіРµСЂРѕРј РІ Р·РґР°РЅРёРё Р“РѕСЂРєРѕРјР°.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
-<map_location_type hint="Джаггер">blue_location</map_location_type>
+<map_location_type hint="Р”Р¶Р°РіРіРµСЂ">blue_location</map_location_type>
 <object_story_id>jagger</object_story_id>
 <infoportion_complete>jagger_vstretil</infoportion_complete>
        </objective>
       </game_task>
 
 <game_task id="mg_vyhod">
-<title>Найти выход из Мёртвого Города.</title>
+<title>РќР°Р№С‚Рё РІС‹С…РѕРґ РёР· РњС‘СЂС‚РІРѕРіРѕ Р“РѕСЂРѕРґР°.</title>
 <objective>
-     <text>Найти выход из Мёртвого Города.</text>
+     <text>РќР°Р№С‚Рё РІС‹С…РѕРґ РёР· РњС‘СЂС‚РІРѕРіРѕ Р“РѕСЂРѕРґР°.</text>
      <icon>ui_iconsTotal_locations</icon>
      <infoportion_complete>vyhod_mg_est</infoportion_complete>
      <article>mg_vyhod_poisk</article>
      </objective>
 <objective>
-<text>Найти место начала перехода из Мёртвого Города в Лес.</text>
+<text>РќР°Р№С‚Рё РјРµСЃС‚Рѕ РЅР°С‡Р°Р»Р° РїРµСЂРµС…РѕРґР° РёР· РњС‘СЂС‚РІРѕРіРѕ Р“РѕСЂРѕРґР° РІ Р›РµСЃ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>lch_mg_aver</infoportion_complete>
        </objective>
 <objective>
-<text>Вернуться к Генриху.</text>
+<text>Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє Р“РµРЅСЂРёС…Сѓ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
-<map_location_type hint="Генрих">blue_location</map_location_type>
+<map_location_type hint="Р“РµРЅСЂРёС…">blue_location</map_location_type>
 <object_story_id>genrih</object_story_id>
 <infoportion_complete>vyhod_mg_est</infoportion_complete>
 </objective>	   
 </game_task>
 
 <game_task id="shema_perehodov">
-<title>Найти схему подземных переходов.</title>
+<title>РќР°Р№С‚Рё СЃС…РµРјСѓ РїРѕРґР·РµРјРЅС‹С… РїРµСЂРµС…РѕРґРѕРІ.</title>
 <objective>
-<text>Найти схему подземных переходов.</text>
+<text>РќР°Р№С‚Рё СЃС…РµРјСѓ РїРѕРґР·РµРјРЅС‹С… РїРµСЂРµС…РѕРґРѕРІ.</text>
 <icon>ui_iconsTotal_bar_darklab_documents</icon>
 <infoportion_complete>osvedom_tri_dialog_done</infoportion_complete>
 <infoportion_fail>shema_proval</infoportion_fail>
 <article>shema_x-18</article>
 </objective>
 <objective>
-<text>Проникнуть в секретную часть лабораторного комплекса Х-18.</text>
+<text>РџСЂРѕРЅРёРєРЅСѓС‚СЊ РІ СЃРµРєСЂРµС‚РЅСѓСЋ С‡Р°СЃС‚СЊ Р»Р°Р±РѕСЂР°С‚РѕСЂРЅРѕРіРѕ РєРѕРјРїР»РµРєСЃР° РҐ-18.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>x-18_pronik</infoportion_complete>
 </objective>
 <objective>
-<text>Раздобыть схему переходов между подземными лабораториями.</text>
+<text>Р Р°Р·РґРѕР±С‹С‚СЊ СЃС…РµРјСѓ РїРµСЂРµС…РѕРґРѕРІ РјРµР¶РґСѓ РїРѕРґР·РµРјРЅС‹РјРё Р»Р°Р±РѕСЂР°С‚РѕСЂРёСЏРјРё.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <function_complete>fotograf.shema_labs_have</function_complete>
 <infoportion_set_complete>osvedom_tri_dialog_have</infoportion_set_complete>
 </objective>
 <objective>
-<text>Принести схему переходов заказчику.</text>
+<text>РџСЂРёРЅРµСЃС‚Рё СЃС…РµРјСѓ РїРµСЂРµС…РѕРґРѕРІ Р·Р°РєР°Р·С‡РёРєСѓ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>osvedom_tri_dialog_done</infoportion_complete>
 </objective>
 </game_task>
 
 <game_task id="uber_ataka">
-<title>Помочь защитить военную базу от нападения.</title>
+<title>РџРѕРјРѕС‡СЊ Р·Р°С‰РёС‚РёС‚СЊ РІРѕРµРЅРЅСѓСЋ Р±Р°Р·Сѓ РѕС‚ РЅР°РїР°РґРµРЅРёСЏ.</title>
 <objective>
-     <text>Помочь защитить военную базу от нападения.</text>
+     <text>РџРѕРјРѕС‡СЊ Р·Р°С‰РёС‚РёС‚СЊ РІРѕРµРЅРЅСѓСЋ Р±Р°Р·Сѓ РѕС‚ РЅР°РїР°РґРµРЅРёСЏ.</text>
      <icon>ui_iconsTotal_eliminate_lager</icon>
      <infoportion_complete>uber_ataka_done</infoportion_complete>
 	 <infoportion_fail>uber_proval</infoportion_fail>
      </objective>
 <objective>
-<text>Помочь украинским солдатам отбить атаку из тоннеля.</text>
+<text>РџРѕРјРѕС‡СЊ СѓРєСЂР°РёРЅСЃРєРёРј СЃРѕР»РґР°С‚Р°Рј РѕС‚Р±РёС‚СЊ Р°С‚Р°РєСѓ РёР· С‚РѕРЅРЅРµР»СЏ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <function_complete>fotograf.uber_ataka_have</function_complete>
 <infoportion_set_complete>uber_ataka_have</infoportion_set_complete>
        </objective>
 <objective>
-<text>Поговорить с лейтенантом Полищуком.</text>
+<text>РџРѕРіРѕРІРѕСЂРёС‚СЊ СЃ Р»РµР№С‚РµРЅР°РЅС‚РѕРј РџРѕР»РёС‰СѓРєРѕРј.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
-<map_location_type hint="Полищук">blue_location</map_location_type>
+<map_location_type hint="РџРѕР»РёС‰СѓРє">blue_location</map_location_type>
 <object_story_id>polischuk</object_story_id>
 <infoportion_complete>uber_ataka_done</infoportion_complete>
 </objective>	   
 </game_task>
 
 <game_task id="ploymar_zadan">
-<title>Отключить защитный барьер.</title>
+<title>РћС‚РєР»СЋС‡РёС‚СЊ Р·Р°С‰РёС‚РЅС‹Р№ Р±Р°СЂСЊРµСЂ.</title>
 <objective>
-<text>Отключить защитный барьер.</text>
+<text>РћС‚РєР»СЋС‡РёС‚СЊ Р·Р°С‰РёС‚РЅС‹Р№ Р±Р°СЂСЊРµСЂ.</text>
 <icon>ui_iconsTotal_dar_codedoor_1</icon>
 <infoportion_complete>x18_vernulsya</infoportion_complete>
 <infoportion_fail>ploymar_enemy</infoportion_fail>
 </objective>
 <objective>
-<text>Найти в Х-18 профессора Плоймара и поговорить с ним.</text>
+<text>РќР°Р№С‚Рё РІ РҐ-18 РїСЂРѕС„РµСЃСЃРѕСЂР° РџР»РѕР№РјР°СЂР° Рё РїРѕРіРѕРІРѕСЂРёС‚СЊ СЃ РЅРёРј.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>ploymar_start_dialog_start</infoportion_complete>
 </objective>
 <objective>
-<text>Уговорить профессора отключить защитный барьер.</text>
+<text>РЈРіРѕРІРѕСЂРёС‚СЊ РїСЂРѕС„РµСЃСЃРѕСЂР° РѕС‚РєР»СЋС‡РёС‚СЊ Р·Р°С‰РёС‚РЅС‹Р№ Р±Р°СЂСЊРµСЂ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>ploymar_start_dialog_done</infoportion_complete>
 </objective>
 <objective>
-<text>Вернуться к полковнику Брауну.</text>
+<text>Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє РїРѕР»РєРѕРІРЅРёРєСѓ Р‘СЂР°СѓРЅСѓ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>x18_vernulsya</infoportion_complete>
 </objective>
 </game_task>
 
 <game_task id="agro_und_zadan">
-<title>Выполнить задание в подземельях НИИ Агропром.</title>
+<title>Р’С‹РїРѕР»РЅРёС‚СЊ Р·Р°РґР°РЅРёРµ РІ РїРѕРґР·РµРјРµР»СЊСЏС… РќРР РђРіСЂРѕРїСЂРѕРј.</title>
 <objective>
-<text>Выполнить задание в подземельях НИИ Агропром.</text>
+<text>Р’С‹РїРѕР»РЅРёС‚СЊ Р·Р°РґР°РЅРёРµ РІ РїРѕРґР·РµРјРµР»СЊСЏС… РќРР РђРіСЂРѕРїСЂРѕРј.</text>
 <icon>ui_iconsTotal_yan_kill_brain_task_2</icon>
 <infoportion_complete>agro_und_vernulsya</infoportion_complete>
 <infoportion_fail>aground_proval</infoportion_fail>
 </objective>
 <objective>
-<text>Узнать у майора Шпака на Болотах где находится вход в подземелья НИИ.</text>
+<text>РЈР·РЅР°С‚СЊ Сѓ РјР°Р№РѕСЂР° РЁРїР°РєР° РЅР° Р‘РѕР»РѕС‚Р°С… РіРґРµ РЅР°С…РѕРґРёС‚СЃСЏ РІС…РѕРґ РІ РїРѕРґР·РµРјРµР»СЊСЏ РќРР.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>shpak_one_dialog_done</infoportion_complete>
 </objective>
 <objective>
-<text>Проникнуть в подземелья НИИ Агропром.</text>
+<text>РџСЂРѕРЅРёРєРЅСѓС‚СЊ РІ РїРѕРґР·РµРјРµР»СЊСЏ РќРР РђРіСЂРѕРїСЂРѕРј.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>agro_und_pronik</infoportion_complete>
 </objective>
 <objective>
-<text>Найти и забрать у мародёров цифровой носитель информации и вакцину.</text>
+<text>РќР°Р№С‚Рё Рё Р·Р°Р±СЂР°С‚СЊ Сѓ РјР°СЂРѕРґС‘СЂРѕРІ С†РёС„СЂРѕРІРѕР№ РЅРѕСЃРёС‚РµР»СЊ РёРЅС„РѕСЂРјР°С†РёРё Рё РІР°РєС†РёРЅСѓ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <function_complete>fotograf.zadan_aground_have</function_complete>
 <infoportion_set_complete>zadan_aground_have</infoportion_set_complete>
 </objective>
 <objective>
-<text>Вернуться к полковнику Брауну.</text>
+<text>Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє РїРѕР»РєРѕРІРЅРёРєСѓ Р‘СЂР°СѓРЅСѓ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>agro_und_vernulsya</infoportion_complete>
 </objective>
 </game_task>
 
 <game_task id="shpak_vodka">
-<title>Принести майору Шпаку три бутылки "Старого Мельника".</title>
+<title>РџСЂРёРЅРµСЃС‚Рё РјР°Р№РѕСЂСѓ РЁРїР°РєСѓ С‚СЂРё Р±СѓС‚С‹Р»РєРё "РЎС‚Р°СЂРѕРіРѕ РњРµР»СЊРЅРёРєР°".</title>
 <objective>
-<text>Принести майору Шпаку три бутылки "Старого Мельника".</text>
+<text>РџСЂРёРЅРµСЃС‚Рё РјР°Р№РѕСЂСѓ РЁРїР°РєСѓ С‚СЂРё Р±СѓС‚С‹Р»РєРё "РЎС‚Р°СЂРѕРіРѕ РњРµР»СЊРЅРёРєР°".</text>
 <icon>ui_iconsTotal_shpak</icon>
 <infoportion_complete>shpak_one_dialog_done</infoportion_complete>
 <infoportion_fail>soldaty_enemy</infoportion_fail>
 </objective>
 <objective>
-<text>Раздобыть для майора Шпака три бутылки "Старого Мельника".</text>
+<text>Р Р°Р·РґРѕР±С‹С‚СЊ РґР»СЏ РјР°Р№РѕСЂР° РЁРїР°РєР° С‚СЂРё Р±СѓС‚С‹Р»РєРё "РЎС‚Р°СЂРѕРіРѕ РњРµР»СЊРЅРёРєР°".</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <function_complete>fotograf.shpak_one_dialog_have</function_complete>
 <infoportion_set_complete>shpak_one_dialog_have</infoportion_set_complete>
 </objective>
 <objective>
-<text>Вернуться к Шпаку.</text>
+<text>Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє РЁРїР°РєСѓ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>shpak_one_dialog_done</infoportion_complete>
 </objective>
 </game_task>
 
 <game_task id="check_podzemka">
-<title>Исследовать переходы между подземными лабораториями.</title>
+<title>РСЃСЃР»РµРґРѕРІР°С‚СЊ РїРµСЂРµС…РѕРґС‹ РјРµР¶РґСѓ РїРѕРґР·РµРјРЅС‹РјРё Р»Р°Р±РѕСЂР°С‚РѕСЂРёСЏРјРё.</title>
 <objective>
-<text>Исследовать переходы между подземными лабораториями.</text>
+<text>РСЃСЃР»РµРґРѕРІР°С‚СЊ РїРµСЂРµС…РѕРґС‹ РјРµР¶РґСѓ РїРѕРґР·РµРјРЅС‹РјРё Р»Р°Р±РѕСЂР°С‚РѕСЂРёСЏРјРё.</text>
 <icon>ui_iconsTotal_dar_codedoor_2</icon>
 <infoportion_complete>brown_six_dialog_done</infoportion_complete>
 <infoportion_fail>brown_six_dialog_proval</infoportion_fail>
 <article>podzemka_zadan</article>
 </objective>
 <objective>
-<text>Найти переход из подземелий НИИ в лабораторию Х-16.</text>
+<text>РќР°Р№С‚Рё РїРµСЂРµС…РѕРґ РёР· РїРѕРґР·РµРјРµР»РёР№ РќРР РІ Р»Р°Р±РѕСЂР°С‚РѕСЂРёСЋ РҐ-16.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>laba_x16_have</infoportion_complete>
 </objective>
 <objective>
-<text>Найти переход в колхоз Червоне Дышло.</text>
+<text>РќР°Р№С‚Рё РїРµСЂРµС…РѕРґ РІ РєРѕР»С…РѕР· Р§РµСЂРІРѕРЅРµ Р”С‹С€Р»Рѕ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>laba_dyshlo_have</infoportion_complete>
 </objective>
 <objective>
-<text>Найти переход в лабораторию Х-10.</text>
+<text>РќР°Р№С‚Рё РїРµСЂРµС…РѕРґ РІ Р»Р°Р±РѕСЂР°С‚РѕСЂРёСЋ РҐ-10.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>laba_x10_have</infoportion_complete>
 </objective>
 <objective>
-<text>Найти переход в лабораторию Х-18.</text>
+<text>РќР°Р№С‚Рё РїРµСЂРµС…РѕРґ РІ Р»Р°Р±РѕСЂР°С‚РѕСЂРёСЋ РҐ-18.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>laba_x18_have</infoportion_complete>
 </objective>
 <objective>
-<text>Найти цифровой код к закодированной двери.</text>
+<text>РќР°Р№С‚Рё С†РёС„СЂРѕРІРѕР№ РєРѕРґ Рє Р·Р°РєРѕРґРёСЂРѕРІР°РЅРЅРѕР№ РґРІРµСЂРё.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>trup_x18_have</infoportion_complete>
 </objective>
 <objective>
-<text>Раскодировать дверь.</text>
+<text>Р Р°СЃРєРѕРґРёСЂРѕРІР°С‚СЊ РґРІРµСЂСЊ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>codedoor_x18_have</infoportion_complete>
 </objective>
 <objective>
-<text>Вернуться к полковнику Брауну.</text>
+<text>Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє РїРѕР»РєРѕРІРЅРёРєСѓ Р‘СЂР°СѓРЅСѓ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>brown_six_dialog_done</infoportion_complete>
 </objective>
 </game_task>
 
 <game_task id="glaza_ploti">
-<title>Принести Плоймару пять глаз Плоти.</title>
+<title>РџСЂРёРЅРµСЃС‚Рё РџР»РѕР№РјР°СЂСѓ РїСЏС‚СЊ РіР»Р°Р· РџР»РѕС‚Рё.</title>
 <objective>
-<text>Принести Плоймару пять глаз Плоти.</text>
+<text>РџСЂРёРЅРµСЃС‚Рё РџР»РѕР№РјР°СЂСѓ РїСЏС‚СЊ РіР»Р°Р· РџР»РѕС‚Рё.</text>
 <icon>ui_iconsTotal_monster_part</icon>
 <infoportion_complete>ploymar_vacsina_dialog_done</infoportion_complete>
 <infoportion_fail>ploymar_enemy</infoportion_fail>
 </objective>
 <objective>
-<text>Раздобыть для Плоймара пять глаз Плоти.</text>
+<text>Р Р°Р·РґРѕР±С‹С‚СЊ РґР»СЏ РџР»РѕР№РјР°СЂР° РїСЏС‚СЊ РіР»Р°Р· РџР»РѕС‚Рё.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <function_complete>fotograf.glaza_ploti_have</function_complete>
 <infoportion_set_complete>ploymar_vacsina_dialog_have</infoportion_set_complete>
 </objective>
 <objective>
-<text>Вернуться к Плоймару.</text>
+<text>Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє РџР»РѕР№РјР°СЂСѓ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>ploymar_vacsina_dialog_done</infoportion_complete>
 </objective>
 </game_task>
 
 <game_task id="mario_case">
-<title>Принести механику Марио ящик с инструментами.</title>
+<title>РџСЂРёРЅРµСЃС‚Рё РјРµС…Р°РЅРёРєСѓ РњР°СЂРёРѕ СЏС‰РёРє СЃ РёРЅСЃС‚СЂСѓРјРµРЅС‚Р°РјРё.</title>
 <objective>
-<text>Принести механику Марио ящик с инструментами.</text>
+<text>РџСЂРёРЅРµСЃС‚Рё РјРµС…Р°РЅРёРєСѓ РњР°СЂРёРѕ СЏС‰РёРє СЃ РёРЅСЃС‚СЂСѓРјРµРЅС‚Р°РјРё.</text>
 <icon>ui_iconsTotal_esc_blockpost_case_to_trader</icon>
 <infoportion_complete>mario_key_dialog_done</infoportion_complete>
 <infoportion_fail>usa_enemy</infoportion_fail>
 </objective>
 <objective>
-<text>Найти ящик с инструментами на заброшенной фабрике.</text>
+<text>РќР°Р№С‚Рё СЏС‰РёРє СЃ РёРЅСЃС‚СЂСѓРјРµРЅС‚Р°РјРё РЅР° Р·Р°Р±СЂРѕС€РµРЅРЅРѕР№ С„Р°Р±СЂРёРєРµ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <function_complete>cars.instrument_case_have</function_complete>
 <infoportion_set_complete>mario_key_dialog_have</infoportion_set_complete>
 </objective>
 <objective>
-<text>Вернуться к механику Марио.</text>
+<text>Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє РјРµС…Р°РЅРёРєСѓ РњР°СЂРёРѕ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>mario_key_dialog_done</infoportion_complete>
 </objective>
 </game_task>
 
 <game_task id="voronin_key">
-<title>Принести генералу Воронину канистру с бензином.</title>
+<title>РџСЂРёРЅРµСЃС‚Рё РіРµРЅРµСЂР°Р»Сѓ Р’РѕСЂРѕРЅРёРЅСѓ РєР°РЅРёСЃС‚СЂСѓ СЃ Р±РµРЅР·РёРЅРѕРј.</title>
 <objective>
-<text>Принести генералу Воронину канистру с бензином.</text>
+<text>РџСЂРёРЅРµСЃС‚Рё РіРµРЅРµСЂР°Р»Сѓ Р’РѕСЂРѕРЅРёРЅСѓ РєР°РЅРёСЃС‚СЂСѓ СЃ Р±РµРЅР·РёРЅРѕРј.</text>
 <icon>ui_iconsTotal_found_thing</icon>
 <infoportion_complete>voronin_key_dialog_done</infoportion_complete>
 <infoportion_fail>usa_enemy</infoportion_fail>
 </objective>
 <objective>
-<text>Раздобыть канистру с бензином.</text>
+<text>Р Р°Р·РґРѕР±С‹С‚СЊ РєР°РЅРёСЃС‚СЂСѓ СЃ Р±РµРЅР·РёРЅРѕРј.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <function_complete>cars.kanistra_have</function_complete>
 <infoportion_set_complete>voronin_key_dialog_have</infoportion_set_complete>
 </objective>
 <objective>
-<text>Вернуться к генералу Воронину.</text>
+<text>Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє РіРµРЅРµСЂР°Р»Сѓ Р’РѕСЂРѕРЅРёРЅСѓ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>voronin_key_dialog_done</infoportion_complete>
 </objective>
 </game_task>
 
 <game_task id="polischuk_key">
-<title>Принести Полищуку баллон с коллоидным газом.</title>
+<title>РџСЂРёРЅРµСЃС‚Рё РџРѕР»РёС‰СѓРєСѓ Р±Р°Р»Р»РѕРЅ СЃ РєРѕР»Р»РѕРёРґРЅС‹Рј РіР°Р·РѕРј.</title>
 <objective>
-<text>Принести Полищуку баллон с коллоидным газом.</text>
+<text>РџСЂРёРЅРµСЃС‚Рё РџРѕР»РёС‰СѓРєСѓ Р±Р°Р»Р»РѕРЅ СЃ РєРѕР»Р»РѕРёРґРЅС‹Рј РіР°Р·РѕРј.</text>
 <icon>ui_iconsTotal_found_thing</icon>
 <infoportion_complete>polischuk_key_dialog_done</infoportion_complete>
 <infoportion_fail>soldaty_enemy</infoportion_fail>
 </objective>
 <objective>
-<text>Раздобыть баллон с коллоидным газом.</text>
+<text>Р Р°Р·РґРѕР±С‹С‚СЊ Р±Р°Р»Р»РѕРЅ СЃ РєРѕР»Р»РѕРёРґРЅС‹Рј РіР°Р·РѕРј.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <function_complete>cars.ballon_have</function_complete>
 <infoportion_set_complete>polischuk_key_dialog_have</infoportion_set_complete>
 </objective>
 <objective>
-<text>Вернуться к лейтенанту Полищуку.</text>
+<text>Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє Р»РµР№С‚РµРЅР°РЅС‚Сѓ РџРѕР»РёС‰СѓРєСѓ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>polischuk_key_dialog_done</infoportion_complete>
 </objective>
 </game_task>
 
 <game_task id="dezertir_car">
-<title>Пригнать вездеход дезертиров.</title>
+<title>РџСЂРёРіРЅР°С‚СЊ РІРµР·РґРµС…РѕРґ РґРµР·РµСЂС‚РёСЂРѕРІ.</title>
 <objective>
-<text>Пригнать вездеход дезертиров.</text>
+<text>РџСЂРёРіРЅР°С‚СЊ РІРµР·РґРµС…РѕРґ РґРµР·РµСЂС‚РёСЂРѕРІ.</text>
 <icon>ui_iconsTotal_technique</icon>
 <infoportion_complete>dezertir_car_dialog_done</infoportion_complete>
 <infoportion_fail>dead_dezertir_car</infoportion_fail>
 </objective>
 <objective>
-<text>Пригнать вездеход дезертиров на территорию ангара.</text>
+<text>РџСЂРёРіРЅР°С‚СЊ РІРµР·РґРµС…РѕРґ РґРµР·РµСЂС‚РёСЂРѕРІ РЅР° С‚РµСЂСЂРёС‚РѕСЂРёСЋ Р°РЅРіР°СЂР°.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>dezertir_car_mesto</infoportion_complete>
 </objective>
 <objective>
-<text>Доложить Шурупу о выполнении.</text>
+<text>Р”РѕР»РѕР¶РёС‚СЊ РЁСѓСЂСѓРїСѓ Рѕ РІС‹РїРѕР»РЅРµРЅРёРё.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>dezertir_car_dialog_done</infoportion_complete>
 </objective>
 </game_task>
 
 <game_task id="flesh_winch">
-<title>Найти винчестер для Шурупа.</title>
+<title>РќР°Р№С‚Рё РІРёРЅС‡РµСЃС‚РµСЂ РґР»СЏ РЁСѓСЂСѓРїР°.</title>
 <objective>
-<text>Найти винчестер для Шурупа.</text>
+<text>РќР°Р№С‚Рё РІРёРЅС‡РµСЃС‚РµСЂ РґР»СЏ РЁСѓСЂСѓРїР°.</text>
 <icon>ui_iconsTotal_monster_part</icon>
 <infoportion_complete>dezertir_flesh_dialog_done</infoportion_complete>
 <infoportion_fail>dezertiry_enemy</infoportion_fail>
 </objective>
 <objective>
-<text>Найти на юго-западе Промзоны мутировавшую свинью и вынуть из неё Винчестер.</text>
+<text>РќР°Р№С‚Рё РЅР° СЋРіРѕ-Р·Р°РїР°РґРµ РџСЂРѕРјР·РѕРЅС‹ РјСѓС‚РёСЂРѕРІР°РІС€СѓСЋ СЃРІРёРЅСЊСЋ Рё РІС‹РЅСѓС‚СЊ РёР· РЅРµС‘ Р’РёРЅС‡РµСЃС‚РµСЂ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <function_complete>fotograf.check_dezertir_winch</function_complete>
 <infoportion_set_complete>dezertir_flesh_dialog_have</infoportion_set_complete>
 </objective>
 <objective>
-<text>Принести Винчестер Шурупу.</text>
+<text>РџСЂРёРЅРµСЃС‚Рё Р’РёРЅС‡РµСЃС‚РµСЂ РЁСѓСЂСѓРїСѓ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>dezertir_flesh_dialog_done</infoportion_complete>
 </objective>
 </game_task>
 
 <game_task id="voronin_car">
-<title>Пригнать Ниву Воронина.</title>
+<title>РџСЂРёРіРЅР°С‚СЊ РќРёРІСѓ Р’РѕСЂРѕРЅРёРЅР°.</title>
 <objective>
-<text>Пригнать Ниву Воронина.</text>
+<text>РџСЂРёРіРЅР°С‚СЊ РќРёРІСѓ Р’РѕСЂРѕРЅРёРЅР°.</text>
 <icon>ui_iconsTotal_technique</icon>
 <infoportion_complete>voronin_dyshlo_dialog_done</infoportion_complete>
 <infoportion_fail>dead_voronin_car</infoportion_fail>
 </objective>
 <objective>
-<text>Пригнать Ниву Воронина к воротам базы на Полигоне.</text>
+<text>РџСЂРёРіРЅР°С‚СЊ РќРёРІСѓ Р’РѕСЂРѕРЅРёРЅР° Рє РІРѕСЂРѕС‚Р°Рј Р±Р°Р·С‹ РЅР° РџРѕР»РёРіРѕРЅРµ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>voronin_car_mesto</infoportion_complete>
 </objective>
 <objective>
-<text>Доложить Воронину о выполнении.</text>
+<text>Р”РѕР»РѕР¶РёС‚СЊ Р’РѕСЂРѕРЅРёРЅСѓ Рѕ РІС‹РїРѕР»РЅРµРЅРёРё.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>voronin_dyshlo_dialog_done</infoportion_complete>
 </objective>
 </game_task>
 
 <game_task id="perehod_dyshlo">
-<title>Найти безопасный путь в "Червоне Дышло".</title>
+<title>РќР°Р№С‚Рё Р±РµР·РѕРїР°СЃРЅС‹Р№ РїСѓС‚СЊ РІ "Р§РµСЂРІРѕРЅРµ Р”С‹С€Р»Рѕ".</title>
 <objective>
-<text>Найти безопасный путь в "Червоне Дышло".</text>
+<text>РќР°Р№С‚Рё Р±РµР·РѕРїР°СЃРЅС‹Р№ РїСѓС‚СЊ РІ "Р§РµСЂРІРѕРЅРµ Р”С‹С€Р»Рѕ".</text>
 <icon>ui_iconsTotal_locations</icon>
 <infoportion_complete>brown_seven_dialog_done</infoportion_complete>
 <infoportion_fail>usa_enemy</infoportion_fail>
 </objective>
 <objective>
-<text>Найти переход из Леса в колхоз "Червоне Дышло".</text>
+<text>РќР°Р№С‚Рё РїРµСЂРµС…РѕРґ РёР· Р›РµСЃР° РІ РєРѕР»С…РѕР· "Р§РµСЂРІРѕРЅРµ Р”С‹С€Р»Рѕ".</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>lch_aver_dyshlo</infoportion_complete>
 </objective>
 <objective>
-<text>Найти переход из колхоза "Червоне Дышло" в Лес.</text>
+<text>РќР°Р№С‚Рё РїРµСЂРµС…РѕРґ РёР· РєРѕР»С…РѕР·Р° "Р§РµСЂРІРѕРЅРµ Р”С‹С€Р»Рѕ" РІ Р›РµСЃ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>lch_dyshlo_aver</infoportion_complete>
 </objective>
 <objective>
-<text>Вернуться к полковнику Брауну.</text>
+<text>Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє РїРѕР»РєРѕРІРЅРёРєСѓ Р‘СЂР°СѓРЅСѓ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
-<map_location_type hint="Полковник Браун">blue_location</map_location_type>
+<map_location_type hint="РџРѕР»РєРѕРІРЅРёРє Р‘СЂР°СѓРЅ">blue_location</map_location_type>
 <object_story_id>brown_dva</object_story_id>
 <infoportion_complete>brown_seven_dialog_done</infoportion_complete>
 </objective>
 </game_task>
 
 <game_task id="dyshlo_attak">
-<title>Занять фабрику в "Червоне Дышло".</title>
+<title>Р—Р°РЅСЏС‚СЊ С„Р°Р±СЂРёРєСѓ РІ "Р§РµСЂРІРѕРЅРµ Р”С‹С€Р»Рѕ".</title>
 <objective>
-<text>Занять фабрику в "Червоне Дышло".</text>
+<text>Р—Р°РЅСЏС‚СЊ С„Р°Р±СЂРёРєСѓ РІ "Р§РµСЂРІРѕРЅРµ Р”С‹С€Р»Рѕ".</text>
 <icon>ui_iconsTotal_eliminate_lager</icon>
 <infoportion_complete>dolg_ataka_finish</infoportion_complete>
 <infoportion_fail>dolg_ataka_proval</infoportion_fail>
 </objective>
 <objective>
-<text>Встретиться с сержантом Пличко в колхозе "Червоне Дышло".</text>
+<text>Р’СЃС‚СЂРµС‚РёС‚СЊСЃСЏ СЃ СЃРµСЂР¶Р°РЅС‚РѕРј РџР»РёС‡РєРѕ РІ РєРѕР»С…РѕР·Рµ "Р§РµСЂРІРѕРЅРµ Р”С‹С€Р»Рѕ".</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>dolg_ataka_start</infoportion_complete>
 </objective>
 <objective>
-<text>Помочь захватить заброшенную фабрику.</text>
+<text>РџРѕРјРѕС‡СЊ Р·Р°С…РІР°С‚РёС‚СЊ Р·Р°Р±СЂРѕС€РµРЅРЅСѓСЋ С„Р°Р±СЂРёРєСѓ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <function_complete>fotograf.dolg_ataka_have</function_complete>
 <infoportion_set_complete>dolg_ataka_have</infoportion_set_complete>
 </objective>
 <objective>
-<text>Поговорить с сержантом Пличко.</text>
+<text>РџРѕРіРѕРІРѕСЂРёС‚СЊ СЃ СЃРµСЂР¶Р°РЅС‚РѕРј РџР»РёС‡РєРѕ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
-<map_location_type hint="Сержант Пличко">blue_location</map_location_type>
+<map_location_type hint="РЎРµСЂР¶Р°РЅС‚ РџР»РёС‡РєРѕ">blue_location</map_location_type>
 <object_story_id>plichko_dolg</object_story_id>
 <infoportion_complete>dolg_ataka_finish</infoportion_complete>
 </objective>
 </game_task>
 
 <game_task id="dyshlo_glavar">
-<title>Найти ПДА с информацией.</title>
+<title>РќР°Р№С‚Рё РџР”Рђ СЃ РёРЅС„РѕСЂРјР°С†РёРµР№.</title>
 <objective>
-<text>Найти ПДА с информацией.</text>
+<text>РќР°Р№С‚Рё РџР”Рђ СЃ РёРЅС„РѕСЂРјР°С†РёРµР№.</text>
 <icon>ui_iconsTotal_pda</icon>
 <infoportion_complete>plichko_tri_dialog_done</infoportion_complete>
 <infoportion_fail>voronin_dyshlo_dead</infoportion_fail>
 </objective>
 <objective>
-<text>Отыскать главаря наёмников и забрать его ПДА.</text>
+<text>РћС‚С‹СЃРєР°С‚СЊ РіР»Р°РІР°СЂСЏ РЅР°С‘РјРЅРёРєРѕРІ Рё Р·Р°Р±СЂР°С‚СЊ РµРіРѕ РџР”Рђ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <function_complete>fotograf.plichko_tri_dialog_have</function_complete>
 <infoportion_set_complete>plichko_tri_dialog_have</infoportion_set_complete>
 </objective>
 <objective>
-<text>Отдать ПДА главаря генералу Воронину.</text>
+<text>РћС‚РґР°С‚СЊ РџР”Рђ РіР»Р°РІР°СЂСЏ РіРµРЅРµСЂР°Р»Сѓ Р’РѕСЂРѕРЅРёРЅСѓ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>plichko_tri_dialog_done</infoportion_complete>
 </objective>
 </game_task>
 
 <game_task id="brown_x10">
-<title>Выяснить, что случилось с группой Брауна.</title>
+<title>Р’С‹СЏСЃРЅРёС‚СЊ, С‡С‚Рѕ СЃР»СѓС‡РёР»РѕСЃСЊ СЃ РіСЂСѓРїРїРѕР№ Р‘СЂР°СѓРЅР°.</title>
 <objective>
-<text>Выяснить, что случилось с группой Брауна.</text>
+<text>Р’С‹СЏСЃРЅРёС‚СЊ, С‡С‚Рѕ СЃР»СѓС‡РёР»РѕСЃСЊ СЃ РіСЂСѓРїРїРѕР№ Р‘СЂР°СѓРЅР°.</text>
 <icon>ui_iconsTotal_door</icon>
 <infoportion_complete>shubin_x10_spawn</infoportion_complete>
 </objective>
 <objective>
-<text>Выяснить, что случилось с группой Брауна в подземельях.</text>
+<text>Р’С‹СЏСЃРЅРёС‚СЊ, С‡С‚Рѕ СЃР»СѓС‡РёР»РѕСЃСЊ СЃ РіСЂСѓРїРїРѕР№ Р‘СЂР°СѓРЅР° РІ РїРѕРґР·РµРјРµР»СЊСЏС….</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>shubin_x10_spawn</infoportion_complete>
 </objective>
 </game_task>
 
 <game_task id="pentagramm">
-<title>Найти "мерцающие знаки" в подземельях.</title>
+<title>РќР°Р№С‚Рё "РјРµСЂС†Р°СЋС‰РёРµ Р·РЅР°РєРё" РІ РїРѕРґР·РµРјРµР»СЊСЏС….</title>
 <objective>
-<text>Найти "мерцающие знаки" в подземельях.</text>
+<text>РќР°Р№С‚Рё "РјРµСЂС†Р°СЋС‰РёРµ Р·РЅР°РєРё" РІ РїРѕРґР·РµРјРµР»СЊСЏС….</text>
 <icon>ui_iconsTotal_glaz</icon>
 <infoportion_complete>shubin_pentagramm_dialog_done</infoportion_complete>
 <infoportion_fail>brown_tri_dead</infoportion_fail>
 <article>pentagramm_shifr</article>
 </objective>
 <objective>
-<text>Найти и исследовать "мерцающие знаки" в подземельях.</text>
+<text>РќР°Р№С‚Рё Рё РёСЃСЃР»РµРґРѕРІР°С‚СЊ "РјРµСЂС†Р°СЋС‰РёРµ Р·РЅР°РєРё" РІ РїРѕРґР·РµРјРµР»СЊСЏС….</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>shubin_pentagramm_dialog_have</infoportion_complete>
 </objective>
 <objective>
-<text>Поговорить с Шубиным.</text>
+<text>РџРѕРіРѕРІРѕСЂРёС‚СЊ СЃ РЁСѓР±РёРЅС‹Рј.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>shubin_pentagramm_dialog_done</infoportion_complete>
 </objective>
 </game_task>
 
 <game_task id="brown_accompaniment">
-<title>Помочь Брауну выбраться из подземелий.</title>
+<title>РџРѕРјРѕС‡СЊ Р‘СЂР°СѓРЅСѓ РІС‹Р±СЂР°С‚СЊСЃСЏ РёР· РїРѕРґР·РµРјРµР»РёР№.</title>
 <objective>
-<text>Помочь Брауну выбраться из подземелий.</text>
+<text>РџРѕРјРѕС‡СЊ Р‘СЂР°СѓРЅСѓ РІС‹Р±СЂР°С‚СЊСЃСЏ РёР· РїРѕРґР·РµРјРµР»РёР№.</text>
 <icon>ui_iconsTotal_yan_kill_brain_task_2</icon>
 <infoportion_complete>brown5_dialog_start</infoportion_complete>
 <infoportion_fail>brown_accompaniment_proval</infoportion_fail>
 </objective>
 <objective>
-<text>Сопроводить Брауна из Х-10 на Испытательный Полигон.</text>
+<text>РЎРѕРїСЂРѕРІРѕРґРёС‚СЊ Р‘СЂР°СѓРЅР° РёР· РҐ-10 РЅР° РСЃРїС‹С‚Р°С‚РµР»СЊРЅС‹Р№ РџРѕР»РёРіРѕРЅ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>brown_five_mesto</infoportion_complete>
 </objective>
 <objective>
-<text>Поговорить с Брауном.</text>
+<text>РџРѕРіРѕРІРѕСЂРёС‚СЊ СЃ Р‘СЂР°СѓРЅРѕРј.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>brown5_dialog_start</infoportion_complete>
 </objective>
 </game_task>
 
 <game_task id="codes_taynik">
-<title>Найти тайник с кодами.</title>
+<title>РќР°Р№С‚Рё С‚Р°Р№РЅРёРє СЃ РєРѕРґР°РјРё.</title>
 <objective>
-<text>Найти тайник с кодами.</text>
+<text>РќР°Р№С‚Рё С‚Р°Р№РЅРёРє СЃ РєРѕРґР°РјРё.</text>
 <icon>ui_iconsTotal_dar_codedoor_2</icon>
 <infoportion_complete>codes_pda_est</infoportion_complete>
 <article>taynik_codes</article>
 </objective>
 <objective>
-<text>Найти в Припяти тайник с кодами к дверям в Пещере.</text>
+<text>РќР°Р№С‚Рё РІ РџСЂРёРїСЏС‚Рё С‚Р°Р№РЅРёРє СЃ РєРѕРґР°РјРё Рє РґРІРµСЂСЏРј РІ РџРµС‰РµСЂРµ.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <infoportion_complete>codes_pda_est</infoportion_complete>
 </objective>
 </game_task>
 
 <game_task id="pashka_sguschenka">
-<title>Раздобыть для Пашки сгущёнку.</title>
+<title>Р Р°Р·РґРѕР±С‹С‚СЊ РґР»СЏ РџР°С€РєРё СЃРіСѓС‰С‘РЅРєСѓ.</title>
 <objective>
-<text>Раздобыть для Пашки сгущёнку.</text>
+<text>Р Р°Р·РґРѕР±С‹С‚СЊ РґР»СЏ РџР°С€РєРё СЃРіСѓС‰С‘РЅРєСѓ.</text>
 <icon>ui_iconsTotal_found_thing</icon>
 <infoportion_complete>pashka_one_dialog_done</infoportion_complete>
 <infoportion_fail>pashka_enemy</infoportion_fail>
 </objective>
 <objective>
-<text>Раздобыть для Пашки шесть банок сгущёнки.</text>
+<text>Р Р°Р·РґРѕР±С‹С‚СЊ РґР»СЏ РџР°С€РєРё С€РµСЃС‚СЊ Р±Р°РЅРѕРє СЃРіСѓС‰С‘РЅРєРё.</text>
 <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 <function_complete>fotograf.pashka_sguschenka_have</function_complete>
 <infoportion_set_complete>pashka_one_dialog_have</infoportion_set_complete>
 </objective>
 <objective>
-<text>Принести сгущёнку Пашке.</text>
+<text>РџСЂРёРЅРµСЃС‚Рё СЃРіСѓС‰С‘РЅРєСѓ РџР°С€РєРµ.</text>
 <infoportion_complete>pashka_one_dialog_done</infoportion_complete>
 </objective>
 </game_task>

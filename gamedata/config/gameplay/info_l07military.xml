@@ -2,17 +2,17 @@
 
 <game_information_portions>
 
-	<!-- Áîé áàíäèòîâ è êèëëåðîâ -->
+	<!-- Ð‘Ð¾Ð¹ Ð±Ð°Ð½Ð´Ð¸Ñ‚Ð¾Ð² Ð¸ ÐºÐ¸Ð»Ð»ÐµÑ€Ð¾Ð² -->
 	<info_portion id="mil_killer_with_bandits_combat"></info_portion>
 	
-	<!-- Àòàêà Äîëãà -->
+	<!-- ÐÑ‚Ð°ÐºÐ° Ð”Ð¾Ð»Ð³Ð° -->
 	<info_portion id="mil_sniper1_dead"></info_portion>
 	<info_portion id="mil_sniper2_dead"></info_portion>
 	
-	<!-- Àòàêà Ñâîáîäû -->
+	<!-- ÐÑ‚Ð°ÐºÐ° Ð¡Ð²Ð¾Ð±Ð¾Ð´Ñ‹ -->
 	<info_portion id="mil_freedom_attack"></info_portion>
 
-	<!-- Ïüÿíñòâî ñ Ïîâàðîì -->
+	<!-- ÐŸÑŒÑÐ½ÑÑ‚Ð²Ð¾ Ñ ÐŸÐ¾Ð²Ð°Ñ€Ð¾Ð¼ -->
 	<info_portion id="mil_freedom_cook_drink_1"></info_portion>
 	<info_portion id="mil_freedom_cook_drink_2"></info_portion>
 	<info_portion id="mil_freedom_cook_drink_3"></info_portion>

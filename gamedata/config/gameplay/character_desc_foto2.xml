@@ -5,7 +5,7 @@
 <!---------------------------archivarius---------------------->
 
   <specific_character id="archivarius" team_default = "1">
-    <name>Лейтенант Минчуков</name>
+    <name>Р›РµР№С‚РµРЅР°РЅС‚ РњРёРЅС‡СѓРєРѕРІ</name>
     <icon>ui_npc_smith</icon>
     <map_icon x="2" y="0"></map_icon>
     <bio>sim_soldier_commander_bio</bio>
@@ -48,7 +48,7 @@
  <!---------------------------zubarev---------------------->
 
   <specific_character id="zubarev" team_default = "1">
-    <name>Сержант Зубарев</name>
+    <name>РЎРµСЂР¶Р°РЅС‚ Р—СѓР±Р°СЂРµРІ</name>
     <icon>ui_npc_spets</icon>
     <map_icon x="2" y="2"></map_icon>
     <bio>sim_soldier_specnaz_bio</bio>
@@ -80,7 +80,7 @@
   
 <!----------------------------strange_killer----------------------->  
 	<specific_character id="strange_killer" team_default = "1">
-		    <name>Незнакомец</name>
+		    <name>РќРµР·РЅР°РєРѕРјРµС†</name>
 		<icon>ui_npc_koldun</icon>
 		<map_icon x="5" y="0"></map_icon>
 		<bio>gar_stalker_regular_bio</bio>
@@ -113,7 +113,7 @@
 
 <!----------------------------poet----------------------->  
 	<specific_character id="poet" team_default = "1">
-		    <name>Михась Стихоплёт</name>
+		    <name>РњРёС…Р°СЃСЊ РЎС‚РёС…РѕРїР»С‘С‚</name>
 		<icon>ui_npc_koldun</icon>
 		<map_icon x="5" y="0"></map_icon>
 		<bio>gar_stalker_regular_bio</bio>
@@ -148,7 +148,7 @@
 
 <!----------------------greta_invis-------------------->
     <specific_character id="greta_invis" team_default = "1">
-        <name>Грета</name>
+        <name>Р“СЂРµС‚Р°</name>
         <icon>ui_npc_greta</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -178,7 +178,7 @@
 	
 <!----------------------greta_vis-------------------->
     <specific_character id="greta_vis" team_default = "1">
-        <name>Грета</name>
+        <name>Р“СЂРµС‚Р°</name>
         <icon>ui_npc_greta</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -302,7 +302,7 @@
 	<!--------------------------shepel--------------------------->	
 
 	<specific_character id="shepel" team_default = "1">
-		<name>Прапорщик Шепельман</name>
+		<name>РџСЂР°РїРѕСЂС‰РёРє РЁРµРїРµР»СЊРјР°РЅ</name>
 		<icon>ui_npc_shep</icon>
 		<bio>esc_soldier_regular_bio</bio>
 
@@ -335,7 +335,7 @@
 	<!--------------------------mk_zasada--------------------------->	
 
 	<specific_character id="mk_zasada" team_default = "1">
-		<name>Неизвестный сталкер</name>
+		<name>РќРµРёР·РІРµСЃС‚РЅС‹Р№ СЃС‚Р°Р»РєРµСЂ</name>
 		<icon>ui_npc_u_stalker_2_rozh1</icon>
 		<bio>sim_stalker_general_bio</bio>
 		<class>mk_zasada</class>
@@ -357,7 +357,7 @@
 	<!--------------------------mg_zasada--------------------------->	
 
 	<specific_character id="mg_zasada" team_default = "1">
-		<name>Сержант Зубарев</name>
+		<name>РЎРµСЂР¶Р°РЅС‚ Р—СѓР±Р°СЂРµРІ</name>
 		<icon>ui_npc_spets</icon>
 		<map_icon x="2" y="2"></map_icon>
 		<bio>sim_soldier_specnaz_bio</bio>
@@ -383,7 +383,7 @@
  <!---------------------------irokez_kombez---------------------->
 
   <specific_character id="irokez_kombez" team_default = "1">
-    <name>Ирокез</name>
+    <name>РСЂРѕРєРµР·</name>
     <icon>ui_npc_u_irokez</icon>
     <map_icon x="2" y="2"></map_icon>
     <bio>sim_stalker_general_bio</bio>
@@ -424,7 +424,7 @@
 <!---------------------------irokez_shkura---------------------->
 
   <specific_character id="irokez_skin" team_default = "1">
-    <name>Ирокез</name>
+    <name>РСЂРѕРєРµР·</name>
     <icon>ui_npc_u_irokez</icon>
     <map_icon x="2" y="2"></map_icon>
     <bio>sim_stalker_general_bio</bio>
@@ -462,10 +462,10 @@
     
   </specific_character>
 
-<!---------------------------Утюг---------------------->
+<!---------------------------РЈС‚СЋРі---------------------->
 
   <specific_character id="utyug" team_default = "1">
-    <name>Генка Утюг</name>
+    <name>Р“РµРЅРєР° РЈС‚СЋРі</name>
 		<icon>ui_npc_u_stalker_ki_head_1</icon>
 		<map_icon x="5" y="0"></map_icon>
 		<bio>mil_killer_specnaz_bio</bio>
@@ -495,7 +495,7 @@
   </specific_character>
 
   <specific_character id="catcher_vhod1" team_default = "1">
-    <name>Контра</name>
+    <name>РљРѕРЅС‚СЂР°</name>
 		<icon>ui_npc_monster_kontroler_4</icon>
 		<map_icon x="5" y="0"></map_icon>
 		<bio>mil_killer_specnaz_bio</bio>
@@ -521,7 +521,7 @@
   </specific_character>
 
 <specific_character id="catcher_vhod2" team_default = "1">
-    <name>Контра</name>
+    <name>РљРѕРЅС‚СЂР°</name>
 		<icon>ui_npc_monster_kontroler_4</icon>
 		<map_icon x="5" y="0"></map_icon>
 		<bio>mil_killer_specnaz_bio</bio>
@@ -547,7 +547,7 @@
   </specific_character>
 
 <specific_character id="catcher_vhod3" team_default = "1">
-    <name>Контра</name>
+    <name>РљРѕРЅС‚СЂР°</name>
 		<icon>ui_npc_monster_kontroler_4</icon>
 		<map_icon x="5" y="0"></map_icon>
 		<bio>mil_killer_specnaz_bio</bio>
@@ -573,7 +573,7 @@
   </specific_character>  
 
 <specific_character id="catcher_prison1" team_default = "1">
-    <name>Контра</name>
+    <name>РљРѕРЅС‚СЂР°</name>
 		<icon>ui_npc_monster_kontroler_4</icon>
 		<map_icon x="5" y="0"></map_icon>
 		<bio>mil_killer_specnaz_bio</bio>
@@ -599,7 +599,7 @@
   </specific_character> 
 
 <specific_character id="catcher_prison2" team_default = "1">
-    <name>Контра</name>
+    <name>РљРѕРЅС‚СЂР°</name>
 		<icon>ui_npc_monster_kontroler_4</icon>
 		<map_icon x="5" y="0"></map_icon>
 		<bio>mil_killer_specnaz_bio</bio>
@@ -625,7 +625,7 @@
   </specific_character>
 
 <specific_character id="catcher_main" team_default = "1">
-    <name>Контра</name>
+    <name>РљРѕРЅС‚СЂР°</name>
 		<icon>ui_npc_monster_kontroler_4</icon>
 		<map_icon x="5" y="0"></map_icon>
 		<bio>mil_killer_specnaz_bio</bio>
@@ -652,7 +652,7 @@
 	
 <!----------------------observer_set-------------------->
     <specific_character id="observer_set" team_default = "1">
-        <name>Наблюдатель</name>
+        <name>РќР°Р±Р»СЋРґР°С‚РµР»СЊ</name>
         <icon>ui_npc_u_stalker_mo_mask</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -682,7 +682,7 @@
 	
 	<!--------------------------tunnel_set--------------------------->	
 	<specific_character id="tunnel_set" team_default = "1">
-		<name>Незнакомец</name>
+		<name>РќРµР·РЅР°РєРѕРјРµС†</name>
 		<icon>ui_npc_u_stalker_neytral_rukzak_2</icon>
 		<map_icon x="1" y="2"></map_icon>
 		<bio>sim_stalker_general_bio</bio>
@@ -711,7 +711,7 @@
 
 		<!--------------------------tunnel_set_finish--------------------------->	
 	<specific_character id="tunnel_set_finish" team_default = "1">
-		<name>Незнакомец</name>
+		<name>РќРµР·РЅР°РєРѕРјРµС†</name>
 		<icon>ui_npc_u_stalker_neytral_rukzak_2</icon>
 		<map_icon x="1" y="2"></map_icon>
 		<bio>sim_stalker_general_bio</bio>
@@ -741,7 +741,7 @@
 		<!--------------------------Ormont--------------------------->
 
 <specific_character id="ormont" team_default = "1">
-    <name>Профессор Ормонт</name>
+    <name>РџСЂРѕС„РµСЃСЃРѕСЂ РћСЂРјРѕРЅС‚</name>
     <icon>ui_npc_uchen_yellow</icon>
     <map_icon x="3" y="2"></map_icon>
     <bio>yan_Ecolog</bio>
@@ -777,7 +777,7 @@
 		<!--------------------------Ioffe--------------------------->
 
 <specific_character id="ioffe" team_default = "1">
-    <name>Академик Иоффе</name>
+    <name>РђРєР°РґРµРјРёРє РРѕС„С„Рµ</name>
     <icon>ui_npc_u_stalker_ecolog_military</icon>
     <map_icon x="3" y="2"></map_icon>
     <bio>yan_Ecolog</bio>
@@ -1063,7 +1063,7 @@
 	<!---------------------------dead city family---------------------->
 
 <specific_character id="petrovige"team_default = "1">
-    <name>Сергей Андреевич</name>
+    <name>РЎРµСЂРіРµР№ РђРЅРґСЂРµРµРІРёС‡</name>
     <icon>ui_npc_uchen_11</icon>
     <bio>sim_stalker_general_bio</bio>
 
@@ -1087,7 +1087,7 @@
 </specific_character>
 
 <specific_character id="varvara"team_default = "1">
-    <name>Лидочка</name>
+    <name>Р›РёРґРѕС‡РєР°</name>
     <icon>ui_npc_uchen_12</icon>
     <bio>sim_stalker_general_bio</bio>
 

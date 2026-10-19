@@ -8,4 +8,5 @@ addons = {
 "dsh_anomaly_detector",
 "key_handlers",
 "dsh_fixes",
+"dsh_vodka_sleep",
 }

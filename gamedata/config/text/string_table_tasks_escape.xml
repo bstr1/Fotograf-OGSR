@@ -2,22 +2,22 @@
 <string_table>
 	<string id="escape_steal_blockpost_case">
 		<text>Steal the case from blockpost</text>
-		<text ln="rus">Украсть ящик с блокпоста.</text>
+		<text ln="rus">РЈРєСЂР°СЃС‚СЊ СЏС‰РёРє СЃ Р±Р»РѕРєРїРѕСЃС‚Р°.</text>
 	</string>
 
 	<string id="escape_novice_need_gun">
 		<text>Help novice to get gun.</text>
-		<text ln="rus">Помочь новичку достать оружие.</text>
+		<text ln="rus">РџРѕРјРѕС‡СЊ РЅРѕРІРёС‡РєСѓ РґРѕСЃС‚Р°С‚СЊ РѕСЂСѓР¶РёРµ.</text>
 	</string>
 
 	<string id="storyline_escape_eliminate_gunslinger">
 		<text>Eliminate Gunslinger.</text>
-		<text ln="rus">Убить Стрелка.</text>
+		<text ln="rus">РЈР±РёС‚СЊ РЎС‚СЂРµР»РєР°.</text>
 	</string>
 
 	<string id="storyline_escape_find_gunslinger">
 		<text>Find Gunslinger.</text>
-		<text ln="rus">Найти Стрелка.</text>
+		<text ln="rus">РќР°Р№С‚Рё РЎС‚СЂРµР»РєР°.</text>
 	</string>
 
 </string_table>

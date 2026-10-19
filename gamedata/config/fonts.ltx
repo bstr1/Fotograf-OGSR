@@ -1,79 +1,230 @@
+;-------------------Системные шрифты, используемые в движке----------------------
+;Юзается в rs_stats, hud_adjust_mode, g_vertex_dbg, show_wnd_rect
+;может юзаться через xml/скрипты: font="di" , GetFontDI()
+;этому шрифту в движке запрещена регулировка размера
+
+;Базовая секция шрифта. Здесь только имя шейдера и текстуры в высоком разрешении. В наследующих секциях шрифт меньшего размера получаем не текстурами меньшего разрешения, а просто уменьшая scale_x, scale_y
+[font_base]
+shader    = font ;Нигде не менять шейдер на hud\font! он замыливает буквы, особенно при увеличении размера.
+texture   = ui\fonts\Bender
+
 [stat_font]
-shader 			= font
-texture			= ui\ui_font_hud_01
-interval		= 0.75,1
+shader                                   = font ;Нигде не менять шейдер на hud\font! он замыливает буквы, особенно при увеличении размера.
+interval                                 = 0.75, 1
+texture                                  = ui\fonts\ui_font_11
+texture800                               = ui\fonts\ui_font_11
+texture1600                              = ui\fonts\ui_font_11
+
+scale_x                                  = 5.5
+scale_y                                  = 5.5
+
+;в движке нигде не юзается
+;может юзаться через xml/скрипты: font="small" , GetFontSmall()
+;конкретно в OGSR GA юзается в меню в версии мода/движка.
 
 [hud_font_small]:stat_font
 
+;Юзается в отладке зон g_zones_dbg
+;может юзаться через xml/скрипты: font="medium" , GetFontMedium()
+
 [hud_font_medium]
-shader 			= font
-texture		= ui\ui_font_hud_02
-	
-[hud_font_di]
-shader 			= font
-texture			= ui\ui_font_console_02
+shader                                   = font
+texture                                  = ui\fonts\ui_font_15
+texture800                               = ui\fonts\ui_font_13
+texture1600                              = ui\fonts\ui_font_17
 
+;юзается в консоли, демо_рекорде
+;этому шрифту в движке запрещена регулировка размера
 
-[ui_font_arial_14]
-shader			= font
-texture			= ui\ui_font_arial_14_1024
-texture800		= ui\ui_font_arial_14_800
-texture1600		= ui\ui_font_arial_14_1600
+[hud_font_di]:hud_font_medium
+shader                                   = font
 
-;not used
-[ui_font_arial_21]
-shader			= font
-texture			= ui\ui_font_arial_21_1024
-texture800		= ui\ui_font_arial_21_800
-texture1600		= ui\ui_font_arial_21_1600
+;юзается в консоли
+;этому шрифту в движке запрещена регулировка размера
 
-[ui_font_graffiti19_russian]
-shader			= font
-texture			= ui\ui_font_graff_19_1024
-texture800		= ui\ui_font_graff_19_800
-texture1600		= ui\ui_font_graff_19_1600
+[hud_font_di2]:hud_font_di
+shader                                   = hud\font2 ;Тут нужен именно этот шейдер потому что он отвечает за выделение текста в консоли по shift + стрелочки
 
-[ui_font_graffiti22_russian]
-shader		= font
-texture			= ui\ui_font_graff_22_1024
-texture800		= ui\ui_font_graff_22_800
-texture1600		= ui\ui_font_graff_22_1600
+;--------------------------------------------------------------------------------
 
-[ui_font_graff_32]
-shader			= font
-texture			= ui\ui_font_graff_32_1024
-texture800		= ui\ui_font_graff_32_800
-texture1600		= ui\ui_font_graff_32_1600
+[ui_font_arial_14]:font_base
+scale_x   = 0.1
+scale_y   = 0.1
 
 ;not used
-[ui_font_graff_40]
-shader			= font
-texture			= ui\ui_font_graff_40_1024
-texture800		= ui\ui_font_graff_40_800
-texture1600		= ui\ui_font_graff_40_1600
+[ui_font_arial_21]:font_base
+scale_x   = 0.15
+scale_y   = 0.15
 
-[ui_font_graff_50]
-shader			= font
-texture			= ui\ui_font_graff_50_1024
-texture800		= ui\ui_font_graff_50_800
-texture1600		= ui\ui_font_graff_50_1600
+[ui_font_graffiti19_russian]:font_base
+scale_x   = 0.15
+scale_y   = 0.15
 
+[ui_font_graffiti22_russian]:font_base
+scale_x   = 0.2
+scale_y   = 0.2
 
-[ui_font_letterica16_russian]
-shader			= font
-texture			= ui\ui_font_letter_16_1024
-texture800		= ui\ui_font_letter_16_800
-;texture800		= ui\ui_font_letter_18_800
-texture1600		= ui\ui_font_letter_16_1600
+[ui_font_graff_32]:font_base
+scale_x   = 0.25
+scale_y   = 0.25
 
-[ui_font_letterica18_russian]
-shader			= font
-texture			= ui\ui_font_letter_18_1024
-texture800		= ui\ui_font_letter_18_800
-texture1600		= ui\ui_font_letter_18_1600
+;not used
+[ui_font_graff_40]:font_base
+scale_x   = 0.3
+scale_y   = 0.3
 
-[ui_font_letter_25]
-shader			= font
-texture			= ui\ui_font_letter_25_1024
-texture800		= ui\ui_font_letter_25_800
-texture1600		= ui\ui_font_letter_25_1600
+[ui_font_graff_50]:font_base
+scale_x   = 1.0
+scale_y   = 1.0
+
+[ui_font_letterica16_russian]:font_base
+scale_x   = 0.15
+scale_y   = 0.15
+
+[ui_font_letterica18_russian]:font_base
+scale_x   = 0.2
+scale_y   = 0.2
+
+[ui_font_letter_25]:font_base
+scale_x   = 0.25
+scale_y   = 0.25
+
+[ui_font_saar_base]
+shader                                   = font
+texture                                  = ui\fonts\Saar_SP_Demo
+texture800                               = ui\fonts\Saar_SP_Demo
+texture1600                              = ui\fonts\Saar_SP_Demo
+
+[ui_font_saar12]:ui_font_saar_base
+scale_x                                  = 0.3
+scale_y                                  = 0.3
+
+[ui_font_saar14]:ui_font_saar_base
+scale_x                                  = 0.4
+scale_y                                  = 0.4
+
+[ui_font_saar16]:ui_font_saar_base
+scale_x                                  = 0.5
+scale_y                                  = 0.5
+
+[ui_font_saar18]:ui_font_saar_base
+scale_x                                  = 0.7
+scale_y                                  = 0.7
+
+[ui_font_saar22]:ui_font_saar_base
+scale_x                                  = 0.9
+scale_y                                  = 0.9
+
+[ui_font_saar25]:ui_font_saar_base
+scale_x                                  = 1.0
+scale_y                                  = 1.0
+
+[ui_font_saar32]:ui_font_saar_base
+scale_x                                  = 1.3
+scale_y                                  = 1.3
+
+[ui_font_saar38]:ui_font_saar_base
+scale_x                                  = 1.5
+scale_y                                  = 1.5
+
+[ui_font_saar42]:ui_font_saar_base
+scale_x                                  = 1.7
+scale_y                                  = 1.7
+
+[ui_font_saar50]:ui_font_saar_base
+scale_x                                  = 2
+scale_y                                  = 2
+
+[ui_font_roboto_base]
+shader                                   = font
+texture                                  = ui\fonts\Roboto_Medium
+texture                                  = ui\fonts\Roboto_Medium
+texture                                  = ui\fonts\Roboto_Medium
+
+[ui_font_roboto12]:ui_font_roboto_base
+scale_x                                  = 0.2
+scale_y                                  = 0.2
+
+[ui_font_roboto14]:ui_font_roboto_base
+scale_x                                  = 0.3
+scale_y                                  = 0.3
+
+[ui_font_roboto16]:ui_font_roboto_base
+scale_x                                  = 0.4
+scale_y                                  = 0.4
+
+[ui_font_roboto18]:ui_font_roboto_base
+scale_x                                  = 0.5
+scale_y                                  = 0.5
+
+[ui_font_roboto22]:ui_font_roboto_base
+scale_x                                  = 0.7
+scale_y                                  = 0.7
+
+[ui_font_roboto25]:ui_font_roboto_base
+scale_x                                  = 1.0
+scale_y                                  = 1.0
+
+[ui_font_roboto32]:ui_font_roboto_base
+scale_x                                  = 0.9
+scale_y                                  = 0.9
+
+[ui_font_roboto35]:ui_font_roboto_base
+scale_x                                  = 1.1
+scale_y                                  = 1.1
+
+[ui_font_roboto38]:ui_font_roboto_base
+scale_x                                  = 1.3
+scale_y                                  = 1.3
+
+[ui_font_roboto42]:ui_font_roboto_base
+scale_x                                  = 1.5
+scale_y                                  = 1.5
+
+[ui_font_roboto45]:ui_font_roboto_base
+scale_x                                  = 1.7
+scale_y                                  = 1.7
+
+[ui_font_roboto50]:ui_font_roboto_base
+scale_x                                  = 2
+scale_y                                  = 2
+
+[ui_font_audex_base]
+shader                                  = font
+texture                                 = ui\fonts\Audex
+
+[ui_font_audex_10]:ui_font_audex_base
+scale_x                                  = 0.1
+scale_y                                  = 0.1
+
+[ui_font_audex_15]:ui_font_audex_base
+scale_x                                  = 0.15
+scale_y                                  = 0.15
+
+[ui_font_audex_20]:ui_font_audex_base
+scale_x                                  = 0.20
+scale_y                                  = 0.20
+
+[ui_font_audex_25]:ui_font_audex_base
+scale_x                                  = 0.25
+scale_y                                  = 0.25
+
+[ui_font_audex_30]:ui_font_audex_base
+scale_x                                  = 0.30
+scale_y                                  = 0.30
+
+[ui_font_audex_35]:ui_font_audex_base
+scale_x                                  = 0.35
+scale_y                                  = 0.35
+
+[ui_font_audex_40]:ui_font_audex_base
+scale_x                                  = 0.4
+scale_y                                  = 0.4
+
+[ui_font_audex_50]:ui_font_audex_base
+scale_x                                  = 0.5
+scale_y                                  = 0.5
+
+[ui_font_audex_60]:ui_font_audex_base
+scale_x                                  = 0.6
+scale_y                                  = 0.6

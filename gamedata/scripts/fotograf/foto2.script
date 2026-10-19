@@ -1928,7 +1928,7 @@ function set_prom_zasada()
 end
 
 function pooo_sound()
-   local snd_obj = xr_sound.get_safe_sound_object([[new\petrograf_pooo]])
+   local snd_obj = xr_sound.get_safe_sound_object([[new\zapadlo_sdohni]])
    snd_obj:play(db.actor, 0, sound_object.s2d)
 end
 

@@ -5,7 +5,7 @@
 <!---------------------------archivarius_zombi---------------------->
 
   <specific_character id="archivarius_zombi" team_default = "1">
-    <name>Лейтенант Минчуков</name>
+    <name>Р›РµР№С‚РµРЅР°РЅС‚ РњРёРЅС‡СѓРєРѕРІ</name>
     <icon>ui_npc_smith</icon>
     <map_icon x="2" y="0"></map_icon>
     <bio>sim_soldier_commander_bio</bio>
@@ -43,7 +43,7 @@
  <!---------------------------zubarev_zombi---------------------->
 
   <specific_character id="zubarev_zombi" team_default = "1">
-    <name>Сержант Зубарев</name>
+    <name>РЎРµСЂР¶Р°РЅС‚ Р—СѓР±Р°СЂРµРІ</name>
     <icon>ui_npc_spets</icon>
     <map_icon x="2" y="2"></map_icon>
     <bio>sim_soldier_specnaz_bio</bio>
@@ -76,7 +76,7 @@
   
 <!----------------------------strange_killer_zombi----------------------->  
 	<specific_character id="strange_killer_zombi" team_default = "1">
-		    <name>Незнакомец</name>
+		    <name>РќРµР·РЅР°РєРѕРјРµС†</name>
 		<icon>ui_npc_koldun</icon>
 		<map_icon x="5" y="0"></map_icon>
 		<bio>gar_stalker_regular_bio</bio>
@@ -108,7 +108,7 @@
 
 <!----------------------------poet_zombi----------------------->  
 	<specific_character id="poet_zombi" team_default = "1">
-		    <name>Михась Стихоплёт</name>
+		    <name>РњРёС…Р°СЃСЊ РЎС‚РёС…РѕРїР»С‘С‚</name>
 		<icon>ui_npc_koldun</icon>
 		<map_icon x="5" y="0"></map_icon>
 		<bio>gar_stalker_regular_bio</bio>
@@ -140,7 +140,7 @@
 
 <!----------------------greta-------------------->
     <specific_character id="greta_invis_zombi" team_default = "1">
-        <name>Грета</name>
+        <name>Р“СЂРµС‚Р°</name>
         <icon>ui_npc_greta</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -170,7 +170,7 @@
 	
 <!----------------------greta_vis-------------------->
     <specific_character id="greta_vis_zombi" team_default = "1">
-        <name>Грета</name>
+        <name>Р“СЂРµС‚Р°</name>
         <icon>ui_npc_greta</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -324,7 +324,7 @@
 <!--------------------------mk_zasada_zombi--------------------------->	
 
 	<specific_character id="mk_zasada_zombi" team_default = "1">
-		<name>Неизвестный сталкер</name>
+		<name>РќРµРёР·РІРµСЃС‚РЅС‹Р№ СЃС‚Р°Р»РєРµСЂ</name>
 		<icon>ui_npc_u_stalker_2_rozh1</icon>
 		<bio>sim_stalker_general_bio</bio>
 		<class>sit_doctor</class>
@@ -345,7 +345,7 @@
 <!---------------------------mg_zasada_zombi---------------------->
 
   <specific_character id="mg_zasada_zombi" team_default = "1">
-    <name>Сержант Зубарев</name>
+    <name>РЎРµСЂР¶Р°РЅС‚ Р—СѓР±Р°СЂРµРІ</name>
     <icon>ui_npc_spets</icon>
     <map_icon x="2" y="2"></map_icon>
     <bio>sim_soldier_specnaz_bio</bio>
@@ -377,7 +377,7 @@
 <!---------------------------irokez_kombez_zombi---------------------->
 
   <specific_character id="irokez_kombez_zombi" team_default = "1">
-    <name>Ирокез</name>
+    <name>РСЂРѕРєРµР·</name>
     <icon>ui_npc_u_irokez</icon>
     <map_icon x="2" y="2"></map_icon>
     <bio>sim_stalker_general_bio</bio>
@@ -414,7 +414,7 @@
 <!---------------------------irokez_skin_zombi---------------------->
 
   <specific_character id="irokez_skin_zombi" team_default = "1">
-    <name>Ирокез</name>
+    <name>РСЂРѕРєРµР·</name>
     <icon>ui_npc_u_irokez</icon>
     <map_icon x="2" y="2"></map_icon>
     <bio>sim_stalker_general_bio</bio>
@@ -448,7 +448,7 @@
   </specific_character> 
 
   <specific_character id="utyug_zombi" team_default = "1">
-    <name>Генка Утюг</name>
+    <name>Р“РµРЅРєР° РЈС‚СЋРі</name>
 		<icon>ui_npc_u_stalker_ki_head_1</icon>
 		<map_icon x="5" y="0"></map_icon>
 		<bio>mil_killer_specnaz_bio</bio>
@@ -477,7 +477,7 @@
   </specific_character>
 
 <specific_character id="catcher_vhod1_zombi" team_default = "1">
-    <name>Контра</name>
+    <name>РљРѕРЅС‚СЂР°</name>
 		<icon>ui_npc_monster_kontroler_4</icon>
 		<map_icon x="5" y="0"></map_icon>
 		<bio>mil_killer_specnaz_bio</bio>
@@ -503,7 +503,7 @@
   </specific_character>
 
 <specific_character id="catcher_vhod2_zombi" team_default = "1">
-    <name>Контра</name>
+    <name>РљРѕРЅС‚СЂР°</name>
 		<icon>ui_npc_monster_kontroler_4</icon>
 		<map_icon x="5" y="0"></map_icon>
 		<bio>mil_killer_specnaz_bio</bio>
@@ -529,7 +529,7 @@
   </specific_character> 
 
 <specific_character id="catcher_vhod3_zombi" team_default = "1">
-    <name>Контра</name>
+    <name>РљРѕРЅС‚СЂР°</name>
 		<icon>ui_npc_monster_kontroler_4</icon>
 		<map_icon x="5" y="0"></map_icon>
 		<bio>mil_killer_specnaz_bio</bio>
@@ -555,7 +555,7 @@
   </specific_character>
 
 <specific_character id="catcher_prison1_zombi" team_default = "1">
-    <name>Контра</name>
+    <name>РљРѕРЅС‚СЂР°</name>
 		<icon>ui_npc_monster_kontroler_4</icon>
 		<map_icon x="5" y="0"></map_icon>
 		<bio>mil_killer_specnaz_bio</bio>
@@ -581,7 +581,7 @@
   </specific_character>
 
 <specific_character id="catcher_prison2_zombi" team_default = "1">
-    <name>Контра</name>
+    <name>РљРѕРЅС‚СЂР°</name>
 		<icon>ui_npc_monster_kontroler_4</icon>
 		<map_icon x="5" y="0"></map_icon>
 		<bio>mil_killer_specnaz_bio</bio>
@@ -607,7 +607,7 @@
   </specific_character>
 
 <specific_character id="catcher_main_zombi" team_default = "1">
-    <name>Контра</name>
+    <name>РљРѕРЅС‚СЂР°</name>
 		<icon>ui_npc_monster_kontroler_4</icon>
 		<map_icon x="5" y="0"></map_icon>
 		<bio>mil_killer_specnaz_bio</bio>
@@ -634,7 +634,7 @@
   
 <!----------------------observer_set_zombi-------------------->
     <specific_character id="observer_set_zombi" team_default = "1">
-        <name>Наблюдатель</name>
+        <name>РќР°Р±Р»СЋРґР°С‚РµР»СЊ</name>
         <icon>ui_npc_u_stalker_mo_mask</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -664,7 +664,7 @@
 		<!--------------------------Ormont_zombi--------------------------->
 
 <specific_character id="ormont_zombi" team_default = "1">
-    <name>Профессор Ормонт</name>
+    <name>РџСЂРѕС„РµСЃСЃРѕСЂ РћСЂРјРѕРЅС‚</name>
     <icon>ui_npc_uchen_yellow</icon>
     <map_icon x="3" y="2"></map_icon>
     <bio>yan_Ecolog</bio>
@@ -937,7 +937,7 @@
 		<!---------------------------dead city family zombi---------------------->
 
 <specific_character id="petrovige_zombi"team_default = "1">
-    <name>Сергей Андреевич</name>
+    <name>РЎРµСЂРіРµР№ РђРЅРґСЂРµРµРІРёС‡</name>
     <icon>ui_npc_uchen_11</icon>
     <bio>sim_stalker_general_bio</bio>
 
@@ -963,7 +963,7 @@
 </specific_character>
 
 <specific_character id="varvara_zombi"team_default = "1">
-    <name>Лидочка</name>
+    <name>Р›РёРґРѕС‡РєР°</name>
     <icon>ui_npc_uchen_12</icon>
     <bio>sim_stalker_general_bio</bio>
 

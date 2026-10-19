@@ -2,7 +2,7 @@ local t = {}
 
 function load_job(sj, gname, type, squad, groups)	
 
-	-- ГУЛАГ ВОЕННЫХ НА НАСЫПИ
+	-- Р“РЈР›РђР“ Р’РћР•РќРќР«РҐ РќРђ РќРђРЎР«РџР
 	if type == "amk_embankment" then
 		t = { section = "logic@amk_embankment_soldier1",
 			idle = 0,
@@ -61,7 +61,7 @@ function load_job(sj, gname, type, squad, groups)
 	end
 	
 	
-	-- ГУЛАГ МИНИ-БАРА НА СВАЛКЕ
+	-- Р“РЈР›РђР“ РњРРќР-Р‘РђР Рђ РќРђ РЎР’РђР›РљР•
 	if type == "amk_mini_bar" then
 		t = { section = "logic@amk_mini_bar_kulinar",
 			idle = 0,

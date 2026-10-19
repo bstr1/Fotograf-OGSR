@@ -1,91 +1,91 @@
 
 <string_table>
 	<string id="cant_walk">
-		<text>Вы слишком истощены, чтобы двигаться</text>
+		<text>Р’С‹ СЃР»РёС€РєРѕРј РёСЃС‚РѕС‰РµРЅС‹, С‡С‚РѕР±С‹ РґРІРёРіР°С‚СЊСЃСЏ</text>
 	</string>
 	<string id="cant_walk_weight">
-		<text>Вы слишком перегружены, чтобы двигаться</text>
+		<text>Р’С‹ СЃР»РёС€РєРѕРј РїРµСЂРµРіСЂСѓР¶РµРЅС‹, С‡С‚РѕР±С‹ РґРІРёРіР°С‚СЊСЃСЏ</text>
 	</string>
 	<string id="dar_poltergeist_hold_the_door">
-		<text>Кто-то удерживает дверь</text>
+		<text>РљС‚Рѕ-С‚Рѕ СѓРґРµСЂР¶РёРІР°РµС‚ РґРІРµСЂСЊ</text>
 	</string>
 	<string id="Global Map">
-		<text>Глобальная карта</text>
+		<text>Р“Р»РѕР±Р°Р»СЊРЅР°СЏ РєР°СЂС‚Р°</text>
 	</string>
 	<string id="gun_jammed">
-		<text>Оружие заклинило; нужно перезарядить</text>
+		<text>РћСЂСѓР¶РёРµ Р·Р°РєР»РёРЅРёР»Рѕ; РЅСѓР¶РЅРѕ РїРµСЂРµР·Р°СЂСЏРґРёС‚СЊ</text>
 	</string>
 	<string id="inventory_box_use">
-		<text>Обыскать ($$ACTION_USE$$)</text>
+		<text>РћР±С‹СЃРєР°С‚СЊ ($$ACTION_USE$$)</text>
 	</string>
 	<string id="Local Map">
-		<text>Локальная карта</text>
+		<text>Р›РѕРєР°Р»СЊРЅР°СЏ РєР°СЂС‚Р°</text>
 	</string>
 	<string id="st_game_saved">
-		<text>игра сохранена</text>
+		<text>РёРіСЂР° СЃРѕС…СЂР°РЅРµРЅР°</text>
 	</string>
 	<string id="tip_car_locked">
-		<text>Заблокировано</text>
+		<text>Р—Р°Р±Р»РѕРєРёСЂРѕРІР°РЅРѕ</text>
 	</string>
 	<string id="tip_car_benzin_locked">
-		<text>Для использования нужен бензин</text>
+		<text>Р”Р»СЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ РЅСѓР¶РµРЅ Р±РµРЅР·РёРЅ</text>
 	</string>
 	<string id="tip_car_dizel_locked">
-		<text>Для использования нужно дизельное топливо</text>
+		<text>Р”Р»СЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ РЅСѓР¶РЅРѕ РґРёР·РµР»СЊРЅРѕРµ С‚РѕРїР»РёРІРѕ</text>
 	</string>
 	<string id="tip_car_dizel_wait">
-		<text>Заливается топливо...</text>
+		<text>Р—Р°Р»РёРІР°РµС‚СЃСЏ С‚РѕРїР»РёРІРѕ...</text>
 	</string>
 	<string id="tip_car_benzin_wait">
-		<text>Заливается бензин...</text>
+		<text>Р—Р°Р»РёРІР°РµС‚СЃСЏ Р±РµРЅР·РёРЅ...</text>
 	</string>
 	<string id="tip_car_key_wait">
-		<text>Открывается замок...</text>
+		<text>РћС‚РєСЂС‹РІР°РµС‚СЃСЏ Р·Р°РјРѕРє...</text>
 	</string>	
 	<string id="tip_car_key_locked">
-		<text>Для использования нужен ключ</text>
+		<text>Р”Р»СЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ РЅСѓР¶РµРЅ РєР»СЋС‡</text>
 	</string>	
 	<string id="tip_car_use">
-		<text>Открыть дверь ($$ACTION_USE$$)</text>
+		<text>РћС‚РєСЂС‹С‚СЊ РґРІРµСЂСЊ ($$ACTION_USE$$)</text>
 	</string>
 	<string id="tip_car_key_use">
-		<text>Используйте полученный ключ</text>
+		<text>РСЃРїРѕР»СЊР·СѓР№С‚Рµ РїРѕР»СѓС‡РµРЅРЅС‹Р№ РєР»СЋС‡</text>
 	</string>	
 	<string id="tip_car_benzin_use">
-		<text>Залить бензин</text>
+		<text>Р—Р°Р»РёС‚СЊ Р±РµРЅР·РёРЅ</text>
 	</string>
 	<string id="tip_car_dizel_use">
-		<text>Залить топливо</text>
+		<text>Р—Р°Р»РёС‚СЊ С‚РѕРїР»РёРІРѕ</text>
 	</string>	
 	<string id="tip_door_close">
-		<text>Нажмите ($$ACTION_USE$$), чтобы закрыть дверь</text>
+		<text>РќР°Р¶РјРёС‚Рµ ($$ACTION_USE$$), С‡С‚РѕР±С‹ Р·Р°РєСЂС‹С‚СЊ РґРІРµСЂСЊ</text>
 	</string>
 	<string id="tip_door_coded">
-		<text>Дверь закодирована</text>
+		<text>Р”РІРµСЂСЊ Р·Р°РєРѕРґРёСЂРѕРІР°РЅР°</text>
 	</string>
 	<string id="tip_door_decode">
-		<text>Нажмите ($$ACTION_USE$$), чтобы декодировать дверь</text>
+		<text>РќР°Р¶РјРёС‚Рµ ($$ACTION_USE$$), С‡С‚РѕР±С‹ РґРµРєРѕРґРёСЂРѕРІР°С‚СЊ РґРІРµСЂСЊ</text>
 	</string>
 	<string id="tip_door_decoding">
-		<text>Идёт процесс декодирования</text>
+		<text>РРґС‘С‚ РїСЂРѕС†РµСЃСЃ РґРµРєРѕРґРёСЂРѕРІР°РЅРёСЏ</text>
 	</string>
 	<string id="tip_door_locked">
-		<text>Дверь заперта</text>
+		<text>Р”РІРµСЂСЊ Р·Р°РїРµСЂС‚Р°</text>
 	</string>
 	<string id="tip_door_open">
-		<text>Нажмите ($$ACTION_USE$$), чтобы открыть дверь</text>
+		<text>РќР°Р¶РјРёС‚Рµ ($$ACTION_USE$$), С‡С‚РѕР±С‹ РѕС‚РєСЂС‹С‚СЊ РґРІРµСЂСЊ</text>
 	</string>
 	<string id="tip_gate_close">
-		<text>Нажмите ($$ACTION_USE$$), чтобы закрыть ворота</text>
+		<text>РќР°Р¶РјРёС‚Рµ ($$ACTION_USE$$), С‡С‚РѕР±С‹ Р·Р°РєСЂС‹С‚СЊ РІРѕСЂРѕС‚Р°</text>
 	</string>
 	<string id="tip_gate_locked">
-		<text>Ворота заблокированы</text>
+		<text>Р’РѕСЂРѕС‚Р° Р·Р°Р±Р»РѕРєРёСЂРѕРІР°РЅС‹</text>
 	</string>
 	<string id="tip_gate_open">
-		<text>Нажмите ($$ACTION_USE$$), чтобы открыть ворота</text>
+		<text>РќР°Р¶РјРёС‚Рµ ($$ACTION_USE$$), С‡С‚РѕР±С‹ РѕС‚РєСЂС‹С‚СЊ РІРѕСЂРѕС‚Р°</text>
 	</string>
 	<string id="tip_monolith">
-		<text>ЗАГАДАТЬ ЖЕЛАНИЕ ($$ACTION_USE$$)</text>
+		<text>Р—РђР“РђР”РђРўР¬ Р–Р•Р›РђРќРР• ($$ACTION_USE$$)</text>
 	</string>
 	<string id="st_demo_play">
 		<text>AMK MOD 1.4.1</text>

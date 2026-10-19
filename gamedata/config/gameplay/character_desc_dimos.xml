@@ -2,7 +2,7 @@
 
 <!---------------------------vasil_swamp---------------------->
 <specific_character id="vasil_swamp" team_default = "1">
-    <name>Васильев</name>
+    <name>Р’Р°СЃРёР»СЊРµРІ</name>
     <icon>ui_npc_vasil</icon>
     <map_icon x="3" y="2"></map_icon>
     <bio>yan_Ecolog</bio>
@@ -33,7 +33,7 @@
 	
 <!---------------------------kruglov_swamp---------------------->
 <specific_character id="kruglov_swamp" team_default = "1">
-    <name>Круглов</name>
+    <name>РљСЂСѓРіР»РѕРІ</name>
     <icon>ui_npc_kruglov</icon>
     <map_icon x="0" y="6"></map_icon>
     <bio>yan_Ecolog</bio>
@@ -68,7 +68,7 @@
 
 <!---------------------------lazarev_swamp--------------------------->
 	<specific_character id="lazarev_swamp" team_default = "1">
-		<name>Лаборант Лазарев</name>
+		<name>Р›Р°Р±РѕСЂР°РЅС‚ Р›Р°Р·Р°СЂРµРІ</name>
 		<icon>ui_npc_uchen_white</icon>
 		<map_icon x="7" y="0"></map_icon>
 		<bio>ros_ecolog_guard_bio</bio>
@@ -99,7 +99,7 @@
 
 <!---------------------------brown----------------------->
   <specific_character id="brown" team_default = "1">
-    <name>Полковник Браун</name>
+    <name>РџРѕР»РєРѕРІРЅРёРє Р‘СЂР°СѓРЅ</name>
     <icon>ui_usa_brown</icon>
     <map_icon x="2" y="0"></map_icon>
     <bio>sim_soldier_commander_bio</bio>
@@ -140,7 +140,7 @@
   
 <!---------------------------brown_dva----------------------->
   <specific_character id="brown_dva" team_default = "1">
-    <name>Полковник Браун</name>
+    <name>РџРѕР»РєРѕРІРЅРёРє Р‘СЂР°СѓРЅ</name>
     <icon>ui_usa_brown</icon>
     <map_icon x="2" y="0"></map_icon>
     <bio>sim_soldier_commander_bio</bio>
@@ -184,7 +184,7 @@
   
 <!---------------------------smith----------------------->
   <specific_character id="smith" team_default = "1">
-    <name>Генерал Смит</name>
+    <name>Р“РµРЅРµСЂР°Р» РЎРјРёС‚</name>
     <icon>ui_usa_smith</icon>
     <map_icon x="2" y="0"></map_icon>
     <bio>sim_soldier_commander_bio</bio>
@@ -225,7 +225,7 @@
   
 <!---------------------------nato_mask-----------------------> 
 <specific_character id="nato_mask" team_default="1">
-		<name>Иностранец</name>
+		<name>РРЅРѕСЃС‚СЂР°РЅРµС†</name>
 		<icon>ui_usa_mask</icon>
 		<map_icon x="1" y="2"></map_icon>
 		<bio>val_soldier_regular_bio</bio>
@@ -260,7 +260,7 @@
 
 <!---------------------------nato_mask1-----------------------> 
 <specific_character id="nato_mask1" team_default="1">
-		<name>Иностранец</name>
+		<name>РРЅРѕСЃС‚СЂР°РЅРµС†</name>
 		<icon>ui_usa_mask1</icon>
 		<map_icon x="1" y="2"></map_icon>
 		<bio>val_soldier_regular_bio</bio>
@@ -295,7 +295,7 @@
 
  <!---------------------------nato_specnaz---------------------->
   <specific_character id="nato_specnaz" team_default = "1">
-    <name>Иностранец</name>
+    <name>РРЅРѕСЃС‚СЂР°РЅРµС†</name>
     <icon>ui_usa_spetsnaz</icon>
     <map_icon x="2" y="2"></map_icon>
     <bio>sim_soldier_specnaz_bio</bio>
@@ -332,7 +332,7 @@
   
  <!---------------------------nato_specnaz1---------------------->
   <specific_character id="nato_specnaz1" team_default = "1">
-    <name>Иностранец</name>
+    <name>РРЅРѕСЃС‚СЂР°РЅРµС†</name>
     <icon>ui_usa_spetsnaz</icon>
     <map_icon x="2" y="2"></map_icon>
     <bio>sim_soldier_specnaz_bio</bio>
@@ -370,7 +370,7 @@
 	
  <!---------------------------fab_trup---------------------->
   <specific_character id="fab_trup" team_default = "1">
-    <name>Иностранец</name>
+    <name>РРЅРѕСЃС‚СЂР°РЅРµС†</name>
     <icon>ui_npc_u_soldier_spetsnaz</icon>
     <map_icon x="2" y="2"></map_icon>
     <bio>sim_soldier_specnaz_bio</bio>
@@ -404,7 +404,7 @@
 	
  <!---------------------------nato_antigas---------------------->
   <specific_character id="nato_antigas" team_default = "1">
-    <name>Иностранец</name>
+    <name>РРЅРѕСЃС‚СЂР°РЅРµС†</name>
     <icon>ui_usa_antigas</icon>
     <map_icon x="2" y="2"></map_icon>
     <bio>sim_soldier_specnaz_bio</bio>
@@ -442,7 +442,7 @@
 
  <!---------------------------nato_parol---------------------->
   <specific_character id="nato_parol" team_default = "1">
-    <name>Иностранец</name>
+    <name>РРЅРѕСЃС‚СЂР°РЅРµС†</name>
     <icon>ui_usa_antigas</icon>
     <map_icon x="2" y="2"></map_icon>
     <bio>sim_soldier_specnaz_bio</bio>
@@ -480,7 +480,7 @@
 	
  <!---------------------------nato_shlem---------------------->
   <specific_character id="nato_shlem" team_default = "1">
-    <name>Капрал Фостер</name>
+    <name>РљР°РїСЂР°Р» Р¤РѕСЃС‚РµСЂ</name>
     <icon>ui_usa_spetsnaz</icon>
     <map_icon x="2" y="2"></map_icon>
     <bio>sim_soldier_specnaz_bio</bio>
@@ -516,7 +516,7 @@
   
 <!----------------------------sutuly----------------------->  
 	<specific_character id="sutuly" team_default = "1">
-		    <name>Сутулый</name>
+		    <name>РЎСѓС‚СѓР»С‹Р№</name>
 		<icon>ui_npc_u_hunter_face</icon>
 		<map_icon x="5" y="0"></map_icon>
 		<bio>gar_stalker_regular_bio</bio>
@@ -552,7 +552,7 @@
 
 <!------------------------mazay--------------------------->  
 	<specific_character id="mazay" team_default = "1">
-		    <name>Мазай</name>
+		    <name>РњР°Р·Р°Р№</name>
 		<icon>ui_npc_u_hunter_face</icon>
 		<map_icon x="5" y="0"></map_icon>
 		<bio>gar_stalker_regular_bio</bio>
@@ -588,7 +588,7 @@
 
 <!------------------------grek--------------------------->  
 	<specific_character id="grek" team_default = "1">
-		    <name>Грек</name>
+		    <name>Р“СЂРµРє</name>
 		<icon>ui_npc_u_hunter_grek</icon>
 		<map_icon x="5" y="0"></map_icon>
 		<bio>gar_stalker_regular_bio</bio>
@@ -821,7 +821,7 @@
 	
 <!--------------------------drug------------------------>
     <specific_character id="drug" team_default = "1">
-        <name>Фима</name>
+        <name>Р¤РёРјР°</name>
         <icon>ui_npc_u_stalker_red</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -855,7 +855,7 @@
 	
 <!--------------------------babka_blue------------------------>
     <specific_character id="babka_blue" team_default = "1">
-        <name>Бабушка</name>
+        <name>Р‘Р°Р±СѓС€РєР°</name>
         <icon>ui_npc_u_babka_blue</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -885,7 +885,7 @@
 	
 <!--------------------------babka_brown------------------------>
     <specific_character id="babka_brown" team_default = "1">
-        <name>Бабуля</name>
+        <name>Р‘Р°Р±СѓР»СЏ</name>
         <icon>ui_npc_u_babka_brown</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -916,7 +916,7 @@
 
 <!--------------------------nevidimka------------------------>
     <specific_character id="nevidimka" team_default = "1">
-        <name>Кристалл Разума</name>
+        <name>РљСЂРёСЃС‚Р°Р»Р» Р Р°Р·СѓРјР°</name>
         <icon>ui_npc_kristall</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -942,7 +942,7 @@
 	
 	<!--------------------------kapitan------------------------>
     <specific_character id="kapitan" team_default = "1">
-        <name>Капитан</name>
+        <name>РљР°РїРёС‚Р°РЅ</name>
         <icon>ui_npc_kapitan</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -970,7 +970,7 @@
  <!---------------------------nato_enginer---------------------->
  
   <specific_character id="nato_enginer" team_default = "1">
-    <name>Марио Бенелли</name>
+    <name>РњР°СЂРёРѕ Р‘РµРЅРµР»Р»Рё</name>
     <icon>ui_usa_enginer</icon>
     <map_icon x="2" y="2"></map_icon>
     <bio>sim_soldier_specnaz_bio</bio>
@@ -1307,8 +1307,8 @@
 		<name>GENERATE_NAME_lieutenant</name>
 		<icon>ui_npc_u_stalker_militari_1</icon>
 		<map_icon x="2" y="2"></map_icon>
-		<bio> Военный сталкер. Хорошо вооружен и очень опасен.
-		Детальная информация недоступна.</bio>
+		<bio> Р’РѕРµРЅРЅС‹Р№ СЃС‚Р°Р»РєРµСЂ. РҐРѕСЂРѕС€Рѕ РІРѕРѕСЂСѓР¶РµРЅ Рё РѕС‡РµРЅСЊ РѕРїР°СЃРµРЅ.
+		Р”РµС‚Р°Р»СЊРЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ РЅРµРґРѕСЃС‚СѓРїРЅР°.</bio>
 
 		<class>freedom_kill_02</class>
 		<community>military</community>
@@ -1375,7 +1375,7 @@
 <!----------------------filin-------------------->
 
     <specific_character id="filin" team_default = "1">
-        <name>Филин</name>
+        <name>Р¤РёР»РёРЅ</name>
         <icon>ui_npc_platok</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>
@@ -1413,7 +1413,7 @@
 	
 <!----------------------pruha-------------------->
     <specific_character id="pruha" team_default = "1">
-        <name>Дзяо Мэнь</name>
+        <name>Р”Р·СЏРѕ РњСЌРЅСЊ</name>
         <icon>ui_npc_pruha</icon>
         <map_icon x="3" y="2"></map_icon>
         <bio>sim_stalker_general_bio</bio>

@@ -5,40 +5,40 @@
         <phrase_list>
 
             <phrase id="0">
-                <text>Хотел вот спросить...</text>
+                <text>РҐРѕС‚РµР» РІРѕС‚ СЃРїСЂРѕСЃРёС‚СЊ...</text>
                 <next>1</next>
             </phrase>
 
             <phrase id="2">
                 <dont_has_info>info_amk_recipt_dikoobraz</dont_has_info>
-                <text>Рецепты трансмутаций есть?</text>
+                <text>Р РµС†РµРїС‚С‹ С‚СЂР°РЅСЃРјСѓС‚Р°С†РёР№ РµСЃС‚СЊ?</text>
                 <next>3</next>
             </phrase>
 
             <phrase id="3">
-                <text>Есть, конечно. Точно нужны? Это довольно ценная информация...</text>
+                <text>Р•СЃС‚СЊ, РєРѕРЅРµС‡РЅРѕ. РўРѕС‡РЅРѕ РЅСѓР¶РЅС‹? Р­С‚Рѕ РґРѕРІРѕР»СЊРЅРѕ С†РµРЅРЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ...</text>
                 <next>41</next>
                 <next>42</next>
             </phrase>
 
             <phrase id="41">
-                <text>Пожалуй, нет.</text>
+                <text>РџРѕР¶Р°Р»СѓР№, РЅРµС‚.</text>
                 <action>dialogs.break_dialog</action>
             </phrase>
 
             <phrase id="42">
-                <text>И сколько это будет стоить?</text>
+                <text>Р СЃРєРѕР»СЊРєРѕ СЌС‚Рѕ Р±СѓРґРµС‚ СЃС‚РѕРёС‚СЊ?</text>
                 <next>5</next>
             </phrase>
 
             <phrase id="5">
-                <text>Я думаю, что это не очень много для такой ценной информации – всего 30 000. Ну как, берешь?</text>
+                <text>РЇ РґСѓРјР°СЋ, С‡С‚Рѕ СЌС‚Рѕ РЅРµ РѕС‡РµРЅСЊ РјРЅРѕРіРѕ РґР»СЏ С‚Р°РєРѕР№ С†РµРЅРЅРѕР№ РёРЅС„РѕСЂРјР°С†РёРё вЂ“ РІСЃРµРіРѕ 30В 000. РќСѓ РєР°Рє, Р±РµСЂРµС€СЊ?</text>
                 <next>61</next>
                 <next>62</next>
             </phrase>
 
             <phrase id="61">
-                <text>Ну уж нет, я как-нибудь и без него обойдусь.</text>
+                <text>РќСѓ СѓР¶ РЅРµС‚, СЏ РєР°Рє-РЅРёР±СѓРґСЊ Рё Р±РµР· РЅРµРіРѕ РѕР±РѕР№РґСѓСЃСЊ.</text>
                 <action>dialogs.break_dialog</action>
             </phrase>
 
@@ -51,18 +51,18 @@
             </phrase>
 
             <phrase id="7">
-                <text>Правильный выбор.</text>
+                <text>РџСЂР°РІРёР»СЊРЅС‹Р№ РІС‹Р±РѕСЂ.</text>
                 <next>8</next>
             </phrase>
 
 
             <phrase id="8">
-                <text>Надеюсь.</text>
+                <text>РќР°РґРµСЋСЃСЊ.</text>
                 <next>1</next>
             </phrase>
 
             <phrase id="1">
-                <text>Что интересует?</text>
+                <text>Р§С‚Рѕ РёРЅС‚РµСЂРµСЃСѓРµС‚?</text>
                 <next>2</next>
                 <next>10</next>
                 <next>12</next>
@@ -70,17 +70,17 @@
 
             <phrase id="10">
     <dont_has_info>info_amk_recipt_fake</dont_has_info>
-                <text>Другие рецепты есть??</text>
+                <text>Р”СЂСѓРіРёРµ СЂРµС†РµРїС‚С‹ РµСЃС‚СЊ??</text>
                 <next>11</next>
             </phrase>
 
             <phrase id="12">
-                <text>Нет, ничего не нужно.</text>
+                <text>РќРµС‚, РЅРёС‡РµРіРѕ РЅРµ РЅСѓР¶РЅРѕ.</text>
                 <action>dialogs.break_dialog</action>
             </phrase>
 
             <phrase id="11">
-                <text>Найдется. Цена вопроса - 30 000. Согласен?</text>
+                <text>РќР°Р№РґРµС‚СЃСЏ. Р¦РµРЅР° РІРѕРїСЂРѕСЃР° - 30 000. РЎРѕРіР»Р°СЃРµРЅ?</text>
                 <next>141</next>
                 <next>142</next>
             </phrase>
@@ -94,17 +94,17 @@
             </phrase>
 
             <phrase id="142">
-                <text>Дорого.</text>
+                <text>Р”РѕСЂРѕРіРѕ.</text>
                 <next>1</next>
             </phrase>
 
             <phrase id="15">
-                <text>Скинул данные на PDA.</text>
+                <text>РЎРєРёРЅСѓР» РґР°РЅРЅС‹Рµ РЅР° PDA.</text>
                 <next>16</next>
             </phrase>
 
             <phrase id="16">
-                <text>Отлично.</text>
+                <text>РћС‚Р»РёС‡РЅРѕ.</text>
                 <next>1</next>
             </phrase>
 

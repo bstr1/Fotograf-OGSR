@@ -549,7 +549,7 @@
 <info_portion id="lch_peschera_sar"></info_portion>
 <info_portion id="lch_sar_peschera"></info_portion>
 
----------------------спавн кристаллов-----------------------
+---------------------СЃРїР°РІРЅ РєСЂРёСЃС‚Р°Р»Р»РѕРІ-----------------------
 
 <info_portion id="crystall_pred_spawn">
 <action>crystall_spawn.crystall_mk</action>
@@ -2450,7 +2450,7 @@
 <info_portion id="dezertir_ataka07_dead"></info_portion>
 <info_portion id="dezertir_ataka08_dead"></info_portion>
 
-----------------------Расстрел---------------------
+----------------------Р Р°СЃСЃС‚СЂРµР»---------------------
 
 <info_portion id="start_rasstrel"></info_portion>
 <info_portion id="rasstrel_mesto"></info_portion>

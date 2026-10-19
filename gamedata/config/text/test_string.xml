@@ -1,10 +1,10 @@
 
 <string_table>
     <string id="net deneg_101">
-        <text>равра</text>
+        <text>СЂР°РІСЂР°</text>
     </string>
     <string id="net deneg_0">
-        <text>у меня тоже</text>
+        <text>Сѓ РјРµРЅСЏ С‚РѕР¶Рµ</text>
     </string>
     <string id="test_dialog1_101">
         <text>text in default</text>
@@ -19,33 +19,33 @@
         <text>hello</text>
     </string>
     <string id="test_dialog_102">
-        <text>так себе</text>
+        <text>С‚Р°Рє СЃРµР±Рµ</text>
     </string>
     <string id="test_dialog_101">
-        <text>лучше чем у тебя</text>
+        <text>Р»СѓС‡С€Рµ С‡РµРј Сѓ С‚РµР±СЏ</text>
     </string>
     <string id="test_dialog_100">
-        <text>Плохо.</text>
+        <text>РџР»РѕС…Рѕ.</text>
     </string>
     <string id="test_dialog_200">
-        <text>так тебе и надо</text>
+        <text>С‚Р°Рє С‚РµР±Рµ Рё РЅР°РґРѕ</text>
     </string>
     <string id="test_dialog_0">
-        <text>Привет! Как дела?</text>
+        <text>РџСЂРёРІРµС‚! РљР°Рє РґРµР»Р°?</text>
     </string>
     <string id="vodka_est_0">
-        <text>У тебя случай-но водки нет</text>
+        <text>РЈ С‚РµР±СЏ СЃР»СѓС‡Р°Р№-РЅРѕ РІРѕРґРєРё РЅРµС‚</text>
     </string>
     <string id="vodka_est_101">
-        <text>есть, но не дам.</text>
+        <text>РµСЃС‚СЊ, РЅРѕ РЅРµ РґР°Рј.</text>
     </string>
     <string id="vodka_est_201">
-        <text>дам я тебе наверно по роже</text>
+        <text>РґР°Рј СЏ С‚РµР±Рµ РЅР°РІРµСЂРЅРѕ РїРѕ СЂРѕР¶Рµ</text>
     </string>
     <string id="net_deneg_101">
-        <text>нет, завтра подойди</text>
+        <text>РЅРµС‚, Р·Р°РІС‚СЂР° РїРѕРґРѕР№РґРё</text>
     </string>
     <string id="net_deneg_0">
-        <text>у меня нет денег, случай-но не подкинешь</text>
+        <text>Сѓ РјРµРЅСЏ РЅРµС‚ РґРµРЅРµРі, СЃР»СѓС‡Р°Р№-РЅРѕ РЅРµ РїРѕРґРєРёРЅРµС€СЊ</text>
     </string>
 </string_table>
