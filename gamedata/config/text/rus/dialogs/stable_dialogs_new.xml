@@ -517,42 +517,6 @@
   <string id="doctor_second_dialog_11">
     <text>Ладно, парень, не буду тебя больше задерживать, просто почаще прислушивайся к своему сердцу, доверься ему, и оно даст тебе правильный совет - так Доктор учил.</text>
   </string>
-  <string id="digger_repair_0">
-    <text>Уважаемый, ты случайно ремонтом не занимаешься?</text>
-  </string>
-  <string id="digger_repair_1">
-    <text>Есть немного.</text>
-  </string>
-  <string id="digger_repair_2">
-    <text>Отремонтируй первый ствол.</text>
-  </string>
-  <string id="digger_repair_3">
-    <text>Отремонтируй второй ствол.</text>
-  </string>
-  <string id="digger_repair_4">
-    <text>Отремонтируй броню.</text>
-  </string>
-  <string id="digger_repair_5">
-    <text>Да уж, по таким ценам я ремонтироваться пока не готов.</text>
-  </string>
-  <string id="digger_repair_6">
-    <text>Ну вот, смотри, как новенькая.</text>
-  </string>
-  <string id="digger_repair_7">
-    <text>Да уж, кем надо быть, чтобы довести костюм до такого состояния... Ладно, придётся все пластины поменять.</text>
-  </string>
-  <string id="digger_repair_8">
-    <text>А что, неплохо, благодарю.</text>
-  </string>
-  <string id="digger_repair_9">
-    <text>Слушай, по-моему, сейчас она даже лучше, чем когда новая была.</text>
-  </string>
-  <string id="digger_repair_10">
-    <text>Тут еще кое-что есть, не посмотришь?</text>
-  </string>
-  <string id="digger_repair_11">
-    <text>Да, пожалуйста, что там у нас:</text>
-  </string>
   <string id="mathon_change_0">
     <text>Приветствую вас, Наставник.</text>
   </string>
@@ -622,42 +586,6 @@
   <string id="mathon_change_391">
     <text>За "Грави" - вот тебе патроны натовские, 3 пачки, обычные + 2 аптечки простые и 4 палки колбасы.</text>
   </string>
-  <string id="mathon_repair_0">
-    <text>Приветствую. Мне надо кое-что отремонтировать.</text>
-  </string>
-  <string id="mathon_repair_1">
-    <text>Да уж, наши враги не дремлют, давай посмотрю, что там у тебя.</text>
-  </string>
-  <string id="mathon_repair_2">
-    <text>Отремонтируй первый ствол.</text>
-  </string>
-  <string id="mathon_repair_3">
-    <text>Отремонтируй второй ствол.</text>
-  </string>
-  <string id="mathon_repair_4">
-    <text>Отремонтируй броню.</text>
-  </string>
-  <string id="mathon_repair_5">
-    <text>Эх, не хватает мне сейчас на ремонт денег.</text>
-  </string>
-  <string id="mathon_repair_6">
-    <text>Вот твое оружие, брат, пусть твои враги трепещут.</text>
-  </string>
-  <string id="mathon_repair_7">
-    <text>Броню подлатал. Назло твоим врагам, так сказать. Носи на здоровье!</text>
-  </string>
-  <string id="mathon_repair_8">
-    <text>Благодарю тебя за качественный ремонт.</text>
-  </string>
-  <string id="mathon_repair_9">
-    <text>Вот это я понимаю работа! Огромное спасибо за ремонт.</text>
-  </string>
-  <string id="mathon_repair_10">
-    <text>Мастер, есть еще кое-что.</text>
-  </string>
-  <string id="mathon_repair_11">
-    <text>Ох, и здорово же тебе досталось, давай посмотрю:</text>
-  </string> 
   <string id="haron_baza_dialog_0">
     <text>Мастер, я слышал, что наёмники нашу базу в Припяти захватили?</text>
   </string>

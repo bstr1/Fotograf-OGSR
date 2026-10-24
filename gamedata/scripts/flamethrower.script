@@ -1,3 +1,5 @@
+-- bstr: на удаление
+
 --Функции для квеста на огнемёт.
 -- flamethrower.script
 local min_fuel = 150

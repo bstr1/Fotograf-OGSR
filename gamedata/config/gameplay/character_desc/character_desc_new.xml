@@ -4564,7 +4564,7 @@
 		<actor_dialog>doctor_second_dialog</actor_dialog>
 		<actor_dialog>doctor_about_change</actor_dialog>
 		<actor_dialog>doctor_change</actor_dialog>
-		<actor_dialog>digger_repair</actor_dialog>
+		<actor_dialog>escape_trader_repair</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
 </specific_character>
@@ -4601,7 +4601,7 @@
 		<actor_dialog>adulin_dialog</actor_dialog>		
 		<actor_dialog>rukzak_dialog</actor_dialog>
 		<actor_dialog>doctor_change</actor_dialog>
-		<actor_dialog>digger_repair</actor_dialog>
+		<actor_dialog>escape_trader_repair</actor_dialog>
 		<actor_dialog>doctor_final_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
@@ -5851,7 +5851,7 @@
 
         <actor_dialog>monolit_trade_speak</actor_dialog>
         <actor_dialog>monolit_change</actor_dialog>
-		<actor_dialog>monolit_repair</actor_dialog>			
+		<actor_dialog>escape_trader_repair</actor_dialog>		
 		<start_dialog>hello_dialog</start_dialog>
 #include "gameplay\character_dialogs.xml"
     </specific_character>	
@@ -6240,7 +6240,7 @@
         <actor_dialog>mathon_baza_dialog</actor_dialog>
         <actor_dialog>mathon_lenin_dialog</actor_dialog> 
         <actor_dialog>mathon_lenin_est</actor_dialog>
-        <actor_dialog>mathon_repair</actor_dialog>
+        <actor_dialog>mil_trader_repair</actor_dialog>
 		<actor_dialog>mathon_change</actor_dialog>			
 		<start_dialog>hello_dialog</start_dialog>
 #include "gameplay\character_dialogs.xml"

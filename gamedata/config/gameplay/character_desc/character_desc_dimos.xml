@@ -993,11 +993,10 @@
       device_torch \n
 #include "gameplay\character_drugs.xml" \n
 #include "gameplay\character_food.xml"
-    </supplies>   
-
+    </supplies>
 <actor_dialog>mario_one_dialog</actor_dialog>	
 <actor_dialog>mario_start_dialog</actor_dialog>	
-<actor_dialog>monolit_repair</actor_dialog>	
+<actor_dialog>escape_trader_repair</actor_dialog>
 <actor_dialog>mario_key_dialog_est</actor_dialog>
 <actor_dialog>mario_key_dialog</actor_dialog>
 <start_dialog>hello_dialog</start_dialog>

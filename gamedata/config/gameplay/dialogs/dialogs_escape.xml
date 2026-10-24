@@ -1,3 +1,4 @@
+<!-- bstr: на удаление -->
 
 
     <dialog id="tutorial_wounded_give_medkit">
@@ -1883,4 +1884,3 @@
             </phrase>
         </phrase_list>
     </dialog>
-

@@ -5990,7 +5990,7 @@
 
         <actor_dialog>monolit_trade_speak</actor_dialog>
         <actor_dialog>monolit_change</actor_dialog>
-		<actor_dialog>monolit_repair</actor_dialog>			
+		<actor_dialog>escape_trader_repair</actor_dialog>		
 		<start_dialog>hello_dialog</start_dialog>
 #include "gameplay\character_dialogs.xml"
     </specific_character>	
