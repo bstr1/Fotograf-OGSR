@@ -1,0 +1,3 @@
+<game_information_portions>
+#include "gameplay\info\*.xml"
+</game_information_portions>
