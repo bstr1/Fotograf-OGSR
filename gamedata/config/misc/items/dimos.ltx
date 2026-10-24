@@ -1,20 +1,18 @@
 [mandra]:identity_immunities
-GroupControlSection    = spawn_group
-discovery_dependency   =
-$spawn                 = "food and drugs\mandra"
-$prefetch              = 8
 class                  = II_MEDKI
 cform                  = skeleton
+
 visual                 = new_models\mandra.ogf
 description            = "Корень Мандрагоры, которому многие приписывают прямо таки магические свойства. По виду напоминает фигуру человека."
 inv_name               = "Корень Мандрагоры"
 inv_name_short         = "Корень Мандрагоры"
-inv_weight             = 0.1    ;0.2
+inv_weight             = 0.1
 
 inv_grid_width         = 1
 inv_grid_height        = 2
 inv_grid_x             = 34
 inv_grid_y             = 12
+
 cost                   = 15000
 
 ; eatable item
@@ -33,13 +31,11 @@ animation_slot         = 4
 ;hud item
 hud                    = wpn_vodka_hud
 
+
 [metka_kostolom]:identity_immunities
-GroupControlSection    = spawn_group
-discovery_dependency   =
-$spawn                 = "food and drugs\antirad"
-$prefetch              = 32
 class                  = II_ANTIR
 cform                  = skeleton
+
 visual                 = equipments\item_antirad.ogf
 description            = enc_equipment_medi_antirad1
 

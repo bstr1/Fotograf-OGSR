@@ -1,11 +1,4 @@
----------------------------------------------------------------------------
-;Награда от Дзяо
----------------------------------------------------------------------------
 [medalka]:af_base
-GroupControlSection             = spawn_group
-$spawn                          = "artifacts\medalka"
-
-$prefetch                       = 64
 cform                           = skeleton
 class                           = ARTEFACT
 
@@ -60,19 +53,13 @@ chemical_burn_immunity          = 1.0
 explosion_immunity              = 1.0
 fire_wound_immunity             = 1.0
 
----------------------------------------------------------------------------
-;Дудочка Крысолова
----------------------------------------------------------------------------
+
 [dudka]:identity_immunities
-GroupControlSection             = spawn_group
-discovery_dependency            = 
-$spawn                          = "devices\quest_items\dudka"
-;$prefetch                      = 32
 class                           = II_ANTIR
 cform                           = skeleton
+
 visual                          = equipments\dudka.ogf
 radius                          = 1
-;script_binding                 = stalker.object_init
 quest_item                      = false
 can_trade                       = false
 
@@ -113,16 +100,11 @@ hud                             = dudka_hud
 break_particles                 = explosions\explosion_bottle
 break_sound                     = material\bottle\collide\bottle_break_1
 
----------------------------------------------------------------------------
-;Настойка Крысолова
----------------------------------------------------------------------------
+
 [nastoyka]:identity_immunities
-GroupControlSection             = spawn_group
-discovery_dependency            =
-$spawn                          = "devices\quest_items\nastoyka"
-;$prefetch                      = 32
 class                           = II_BOTTL
 cform                           = skeleton
+
 visual                          = equipments\nastoyka.ogf
 radius                          = 1
 quest_item                      = false
@@ -164,19 +146,13 @@ bone_name                       = bip01_r_hand
 position_offset                 = 0.0,0.0,0.0
 angle_offset                    = 1.570790,1.570790,3.92699
 
----------------------------------------------------------------------------
-;Дудочка Шубина
----------------------------------------------------------------------------
+
 [dudka_shu]:identity_immunities
-GroupControlSection             = spawn_group
-discovery_dependency            = 
-$spawn                          = "devices\quest_items\dudka_shu"
-;$prefetch                      = 32
 class                           = II_ANTIR
 cform                           = skeleton
+
 visual                          = equipments\dudka_shu.ogf
 radius                          = 1
-;script_binding                 = stalker.object_init
 quest_item                      = true
 can_trade                       = false
 
@@ -218,14 +194,8 @@ hud                             = dudka_hud
 break_particles                 = explosions\explosion_bottle
 break_sound                     = material\bottle\collide\bottle_break_1
 
----------------------------------------------------------------------------
-;Душелов
----------------------------------------------------------------------------
-[dushelov]:af_base
-GroupControlSection             = spawn_group
-$spawn                          = "artifacts\dushelov"
 
-$prefetch                       = 64
+[dushelov]:af_base
 cform                           = skeleton
 class                           = ARTEFACT
 
@@ -276,16 +246,12 @@ fire_wound_immunity             = 1.0
 [dushelov2]:dushelov
 jump_height                     = 5
 
----------------------------------------------------------------------------
+
 ;Красный горошек
----------------------------------------------------------------------------
 [evergy1_true]:identity_immunities
-GroupControlSection             = spawn_group
-discovery_dependency            =
-$spawn                          = "devices\quest_items\evergy1_true"
-;$prefetch                      = 32
 class                           = II_BOTTL
 cform                           = skeleton
+
 visual                          = equipments\red_goroshek.ogf
 radius                          = 1
 quest_item                      = false
@@ -327,19 +293,14 @@ bone_name                       = bip01_r_hand
 position_offset                 = 0.0,0.0,0.0
 angle_offset                    = 1.570790,1.570790,3.92699
 
----------------------------------------------------------------------------
+
 ;Книга мёртвых
----------------------------------------------------------------------------
 [evergy2_true]:identity_immunities
-GroupControlSection             = spawn_group
-discovery_dependency            = 
-$spawn                          = "devices\quest_items\evergy2_true"
-;$prefetch                      = 32
 class                           = II_ANTIR
 cform                           = skeleton
+
 visual                          = equipments\item_book_dc.ogf
 radius                          = 1
-;script_binding                 = stalker.object_init
 quest_item                      = false
 
 description                     = "Данное справочное издание (исправленное и переработанное) послужит незаменимым источником информации для всех новоумерших. Не предназначено для живых. Издательство "Yog-Sothoth Industry Press" регулярно заботится о Вас и о Вашей смерти."
@@ -367,16 +328,13 @@ animation_slot                  = 4
 
 ;hud item
 hud                             = wpn_vodka_hud
----------------------------------------------------------------------------
+
+
 ;Глазное яблоко 1
----------------------------------------------------------------------------
 [evergy3_true]:identity_immunities
-GroupControlSection             = spawn_group
-discovery_dependency            = 
-$spawn                          = "food and drugs\evergy3_true"
-;$prefetch                      = 32
 class                           = II_FOOD
 cform                           = skeleton
+
 visual                          = equipments\item_glas_m.ogf
 quest_item                      = false
 can_trade                       = false
@@ -415,16 +373,13 @@ auto_attach                     = false
 bone_name                       = bip01_r_hand
 position_offset                 = 0.0,0.0,0.0
 angle_offset                    = 1.570790,1.570790,3.92699
----------------------------------------------------------------------------
+
+
 ;Глазное яблоко 2
----------------------------------------------------------------------------
 [evergy4_true]:identity_immunities
-GroupControlSection             = spawn_group
-discovery_dependency            = 
-$spawn                          = "food and drugs\evergy4_true"
-;$prefetch                      = 32
 class                           = II_FOOD
 cform                           = skeleton
+
 visual                          = equipments\item_glas_m.ogf
 quest_item                      = false
 can_trade                       = false
@@ -464,19 +419,14 @@ bone_name                       = bip01_r_hand
 position_offset                 = 0.0,0.0,0.0
 angle_offset                    = 1.570790,1.570790,3.92699
 
----------------------------------------------------------------------------
+
 ;Газетная статья
----------------------------------------------------------------------------
 [statya]:identity_immunities
-GroupControlSection             = spawn_group
-discovery_dependency            = 
-$spawn                          = "devices\quest_items\statya"
-$prefetch                       = 32
 class                           = II_ANTIR
 cform                           = skeleton
+
 visual                          = amk\item_zapiska.ogf
 radius                          = 1
-;script_binding                 = stalker.object_init
 quest_item                      = true
 
 description                     = "Обрывок газетной статьи, найденной у мёртвого доктора Вульфа."
@@ -507,19 +457,14 @@ animation_slot                  = 4
 ;hud item
 hud                             = wpn_vodka_hud
 
----------------------------------------------------------------------------
+
 ;Записка Вульфа
----------------------------------------------------------------------------
 [zapis_w]:identity_immunities
-GroupControlSection             = spawn_group
-discovery_dependency            = 
-$spawn                          = "devices\quest_items\zapis_w"
-$prefetch                       = 32
 class                           = II_ATTCH
 cform                           = skeleton
+
 visual                          = amk\item_zapiska.ogf
 radius                          = 1
-;script_binding                 = stalker.object_init
 quest_item                      = true
 
 description                     = "Боже мой... Этот сумасшедший получеловек оказался прав! Это величайшее открытие! Если бы только Гертруда прислушалась к моим словам... Какой странный мир вокруг... Жаль только, что я не увижу, как всё изменится. Проклятые мертвецы!.. А ведь я был так близок... Я уверен, что он где-то неподалёку... Я почти нашёл..."
@@ -534,19 +479,14 @@ inv_grid_x                      = 11
 inv_grid_y                      = 40
 cost                            = 0
 
----------------------------------------------------------------------------
+
 ;Детектор "Живец-1"
----------------------------------------------------------------------------
 [pribor_zh]:identity_immunities
-GroupControlSection             = spawn_group
-discovery_dependency            = 
-$spawn                          = "devices\quest_items\pribor_zh"
-;$prefetch                      = 32
 class                           = II_ANTIR
 cform                           = skeleton
+
 visual                          = equipments\item_datchik5.ogf
 radius                          = 1
-;script_binding                 = stalker.object_init
 quest_item                      = false
 
 description                     = "Детектор "Живец-1" призван улучшить идентификацию и поиск живых организмов. Передовая разработка корпорации "Йог-Сотот" прекрасно позволяет выявлять людей для последующей поимки и переработки." 
@@ -584,14 +524,10 @@ auto_attach                     = false
 bone_name                       = bip01_r_hand
 position_offset                 = 0.0,0.0,0.0
 angle_offset                    = 1.570790,1.570790,3.92699
----------------------------------------------------------------------------
-;Прибор, найденный у Вульфа
----------------------------------------------------------------------------
-[pribor_wu]:af_base
-GroupControlSection             = spawn_group
-$spawn                          = "artifacts\pribor_wu"
 
-$prefetch                       = 64
+
+;Прибор, найденный у Вульфа
+[pribor_wu]:af_base
 cform                           = skeleton
 class                           = ARTEFACT
 
@@ -637,16 +573,13 @@ telepatic_immunity              = 1.0
 chemical_burn_immunity          = 1.0
 explosion_immunity              = 1.0
 fire_wound_immunity             = 1.0
----------------------------------------------------------------------------
+
+
 ;Походный набор молодого мертвеца
----------------------------------------------------------------------------
 [young_d]:identity_immunities
-GroupControlSection             = spawn_group
-discovery_dependency            =
-$spawn                          = "food and drugs\young_d"
-$prefetch                       = 8
 class                           = II_MEDKI
 cform                           = skeleton
+
 visual                          = equipments\item_aptechk0.ogf
 description                     = "Походный набор молодого мертвеца, который является новейшей разработкой медицинского отдела корпорации "Йог-Сотот", содержит комплексный набор лекарственных препаратов, полностью нормализующих процесс разложения кожного покрова и мышечных тканей."
 inv_name                        = "Походный набор молодого мертвеца"
@@ -676,13 +609,11 @@ animation_slot                  = 4
 ;hud item
 hud                             = wpn_vodka_hud
 
----------------------------------------------------------------------------
+
 [pribor_mg1]:identity_immunities
 cform                           = skeleton
-GroupControlSection             = spawn_group
-$spawn                          = "physics\object"
-$prefetch                       = 8
 class                           = O_PHYS_S
+
 visual                          = physics\decor\uprav_generat.ogf
 description                     = "Приборчик"
 inv_name                        = Приборчик
@@ -696,19 +627,14 @@ remove_time                     = 9998
 script_binding                  = bind_physic_object.init
 custom_data                     = scripts\collide_ignor.ltx
 
----------------------------------------------------------------------------
+
 ;Ложная статья для подмены
----------------------------------------------------------------------------
 [statya_false]:identity_immunities
-GroupControlSection             = spawn_group
-discovery_dependency            = 
-$spawn                          = "devices\quest_items\statya_false"
-$prefetch                       = 32
 class                           = II_ATTCH
 cform                           = skeleton
+
 visual                          = amk\item_zapiska.ogf
 radius                          = 1
-;script_binding                 = stalker.object_init
 quest_item                      = true
 
 description                     = "Газетная статья."
@@ -723,12 +649,14 @@ inv_grid_x                      = 25
 inv_grid_y                      = 40
 cost                            = 0
 
----------------------------------------------------------------------------
+
 ;рюкзак Макса
----------------------------------------------------------------------------
-[max_ruk]:matras
+[max_ruk]:identity_immunities
+class                           = II_ANTIR
+cform                           = skeleton
+
 visual                          = equipments\item_rukzak.ogf
-quest_item                      = true
+
 description                     = "Рюкзак Макса"
 inv_name                        = "Рюкзак Макса"
 inv_name_short                  = "Рюкзак"
@@ -739,3 +667,22 @@ inv_grid_width                  = 2
 inv_grid_height                 = 3
 inv_grid_x                      = 39
 inv_grid_y                      = 36
+
+cost                            = 5000
+
+quest_item                      = true
+
+; eatable item
+eat_health                      = 0
+eat_satiety                     = 0
+eat_power                       = 0
+eat_radiation                   = 0
+eat_alcohol                     = 0
+wounds_heal_perc                = 0
+eat_portions_num                = 1
+
+; food item
+animation_slot                  = 4
+
+;hud item
+hud                             = wpn_vodka_hud

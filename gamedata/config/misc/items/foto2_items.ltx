@@ -1,35 +1,30 @@
-[sound_object01]:identity_immunities 
- cform                             = skeleton 
- GroupControlSection               = spawn_group 
- $spawn                            = "physics\object" 
- $prefetch                         = 8 
- class                             = O_PHYS_S 
- visual                            = physics\equipment_cache\equipment_rucksack_01_case 
- description                       = "Громкоговоритель" 
- inv_name                          = Матюгальник 
- inv_name_short                    = Матюгальник 
- inv_weight                        = 10 
- inv_grid_width                    = 0 
- inv_grid_height                   = 0 
- inv_grid_x                        = 0 
- inv_grid_y                        = 0 
- remove_time                       = 9998 
- script_binding                    = bind_physic_object.init 
- custom_data                       = scripts\new_sound01.ltx
+[sound_object01]:identity_immunities
+class                             = O_PHYS_S 
+visual                            = physics\equipment_cache\equipment_rucksack_01_case 
+
+description                       = "Громкоговоритель" 
+inv_name                          = Матюгальник 
+inv_name_short                    = Матюгальник 
+inv_weight                        = 10 
+inv_grid_width                    = 0 
+inv_grid_height                   = 0 
+inv_grid_x                        = 0 
+inv_grid_y                        = 0 
+remove_time                       = 9998 
+script_binding                    = bind_physic_object.init 
+custom_data                       = scripts\new_sound01.ltx
 
 [sound_object_zov1]:sound_object01
- custom_data                       = scripts\sound_object_zov1.ltx
+custom_data                       = scripts\sound_object_zov1.ltx
 
 [sound_object_zov2]:sound_object01 
- custom_data                       = scripts\sound_object_zov2.ltx
+custom_data                       = scripts\sound_object_zov2.ltx
+
 
 [academ_flash]:identity_immunities
-GroupControlSection                = spawn_group
-discovery_dependency               = 
-$spawn                             = "devices\quest_items\dar_pass_flash"
-;$prefetch                         = 32
 class                              = II_ATTCH
 cform                              = skeleton
+
 visual                             = equipments\item_flash_2.ogf
 radius                             = 1
 quest_item                         = true
@@ -44,80 +39,61 @@ inv_grid_x                         = 3
 inv_grid_y                         = 19
 cost                               = 10000
 
-;-----------------------------Tayniki----------------------------
 
 [c_box]:identity_immunities
-GroupControlSection                = spawn_group
-discovery_dependency               = 
-$spawn                             = "devices\inventory box"
 class                              = O_INVBOX
 cform                              = skeleton
+
+radius                             = 1
 visual                             = equipments\item_rukzag.ogf
 script_binding                     = bind_physic_object.init
 
 [ruk1]:c_box
-radius                             = 1
 custom_data                        = scripts\c_box1.ltx
 
 [ruk2]:c_box
-radius                             = 1
 custom_data                        = scripts\c_box2.ltx
 
 [ruk3]:c_box
-radius                             = 1
 custom_data                        = scripts\c_box3.ltx
 
 [ruk4]:c_box
-radius                             = 1
 custom_data                        = scripts\c_box4.ltx
 
 [ruk5]:c_box
-radius                             = 1
 custom_data                        = scripts\c_box5.ltx
 
 [ruk6]:c_box
-radius                             = 1
 custom_data                        = scripts\c_box6.ltx
 
 [ruk7]:c_box
-radius                             = 1
 custom_data                        = scripts\c_box7.ltx
 
 [ruk8]:c_box
-radius                             = 1
 custom_data                        = scripts\c_box8.ltx
 
 [ruk9]:c_box
-radius                             = 1
 custom_data                        = scripts\c_box9.ltx
 
 [ruk10]:c_box
-radius                             = 1
 custom_data                        = scripts\c_box10.ltx
 
 [ruk11]:c_box
-radius                             = 1
 custom_data                        = scripts\c_box11.ltx
 
 [seaman_ruk]:c_box
-radius                             = 1
 custom_data                        = scripts\seaman_ruk.ltx
 
 [prom_zasada]:c_box
 visual                             = equipments\exoskelet_ne_skunk    
-radius                             = 1
 
-;--------------------------------------------------------------Docs------------------
 
 [letter_greta]:identity_immunities
-GroupControlSection                = spawn_group
-discovery_dependency               = 
-$spawn                             = "devices\quest_items\kruglov_flash"
-$prefetch                          = 32
 class                              = D_SIMDET
 cform                              = skeleton
+
 visual                             = amk\item_zapiska.ogf
-radius                             = 10    ;15
+radius                             = 10
 buzzer_radius                      = 1.5
 noise                              = zone_mosquito_bald       ;detectors\geiger_noise_loop 
 buzzer                             = zone_mosquito_bald       ;detectors\DA-2_alarm_loop
@@ -165,15 +141,12 @@ attach_position_offset             = 0.160570,-0.060214,0.020071
 attach_bone_name                   = bip01_l_hand
 auto_attach                        = false
 
+
 [device_meter]:identity_immunities
-GroupControlSection                = spawn_group
-discovery_dependency               = 
-$spawn                             = "devices\device_meter"
-$prefetch                          = 32
 class                              = D_SIMDET
 cform                              = skeleton
 visual                             = equipments\item_decoder.ogf
-radius                             = 10    ;15
+radius                             = 10
 buzzer_radius                      = 1.5
 noise                              = zone_mosquito_bald       ;detectors\geiger_noise_loop 
 buzzer                             = zone_mosquito_bald       ;detectors\DA-2_alarm_loop
@@ -212,7 +185,7 @@ inv_grid_width                     = 1
 inv_grid_height                    = 1
 inv_grid_x                         = 4
 inv_grid_y                         = 35
-cost                               = 1500    ;30
+cost                               = 1500
 ;belt                              = true;
 default_to_ruck                    = false
 
@@ -221,16 +194,13 @@ attach_position_offset             = 0.160570,-0.060214,0.020071
 attach_bone_name                   = bip01_l_hand
 auto_attach                        = false
 
+
 [zhurnal]:identity_immunities
-GroupControlSection                = spawn_group
-discovery_dependency               =
-$spawn                             = "devices\quest_items\book_zombi"
-$prefetch                          = 32
 class                              = II_ATTCH
 cform                              = skeleton
+
 visual                             = equipments\item_book_01.ogf
 radius                             = 1
-;script_binding                    = stalker.object_init
 quest_item                         = true
 
 description                        = "Журнал наблюдений за изменениями погоды после выбросов"
@@ -244,16 +214,13 @@ inv_grid_x                         = 13
 inv_grid_y                         = 23
 cost                               = 100
 
+
 [shema_radio]:identity_immunities
-GroupControlSection                = spawn_group
-discovery_dependency               = 
-$spawn                             = "devices\quest_items\part1"
-;$prefetch                         = 32
 class                              = II_ATTCH
 cform                              = skeleton
+
 visual                             = equipments\item_document_2.ogf
 radius                             = 1
-;script_binding                    = stalker.object_init
 quest_item                         = false
 
 description                        = "Схема радиоусилителя электрическая принципиальная"
@@ -268,16 +235,13 @@ inv_grid_x                         = 6
 inv_grid_y                         = 18
 cost                               = 0
 
+
 [usilok]:identity_immunities
-GroupControlSection                = spawn_group
-discovery_dependency               = 
-$spawn                             = "devices\quest_items\resiver"
-;$prefetch                         = 32
 class                              = II_ATTCH
 cform                              = skeleton
+
 visual                             = equipments\item_transiver
 radius                             = 1
-;script_binding                    = stalker.object_init
 quest_item                         = true
 
 description                        = usilradio_desc
@@ -292,16 +256,13 @@ inv_grid_x                         = 16
 inv_grid_y                         = 33
 cost                               = 5000
 
+
 [c_doc]:identity_immunities
-GroupControlSection                = spawn_group
-discovery_dependency               = 
-$spawn                             = "devices\quest_items\doc2"
-;$prefetch                         = 32
 class                              = II_ATTCH
 cform                              = skeleton
+
 visual                             = amk\item_zapiska.ogf
 radius                             = 1
-;script_binding                    = stalker.object_init
 quest_item                         = true
 description                        = doc2_desc
 inv_name                           = doc2_name
@@ -368,15 +329,11 @@ description                        = c_doc11_desc
 inv_name                           = Памятка №11
 inv_name_short                     = Памятка №11
 
-;-----------------------------------------------------------------------------------------
 
 [detector_advances_relief]:identity_immunities
-GroupControlSection                = spawn_group
-discovery_dependency               =
-$spawn                             = "devices\detector_advanced"
-$prefetch                          = 32
 class                              = D_SIMDET
 cform                              = skeleton
+
 visual                             = equipments\item_datchik2.ogf
 description                        = enc_equipment_devic_detect2
 radius                             = 15    ;15
@@ -432,13 +389,11 @@ zone_min_freq_5                    = 0.1
 zone_max_freq_5                    = 30
 zone_map_location_5                = anomaly_elec_location
 
+
 [detector_elite_relief]:identity_immunities
-GroupControlSection                = spawn_group
-discovery_dependency               =
-$spawn                             = "devices\detector_elite"
-$prefetch                          = 32
 class                              = D_SIMDET
 cform                              = skeleton
+
 visual                             = equipments\item_datchik3.ogf
 description                        = enc_equipment_devic_detect3
 radius                             = 15    ;15
@@ -504,13 +459,11 @@ attach_position_offset             = 0.160570,-0.060214,0.020071
 attach_bone_name                   = bip01_l_hand
 auto_attach                        = false
 
+
 [detector_elite_sak_relief]:identity_immunities
-GroupControlSection                = spawn_group
-discovery_dependency               =
-$spawn                             = "devices\detector_elite_sak"
-$prefetch                          = 32
 class                              = D_SIMDET
 cform                              = skeleton
+
 visual                             = equipments\item_datchik3.ogf
 description                        = enc_equipment_devic_detect_sak
 radius                             = 15    ;15
@@ -586,15 +539,11 @@ attach_position_offset             = 0.160570,-0.060214,0.020071
 attach_bone_name                   = bip01_l_hand
 auto_attach                        = false
 
-;----------------
 
 [detector_advances_tobelt]:identity_immunities
-GroupControlSection                = spawn_group
-discovery_dependency               =
-$spawn                             = "devices\detector_advanced"
-$prefetch                          = 32
 class                              = D_SIMDET
 cform                              = skeleton
+
 visual                             = equipments\item_datchik2.ogf
 description                        = enc_equipment_devic_detect2
 radius                             = 10    ;15
@@ -646,16 +595,10 @@ zone_min_freq_4                    = 0.5
 zone_max_freq_4                    = 30
 
 
-
-
-
 [detector_elite_tobelt]:identity_immunities
-GroupControlSection                = spawn_group
-discovery_dependency               =
-$spawn                             = "devices\detector_elite"
-$prefetch                          = 32
 class                              = D_SIMDET
 cform                              = skeleton
+
 visual                             = equipments\item_datchik3.ogf
 description                        = enc_equipment_devic_detect3
 radius                             = 10    ;15
@@ -719,12 +662,9 @@ auto_attach                        = false
 
 
 [detector_elite_sak_tobelt]:identity_immunities
-GroupControlSection                = spawn_group
-discovery_dependency               =
-$spawn                             = "devices\detector_elite_sak"
-$prefetch                          = 32
 class                              = D_SIMDET
 cform                              = skeleton
+
 visual                             = equipments\item_datchik3.ogf
 description                        = enc_equipment_devic_detect_sak
 radius                             = 10    ;15
@@ -800,15 +740,11 @@ attach_position_offset             = 0.160570,-0.060214,0.020071
 attach_bone_name                   = bip01_l_hand
 auto_attach                        = false
 
-;----------------------
 
 [detector_advances_rukzak]:identity_immunities
-GroupControlSection                = spawn_group
-discovery_dependency               =
-$spawn                             = "devices\detector_advanced"
-$prefetch                          = 32
 class                              = D_SIMDET
 cform                              = skeleton
+
 visual                             = equipments\item_datchik2.ogf
 description                        = enc_equipment_devic_detect2
 radius                             = 15    ;15
@@ -864,13 +800,11 @@ zone_min_freq_5                    = 0.1
 zone_max_freq_5                    = 30
 zone_map_location_5                = anomaly_elec_location
 
+
 [detector_elite_rukzak]:identity_immunities
-GroupControlSection                = spawn_group
-discovery_dependency               =
-$spawn                             = "devices\detector_elite"
-$prefetch                          = 32
 class                              = D_SIMDET
 cform                              = skeleton
+
 visual                             = equipments\item_datchik3.ogf
 description                        = enc_equipment_devic_detect3
 radius                             = 15    ;15
@@ -936,13 +870,11 @@ attach_position_offset             = 0.160570,-0.060214,0.020071
 attach_bone_name                   = bip01_l_hand
 auto_attach                        = false
 
+
 [detector_elite_sak_rukzak]:identity_immunities
-GroupControlSection                = spawn_group
-discovery_dependency               =
-$spawn                             = "devices\detector_elite_sak"
-$prefetch                          = 32
 class                              = D_SIMDET
 cform                              = skeleton
+
 visual                             = equipments\item_datchik3.ogf
 description                        = enc_equipment_devic_detect_sak
 radius                             = 15    ;15
@@ -1018,13 +950,8 @@ attach_position_offset             = 0.160570,-0.060214,0.020071
 attach_bone_name                   = bip01_l_hand
 auto_attach                        = false
 
-;----------------------------------------------------------------
 
 [korona]:af_base
-GroupControlSection                = spawn_group
-$spawn                             = "artifacts\korona"
-
-$prefetch                          = 64
 cform                              = skeleton
 class                              = ARTEFACT
 
@@ -1078,18 +1005,13 @@ fire_wound_immunity                = 1.0
 
 
 [load_detector]:identity_immunities
-GroupControlSection                = spawn_group
-discovery_dependency               = 
-$spawn                             = "weapons\knife"
-$npc                               = off
-$prefetch                          = 8
-scheduled                          = off
+class                              = WP_KNIFE
 cform                              = skeleton
-description                        = "Прибор, который дистанционно активирует научную аппаратуру на вертолете и автоматически записывает имеющиеся там данные на встроенную флэш-карту."
 
+scheduled                          = off
 ef_weapon_type                     = 1
 
-class                              = WP_KNIFE
+description                        = "Прибор, который дистанционно активирует научную аппаратуру на вертолете и автоматически записывает имеющиеся там данные на встроенную флэш-карту."
 
 visual                             = equipments\detector_arts_1.ogf
 inv_name                           = Автозагрузчик
@@ -1203,13 +1125,11 @@ anim_shoot1_end                    = idle
 anim_shoot2_end                    = idle
 anim_idle_sprint                   = idle
 
+
 [mutant_hand_kontroler_m]:identity_immunities
-GroupControlSection                = spawn_group
-discovery_dependency               = 
-$spawn                             = "devices\monster_items\hand_kontroler"
-;$prefetch                         = 32
 class                              = II_ATTCH
 cform                              = skeleton
+
 visual                             = monster_items\hand_kontroler.ogf
 radius                             = 1
 
@@ -1224,16 +1144,15 @@ inv_grid_width                     = 1
 inv_grid_height                    = 1
 inv_grid_x                         = 21
 inv_grid_y                         = 6
+
 belt                               = true
 cost                               = 1000
 
+
 [kont_skin]:identity_immunities
-GroupControlSection                = spawn_group
-discovery_dependency               = 
-$spawn                             = "outfit\kont_skin_outfit"
-;$prefetch                         = 32
 class                              = E_STLK
 cform                              = skeleton
+
 visual                             = new\contruch_gg
 actor_visual                       = new\contruch.ogf
 
@@ -1246,13 +1165,15 @@ inv_name                           = "Шкура контролёра"
 inv_name_short                     = "Шкура контролёра"
 description                        = "Шкура контролёра, снятая с его трупа."
 inv_weight                         = 3.5
+
 inv_grid_width                     = 2
 inv_grid_height                    = 2
 inv_grid_x                         = 39
 inv_grid_y                         = 8
+
 full_icon_name                     = npc_icon_kont_skin_outfit
 
-cost                               = 35 000
+cost                               = 35000
 slot                               = 6
 full_scale_icon                    = 0,6
 quest_item                         = false

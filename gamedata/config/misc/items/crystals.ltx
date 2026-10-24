@@ -2400,29 +2400,3 @@ chemical_burn_immunity   = 1.0
 explosion_immunity       = 0.9
 fire_wound_immunity      = 0.9
 
-------------------------------------------------------
-
-[psy_detector]:detector_simple
-class                    = D_SIMDET
-
-visual                   = equipments\item_datchik3.ogf
-description              = "Детектор, распознающий особые аномальные пси-зоны. Будучи размещённым на поясе и при наличии в инвентаре или на поясе одного или нескольких Талисманов-активаторов, он позволяет распознать особые пси-зоны и 'включить' их аномальную активность, для проведения в них реакции синтеза Талисманов и частей мутантов, с целью получения защитных Оберегов."
-radius                   = 10
-buzzer_radius            = 1.5
-noise                    = zone_mosquito_bald       ;detectors\geiger_noise_loop
-buzzer                   = zone_mosquito_bald       ;detectors\DA-2_alarm_loop
-;slot                    = 3
-ef_detector_type         = 1
-
-quest_item               = false
-
-inv_name                 = Пси-Детектор
-inv_name_short           = Пси-Детектор
-inv_weight               = 0.5
-
-inv_grid_width           = 1
-inv_grid_height          = 1
-inv_grid_x               = 11
-inv_grid_y               = 24
-cost                     = 25000
-belt                     = true

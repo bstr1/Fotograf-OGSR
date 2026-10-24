@@ -395,6 +395,90 @@ attach_position_offset          = 0.160570,-0.060214,0.020071
 attach_bone_name                = bip01_l_hand
 auto_attach                     = false
 
+[psy_detector]:detector_simple
+class                           = D_SIMDET
+
+visual                          = equipments\item_datchik3.ogf
+description                     = "Детектор, распознающий особые аномальные пси-зоны. Будучи размещённым на поясе и при наличии в инвентаре или на поясе одного или нескольких Талисманов-активаторов, он позволяет распознать особые пси-зоны и 'включить' их аномальную активность, для проведения в них реакции синтеза Талисманов и частей мутантов, с целью получения защитных Оберегов."
+radius                          = 10
+buzzer_radius                   = 1.5
+noise                           = zone_mosquito_bald       ;detectors\geiger_noise_loop
+buzzer                          = zone_mosquito_bald       ;detectors\DA-2_alarm_loop
+;slot                           = 3
+ef_detector_type                = 1
+
+quest_item                      = false
+
+inv_name                        = Пси-Детектор
+inv_name_short                  = Пси-Детектор
+inv_weight                      = 0.5
+
+inv_grid_width                  = 1
+inv_grid_height                 = 1
+inv_grid_x                      = 11
+inv_grid_y                      = 24
+cost                            = 25000
+belt                            = true
+
+
+
+[filin_pribor]:detector_simple
+GroupControlSection             = spawn_group
+discovery_dependency            =
+$spawn                          = "devices\quest_items\filin_pribor"
+$prefetch                       = 32
+class                           = D_SIMDET
+cform                           = skeleton
+visual                          = equipments\item_datchik3.ogf
+description                     = "Передатчик системы 'HELPER'. Работает в комплексе с приёмником."
+radius                          = 10    ;15
+buzzer_radius                   = 1.5
+noise                           = zone_mosquito_bald       ;detectors\geiger_noise_loop
+buzzer                          = zone_mosquito_bald       ;detectors\DA-2_alarm_loop
+;slot                           = 3
+ef_detector_type                = 1
+
+quest_item                      = false
+
+inv_name                        = Передатчик
+inv_name_short                  = Передатчик
+inv_weight                      = 0.25
+
+inv_grid_width                  = 1
+inv_grid_height                 = 1
+inv_grid_x                      = 27
+inv_grid_y                      = 10
+cost                            = 5000
+
+
+[coder_x18]:detector_simple
+GroupControlSection             = spawn_group
+discovery_dependency            =
+$spawn                          = "devices\quest_items\coder_x18"
+$prefetch                       = 32
+class                           = D_SIMDET
+cform                           = skeleton
+visual                          = equipments\item_datchik3.ogf
+description                     = "Прибор-кодировщик для электронных кодовых замков."
+radius                          = 10    ;15
+buzzer_radius                   = 1.5
+noise                           = zone_mosquito_bald       ;detectors\geiger_noise_loop
+buzzer                          = zone_mosquito_bald       ;detectors\DA-2_alarm_loop
+;slot                           = 3
+ef_detector_type                = 1
+
+quest_item                      = false
+
+inv_name                        = Кодировщик
+inv_name_short                  = Кодировщик
+inv_weight                      = 0.32
+
+inv_grid_width                  = 1
+inv_grid_height                 = 1
+inv_grid_x                      = 29
+inv_grid_y                      = 11
+cost                            = 5000
+
 
 [bio]:identity_immunities
 hud                             = bio_hud
