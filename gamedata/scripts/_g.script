@@ -1626,3 +1626,13 @@ function get_string_wq(section, param, def_val, ini_file)
 		return def_val
 	end
 end
+
+-- установка невидимости сталкера со стороны аномалий
+function set_anomaly_invisibility(npc, vis)
+	npc:get_custom_monster().visible_for_zones = not vis
+end
+
+-- получение статуса невидимости сталкера со стороны аномалий
+function get_anomaly_invisibility(npc)
+	return not npc:get_custom_monster().visible_for_zones
+end

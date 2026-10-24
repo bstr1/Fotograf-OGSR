@@ -199,12 +199,12 @@ function add_fresh_meat(obj)
 		if game_graph():valid_vertex_id(obj.m_game_vertex_id) then
 			local map=alife():level_name(game_graph():vertex(obj.m_game_vertex_id):level_id())
 			if not off_npcs[map] then off_npcs[map]={monsters={},stalkers={},weapons={},artefacts={},inv_boxes={}} end
-			if IsMonster(obj) and obj.alive and obj:alive() and obj.health and obj:health()>0 and obj.m_story_id~=nil and obj.m_story_id==4294967296 then
+			if IsMonster(obj) and obj.alive and obj:alive() and obj.health and obj:health()>0 and obj.m_story_id~=nil and obj.m_story_id==4294967295 then
 				local flags = get_flags(obj.id)
 				if flags == 0 or flags == 2 then --Уберем тех, у кого on_hit есть.
 					table.insert(off_npcs[map].monsters, {id = obj.id, name = obj:name()})
 				end
-			elseif IsStalker(obj) and obj.alive and obj:alive() and obj.health and obj:health()>0 and obj.m_story_id~=nil and obj.m_story_id==4294967296 then
+			elseif IsStalker(obj) and obj.alive and obj:alive() and obj.health and obj:health()>0 and obj.m_story_id~=nil and obj.m_story_id==4294967295 then
 				local flags = get_flags(obj.id)
 				if flags == 0 or flags == 2 then --Уберем тех, у кого on_hit есть.
 					if obj:community()~="zombied" then
@@ -214,7 +214,7 @@ function add_fresh_meat(obj)
 					end
 				end
 			elseif isWeapon(obj) then
-				if obj.m_story_id~=nil and obj.m_story_id==4294967296 then
+				if obj.m_story_id~=nil and obj.m_story_id==4294967295 then
 					if (obj.parent_id ~= nil) then
 						local p_obj = alife():object(obj.parent_id)
 						if (p_obj) then
@@ -261,10 +261,10 @@ function add_fresh_meat(obj)
 				table.insert(off_npcs[map].inv_boxes, {id = obj.id, name = obj:name()})
 			end
 			
-			if (obj.parent_id ~= nil and obj.m_story_id~=nil and obj.m_story_id==4294967296 and IsMonster(obj)==false and IsStalker(obj)==false) then
+			if (obj.parent_id ~= nil and obj.m_story_id~=nil and obj.m_story_id==4294967295 and IsMonster(obj)==false and IsStalker(obj)==false) then
 				local zz = alife():object(obj.parent_id)
 				if zz then
-					if IsStalker(zz) and zz.m_story_id~=nil and zz.m_story_id==4294967296 then
+					if IsStalker(zz) and zz.m_story_id~=nil and zz.m_story_id==4294967295 then
 						if not items[obj.parent_id] then items[obj.parent_id] = {} end
 						table.insert(items[obj.parent_id], {id = obj.id, name=obj:name()})
 						gps_habar.insert_item(obj.parent_id, obj) -- Idler++-- корректируем хабар в помеченных тайниках
@@ -585,7 +585,7 @@ function collect_info(victim,map)
 				if off_npcs[map].artefacts[a] then
 					local artefact = sim:object(off_npcs[map].artefacts[a].id)
 					if (artefact and artefact.can_switch_online and artefact:can_switch_online() and artefact:name() == off_npcs[map].artefacts[a].name and victim.position:distance_to(artefact.position)<look_radius and sobj_is_far(artefact, to_actor)) then
-						if artefact.parent_id==nil or artefact.parent_id==65535 or (sim:object(artefact.parent_id) and (sim:object(artefact.parent_id):clsid() == clsid.inventory_box or (sim:object(artefact.parent_id):clsid()>172 and sim:object(artefact.parent_id):clsid()<180))) then
+						if artefact.parent_id==nil or artefact.parent_id==65535 or (sim:object(artefact.parent_id) and (sim:object(artefact.parent_id):clsid() == clsid.inventory_box or amk_anoms.is_zone_clsid(sim:object(artefact.parent_id):clsid()))) then
 							table.insert(vdata.artefacts, {id = artefact.id, name = artefact:name()})
 						end
 					end
@@ -1496,7 +1496,7 @@ function process_trade(npc)
     local sim = alife()
    
 	-- Имеет смысл проверять на наличие trade в секции [logic]...
-	if npc and IsStalker(npc) and npc:alive() and npc.m_story_id~=nil and npc.m_story_id == 4294967296 and items[npc.id] and table.getn(items[npc.id])>0 then
+	if npc and IsStalker(npc) and npc:alive() and npc.m_story_id~=nil and npc.m_story_id == 4294967295 and items[npc.id] and table.getn(items[npc.id])>0 then
 		local m_comm = npc:community()
 		local b_stalker = false		
 		if (m_comm == "actor" or m_comm == "actor_dolg" or m_comm == "actor_freedom" or m_comm == "stalker" or m_comm == "dolg" or m_comm == "freedom") then

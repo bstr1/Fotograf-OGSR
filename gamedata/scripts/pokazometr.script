@@ -396,7 +396,7 @@ function nuh_na_vse()	-- метки на ВСЕ объекты на локаци
 						add_spot( i, "gps_stalker", obj:name() )
 						if obj.position:distance_to_xz( pos ) < 5 then
 							local spawn_id = -1
-							if obj.m_story_id and ( obj.m_story_id ~= 4294967296 ) then
+							if obj.m_story_id and ( obj.m_story_id ~= 4294967295 ) then
 								spawn_id = sim:spawn_id( obj.m_story_id )
 							end
 							log( string.format( "%s (%s, %s), clsid: %d,  spawn: %d (%.02f %.02f %.02f, %d, %d )",
@@ -704,7 +704,7 @@ function cleaner()
                         local name_en = se_obj:name()
                         local section = se_obj:section_name()
 
-                        local is_quest = not (s_id == -1 or s_id == 4294967295 or s_id == 4294967296 or s_id == 65535)
+                        local is_quest = not (s_id == -1 or s_id == 4294967295 or s_id == 4294967295 or s_id == 65535)
                         local is_exclusive = false
                         if t_exclusive then
                             for _, vv in ipairs(t_exclusive) do

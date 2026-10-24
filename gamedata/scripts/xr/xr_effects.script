@@ -2115,15 +2115,17 @@ function change_leader(actor, npc)
 end
 
 function on_tutor_gameover_stop()
-  local c = get_console()
---  c:execute("disconnect")
-	if bind_stalker.controllerSoundPresentOnDeath then
-		c:execute("disconnect")
-		c:execute("cfg_load user.ltx")
-		bind_stalker.controllerSoundPresentOnDeath = false
-	end
-  printf("main_menu on console command is executed")
-  c:execute("main_menu on")
+	cmd("main_menu on")
+-- 4etkiu
+  -- local c = get_console()
+-- --  c:execute("disconnect")
+	-- if bind_stalker.controllerSoundPresentOnDeath then
+		-- c:execute("disconnect")
+		-- c:execute("cfg_load user.ltx")
+		-- bind_stalker.controllerSoundPresentOnDeath = false
+	-- end
+  -- printf("main_menu on console command is executed")
+  -- c:execute("main_menu on")
 end
 
 -- added by Ab@dDon $DreamMod --

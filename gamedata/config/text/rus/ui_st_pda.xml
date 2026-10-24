@@ -207,4 +207,7 @@
 	<string id="st_detail_list_for_foo">
 		<text>Статистика</text>
 	</string>
+	<string id="ui_st_time_remains">
+		<text>Осталось</text>
+	</string>
 </string_table>

@@ -797,9 +797,13 @@ function Blowout_pp(phase)
 		dsh_anomaly_detector.pre_blow_off()
 		amk_anoms.pre_blow_off()
 		if bt<1 then
-			level.set_weather("pre_blow",true)
-			level.set_weather_fx("amk_surge_day")
-		end 
+			local h = level.get_time_hours()
+			if h >= 7 and h < 21 then
+				level.set_weather_fx("fx_blowout_day")
+			else
+				level.set_weather_fx("fx_blowout_night")
+			end
+		end
 		amk.g_start_timer("blowout",0,0,3,1)
 	elseif phase==1 then
 		local snd_obj = xr_sound.get_safe_sound_object([[ambient\earthquake]])

@@ -153,26 +153,29 @@ end
     -- boryan67.use_object(obj)
 -- end
 ----------------------------------------------------------------------------------------------------------------------
-controllerSoundPresentOnDeath = false
+
+-- 4etkiu
+-- controllerSoundPresentOnDeath = false
 function actor_binder:death_callback(victim, who)
-    controllerSoundPresentOnDeath = false
-    local actorPosition = self.object:position()
-    -- local kontrikSoundAuraDistance = getIniValueFloat("m_controller_e", "PsyAura_Fake_MaxAddDist", 90)
-    local kontrikSoundAuraDistance = utils.cfg_get_number(system_ini(), "m_controller_e", "PsyAura_Fake_MaxAddDist",
-        nil, false, 90)
-    kontrikSoundAuraDistance = kontrikSoundAuraDistance * kontrikSoundAuraDistance
-    for k, v in pairs(db.creatures) do
-        local obj = level.object_by_id(k)
-        if obj and obj:clsid() == clsid.controller_s and obj:position():distance_to_sqr(actorPosition) <=
-            kontrikSoundAuraDistance then
-            controllerSoundPresentOnDeath = true
-            get_console():execute("cfg_save user.ltx")
-            get_console():execute("unbind quick_load")
-            get_console():execute("unbind_sec quick_load")
-            break
-        end
-    end
+    -- controllerSoundPresentOnDeath = false
+    -- local actorPosition = self.object:position()
+    -- -- local kontrikSoundAuraDistance = getIniValueFloat("m_controller_e", "PsyAura_Fake_MaxAddDist", 90)
+    -- local kontrikSoundAuraDistance = utils.cfg_get_number(system_ini(), "m_controller_e", "PsyAura_Fake_MaxAddDist",
+        -- nil, false, 90)
+    -- kontrikSoundAuraDistance = kontrikSoundAuraDistance * kontrikSoundAuraDistance
+    -- for k, v in pairs(db.creatures) do
+        -- local obj = level.object_by_id(k)
+        -- if obj and obj:clsid() == clsid.controller_s and obj:position():distance_to_sqr(actorPosition) <=
+            -- kontrikSoundAuraDistance then
+            -- controllerSoundPresentOnDeath = true
+            -- get_console():execute("cfg_save user.ltx")
+            -- get_console():execute("unbind quick_load")
+            -- get_console():execute("unbind_sec quick_load")
+            -- break
+        -- end
+    -- end
 end
+
 -- end of addition
 function actor_binder:take_item_from_box(box, item)
     local story_id = box:story_id()

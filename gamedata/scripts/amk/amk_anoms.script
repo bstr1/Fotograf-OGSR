@@ -9,6 +9,20 @@ local anom_suffixes={
 
 local exclusive_chance = 5
 
+local zone_clsids = {
+	[clsid_table.zone_bfuzz_s]=true,
+	[clsid_table.zone_electra_s]=true,
+	[clsid_table.zone_galant_s]=true,
+	[clsid_table.zone_ice_s]=true,
+	[clsid_table.zone_mbald_s]=true,
+	[clsid_table.zone_mincer_s]=true,
+	[clsid_table.zone_zharka_s]=true
+}
+
+function is_zone_clsid(cl)
+	return zone_clsids[cl]==true
+end
+
 local level_vertexes={
 	dyshlo = 581834,
 	l03u_agr_underground = 0, 	
@@ -134,7 +148,7 @@ function collect_info()
 	for i=0,65534 do
 		local sobj = alife():object(i)
 		if sobj then
-			if sobj:clsid()>172 and sobj:clsid()<180 then
+			if is_zone_clsid(sobj:clsid()) then
 				local map = alife():level_name(game_graph():vertex(sobj.m_game_vertex_id):level_id())
 				if not check_exclusion(sobj,map) then
 					local status=get_anomaly_status(sobj)
@@ -382,7 +396,7 @@ function turn_off_all()
 	for i=0,65534 do
 		local sobj = alife():object(i)
 		if sobj then
-			if sobj:clsid()>172 and sobj:clsid()<180 then
+			if is_zone_clsid(sobj:clsid()) then
 				local map = alife():level_name(game_graph():vertex(sobj.m_game_vertex_id):level_id())
 				if not check_exclusion(sobj,map) then
 					local status=get_anomaly_status(sobj)
@@ -447,7 +461,7 @@ function after_blow_on()
 	for i=0,65534 do
 		local sobj = alife():object(i)
 		if sobj then
-			if sobj:clsid()>172 and sobj:clsid()<180 then
+			if is_zone_clsid(sobj:clsid()) then
 				local map = alife():level_name(game_graph():vertex(sobj.m_game_vertex_id):level_id())
 				if not check_exclusion(sobj,map) then
 					local status=get_anomaly_status(sobj)
