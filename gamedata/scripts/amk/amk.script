@@ -516,6 +516,9 @@ local a
   if select_string=="af_transform" then
     mod_call("af_transform_end",unpack_array_from_string(params_string))
   end
+  if select_string=="af_transform_universal" then
+    mod_call("af_transform_universal_end",unpack_array_from_string(params_string))
+  end
   if select_string=="amk_freeplay" then
     if amk.load_variable("freeplay",0)==1 and level.name()=="l12_stancia_2" then
       xr_effects.game_credits()
@@ -1085,7 +1088,6 @@ end
 function on_item_drop(obj)
 gps_habar.on_item_drop(obj) --idler++--
 
-  mod_call("check_for_af_drop",obj)
   mod_call("check_sleep_item",obj)
   mod_call("check_beacon_drop",obj)
   --!!! alcohol modification by Terrapack

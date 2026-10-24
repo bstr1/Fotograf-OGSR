@@ -5,6 +5,8 @@ copyright © AMK TEAM 2007-2008
 
 
 --]]
+local string_find = string.find
+local string_sub = string.sub
 
 local nrg,med,cnt,gv,lv,w
 in_hide=false
@@ -439,64 +441,6 @@ end
 --'*******************************************************************************
 local cur_level=nil
 local havegoodart=false
-
-local afs={
---симбион
-"af_medusa",
-"af_blood",
-"af_rusty_thorn",
-
---жарка
-"af_soul",
-"af_spirit_1",
-"af_spirit_2",
-"af_cry_1",
-"af_rusty_sea-urchin", 
-"af_kol_3",
-"af_armor_3",
-
---электра
-"af_spirit_3",
-"af_drops", -- +симбион
-"af_dummy_glassbeads",
-"af_dummy_dummy",
-"af_pudd_1",
-"af_pudd_2",
-"af_dik_1",
-
---холодец
-"af_cry_2",
-"af_babka_1",
-"af_pudd_3",
-"af_dik_2",
-"af_kol_2",
-"af_armor_2",
-
---карусель
-"af_babka_2",
-"af_kol_1",
-"af_armor_1",
-
---трамплин
-"af_dik_3",
-"af_fuzz_kolobok",
-"af_dummy_pellicle"
-}
-
-function check_for_af_drop(obj)
-	local section=obj:section()
-	for a=1,table.getn(afs),1 do
-		if afs[a]==section then
-			local id,pos,radius,dist=amk_anoms.get_nearest_anomaly(obj)
-      --amk.mylog("narad "..nearest_anomaly.radius.." nadist "..nearest_anomaly.dist)
-			if id and radius-dist>-1 then
-				local anom_sect=level.object_by_id(id):section()
-				check_af_transform(obj,id,anom_sect)
-			end
-			return
-		end
-	end
-end
 
 function check_af_transform(af,anom_id,anom_sect)
 	local af_sect=af:section()
@@ -2286,5 +2230,1370 @@ function firebat_ammo()
 				end
 			end
 			, db.actor)
+	end
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--'*******************************************************************************
+--'   **   **   **   **   **    **   **   **      AF_TRANSFORM         **   **   **   **   **    **   **   **
+--'*******************************************************************************
+local cur_level=nil
+local havegoodart=false
+
+-- список компонентов
+-- желательно добавлять в алфавитном порядке
+local afs={
+["af_ameba_mica"] = true,
+["af_ameba_slime"] = true,
+["af_ameba_slug"] = true,
+["af_armor_1"] = true,
+["af_armor_2"] = true,
+["af_armor_3"] = true,
+["af_babka_1"] = true,
+["af_babka_2"] = true,
+["af_babka_3"] = true,
+["af_blood"] = true,
+["af_buliz"] = true,
+["af_cristall"] = true,
+["af_cristall_flower"] = true,
+["af_cry_1"] = true,
+["af_cry_2"] = true,
+["af_dik_1"] = true,
+["af_dik_2"] = true,
+["af_dik_3"] = true,
+["af_drops"] = true,
+["af_dummy_battery"] = true,
+["af_dummy_battery_red"] = true,
+["af_dummy_dummy"] = true,
+["af_dummy_glassbeads"] = true,
+["af_dummy_pellicle"] = true,
+["af_dummy_pellicle_red"] = true,
+["af_dummy_spring"] = true,
+["af_dummy_spring_red"] = true,
+["af_electra_flash"] = true,
+["af_electra_moonlight"] = true,
+["af_electra_sparkler"] = true,
+["af_fireball"] = true,
+["af_fuzz_kolobok"] = true,
+["af_gold_fish"] = true,
+["af_gravi"] = true,
+["af_kamen_udachy"] = true,
+["af_kol_1"] = true,
+["af_kol_2"] = true,
+["af_kol_3"] = true,
+["af_life_heart"] = true,
+["af_medusa"] = true,
+["af_mincer_meat"] = true,
+["af_night_star"] = true,
+["af_part_monolit2"] = true,
+["af_power"] = true,
+["af_power_1"] = true,
+["af_power_2"] = true,
+["af_pudd_1"] = true,
+["af_pudd_2"] = true,
+["af_pudd_3"] = true,
+["af_rusty_kristall"] = true,
+["af_rusty_sea-urchin"] = true,
+["af_rusty_thorn"] = true,
+["af_simbion"] = true,
+["af_soul"] = true,
+["af_spirit_1"] = true,
+["af_spirit_2"] = true,
+["af_spirit_3"] = true,
+["af_vyvert"] = true,
+["af_black_angel"]=true,
+["af_arhara_globus"]=true,
+["bandage"] = true,
+["bezoar"] = true,
+["bread"] = true,
+["conserva"] = true,
+["energy_drink"] = true,
+["izomorf_kompas"] = true,
+["kolba_pustay"] = true,
+["kolba_siniy_poln"] = true,
+["kolba_orand_poln"] = true,
+["kolba_krasn_poln"]=true,
+["kolbasa"] = true,
+["mutant_boar_leg"] = true,
+["mutant_burer_red_hand"] = true,
+["mutant_chimera_kogot"] = true,
+["mutant_deathclaw_antler"] = true,
+["mutant_dog_tail"] = true,
+["mutant_face_tushkano"] = true,
+["mutant_flesh_eye"] = true,
+["mutant_fracture_hand"] = true,
+["mutant_krovosos_jaw"] = true,
+["mutant_krovosos_red_jaw"] = true,
+["mutant_psevdodog_tail"] = true,
+["mutant_psevdogigant_hand"] = true,
+["mutant_snork_leg"] = true,
+["mutant_spleen_rat"] = true,
+["mutant_tail_cat"] = true,
+["mutant_zombie_hand"] = true,
+["mutant_zombie_teeth"] = true,
+["part_digitis_biblio"] = true,
+["part_tarakan"] = true,
+["part_tarakan_strong"] = true,
+["red_mozg"] = true,
+["rudiment_big"] = true,
+["snp_prime_maz"] = true,
+["sweetness"] = true,
+["vodka"] = true,
+-- все эмбрионы нужные для варки
+["mutant_boar_cocoon"] = true,
+["mutant_burer_cocoon"] = true,
+["mutant_cat_cocoon"] = true,
+["mutant_chimera_cocoon"] = true,
+["mutant_flesh_cocoon"] = true,
+["mutant_gigant_cocoon"] = true,
+["mutant_krovosos_cocoon"] = true,
+["mutant_poltergeist_cocoon"] = true,
+["mutant_psevdodog_cocoon"] = true,
+["mutant_psydog_cocoon"] = true,
+["mutant_snork_cocoon"] = true,
+["mutant_zombie_cocoon"] = true,
+-- emb
+["mutant_rat_cocoon"] = true,
+["mutant_tarakan_cocoon"] = true,
+["mutant_tarakan2_cocoon"] = true,
+["mutant_bloodsucker_cocoon"] = true,
+["mutant_bloodsucker2_cocoon"] = true,
+["mutant_deathclaw_cocoon"] = true,
+["mutant_fracture_cocoon"] = true,
+["mutant_bibliotekar_cocoon"] = true,
+["mutant_mono_cocoon"] = true,
+["mutant_babka_cocoon"] = true,
+["mutant_ghost_cocoon"] = true,
+["mutant_kachok_cocoon"] = true,
+["mutant_big_cocoon"] = true,
+["mutant_jumper_cocoon"] = true,
+["mutant_electro_cocoon"] = true,
+["mutant_x_ray_cocoon"] = true
+}
+
+-- проверка: является ли компонентом для варки
+-- параметр - название секции
+function is_komponent(sec)
+     return (afs[sec] ~= nil)
+end
+
+-- аномалия "узнаётся" по части названия!
+-- komp - компонентv
+-- удача v_udachi + вvрождение в булvжник v_virogd <= 100 !!!
+-- отторжение v_ottorg = 100 - (v_udachi + v_virogd) посему и не нужно прописvвать в таблицу
+-- cel - цель (может бvть одновременно несколько целей)
+-- info - инфопорция, которая будет вvдана после L-L+=+Ј варки
+-- virogd - во что вvрождается (может бvть одновременно несколько вvрождений)
+-- vremya = {дни, часы, минуты} - время варки/мутации
+-- remove_anomaly - удалить ли аномалию (можно комбинировать вместе с варкой/мутацией)
+-- not_for_mutator - рецепт никогда не попадёт в трансмутатор
+local anom_recept_komp = {
+	-- умолчание, если нет даннvх ближе к рецепту
+	default = {
+		cel = {},
+		v_udachi = 80,
+		v_virogd = 20,
+		virogd = {["af_buliz"]=true},
+		vremya = {0,0,5},
+		remove_anomaly = false
+	},
+
+	anomalii = {
+		["_zharka"] = {
+			-- умолчание, если нет даннvх ближе к рецепту,
+			-- которое может переопределятья в рецепте
+			name = "\"Жарка\"",
+			default = {
+				v_udachi = 80,
+				v_virogd = 20,
+				vremya = {0,0,5}
+			},
+
+			recepti = {
+				["info_izomorf_kompas"] = { -- артефакт удалит аномалиі без результатов варки/мутации
+					komp = {["izomorf_kompas"]=true},
+					cel = {["izomorf_kompas"]=true},
+					vremya = {0,0,1},
+					v_udachi = 100,
+					v_virogd = 0,
+					remove_anomaly = true
+				},
+				["starik_zadanie_vzyt_done"] = {
+					komp = {["mutant_boar_cocoon"]=true,["mutant_flesh_cocoon"]=true,["mutant_psevdodog_cocoon"]=true,["mutant_boar_leg"]=true},
+					cel = {["mutant_kachok_cocoon"]=true},
+					vremya = {0,0,5},
+					v_udachi = 100,
+					v_virogd = 0
+				},
+				["voron_new_kvest_done"] = {
+					komp = {["mutant_krovosos_cocoon"]=true,["mutant_burer_cocoon"]=true,["mutant_bloodsucker_cocoon"]=true,["mutant_deathclaw_antler"]=true},
+					cel = {["mutant_bloodsucker2_cocoon"]=true},
+					vremya = {0,0,5},
+					v_udachi = 100,
+					v_virogd = 0
+				},
+				["info_artmod_electra_flash_zharka"] = {
+					komp = {["af_medusa"]=true,["af_rusty_thorn"]=true,["af_vyvert"]=true,["vodka"]=true},
+					cel = {["af_electra_flash"]=true}
+				},
+				["info_artmod_ameba_slime_zharka"] = {
+					komp = {["af_medusa"]=true,["af_blood"]=true,["kolbasa"]=true,["mutant_dog_tail"]=true},
+					cel = {["af_ameba_slime"]=true}
+				},
+				["info_artmod_gravi_zharka"] = {
+					komp = {["af_medusa"]=true,["af_blood"]=true,["bandage"]=true,["conserva"]=true},
+					cel = {["af_gravi"]=true}
+				},
+				["info_artmod_night_star_zharka"] = {
+					komp = {["af_rusty_kristall"]=true,["af_vyvert"]=true,["af_electra_flash"]=true,["mutant_snork_leg"]=true},
+					cel = {["af_night_star"]=true}
+				},
+				["info_artmod_electra_moonlight_zharka"] = {
+					komp = {["af_gravi"]=true,["af_medusa"]=true,["af_electra_flash"]=true,["mutant_krovosos_jaw"]=true},
+					cel = {["af_electra_moonlight"]=true}
+				},
+				["info_artmod_dummy_battery_zharka"] = {
+					komp = {["af_electra_flash"]=true,["af_ameba_mica"]=true,["vodka"]=true,["mutant_dog_tail"]=true},
+					cel = {["af_dummy_battery"]=true}
+				},
+				-- ["info_amk_recipt_souls"] = {
+				["info_amk_recipt_soul_drops"] = {
+					komp = {["af_soul"]=true},
+					cel = {["af_spirit_1"]=true},
+					vremya = {0,4,0}
+				},
+				["info_artmod_gusenica"] = {
+					komp = {["bezoar"]=true},
+					cel = {["af_caterpillar"]=true},
+					vremya = {0,0,5},
+					v_udachi = 100,
+					v_virogd = 0
+				},
+				["info_artmod_probabka_burera"] = {
+					komp = {["af_babka_3"]=true},
+					cel = {["af_babka_4"]=true},
+					vremya = {0,0,5},
+					v_udachi = 100,
+					v_virogd = 0
+				},
+				-- ["info_amk_recipt_souls"] = {
+				["info_amk_recipt_soul_fire"] = {
+					komp = {["af_spirit_1"]=true},
+					cel = {["af_spirit_2"]=true},
+					vremya = {0,6,0}
+				},
+				-- ["info_amk_recipt_souls"] = {
+				["info_amk_recipt_soul_cristal"] = {
+					komp = {["af_spirit_2"]=true},
+					cel = {["af_spirit_3"]=true},
+					vremya = {0,7,0}
+				},
+				["info_amk_recipt_tears_fire"] = {
+					komp = {["af_cry_1"]=true},
+					cel = {["af_cry_2"]=true},
+					vremya = {0,6,0}
+				},
+				["info_amk_recipt_dikoobraz"] = {
+					komp = {["af_rusty_sea-urchin"]=true},
+					cel = {["af_dik_1"]=true},
+					vremya = {0,3,0}
+				},
+				["info_amk_recipt_giant_small_brother"] = {
+					komp = {["af_kol_3"]=true},
+					cel = {["af_kol_4"]=true},
+					vremya = {0,3,0},
+					v_udachi = 100,
+					v_virogd = 0
+				},
+				["info_amk_recipt_controller_skalp"] = {
+					komp = {["af_armor_3"]=true},
+					cel = {["af_armor_4"]=true},
+					vremya = {0,6,0},
+					v_udachi = 100,
+					v_virogd = 0
+				}
+			}
+		},
+
+		["_galant"] = {
+			-- умолчание, если нет даннvх ближе к рецепту
+			name = "\"Электра\"",
+			default = {
+				v_udachi = 80,
+				v_virogd = 20,
+				vremya = {0,0,5}
+			},
+
+			recepti = {
+				["info_red_battery"] = { -- артефакт удалит аномалиі без результатов варки/мутации
+					komp = {["af_dummy_battery_red"]=true},
+					remove_anomaly = true,
+					vremya = {0,0,1},
+					v_udachi = 100,
+					v_virogd = 0,
+					not_for_mutator = true
+				},
+				["mil_trader_teleport_07_done"] = {
+					komp = {["mutant_cat_cocoon"]=true,["mutant_chimera_kogot"]=true,["mutant_jumper_cocoon"]=true,["mutant_psydog_cocoon"]=true},
+					cel = {["mutant_electro_cocoon"]=true},
+					vremya = {0,0,5},
+					v_udachi = 100,
+					v_virogd = 0
+				},
+				["embt_vp1_done"] = {
+					komp = {["mutant_deathclaw_cocoon"]=true,["mutant_bibliotekar_cocoon"]=true,["red_mozg"]=true,["af_life_heart"]=true},
+					cel = {["mutant_mono_cocoon"]=true},
+					vremya = {0,1,0},
+					v_udachi = 100,
+					v_virogd = 0
+				},
+				["info_artmod_fireball_galant"] = {
+					komp = {["af_blood"]=true,["af_medusa"]=true,["vodka"]=true,["mutant_dog_tail"]=true},
+					cel = {["af_fireball"]=true}
+				},
+				["info_artmod_cristall_flower_galant"] = {
+					komp = {["af_vyvert"]=true,["af_rusty_thorn"]=true,["conserva"]=true,["mutant_dog_tail"]=true},
+					cel = {["af_cristall_flower"]=true}
+				},
+				["info_artmod_ameba_mica_galant"] = {
+					komp = {["af_ameba_slime"]=true,["af_rusty_thorn"]=true,["af_medusa"]=true,["kolbasa"]=true},
+					cel = {["af_ameba_mica"]=true}
+				},
+				["info_artmod_electra_moonlight_galant"] = {
+					komp = {["af_gravi"]=true,["af_blood"]=true,["af_fireball"]=true,["mutant_psevdodog_tail"]=true},
+					cel = {["af_soul"]=true}
+				},
+				["info_artmod_gold_fish_galant"] = {
+					komp = {["af_medusa"]=true,["af_rusty_thorn"]=true,["af_cristall_flower"]=true,["mutant_flesh_eye"]=true},
+					cel = {["af_gold_fish"]=true}
+				},
+				["info_artmod_dummy_spring_galant"] = {
+					komp = {["af_cristall_flower"]=true,["af_cristall"]=true,["mutant_psevdodog_tail"]=true,["conserva"]=true},
+					cel = {["af_dummy_spring"]=true}
+				},
+				["info_artmod_medusa_galant"] = {
+					komp = {["mutant_face_tushkano"]=true,["bandage"]=true,["conserva"]=true,["mutant_dog_tail"]=true},
+					cel = {["af_medusa"]=true}
+				},
+				-- ["info_amk_recipt_souls"] = {
+				["info_amk_recipt_soul_bengal"] = {
+					komp = {["af_spirit_3"]=true},
+					cel = {["af_spirit_4"]=true},
+					vremya = {0,1,0},
+					v_udachi = 100,
+					v_virogd = 0
+				},
+				["info_amk_recipt_tears_electra"] = {
+					komp = {["af_drops"]=true},
+					cel = {["af_cry_1"]=true},
+					vremya = {0,5,0}
+				},
+				["info_amk_recipt_grandmother_glassbeards"] = {
+					komp = {["af_dummy_glassbeads"]=true},
+					cel = {["af_babka_1"]=true},
+					vremya = {0,5,0}
+				},
+				-- ["info_amk_recipt_dummy"] = {
+				["info_amk_recipt_dummy_fire"] = {
+					komp = {["af_dummy_dummy"]=true},
+					cel = {["af_pudd_1"]=true},
+					vremya = {0,3,0}
+				},
+				-- ["info_amk_recipt_dummy"] = {
+				["info_amk_recipt_dummy_bright"] = {
+					komp = {["af_pudd_1"]=true},
+					cel = {["af_pudd_2"]=true},
+					vremya = {0,6,0}
+				},
+				-- ["info_amk_recipt_dummy"] = {
+				["info_amk_recipt_dummy_moon"] = {
+					komp = {["af_pudd_2"]=true},
+					cel = {["af_pudd_3"]=true},
+					vremya = {0,8,0}
+				},
+				["info_amk_recipt_electra_dikoobraz"] = {
+					komp = {["af_dik_1"]=true},
+					cel = {["af_dik_2"]=true},
+					vremya = {0,5,0}
+				}
+			}
+		},
+
+		["_buzz"] = {
+			-- умолчание, если нет даннvх ближе к рецепту
+			name = "\"Холодец\"",
+			default = {
+				v_udachi = 80,
+				v_virogd = 20,
+				vremya = {0,0,5}
+			},
+
+			recepti = {
+				["info_izomorf_kompas"] = { -- артефакт удалит аномалиі без результатов варки/мутации
+					komp = {["izomorf_kompas"]=true},
+					cel = {["izomorf_kompas"]=true},
+					vremya = {0,0,1},
+					v_udachi = 100,
+					v_virogd = 0,
+					remove_anomaly = true
+				},
+				["hand_otdan"] = {
+					komp = {["mutant_zombie_cocoon"]=true,["bezoar"]=true,["rudiment_big"]=true,["mutant_zombie_hand"]=true},
+					cel = {["mutant_babka_cocoon"]=true},
+					vremya = {0,0,5},
+					v_udachi = 100,
+					v_virogd = 0
+				},
+				["test_quest_art_otdan"] = {
+					komp = {["mutant_rat_cocoon"]=true,["part_tarakan_strong"]=true,["sweetness"]=true,["conserva"]=true},
+					cel = {["mutant_tarakan_cocoon"]=true},
+					vremya = {0,0,5},
+					v_udachi = 100,
+					v_virogd = 0
+				},
+				["info_artmod_rusty_kristall_buzz"] = {
+					komp = {["af_electra_sparkler"]=true,["af_medusa"]=true,["af_drops"]=true,["bread"]=true},
+					cel = {["af_rusty_kristall"]=true}
+				},
+				["info_artmod_rusty_thorn_buzz"] = {
+					komp = {["af_blood"]=true,["bandage"]=true,["bread"]=true,["mutant_dog_tail"]=true},
+					cel = {["af_rusty_thorn"]=true}
+				},
+				["info_artmod_fireball_buzz"] = {
+					komp = {["af_rusty_thorn"]=true,["af_vyvert"]=true,["mutant_snork_leg"]=true,["bread"]=true},
+					cel = {["af_fireball"]=true}
+				},
+				["info_artmod_night_star_buzz"] = {
+					komp = {["af_gravi"]=true,["af_blood"]=true,["af_electra_flash"]=true,["mutant_psevdodog_tail"]=true},
+					cel = {["af_gold_fish"]=true}
+				},
+				["info_artmod_fuzz_kolobok_buzz"] = {
+					komp = {["af_night_star"]=true,["af_soul"]=true,["af_electra_moonlight"]=true,["af_rusty_sea-urchin"]=true},
+					cel = {["af_fuzz_kolobok"]=true}
+				},
+				["info_artmod_vyvert_buzz"] = {
+					komp = {["mutant_face_tushkano"]=true,["bandage"]=true,["conserva"]=true,["mutant_dog_tail"]=true},
+					cel = {["af_vyvert"]=true}
+				},
+				["info_amk_recipt_tears_chimaera"] = {
+					komp = {["af_cry_2"]=true},
+					cel = {["af_cry_3"]=true},
+					vremya = {0,2,0},
+					v_udachi = 100,
+					v_virogd = 0
+				},
+				["info_amk_recipt_pra_grandmother_glassbeards"] = {
+					komp = {["af_babka_1"]=true},
+					cel = {["af_babka_2"]=true},
+					vremya = {0,3,0}
+				},
+				-- ["info_amk_recipt_dummy"] = {
+				["info_amk_recipt_dummy_puding"] = {
+					komp = {["af_pudd_3"]=true},
+					cel = {["af_pudd_4"]=true},
+					vremya = {0,7,0},
+					v_udachi = 100,
+					v_virogd = 0
+				},
+				["info_amk_recipt_sopl_dikoobraz"] = {
+					komp = {["af_dik_2"]=true},
+					cel = {["af_dik_3"]=true},
+					vremya = {0,2,0}
+				},
+				["info_amk_recipt_almaz_kolobok"] = {
+					komp = {["af_kol_2"]=true},
+					cel = {["af_kol_3"]=true},
+					vremya = {0,8,0}
+				},
+				["info_amk_recipt_pancir"] = {
+					komp = {["af_armor_2"]=true},
+					cel = {["af_armor_3"]=true},
+					vremya = {0,2,0}
+				},
+				["info_artmod_globus"] = {
+					komp = {["af_simbion"]=true},
+					cel = {["af_arhara_globus"]=true},
+					vremya = {0,0,10},
+					v_udachi = 75,
+					v_virogd = 25
+				},
+				["info_amk_recipt_simbion"] = {
+					komp = {["af_medusa"]=true,["af_drops"]=true,["af_blood"]=true,["af_rusty_thorn"]=true},
+					cel = {["af_simbion"]=true},
+					vremya = {0,5,0}
+				},
+-- Akill begin Варим Изумрудную вспышку
+				["izumrud_recept_start"] = {
+					komp = {["af_electra_flash"]=true,["gold_art"]=true,["af_night_star"]=true,["mutant_boar_leg"]=true},
+					cel = {["af_electra_green"]=true},
+					vremya = {0,0,2},
+					v_udachi = 100,
+					v_virogd = 0,
+					not_for_mutator = true,
+					info = "izumrud_recept_have"
+				},
+-- Akill end
+				["snp_kalmyk1_done"] = {
+					komp = {["snp_prime_maz"]=true},
+					cel = {["snp_prime_maz_green"]=true},
+					vremya = {0,1,0},
+					v_udachi = 100,
+					v_virogd = 0
+				}
+			}
+		},
+
+		["_fountain"] = {
+			name = "\"Фонтан\"",
+			default = {
+				v_udachi = 80,
+				v_virogd = 20,
+				vremya = {0,0,5}
+			},
+
+			recepti = {
+				["info_izomorf_kompas"] = { -- артефакт удалит аномалиі без результатов варки/мутации
+					komp = {["izomorf_kompas"]=true},
+					cel = {["izomorf_kompas"]=true},
+					vremya = {0,0,1},
+					v_udachi = 100,
+					v_virogd = 0,
+					remove_anomaly = true
+				},
+				["emb0"] = {
+					komp = {["mutant_x_ray_cocoon"]=true},
+					cel = {["mutant_wolf_cocoon"]=true},
+					vremya = {0,8,0},
+					v_udachi = 100,
+					v_virogd = 0
+				},
+				["info_amk_recipt_power_3"] = {
+					komp = {["af_power_2"]=true,["af_buliz"]=true,["af_cry_1"]=true,["af_pudd_3"]=true,["af_dik_2"]=true},
+					cel = {["af_power_3"]=true},
+					vremya = {0,5,0},
+					v_udachi = 100,
+					v_virogd = 0
+				},
+				["snp_receipt_parts6_done"] = {
+					komp = {["kolba_pustay"]=true,["kolba_siniy_poln"]=true,["kolba_orand_poln"]=true,["rudiment_big"]=true,["part_tarakan"]=true,["part_tarakan_strong"]=true},
+					cel = {["kolba_krasn_poln"]=true},
+					vremya = {0,0,10},
+					v_udachi = 100,
+					v_virogd = 0
+				},
+				["info_artmod_cristall_buzz"] = {
+					komp = {["af_cristall_flower"]=true,["af_medusa"]=true,["af_fireball"]=true,["mutant_krovosos_jaw"]=true},
+					cel = {["af_cristall"]=true}
+				}
+			}
+		},
+
+		["_mincer"] = {
+			-- умолчание, если нет даннvх ближе к рецепту
+			name = "\"Карусель\"",
+			default = {
+				v_udachi = 80,
+				v_virogd = 20,
+				vremya = {0,0,5}
+			},
+
+			recepti = {
+				["info_red_spring"] = { -- артефакт удалит аномалиі без результатов варки/мутации
+					komp = {["af_dummy_spring_red"]=true},
+					remove_anomaly = true,
+					vremya = {0,0,1},
+					v_udachi = 100,
+					v_virogd = 0,
+					not_for_mutator = true
+				},
+				["emb_container_done"] = {
+					komp = {["mutant_big_cocoon"]=true},
+					cel = {["mutant_jumper_cocoon"]=true},
+					vremya = {0,4,0},
+					v_udachi = 100,
+					v_virogd = 0
+				},
+				["kalmyak_need_done"] = {
+					komp = {["mutant_zombie_cocoon"]=true,["vodka"]=true,["mutant_fracture_hand"]=true,["part_digitis_biblio"]=true},
+					cel = {["mutant_fracture_cocoon"]=true},
+					vremya = {0,0,30},
+					v_udachi = 100,
+					v_virogd = 0
+				},
+				["info_artmod_cristall_flower_mincer"] = {
+					komp = {["af_blood"]=true,["af_medusa"]=true,["bandage"]=true,["conserva"]=true},
+					cel = {["af_cristall_flower"]=true}
+				},
+				["info_artmod_drops_mincer"] = {
+					komp = {["af_vyvert"]=true,["bandage"]=true,["vodka"]=true,["mutant_dog_tail"]=true},
+					cel = {["af_drops"]=true}
+				},
+				["info_artmod_rusty_kristall_mincer"] = {
+					komp = {["af_electra_sparkler"]=true,["af_medusa"]=true,["conserva"]=true,["mutant_dog_tail"]=true},
+					cel = {["af_rusty_kristall"]=true}
+				},
+				["info_artmod_electra_moonlight_mincer"] = {
+					komp = {["af_fireball"]=true,["af_blood"]=true,["af_ameba_slug"]=true,["mutant_krovosos_jaw"]=true},
+					cel = {["af_electra_moonlight"]=true}
+				},
+				["info_artmod_ameba_slug_mincer"] = {
+					komp = {["af_electra_flash"]=true,["af_vyvert"]=true,["af_fireball"]=true,["mutant_psevdodog_tail"]=true},
+					cel = {["af_ameba_mica"]=true}
+				},
+				["info_artmod_dummy_glassbeads_mincer"] = {
+					komp = {["af_ameba_mica"]=true,["af_rusty_sea-urchin"]=true,["af_gold_fish"]=true,["af_night_star"]=true},
+					cel = {["af_dummy_glassbeads"]=true}
+				},
+				["info_amk_recipt_burer_grandmother_glassbeards"] = {
+					komp = {["af_babka_2"]=true},
+					cel = {["af_babka_3"]=true},
+					vremya = {0,0,10}
+				},
+				["info_amk_recipt_titan_kolobok"] = {
+					komp = {["af_kol_1"]=true},
+					cel = {["af_kol_2"]=true},
+					vremya = {0,5,0}
+				},
+				["we_ne_chmuri"] = {
+					komp = {["af_kamen_udachy"]=true},
+					cel = {["izomorf_kompas"]=true},
+					vremya = {0,0,1},
+					v_udachi = 100,
+					v_virogd = 0,
+					not_for_mutator = true,
+					info = "spawn_hospit_live"
+				},
+				["mozno_varit"] = {
+					komp = {["af_part_monolit2"]=true},
+					cel = {["af_kamen_udachy"]=true},
+					vremya = {0,0,1},
+					v_udachi = 100,
+					v_virogd = 0,
+					not_for_mutator = true,
+					info = "spawn_kamen_udachy"
+				},
+		-- Akill begin
+				["info_artmod_blood_mincer"] = {
+					komp = {["kolbasa"]=true,["energy_drink"]=true,["mutant_spleen_rat"]=true,["mutant_psevdodog_tail"]=true},
+					cel = {["af_blood"]=true}
+				},
+		-- Akill end
+				["info_amk_recipt_cheshya"] = {
+					komp = {["af_armor_1"]=true},
+					cel = {["af_armor_2"]=true},
+					vremya = {0,5,0}
+				}
+			}
+		},
+
+		["_mosquito_bald"] = {
+			-- умолчание, если нет даннvх ближе к рецепту
+			name = "\"Трамплин\"",
+			default = {
+				v_udachi = 80,
+				v_virogd = 20,
+				vremya = {0,0,5}
+			},
+
+			recepti = {
+				["info_red_pellicle"] = { -- артефакт удалит аномалиі без результатов варки/мутации
+					komp = {["af_dummy_pellicle_red"]=true},
+					remove_anomaly = true,
+					vremya = {0,0,1},
+					v_udachi = 100,
+					v_virogd = 0,
+					not_for_mutator = true
+				},
+				["emb14"] = {
+					komp = {["mutant_gigant_cocoon"]=true,["mutant_snork_cocoon"]=true,["mutant_kachok_cocoon"]=true,["mutant_psevdogigant_hand"]=true},
+					cel = {["mutant_big_cocoon"]=true},
+					vremya = {0,0,5},
+					v_udachi = 100,
+					v_virogd = 0
+				},
+				["dar_password_info2"] = {
+					komp = {["mutant_tarakan_cocoon"]=true,["part_tarakan"]=true},
+					cel = {["mutant_tarakan2_cocoon"]=true},
+					vremya = {0,0,5},
+					v_udachi = 100,
+					v_virogd = 0
+				},
+				["info_artmod_mincer_meat_mosquito_bald"] = {
+					komp = {["af_vyvert"]=true,["af_blood"]=true,["vodka"]=true,["mutant_dog_tail"]=true},
+					cel = {["af_mincer_meat"]=true}
+				},
+				["info_artmod_electra_sparkler_mosquito_bald"] = {
+					komp = {["af_drops"]=true,["bandage"]=true,["kolbasa"]=true,["mutant_dog_tail"]=true},
+					cel = {["af_electra_sparkler"]=true}
+				},
+				["info_artmod_ameba_slug_mosquito_bald"] = {
+					komp = {["af_medusa"]=true,["af_drops"]=true,["bandage"]=true,["vodka"]=true},
+					cel = {["af_ameba_slug"]=true}
+				},
+				["info_artmod_cristall_mosquito_bald"] = {
+					komp = {["af_mincer_meat"]=true,["af_vyvert"]=true,["af_fireball"]=true,["mutant_flesh_eye"]=true},
+					cel = {["af_cristall"]=true}
+				},
+				["info_artmod_rusty_sea-urchin_mosquito_bald"] = {
+					komp = {["af_ameba_slime"]=true,["af_blood"]=true,["af_rusty_kristall"]=true,["mutant_krovosos_jaw"]=true},
+					cel = {["af_rusty_sea-urchin"]=true}
+				},
+				["info_artmod_dummy_dummy_mosquito_bald"] = {
+					komp = {["af_ameba_mica"]=true,["af_cristall"]=true,["af_mincer_meat"]=true,["af_night_star"]=true},
+					cel = {["af_dummy_dummy"]=true}
+				},
+				["info_amk_recipt_stone_dikoobraz"] = {
+					komp = {["af_dik_3"]=true},
+					cel = {["af_dik_4"]=true},
+					vremya = {0,7,0},
+					v_udachi = 100,
+					v_virogd = 0
+				},
+				["info_amk_recipt_steel_kolobok"] = {
+					komp = {["af_fuzz_kolobok"]=true},
+					cel = {["af_kol_1"]=true},
+					vremya = {0,2,0}
+				},
+				["info_amk_recipt_shkura"] = {
+					komp = {["af_dummy_pellicle"]=true},
+					cel = {["af_armor_1"]=true},
+					vremya = {0,5,0}
+				}
+			}
+		},
+
+		["_gravi_zone"] = {
+			-- умолчание, если нет даннvх ближе к рецепту
+			name = "\"Воронка\"",
+			default = {
+				v_udachi = 80,
+				v_virogd = 20,
+				vremya = {0,0,5}
+			},
+
+			recepti = {
+				["info_red_battery"] = { -- артефакт удалит аномалиі без результатов варки/мутации
+					komp = {["af_dummy_battery_red"]=true},
+					remove_anomaly = true,
+					vremya = {0,0,1},
+					v_udachi = 100,
+					v_virogd = 0,
+					not_for_mutator = true
+				},
+				["snp_almaz0"] = {
+					komp = {["mutant_bloodsucker2_cocoon"]=true},
+					cel = {["mutant_deathclaw_cocoon"]=true},
+					vremya = {0,3,0},
+					v_udachi = 100,
+					v_virogd = 0
+				},
+				["arhara_shaxter_start"] = {
+					komp = {["part_tarakan"]=true,["bread"]=true,["mutant_tail_cat"]=true,["mutant_spleen_rat"]=true},
+					cel = {["mutant_rat_cocoon"]=true},
+					vremya = {0,0,5},
+					v_udachi = 100,
+					v_virogd = 0
+				},
+				["info_amk_recipt_power_2"] = {
+					komp = {["af_power_1"]=true,["af_buliz"]=true,["af_gravi"]=true,["af_pudd_2"]=true,["af_rusty_thorn"]=true},
+					cel = {["af_power_2"]=true},
+					vremya = {0,1,0},
+					v_udachi = 100,
+					v_virogd = 0
+				},
+				["info_artmod_ameba_slug_gravi_zone"] = {
+					komp = {["af_vyvert"]=true,["af_medusa"]=true,["kolbasa"]=true,["mutant_dog_tail"]=true},
+					cel = {["af_ameba_slug"]=true}
+				},
+				["info_artmod_ameba_slime_gravi_zone"] = {
+					komp = {["af_medusa"]=true,["bandage"]=true,["conserva"]=true,["mutant_dog_tail"]=true},
+					cel = {["af_ameba_slime"]=true}
+				},
+				["info_artmod_electra_flash_gravi_zone"] = {
+					komp = {["af_vyvert"]=true,["af_blood"]=true,["mutant_dog_tail"]=true,["vodka"]=true},
+					cel = {["af_electra_flash"]=true}
+				},
+				["info_artmod_night_star_gravi_zone"] = {
+					komp = {["af_rusty_thorn"]=true,["af_medusa"]=true,["af_rusty_kristall"]=true,["mutant_psevdodog_tail"]=true},
+					cel = {["af_night_star"]=true}
+				},
+				["info_artmod_soul_gravi_zone"] = {
+					komp = {["af_electra_flash"]=true,["af_cristall_flower"]=true,["af_ameba_slug"]=true,["mutant_snork_leg"]=true},
+					cel = {["af_soul"]=true}
+				},
+				["info_artmod_dummy_pellicle_gravi_zone"] = {
+					komp = {["af_ameba_mica"]=true,["af_cristall"]=true,["af_gold_fish"]=true,["af_soul"]=true},
+					cel = {["af_dummy_pellicle"]=true}
+				}
+			}
+		},
+
+		["_ice"] = {
+			-- умолчание, если нет даннvх ближе к рецепту
+			name = "\"Снежная\"",
+			default = {
+				v_udachi = 80,
+				v_virogd = 20,
+				vremya = {0,0,5}
+			},
+
+			recepti = {
+				["info_izomorf_kompas"] = { -- артефакт удалит аномалиі без результатов варки/мутации
+					komp = {["izomorf_kompas"]=true},
+					cel = {["izomorf_kompas"]=true},
+					vremya = {0,0,1},
+					v_udachi = 100,
+					v_virogd = 0,
+					remove_anomaly = true
+				},
+				["emb_kill_tm_done"] = {
+					komp = {["mutant_babka_cocoon"]=true},
+					cel = {["mutant_ghost_cocoon"]=true},
+					vremya = {0,6,0},
+					v_udachi = 100,
+					v_virogd = 0
+				},
+				["info_amk_recipt_power_1"] = {
+					komp = {["af_power"]=true,["af_buliz"]=true,["af_blood"]=true,["af_pudd_1"]=true,["af_ameba_slug"]=true},
+					cel = {["af_power_1"]=true},
+					vremya = {0,0,5},
+					v_udachi = 100,
+					v_virogd = 0
+				},
+				["life_heart_final"] = {
+					komp = {["af_dummy_dummy"]=true,["af_rusty_sea-urchin"]=true,["af_gold_fish"]=true,["af_night_star"]=true},
+					cel = {["af_life_heart"]=true},
+					vremya = {0,0,5},
+					v_udachi = 100,
+					v_virogd = 0
+				},
+				["info_red_battery"] = {
+					komp = {["af_dummy_battery"]=true},
+					cel = {["af_dummy_battery_red"]=true}
+				},
+				["info_red_spring"] = {
+					komp = {["af_dummy_spring"]=true},
+					cel = {["af_dummy_spring_red"]=true}
+				},
+				["info_red_pellicle"] = {
+					komp = {["af_dummy_pellicle"]=true},
+					cel = {["af_dummy_pellicle_red"]=true}
+				}
+			}
+		},
+
+		["_sphere"] = {
+		name = "\"Пузырь\"",
+			default = {
+				v_udachi = 80,
+				v_virogd = 20,
+				vremya = {0,0,5}
+			},
+			recepti = {
+				["info_izomorf_kompas"] = { -- артефакт удалит аномалиі без результатов варки/мутации
+					komp = {["izomorf_kompas"]=true},
+					cel = {["izomorf_kompas"]=true},
+					vremya = {0,0,1},
+					v_udachi = 100,
+					v_virogd = 0,
+					remove_anomaly = true
+				},
+				["emb8"] = {
+					komp = {["mutant_fracture_cocoon"]=true},
+					cel = {["mutant_bibliotekar_cocoon"]=true},
+					vremya = {0,2,0},
+					v_udachi = 100,
+					v_virogd = 0
+				},
+				["emb4"] = {
+					komp = {["mutant_poltergeist_cocoon"]=true,["mutant_tarakan2_cocoon"]=true,["mutant_krovosos_red_jaw"]=true,["mutant_burer_red_hand"]=true},
+					cel = {["mutant_bloodsucker_cocoon"]=true},
+					vremya = {0,0,5},
+					v_udachi = 100,
+					v_virogd = 0
+				}
+			}
+		},
+
+		["_zavesa"] = {
+		name = "\"Tорнадо\"",
+			default = {
+				v_udachi = 80,
+				v_virogd = 20,
+				vremya = {0,0,5}
+			},
+			recepti = {
+				["info_izomorf_kompas"] = { -- артефакт удалит аномалиі без результатов варки/мутации
+					komp = {["izomorf_kompas"]=true},
+					cel = {["izomorf_kompas"]=true},
+					vremya = {0,0,1},
+					v_udachi = 100,
+					v_virogd = 0,
+					remove_anomaly = true
+               },
+				["emb17"] = {
+					komp = {["mutant_chimera_cocoon"]=true,["mutant_electro_cocoon"]=true,["mutant_kachok_cocoon"]=true,["mutant_ghost_cocoon"]=true},
+					cel = {["mutant_x_ray_cocoon"]=true},
+					vremya = {0,2,0},
+					v_udachi = 100,
+					v_virogd = 0
+				},
+				["fima_mulo_nayti_done"] = {
+					komp = {["mutant_zombie_teeth"]=true,["kolbasa"]=true},
+					cel = {["rudiment_big"]=true},
+					v_udachi = 50,
+					v_virogd = 50
+				}
+			}
+		},
+
+		["_smallrain"] = {
+		name = "\"Очаговый туман\"",
+			default = {
+				v_udachi = 80,
+				v_virogd = 20,
+				vremya = {0,0,5}
+			},
+			recepti = {
+				["info_izomorf_kompas"] = { -- артефакт удалит аномалиі без результатов варки/мутации
+					komp = {["izomorf_kompas"]=true},
+					cel = {["izomorf_kompas"]=true},
+					vremya = {0,0,1},
+					v_udachi = 100,
+					v_virogd = 0,
+					remove_anomaly = true
+				},
+				["snp_almaz3"] = {
+					komp = {["mutant_mono_cocoon"]=true},
+					cel = {["mutant_tm_cocoon"]=true},
+					vremya = {0,7,0},
+					v_udachi = 100,
+					v_virogd = 0
+				}
+			}
+		},
+
+		["_sakbuzz_average"] = {
+			-- name = "\"Радоново облако\"",
+			name = "\"Сигнал\"",
+			default = {
+				v_udachi = 80,
+				v_virogd = 20,
+				vremya = {0,0,5}
+			},
+			recepti = {
+				["info_izomorf_kompas"] = { -- артефакт удалит аномалиі без результатов варки/мутации
+					komp = {["izomorf_kompas"]=true},
+					cel = {["izomorf_kompas"]=true},
+					vremya = {0,0,1},
+					v_udachi = 100,
+					v_virogd = 0,
+					remove_anomaly = true
+				},
+				["gena_sakharov2_done"] = {
+					komp = {["kolba_pustay"]=true,["kolba_siniy_poln"]=true,["kolba_orand_poln"]=true,["kolba_krasn_poln"]=true,["af_black_angel"]=true,["af_arhara_globus"]=true},
+					cel = {["kolba_fiol_poln"]=true},
+					vremya = {0,0,10},
+					v_udachi = 100,
+					v_virogd = 0
+				}
+			}
+		}
+	}
+}
+
+-- возвра ает значение, возможно из умолчаний
+function get_af_transform_param(name, recept, recepti)
+	local result
+	--get_console():execute("load ~#I#:"..string.format(name.." имя"))
+	if recept[name] ~= nil then
+		result = recept[name]
+	elseif recepti["default"] ~= nil and recepti["default"][name] ~= nil then
+		result = recepti["default"][name]
+	elseif anom_recept_komp["default"] ~= nil and anom_recept_komp["default"][name] ~= nil then
+		result = anom_recept_komp["default"][name]
+	else
+		-- нет информации!!!
+		sms2("нет информации для "..name.."!","варка артефактов",0,15,"gen_info")
+		result = nil
+	end
+	return result
+end
+
+-- іолучаем полнvй набор рецептов для аномалии anom_sect
+function fill_recepti_est(anom_sect)
+	local recepti_est = {} -- рецептv для заданной аномалии
+	local anom_name = nil
+	for anom, recepti in pairs(anom_recept_komp["anomalii"]) do
+		if string_find(anom_sect, anom) ~= nil then --нашли в списке аномалиі.
+			anom_name = anom_recept_komp["anomalii"][anom]["name"]
+			if anom_recept_komp["anomalii"][anom]["recepti"] then
+				for info, recept in pairs(recepti["recepti"]) do
+					if not recept["not_for_mutator"] and not recept["remove_anomaly"] and has_info(info) then
+						-- есть рецепт: заносим в таблицу
+						recepti_est[info] = {}
+						for k, v in pairs(recept) do
+							if type(v) == "table" then
+								recepti_est[info][k] = {}
+								for i, j in pairs(v) do
+									recepti_est[info][k][i] = j
+								end
+							else
+								recepti_est[info][k] = v
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+	return recepti_est,anom_name
+end
+
+-- проверяет рецептv и компонетv
+
+-- ������ ����� ��������� �������� ��� ������������� (���-����, ��� �������� � ��������)
+function fill_recepti_all()
+	local recepti_est = {}
+	local anom_name = "���-���� ������������"
+	for anom, recepti in pairs(anom_recept_komp["anomalii"]) do
+		if recepti["recepti"] then
+			for info, recept in pairs(recepti["recepti"]) do
+				if not recept["not_for_mutator"] and not recept["remove_anomaly"] and has_info(info) then
+					recepti_est[info] = {}
+					for k, v in pairs(recept) do
+						if type(v) == "table" then
+							recepti_est[info][k] = {}
+							for i, j in pairs(v) do
+								recepti_est[info][k][i] = j
+							end
+						else
+							recepti_est[info][k] = v
+						end
+					end
+				end
+			end
+		end
+	end
+	return recepti_est,anom_name
+end
+-- если всї в порядке - запускает варку/мутациі
+function check_af_transform(af, af_sect, obj_pos, anom_id, anom_sect, anom_pos, anom_radius, lv, gv)
+	local actor = db.actor
+
+	--поиск по аномалиям
+	local finish = false -- флаг для вvхода из циклов
+	for anom, recepti in pairs(anom_recept_komp["anomalii"]) do
+		if string_find(anom_sect, anom) ~= nil then --нашли в списке аномалиі, возле которой стоим
+			local recepti_est = {} -- рецептv в наличии у ++, в которvх участвует даннvй компонент
+			local recept_podhodit = false
+
+			-- собираем рецептv, в которvх участвует даннvй компонент
+			for info, recept in pairs(recepti["recepti"]) do
+				if has_info(info) and recept["komp"][af_sect] == true then --есть рецепт и этот компонент в нїм участвует
+					recept_podhodit = true
+					-- копируем рецепт
+					recepti_est[info] = {}
+					for k, v in pairs(recept) do
+						if type(v) == "table" then
+							recepti_est[info][k] = {}
+							for i, j in pairs(v) do
+								recepti_est[info][k][i] = j
+							end
+						else
+							recepti_est[info][k] = v
+						end
+					end
+					-- так как table.getn() как и оператор # не работаіт с таблицами, у которvх не целочисельнvе индексv,
+					-- то считаем количество в ручнуі
+					local count = 0
+					for k,v in pairs(recepti_est[info]["komp"]) do
+						count = count + 1
+					end
+					recepti_est[info]["count"] = count
+					--get_console():execute("load ~#I#:"..string.format("0 "..af_sect.." принят. Lном: "..anom.." рец. "..info.." "..recepti_est[info]["count"]))
+				end
+			end
+
+			if recept_podhodit then -- если нашли хоть один имеіийся подходяий рецепт
+				--sms2("іецепт подошел. anom_radius "..anom_radius," варка",0,15,"gen_info")
+				--ием рядом другие компонентv
+				--если находим их в вvбраннvх рецептах, то удаляем их из рецептов
+				--как только какой-то рецепт остаїтся без компонентов - рецепт сработал
+				local obj
+				for i=1,65534 do
+					obj = level.object_by_id(i)
+					if obj and alife():object(i) then
+						local dist = obj:position():distance_to(anom_pos)
+						if obj:parent() == nil and ((anom_radius - obj:position():distance_to(anom_pos)) > -2) then
+							local obj_sect = obj:section()
+							--get_console():execute("load ~#I#:"..string.format(" obj_sect: "..obj_sect.." dist: "..dist))
+							--проверяем отобраннvе рецептv
+							for info, recept in pairs(recepti_est) do
+								-- если компонент есть в рецепте
+								if recepti_est[info]["komp"][obj_sect] == true then
+									-- добавляем L- компонента для буду его удаления из игрv
+									recepti_est[info]["komp"][obj_sect] = obj:id()
+									-- уменьшаем количество компонентов в рецепте
+									recepti_est[info]["count"] = recepti_est[info]["count"] - 1
+									--sms2(obj_sect.." найден. Lном: "..anom.." рец. "..info.." "..recepti_est[info]["count"],"варка",0,15,"gen_info")
+									--get_console():execute("load ~#I#:"..string.format(obj_sect.." найден. Lном: "..anom.." рец. "..info.." "..recepti_est[info]["count"]))
+
+									-- если рецепт пуст, то он сработал
+									if recepti_est[info]["count"] == 0 then
+										--get_console():execute("load ~#I#:"..string.format(info.." сработал. Lном: "..anom))
+
+										-- устанавливаем все параметрv для рецепта, возможно из умолчаний
+										local cel		= get_af_transform_param("cel", recepti_est[info], recepti)
+										local v_udachi		= get_af_transform_param("v_udachi", recepti_est[info], recepti)
+										local v_virogd		= get_af_transform_param("v_virogd", recepti_est[info], recepti)
+										local virogd		= get_af_transform_param("virogd", recepti_est[info], recepti)
+										local vremya		= get_af_transform_param("vremya", recepti_est[info], recepti)
+										local remove_anomaly	= get_af_transform_param("remove_anomaly", recepti_est[info], recepti)
+										local remove_anomaly_id = anom_id
+										local komp		= recepti_est[info]["komp"]
+										local result, udacha 	= af_select_result(v_udachi, v_virogd, virogd, cel, komp)
+										local info_portion	= recepti_est[info]["info"]
+
+										if cel == nil or v_udachi == nil or v_virogd == nil
+											or virogd == nil or vremya == nil or remove_anomaly == nil
+											or cel == nil and remove_anomaly == false
+											or v_udachi + v_virogd > 100 then
+
+											-- кривой рецепт  - вvходим
+											finish = true
+											break
+										end
+
+										-- неудача
+										if udacha == false then
+											remove_anomaly = false
+											info_portion = nil
+										end
+
+										level.add_pp_effector("teleport.ppe", 1524, false)
+
+										-- запускаем варку/мутациі
+										--[[if info_portion then
+											get_console():execute("load ~#I#: info_portion: "..info_portion)
+										else
+											get_console():execute("load ~#I#: info_portion: nil")
+										end]]
+										as_start_universal_transform_timer(komp, result, udacha, obj_pos, vremya, gv, lv, info_portion, remove_anomaly, remove_anomaly_id)
+
+										-- удаляем из игрv компонентv рецепта
+										give_info("biznes_remove_special_item")
+										for k,v in pairs(komp) do
+											alife():release(alife():object(v))
+										end
+										disable_info("biznes_remove_special_item")
+
+										-- вvходим
+										finish = true
+										break
+									end
+								end
+							end
+						end
+					end
+
+					if finish then break end
+				end
+			end
+
+			-- аномалия с рецептами найдена, все дела сделанv - вvходим
+			break
+		end
+	end
+
+end
+
+function af_flash(af)
+	level.add_pp_effector("teleport.ppe", 1524, false)
+	amk.remove_item(af)
+end
+
+-- случайно вvбирает результат, возвра ает таблицу с секциями результатов
+function af_select_result(v_udachi, v_virogd, virogd, cel, komp)
+	local rnd=math_random(0,100)
+	if rnd > v_udachi then --неудача
+		if rnd > v_virogd + v_udachi then -- отторжение
+			return komp, false
+		else -- вvрождение
+			return virogd, false
+		end
+	else -- удача
+		-- get_console():execute("load ~#I#:"..string.format("удача "..amk.pack_array_to_string(cel)))
+		return cel, true
+	end
+end
+
+-- запускаем трансофрмациі
+-- результатv могут бvть многочисленнv (несколько целей, полное отторжение компонентов, несколько вvрождений)
+function as_start_universal_transform_timer(komp, result, udacha, pos, vremya, gv, lv, info_portion, remove_anomaly, remove_anomaly_id)
+	local t={} -- сохраняемvе даннvе
+	t.result = result -- можно сохранять сразу таблицv
+	t.udacha = udacha
+	t.pos = {}
+
+	local new_lv = level.nearest_vertex_id(pos)
+	local new_pos = level.vertex_position(new_lv)
+	local new_gv = cross_table():vertex(new_lv):game_vertex_id()
+
+		t.pos.x = new_pos.x
+		t.pos.y = new_pos.y
+		t.pos.z = new_pos.z
+	t.gv=new_gv
+	t.lv=new_lv
+	t.info_portion = info_portion
+	t.komp = komp -- можно сохранять сразу таблицv
+	t.remove_anomaly = remove_anomaly
+	t.remove_anomaly_id = remove_anomaly_id
+	--get_console():execute("load ~#I#:"..string.format(" g_start_timer: "..vremya[1].." "..vremya[2].." "..vremya[3].." "..amk.pack_array_to_string(t)))
+	-- FOTOGRAF: ogse_st_mgr � ���� ���, ������ �� ������ AMK-��������� (pstor, ���������� ����)
+	amk.g_start_timer("af_transform_universal", vremya[1], vremya[2], vremya[3], amk.pack_array_to_string(t))
+end
+
+-- старая фунция
+function af_start_transform(v1,v2,af_from,af_target)
+	local rnd=math_random(0,100)
+	if rnd>v1 then
+		if rnd>v2+v1 then
+			return af_from
+		else
+			return "af_buliz"
+		end
+	else
+		return af_target
+	end
+end
+
+-- старая фунция
+function af_start_transform_timer(af,pos,delay_d,delay_h,delay_m,af_sect)
+	local t={}
+	t.section=af
+	t.pos={}
+		t.pos.x=pos.x
+		t.pos.y=pos.y
+		t.pos.z=pos.z
+	t.gv=gv
+	t.lv=lv
+	t.from_sect=af_sect
+	amk.g_start_timer("af_transform",delay_d,delay_h,delay_m,amk.pack_array_to_string(t))
+end
+
+-- Артефакты, которые нельзя спавнить высоко
+local ai_sections = {
+	["af_kamen_udachy"] = true,
+	["izomorf_kompas"] = true
+}
+
+-- завершаем варку/мутациі
+-- может бvть много результатов
+function af_transform_universal_end(params)
+	--get_console():execute("load ~#I#:"..string.format(" af_transform_universal_end "))
+	-- если есть результатv
+	local count = 0
+	for k, v in pairs(params.result) do
+		count = count + 1
+	end
+	if count > 0 then
+		local anom_pos = vector():set(params.pos.x, params.pos.y, params.pos.z)
+		if db.actor:position():distance_to(anom_pos) < 15 then
+			level.add_pp_effector("teleport.ppe", 1524, false)
+		end
+		-- формируем строку с названиями компонентов
+		local from_komp = ""
+		for k,v in pairs(params.komp) do
+			if k then
+				from_komp = from_komp..translate(g_inv_name(k))..", "
+			end
+		end
+		-- отсекаем ", " в хвосте
+		from_komp = string_sub(from_komp, 1, -2)
+
+		-- спавним результат(v)
+		for k,v in pairs(params.result) do
+			local obj
+			-- спавн поднят на 10 метров, чтоб победить проваливание под текстуры
+			-- op2ogsr: некоторые арты в некторых местах нельзя поднимать так высоко
+			-- op2ogsr: а вообще, лучше оставить, как есть, иначе, в некоторых местах арты будут спавниться на крышах
+			-- if ai_sections[k] then
+				-- obj = amk.spawn_item(k, vector():set(params.pos.x, params.pos.y + 1, params.pos.z), params.gv, params.lv)
+			-- else
+				-- obj = amk.spawn_item(k, vector():set(params.pos.x, params.pos.y + 10, params.pos.z), params.gv, params.lv)
+			-- end
+			obj = amk.spawn_item(k, vector():set(params.pos.x, params.pos.y+1, params.pos.z), params.gv, params.lv)
+			other_spawn(obj, from_komp)
+			if archievements and params.udacha and string.find(k, "^af_") then
+				archievements.acv_count_event("acv_art", 100, "Сварщик")
+			end
+		end
+
+		-- sms2(translate("trans_finished_title").." из %c[255,255,0,0]"..from_komp)
+	end
+
+	-- даїм инфопорциі, если есть
+	if params.info_portion and db.actor:dont_has_info(params.info_portion) then
+		--get_console():execute("load ~#I#: params.info_portion: "..params.info_portion)
+		give_info(params.info_portion)
+		--[[if has_info(params.info_portion) then
+			get_console():execute("load ~#I#: params.info_portion: "..params.info_portion.." і+TL++=")
+		end]]
+	end
+
+	-- удаляем аномалии, если нужно и она не в исклічениях
+	-- код взят из amk_anoms.turn_off_all()
+	if params.remove_anomaly then
+		local sobj = alife():object(params.remove_anomaly_id)
+		if sobj and game_graph():valid_vertex_id(sobj.m_game_vertex_id) then
+			local map = alife():level_name(game_graph():vertex(sobj.m_game_vertex_id):level_id())
+			if not amk_anoms.check_exclusion(sobj:name(), map) then
+			    release(sobj)
+			end
+		end
+	end
+end
+
+-- старая функция
+function af_transform_end(params)
+	local from_sect="\""..params.from_sect.."\""
+	local obj
+	obj=amk.spawn_item(params.section,vector():set(params.pos.x,params.pos.y+10,params.pos.z),params.gv,params.lv)
+	amk.add_spot_on_map(obj.id,"red_location",translate("trans_finished_title").."%c[255,255,0,0]"..from_sect)
+	sms2(translate("trans_finished_title").."%c[255,255,0,0]"..from_sect)
+end
+
+-- op2ogsr: более расширенная версия спавна
+function other_spawn(obj, from_komp)
+	local sobj = alife():object(obj.id)
+	alife():use_ai_locations(sobj, false) -- Чтобы не проваливался под карту
+	if bind_det_arts and bind_det_arts.add_art then bind_det_arts.add_art(sobj) end
+	local sect = sobj:section_name()
+	local var = get_string(sect, "inv_name")
+	if var then
+		local text = "[" .. translate(sobj.level_name) .. "]: " .. translate("trans_finished_title") .. " из %c[255,255,0,0]" .. from_komp .. ": \\n%c[255,129,255,0]" .. translate(var)
+		text = string.gsub(text, ",:", ":")
+		map_adds(sobj.id, "artefact_location", text)
+		sms2(text)
+	else
+		map_adds(sobj.id, "red_location", translate("trans_finished_title") .. " из %c[255,255,0,0]" .. from_komp)
 	end
 end

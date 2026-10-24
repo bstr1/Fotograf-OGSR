@@ -1,0 +1,11 @@
+
+
+
+function get_ui_icon_equipment_name( sect )
+  local icon_group = get_u32( sect, "icon_group", 0 )
+  if icon_group > 0 then
+    return string.format( "ui\\ui_icon_equipment_%d", icon_group )
+  end
+  return "ui\\ui_icon_equipment"
+end
+

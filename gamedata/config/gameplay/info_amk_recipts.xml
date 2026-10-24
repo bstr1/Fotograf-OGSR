@@ -6,7 +6,8 @@
 -- выдаем info_amk_recipt_tears_chimaera, после чего в PDA игрока появляется
 -- запись в журнале (amk_recipt_tears_chimaera) и запись в энциклопедии
 -- (enc_amk_recipt_tears_chimaera).
-
+	<info_portion id="biznes_remove_special_item"></info_portion>
+	
   <info_portion id="info_amk_recipt_steel_kolobok">
     <article>amk_recipt_steel_kolobok</article>  <!-- no -->
     <article>enc_amk_recipt_steel_kolobok</article>  <!-- no -->

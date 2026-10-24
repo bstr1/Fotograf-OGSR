@@ -5,8 +5,10 @@
 -- Файл _sdata регистрировать не нужно - он подписывается вручную из главного меню (клавиша P).
 
 addons = {
-"dsh_anomaly_detector",
-"key_handlers",
-"dsh_fixes",
-"dsh_vodka_sleep",
+	"dsh_anomaly_detector",
+	"key_handlers",
+	"dsh_fixes",
+	"dsh_vodka_sleep",
+	-- "dsh",
+	"amkii_transmutator",
 }

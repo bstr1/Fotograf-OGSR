@@ -472,13 +472,7 @@ function zone_trans(actor,zone,tab)
 		end
 		-- Все сделано - отключим зону и очистим таблицы:
 		-- Время отключения. Абсолюты - 1/1.5, Талисманы - 2/2.5, Обереги - 3/3.5 часа
-		local sec = 1620
-		if num < 5 then
-			sec = 900
-		elseif num > 6 then
-			sec = 2340
-		end
-		local timer = sec + ((math.random()*360)-180)
+		local timer = get_zone_off_time(num) + ((math.random()*360)-180)
 		amk.start_timer(off_zone_id,timer)
 		amk.del_variable(comp_data_id)
 		amk.del_variable(comp_id)
@@ -498,4 +492,20 @@ end
 function sound_oblom()
 	local snd_obj = xr_sound.get_safe_sound_object([[new\vizg]])
 	snd_obj:play_no_feedback(db.actor,sound_object.s2d,0,vector(),1.0)
+end
+
+function get_transform_recipes()
+	return transform_data
+end
+
+--[[
+--	get_zone_off_time(num)
+--	На сколько гаснет зона после успешной варки (те же единицы, что у amk.start_timer).
+--	Абсолюты - меньше, Обереги - больше. Используется и здесь, и в amkii_transmutator.
+--]]
+function get_zone_off_time(num)
+	if not num then return 1620 end
+	if num < 5 then return 900 end
+	if num > 6 then return 2340 end
+	return 1620
 end

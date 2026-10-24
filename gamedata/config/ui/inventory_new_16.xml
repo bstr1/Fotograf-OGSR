@@ -40,7 +40,7 @@
 
     <dragdrop_outfit x="110" y="40" width="104" height="260" 
             cell_width = "37" cell_height="49" rows_num="4" cols_num="4" 
-            custom_placement="0"/>
+            custom_placement="0" show_grid="0"/>
 
     <dragdrop_pistol x="352" y="45" width="360" height="152"
             cell_width = "45" cell_height="61" rows_num="2" cols_num="6"
