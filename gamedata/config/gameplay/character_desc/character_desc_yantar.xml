@@ -73,7 +73,7 @@
 		  <actor_dialog>kruglov_art_est_dialog</actor_dialog>
           <actor_dialog>kruglov_art_need_dialog</actor_dialog>
 		  <actor_dialog>kruglov_help_metka</actor_dialog>
-#include "gameplay\character_criticals_3.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 		
 		
@@ -102,7 +102,7 @@
 			kruglov_flash \n			
 		</supplies>
 		
-#include "gameplay\character_criticals_3.xml"
+#include "gameplay\character_criticals.xml"
 		
         <actor_dialog>ucen_about_shram_dialog</actor_dialog>
 		<actor_dialog>ucen_case_done_dialog</actor_dialog>		
@@ -132,7 +132,7 @@
 			ammo_9x19_fmj \n
 		</supplies>
 		
-#include "gameplay\character_criticals_3.xml"
+#include "gameplay\character_criticals.xml"
 			
 		<start_dialog>yantar_help_scientist</start_dialog>
 #include "gameplay\character_dialogs.xml"
@@ -188,7 +188,7 @@
 			ammo_9x19_fmj \n
 		</supplies>
 		
-#include "gameplay\character_criticals_3.xml"	
+#include "gameplay\character_criticals.xml"	
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 
@@ -214,7 +214,7 @@
 			ammo_9x19_fmj \n
 		</supplies>
 				
-#include "gameplay\character_criticals_3.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 	
@@ -242,7 +242,7 @@
 			device_torch \n
 		</supplies>
 			
-#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 
@@ -271,7 +271,7 @@
 			device_torch \n
 		</supplies>
 
-#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 
@@ -299,7 +299,7 @@
 			device_torch \n
 		</supplies>
 
-#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 
@@ -327,7 +327,7 @@
 			device_torch \n
 		</supplies>
 
-#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 
@@ -355,7 +355,7 @@
 			device_torch \n
 		</supplies>
 
-#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 
@@ -383,7 +383,7 @@
 			device_torch \n
 		</supplies>
 
-#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 
@@ -411,7 +411,7 @@
 			device_torch \n
 		</supplies>
 
-#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 
@@ -444,7 +444,7 @@
 			device_torch \n
 		</supplies>
 
-#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 
@@ -472,7 +472,7 @@
 			device_torch \n
 		</supplies>
 
-#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 
@@ -500,7 +500,7 @@
 			ammo_9x18_fmj = 1 \n
 		</supplies>
 			
-#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 
@@ -529,7 +529,7 @@
 			ammo_9x18_fmj = 1 \n
 		</supplies>
 
-#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 
@@ -557,7 +557,7 @@
 			ammo_9x18_fmj = 1 \n
 		</supplies>
 		
-#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 
@@ -592,7 +592,7 @@
 			device_torch \n
 		</supplies>
 
-#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 
@@ -620,7 +620,7 @@
 			device_torch \n
 		</supplies>
 
-#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 
@@ -651,7 +651,7 @@
 			device_torch \n
 		</supplies>
 
-#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 
@@ -681,7 +681,7 @@
 			device_torch \n
 		</supplies>
 
-#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 
@@ -711,7 +711,7 @@
 			device_torch \n
 		</supplies>
 
-#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 
@@ -740,7 +740,7 @@
 			device_torch \n
 		</supplies>
 
-#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 
@@ -770,8 +770,7 @@
 			device_torch \n
 		</supplies>
 
-#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 	
-

@@ -57,7 +57,7 @@
     </supplies>
 
 <start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_criticals_3.xml"	
+#include "gameplay\character_criticals.xml"	
 #include "gameplay\character_dialogs.xml"
 	</specific_character>	
 
@@ -115,7 +115,7 @@
 #include "gameplay\character_food.xml"
     </supplies> 
 
-#include "gameplay\character_criticals_5.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"   
     
   </specific_character>
@@ -147,7 +147,7 @@
 #include "gameplay\character_food.xml"
     </supplies> 
 
-#include "gameplay\character_criticals_5.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"   
     
   </specific_character>  
@@ -179,7 +179,7 @@
 #include "gameplay\character_food.xml"
     </supplies> 
 
-#include "gameplay\character_criticals_5.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"   
     
   </specific_character>  	
@@ -211,7 +211,7 @@
 #include "gameplay\character_drugs.xml"
 		</supplies>
 		
-#include "gameplay\character_criticals_5.xml"					
+#include "gameplay\character_criticals.xml"					
 #include "gameplay\character_dialogs.xml"
 	</specific_character> 
 
@@ -242,7 +242,7 @@
 #include "gameplay\character_drugs.xml"
 		</supplies>
 		
-#include "gameplay\character_criticals_5.xml"					
+#include "gameplay\character_criticals.xml"					
 #include "gameplay\character_dialogs.xml"
 	</specific_character> 	
 	
@@ -274,7 +274,7 @@
 #include "gameplay\character_food.xml"
     </supplies>   
 
-#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
     
   </specific_character>
@@ -307,7 +307,7 @@
 #include "gameplay\character_food.xml"
     </supplies>   
 
-#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
     
   </specific_character>	  
@@ -339,7 +339,7 @@
 #include "gameplay\character_food.xml"
     </supplies>   
 
-#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
     
   </specific_character>  
@@ -371,7 +371,7 @@
 #include "gameplay\character_food.xml"
     </supplies>   
 
-#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
     
   </specific_character>	
@@ -404,7 +404,7 @@
     </supplies>   
 
 <actor_dialog>parol_dialog</actor_dialog>	
-#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
     
   </specific_character>	  
@@ -436,7 +436,7 @@
 #include "gameplay\character_food.xml"
     </supplies>   
 
-#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
     
   </specific_character>		
@@ -469,7 +469,7 @@
 
 <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>	
 #include "gameplay\character_dialogs.xml"    
-#include "gameplay\character_criticals_5.xml"
+#include "gameplay\character_criticals.xml"
 </specific_character> 
 
 <!------------------------mazay--------------------------->  
@@ -502,7 +502,7 @@
 <actor_dialog>freeman_change</actor_dialog>	
 <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
 #include "gameplay\character_dialogs.xml"    
-#include "gameplay\character_criticals_5.xml"
+#include "gameplay\character_criticals.xml"
 </specific_character>
 
 <!------------------------grek--------------------------->  
@@ -533,7 +533,7 @@
 	
 <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>	
 #include "gameplay\character_dialogs.xml"    
-#include "gameplay\character_criticals_5.xml"
+#include "gameplay\character_criticals.xml"
 </specific_character>
 
 <!------------------------hunter1--------------------------->  
@@ -564,7 +564,7 @@
 
 <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>	
 #include "gameplay\character_dialogs.xml"    
-#include "gameplay\character_criticals_5.xml"
+#include "gameplay\character_criticals.xml"
 </specific_character>
 
 <!------------------------hunter2--------------------------->  
@@ -595,7 +595,7 @@
 		
 <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>		
 #include "gameplay\character_dialogs.xml"    
-#include "gameplay\character_criticals_5.xml"
+#include "gameplay\character_criticals.xml"
 </specific_character>
   
 <!--------------------------esc_podmoga1------------------------>
@@ -626,7 +626,7 @@
 
         </supplies>
 					
-#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 		
     </specific_character>  
@@ -659,7 +659,7 @@
 
         </supplies>
 					
-#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 		
     </specific_character>   
@@ -692,7 +692,7 @@
 
         </supplies>
 					
-#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 		
     </specific_character>   
@@ -726,7 +726,7 @@
         </supplies>
 	
 <start_dialog>hello_dialog</start_dialog>					
-#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 		
     </specific_character>  
@@ -1424,7 +1424,7 @@
 		</supplies>
 
 <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>		
-#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 
 	</specific_character>
@@ -1459,7 +1459,7 @@
 		
 <start_dialog>hello_dialog</start_dialog>
 <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>					
-#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>	
 
@@ -1494,7 +1494,7 @@
 		
 <start_dialog>hello_dialog</start_dialog>
 <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>					
-#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 		
     </specific_character>	
@@ -1528,7 +1528,7 @@
 		
 <start_dialog>hello_dialog</start_dialog>	
 <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>				
-#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 		
     </specific_character>	
@@ -1565,7 +1565,7 @@
 		</supplies>
 
 <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>		
-#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 
 	</specific_character>	
@@ -1602,7 +1602,7 @@
 		
 <start_dialog>hello_dialog</start_dialog>
 <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>					
-#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
 
@@ -1639,7 +1639,7 @@
 		</supplies>
 
 <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>		
-#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 
 	</specific_character>	
@@ -1674,7 +1674,7 @@
 		
 <start_dialog>hello_dialog</start_dialog>
 <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>					
-#include "gameplay\character_criticals_2.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
 	
@@ -1743,7 +1743,7 @@
 		
 <start_dialog>hello_dialog</start_dialog>
 <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>					
-#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
 
@@ -1777,7 +1777,7 @@
 		
 <start_dialog>hello_dialog</start_dialog>
 <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>					
-#include "gameplay\character_criticals_3.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>	
 
@@ -1812,7 +1812,7 @@
 <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
 <actor_dialog>pruha_start_dialog</actor_dialog>	
 <actor_dialog>pruha_trade_dialog</actor_dialog>				
-#include "gameplay\character_criticals_1.xml"
+#include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>	
 
