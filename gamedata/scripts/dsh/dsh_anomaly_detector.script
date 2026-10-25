@@ -7,9 +7,12 @@ local excluded_npc = {
 }
 
 local invisible_npc = {
+    -- квестовые NPC: зоны не бьют (visible_for_zones=false, см. _g.script) и детектор аномалий выключен
     ["dunya"] = true,
     ["stalker_zub"] = true,
-    ["stalker_sniper"] = true
+    ["stalker_sniper"] = true,
+    ["stalker_new"] = true,
+    ["brityi"] = true
 }
 
 local excluded_comms = {
@@ -17,6 +20,11 @@ local excluded_comms = {
 }
 
 local excluded_locations = {}
+
+local function is_invisible_npc(obj)
+    return invisible_npc[obj:profile_name()]
+        or invisible_npc[obj:name()]
+end
 
 function attach(sm)
     sm:subscribe({signal = "on_after_blowout",      fun = this.on_after_blowout})
@@ -31,7 +39,7 @@ local mobs = {}
 function on_monster_spawn(obj, binder)
     if not obj:alive() then return end
 
-    if obj:story_id() == story_ids.dog_povodyr then
+    if obj:story_id() == story_ids.aver_pseudodog_povodyr then
         set_anomaly_invisibility(obj, true)
     end
 end
@@ -41,17 +49,21 @@ function on_npc_spawn(obj, binder)
     binder = binder or obj:binded_object()
 
     local anomaly_detector = obj:get_custom_monster():anomaly_detector()
+
+    if is_invisible_npc(obj) then
+        set_anomaly_invisibility(obj, true)
+        if binder then
+            binder[script_name() .. ".anomaly_invisibility"] = true
+        end
+        anomaly_detector:deactivate(true)
+        return
+    end
+
     if (excluded_npc[obj:profile_name()]
     or excluded_npc[obj:name()]
     or excluded_npc[obj:story_id()]
     or excluded_comms[obj:character_community()]
     or excluded_locations[level.name()]) then
-        if (invisible_npc[obj:profile_name()]
-        or invisible_npc[obj:name()]
-        or invisible_npc[obj:story_id()]) then
-            set_anomaly_invisibility(obj, true)
-            binder[script_name() .. ".anomaly_invisibility"] = true
-        end
         anomaly_detector:deactivate(true)
         return
     end
@@ -59,7 +71,9 @@ function on_npc_spawn(obj, binder)
     if obj:character_community() == "ecolog" or obj:story_id() == story_ids.vasil2 then
         -- log3("--[%s] set_anomaly_invisibility for [%s] comm: [%s]", script_name(), obj:name(), obj:character_community())
         set_anomaly_invisibility(obj, true)
-        binder[script_name() .. ".anomaly_invisibility"] = true
+        if binder then
+            binder[script_name() .. ".anomaly_invisibility"] = true
+        end
     end
 
     if not ENABLE_AD then return end
@@ -72,7 +86,7 @@ end
 
 function on_death(obj)
     local binder = obj:binded_object()
-    if binder[script_name() .. ".anomaly_invisibility"] then
+    if binder and binder[script_name() .. ".anomaly_invisibility"] then
         set_anomaly_invisibility(obj, false)
         binder[script_name() .. ".anomaly_invisibility"] = nil
     end

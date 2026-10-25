@@ -1,14 +1,29 @@
--- задаётся в start_game_callback
-ai = nil
+INVALID_STORY_ID = 4294967295
+NO_ACTIVE_SLOT = 255
 sys_ini = system_ini()
-math_random = math.random
+level_object = level.object_by_id
+
+
+voice = xr_sound.get_safe_sound_object
+sms = news_manager.send_tip
 sms2 = amk.send_tip
 translate = game.translate_string
 g_inv_name = news_manager.get_inv_name
+gt_inv_name = news_manager.gett_inv_name
+
+g_time_factor = sys_ini:r_float("alife", "time_factor")
+g_switch_distance = sys_ini:r_float("alife", "switch_distance")
+
+
 map_add = level.map_add_object_spot
 map_adds = level.map_add_object_spot_ser
 map_has = level.map_has_object_spot
---*********************************************************************************************************
+map_chg = level.map_change_spot_hint
+
+
+ai = nil
+
+math_random = math.random--*********************************************************************************************************
 --==============================================================================================
 log1("--LUA version: ["..(jit.version or _VERSION).."]")
 --==============================================================================================
@@ -1531,7 +1546,7 @@ ammo_section["ammo_5.56x45_ap"]   = true
 ammo_section["ammo_5.7x28_fmj"]   = true
 ammo_section["ammo_5.7x28_ap"]    = true
 ammo_section["ammo_7.62x54_7h1"]  = true
-ammo_section["ammo_7.62x54_ap"]   = true
+ammo_section["ammo_7.62x54_7h1"]   = true
 ammo_section["ammo_7.62x54_7h14"] = true
 ammo_section["ammo_9x39_pab9"]    = true
 ammo_section["ammo_gauss"]      = true
@@ -1635,4 +1650,41 @@ end
 -- получение статуса невидимости сталкера со стороны аномалий
 function get_anomaly_invisibility(npc)
 	return not npc:get_custom_monster().visible_for_zones
+end
+function get_line_exist(section, param, ini_file)
+	local ini = ini_file or sys_ini
+	return section and ini:section_exist(section) and ini:line_exist(section, param)
+end
+
+function get_float(section, param, def_val, ini_file)
+	local ini = ini_file or sys_ini
+	if get_line_exist(section, param, ini) then
+		return ini:r_float(section, param)
+	else
+		if def_val == nil and debug_ini then
+			log3("get_float section: %s, param %s' doesn't exist", section, param)
+		end
+		return def_val
+	end
+end
+
+function get_bool(section, param, def_val, ini_file)
+	local ini = ini_file or sys_ini
+	if get_line_exist(section, param, ini) then
+		return ini:r_bool(section, param)
+	else
+		if def_val == nil and debug_ini then
+			log3("get_bool section: %s, param %s' doesn't exist", section, param)
+		end
+		return not (not def_val)
+	end
+end
+
+function split_comma_separated_list(s)
+	return string.explode(",", s)
+end
+
+math.clamp = function( n, min, max )
+	if min>max then min,max=max,min end
+	return (n>max and max) or (n<min and min) or n
 end

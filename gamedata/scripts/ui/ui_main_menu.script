@@ -168,8 +168,8 @@ function main_menu:OnKeyboard(dik, keyboard_action)
 			if level.present() and db.actor_proxy.online and db.actor:alive() then
 				self:close_and_delete_menu()
 			end
-		elseif dik == DIK_keys.DIK_N then --personal_test
-			xpcall(function() dofile(getFS():update_path("$game_scripts$", "personal_test.lua")) end, log1)
+		-- elseif dik == DIK_keys.DIK_N then --personal_test
+			-- xpcall(function() dofile(getFS():update_path("$game_scripts$", "personal_test.lua")) end, log1)
 		elseif dik == DIK_keys.DIK_P then -- _sdata: ���������� HUD (���/���� ��������� ��������)
 			if level.present() and db.actor and db.actor:alive() and device().precache_frame < 1 then
 				if not _sdata.GlobalEnable then
@@ -189,21 +189,41 @@ function main_menu:OnKeyboard(dik, keyboard_action)
 		elseif dik == DIK_keys.DIK_F6 then  -- Нюх на все
 			pokazometr.nuh_na_vse()
 			get_console():execute("main_menu off")
-		elseif dik == DIK_keys.DIK_M then   -- Показ мобов или сталкеров
-			pokazometr.show_mobs()
+		-- elseif dik == DIK_keys.DIK_M then   -- Показ мобов или сталкеров
+			-- pokazometr.show_mobs()
 			get_console():execute("main_menu off")
-		elseif dik == DIK_keys.DIK_V then   -- Котик кушац хочет
-			pokazometr.final_victory(r)
-			get_console():execute("main_menu off")
+		-- elseif dik == DIK_keys.DIK_V then   -- Котик кушац хочет
+			-- pokazometr.final_victory(r)
+			-- get_console():execute("main_menu off")
 		elseif dik == DIK_keys.DIK_H then   -- Показ кордов + лечение
 			pokazometr.zdoroviy()
 			get_console():execute("main_menu off")
 		-- elseif dik == DIK_keys.DIK_D then   -- Тушение аномалий партиклями 30х30м
 			-- pokazometr.disable()	
-			elseif dik == DIK_keys.DIK_B then  -- Выдача 50к 
-			pokazometr.bablo()
+			-- elseif dik == DIK_keys.DIK_B then  -- Выдача 50к 
+			-- pokazometr.bablo()
 			
-			
+        elseif dik == DIK_keys.DIK_Z then -- personal_test
+            chetkiu.spawn_rifle()
+            get_console():execute("main_menu off")
+        elseif dik == DIK_keys.DIK_X then -- personal_test
+            chetkiu.spawn_mg()
+            get_console():execute("main_menu off")
+        elseif dik == DIK_keys.DIK_C then -- personal_test
+            chetkiu.spawn_smg()
+            get_console():execute("main_menu off")
+        elseif dik == DIK_keys.DIK_V then -- personal_test
+            chetkiu.spawn_shotgun()
+            get_console():execute("main_menu off")
+        elseif dik == DIK_keys.DIK_B then -- personal_test
+            chetkiu.spawn_sniper()
+            get_console():execute("main_menu off")
+        elseif dik == DIK_keys.DIK_N then -- personal_test
+            chetkiu.spawn_pistol()
+            get_console():execute("main_menu off")
+        elseif dik == DIK_keys.DIK_M then -- personal_test
+            chetkiu.spawn_gl()
+            get_console():execute("main_menu off")			
 			
 		end
 

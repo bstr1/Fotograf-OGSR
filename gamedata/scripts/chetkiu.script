@@ -1,0 +1,134 @@
+-- ØÒÓĞÌÎÂÛÅ
+function spawn_rifle()
+amk.spawn_item_in_inv("wpn_ak12") -- ÀÊ-12 îáğ. 2012 ã.
+amk.spawn_item_in_inv("wpn_ak74") -- ÀÊÑ-74Í
+amk.spawn_item_in_inv("wpn_ak74u") -- ÀÊÑ-74Ó
+amk.spawn_item_in_inv("wpn_ak103") -- AK-103
+amk.spawn_item_in_inv("wpn_ak74u_snag") -- ÀÊ-105 «Òàêòèê»
+amk.spawn_item_in_inv("wpn_abakan") -- ÀÍ-94
+amk.spawn_item_in_inv("wpn_val") -- ÀÑ «Âàë»
+amk.spawn_item_in_inv("wpn_ash12") -- ÀØ-12
+amk.spawn_item_in_inv("wpn_groza") -- ÎÖ-14 «Ãğîçà»
+amk.spawn_item_in_inv("wpn_groza_nimble") -- ÎÖ-14 «Øòîğì»
+amk.spawn_item_in_inv("wpn_val_nimble") -- ÑĞ-3Ì «Âèõğü»
+amk.spawn_item_in_inv("wpn_mdr") -- DT MDR
+amk.spawn_item_in_inv("wpn_l85") -- Enfield L85A2
+amk.spawn_item_in_inv("wpn_fn2000") -- FN F2000
+amk.spawn_item_in_inv("wpn_fn2000_nimble") -- FN F2000 Tactical
+amk.spawn_item_in_inv("wpn_galil") -- Galil ACE 22
+amk.spawn_item_in_inv("wpn_galil31") -- Galil ACE 31
+amk.spawn_item_in_inv("wpn_sig550_luckygun") -- H&K416 A5
+amk.spawn_item_in_inv("wpn_g36") -- H&K G36E
+amk.spawn_item_in_inv("wpn_lr300") -- M4A1
+amk.spawn_item_in_inv("wpn_sa58") -- SA-58
+amk.spawn_item_in_inv("wpn_scarh") -- SCAR-H
+amk.spawn_item_in_inv("wpn_sig550") -- SIG SG 552
+amk.spawn_item_in_inv("wpn_aug") -- Steyr AUG A1
+amk.spawn_item_in_inv("wpn_aug_a3") -- Steyr AUG A3
+end
+
+-- ÏÓËÅÌ¨ÒÛ
+function spawn_mg()
+amk.spawn_item_in_inv("wpn_pkm") -- ÏÊÌ
+amk.spawn_item_in_inv("wpn_pkm_zulus") -- ÏÊÌ «Âèñò»
+amk.spawn_item_in_inv("wpn_rpk") -- ĞÏÊ
+amk.spawn_item_in_inv("wpn_rpk16") -- ĞÏÊ-16
+amk.spawn_item_in_inv("wpn_rpk74") -- ĞÏÊ-74
+amk.spawn_item_in_inv("wpn_rpk74m") -- ĞÏÊ-74(Ï)
+amk.spawn_item_in_inv("wpn_g36_nimble") -- H&K MG36
+amk.spawn_item_in_inv("wpn_m249") -- FN M249 SAW
+end
+
+-- ÏÈÑÒÎËÅÒÛ-ÏÓËÅÌ¨ÒÛ
+function spawn_smg()
+amk.spawn_item_in_inv("wpn_bizon") -- ÏÏ-19 «Áèçîí»
+amk.spawn_item_in_inv("wpn_vityaz") -- ÏÏ-19 «Âèòÿçü»
+amk.spawn_item_in_inv("wpn_sr2m") -- ÑĞ-2ÌÏ «Âåğåñê»
+amk.spawn_item_in_inv("wpn_mp9") -- B&T MP9
+amk.spawn_item_in_inv("wpn_mp5") -- H&K MP5A5
+amk.spawn_item_in_inv("wpn_mp5_nimble") -- H&K UMP45
+amk.spawn_item_in_inv("wpn_p90") -- FN P90
+amk.spawn_item_in_inv("wpn_vector") -- TDI Kriss Vector
+end
+
+-- ÄĞÎÁÎÂÈÊÈ
+function spawn_shotgun()
+amk.spawn_item_in_inv("wpn_protecta_nimble") -- AA-12
+amk.spawn_item_in_inv("wpn_protecta") -- Armsel Protecta
+amk.spawn_item_in_inv("wpn_spas12_nimble") -- Benelli M4
+amk.spawn_item_in_inv("wpn_b725") -- Browning B725
+amk.spawn_item_in_inv("wpn_wincheaster1300") -- Mossberg 590
+amk.spawn_item_in_inv("wpn_wincheaster1300_trapper") -- Remington M870
+amk.spawn_item_in_inv("wpn_spas12") -- SPAS-12
+amk.spawn_item_in_inv("wpn_usas12") -- USAS-12
+amk.spawn_item_in_inv("wpn_saiga12") -- Ñàéãà-12Ê
+amk.spawn_item_in_inv("wpn_saiga12m") -- Ñàéãà-12Ì
+amk.spawn_item_in_inv("wpn_mp133") -- ÌĞ-133
+amk.spawn_item_in_inv("wpn_mp153") -- ÌĞ-153
+amk.spawn_item_in_inv("wpn_mp43") -- MP-43
+amk.spawn_item_in_inv("wpn_mts255") -- ÌÖ-255
+amk.spawn_item_in_inv("wpn_toz34") -- ÒÎÇ-34
+amk.spawn_item_in_inv("wpn_bm16_full") -- ÒÎÇ-66
+end
+
+-- ÑÍÀÉÏÅĞÑÊÈÅ
+function spawn_sniper()
+amk.spawn_item_in_inv("wpn_mosin") -- Âèíòîâêà Ìîñèíà
+amk.spawn_item_in_inv("wpn_vpo101") -- ÂÏÎ-101
+amk.spawn_item_in_inv("wpn_vintorez") -- ÂÑÑ «Âèíòîğåç»
+amk.spawn_item_in_inv("wpn_vintorez_nimble") -- ÂÑÑÌ
+amk.spawn_item_in_inv("wpn_gauss") -- Ãàóññ-ïóøêà
+amk.spawn_item_in_inv("wpn_dvl_10") -- ÄÂË-10 Ì1
+amk.spawn_item_in_inv("wpn_svd") -- ÑÂÄ
+amk.spawn_item_in_inv("wpn_svd_nimble") -- ÑÂÄ-Ñ
+amk.spawn_item_in_inv("wpn_svu") -- ÑÂÓ
+amk.spawn_item_in_inv("wpn_svu_nimble") -- ÑÂÓ-À
+amk.spawn_item_in_inv("wpn_sv98") -- ÑÂ-98
+amk.spawn_item_in_inv("wpn_sv98m") -- ÑÂ-98Ì
+amk.spawn_item_in_inv("wpn_sks") -- ÑÊÑ
+amk.spawn_item_in_inv("wpn_awm") -- AWM-F
+amk.spawn_item_in_inv("wpn_g28") -- H&K G28
+amk.spawn_item_in_inv("wpn_m700") -- Remington M700
+amk.spawn_item_in_inv("wpn_sig550_sniper") -- SIG SG 550 Sniper
+amk.spawn_item_in_inv("wpn_wa2000") -- Walther WA2000
+end
+
+-- ÏÈÑÒÎËÅÒÛ
+function spawn_pistol()
+amk.spawn_item_in_inv("wpn_pm_actor") -- ÀÏÁ
+amk.spawn_item_in_inv("wpn_pb") -- ÏÁ
+amk.spawn_item_in_inv("wpn_pm") -- ÏÌ
+amk.spawn_item_in_inv("wpn_fort") -- Ôîğò-12
+amk.spawn_item_in_inv("wpn_fort_snag") -- ÎÖ-33 «Ïåğíà÷»
+amk.spawn_item_in_inv("wpn_sr1m") -- ÑĞ-1ÌÏ «Ãşğçà»
+amk.spawn_item_in_inv("wpn_tt33") -- ÒÒ-33
+amk.spawn_item_in_inv("wpn_rsh12") -- ĞØ-12
+amk.spawn_item_in_inv("wpn_beretta") -- Beretta M9A1
+amk.spawn_item_in_inv("wpn_hpsa") -- CZ 75B
+amk.spawn_item_in_inv("wpn_colt1911") -- Colt M1911
+amk.spawn_item_in_inv("wpn_coltm45a1") -- Colt M45A1
+amk.spawn_item_in_inv("wpn_desert_eagle") -- Desert Eagle
+amk.spawn_item_in_inv("wpn_fiveseven") -- FN Five-seveN
+amk.spawn_item_in_inv("wpn_usp_nimble") -- FN FNX-45
+amk.spawn_item_in_inv("wpn_glock") -- Glock 17
+amk.spawn_item_in_inv("wpn_glock18") -- Glock 18ñ
+amk.spawn_item_in_inv("wpn_usp") -- H&K USP45
+amk.spawn_item_in_inv("wpn_sig220") -- SIG Sauer P220
+amk.spawn_item_in_inv("wpn_sig220_nimble") -- SIG Sauer P220R
+amk.spawn_item_in_inv("wpn_taurus") -- Taurus Raging Bull
+amk.spawn_item_in_inv("wpn_walther") -- Walther P99
+end
+
+-- ÃĞÀÍÎÒÎÌ¨ÒÛ
+function spawn_gl()
+amk.spawn_item_in_inv("wpn_rg6") -- ĞÃ-6
+amk.spawn_item_in_inv("wpn_rgm40") -- ĞÃÌ-40
+amk.spawn_item_in_inv("wpn_rpg7") -- ĞÏÃ-7
+amk.spawn_item_in_inv("wpn_m320") -- M320
+end
+
+-- amk.spawn_item_in_inv("wpn_addon_grenade_launcher") -- ÃÏ-25
+-- amk.spawn_item_in_inv("wpn_addon_grenade_launcher_ag36") -- AG36
+-- amk.spawn_item_in_inv("wpn_addon_grenade_launcher_gl1") -- FN GL1
+-- amk.spawn_item_in_inv("wpn_addon_grenade_launcher_l123a2") -- L123A2 UGL
+-- amk.spawn_item_in_inv("wpn_addon_grenade_launcher_m203") -- M203

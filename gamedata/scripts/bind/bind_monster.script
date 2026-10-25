@@ -36,12 +36,46 @@ function generic_object_binder:reinit()
 	self.object:set_callback(callback.patrol_path_in_point, self.waypoint_callback, self)
 	self.object:set_callback(callback.hit,					self.hit_callback,		self)
 	self.object:set_callback(callback.death,				self.death_callback,	self)
+	
+	self.object:set_callback(callback.use_object, self.use_callback, self)
+end
+
+-- ОП-2: Добавлен калбек на юзанье монстра, а также для всех монстров подключена схема on_use.
+-- Cхема on_use не подключена для класса script_trader (Василий и Сидорович) для обратной совместимости.
+function generic_object_binder:use_callback(obj, who)
+	-- fly.returner_clear_pos()
+
+	if self.object:clsid() == clsid.script_trader then return end
+
+	if self.object:alive() then
+		if self.st.active_section then
+			xr_logic.issue_event(self.object, self.st[self.st.active_scheme], "use_callback", obj, who)
+		end
+		if (has_info("cat_kulon_start") and not has_info("cat_kulon_have")) and (self.object:section() == "cat_quest" or self.object:section() == "cat_kulon") then
+			self.object:kill(self.object)
+			-- if map_has(self.object:id(), "crlc_big") then
+				-- map_rem(self.object:id(), "crlc_big")
+			-- end
+		end
+	else
+		-- if dsh_rukzak.check_used_rucksak() or db.actor:is_talking() then return end
+		if db.actor:is_talking() then return end
+		monster_parts.on_monster_use(obj, who) -- обыск трупа
+	end
 end
 
 prevent_gulag_registration_for_id=0
 
 function generic_object_binder:update(delta)
 	object_binder.update(self, delta)
+
+	if not self.object:alive() then
+		if self.object:object_count() == 0 then
+			self.object:set_tip_text("empty_corpse")
+		else
+			self.object:set_tip_text_default()
+		end
+	end
 
 		if particles[self.object:id()] and table.getn(particles[self.object:id()])>0 then
 			for kk,vv in pairs(particles[self.object:id()]) do
@@ -408,6 +442,7 @@ function generic_object_binder:net_destroy()
 		end
 	end
 	amk.on_monster_go_offline(self.object)
+	self.object:set_callback(callback.use_object, nil)
 	dsh_anomaly_detector.on_death(self.object)
 	self.object:set_callback(callback.death,				nil)
 	self.object:set_callback(callback.patrol_path_in_point, nil)

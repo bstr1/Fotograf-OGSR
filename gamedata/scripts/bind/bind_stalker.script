@@ -105,6 +105,9 @@ function actor_binder:net_destroy()
     self.object:set_callback(callback.use_object, nil)
 
     self.object:set_callback(callback.on_level_map_click, nil)
+    self.object:set_callback(callback.on_mouse_wheel, nil)
+    self.object:set_callback(callback.on_cell_item_focus, nil)
+    self.object:set_callback(callback.on_cell_item_focus_lost, nil)
     -- end of addition
     if sr_psy_antenna.psy_antenna then
         sr_psy_antenna.psy_antenna:destroy()
@@ -145,6 +148,9 @@ function actor_binder:reinit()
 	self.object:set_callback( callback.use_object, self.on_use_object, self )
     self.object:set_callback(callback.on_level_map_click, self.on_level_map_click, self)
     -- end of addition
+    self.object:set_callback(callback.on_mouse_wheel, self.on_wheel_rotation, self)
+    self.object:set_callback(callback.on_cell_item_focus, self.on_cell_item_focus, self)
+    self.object:set_callback(callback.on_cell_item_focus_lost, self.on_cell_item_focus_lost, self)
 end
 -- added by boryan67
 ----------------------------------------------------------------------------------------------------------------------
@@ -398,6 +404,9 @@ function actor_binder:update(delta)
     if bind_photo and bind_photo.update_photo_from_actor then
         bind_photo.update_photo_from_actor(delta)
     end
+
+    -- DEBUG slowdown
+    --  slowdown.update()
 
     local time = time_global()
 
@@ -763,6 +772,18 @@ end
 
 function actor_binder:on_key_hold(key, bind)
     self.am:call("on_key_hold", key, bind)
+end
+
+function actor_binder:on_wheel_rotation(vol)
+    self.am:call("on_wheel", vol)
+end
+
+function actor_binder:on_cell_item_focus(obj)
+    self.am:call("on_cell_item_focus", obj)
+end
+
+function actor_binder:on_cell_item_focus_lost(obj)
+    self.am:call("on_cell_item_focus_lost", obj)
 end
 
 function actor_binder:on_use_object( obj )

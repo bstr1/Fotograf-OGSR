@@ -1,0 +1,829 @@
+
+
+local kScreen = math.min((1024 / 768) / (device().width / device().height), 1)
+local cell_size = 25		-- размер иконки в описании свойств предмета
+local vert_interval = 2		-- параметр vert_interval в скролле
+
+local shift_show_descr = 700  -- через какое время после наведения курсора будет показано окно, ms
+
+local color_default = {255, 255, 255, 255}
+local color_gray = {255, 160, 160, 160}
+local color_green = {255, 3, 252, 69}
+local color_red = {255, 252, 3, 32}
+
+local is_grenade={
+	[clsid.wpn_grenade_f1]		= true,
+	[clsid.wpn_grenade_fake]	= true,
+	[clsid.wpn_grenade_rgd5]	= true,
+	[clsid.wpn_grenade_rpg7]	= true,
+	[clsid.wpn_ammo_m209]		= true,
+	[clsid.wpn_ammo_vog25]		= true,
+	[clsid.wpn_ammo_og7b]		= true
+}
+
+-- Пушки, для которых дополнительное описание не пишем
+local forbidden_wpns = {
+	["wpn_binoc"]       = true,		-- бинокль
+}
+
+local forbidden_ammo = {
+	["ammo_vog-25"]		= true,
+	["ammo_vog-25p"]	= true,
+	["ammo_m209"]		= true,
+	["ammo_og-7b"]	    = true,
+}
+
+-- Параметры актёра, по которым считаются некоторые параметры артефактов или костюмов
+local conditions = {
+	bleeding_restore_speed	= get_float("actor_condition", "wound_incarnation_v"),
+	health_restore_speed	= get_float("actor_condition", "satiety_health_v"),
+	power_restore_speed		= get_float("actor_condition", "satiety_power_v") * 100,
+	satiety_restore_speed	= get_float("actor_condition", "satiety_v"),
+	radiation_restore_speed	= get_float("actor_condition", "radiation_v") * 100
+}
+
+-- параметры костюмов и артов
+local conditions_params = 
+{
+	{ prop = "health_restore_speed",		text = string.format("%s", game.translate_string("ui_inv_health")),				tex = "health"		},
+	{ prop = "bleeding_restore_speed",		text = string.format("%s", game.translate_string("ui_inv_bleeding")),	    	tex = "bleeding"	},
+	{ prop = "satiety_restore_speed",		text = string.format("%s", game.translate_string("ui_inv_satiety")),			tex = "satiety"		},
+	{ prop = "power_restore_speed",			text = string.format("%s", game.translate_string("ui_inv_power")),	    		tex = "power"		},
+	{ prop = "radiation_restore_speed",		text = string.format("%s", game.translate_string("ui_inv_radiation")),			tex = "radiation"	},
+}
+
+-- Типы хитов и соответствующие им текстуры и названия
+local hit_types = 
+{
+	{ prop = "burn",						text = string.format("%s", game.translate_string("ui_inv_outfit_burn_protection")),				},
+	{ prop = "shock",						text = string.format("%s", game.translate_string("ui_inv_outfit_shock_protection")),	        },
+	{ prop = "strike",						text = string.format("%s", game.translate_string("ui_inv_outfit_strike_protection")),	        },
+	{ prop = "wound",						text = string.format("%s", game.translate_string("ui_inv_outfit_wound_protection")),	        },
+	{ prop = "radiation",					text = string.format("%s", game.translate_string("ui_inv_outfit_radiation_protection")),	    },
+	{ prop = "telepatic",					text = string.format("%s", game.translate_string("ui_inv_outfit_telepatic_protection")),	    },
+	{ prop = "chemical_burn",				text = string.format("%s", game.translate_string("ui_inv_outfit_chemical_burn_protection")),	},
+	{ prop = "explosion",					text = string.format("%s", game.translate_string("ui_inv_outfit_explosion_protection")),	    },
+	{ prop = "fire_wound",					text = string.format("%s", game.translate_string("ui_inv_outfit_fire_wound_protection")),	    },
+}
+
+-- Параметры еды
+local eatable_params = 
+{
+	{ prop = "eat_health",					text = string.format("%s", game.translate_string("ui_inv_health")),				tex = "health"		},
+	{ prop = "wounds_heal_perc",			text = string.format("%s", game.translate_string("ui_inv_bleeding")),			tex = "bleeding"	},
+	{ prop = "eat_psy_health",				text = string.format("%s", game.translate_string("ui_inv_psy_health")),			tex = "telepatic"	},
+	{ prop = "eat_satiety",					text = string.format("%s", game.translate_string("ui_inv_satiety")),			tex = "satiety"		},
+	{ prop = "eat_power",					text = string.format("%s", game.translate_string("ui_inv_power")),	        	tex = "power"		},
+	{ prop = "eat_alcohol",					text = string.format("%s", game.translate_string("ui_inv_alcohol")),			tex = "alcohol"		},
+	{ prop = "eat_radiation",				text = string.format("%s", game.translate_string("ui_inv_radiation")),			tex = "radiation"	},
+}
+
+-- Параметры бустов
+local boost_params = 
+{
+	{ prop = "boost_health_restore",		text = string.format("%s", game.translate_string("ui_inv_health")),		    	tex = "health"		},
+	{ prop = "boost_bleeding_restore",		text = string.format("%s", game.translate_string("ui_inv_bleeding")),		    tex = "bleeding"	},
+	{ prop = "boost_psy_health_restore",	text = string.format("%s", game.translate_string("ui_inv_psy_health")),	    	tex = "telepatic"	},
+	{ prop = "boost_alcohol_restore",		text = string.format("%s", game.translate_string("ui_inv_alcohol")),	        tex = "alcohol"		},
+	{ prop = "boost_satiety_restore",		text = string.format("%s", game.translate_string("ui_inv_satiety")),	        tex = "satiety"		},
+	{ prop = "boost_telepat_protection",	text = string.format("%s", game.translate_string("ui_inv_outfit_telepatic_protection")),	tex = "telepatic"	},
+	{ prop = "boost_time_factor",			text = string.format("%s", game.translate_string("ui_inv_satiety")),			tex = "satiety"		},
+	{ prop = "boost_power_restore",			text = string.format("%s", game.translate_string("ui_inv_power")),				tex = "power"		},
+	{ prop = "boost_radiation_restore",		text = string.format("%s", game.translate_string("ui_inv_radiation")),			tex = "radiation"	},
+	{ prop = "boost_radiation_protection",	text = string.format("%s", game.translate_string("ui_inv_outfit_radiation_protection")),	tex = "radiation"	},
+	{ prop = "boost_fire_wound_protection",	text = string.format("%s", game.translate_string("ui_inv_outfit_fire_wound_protection")),	tex = "fire_wound"	},
+}
+
+local weapons_params = 
+{
+	{ prop = "hit_power",	                text = string.format("%s", game.translate_string("descr_damage")),				tex = "ui_inv_icon_fire_wound"		},
+	{ prop = "fire_distance",	            text = string.format("%s", game.translate_string("descr_distance")),			tex = "ui_inv_icon_fire_distance"	},
+	{ prop = "rpm",	                        text = string.format("%s", game.translate_string("descr_rate")),				tex = "ui_inv_icon_fire_rpm"		},
+	{ prop = "ammo_mag_size",	            text = string.format("%s", game.translate_string("descr_mag_size")),			tex = "ui_inv_icon_fire_size"		},
+}
+
+local script_params = 
+{
+	{ prop = "jump_speed",	                text = string.format("%s", game.translate_string("descr_jump")),				tex = "ui_inv_icon_jump"			},
+	{ prop = "sprint_koef",	            	text = string.format("%s", game.translate_string("descr_sprint_speed")),		tex = "ui_inv_icon_power"			},
+}
+
+--------------------------------------------------------------------------------------------------------
+class "CUIDescriptionWnd" (CUIScriptWnd)
+
+function CUIDescriptionWnd:__init(owner) super()
+	self.owner = owner
+
+	self.scrollPos = 0
+	self.k_icon = cell_size * kScreen / 50
+
+	self:Init(0, 0, 1024, 768)
+	self:SetAutoDelete(true)
+
+	self.xml = CScriptXmlInit()
+	self.xml:ParseFile("script_wnd\\ui_inv_descr.xml")
+
+	self.frame = self.xml:InitFrame("description", owner)
+
+	self.inv_name = self.xml:InitStatic("description:inv_name", self.frame)
+
+	self.scroll_v = self.xml:InitScrollView("description:scroll_v", self.frame)
+	self.scroll_height = self.scroll_v:GetHeight()
+	self.descr = self.xml:InitStatic("description:descr_list", nil)
+
+	self.cost = self.xml:InitStatic("description:cost_wnd", self.frame)
+	self.weight_static = self.xml:InitStatic("description:weight_wnd", self.frame)
+
+	self.cond_frame = self.xml:InitStatic("description:frame_condition", self.frame)
+	self.cond_scale = self.xml:InitProgressBar("description:condition_progress", self.cond_frame)
+
+	self.frame:Show(false)
+
+	self:subscribe()
+end
+
+function CUIDescriptionWnd:__finalize()
+end
+
+function CUIDescriptionWnd:subscribe()
+  if not subscribed then
+    subscribed = {
+      { signal = "on_cell_item_focus", fun = self.OnItemFocus, self = self },
+      { signal = "on_cell_item_focus_lost", fun = self.OnItemFocusLost, self = self },
+      { signal = "on_key_down", fun = self.OnKeyPress, self = self },
+      { signal = "on_wheel", fun = self.OnMouseWheel, self = self },
+      { signal = "on_update",  fun = self.OnUpdate, self = self },
+    }
+    local sm = ogsr_signals.get_mgr()
+    for _, s in ipairs( subscribed ) do
+      sm:subscribe( s )
+    end
+  end
+  self.itemInFocus = -1
+  self.keypressed = nil
+end
+
+function CUIDescriptionWnd:unsubscribe()
+  if subscribed then
+    local sm = ogsr_signals.get_mgr()
+    for _, s in ipairs( subscribed ) do
+      sm:unsubscribe( s )
+    end
+    subscribed = false
+  end
+  self.itemInFocus = -1
+  self.shift_tmr = nil
+  self.keypressed = nil
+  self.frame:Show(false)
+end
+
+function CUIDescriptionWnd:HideDescription()
+	if self.frame:IsShown() then self.frame:Show(false) end
+end
+
+function CUIDescriptionWnd:OnMouseWheel(mode)
+	if not self.frame:IsShown() then return end
+	if self.frame:GetHeight() < 768 then return end
+
+	local n = mode > 0 and -40 or 40 
+	local mx = self.scroll_v:GetMaxScrollPos()
+	if mx > self.scroll_height then mx = mx - self.scroll_height end
+	self.scrollPos = math.clamp(self.scrollPos + n, 0, mx)
+	self.scroll_v:SetScrollPos(self.scrollPos)
+end
+
+function CUIDescriptionWnd:ShowProps(tbl, separator)
+	local st
+	for i = 1, #tbl, 2 do
+		local a = tbl[i]
+		local b = tbl[i + 1]
+
+		st = self.xml:InitStatic("props", self.scroll_v)
+
+		local left = st:GetWidth() / 2
+
+		st.icon = self.xml:InitStatic("props:prop_texture_1", st)
+		st.icon:InitTexture("ui_inv_icon_"..a[1])
+		st.icon:SetColor(GetARGB(a[4][1], a[4][2], a[4][3], a[4][4]))
+
+		st.text_1_1 = CUIStatic()
+		st.text_1_1:Init(30, 0, separator and left or st:GetWidth(), 20)
+		st.text_1_1:SetTextComplexMode(true)
+		st.text_1_1:SetVTextAlign(CGameFont.valCenter)
+		st.text_1_1:SetTextAlign(CGameFont.alLeft)
+		st.text_1_1:SetText(a[2])
+		st:AttachChild(st.text_1_1)
+
+		st.text_1_2 = CUIStatic()
+		st.text_1_2:Init(0, 0, (separator and left or st:GetWidth()) - 10, 20)
+		st.text_1_2:SetTextComplexMode(true)
+		st.text_1_2:SetVTextAlign(CGameFont.valCenter)
+		st.text_1_2:SetTextAlign(CGameFont.alRight)
+		st.text_1_2:SetText(a[3])
+		st:AttachChild(st.text_1_2)
+
+		if b then
+			st.icon2 = self.xml:InitStatic("props:prop_texture_2", st)
+			st.icon2:InitTexture("ui_inv_icon_"..b[1])
+			st.icon2:SetColor(GetARGB(b[4][1], b[4][2], b[4][3], b[4][4]))
+
+			st.text_2_1 = CUIStatic()
+			st.text_2_1:Init(left + 25, 0, left, 20)
+			st.text_2_1:SetTextComplexMode(true)
+			st.text_2_1:SetVTextAlign(CGameFont.valCenter)
+			st.text_2_1:SetTextAlign(CGameFont.alLeft)
+			st.text_2_1:SetText(b[2])
+			st:AttachChild(st.text_2_1)
+
+			st.text_2_2 = CUIStatic()
+			st.text_2_2:Init(left - 10, 0, left, 20)
+			st.text_2_2:SetTextComplexMode(true)
+			st.text_2_2:SetVTextAlign(CGameFont.valCenter)
+			st.text_2_2:SetTextAlign(CGameFont.alRight)
+			st.text_2_2:SetText(b[3])
+			st:AttachChild(st.text_2_2)
+		end
+
+		self.addH = self.addH + st:GetHeight() + vert_interval
+	end
+
+	self:AddIndent(20)
+end
+
+function CUIDescriptionWnd:ShowPropFromIni(tbl, separator, type)
+	for i = 1, #tbl, 2 do
+		local a = tbl[i]
+		local b = tbl[i + 1]
+		local color = color_gray
+
+		local st = self.xml:InitStatic("props_ini", self.scroll_v)
+		st:SetHeight(cell_size)
+
+		local w = math.min(CIconParams(a).grid_width, 2) * 50
+		local ww = w * self.k_icon
+		local www = cell_size * 2
+
+		st.icon = CUIStatic()
+		st.icon:Init((www - ww) / 2, 0, ww, cell_size)
+		st:AttachChild(st.icon)
+		CIconParams(a):set_shader(st.icon)
+
+		www = www + 2
+		st.text = CUIStatic()
+		st:AttachChild(st.text)
+		st.text:Init(0, 0, separator and st:GetWidth() / 2 or st:GetWidth(), cell_size + 10)
+		st.text:SetTextComplexMode(true)
+		st.text:SetTextAlign(CGameFont.alRight)
+		st.text:SetTextY((cell_size / 2) - 8)
+		st.text:SetText(game.translate_string(news_manager.get_inv_name(a)))
+		if (type == "ammo" and a == get_cur_wpn_ammo_section(self.item)) 
+		or (type == "scope" and news_manager.get_inv_name(a) == news_manager.get_inv_name(get_string(self.section, "scope_name")))
+		or (type == "silencer" and ogse_wpn_utils.get_silencer_flag(self.item))
+		or (type == "grenade_launcher" and ogse_wpn_utils.get_grenade_launcher_flag(self.item)) then
+			color = color_green
+		end
+		st.text:SetTextColor(color[1], color[2], color[3], color[4])
+
+		local static = st.text:GetCUIStatic()
+		if static then
+			static:SetTextComplexMode(true)
+		end
+
+		if b then
+			color = color_gray
+			local left = st:GetWidth() / 2
+
+			w = math.min(CIconParams(b).grid_width, 2) * 50
+			ww = w * self.k_icon
+
+			st.icon2 = CUIStatic()
+			st.icon2:Init(left + (www - ww) / 2, 0, ww, cell_size)
+			st:AttachChild(st.icon2)
+			CIconParams(b):set_shader(st.icon2)
+
+			www = www + 2
+			st.text2 = CUIStatic()
+			st:AttachChild(st.text2)
+			st.text2:Init(left + 10, 0, st:GetWidth() / 2, cell_size + 10)
+			st.text2:SetTextComplexMode(true)
+			st.text2:SetTextAlign(CGameFont.alRight)
+			st.text2:SetTextY((cell_size / 2) - 8)
+			st.text2:SetText(game.translate_string(news_manager.get_inv_name(b)))
+			if (type == "ammo" and b == get_cur_wpn_ammo_section(self.item)) 
+			or (type == "scope" and news_manager.get_inv_name(b) == news_manager.get_inv_name(get_string(self.section, "scope_name")))
+			or (type == "silencer" and ogse_wpn_utils.get_silencer_flag(self.item))
+			or (type == "grenade_launcher" and ogse_wpn_utils.get_grenade_launcher_flag(self.item)) then
+				color = color_green
+			end
+			st.text2:SetTextColor(color[1], color[2], color[3], color[4])
+			--st.text2:SetTextColor(b == get_cur_wpn_ammo_section(self.item) and GetARGB(color_green) or GetARGB(color_default))
+
+			local static = st.text2:GetCUIStatic()
+			if static then
+				static:SetTextComplexMode(true)
+			end
+		end
+
+		self.addH = self.addH + cell_size + vert_interval
+	end
+
+	self:AddIndent(20)
+end
+
+function CUIDescriptionWnd:ShowDescription(item)
+	if not item then return end
+
+	if not self.owner then return end
+
+	self.scroll_v:Clear()
+
+	self.item = item
+	self.section = item:section()
+	self.condition = item:condition()
+
+	local inv_name = news_manager.get_inv_name(self.section)
+
+	self.addH = 0
+
+	local icon = CIconParams(self.section)
+
+	tx = icon.grid_x * 40
+	ty = icon.grid_y * 40
+	tw = icon.grid_width * 35
+	th = icon.grid_height * 40
+
+	local px = 170 - (tw / 2)
+	local py = 0 - icon.grid_height
+
+	local vert_add = th
+
+	if icon.grid_height < 2 then
+		vert_add = vert_add + (th / 2)
+	end
+
+	if icon.grid_height > 2 then
+		py = py + icon.grid_height
+	end
+
+	self:AddIndent(20)
+
+	self.icon_sect = CUIStatic()
+	self.icon_sect:SetWindowName("CUIStatic_icon")
+	--self.scroll_v:AddWindow(self.icon_sect, false)
+	local st = self.xml:InitStatic("props_ini", self.scroll_v)
+	st:SetHeight(vert_add)
+	st:AttachChild(self.icon_sect)
+	self.icon_sect:SetAutoDelete(false)
+	CIconParams(self.section):set_shader(self.icon_sect)
+	self.icon_sect:Init(px, py, tw, th)
+
+	self.addH = self.addH + vert_add
+	self:AddIndent(20)
+
+	local description = game.translate_string(sys_ini:r_string(self.section, "description"))
+
+	self.inv_name:SetTextST(inv_name)
+
+	self.descr:SetText(description)
+	self.descr:AdjustHeightToText()
+	self.scroll_v:AddWindow(self.descr, true)
+	self.descr:SetAutoDelete(false)
+	self.scroll_v:ScrollToBegin()
+	self.scrollPos = 0
+
+	self:AddIndent(20)
+
+	-- food
+	if item:is_eatable_item() then
+		self:ShowEatableParams()
+	-- weapon
+	elseif item:is_weapon_magazined() then
+		if not forbidden_wpns[self.section] then
+			self:ShowWeaponParams()
+		end
+	-- artefacts
+	elseif item:is_artefact() then
+		self:ShowAfParams()
+	-- outfits
+	elseif item:is_outfit() then
+		self:ShowOutfitParams()
+	-- knife
+	elseif item:is_knife() then
+		local d = get_float(self.section, "fire_distance", 0.0)
+		self:ShowProps({{"fire_distance", game.translate_string("descr_knife_distance"), string.format("%.2f %s", d, game.translate_string("descr_meters")), {255, 255, 255, 255}}}, false)
+	-- grenade
+	elseif item:is_grenade() then
+		local fr = get_float(self.section, "frags_r", 0.0)
+		local br =  get_float(self.section, "blast_r", 0.0)
+		self:ShowProps({{"explosion", game.translate_string("descr_radius"), string.format("%.1f %s", (fr + br) / 2, game.translate_string("descr_meters")), {255, 255, 255, 255}}}, false)
+	-- ammo
+	elseif item:is_ammo() and not item:is_grenade() then
+		if not forbidden_ammo[self.section] then
+			local kh = get_float(self.section, "k_hit", 0.0)
+			local bs = get_float(self.section, "buck_shot", 0.0)
+			self:ShowProps({{"hit_power", game.translate_string("descr_damage_ammo"), string.format("%.1f", kh * bs), {255, 255, 255, 255}}}, false)
+		end
+	end
+
+	self.weight_static:SetText(string.format("%s: %.2f %s", game.translate_string("descr_weight"), item:get_weight(), game.translate_string("descr_kg")) )
+	self.cost:SetText(string.format("%s: %d %s", game.translate_string("descr_cost"), get_actual_cost(item), game.translate_string("descr_rub")) )
+
+	if need_show_condition(item) then
+		self.cond_frame:Show(true)
+		self.cond_frame:SetText(string.format("%s: %.1f%%", game.translate_string("descr_condition"), self.condition*100))
+		self.cond_scale:SetProgressPos(self.condition * 100)
+		self.weight_static:SetWndPos(206, 59)
+		self.weight_static:SetTextAlign(CGameFont.alRight)
+	else
+		self.weight_static:SetWndPos(10, 39)
+		self.weight_static:SetTextAlign(CGameFont.alLeft)
+		self.cond_frame:Show(false)
+	end
+
+	local hh = self.descr:GetHeight() + self.addH
+	if hh < 678 then
+		self.frame:SetHeight(hh + 90)
+		self.scroll_work = nil
+	else
+		self.frame:SetHeight(768)
+		self.scroll_work = true
+	end
+
+	local cr = self.owner:GetMousePosX()
+	if cr >= 512 then cr = cr - self.frame:GetWidth()
+	else cr = cr + 40 end
+
+	self.frame:SetWndPos(cr, math.min(self.owner:GetMousePosY(), 768-self.frame:GetHeight()))
+
+	self.frame:Show(true)
+end
+
+-- Показываем параметры съедобных предметов
+function CUIDescriptionWnd:ShowEatableParams()
+	local params = {}
+	for i, t in ipairs(eatable_params) do
+		local val = get_float(self.section, t.prop, 0.0)
+		if val ~= 0.0 then
+			local txt = ""
+			local tex_color
+			if t.prop == "wounds_heal_perc" then
+				txt = val > 0.0 and "%c[green]" or "%c[red]+"
+				tex_color = val > 0.0 and color_green or color_red
+				val = -val
+			elseif t.prop == "eat_alcohol" or t.prop == "eat_radiation" then
+				txt = val > 0.0 and "%c[red]+" or "%c[green]"
+				tex_color = val < 0.0 and color_green or color_red
+			else
+				txt = val > 0.0 and "%c[green]+" or "%c[red]"
+				tex_color = val > 0.0 and color_green or color_red
+			end	
+			txt = txt .. string.format("%.0f", val * 100) .. (t.unit or "%")
+			table.insert(params, {t.tex, t.text, txt, tex_color})
+		end
+	end
+
+	local tm = has_alife_info("acv_nar") and get_float(self.section, "boost_time", 0) - 10.0 or get_float(self.section, "boost_time", 0)
+
+	for i, t in ipairs(boost_params) do
+		local val = get_float(self.section, t.prop, 0.0)
+		if val ~= 0.0 then
+			local txt = val > 0.0 and "%c[green]+" or "%c[red]"
+			local tex_color = val > 0.0 and color_green or color_red
+			if t.prop == "boost_radiation_restore" or t.prop == "boost_bleeding_restore" or t.prop == "boost_satiety_restore"then
+				txt = val > 0.0 and "%c[green]-" or "%c[red]+"
+				if t.prop == "boost_radiation_restore" or t.prop == "boost_satiety_restore" then
+					val = val * 10
+				end
+			end
+			val = string.find(t.prop, "restore") and val * tm or val
+			txt = txt .. string.format("%.0f", val * 100) .. (t.unit or "%")
+			table.insert(params, {t.tex, t.text, txt, tex_color})
+		end
+	end
+
+	if tm > 0 then
+		local txt = string.format("%.0f %s", tm, game.translate_string("descr_seconds"))
+		table.insert(params, {"time", game.translate_string("descr_time"), txt, {255, 0, 255, 0}})
+	end
+
+	if sys_ini:line_exist(self.section, "boost_max_weight") then
+		local val = get_float(self.section, "boost_max_weight", 0.0)
+		if val ~= 0.0 then
+			local txt = (val > 0.0 and "%c[green]+" or "%c[red]") .. string.format("%.0f %s", val, game.translate_string("descr_kg"))
+			local tex_color = val > 0.0 and color_green or color_red
+			table.insert(params, {"additional_weight", game.translate_string("descr_weight_power"), txt, tex_color})
+		end
+	end
+
+	if #params > 0 then
+		self:ShowProps(params, #params > 1)
+	end
+end
+
+-- Показываем описание оружия
+function CUIDescriptionWnd:ShowWeaponParams()
+	local params = {}
+	for i,t in ipairs(weapons_params) do
+		local txt = ""
+		local val = get_float(self.section, t.prop, 0.0)
+		if val ~= 0.0 then
+			if t.prop == "ammo_mag_size" then
+				txt = string.format("%d / %d", self.item:get_ammo_in_magazine(), val)
+			elseif t.prop == "hit_power" then
+				txt = string.format("%.1f", val)
+			elseif t.prop == "fire_distance" then
+				txt = string.format("%d %s", val, game.translate_string("descr_meters"))
+			elseif t.prop == "rpm" then
+				txt = string.format("%d %s", val, game.translate_string("descr_speed"))
+			else
+				txt = string.format("%d", val)
+			end
+			table.insert(params, {t.prop, t.text, txt, {255, 255, 255, 255}})
+		end
+	end
+
+	if #params > 0 then
+		self:ShowProps(params, #params > 1)
+	end
+
+	local st = self.xml:InitStatic("props", self.scroll_v)
+	local stH = st:GetHeight() + vert_interval
+	self.addH = self.addH + stH
+
+	st:SetText(string.format("%s", game.translate_string("descr_ammo_weapon")))
+	st:SetTextColor(255, 0, 255, 110)
+
+	-- Боеприпасы
+	local s = sys_ini:r_string(self.section, "ammo_class")
+	local tbl = split_comma_separated_list(s)
+	table.sort(tbl)
+
+	self:ShowPropFromIni(tbl, #tbl > 1, "ammo")
+
+	local n1 = get_u32(self.section, "scope_status")
+
+	-- Прицелы
+	if n1 == 2 then
+		st = self.xml:InitStatic("props", self.scroll_v)
+		st:SetText(sys_ini:line_exist(self.section, "scope_names") and game.translate_string("descr_scopes") or game.translate_string("descr_scope"))
+		st:SetTextColor(255, 0, 255, 110)
+		local stH = st:GetHeight() + vert_interval
+		self.addH = self.addH + stH
+		local tbl = split_comma_separated_list(sys_ini:r_string(self.section, "scope_names"))
+		table.sort(tbl)
+
+		self:ShowPropFromIni(tbl, #tbl > 1, "scope")
+	end
+
+	local n2 = get_u32(self.section, "silencer_status")
+
+	-- Глушитель
+	if n2 == 2 then
+		st = self.xml:InitStatic("props", self.scroll_v)
+		st:SetText(game.translate_string("descr_silencer"))
+		st:SetTextColor(255, 0, 255, 110)
+		local stH = st:GetHeight() + vert_interval
+		self.addH = self.addH + stH
+		local tbl = split_comma_separated_list(sys_ini:r_string(self.section, "silencer_name"))
+		table.sort(tbl)
+
+		self:ShowPropFromIni(tbl, #tbl > 1, "silencer")
+	end
+
+	local n3 = get_u32(self.section, "grenade_launcher_status")
+
+	-- Подствольник
+	if n3 == 2 then
+		st = self.xml:InitStatic("props", self.scroll_v)
+		st:SetText(game.translate_string("descr_pg"))
+		st:SetTextColor(255, 0, 255, 110)
+		local stH = st:GetHeight() + vert_interval
+		self.addH = self.addH + stH
+		local tbl = split_comma_separated_list(sys_ini:r_string(self.section, "grenade_launcher_name"))
+		table.sort(tbl)
+
+		self:ShowPropFromIni(tbl, #tbl > 1, "grenade_launcher")
+	end
+end
+
+-- Показываем параметры артефактов
+function CUIDescriptionWnd:ShowAfParams()
+	local params = {}
+
+	for i,t in ipairs(conditions_params) do
+		local val = get_float(self.section, t.prop, 0.0)
+		if val ~= 0 then
+			local txt = ""
+			val = val * 100 / conditions[t.prop]
+			local color = val > 0 and color_green or color_red
+			if t.prop == "bleeding_restore_speed" then
+				txt = val > 0 and "%c[green]" or "%c[red]+"
+				val = -val
+			elseif t.prop == "radiation_restore_speed" then
+				color = val > 0 and color_red or color_green
+				txt = val > 0 and "%c[red]+" or "%c[green]"
+			else
+				txt = val > 0 and "%c[green]+" or "%c[red]"
+			end
+			txt = txt .. string.format("%.0f", val) .. (t.unit or "%")
+			table.insert(params, {t.tex, t.text, txt, color})
+		end
+	end
+
+	local hit_absorbation_sect = sys_ini:r_string(self.section, "hit_absorbation_sect")
+	for i,t in ipairs(hit_types) do
+		local val = get_float(hit_absorbation_sect, t.prop.."_immunity", 0.0)
+		if val ~= 1 then
+			val = 100-val*100
+			local txt = (val < 0 and "%c[red]" or "%c[green]+") .. string.format("%.0f%%", val)
+			table.insert(params, {t.prop, t.text, txt, val > 0 and color_green or color_red})
+		end
+	end
+
+	if sys_ini:line_exist(self.section, "additional_inventory_weight2") then
+		local val = get_float(self.section, "additional_inventory_weight2", 0.0)
+		if val ~= 0 then
+			local txt = (val > 0 and "%c[green]+" or "%c[red]") .. string.format("%.0f %s", val, game.translate_string("descr_kg"))
+			table.insert(params, {"additional_weight", game.translate_string("descr_weight_power"), txt, val > 0 and color_green or color_red})
+		end
+	end
+
+	if #params > 0 then
+		self:ShowProps(params, #params > 1)
+	end
+end
+
+-- Показываем параметры костмов
+function CUIDescriptionWnd:ShowOutfitParams()
+	local outfit = db.actor:item_in_slot(6)
+	local params = {}
+	for i,t in ipairs(hit_types) do
+		local val = get_float(self.section, t.prop .. "_protection", 0.0)
+		val = math.floor(val * self.condition * 100 + 0.5)
+		if outfit and outfit:id() ~= self.item:id() then
+			local val2 = math.floor(get_float(outfit:section(), t.prop.."_protection", 0.0) * outfit:condition() * 100 + 0.5)
+			if val ~= 0.0 or val2 ~= 0.0 then
+				val2 = val - val2
+				local txt = (val < 0.0 and "%c[red]" or "%c[green]+") .. string.format("%.0f%%", val) .. "%c[gray2] | " .. (val2 < 0.0 and "%c[red]" or "%c[green]+") .. string.format("%.0f%%", val2)
+				table.insert(params, {t.prop, t.text, txt, val > 0 and color_green or color_red})
+			end
+		else
+			if val ~= 0.0 then
+				local txt = (val < 0.0 and "%c[red]" or "%c[green]+") .. string.format("%.0f%%", val)
+				table.insert(params, {t.prop, t.text, txt, val > 0 and color_green or color_red})
+			end
+		end
+	end
+
+	if sys_ini:line_exist(self.section, "additional_inventory_weight2") then
+		local val = get_float(self.section, "additional_inventory_weight2", 0.0)
+		if outfit and outfit:id() ~= self.item:id() then
+			local val2 = get_float(outfit:section(), "additional_inventory_weight2", 0.0)
+			if val ~= 0.0 or val2 ~= 0.0 then
+				val2 = val - val2
+				local txt = (val > 0 and "%c[green]+" or "%c[red]") .. string.format("%.0f %s", val, game.translate_string("descr_kg")) .. "%c[gray2] | " .. (val2 > 0 and "%c[green]+" or "%c[red]") .. string.format("%.0f %s", val2, game.translate_string("descr_kg"))
+				table.insert(params, {"additional_weight", game.translate_string("descr_weight_power"), txt, val > 0 and color_green or color_red})
+			end
+		else
+			if val ~= 0.0 then
+				local txt = (val > 0 and "%c[green]+" or "%c[red]") .. string.format("%.0f %s", val, game.translate_string("descr_kg"))
+				table.insert(params, {"additional_weight", game.translate_string("descr_weight_power"), txt, val > 0 and color_green or color_red})
+			end
+		end
+	end
+
+	for i,t in ipairs(script_params) do
+		local val = get_float(self.section, t.prop, 0.0)
+		if outfit and outfit:id() ~= self.item:id() then
+			local val2 = get_float(outfit:section(), t.prop, 0.0)
+			if val ~= 0.0 or val2 ~= 0.0 then
+				val2 = val - val2
+				local txt = (val < 0 and "%c[red]" or "%c[green]+") .. string.format("%.1f", val) .. "%c[gray2] | " .. (val2 < 0 and "%c[red]" or "%c[green]+") .. string.format("%.1f", val2)
+				table.insert(params, {t.prop, t.text, txt, val > 0 and color_green or color_red})
+			end
+		else
+			if val ~= 0.0 then
+				local txt = (val < 0 and "%c[red]" or "%c[green]+") .. string.format("%.1f", val)
+				table.insert(params, {t.prop, t.text, txt, val > 0 and color_green or color_red})
+			end
+		end
+	end
+
+	if #params > 0 then
+		self:ShowProps(params, #params > 1)
+	end
+end
+
+
+function CUIDescriptionWnd:Remove()
+	self:unsubscribe()
+	self.shift_tmr = nil
+	self.keypressed = nil
+	self.owner = nil
+end
+
+function CUIDescriptionWnd:OnItemFocus( obj )
+	self.itemInFocus = obj:id()
+
+	self.shift_tmr = time_global() + shift_show_descr
+end
+
+function CUIDescriptionWnd:OnItemFocusLost( obj )
+	if self.itemInFocus == obj:id() then
+		self.itemInFocus = nil
+	end
+	if not self.keypressed then
+		self:HideDescription()
+	end
+end
+
+function CUIDescriptionWnd:OnUpdate(delta) --Если сюда передали аргументом передали true - обновление будет форсировано.
+	if (not self.keypressed and self.shift_tmr and self.shift_tmr < time_global()) or delta == true then
+		if self.itemInFocus and (self.itemInFocus > 65535 or alife():object(self.itemInFocus)) then
+			self:ShowDescription(level.object_by_id(self.itemInFocus))
+		end
+		self.shift_tmr = nil
+	end
+end
+
+function CUIDescriptionWnd:OnKeyPress(key, bind)
+	if bind ~= key_bindings.kFOCUS then return end
+
+	if self.itemInFocus then
+		self:OnUpdate(true)
+		self.keypressed = true
+	else
+		self.keypressed = nil
+		self:HideDescription()
+	end
+end
+
+function need_show_condition(item)
+	local b = get_bool(item:section(), "inv_show_condition", false)
+	return b and (item:is_weapon() or item:is_outfit())
+end
+
+function get_cur_wpn_ammo_section(wpn)
+    local ammo_sect
+    if wpn:is_weapon() then
+        local ammo = dsh.get_ammo_sections(wpn)
+        ammo_sect = ammo.ammo_class[wpn:get_ammo_type() + 1]
+    end
+    return ammo_sect
+end
+
+function get_actual_cost(obj) -- костыль для расчета реально цеты айтема в окне торговли. не лутшее решение но в целом пойдет
+    local trade_wnd = level.get_trade_wnd()
+    if trade_wnd and trade_wnd:IsShown() then
+        local b_buying = obj:parent() and obj:parent():id() == db.actor:id()
+        local trader = level:get_second_talker()
+        if trader then
+            local cur_price = trader:calculate_item_price(obj, b_buying)
+            return cur_price
+        end
+    end
+    return obj:cost()
+end
+
+function CUIDescriptionWnd:AddIndent(size)
+	local st = self.xml:InitStatic("props", self.scroll_v)
+	local stH = st:GetHeight() + vert_interval
+	self.addH = self.addH + size
+	st:SetHeight(size)
+end
+
+local wnd = nil
+
+local function inventory_open()
+    if not wnd then
+        wnd = ui_inv_descr.CUIDescriptionWnd(level.get_inventory_wnd())
+    end
+end
+
+local function body_open()
+    if not wnd then
+        wnd = ui_inv_descr.CUIDescriptionWnd(level.get_car_body_wnd())
+    end
+end
+
+local function trade_open()
+    if not wnd then
+        wnd = ui_inv_descr.CUIDescriptionWnd(level.get_trade_wnd())
+    end
+end
+
+local function all_close()
+    if wnd then
+        wnd:Remove()
+        wnd = nil
+    end
+end
+
+function attach(sm)
+	sm:subscribe({signal = "on_inventory_open", fun = inventory_open})
+	sm:subscribe({signal = "on_inventory_hide", fun = all_close})
+	sm:subscribe({signal = "on_body_open", fun = body_open})
+	sm:subscribe({signal = "on_body_hide", fun = all_close})
+	sm:subscribe({signal = "on_trade_open", fun = trade_open})
+	sm:subscribe({signal = "on_trade_hide", fun = all_close})
+end

@@ -35,7 +35,7 @@ function crow_binder:__init(obj) super(obj)
 	self.alive = true
 	self.new_pos = self.object:position()
 	self.corps = false
-	self.counter = math.random(5,50)
+	self.counter = math.random(2000,12000) -- 2-12 после спавна
 end 
 
 function crow_binder:reinit()
@@ -47,13 +47,13 @@ function crow_binder:update(delta)
 	self.alive = self.object:alive()
 	self.new_pos = self.object:position()
 	if self.alive then	-- если объект живой
-		self.counter = self.counter-1	-- уменьшаем счетчик
+		self.counter = self.counter-delta	-- уменьшаем счетчик
 		if self.counter<=0 then	-- если время вышло
 			if not tbl_crow[self.id] then
 				tbl_crow[self.id] = sound_object(tbl_sounds[math.random(1,table.getn(tbl_sounds))])	-- запомним случайный звук в таблице
 			end
 			tbl_crow[self.id]:play_at_pos(db.actor, self.new_pos)	-- включим звук в позиции объекта
-			self.counter = math.random(50,200)	-- зададим таймаут до следующего звука
+			self.counter = math.random(8000,20000)	-- таймаут до следующего звука
 		end
 
 	else 	-- объект мертвый
