@@ -33,7 +33,7 @@ TableWpnOutf = {
 		WeaponsB = {"wpn_desert_eagle","wpn_fort","wpn_hpsa","wpn_walther","wpn_usp","wpn_beretta","wpn_colt","wpn_pm","wpn_pb","wpn_mp5",
 					"wpn_eagle_m1","wpn_bm16","wpn_ak74u"																				  },	    							  			
 		WeaponsC = {"wpn_winchester_m1","wpn_wincheaster1300","wpn_spas12"																  },
-		WeaponsD = {"wpn_svu","wpn_svd","wpn_vintorez","wpn_gauss","wpn_toz34","wpn_rg-6","wpn_rpg7"									  },
+		WeaponsD = {"wpn_svu","wpn_svd","wpn_vintorez","wpn_gauss","wpn_toz34","wpn_rg6","wpn_rpg7"									  },
 		OutfitsA = {"novice_","bandit_","killer_","monolit_","svoboda_light","dolg_ou","ecolog_","neytral_novice_","svoboda_m1","dolg_gaz"},
 		OutfitsB = {"soldier_","specops_","military_","scientific_","stalker_","exo_","svoboda_heavy_","dolg_scientific_","protection_",
 					"militaryspec_","svoboda_gaz_","neytral_gaz_","dolg_m1","_exoskeleton","nano_"} 
@@ -191,7 +191,7 @@ function weapons_ammo_sections(name, ammoT)
 			ammo_9x39_1        = {"ammo_9x39_sp5","ammo_9x39_ap","ammo_9x39_pab9"},
 			ammo_9x39_2        = {"ammo_9x39_pab9","ammo_9x39_sp5", "ammo_9x39_ap"},
 			ammo_56x45         = {"ammo_5.56x45_ap","ammo_5.56x45_ss190"},
-			ammo_62x54	       = {"ammo_7.62x54_7h14","ammo_7.62x54_ap","ammo_7.62x54_7h1"}
+			ammo_62x54	       = {"ammo_7.62x54_7h14","ammo_7.62x54_7h1","ammo_7.62x54_7h1"}
 			-------------------------------------------
 							     }
 								 							 

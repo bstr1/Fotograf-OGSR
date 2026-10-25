@@ -15,7 +15,7 @@ local rare_list = {
 
  experienced_section = {
  "ammo_7.62x54_7h1",
- "ammo_7.62x54_ap",
+ "ammo_7.62x54_7h1",
  "ammo_7.62x54_7h14",
  "ammo_og-7b",
  "wpn_ak74",

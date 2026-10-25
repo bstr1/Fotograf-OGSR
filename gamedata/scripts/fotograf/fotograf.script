@@ -102,7 +102,7 @@ function checking_fotograf_item(obj)
 local actor = db.actor
 local sect = obj:section()
 	if actor and sect then
-		if sect == "wpn_kolt" and not has_alife_info("smith_razgovor_start") then
+		if sect == "wpn_coltm45a1" and not has_alife_info("smith_razgovor_start") then
 			actor:give_info_portion("smith_razgovor_start")
 		elseif level.name() == "predbannik" and sect == "wpn_foto" and not has_alife_info("fotik_nashel") then
 			actor:give_info_portion("fotik_nashel")
@@ -1167,7 +1167,7 @@ local tbl_svd={
 }
 function freedom_stvol1_spawn()
 	local a = tbl_svd[math.random(table.getn(tbl_svd))]
-	alife():create("wpn_svd_c", vector():set(a.position.x,a.position.y,a.position.z), a.lv, a.gv)
+	alife():create("wpn_svd", vector():set(a.position.x,a.position.y,a.position.z), a.lv, a.gv)
 end
 
 local tbl_spas12={
@@ -3032,7 +3032,7 @@ function brown_mousetrap_dal(first_speaker, second_speaker)
 	dialogs.relocate_item_section(second_speaker, "propusk", "in", 1)
 	dialogs.relocate_item_section(second_speaker, "medkit_army", "in", 1)
 	flamethrower.relocate_n_items_section(second_speaker, "bandage", "in", 2)
-	dialogs.relocate_item_section(second_speaker, "wpn_m16", "in", 1)
+	dialogs.relocate_item_section(second_speaker, "wpn_lr300", "in", 1)
 	flamethrower.relocate_n_items_section(second_speaker, "ammo_5.56x45_ss190", "in", 3)
 end
 
@@ -3578,7 +3578,7 @@ end
 function filin_pribory_otdal(first_speaker, second_speaker)
 	new_dialog.out_item_much("filin_pribor",1)
 	new_dialog.out_item_much("filin_priemnik",1)
-	dialogs.relocate_item_section(second_speaker, "wpn_sayga12k", "in", 1)
+	dialogs.relocate_item_section(second_speaker, "wpn_saiga12", "in", 1)
 	flamethrower.relocate_n_items_section(second_speaker, "ammo_12x76_zhekan", "in", 2)
 end
 
@@ -4161,7 +4161,7 @@ function shema_labs_otdal(first_speaker, second_speaker)
 	new_dialog.out_item_much("shema_labs",1)
         new_dialog.out_item_much("vacsina_aks",1)
         dialogs.relocate_money(first_speaker, 20000,"in")
-        dialogs.relocate_item_section(second_speaker, "wpn_mp41", "in", 1)
+        dialogs.relocate_item_section(second_speaker, "wpn_vityaz", "in", 1)
         flamethrower.relocate_n_items_section(second_speaker, "ammo_7.62x51_ap", "in", 2)
 end
 

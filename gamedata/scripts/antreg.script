@@ -1295,7 +1295,7 @@ new_dialog.out_item_much("karta_bar",1)
 end
 
 function barman_new_dal(first_speaker, second_speaker)
-dialogs.relocate_item_section(second_speaker, "wpn_vihlop", "in", 1)
+dialogs.relocate_item_section(second_speaker, "wpn_sv98m", "in", 1)
 dialogs.relocate_money(first_speaker, 100000,"in")
 end
 
@@ -2143,7 +2143,7 @@ end
 
 function smith_arsenal_dal(first_speaker, second_speaker)
 dialogs.relocate_item_section(second_speaker, "mirotvor_outfit", "in")
-dialogs.relocate_item_section(second_speaker, "wpn_m16", "in")
+dialogs.relocate_item_section(second_speaker, "wpn_lr300", "in")
 flamethrower.relocate_n_items_section(second_speaker, "ammo_5.56x45_ap", "in", 2)
 flamethrower.relocate_n_items_section(second_speaker, "grenade_rgd5", "in", 2)
 flamethrower.relocate_n_items_section(second_speaker, "medkit_army", "in", 1)

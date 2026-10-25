@@ -239,7 +239,7 @@
   		<crouch_type>1</crouch_type>
         <supplies>
             [spawn] \n
-			wpn_svd_c  \n
+			wpn_svd  \n
 			ammo_7.62x54_7h14 = 1 \n
 			
 #include "gameplay\character_food.xml"
@@ -271,8 +271,8 @@
   		<crouch_type>-1</crouch_type>
         <supplies>
             [spawn] \n
-			wpn_m82a3  \n
-			ammo_12.7x99_bmg = 1 \n
+			wpn_m700  \n
+			ammo_7.62x51_fmj = 1 \n
 			
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -334,7 +334,7 @@
         <supplies>
             [spawn] \n
 			wpn_svu  \n
-			ammo_7.62x54_ap = 1 \n
+			ammo_7.62x54_7h1 = 1 \n
 			
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -752,7 +752,7 @@
 		<visual>actors\novice\green_stalker_3</visual>
 		<supplies>
 			[spawn] \n
-			wpn_tavor \n
+			wpn_aug \n
 			ammo_5.56x45_ap \n
 			device_torch \n
 #include "gameplay\character_items.xml" \n
@@ -882,7 +882,7 @@
 
     <supplies>
       [spawn] \n
-	  wpn_mp7a3 \n
+	  wpn_mp9 \n
       ammo_9x19_fmj = 2 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1107,7 +1107,7 @@
       [spawn] \n
       wpn_sig220 \n
       ammo_11.43x23_fmj \n    
-      wpn_scar \n
+      wpn_scarh \n
       ammo_5.56x45_ss190 = 1 \n
       device_torch \n     
 #include "gameplay\character_items.xml"\n
@@ -1175,7 +1175,7 @@
       [spawn] \n
       wpn_sig220 \n
       ammo_11.43x23_fmj \n    
-      wpn_m4_taktik \n
+      wpn_sig550_luckygun \n
       ammo_5.56x45_ss190 = 1 \n
       device_torch \n     
 #include "gameplay\character_items.xml"\n
@@ -1450,7 +1450,7 @@
 		<supplies>
 			[spawn] \n
 			wpn_groza \n
-			ammo_9x39_sp5 = 5 \n
+			ammo_9x39_pab9 = 5 \n
 			device_torch \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2118,7 +2118,7 @@
 		<supplies>
 			[spawn] \n
 			wpn_val \n
-			ammo_9x39_sp5 \n
+			ammo_9x39_pab9 \n
 			device_torch \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -3173,7 +3173,7 @@
     <supplies>
       [spawn] \n
       wpn_val \n
-      ammo_9x39_sp5 \n
+      ammo_9x39_pab9 \n
       device_torch \n
 #include "gameplay\character_drugs.xml"
 #include "gameplay\character_food.xml"
@@ -3239,7 +3239,7 @@
     <supplies>
       [spawn] \n
       wpn_groza \n
-      ammo_9x39_sp5 \n
+      ammo_9x39_pab9 \n
       device_torch \n
 #include "gameplay\character_drugs.xml"
 #include "gameplay\character_food.xml"
@@ -4330,7 +4330,7 @@
 			wpn_sig220 \n
 			ammo_11.43x23_hydro \n
             wpn_groza \n
-            ammo_9x39_sp5 = 1 \n
+            ammo_9x39_pab9 = 1 \n
             grenade_f1 = 1 \n
             device_torch \n
 #include "gameplay\character_drugs.xml"
@@ -4362,7 +4362,7 @@
 			wpn_sig220 \n
 			ammo_11.43x23_hydro \n
             wpn_groza \n
-            ammo_9x39_sp5 = 1 \n
+            ammo_9x39_pab9 = 1 \n
             grenade_f1 = 1 \n
             device_torch \n
 #include "gameplay\character_drugs.xml"
@@ -4393,7 +4393,7 @@
 		<supplies>
 			[spawn] \n
 			wpn_groza \n
-            ammo_9x39_sp5 = 1 \n
+            ammo_9x39_pab9 = 1 \n
 			eight_pda \n
 			device_torch \n
 #include "gameplay\character_items.xml"
@@ -4555,7 +4555,7 @@
 		<supplies>
 			[spawn] \n
 			wpn_groza \n
-            ammo_9x39_sp5 = 1 \n
+            ammo_9x39_pab9 = 1 \n
 			nine_pda \n
 			device_torch \n
 #include "gameplay\character_items.xml"
@@ -4589,7 +4589,7 @@
 		<supplies>
 			[spawn] \n
 			wpn_groza \n
-            ammo_9x39_sp5 \n
+            ammo_9x39_pab9 \n
 			device_torch \n
 #include "gameplay\character_items.xml" \n
 #include "gameplay\character_drugs.xml" \n
@@ -4622,7 +4622,7 @@
 		<supplies>
 			[spawn] \n
 			wpn_val \n
-            ammo_9x39_sp5 \n
+            ammo_9x39_pab9 \n
 			device_torch \n
 #include "gameplay\character_items.xml" \n
 #include "gameplay\character_drugs.xml" \n
@@ -4688,7 +4688,7 @@
 			wpn_walther \n
 			ammo_9x19_pbp = 1 \n
 			wpn_val \n
-            ammo_9x39_sp5 \n
+            ammo_9x39_pab9 \n
 			device_torch \n
 #include "gameplay\character_drugs.xml"
 #include "gameplay\character_food.xml"
@@ -4821,7 +4821,7 @@
 		<supplies>
 			[spawn] \n
 			wpn_groza \n
-            ammo_9x39_sp5 \n
+            ammo_9x39_pab9 \n
 			device_torch \n
 #include "gameplay\character_items.xml" \n
 #include "gameplay\character_drugs.xml" \n
@@ -5544,7 +5544,7 @@
             [spawn] \n
 			wpn_usp  \n
 			ammo_11.43x23_hydro = 1 \n
-            wpn_ak9 \n
+            wpn_ak12 \n
             ammo_9x39_ap = 2 \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -5707,7 +5707,7 @@
 			wpn_beretta \n
 			ammo_9x19_pbp = 1 \n
 			wpn_groza = 1, scope launcher cond=0.9 \n
-			ammo_9x39_sp5 = 1 \n
+			ammo_9x39_pab9 = 1 \n
 			device_torch \n
 #include "gameplay\character_items.xml"
 		</supplies>		
@@ -5735,7 +5735,7 @@
 			wpn_usp \n
 			ammo_11.43x23_hydro = 1 \n
 			wpn_val \n
-			ammo_9x39_sp5 = 1 \n
+			ammo_9x39_pab9 = 1 \n
 			device_torch \n
 #include "gameplay\character_items.xml"
 		</supplies>		
@@ -5764,7 +5764,7 @@
 			wpn_usp \n
 			ammo_11.43x23_hydro = 1 \n
 			wpn_val \n
-			ammo_9x39_sp5 = 1 \n
+			ammo_9x39_pab9 = 1 \n
 			device_torch \n
 #include "gameplay\character_items.xml"
 		</supplies>		
@@ -5793,7 +5793,7 @@
 			wpn_usp \n
 			ammo_11.43x23_hydro = 1 \n
 			wpn_val \n
-			ammo_9x39_sp5 = 1 \n
+			ammo_9x39_pab9 = 1 \n
 			device_torch \n
 #include "gameplay\character_items.xml"
 		</supplies>		
@@ -5990,7 +5990,7 @@
 
         <actor_dialog>monolit_trade_speak</actor_dialog>
         <actor_dialog>monolit_change</actor_dialog>
-		<actor_dialog>escape_trader_repair</actor_dialog>		
+		<actor_dialog>monolit_repair</actor_dialog>			
 		<start_dialog>hello_dialog</start_dialog>
 #include "gameplay\character_dialogs.xml"
     </specific_character>	
@@ -6017,8 +6017,8 @@
                 [spawn] \n
 				wpn_desert_eagle = 1 \n
 				ammo_11.43x23_hydro = 2 \n
-                wpn_svu_a = 1 \n
-                ammo_7.62x54_ap = 2 \n
+                wpn_svu = 1 \n
+                ammo_7.62x54_7h1 = 2 \n
 			    device_torch \n
 #include "gameplay\character_food.xml" \n
 #include "gameplay\character_drugs.xml"
@@ -6510,7 +6510,7 @@
     <supplies>
       [spawn] \n
       wpn_groza \n
-      ammo_9x39_sp5 \n
+      ammo_9x39_pab9 \n
       device_torch \n
 #include "gameplay\character_drugs.xml"
 #include "gameplay\character_food.xml"
@@ -6739,7 +6739,7 @@
 		<supplies>
 			[spawn] \n
                         wpn_val \n
-                        ammo_9x39_sp5 = 1 \n
+                        ammo_9x39_pab9 = 1 \n
 			device_torch \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -6773,7 +6773,7 @@
       wpn_sig220 \n
       ammo_11.43x23_hydro \n  
       wpn_val \n
-      ammo_9x39_sp5 = 1 \n
+      ammo_9x39_pab9 = 1 \n
 #include "gameplay\character_food.xml" \n
 #include "gameplay\character_drugs.xml"
     </supplies>

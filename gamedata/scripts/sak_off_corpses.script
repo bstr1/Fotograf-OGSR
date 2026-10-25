@@ -27,7 +27,7 @@ function off_corpses()
 				end
 			end
 			local wpn_name = obj:name()
-			if (obj.parent_id and obj.parent_id == 65535 and not string.find(wpn_name,"_m1") and not string.find(wpn_name,"_m2") and not string.find(wpn_name,"hunters_toz") and not string.find(wpn_name,"wpn_knife") and not string.find(wpn_name,"wpn_binoc") and not string.find(wpn_name,"wpn_flame") and not string.find(wpn_name,"wpn_ak75") and not string.find(wpn_name,"wpn_svd_c") and not string.find(wpn_name,"wpn_an94_taktik") and not string.find(wpn_name,"wpn_taktik") and not string.find(wpn_name,"wpn_gp100") and not string.find(wpn_name,"wpn_m79") and not string.find(wpn_name,"wpn_g37") and not string.find(wpn_name,"wpn_colt_python") and not string.find(wpn_name,"wpn_pkm") and not string.find(wpn_name,"wpn_sayga12k") and not string.find(wpn_name,"wpn_sayga12c") and not string.find(wpn_name,"wpn_val_haron") and not string.find(wpn_name,"wpn_vint")) then
+			if (obj.parent_id and obj.parent_id == 65535 and not string.find(wpn_name,"_m1") and not string.find(wpn_name,"_m2") and not string.find(wpn_name,"hunters_toz") and not string.find(wpn_name,"wpn_knife") and not string.find(wpn_name,"wpn_binoc") and not string.find(wpn_name,"wpn_flame") and not string.find(wpn_name,"wpn_ak75") and not string.find(wpn_name,"wpn_svd") and not string.find(wpn_name,"wpn_an94_taktik") and not string.find(wpn_name,"wpn_taktik") and not string.find(wpn_name,"wpn_gp100") and not string.find(wpn_name,"wpn_m79") and not string.find(wpn_name,"wpn_g36") and not string.find(wpn_name,"wpn_colt_python") and not string.find(wpn_name,"wpn_pkm") and not string.find(wpn_name,"wpn_saiga12") and not string.find(wpn_name,"wpn_sayga12c") and not string.find(wpn_name,"wpn_val_haron") and not string.find(wpn_name,"wpn_vint")) then
 				if string.find(obj:name(),"wpn_") or string.find(obj:name(),"grenade_") then 
 					if (posobj:distance_to(actorpos) > dist_to_weapons) then 
 						table.insert(tabl_weapons, obj)
@@ -74,7 +74,7 @@ function off_corpses()
 		while twa > summ_weapons do
 			local wpn = tabl_weapons[twa]
 			local wpn_name = wpn:name()
-			if (get_dist_to_trup_9510(wpn) == true and get_dist_to_trup(wpn) == true and not string.find(wpn_name,"wpn_gauss") and not string.find(wpn_name,"wpn_svd") and not string.find(wpn_name,"wpn_vintorez") and not string.find(wpn_name,"wpn_svu") and not string.find(wpn_name,"wpn_fn2000") and not string.find(wpn_name,"wpn_saiga12c") and not string.find(wpn_name,"wpn_rpg7") and not string.find(wpn_name,"wpn_desert_eagle") and not string.find(wpn_name,"wpn_toz34") and not string.find(wpn_name,"wpn_rg-6")) then
+			if (get_dist_to_trup_9510(wpn) == true and get_dist_to_trup(wpn) == true and not string.find(wpn_name,"wpn_gauss") and not string.find(wpn_name,"wpn_svd") and not string.find(wpn_name,"wpn_vintorez") and not string.find(wpn_name,"wpn_svu") and not string.find(wpn_name,"wpn_fn2000") and not string.find(wpn_name,"wpn_saiga12c") and not string.find(wpn_name,"wpn_rpg7") and not string.find(wpn_name,"wpn_desert_eagle") and not string.find(wpn_name,"wpn_toz34") and not string.find(wpn_name,"wpn_rg6")) then
 				local weapon = tabl_weapons[twa]
 				alife():release(weapon,true)
 				table.remove(tabl_weapons,twa)
@@ -86,7 +86,7 @@ function off_corpses()
 			while twb > summ_weapons do
 				local wpn = tabl_weapons[twb]
 				local wpn_name = wpn:name()
-				if (get_dist_to_trup_9510(wpn) == true and not string.find(wpn_name,"wpn_svd") and not string.find(wpn_name,"wpn_vintorez") and not string.find(wpn_name,"wpn_svu") and not string.find(wpn_name,"wpn_rpg7") and not string.find(wpn_name,"wpn_rg-6")) then 
+				if (get_dist_to_trup_9510(wpn) == true and not string.find(wpn_name,"wpn_svd") and not string.find(wpn_name,"wpn_vintorez") and not string.find(wpn_name,"wpn_svu") and not string.find(wpn_name,"wpn_rpg7") and not string.find(wpn_name,"wpn_rg6")) then 
 					local weapon = tabl_weapons[twb]
 					alife():release(weapon,true)
 					table.remove(tabl_weapons,twb)

@@ -77,13 +77,6 @@
         <text>enc_weapons1_ammo_ammo-9x39-ap</text>
     </article>
 
-    <!-------------------------------- ammo-9x39-sp5 ----------------------------->
-
-    <article id="weapons1_ammo_ammo-9x39-sp5" name="ammo-9x39-sp5" group="Weapons1/Ammo">
-        <ltx>ammo_9x39_sp5</ltx>
-        <text>enc_weapons1_ammo_ammo-9x39-sp5</text>
-    </article>
-
     <!-------------------------------- ammo-5.56x45-ss190 ----------------------------->
 
     <article id="weapons1_ammo_ammo-5.56x45-ss190" name="ammo-5.56x45-ss190" group="Weapons1/Ammo">
@@ -108,7 +101,7 @@
     <!-------------------------------- ammo-7.62x54-ap ----------------------------->
 
     <article id="weapons1_ammo_ammo-7.62x54-ap" name="ammo-7.62x54-ap" group="Weapons1/Ammo">
-        <ltx>ammo_7.62x54_ap</ltx>
+        <ltx>ammo_7.62x54_7h1</ltx>
         <text>enc_weapons1_ammo_ammo-7.62x54-ap</text>
     </article>
 
@@ -381,7 +374,7 @@
     <!-------------------------------- wpn-rg-6 ----------------------------->
 
     <article id="weapons1_wpn-rg-6" name="wpn-rg-6" group="Weapons1">
-        <ltx>wpn_rg-6</ltx>
+        <ltx>wpn_rg6</ltx>
         <text>enc_weapons1_wpn-rg-6</text>
     </article>
 

@@ -26,25 +26,26 @@ pda_tips = xr_sound.get_safe_sound_object([[device\pda\pda_tip]])
 pda_task = xr_sound.get_safe_sound_object([[device\pda\pda_objective]])
 
 tips_icons = {
-  default  = { 0, 658},
-  trader   = { 332, 893},
-  dolg     = { 0, 658},
-  freedom  = { 0, 658},
-  ecolog   = { 498, 0},
-  arena    = { 332, 141},
-  stalker  = { 0, 658},
-  krot     = { 332, 47},
-  barman   = { 332, 235},
-  wolf   = { 332, 940},
-  o_soznanie = { 498, 893},
-  monolith = { 0, 658},
-    saharov  = { 332, 470},
-    prizrak  = { 0, 658},
-    killer   = { 0, 658},
-  death     = { 0, 752},
-  gen_info  = { 0, 658},
-	trade 		= { 0, 0},
-  uniq  =  {  498, 47}    --{ 498, 188}
+	default		= { 0, 658},
+	trader		= { 332, 893},
+	dolg		= { 0, 658},
+	freedom		= { 0, 658},
+	ecolog		= { 498, 0},
+	arena		= { 332, 141},
+	stalker		= { 0, 658},
+	krot		= { 332, 47},
+	barman		= { 332, 235},
+	wolf		= { 332, 940},
+	o_soznanie	= { 498, 893},
+	monolith	= { 0, 658},
+	saharov		= { 332, 470},
+	prizrak		= { 0, 658},
+	killer		= { 0, 658},
+	death		= { 0, 752},
+	gen_info	= { 0, 658},
+	trade		= { 0, 0},
+	uniq		= { 498, 47},    --{ 498, 188}
+	monster		= { 0, 564}
 }
 ----------------
 local bufferedmessages={}
@@ -196,6 +197,23 @@ function has_timer(name)
     end
   end  
   return false
+end
+
+function remove_timer(name)
+	--get_console():execute("load ~~~ TIMERS has_timer: "..name)
+	local timers = load_table("timers")
+	--dump_table(timers)
+	for i = #timers, 1, -1 do
+		if timers[i][1] == name then
+			table.remove(timers, i)
+		end
+	end
+
+	-- сортируем для оптимизации дальнейшего поиска по таймерам
+	-- таймеры с меньшим временем будут в конце таблицы
+	table_sort(timers, timersSort)
+
+	save_table("timers", timers)
 end
 
 function has_g_timer(name)

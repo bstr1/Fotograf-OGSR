@@ -274,7 +274,7 @@
 			wpn_fort \n
 			ammo_9x18_fmj = 1 \n
 			wpn_val \n
-			ammo_9x39_sp5 = 1 \n
+			ammo_9x39_pab9 = 1 \n
 			device_torch \n
 #include "gameplay\character_drugs.xml"
 #include "gameplay\character_food.xml"
@@ -303,7 +303,7 @@
 			wpn_fort \n
 			ammo_9x18_fmj = 1 \n
 			wpn_val \n
-			ammo_9x39_sp5 = 1 \n
+			ammo_9x39_pab9 = 1 \n
 			device_torch \n
 #include "gameplay\character_drugs.xml"
 #include "gameplay\character_food.xml"
@@ -332,7 +332,7 @@
 			wpn_fort \n
 			ammo_9x18_fmj = 1 \n
 			wpn_val \n
-			ammo_9x39_sp5 = 1 \n
+			ammo_9x39_pab9 = 1 \n
 			device_torch \n
 #include "gameplay\character_drugs.xml"
 #include "gameplay\character_food.xml"
@@ -570,7 +570,7 @@
 			wpn_fort \n
 			ammo_9x18_fmj = 1 \n
 			wpn_val \n
-			ammo_9x39_sp5 = 1 \n
+			ammo_9x39_pab9 = 1 \n
 			device_torch \n
 #include "gameplay\character_drugs.xml"
 #include "gameplay\character_food.xml"
@@ -601,7 +601,7 @@
 			wpn_fort \n
 			ammo_9x18_fmj = 1 \n
 			wpn_val \n
-			ammo_9x39_sp5 = 1 \n
+			ammo_9x39_pab9 = 1 \n
 			device_torch \n
 #include "gameplay\character_drugs.xml"
 #include "gameplay\character_food.xml"
@@ -977,7 +977,7 @@
 			wpn_fort \n
 			ammo_9x18_fmj = 1 \n
 			wpn_val \n
-			ammo_9x39_sp5 = 1 \n
+			ammo_9x39_pab9 = 1 \n
 			device_torch \n
 #include "gameplay\character_drugs.xml"
 #include "gameplay\character_food.xml"
@@ -1226,7 +1226,7 @@
 			wpn_fort \n
 			ammo_9x18_fmj = 1 \n
 			wpn_val \n
-			ammo_9x39_sp5 = 1 \n
+			ammo_9x39_pab9 = 1 \n
 			device_torch \n
 #include "gameplay\character_drugs.xml"
 #include "gameplay\character_food.xml"
@@ -1839,7 +1839,7 @@
 			wpn_fort \n
 			ammo_9x18_fmj = 1 \n
 			wpn_val \n
-			ammo_9x39_sp5 = 1 \n
+			ammo_9x39_pab9 = 1 \n
 			device_torch \n
 #include "gameplay\character_drugs.xml"
 #include "gameplay\character_food.xml"
@@ -2264,7 +2264,7 @@
 			wpn_fort \n
 			ammo_9x18_fmj = 1 \n
 			wpn_val \n
-			ammo_9x39_sp5 = 1 \n
+			ammo_9x39_pab9 = 1 \n
 			device_torch \n
 #include "gameplay\character_drugs.xml"
 #include "gameplay\character_food.xml"
@@ -2380,7 +2380,7 @@
 			wpn_fort \n
 			ammo_9x18_fmj = 1 \n
 			wpn_val \n
-			ammo_9x39_sp5 = 1 \n
+			ammo_9x39_pab9 = 1 \n
 			device_torch \n
 #include "gameplay\character_drugs.xml"
 #include "gameplay\character_food.xml"

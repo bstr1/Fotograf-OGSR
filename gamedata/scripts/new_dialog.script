@@ -7,8 +7,8 @@ local nagrad = {
   "ammo_5.45x39_ap",
   "ammo_5.45x39_fmj",
   "ammo_5.56x45_ap",
-  "ammo_7.62x25_p",
-  "ammo_7.62x25_ps",
+  "ammo_7.62x25",
+  "ammo_7.62x25",
   "ammo_5.56x45_ss190"
  },
   level_2 = {
@@ -37,11 +37,11 @@ local nagrad = {
   "wpn_winchester_m1",
   "wpn_spas12_m1",
   "wpn_groza_m1",
-  "wpn_mp7a3",
-  "wpn_sg552_sk1",
+  "wpn_mp9",
+  "wpn_sig550",
   "wpn_bizon",
-  "wpn_kriss_super_v",
-  "wpn_tt33_sk1",
+  "wpn_vector",
+  "wpn_tt33",
   "wpn_m1891_30_scope",
   "wpn_mp5_m1"
  },
@@ -49,7 +49,7 @@ local nagrad = {
   "wpn_galatz_sk1",
   "wpn_sg551_sk1",
   "wpn_m16a2_sk1",
-  "wpn_hk417_sk1",
+  "wpn_vpo101",
   "wpn_svd_m1",
   "wpn_gauss"
  },
@@ -59,7 +59,7 @@ local nagrad = {
   "ammo_7.62x51_ap",
   "ammo_7.62x54_7h14",
   "ammo_7.62x54_7h1",
-  "ammo_7.62x54_ap",
+  "ammo_7.62x54_7h1",
   "ammo_gauss",
   "ammo_9x39_pab9"
  },
@@ -69,12 +69,12 @@ local nagrad = {
   "ammo_7.62x51_ap",
   "ammo_7.62x54_7h14",
   "ammo_7.62x54_7h1",
-  "ammo_7.62x54_ap",
+  "ammo_7.62x54_7h1",
   "ammo_7.62x39_ap",
   "ammo_7.62x39_fmj",
   "ammo_9x39_pab9",
-  "ammo_7.62x25_p",
-  "ammo_7.62x25_ps",
+  "ammo_7.62x25",
+  "ammo_7.62x25",
   "antirad",
   "medkit",
   "medkit_army",
@@ -168,6 +168,121 @@ function out_items_count(actor,item)
 		reloc_params.itm_cnt_found = reloc_params.itm_cnt_found + 1
 	end
 end
+
+--------------------------------------------------------------------------------------------------------
+-- Mono Repair
+--------------------------------------------------------------------------------------------------------
+
+local weapon_profit_margin = 1.3
+local armor_profit_margin = 1.2
+
+function trader_repair_precond(trader, actor)
+	local item_in_slot_1 = db.actor:item_in_slot(1)
+	local item_in_slot_2 = db.actor:item_in_slot(2)
+	local item_in_slot_6 = db.actor:item_in_slot(6)
+	if item_in_slot_1 ~= nil and 1 > item_in_slot_1:condition() + 0.01 then return true
+	elseif item_in_slot_2 ~= nil and 1 > item_in_slot_2:condition() + 0.01 then return true
+	elseif item_in_slot_6 ~= nil and 1 > item_in_slot_6:condition() + 0.01 then return true
+	else return false
+	end	 
+end
+
+function trader_check_money_s1(trader, actor)
+	local item_in_slot = db.actor:item_in_slot(1)
+	if item_in_slot ~= nil then 
+		local item_repair_cost = math.floor( (1-item_in_slot:condition()) * item_in_slot:cost() * weapon_profit_margin )
+		if item_repair_cost > 0 and db.actor:money() >= item_repair_cost and 1 > item_in_slot:condition() then
+			return true
+		end 
+	end
+	return false
+end
+
+function trader_check_money_s2(trader, actor)
+	local item_in_slot = db.actor:item_in_slot(2)
+	if item_in_slot ~= nil then 
+		local item_repair_cost = math.floor( (1-item_in_slot:condition()) * item_in_slot:cost() * weapon_profit_margin )
+		if item_repair_cost > 0 and db.actor:money() >= item_repair_cost and 1 > item_in_slot:condition() then
+			return true
+		end 
+	end
+	return false
+end
+
+function trader_check_money_s6(trader, actor)
+	local item_in_slot = db.actor:item_in_slot(6)
+	if item_in_slot ~= nil then 
+		local item_repair_cost = math.floor( (1-item_in_slot:condition()) * item_in_slot:cost() * armor_profit_margin )
+		if item_repair_cost > 0 and db.actor:money() >= item_repair_cost and 1 > item_in_slot:condition() then
+			return true
+		end 
+	end
+	return false
+end
+
+function trader_repiar_weapon_s1(trader, actor)
+	local item_in_slot = db.actor:item_in_slot(1)
+	if item_in_slot ~= nil then
+		local item_repair_cost = math.floor( (1-item_in_slot:condition()) * item_in_slot:cost() * weapon_profit_margin )
+		item_in_slot:set_condition(1)
+		dialogs.relocate_money(actor, item_repair_cost, "out")
+	end
+end
+
+function trader_repiar_weapon_s2(trader, actor)
+	local item_in_slot = db.actor:item_in_slot(2)
+	if item_in_slot ~= nil then
+		local item_repair_cost = math.floor( (1-item_in_slot:condition()) * item_in_slot:cost() * weapon_profit_margin )
+		item_in_slot:set_condition(1)
+		dialogs.relocate_money(actor, item_repair_cost, "out")
+	end
+end
+
+function trader_repiar_armor_s6(trader, actor)
+	local item_in_slot = db.actor:item_in_slot(6)
+	if item_in_slot ~= nil then
+		local item_repair_cost = math.floor( (1-item_in_slot:condition()) * item_in_slot:cost() * armor_profit_margin )
+		amk_mod.repair_armor(1)
+		dialogs.relocate_money(actor, item_repair_cost, "out")
+	end	
+end
+
+function repair_costs(first_speaker, second_speaker)
+	local task_texture, task_rect = get_texture_info("ui_iconsTotal_lost_money")
+	
+	local item_name_and_price = ""
+	local item_repair_cost = 0
+	if db.actor ~= nil then 
+		local item_in_slot_1 = db.actor:item_in_slot(1)
+		local item_in_slot_2 = db.actor:item_in_slot(2)
+		local item_in_slot_6 = db.actor:item_in_slot(6)
+	
+		if item_in_slot_1 ~= nil then 
+			item_repair_cost = math.floor( (1-item_in_slot_1:condition()) * item_in_slot_1:cost() * weapon_profit_margin )
+			if item_repair_cost > 0 then
+				item_name_and_price = game.translate_string("list_trader_repair_0").." %c[255,238,155,23]"..item_repair_cost.." СЂСѓР±Р»РµР№%c[default]"
+				db.actor:give_talk_message(item_name_and_price, task_texture, task_rect, "iconed_trade_info")
+			end
+		end
+		if item_in_slot_2 ~= nil then
+			item_repair_cost = math.floor( (1-item_in_slot_2:condition()) * item_in_slot_2:cost() * weapon_profit_margin )
+			if item_repair_cost > 0 then
+				item_name_and_price = game.translate_string("list_trader_repair_1").." %c[255,238,155,23]"..item_repair_cost.." СЂСѓР±Р»РµР№%c[default]"
+				db.actor:give_talk_message(item_name_and_price, task_texture, task_rect, "iconed_trade_info")
+			end
+		end
+		if item_in_slot_6 ~= nil then
+			item_repair_cost = math.floor( (1-item_in_slot_6:condition()) * item_in_slot_6:cost() * armor_profit_margin )
+			if item_repair_cost > 0 then
+				item_name_and_price = game.translate_string("list_trader_repair_2").." %c[255,238,155,23]"..item_repair_cost.." СЂСѓР±Р»РµР№%c[default]"
+				db.actor:give_talk_message(item_name_and_price, task_texture, task_rect, "iconed_trade_info")
+			end
+		end
+	end
+end
+--------------------------------------------------------------------------------------------------------
+-- Mono Repair
+--------------------------------------------------------------------------------------------------------
 
 function af_cristall_flower_have()
      return new_dialog.item_much("af_cristall_flower",1) ~= false 
@@ -404,7 +519,7 @@ local item = ""
 		trader = first_speaker
 	end
 	new_dialog.out_item_much("vodka",5)
-	dialogs.relocate_item_section(actor, "wpn_tt33_sk1", "in", 1)
+	dialogs.relocate_item_section(actor, "wpn_tt33", "in", 1)
 end
 
 function actor_10conserva_have()
@@ -607,7 +722,7 @@ local item = ""
 	end
     dialogs.relocate_item_section(actor, "wpn_bizon", "in", 1)
     dialogs.relocate_item_section(actor, "wpn_tulip_scope", "in", 1)
-    flamethrower.relocate_n_items_section(second_speaker, "ammo_7.62x25_p", "in", 4)
+    flamethrower.relocate_n_items_section(second_speaker, "ammo_7.62x25", "in", 4)
 end
 
 function haron_doktor_done()
@@ -1365,7 +1480,7 @@ local item = ""
 		trader = first_speaker
 	end
 	flamethrower.relocate_n_items_section(trader, "amk_ballon", "out", 2)
-	dialogs.relocate_item_section(actor, "wpn_ak47", "in", 1)
+	dialogs.relocate_item_section(actor, "wpn_ak74", "in", 1)
 end
 
 function trader_bratok_762x39_fmj(first_speaker, second_speaker)
@@ -1756,7 +1871,7 @@ local item = ""
 		trader = first_speaker
 	end
     new_dialog.out_item_much("af_mincer_meat",1)
-	flamethrower.relocate_n_items_section(actor, "ammo_7.62x54_ap", "in", 3)
+	flamethrower.relocate_n_items_section(actor, "ammo_7.62x54_7h1", "in", 3)
 end
 
 function petr_af_electra_flash_have()
@@ -1864,7 +1979,7 @@ local item = ""
 		trader = first_speaker
 	end
     new_dialog.out_item_much("af_dummy_spring_red",2)
-	dialogs.relocate_item_section(actor, "wpn_vihlop", "in", 1)
+	dialogs.relocate_item_section(actor, "wpn_sv98m", "in", 1)
 end
 
 
@@ -1975,7 +2090,7 @@ local item = ""
 		trader = first_speaker
 	end
 	new_dialog.out_item_much("new_plan",1)
-    dialogs.relocate_item_section(actor, "wpn_sayga12k", "in", 1)
+    dialogs.relocate_item_section(actor, "wpn_saiga12", "in", 1)
 end
 
 function knyaz_plan_have()
@@ -2149,7 +2264,7 @@ local item = ""
 		actor = second_speaker
 		trader = first_speaker
 	end
-	dialogs.relocate_item_section(actor, "wpn_rg-6", "in", 1)
+	dialogs.relocate_item_section(actor, "wpn_rg6", "in", 1)
 	flamethrower.relocate_n_items_section(actor, "ammo_vog-25", "in", 30)
 end
 
@@ -2246,7 +2361,7 @@ local item = ""
 		actor = second_speaker
 		trader = first_speaker
 	end
-	flamethrower.relocate_n_items_section(actor, "ammo_7.62x54_ap", "in", 2)
+	flamethrower.relocate_n_items_section(actor, "ammo_7.62x54_7h1", "in", 2)
 	new_dialog.out_item_much("paek2",1)
 end
 
@@ -2300,7 +2415,7 @@ local item = ""
 		actor = second_speaker
 		trader = first_speaker
 	end
-	dialogs.relocate_item_section(actor, "wpn_hk417_sk1", "in", 1)
+	dialogs.relocate_item_section(actor, "wpn_vpo101", "in", 1)
 	new_dialog.out_item_much("mutant_krovosos_jaw",10)
 end
 
@@ -2583,7 +2698,7 @@ local item = ""
 		actor = second_speaker
 		trader = first_speaker
 	end
-	dialogs.relocate_item_section(actor, "wpn_mp7a3", "in", 1)
+	dialogs.relocate_item_section(actor, "wpn_mp9", "in", 1)
 	new_dialog.out_item_much("mutant_dog_tail",40)
 end
 
@@ -2727,7 +2842,7 @@ local item = ""
 		actor = second_speaker
 		trader = first_speaker
 	end
-	flamethrower.relocate_n_items_section(actor, "ammo_7.62x54_ap", "in", 3)
+	flamethrower.relocate_n_items_section(actor, "ammo_7.62x54_7h1", "in", 3)
 	new_dialog.out_item_much("mutant_psevdogigant_hand",5)
 end
 
@@ -2764,7 +2879,7 @@ local item = ""
 		actor = second_speaker
 		trader = first_speaker
 	end
-	dialogs.relocate_item_section(actor, "wpn_sg552_sk1", "in", 1)
+	dialogs.relocate_item_section(actor, "wpn_sig550", "in", 1)
 	new_dialog.out_item_much("pashtet",7)
 end
 
@@ -2818,7 +2933,7 @@ local item = ""
 		actor = second_speaker
 		trader = first_speaker
 	end
-	dialogs.relocate_item_section(actor, "wpn_m4a1_sk1", "in", 1)
+	dialogs.relocate_item_section(actor, "wpn_lr300", "in", 1)
 	new_dialog.out_item_much("paek1",5)
 end
 

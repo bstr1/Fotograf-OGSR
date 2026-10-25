@@ -323,7 +323,7 @@ $spawn                                  = "weapons\uniq\wpn_eagle_m1"
 description                             = enc_weapons1_wpn_eagle_m1
 inv_name                                = wpn_eagle_m1_1
 inv_name_short                          = wpn_eagle_m1_2
-ammo_class                              = ammo_9x39_sp5, ammo_9x39_ap, ammo_9x39_pab9
+ammo_class                              = ammo_9x39_ap, ammo_9x39_pab9
 inv_weight                              = 2.2
 ammo_mag_size                           = 7
 fire_dispersion_base                    = 0.18
@@ -495,7 +495,7 @@ snd_shoot2                              = weapons\l85\l85_m2_shot
 snd_shoot3                              = weapons\l85\l85_m2_shot
 
 
-[wpn_lr300_m1]:wpn_m16
+[wpn_lr300_m1]:wpn_lr300
 inv_grid_width                          = 6
 inv_grid_height                         = 2
 inv_grid_x                              = 35
@@ -555,7 +555,7 @@ inv_grid_x                              = 0
 inv_grid_y                              = 22
 
 
-[wpn_svd_m1]:wpn_svu_a
+[wpn_svd_m1]:wpn_svu
 description                             = enc_weapons1_wpn-svd_m1
 
 inv_grid_x                              = 9
@@ -564,7 +564,7 @@ inv_grid_width                          = 5
 inv_grid_height                         = 1
 
 
-[wpn_rg6_m1]:wpn_rg-6
+[wpn_rg6_m1]:wpn_rg6
 description                             = enc_weapons1_wpn-rg6_m1
 inv_name                                = wpn-rg6_m1_1
 inv_name_short                          = wpn-rg6_m1_2
@@ -582,7 +582,7 @@ snd_shoot                               = weapons\m203\M203_grenshoot
 [wpn_pm_arena]:wpn_pm
 
 [wpn_mp5_arena]:wpn_mp5
-slot                                    = 2
+slot                                    = 1
 
 [wpn_toz34_arena]:wpn_bm16
 
@@ -602,7 +602,7 @@ slot                                    = 2
 
 [wpn_g36_arena]:wpn_g36;
 
-[wpn_winchester_knyaz]:wpn_marshall_12    
+[wpn_winchester_knyaz]:wpn_wincheaster1300    
 inv_name                                = "Дробовик Князя"
 description                             = "Дробовик Князя. Модель Marshall-12. Имеет повышенную убойность и износоустойчивость. Модель использует в качестве патрона Жекан."
 
@@ -631,38 +631,6 @@ ammo_class                              = ammo_12x70_buck, ammo_12x76_dart, ammo
 scope_zoom_factor                       = 50
 hud                                     = wpn_striker_col_hud
 visual                                  = new_weapons\striker\wpn_striker_col.ogf
-
-[wpn_striker_col_hud]:wpn_striker_hud
-visual                                  = new_weapons\striker\wpn_striker_col_hud.ogf
-zoom_offset                             = -0.1000,0.01300,-0.0530
-zoom_rotate_x                           = 0.02400
-zoom_rotate_y                           = 0.01900
-
-
-[wpn_m1891_30_scope_ucen]:wpn_protecta
-description                             = "Гладкоствольное ружье "Стрикер", оснащенное коллиматорным прицелом. Специально переделано под стрельбу нелетальными боеприпасами калибра 7.62мм."
-inv_name                                = "Стрикер"
-inv_name_short                          = "Стрикер"
-inv_weight                              = 5
-
-inv_grid_x                              = 28
-inv_grid_y                              = 31
-inv_grid_width                          = 4
-inv_grid_height                         = 2
-
-ammo_class                              = ammo_7.62x54_ucen
-hit_power                               = 0.1
-snd_shoot                               = new_weapons\lr300\lr300_shot_sil
-snd_shoot_duplet                        = new_weapons\lr300\lr300_shot_sil
-scope_zoom_factor                       = 50
-hud                                     = wpn_striker_col_hud1
-visual                                  = new_weapons\striker\wpn_striker_col.ogf
-
-[wpn_striker_col_hud1]:wpn_striker_hud
-visual                                  = new_weapons\striker\wpn_striker_col_hud.ogf
-zoom_offset                             = -0.1000,0.01300,-0.0530
-zoom_rotate_x                           = 0.02400
-zoom_rotate_y                           = 0.01900
 
 
 [wpn_colt_ucen]:wpn_colt_m1    

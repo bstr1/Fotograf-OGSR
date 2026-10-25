@@ -403,8 +403,8 @@
       [spawn] \n
 	    wpn_pm \n
         ammo_9x18_fmj \n
-	    wpn_type97 \n
-		ammo_6x35 \n
+	    wpn_sa58 \n
+		ammo_7.62x51_fmj \n
 		device_torch \n
 #include "gameplay\character_drugs.xml" \n
 #include "gameplay\character_food.xml"
@@ -444,8 +444,8 @@
       [spawn] \n
 	    wpn_pm \n
         ammo_9x18_fmj \n
-	    wpn_type97 \n
-		ammo_6x35 \n
+	    wpn_sa58 \n
+		ammo_7.62x51_fmj \n
 		device_torch \n
 #include "gameplay\character_drugs.xml" \n
 #include "gameplay\character_food.xml"
@@ -863,8 +863,8 @@
 		<supplies>
 			[spawn] \n
 			zheton = 1 \n
-			wpn_type97 \n
-			ammo_6x35 = 2 \n
+			wpn_sa58 \n
+			ammo_7.62x51_fmj = 2 \n
 			device_torch \n
 #include "gameplay\character_items.xml" \n
 #include "gameplay\character_drugs.xml" \n
@@ -925,8 +925,8 @@
 		<supplies>
 			[spawn] \n
 			zheton = 1 \n
-			wpn_type97 \n
-			ammo_6x35 = 2 \n
+			wpn_sa58 \n
+			ammo_7.62x51_fmj = 2 \n
 			device_torch \n
 #include "gameplay\character_items.xml" \n
 #include "gameplay\character_drugs.xml" \n
@@ -956,8 +956,8 @@
 		<supplies>
 			[spawn] \n
 			zheton = 1 \n
-			wpn_type97 \n
-			ammo_6x35 = 2 \n
+			wpn_sa58 \n
+			ammo_7.62x51_fmj = 2 \n
 			device_torch \n
 #include "gameplay\character_items.xml" \n
 #include "gameplay\character_drugs.xml" \n
@@ -1018,8 +1018,8 @@
 		<supplies>
 			[spawn] \n
 			zheton = 1 \n
-			wpn_type97 \n
-			ammo_6x35 = 2 \n
+			wpn_sa58 \n
+			ammo_7.62x51_fmj = 2 \n
 			device_torch \n
 #include "gameplay\character_items.xml" \n
 #include "gameplay\character_drugs.xml" \n

@@ -1,0 +1,131 @@
+<w>
+    <file name="ui\ui_actor_menu">
+        <texture id="ui_actor_menu_bag_character" x="0" y="0" width="340" height="97" />
+        <texture id="ui_actor_menu_bag" x="0" y="98" width="340" height="671" />
+        <texture id="ui_actor_menu_price" x="341" y="119" width="338" height="307" />
+
+        <texture id="ui_actor_menu_carbody_character" x="1024" y="0" width="510" height="107" />
+        <texture id="ui_actor_menu_carbody" x="1024" y="101" width="510" height="671" />
+
+        <texture id="ui_actor_task" x="0" y="790" width="350" height="94" />
+        <texture id="ui_actor_task2" x="0" y="790" width="350" height="94" />
+        <texture id="ui_actor_task_new" x="0" y="884" width="205" height="40" />
+        <texture id="ui_actor_news" x="0" y="994" width="28" height="30" />
+    </file>
+
+    <file name="ui\ui_actor_menu">
+        <texture id="ui_actor_menu_character" x="0" y="0" width="1024" height="99" />
+        <texture id="ui_actor_menu_character_l" x="1024" y="0" width="510" height="110" />
+        <texture id="ui_actor_menu_character_r" x="1538" y="0" width="510" height="106" />
+        <texture id="ui_actor_menu_bag" x="0" y="98" width="340" height="671" />
+        <texture id="ui_actor_menu_money_back" x="695" y="980" width="316" height="25" />
+        <texture id="ui_actor_menu_price" x="342" y="119" width="338" height="307" />
+        <texture id="ui_actor_menu_descr_buy" x="341" y="133" width="342" height="277" />
+        <texture id="ui_actor_menu_bag_c" x="684" y="98" width="340" height="671" />
+        <texture id="ui_actor_menu_descr_c" x="343" y="419" width="340" height="588" />
+        <texture id="ui_actor_menu_character_carbody" x="1024" y="0" width="1024" height="107" />
+        <texture id="ui_actor_menu_carbody" x="1024" y="98" width="510" height="671" />
+    </file>
+
+    <file name="ui\ui_actor_dialog_screen">
+        <texture id="ui_actor_dialog_frame_top_b" x="0" y="0" width="507" height="150" />
+        <texture id="ui_actor_dialog_frame_top_back" x="0" y="150" width="507" height="250" />
+        <texture id="ui_actor_dialog_frame_top_e" x="0" y="400" width="507" height="100" />
+        <texture id="ui_actor_dialog_frame_back_b" x="0" y="500" width="507" height="100" />
+        <texture id="ui_actor_dialog_frame_back_back" x="0" y="600" width="507" height="100" />
+        <texture id="ui_actor_dialog_frame_back_e" x="0" y="700" width="507" height="60" />
+    </file>
+
+    <file name="ui\ui_inventory">
+        <texture id="ui_inventory_main" x="0" y="0" width="1024" height="768" />
+    </file>
+
+    <file name="ui\icons\icon_biohazard">
+        <texture id="ui_inv_icon_chemical_burn" x="0" y="0" width="20" height="20" />
+    </file>
+
+    <file name="ui\icons\icon_bullets">
+        <texture id="ui_inv_icon_fire_wound" x="0" y="0" width="20" height="20" />
+    </file>
+
+    <file name="ui\icons\icon_explosion">
+        <texture id="ui_inv_icon_explosion" x="0" y="0" width="20" height="20" />
+    </file>
+
+    <file name="ui\icons\icon_fire">
+        <texture id="ui_inv_icon_burn" x="0" y="0" width="20" height="20" />
+    </file>
+
+    <file name="ui\icons\icon_flash">
+        <texture id="ui_inv_icon_shock" x="0" y="0" width="20" height="20" />
+    </file>
+
+    <file name="ui\icons\icon_heart">
+        <texture id="ui_inv_icon_health" x="0" y="0" width="20" height="20" />
+    </file>
+
+    <file name="ui\icons\icon_kick">
+        <texture id="ui_inv_icon_strike" x="0" y="0" width="20" height="20" />
+    </file>
+
+    <file name="ui\icons\icon_radiation">
+        <texture id="ui_inv_icon_radiation" x="0" y="0" width="20" height="20" />
+    </file>
+
+    <file name="ui\icons\icon_scratch">
+        <texture id="ui_inv_icon_wound" x="0" y="0" width="20" height="20" />
+    </file>
+
+    <file name="ui\icons\icon_psy">
+        <texture id="ui_inv_icon_telepatic" x="0" y="0" width="20" height="20" />
+    </file>
+
+    <file name="ui\icons\icon_blood">
+        <texture id="ui_inv_icon_bleeding" x="0" y="0" width="20" height="20" />
+    </file>
+
+    <file name="ui\icons\icon_power">
+        <texture id="ui_inv_icon_power" x="0" y="0" width="20" height="20" />
+    </file>
+
+    <file name="ui\icons\icon_weight">
+        <texture id="ui_inv_icon_additional_weight" x="0" y="0" width="20" height="20" />
+    </file>
+
+
+    <file name="ui\icons\icon_eat">
+        <texture id="ui_inv_icon_satiety" x="0" y="0" width="20" height="20" />
+    </file>
+
+    <file name="ui\icons\icon_alco">
+        <texture id="ui_inv_icon_alcohol" x="0" y="0" width="20" height="20" />
+    </file>
+
+    <file name="ui\icons\icon_time">
+        <texture id="ui_inv_icon_time" x="0" y="0" width="20" height="20" />
+    </file>
+
+    <file name="ui\icons\icon_jump">
+        <texture id="ui_inv_icon_jump_speed" x="0" y="0" width="20" height="20" />
+    </file>
+
+    <file name="ui\icons\icon_power">
+        <texture id="ui_inv_icon_sprint_koef" x="0" y="0" width="20" height="20" />
+    </file>
+
+    <file name="ui\icons\icon_bullets">
+        <texture id="ui_inv_icon_hit_power" x="0" y="0" width="20" height="20" />
+    </file>
+
+    <file name="ui\icons\icon_bullet_distance">
+        <texture id="ui_inv_icon_fire_distance" x="0" y="0" width="20" height="20" />
+    </file>
+
+    <file name="ui\icons\icon_bullet_speed">
+        <texture id="ui_inv_icon_rpm" x="0" y="0" width="20" height="20" />
+    </file>
+
+    <file name="ui\icons\icon_bullet_count">
+        <texture id="ui_inv_icon_ammo_mag_size" x="0" y="0" width="20" height="20" />
+    </file>
+</w>

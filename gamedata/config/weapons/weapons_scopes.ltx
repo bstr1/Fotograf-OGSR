@@ -1,0 +1,392 @@
+[wpn_addon_scope_susat]:identity_immunities, wpn_scope
+$prefetch                                = 32
+$spawn                                   = "weapons\addons\scope"
+cform                                    = skeleton
+class                                    = WP_SCOPE
+cost                                     = 3000
+description                              = st_addon_scope_galil_descr
+discovery_dependency                     =
+GroupControlSection                      = spawn_group
+holder_fov_modifier                      = 0.3
+holder_range_modifier                    = 1.2
+inv_grid_height                          = 1
+inv_grid_width                           = 2
+inv_grid_x                               = 17
+inv_grid_y                               = 5
+icon_group                              = 2
+inv_name                                 = st_addon_scope_galil
+inv_name_short                           = st_addon_scope_galil
+inv_weight                               = 0.35
+scope_texture                            = wpn\wpn_crosshair_mark4
+scope_zoom_factor                        = 19
+3d_zoom_factor                           = 65
+3d_fov                                   = 0.1
+visual                                   = dynamics\weapons\wpn_upgrade\wpn_scope_susat.ogf
+scope_inertion_factor                    = 5
+
+[wpn_addon_scope]:identity_immunities, wpn_scope
+$prefetch                                = 32
+$spawn                                   = "weapons\addons\scope"
+cform                                    = skeleton
+class                                    = WP_SCOPE
+cost                                     = 2500
+description                              = st_addon_scope_4x34_descr
+discovery_dependency                     =
+GroupControlSection                      = spawn_group
+holder_fov_modifier                      = 0.75
+holder_range_modifier                    = 1.25
+inv_grid_height                          = 1
+inv_grid_width                           = 2
+inv_grid_x                               = 19
+inv_grid_y                               = 5
+icon_group                              = 2
+inv_name                                 = st_addon_scope_4x34
+inv_name_short                           = st_addon_scope_4x34
+inv_weight                               = 0.3
+scope_texture                            = wpn\wpn_crosshair_4x34
+scope_zoom_factor                        = 19
+3d_zoom_factor                           = 65
+3d_fov                                   = 0.12
+visual                                   = dynamics\weapons\wpn_upgrade\wpn_scope.ogf
+scope_inertion_factor                    = 5
+
+[scope_detector]
+catch_snd                                = detectors\DA-2_beep1
+found_snd                                = detectors\DA-2_beep1
+vis_frame_color                          = 0.7,0.7,0.7,1.0
+vis_frame_speed                          = 6
+
+[scope_nightvision]
+pp_eff_cyclic                            = 1
+pp_eff_name                              = nightvision_3.ppe
+pp_eff_overlap                           = false
+snd_night_vision_broken                  = weapons\nv_off
+snd_night_vision_idle                    = weapons\nv_loop
+snd_night_vision_off                     = weapons\nv_off
+snd_night_vision_on                      = weapons\nv_start
+
+[scope_contrast]
+pp_eff_cyclic                            = 1
+pp_eff_name                              = bino_contrast.ppe
+pp_eff_overlap                           = false
+
+[1p78]:identity_immunities, wpn_scope
+GroupControlSection                      = spawn_group
+discovery_dependency                     =
+cform                                    = skeleton
+class                                    = WP_SCOPE
+$spawn                                   = "mod\1p78"
+cost                                     = 3000
+crosshair_inertion                       = 9
+description                              = st_addon_scope_1p78_descr
+inv_grid_height                          = 1
+inv_grid_width                           = 1
+inv_grid_x                               = 22
+inv_grid_y                               = 14
+icon_group                              = 2
+inv_name                                 = st_addon_scope_1p78
+inv_name_short                           = st_addon_scope_1p78
+inv_weight                               = 0.75
+scope_texture                            = wpn\wpn_crosshair_1p78
+visual                                   = dynamics\weapons\wpn_upgrade\wpn_scope_1p78.ogf
+3d_fov                                   = 0.21
+scope_zoom_factor                        = 21.5
+3d_zoom_factor                           = 65
+scope_inertion_factor                    = 3
+
+[9x39scope]:identity_immunities, wpn_scope
+GroupControlSection                      = spawn_group
+discovery_dependency                     =
+cform                                    = skeleton
+class                                    = WP_SCOPE
+$spawn                                   = "mod\9x39scope"
+cost                                     = 3800
+description                              = st_addon_scope_pso_1m2_01_descr
+inv_grid_height                          = 1
+inv_grid_width                           = 2
+inv_grid_x                               = 20
+inv_grid_y                               = 15
+icon_group                              = 2
+inv_name                                 = st_addon_scope_pso_1m2_01
+inv_name_short                           = st_addon_scope_pso_1m2_01
+inv_weight                               = 0.62
+scope_texture                            = wpn\wpn_crosshair_vss
+visual                                   = dynamics\weapons\wpn_upgrade\wpn_scope_pso-1m2-01.ogf
+3d_fov                                   = 0.145
+scope_zoom_factor                        = 15
+3d_zoom_factor                           = 65
+scope_inertion_factor                    = 3.5
+
+[ac10632]:identity_immunities, wpn_scope
+GroupControlSection                      = spawn_group
+discovery_dependency                     =
+cform                                    = skeleton
+class                                    = WP_SCOPE
+$spawn                                   = "mod\ac10632"
+cost                                     = 3500
+description                              = st_addon_scope_ac10632_descr
+inv_grid_height                          = 1
+inv_grid_width                           = 1
+inv_grid_x                               = 21
+inv_grid_y                               = 16
+icon_group                              = 2
+inv_name                                 = st_addon_scope_ac10632
+inv_name_short                           = st_addon_scope_ac10632
+inv_weight                               = 0.132
+visual                                   = dynamics\weapons\wpn_upgrade\wpn_scope_ac10632.ogf
+scope_zoom_factor                        = 100
+holder_fov_modifier                      = 1.0
+holder_range_modifier                    = 1.0
+
+[acog]:identity_immunities, wpn_scope
+GroupControlSection                      = spawn_group
+discovery_dependency                     =
+cform                                    = skeleton
+class                                    = WP_SCOPE
+$spawn                                   = "mod\acog"
+cost                                     = 4000
+description                              = st_addon_scope_acog_descr
+inv_grid_height                          = 1
+inv_grid_width                           = 1
+inv_grid_x                               = 22
+inv_grid_y                               = 13
+icon_group                              = 2
+inv_name                                 = st_addon_scope_acog
+inv_name_short                           = st_addon_scope_acog
+inv_weight                               = 0.396
+scope_texture                            = wpn\wpn_crosshair_acog
+visual                                   = dynamics\weapons\wpn_upgrade\wpn_scope_acog.ogf
+3d_fov                                   = 0.145
+scope_zoom_factor                        = 15
+3d_zoom_factor                           = 65
+scope_inertion_factor                    = 3.5
+
+[microt1]:identity_immunities, wpn_scope
+GroupControlSection                      = spawn_group
+discovery_dependency                     =
+cform                                    = skeleton
+class                                    = WP_SCOPE
+$spawn                                   = "mod\microt1"
+cost                                     = 2800
+description                              = st_addon_scope_micro_t1_descr
+inv_grid_height                          = 1
+inv_grid_width                           = 1
+inv_grid_x                               = 23
+inv_grid_y                               = 16
+icon_group                              = 2
+inv_name                                 = st_addon_scope_micro_t1
+inv_name_short                           = st_addon_scope_micro_t1
+inv_weight                               = 0.1
+visual                                   = dynamics\weapons\wpn_upgrade\wpn_scope_micro-t1.ogf
+scope_zoom_factor                        = 100
+holder_fov_modifier                      = 1.0
+holder_range_modifier                    = 1.0
+
+[specter]:identity_immunities, wpn_scope
+GroupControlSection                      = spawn_group
+discovery_dependency                     =
+cform                                    = skeleton
+class                                    = WP_SCOPE
+$spawn                                   = "mod\specter"
+cost                                     = 5000
+description                              = st_addon_scope_specter_descr
+inv_grid_height                          = 1
+inv_grid_width                           = 1
+inv_grid_x                               = 20
+inv_grid_y                               = 12
+icon_group                              = 2
+inv_name                                 = st_addon_scope_specter
+inv_name_short                           = st_addon_scope_specter
+inv_weight                               = 0.64
+scope_texture                            = wpn\wpn_crosshair_specter
+visual                                   = dynamics\weapons\wpn_upgrade\wpn_scope_specter.ogf
+3d_fov                                   = 0.145
+scope_zoom_factor                        = 15
+3d_zoom_factor                           = 65
+scope_inertion_factor                    = 3
+scope_dynamic_zoom						 = on
+scope_zoom_steps                         = 1
+
+[ekp]:identity_immunities, wpn_scope
+GroupControlSection                      = spawn_group
+discovery_dependency                     =
+cform                                    = skeleton
+class                                    = WP_SCOPE
+$spawn                                   = "mod\ekp"
+cost                                     = 2700
+description                              = st_addon_ekp_8_02_descr
+inv_grid_height                          = 1
+inv_grid_width                           = 1
+inv_grid_x                               = 22
+inv_grid_y                               = 15
+icon_group                              = 2
+inv_name                                 = st_addon_ekp_8_02
+inv_name_short                           = st_addon_ekp_8_02
+inv_weight                               = 0.273
+visual                                   = dynamics\weapons\wpn_upgrade\wpn_scope_ekp.ogf
+scope_zoom_factor                        = 100
+holder_fov_modifier                      = 1.0
+holder_range_modifier                    = 1.0
+
+[eot]:identity_immunities, wpn_scope
+GroupControlSection                      = spawn_group
+discovery_dependency                     =
+cform                                    = skeleton
+class                                    = WP_SCOPE
+$spawn                                   = "mod\eotech"
+cost                                     = 3200
+description                              = st_addon_scope_eotech_descr
+inv_grid_height                          = 1
+inv_grid_width                           = 1
+inv_grid_x                               = 22
+inv_grid_y                               = 16
+icon_group                              = 2
+inv_name                                 = st_addon_scope_eotech
+inv_name_short                           = st_addon_scope_eotech
+inv_weight                               = 0.255
+visual                                   = dynamics\weapons\wpn_upgrade\wpn_scope_eotech.ogf
+scope_zoom_factor                        = 100
+holder_fov_modifier                      = 1.0
+holder_range_modifier                    = 1.0
+
+[okp]:identity_immunities, wpn_scope
+GroupControlSection                      = spawn_group
+discovery_dependency                     =
+cform                                    = skeleton
+class                                    = WP_SCOPE
+$spawn                                   = "mod\okp"
+cost                                     = 3000
+description                              = st_addon_scope_okp_descr
+inv_grid_height                          = 1
+inv_grid_width                           = 1
+inv_grid_x                               = 20
+inv_grid_y                               = 16
+icon_group                              = 2
+inv_name                                 = st_addon_scope_okp
+inv_name_short                           = st_addon_scope_okp
+inv_weight                               = 0.295
+visual                                   = dynamics\weapons\wpn_upgrade\wpn_scope_okp.ogf
+scope_zoom_factor                        = 100
+holder_fov_modifier                      = 1.0
+holder_range_modifier                    = 1.0
+
+[rakurs]:identity_immunities, wpn_scope
+GroupControlSection                      = spawn_group
+discovery_dependency                     =
+cform                                    = skeleton
+class                                    = WP_SCOPE
+$spawn                                   = "mod\rakurs"
+cost                                     = 2500
+description                              = st_addon_scope_rakurs_descr
+inv_grid_height                          = 1
+inv_grid_width                           = 1
+inv_grid_x                               = 23
+inv_grid_y                               = 15
+icon_group                              = 2
+inv_name                                 = st_addon_scope_rakurs
+inv_name_short                           = st_addon_scope_rakurs
+inv_weight                               = 0.55
+visual                                   = dynamics\weapons\wpn_upgrade\wpn_scope_rakurs.ogf
+scope_zoom_factor                        = 100
+holder_fov_modifier                      = 1.0
+holder_range_modifier                    = 1.0
+
+[pso]:identity_immunities, wpn_scope
+GroupControlSection                      = spawn_group
+discovery_dependency                     =
+cform                                    = skeleton
+class                                    = WP_SCOPE
+$spawn                                   = "weapons\addons\pso"
+cost                                     = 3500
+description                              = st_addon_scope_descr
+inv_grid_height                          = 1
+inv_grid_width                           = 2
+inv_grid_x                               = 20
+inv_grid_y                               = 14
+icon_group                              = 2
+inv_name                                 = st_addon_scope
+inv_name_short                           = st_addon_scope
+inv_weight                               = 0.6
+scope_texture                            = wpn\wpn\wpn_crosshair_pso1
+visual                                   = dynamics\weapons\wpn_upgrade\wpn_scope.ogf
+3d_fov                                   = 0.145
+scope_zoom_factor                        = 15
+3d_zoom_factor                           = 65
+scope_inertion_factor                    = 3.5
+
+[susat]:identity_immunities, wpn_scope
+GroupControlSection                      = spawn_group
+discovery_dependency                     =
+cform                                    = skeleton
+class                                    = WP_SCOPE
+$spawn                                   = "mod\susat"
+cost                                     = 4000
+description                              = st_addon_scope_susat_descr
+inv_grid_height                          = 1
+inv_grid_width                           = 1
+inv_grid_x                               = 21
+inv_grid_y                               = 12
+icon_group                              = 2
+inv_name                                 = st_addon_scope_susat
+inv_name_short                           = st_addon_scope_susat
+inv_weight                               = 0.417
+scope_texture                            = wpn\wpn_crosshair_susat
+visual                                   = dynamics\weapons\wpn_upgrade\wpn_scope_susat.ogf
+3d_fov                                   = 0.145
+scope_zoom_factor                        = 15
+3d_zoom_factor                           = 65
+scope_inertion_factor                    = 3.5
+
+[po4x34]:identity_immunities, wpn_scope
+GroupControlSection                      = spawn_group
+discovery_dependency                     =
+cform                                    = skeleton
+class                                    = WP_SCOPE
+$spawn                                   = "mod\po4x34"
+cost                                     = 3000
+crosshair_inertion                       = 9
+description                              = st_addon_scope_po4x34_descr
+inv_grid_height                          = 1
+inv_grid_width                           = 2
+inv_grid_x                               = 20
+inv_grid_y                               = 28
+icon_group                              = 2
+inv_name                                 = st_addon_scope_po4x34
+inv_name_short                           = st_addon_scope_po4x34
+inv_weight                               = 0.360
+scope_texture                            = wpn\wpn_crosshair_pu
+visual                                   = dynamics\weapons\wpn_upgrade\wpn_scope_po4x34.ogf
+3d_fov                                   = 0.145
+scope_zoom_factor                        = 15
+3d_zoom_factor                           = 65
+scope_inertion_factor                    = 3.5
+
+[pu]:identity_immunities, wpn_scope
+GroupControlSection                      = spawn_group
+discovery_dependency                     =
+cform                                    = skeleton
+class                                    = WP_SCOPE
+$spawn                                   = "mod\pu"
+cost                                     = 3000
+crosshair_inertion                       = 9
+description                              = st_addon_scope_pu_descr
+inv_grid_height                          = 1
+inv_grid_width                           = 1
+inv_grid_x                               = 36
+inv_grid_y                               = 35
+icon_group                              = 2
+inv_name                                 = st_addon_scope_pu
+inv_name_short                           = st_addon_scope_pu
+inv_weight                               = 0.27
+scope_texture                            = wpn\wpn_crosshair_pu
+visual                                   = dynamics\weapons\wpn_upgrade\wpn_scope_pu.ogf
+3d_fov                                   = 0.166
+scope_zoom_factor                        = 17.1
+3d_zoom_factor                           = 65
+scope_inertion_factor                    = 3.5
+
+[scope_detector_bino]
+catch_snd                                = detectors\DA-2_beep1
+found_snd                                = detectors\DA-2_beep1
+vis_frame_color                          = 0.7,0.7,0.7,1.0
+vis_frame_speed                          = 20

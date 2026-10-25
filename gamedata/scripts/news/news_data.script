@@ -759,7 +759,7 @@ miniquest_rewards = {
 		"treasure_item", "treasure_item", "treasure_item", "treasure_item", "treasure_item", "treasure_item", "treasure_item", "treasure_item"
 	},
 	["experienced"] = {
-		"ammo_7.62x54_7h1", "ammo_7.62x54_ap", "ammo_7.62x54_7h14","ammo_5.45x39_fmj","ammo_5.45x39_ap","ammo_5.56x45_ss190","ammo_5.56x45_ap","ammo_vog-25p","ammo_vog-25","ammo_m209",
+		"ammo_7.62x54_7h1", "ammo_7.62x54_7h1", "ammo_7.62x54_7h14","ammo_5.45x39_fmj","ammo_5.45x39_ap","ammo_5.56x45_ss190","ammo_5.56x45_ap","ammo_vog-25p","ammo_vog-25","ammo_m209",
 		"af_cry_1", "af_ameba_slime","af_ameba_slug","af_drops","af_mincer_meat","af_fuzz_kolobok","af_electra_sparkler","af_rusty_thorn","af_rusty_kristall","af_dummy_glassbeads",
 		"wpn_mp5_m2","wpn_addon_silencer","wpn_addon_scope","wpn_addon_grenade_launcher", 
 		"treasure_item", "treasure_item", "treasure_item", "treasure_item", "treasure_item", "treasure_item", "treasure_item", "treasure_item"
@@ -772,7 +772,7 @@ miniquest_rewards = {
 	},
 	["master"] = {
 		"af_spirit_2", "af_cry_2", "af_babka_2", "af_pudd_2", "af_dik_2", "af_kol_2", "af_armor_2", "af_cristall","af_dummy_glassbeads","af_night_star","af_electra_moonlight", "af_dummy_pellicle","af_dummy_battery", "af_dummy_dummy", "af_ameba_mica", "af_dummy_spring","af_spirit_1",
-		"ammo_7.62x54_7h1","ammo_7.62x54_ap","ammo_7.62x54_7h14","ammo_gauss",
+		"ammo_7.62x54_7h1","ammo_7.62x54_7h1","ammo_7.62x54_7h14","ammo_gauss",
 		"treasure_item", "treasure_item", "treasure_item", "treasure_item", "treasure_item", "treasure_item", "treasure_item", "treasure_item"		
 	}
 }

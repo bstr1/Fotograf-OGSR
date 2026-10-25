@@ -1,0 +1,305 @@
+;;;;;;;;;;;;;;;;;;;;;;;; wpn_mdr ;;;;;;;;;;;;;;;;;;;;;;;;
+[wpn_mdr]:weapon_immunities,weapon_probability,default_weapon_params
+ammo_class                            = ammo_7.62x51_fmj, ammo_7.62x51_ap
+ammo_current                          = 180
+ammo_elapsed                          = 30
+ammo_limit                            = 210
+ammo_mag_size                         = 25
+animation_slot                        = 2
+bullet_speed                          = 910
+cam_relax_speed                       = 9
+cam_relax_speed_ai                    = 120.75
+cam_dispersion                        = 0.65
+cam_dispersion_inc                    = 0.4
+cam_dispersion_frac                   = 1.0
+cam_max_angle                         = 50.0
+cam_max_angle_horz                    = 50.0
+cam_step_angle_horz                   = 2.0
+cform                                 = skeleton
+condition_shot_dec                    = 0.0007
+control_inertion_factor               = 1.0f
+cost                                  = 120000
+description                           = st_wpn_mdr_descr
+ef_main_weapon_type                   = 2
+ef_weapon_type                        = 7
+fire_dispersion_base                  = 0.21
+fire_dispersion_condition_factor      = 10
+fire_distance                         = 800
+fire_modes                            = 1, -1
+fire_point                            = 0.000000,0.184,0.35
+fire_point2                           = 0.0, 0.123, 0.398
+flame_particles                       = weapons\new_effects\fal_fnc
+grenade_class                         = ammo_m209
+grenade_flame_particles               = weapons\generic_weapon_svu
+grenade_launcher_name                 = wpn_addon_grenade_launcher
+grenade_launcher_status               = 0
+grenade_launcher_x                    = 95
+grenade_launcher_y                    = 25
+GroupControlSection                   = spawn_group
+hand_dependence                       = 1
+hit_type                              = fire_wound
+holder_fov_modifier                   = 1.00
+holder_range_modifier                 = 1.25
+hud                                   = wpn_mdr_hud
+inv_grid_height                       = 2
+inv_grid_width                        = 5
+inv_grid_x                            = 51
+inv_grid_y                            = 0
+inv_name                              = st_wpn_mdr
+inv_name_short                        = st_wpn_mdr
+inv_weight                            = 3.8
+kill_msg_height                       = 30
+kill_msg_width                        = 64
+kill_msg_x                            = 131
+kill_msg_y                            = 123
+launch_speed                          = 0
+light_color                           = 0.6,0.5,0.3
+light_disabled                        = false
+light_range                           = 7.0
+light_time                            = 0.07
+light_var_color                       = 0.1
+light_var_range                       = 0.7
+max_radius                            = 350
+min_radius                            = 1
+misfire_probability                   = 0.005
+orientation                           = 0, 0, 0
+PDM_disp_base                         = 1.0
+PDM_disp_vel_factor                   = 1.5
+PDM_disp_accel_factor                 = 1.5
+PDM_disp_crouch                       = 1.0
+PDM_disp_crouch_no_acc                = 1.0
+ph_mass                               = 4
+position                              = -0.026, -0.132, 0.0
+rpm                                   = 650
+rpm_empty_click                       = 200
+hit_power                             = 1.02, 1.02, 1.02, 1.02
+scheduled                             = off
+scope_status                          = 2
+scope_texture                         = wpn_crosshair_mdr
+scope_x                               = -15
+scope_y                               = 10
+scope_zoom_factor                     = 100
+shell_dir                             = 0.0, 1.0, 0.0
+shell_particles                       = weapons\762x54
+shell_point                           = -0.020000,0.186000,0.200000
+silencer_light_color                  = 0.6,0.5,0.3
+silencer_light_range                  = 0.01
+silencer_light_time                   = 0.2
+silencer_light_var_color              = 0.05
+silencer_light_var_range              = 0.5
+silencer_name                         = sil_nato_762
+silencer_smoke_particles              = weapons\generic_weapon_svu
+silencer_status                       = 2
+silencer_x                            = 207
+silencer_y                            = 12
+single_handed                         = 0
+slot                                  = 1
+smoke_particles                       = weapons\generic_weapon_machine_gun
+startup_ammo                          = 90
+strap_bone0                           = bip01_spine2
+strap_bone1                           = bip01_spine1
+strap_orientation                     = -10,-5,10
+strap_position                        = -0.15,-0.35,0.27
+time_to_aim                           = 1.0
+use_aim_bullet                        = false
+visual                                = dynamics\weapons\wpn_mdr\wpn_mdr.ogf
+zoom_cam_relax_speed                  = 5
+zoom_cam_relax_speed_ai               = 360
+zoom_cam_dispersion                   = 0.5
+zoom_cam_dispersion_inc               = 0.3
+zoom_cam_dispersion_frac              = 0.8
+zoom_cam_max_angle                    = 50.0
+zoom_cam_max_angle_horz               = 50.0
+zoom_cam_step_angle_horz              = 1.7
+zoom_enabled                          = true
+zoom_rotate_time                      = 6.5
+reload_time                           = 2.2
+reload_empty_time                     = 2.8
+class                                 = WP_LR300
+icon_group                            = 2
+scope_name                            = ac10632
+scope_names                           = ac10632, acog, eot, microt1, specter
+scope_respawn_ac10632                 = wpn_mdr_ac10632
+scope_respawn_acog                    = wpn_mdr_acog
+scope_respawn_eot                     = wpn_mdr_eot
+scope_respawn_microt1                 = wpn_mdr_microt1
+scope_respawn_specter                 = wpn_mdr_specter
+
+snd_shoot                             = weapons\mdr\mdr_muzzle_mono
+snd_shoot1                            = weapons\mdr\mdr_muzzle_mono1
+snd_silncer_shot                      = weapons\mdr\mdr_silencer_mono_far
+snd_bore                              = weapons\draw_silent
+snd_close                             = weapons\draw_silent
+snd_draw                              = weapons\draw_afgmr
+snd_holster                           = weapons\hide_afgmr
+snd_empty                             = weapons\aug\aug_empty, 0.5
+snd_reload                            = weapons\mdr\mdr_reload
+snd_reload_empty                      = weapons\mdr\mdr_reload_empty
+snd_reload_jammed                     = weapons\mdr\mdr_misfire
+
+[wpn_mdr_hud]:hud_base
+aim_hud_offset_pos                    = -0.06765,0.0168,-0.0405
+aim_hud_offset_pos_16x9               = -0.06765,0.0168,-0.0405
+
+aim_hud_offset_rot                    = 0,0,0
+aim_hud_offset_rot_16x9               = 0,0,0
+
+anm_bore                              = mdr_idle_aim
+anm_hide                              = mdr_holster
+anm_idle                              = mdr_idle
+anm_idle_aim                          = mdr_idle_aim
+anm_idle_aim_moving                   = mdr_moving_aim
+anm_idle_moving_slow                  = mdr_moving_slow
+anm_idle_moving                       = mdr_moving
+anm_idle_moving_crouch                = mdr_crouch
+anm_reload                            = mdr_reload, reload
+anm_reload_empty                      = mdr_reload_empty, reload_empty
+anm_reload_jammed                     = mdr_misfire, misfire
+anm_shots                             = mdr_shoot, shoot
+anm_shoot_aim                         = mdr_shoot_aim, shoot
+anm_show                              = mdr_draw
+anm_firemode                          = mdr_firemode
+anm_bore_empty                        = mdr_idle_aim, idle_empty
+anm_hide_empty                        = mdr_holster, idle_empty
+anm_idle_empty                        = mdr_idle, idle_empty
+anm_idle_aim_empty                    = mdr_idle_aim, idle_empty
+anm_idle_aim_moving_empty             = mdr_moving_aim, idle_empty
+anm_idle_moving_slow_empty            = mdr_moving_slow, idle_empty
+anm_idle_moving_empty                 = mdr_moving, idle_empty
+anm_idle_moving_crouch_empty          = mdr_crouch, idle_empty
+anm_shots_last                        = mdr_shoot, shoot_last
+anm_shots_when_aim_last               = mdr_shoot_aim, shoot_last
+anm_show_empty                        = mdr_draw, idle_empty
+anm_firemode_empty                    = mdr_firemode, idle_empty
+anm_idle_sprint_start                 = mdr_sprint_start
+anm_idle_sprint                       = mdr_sprint
+anm_idle_sprint_end                   = mdr_sprint_end
+anm_idle_sprint_start_empty           = mdr_sprint_start, idle_empty
+anm_idle_sprint_empty                 = mdr_sprint, idle_empty
+anm_idle_sprint_end_empty             = mdr_sprint_end, idle_empty
+anm_headlamp_on                       = mdr_flash
+anm_gasmask                           = mdr_clear
+anm_headlamp_on_empty                 = mdr_flash, idle_empty
+anm_gasmask_empty                     = mdr_clear, idle_empty
+attach_place_idx                      = 0
+fire_bone                             = wpn_body
+fire_bone2                            = wpn_body
+fire_point                            = 0.000000,0.024700,0.328200
+fire_point2                           = 0,0,0
+gl_hud_offset_pos                     = 0,0,0
+gl_hud_offset_pos_16x9                = 0,0,0
+gl_hud_offset_rot                     = 0,0,0
+gl_hud_offset_rot_16x9                = 0,0,0
+hands_position                        = 0.011675,-0.036300,0.051200
+hands_position_16x9                   = 0.011675,-0.036300,0.051200
+hands_orientation                     = 0,0,0
+hands_orientation_16x9                = 0,0,0
+item_orientation                      = 0,0,0
+item_position                         = 0,0,0
+item_visual                           = dynamics\weapons\wpn_mdr\wpn_mdr_hud.ogf
+lean_hud_offset_pos                   = 0,0,0
+lean_hud_offset_rot                   = 0,0,0
+shell_bone                            = wpn_body
+shell_dir                             = 0.0, 1.0, 0.0
+shell_point                           = 0.07,0.02,-0.075
+zoom_hide_crosshair                   = true
+
+[wpn_mdr_ac10632]:wpn_mdr
+hud                                   = wpn_mdr_ac10632_hud
+visual                                = dynamics\weapons\wpn_mdr\wpn_mdr_ac10632.ogf
+scope_x                               = 114
+scope_y                               = -10
+scope_name                            = ac10632
+scope_respawn                         = wpn_mdr
+
+[wpn_mdr_ac10632_hud]:wpn_mdr_hud
+item_visual                           = dynamics\weapons\wpn_mdr\wpn_mdr_ac10632_hud.ogf
+aim_hud_offset_pos                    = 0.002350,0.007200,-0.070800
+aim_hud_offset_pos_16x9               = 0.002350,0.007200,-0.070800
+
+[wpn_mdr_acog]:wpn_mdr
+max_radius                            = 300
+min_radius                            = 5
+hud                                   = wpn_mdr_acog_hud
+visual                                = dynamics\weapons\wpn_mdr\wpn_mdr_acog.ogf
+scope_x                               = 105
+scope_y                               = -13
+scope_name                            = acog
+scope_respawn                         = wpn_mdr
+
+[wpn_mdr_acog_hud]:wpn_mdr_hud
+item_visual                           = dynamics\weapons\wpn_mdr\wpn_mdr_acog_hud.ogf
+anm_shoot_aim                         = mdr_shoot_scope, shoot
+anm_shots_when_aim_last               = mdr_shoot_scope, shoot_last
+aim_hud_offset_pos                    = 0.002100,0.006200,-0.089500
+aim_hud_offset_pos_16x9               = 0.002100,0.006200,-0.089500
+
+[wpn_mdr_eot]:wpn_mdr
+hud                                   = wpn_mdr_eot_hud
+visual                                = dynamics\weapons\wpn_mdr\wpn_mdr_eot.ogf
+scope_x                               = 114
+scope_y                               = -12
+scope_name                            = eot
+scope_respawn                         = wpn_mdr
+
+[wpn_mdr_eot_hud]:wpn_mdr_hud
+item_visual                           = dynamics\weapons\wpn_mdr\wpn_mdr_eot_hud.ogf
+aim_hud_offset_pos_16x9               = 0.002300,0.004300,-0.075000
+aim_hud_offset_pos                    = 0.002300,0.004300,-0.075000
+
+[wpn_mdr_microt1]:wpn_mdr
+hud                                   = wpn_mdr_microt1_hud
+visual                                = dynamics\weapons\wpn_mdr\wpn_mdr_micro-t1.ogf
+scope_x                               = 114
+scope_y                               = -12
+scope_name                            = microt1
+scope_respawn                         = wpn_mdr
+
+[wpn_mdr_microt1_hud]:wpn_mdr_hud
+item_visual                           = dynamics\weapons\wpn_mdr\wpn_mdr_micro-t1_hud.ogf
+aim_hud_offset_pos_16x9               = 0.002300,0.004100,-0.057000
+aim_hud_offset_pos                    = 0.002300,0.004100,-0.057000
+
+[wpn_mdr_specter]:wpn_mdr
+second_scope_zoom_factor              = 100
+second_aim_enabled                    = true
+second_aim_transition_time            = 6.5
+hud                                   = wpn_mdr_specter_hud
+visual                                = dynamics\weapons\wpn_mdr\wpn_mdr_specter.ogf
+scope_x                               = 105
+scope_y                               = -13
+scope_name                            = specter
+scope_respawn                         = wpn_mdr
+
+[wpn_mdr_specter_hud]:wpn_mdr_hud
+item_visual                           = dynamics\weapons\wpn_mdr\wpn_mdr_specter_hud.ogf
+anm_shoot_aim                         = mdr_shoot_scope, shoot
+anm_shots_when_aim_last               = mdr_shoot_scope, shoot_last
+aim_hud_offset_pos_16x9               = 0.002200,0.003800,-0.064699
+aim_hud_offset_pos                    = 0.002200,0.003800,-0.064699
+second_aim_hud_offset_pos             = 0.002200,-0.018500,-0.039400
+second_aim_hud_offset_pos_16x9        = 0.002200,-0.018500,-0.039400
+second_aim_hud_offset_rot             = 0,0,0
+second_aim_hud_offset_rot_16x9        = 0,0,0
+
+[wpn_mdr_drum]:wpn_mdr
+ammo_mag_size                         = 50
+cost                                  = 170000
+description                           = st_wpn_mdr_descr_drum
+inv_grid_height                       = 2
+inv_grid_width                        = 5
+inv_grid_x                            = 46
+inv_grid_y                            = 0
+inv_name                              = st_wpn_mdr_drum
+inv_name_short                        = st_wpn_mdr_drum
+inv_weight                            = 4.2
+PDM_disp_base                         = 1.2
+PDM_disp_vel_factor                   = 1.6
+PDM_disp_accel_factor                 = 1.6
+PDM_disp_crouch                       = 1.0
+PDM_disp_crouch_no_acc                = 1.0
+silencer_x                            = 207
+silencer_y                            = 2
+hud                                   = wpn_mdr_hud_drum
+visual                                = dynamics\weapons\wpn_mdr\wpn_mdr_drum.ogf
+
