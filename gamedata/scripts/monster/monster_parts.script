@@ -1,0 +1,130 @@
+-- Отрезание запчастей монстров ножом и озвучка. Для отрезания достаточно, чтобы нож был в рюкзаке.
+local monster = nil
+local snd = nil
+local min_coef = 0.05
+
+-- Ножи, которыми можно отрезать
+local knives = {
+	["wpn_knife"] = true
+}
+
+local wpn_flags = {
+	[global_flags.eFire] = true,
+	[global_flags.eFire2] = true,
+	[global_flags.eReload] = true,
+}
+
+function on_part_take(o) end
+
+function actor_has_knife()
+local o = db.actor:item_in_slot(0)
+	if o and knives[o:section()] and o:condition() >= min_coef then
+		return o
+	end
+end
+
+local key_cnt = 0
+function on_monster_use(victim, who)
+	
+	monster = victim
+	monster:set_nonscript_usable(false)
+	
+	local wpn = db.actor:active_item()
+	if wpn and wpn:is_weapon() and wpn_flags[wpn:get_hud_item_state()] then return end
+
+	local count = monster:object_count()
+	if count == 0 then return end
+
+	local knife = actor_has_knife()
+
+	if knife then
+		local tbl = {}
+		monster:iterate_inventory(
+			function(tmp, item)
+				monster:transfer_item(item, db.actor)
+				local sect = item:section()
+				local t = tbl[sect]
+				tbl[sect] = (t and t + 1) or 1
+			end
+		)
+        local txt = "%c[green]"
+		for k, v in pairs(tbl) do
+			v = (v and v > 1 and string.format(" (%s)", v)) or ""
+			txt = txt .. gt_inv_name(k) .. v .. " \\n"
+		end
+		sms2(txt, translate("general_in_item"), 0, 8, "monster", "no")
+
+		if snd and snd:playing() then snd:stop() end
+		snd = voice("zwuk\\inv_mutant_loot_" .. math.random(1, 9))
+		snd:play_at_pos(db.actor, vector(), 0, sound_object.s2d)
+
+		-- archievements.acv_count_event("acv_gvdr", 500, "Живодёр")
+
+		local difficulty = level.get_game_difficulty()
+		if difficulty > 0 then
+			bind_stalker.hide_weapon()
+			amk.remove_timer("monster_parts")
+			amk.start_timer("monster_parts", difficulty * 2, 0)
+		end
+		-- process_wpn(knife)
+
+		local mbone = get_mbone_name(monster)
+		if mbone then
+			local h = hit()
+			h.draftsman = monster
+			h.type = hit.fire_wound
+			h.direction = vector():set(0, 1, 0)
+			h.bone = mbone
+			h.power = 1
+			h.impulse = 100
+			monster:hit(h)
+			-- log3("~~[%s]: Monster: [%s] got hit", script_name(), monster:name())
+		end
+	-- else
+		-- key_cnt = key_cnt + 1
+		-- if key_cnt > 10 or key_cnt == 2 then
+			-- sms2("Нет подходящего ножа или он сломан.", nil, 0, 8, "monster", "no")
+			-- if key_cnt > 10 then key_cnt = 0 end
+		-- end
+	end
+end
+
+-- cp2ogsr: получаем кость, на которую направлен взгляд ГГ
+function get_mbone_name(monster)
+	local rq = level.get_current_ray_query()
+	local target_obj = rq.object
+	if target_obj and (target_obj:id() == monster:id()) and not target_obj:alive() then
+		local bone = rq.element
+		return bone and target_obj:get_bone_name(bone)
+	end
+end
+
+function on_monster_stop_use()
+	monster = nil
+end
+
+-- function restore_weapon()
+	-- bind_stalker.restore_weapon()
+-- end
+
+-- function move_on()
+	-- snp.move_on()
+-- end
+
+-- op2ogsr: состояние будет меняться в зависимости от сложности
+-- function process_wpn(wpn)
+	-- local oc = wpn:condition()
+	-- local sect = wpn:section()
+	-- local var = get_float(sect, "condition_shot_dec_on_hit", 0.003)
+	-- local dif = level.get_game_difficulty() + 2
+	-- var = var * dif
+	-- wpn:set_condition(wpn:condition() - var)
+	-- -- log2("**[%s]: Knife: [%s], old condition: [%s], condition: [%s], value: [%s]", script_name(), wpn:name(), tostring(oc), wpn:condition(), tostring(var))
+	-- if wpn:condition() >= min_coef then return end
+	-- sms(db.actor, "Холодное оружие пришло в негодность: " .. gt_inv_name(sect), nil, "monster", 10000)
+-- end
+
+function check_monster()
+	local tobj = level.get_target_obj()
+	return tobj and tobj:is_monster() and not tobj:alive()
+end
