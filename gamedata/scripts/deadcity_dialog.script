@@ -1,3 +1,5 @@
+-- bstr: вынести в другой файл
+
 function printf() end
 
 -- transfer key from doctor

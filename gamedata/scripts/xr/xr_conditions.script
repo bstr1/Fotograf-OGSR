@@ -1039,13 +1039,6 @@ function esc_blokpost_night(actor,npc)
 	return false
 end
 
-function esc_bandits_die(sctor,npc)
-	if has_alife_info("esc_kill_bandits_quest_kill") or has_alife_info("esc_kill_bandits_noquest_kill") then
-		return true
-	end
-	return false
-end
-
 ------------------------------------------------------------------------------------
 -- Special functions for LabX18
 ------------------------------------------------------------------------------------

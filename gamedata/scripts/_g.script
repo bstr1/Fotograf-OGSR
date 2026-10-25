@@ -405,7 +405,7 @@ function has_alife_info(info_id)
   return aa:has_info(0, info_id)
 end
 
--- �������� ���������� (���������� ������ ��� AMK-�������������, ��� � cpogsr)
+-- Проверка инфопоршня (глобальные обёртки для AMK-трансмутатора, как в cpogsr)
 function has_info(i)
   local aa = alife()
   if aa == nil then
@@ -414,19 +414,19 @@ function has_info(i)
   return aa:has_info(0, i)
 end
 
--- ����� �����������
+-- Выдаём инфопоршень
 function give_info(i)
   if db.actor then return db.actor:give_info_portion(i) end
 end
 
--- ��������� �����������
+-- Выключаем инфопоршень
 function disable_info(i)
   if db.actor then return db.actor:disable_info_portion(i) end
 end
 
 
 --------------------------------------------------
--- іласс LUA реализуі   ий Finite State Machine
+-- класс LUA реализующий Finite State Machine
 -- для управления персонажами
 --------------------------------------------------
 class 'FSM'
@@ -437,13 +437,13 @@ function FSM:__init(script_name, npc_obj)
     self.npc = npc_obj
     -- строка - имя скрипта, которvй запускает игру
     self.script_name = script_name
-    -- матрица, задаі   ая граф переходов состояний
+    -- матрица, задающая граф переходов состояний
     -- реализуется как двумерная таблица
     self.transition_matrix = {[0] = {}}
     -- номер теку   его состояния
     self.current_state = 0
 
-    -- флаг того, что машина вклічена
+    -- флаг того, что машина включена
     self.machine_running = true
 
     printf("inialization FSM for NPC %s", self.npc:name())
@@ -466,7 +466,7 @@ end
 
 
 --  добавление указателя на булеву
---  функциі условия перехода
+--  функций условия перехода
 function FSM:set_transition(from_state_num, to_state_num, cond_func)
     printf("in setting transition %d, %d ", from_state_num, to_state_num)
 
@@ -575,7 +575,7 @@ function script_object:update()
 end
 
 --
--- іередача персонажу информации
+-- передача персонажу информации
 --
 
 function GiveInfoViaPda(obj_receiver, obj_sender, info_number)
@@ -587,7 +587,7 @@ end
 -- Functions and variables added by Zmey
 --------------------------------------------------
 
--- іонстанта, которуі использовать в местах, где нужно задать неограниченное время действия
+-- константа, которую использовать в местах, где нужно задать неограниченное время действия
 time_infinite = 100000000
 
 -- =азвание скрипта, которvй в даннvй момент находится в отладке
@@ -602,7 +602,7 @@ function debug_log(script_name, fmt, ...)
   end
 end
 
--- +сли в даннvй момент вvполняется какое-то действие, прерvвает его и отклічает скриптовvй режим
+-- Если в данный момент выполняется какое-то действие, прерывает его и отключает скриптовый режим
 function interrupt_action(who, script_name)
   if who:get_script() then
     who:script(false, script_name)
@@ -933,8 +933,8 @@ function random_number (min_value, max_value)
     end
 end
 
--- ‚аҐ¬п бгв®Є ў ¬б
--- —гЈ ©
+-- Время суток в мс
+-- Чугай
 local ms_per_day = 24 * 60 * 60 * 1000
 function day_time()
     return math.mod( game.time(), ms_per_day )
@@ -945,8 +945,8 @@ function local_hours()
     return math.floor( math.mod( game.time()/1000, 86400 )/ 3600 )
 end
 
--- Ї абЁв бва®Єг ўЁ¤  "   , ЎЎЎ, ўўў..." ў в Ў«Ёжг { "   ", "ЎЎЎ", "ўўў", ... }
--- —гЈ ©
+-- парсит строку вида "ааа, ббб, ввв..." в таблицу { "ааа", "ббб", "ввв", ... }
+-- Чугай
 function parse_names( s )
     local t = {}
     for name in string.gfind( s, "([%w_\\]+)%p*" ) do
@@ -976,8 +976,8 @@ function parse_key_value( s )
 end
 
 
--- Ї абЁв бва®Єг ўЁ¤  "n1, n2, n3..." ў в Ў«Ёжг { n1, n2, n3, ... } Ј¤Ґ n1, n2, n3... - жҐ«лҐ зЁб« 
--- —гЈ ©
+-- парсит строку вида "n1, n2, n3..." в таблицу { n1, n2, n3, ... } где n1, n2, n3... - целые числа
+-- Чугай
 --[[function parse_nums( s )
     local t = {}
 
@@ -988,7 +988,7 @@ end
     return t
 end]]
 
--- Ї абЁв бва®Єг ўЁ¤  "n1, n2, n3..." ў в Ў«Ёжг { n1, n2, n3, ... } Ј¤Ґ n1, n2, n3... - ¤а®Ў­лҐ зЁб« 
+-- парсит строку вида "n1, n2, n3..." в таблицу { n1, n2, n3, ... } где n1, n2, n3... - дробные числа
 function parse_nums( s )
   local t = {}
 
@@ -999,7 +999,7 @@ function parse_nums( s )
   return t
 end
 
--- Їа®ўҐапҐв, Ґбвм «Ё ®ЎкҐЄв ў ®­« ©­Ґ
+-- проверяет, есть ли объект в онлайне
 function is_object_online(obj_id)
   return level.object_by_id(obj_id) ~= nil
 end
@@ -1016,7 +1016,7 @@ function get_clsid(npc)
 --    end
 end
 
--- Їа®ўҐапҐв ®аг¦ЁҐ «Ё нв® (ЇҐаҐ¤ ў вм game_object)
+-- проверяет оружие ли это (передавать game_object)
 function isWeapon(object)
     local id = get_clsid(object)
     if id == nil then return false end
@@ -1206,14 +1206,14 @@ function is_object_monster(obj)
   return false
 end
 
---ў®§ўа й Ґв Їа®Ё§ў®«м­го в®зЄг ЇгвЁ г Є®в®а®© гбв ­®ў«Ґ­ ЎЁв
-function point_with_bit(patrol_path, bit, old_point)      -- old_point - Ё­¤ҐЄб в®зЄЁ, Є®в®аго ­Ґ ­ ¤® ўлЎЁа вм,
-  local points = {}                                       -- Ї а ¬Ґва ­Ґ ®Ўп§ вҐ«м­л©( ­ ЇаЁ¬Ґа вҐЄгйҐ© в®зЄЁ )
+--возвращает произвольную точку пути у которой установлен бит
+function point_with_bit(patrol_path, bit, old_point)      -- old_point - индекс точки, которую не надо выбирать,
+  local points = {}                                       -- параметр не обязательный( например текущей точки )
 
     for i = 0, patrol_path:count()-1 do
-      --„®Ў®ў«пҐ¬ ў в Ў«Ёжг в®зЄЁ б ­г¦­л¬ ЎЁв®¬
+      --Добовляем в таблицу точки с нужным битом
       if( patrol_path:flag(i, bit)) then
-            --„®Ў ў«пҐ¬ в®зЄг Ґб«Ё old_point == nil Ё«Ё ­®ў п в®зЄ  ­Ґ б®ўЇ ¤ Ґв б old_point
+            --Добавляем точку если old_point == nil или новая точка не совпадает с old_point
             if(old_point == nil) then
                 table.insert(points, patrol_path:point(i))
             elseif(old_point ~= i) then
@@ -1233,14 +1233,14 @@ function point_with_bit(patrol_path, bit, old_point)      -- old_point - Ё­¤�
     end
 end
 
---ў®§ўа й Ґв Їа®Ё§ў®«м­го в®зЄг ЇгвЁ г Є®в®а®© гбв ­®ў«Ґ­ ЎЁв
-function point_with_bit_id(patrol_path, bit, old_point)        -- old_point - Ё­¤ҐЄб в®зЄЁ, Є®в®аго ­Ґ ­ ¤® ўлЎЁа вм,
-    local points = {}                                          -- Ї а ¬Ґва ­Ґ ®Ўп§ вҐ«м­л©( ­ ЇаЁ¬Ґа вҐЄгйҐ© в®зЄЁ )
+--возвращает произвольную точку пути у которой установлен бит
+function point_with_bit_id(patrol_path, bit, old_point)        -- old_point - индекс точки, которую не надо выбирать,
+    local points = {}                                          -- параметр не обязательный( например текущей точки )
 
     for i = 0, patrol_path:count()-1 do
-      --„®Ў®ў«пҐ¬ ў в Ў«Ёжг в®зЄЁ б ­г¦­л¬ ЎЁв®¬
+      --Добовляем в таблицу точки с нужным битом
       if( patrol_path:flag(i, bit)) then
-            --„®Ў ў«пҐ¬ в®зЄг Ґб«Ё old_point == nil Ё«Ё ­®ў п в®зЄ  ­Ґ б®ўЇ ¤ Ґв б old_point
+            --Добавляем точку если old_point == nil или новая точка не совпадает с old_point
             if(old_point == nil) then
                 table.insert(points, i)
             elseif(old_point ~= i) then
@@ -1260,7 +1260,7 @@ function point_with_bit_id(patrol_path, bit, old_point)        -- old_point - Ё
     end
 end
 
---‚®§ўа й Ґв Ё­¤ҐЄб б ¬®© Ў«Ё¦­Ґ© в®зЄЁ ЇгвЁ б § ¤ ­л¬ ЎЁв®¬, ®в вҐЄгйҐ© в®зЄЁ
+--Возвращает индекс самой ближней точки пути с заданым битом, от текущей точки
 function near_point_with_bit(point, patrol_path, bit)
     local new_point = nil
     local index     = nil
@@ -1269,7 +1269,7 @@ function near_point_with_bit(point, patrol_path, bit)
     for i = 0, patrol_path:count()-1 do
         if( patrol_path:flag(i, bit) ) then
             if(new_point == nil or patrol_path:point(i):distance_to(point) < dist) then
-                --…б«Ё нв  в®зЄ  ЇҐаў п Ё§ ­ иҐ¤иЁебп, «ЁЎ® ®в ­ҐҐ Їгвм Ў«Ё¦Ґ, в® § Ї®¬Ё­ Ґ¬ ҐҐ
+                --Если эта точка первая из нашедшихся, либо от нее путь ближе, то запоминаем ее
                 new_point   = patrol_path:point(i)
                 index       = i
                 dist        = new_point:distance_to(point)
@@ -1280,7 +1280,7 @@ function near_point_with_bit(point, patrol_path, bit)
     return index
 end
 
--- ђҐЄгабЁў­ п а бЇҐз вЄ  в Ў«Ёжл
+-- Рекурсивная распечатка таблицы
 function print_table(table, subs)
   local sub
   if subs ~= nil then

@@ -399,9 +399,6 @@ function actor_binder:update(delta)
         bind_photo.update_photo_from_actor(delta)
     end
 
-    -- DEBUG slowdown
-    --  slowdown.update()
-
     local time = time_global()
 
     -- game_stats.update (delta, self.object)

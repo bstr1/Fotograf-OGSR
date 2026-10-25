@@ -1,3 +1,5 @@
+-- bstr: на удаление
+
 local note = nil
 
 function use_repkit()

@@ -34,42 +34,6 @@ local weather_types={
 }
 
 --'*******************************************************************************
---'   **   **   **   **   **    **   **   **      QUEST_AF_STAR        **   **   **   **    **   **   **   ** 
---'*******************************************************************************
-local points={
-    {
-        position={x=-24.2727108001709,y=-12.1660995483398,z=-100.200202941895},
-        gv=0,
-        lv=73868
-        },
-    {
-        position={x=159.56,y=4.72,z=88.60},
-        gv=155,
-        lv=463808
-        },
-    {
-        position={x=-4.11,y=2.90,z=108.09},
-        gv=85,
-        lv=272619
-        }
-}
-
-function spawn_star(actor,npc,p1,p2)
-    local a = points[math.random(table.getn(points))]
-    local obj = alife():create("amk_af_night_star", vector():set(a.position.x,a.position.y,a.position.z), a.lv, a.gv)
-	if (obj) then
-		if is_debug==true then add_spot_on_map(obj.id, "red_location", "art") end
-	end
-	local m_where 
-	if news_main then
-		m_where = news_main.get_point_description("l01_escape", vector():set(a.position.x,a.position.y,a.position.z))
-	else
-		m_where = "Р—РґРµСЃСЊ, РЅР° РљРѕСЂРґРѕРЅРµ"
-	end
-	db.actor:give_talk_message(m_where.." СЃРєРѕСЂРµРµ РІСЃРµРіРѕ РїРѕРёСЃРєР°С‚СЊ СЃС‚РѕРёС‚. Р“РґРµ-С‚Рѕ С‚Р°Рј РѕРЅ, С‚РѕС‡РЅРѕ РіРѕРІРѕСЂСЋ.", "ui\\ui_iconstotal", Frect():set(0,0,10,10), "simple_answer_item")
-end
-
---'*******************************************************************************
 --'   **   **   **   **   **    **   **   **        FIRST_RUN          **   **   **   **   **    **   **   **   ** 
 --'*******************************************************************************
 -- Р­С‚Р° С„СѓРЅРєС†РёСЏ РІС‹Р·С‹РІР°РµС‚СЃСЏ РїРµСЂРІРѕР№. РћРЅР»Р°Р№РЅРѕРІС‹Рµ РѕР±СЉРµРєС‚С‹ РЅРµРґРѕСЃС‚СѓРїРЅС‹! db.actor РЅРµРґРѕСЃС‚СѓРїРµРЅ!
@@ -3273,10 +3237,10 @@ end
 
 -- РїСЂРѕРІРµСЂСЏРµС‚ СЂРµС†РµРїС‚v Рё РєРѕРјРїРѕРЅРµС‚v
 
--- полный набор изученных рецептов для трансмутатора (пси-зоны, без привязки к аномалии)
+-- пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅ-пїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ)
 function fill_recepti_all()
 	local recepti_est = {}
-	local anom_name = "пси-зона трансмутации"
+	local anom_name = "пїЅпїЅпїЅ-пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"
 	for anom, recepti in pairs(anom_recept_komp["anomalii"]) do
 		if recepti["recepti"] then
 			for info, recept in pairs(recepti["recepti"]) do
@@ -3471,7 +3435,7 @@ function as_start_universal_transform_timer(komp, result, udacha, pos, vremya, g
 	t.remove_anomaly = remove_anomaly
 	t.remove_anomaly_id = remove_anomaly_id
 	--get_console():execute("load ~#I#:"..string.format(" g_start_timer: "..vremya[1].." "..vremya[2].." "..vremya[3].." "..amk.pack_array_to_string(t)))
-	-- FOTOGRAF: ogse_st_mgr в моде нет, таймер на родном AMK-механизме (pstor, переживает сейв)
+	-- FOTOGRAF: ogse_st_mgr пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ AMK-пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (pstor, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ)
 	amk.g_start_timer("af_transform_universal", vremya[1], vremya[2], vremya[3], amk.pack_array_to_string(t))
 end
 

@@ -87,9 +87,6 @@
 	<string id="item_key_x18_name">
 		<text>Ключ Борова</text>
 	</string>
-	<string id="item_krot_flash">
-		<text>Флешка Крота</text>
-	</string>
 	<string id="item_PDA_lucky_desc">
 		<text>Карманный персональный компьютер. Незаменимое устройство в Зоне.</text>
 	</string>
@@ -123,4 +120,3 @@
 	<string id="yan_good_psy_helmet_name">
 		<text>Настроенный пси-шлем</text>
 	</string>
-
