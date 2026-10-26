@@ -2143,7 +2143,7 @@ function prom_desant_have(task, info)
 end
 
 function max_nagrada(first_speaker, second_speaker)
-   dialogs.relocate_item_section(second_speaker, "wpn_rem_870", "in", 1)
+   dialogs.relocate_item_section(second_speaker, "wpn_wincheaster1300_trapper", "in", 1)
    flamethrower.relocate_n_items_section(second_speaker, "ammo_12x76_zhekan", "in", 2)
 end
 
@@ -3037,7 +3037,7 @@ function brown_mousetrap_dal(first_speaker, second_speaker)
 end
 
 function voronin_perehod_nagrada(first_speaker, second_speaker)
-	dialogs.relocate_item_section(second_speaker, "wpn_an94_taktik", "in", 1)
+	dialogs.relocate_item_section(second_speaker, "wpn_abakan", "in", 1)
 	flamethrower.relocate_n_items_section(second_speaker, "ammo_5.45x39_fmj", "in", 3)
 end
 
@@ -3469,7 +3469,7 @@ end
 -----------------------------end-----------------------------
 
 function smith_dal_main(first_speaker, second_speaker)
-	dialogs.relocate_item_section(second_speaker, "wpn_sr25_mk11_mod0_sk1", "in", 1)
+	dialogs.relocate_item_section(second_speaker, "wpn_g28", "in", 1)
 	flamethrower.relocate_n_items_section(second_speaker, "ammo_7.62x51_ap", "in", 3)
 	dialogs.relocate_item_section(second_speaker, "military_outfit", "in", 1)
 	flamethrower.relocate_n_items_section(second_speaker, "medkit_army", "in", 2)

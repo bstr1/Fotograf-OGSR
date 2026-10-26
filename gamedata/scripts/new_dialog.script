@@ -8,7 +8,7 @@ local nagrad = {
     level_3 = {"wpn_sig_m2", "wpn_l85_m2", "wpn_abakan_m2", "wpn_eagle_m1", "wpn_winchester_m1", "wpn_spas12_m1",
                "wpn_groza_m1", "wpn_mp9", "wpn_sig550", "wpn_bizon", "wpn_vector", "wpn_tt33", "wpn_m1891_30_scope",
                "wpn_mp5_m1"},
-    level_4 = {"wpn_galatz_sk1", "wpn_sg551_sk1", "wpn_m16a2_sk1", "wpn_vpo101", "wpn_svd_m1", "wpn_gauss"},
+    level_4 = {"wpn_galatz_sk1", "wpn_sig550_luckygun", "wpn_m16a2_sk1", "wpn_vpo101", "wpn_svd_m1", "wpn_gauss"},
     level_5 = {"ammo_9x39_ap", "ammo_7.62x51_fmj", "ammo_7.62x51_ap", "ammo_7.62x54_7h14", "ammo_7.62x54_7h1",
                "ammo_7.62x54_7h1", "ammo_gauss", "ammo_9x39_pab9"},
     level_6 = {"ammo_9x39_ap", "ammo_7.62x51_fmj", "ammo_7.62x51_ap", "ammo_7.62x54_7h14", "ammo_7.62x54_7h1",
@@ -1360,7 +1360,7 @@ function mil_lucash_barier_done(first_speaker, second_speaker)
         actor = second_speaker
         trader = first_speaker
     end
-    dialogs.relocate_item_section(actor, "wpn_g36c_sk1", "in", 1)
+    dialogs.relocate_item_section(actor, "wpn_g36", "in", 1)
     flamethrower.relocate_n_items_section(actor, "ammo_5.56x45_ap", "in", 5)
     flamethrower.relocate_n_items_section(actor, "medkit_army", "in", 2)
 end
@@ -1404,7 +1404,7 @@ function trader_bratok_saiga(first_speaker, second_speaker)
         trader = first_speaker
     end
     flamethrower.relocate_n_items_section(trader, "amk_kanistra", "out", 2)
-    dialogs.relocate_item_section(actor, "wpn_saiga12c", "in", 1)
+    dialogs.relocate_item_section(actor, "wpn_saiga12", "in", 1)
 end
 
 function trader_bratok_ak_47(first_speaker, second_speaker)
@@ -2262,7 +2262,7 @@ function dan_mosin_dal(first_speaker, second_speaker)
         actor = second_speaker
         trader = first_speaker
     end
-    dialogs.relocate_item_section(actor, "wpn_m14", "in", 1)
+    dialogs.relocate_item_section(actor, "wpn_vpo101", "in", 1)
     flamethrower.relocate_n_items_section(actor, "ammo_7.62x51_ap", "in", 3)
     new_dialog.out_item_much("af_fireball", 4)
 end
@@ -2353,7 +2353,7 @@ function sahar_tri_af_cristall_dal(first_speaker, second_speaker)
         actor = second_speaker
         trader = first_speaker
     end
-    dialogs.relocate_item_section(actor, "wpn_m14", "in", 1)
+    dialogs.relocate_item_section(actor, "wpn_vpo101", "in", 1)
     new_dialog.out_item_much("vypolzen_hrebet", 10)
 end
 
@@ -2853,7 +2853,7 @@ function svoboda_af_cry_2_dal(first_speaker, second_speaker)
         actor = second_speaker
         trader = first_speaker
     end
-    dialogs.relocate_item_section(actor, "wpn_sg551_sk1", "in", 1)
+    dialogs.relocate_item_section(actor, "wpn_sig550_luckygun", "in", 1)
     new_dialog.out_item_much("vodka", 6)
 end
 
@@ -2907,7 +2907,7 @@ function svoboda_gold_art_famas_dal(first_speaker, second_speaker)
         actor = second_speaker
         trader = first_speaker
     end
-    dialogs.relocate_item_section(actor, "wpn_famas_p3_sk1", "in", 1)
+    dialogs.relocate_item_section(actor, "wpn_aug", "in", 1)
     new_dialog.out_item_much("antirad", 10)
 end
 

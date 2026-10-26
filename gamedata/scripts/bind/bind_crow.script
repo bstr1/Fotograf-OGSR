@@ -6,17 +6,18 @@
  Last edit		: 15.08.2013
 --]]------------------------------------------------------------------------------------------------------------------------------------
 local tbl_sounds = {
-"monsters\\crow\\crow_n_2",
-"monsters\\crow\\crow_n_3",
-"monsters\\crow\\crow_n_4",
-"monsters\\crow\\crow_n_5",
-"monsters\\crow\\crow_n_6",
-"monsters\\crow\\crow_n_7",
-"monsters\\crow\\crow_n_8",
-"monsters\\crow\\crow_n_9",
-"monsters\\crow\\crow_n_10",
-"monsters\\crow\\crow_n_11",
-"monsters\\crow\\crow_n_12"
+-- "monsters\\crow\\crow_n_2",
+-- "monsters\\crow\\crow_n_3",
+-- "monsters\\crow\\crow_n_4",
+-- "monsters\\crow\\crow_n_5",
+-- "monsters\\crow\\crow_n_6",
+-- "monsters\\crow\\crow_n_7",
+-- "monsters\\crow\\crow_n_8",
+-- "monsters\\crow\\crow_n_9",
+-- "monsters\\crow\\crow_n_10",
+-- "monsters\\crow\\crow_n_11",
+-- "monsters\\crow\\crow_n_12"
+"monsters\\crow\\crow_n_500" -- заглушка
 }
 local tbl_crow = {}	-- внешняя таблица звуков
 

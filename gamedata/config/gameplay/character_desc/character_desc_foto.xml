@@ -4876,7 +4876,7 @@
 		<supplies>
 			[spawn] \n
 		    anom_remover \n
-			wpn_ak75 = 1 \n
+			wpn_ak103 = 1 \n
 			ammo_5.45x39_ap = 2 \n
 			ammo_vog-25p = 3 \n
 			medkit = 1 \n
@@ -4975,7 +4975,7 @@
 			[spawn] \n
 			wpn_mp9 = 1 \n
 			ammo_9x19_fmj = 3 \n
-			wpn_g3_camo = 1 \n
+			wpn_g36_nimble = 1 \n
 			ammo_7.62x51_fmj = 2 \n
 			medkit_scientic = 1 \n
 			#include "gameplay\character_items.xml"

@@ -799,7 +799,7 @@
 	  ammo_357sw_jhp = 2 \n
 	  ammo_357sw_jfp = 2 \n
       academ_flash \n
-      wpn_fw900k \n
+      wpn_rpk74 \n
 	  ammo_5.56x45_ap \n
 #include "gameplay\character_items.xml" \n
 #include "gameplay\character_food.xml" \n

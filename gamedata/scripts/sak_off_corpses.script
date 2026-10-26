@@ -33,9 +33,9 @@ function off_corpses()
             if (obj.parent_id and obj.parent_id == 65535 and not string.find(wpn_name, "_m1") and
                 not string.find(wpn_name, "_m2") and not string.find(wpn_name, "hunters_toz") and
                 not string.find(wpn_name, "wpn_knife") and not string.find(wpn_name, "wpn_binoc") and
-                not string.find(wpn_name, "wpn_flame") and not string.find(wpn_name, "wpn_ak75") and
-                not string.find(wpn_name, "wpn_svd") and not string.find(wpn_name, "wpn_an94_taktik") and
-                not string.find(wpn_name, "wpn_taktik") and not string.find(wpn_name, "wpn_gp100") and
+                not string.find(wpn_name, "wpn_flame") and not string.find(wpn_name, "wpn_ak103") and
+                not string.find(wpn_name, "wpn_svd") and not string.find(wpn_name, "wpn_abakan") and
+                not string.find(wpn_name, "wpn_ak74u_snag") and not string.find(wpn_name, "wpn_gp100") and
                 not string.find(wpn_name, "wpn_m79") and not string.find(wpn_name, "wpn_g36") and
                 not string.find(wpn_name, "wpn_colt_python") and not string.find(wpn_name, "wpn_pkm") and
                 not string.find(wpn_name, "wpn_saiga12") and not string.find(wpn_name, "wpn_sayga12c") and
@@ -89,7 +89,7 @@ function off_corpses()
             if (get_dist_to_trup_9510(wpn) == true and get_dist_to_trup(wpn) == true and
                 not string.find(wpn_name, "wpn_gauss") and not string.find(wpn_name, "wpn_svd") and
                 not string.find(wpn_name, "wpn_vintorez") and not string.find(wpn_name, "wpn_svu") and
-                not string.find(wpn_name, "wpn_fn2000") and not string.find(wpn_name, "wpn_saiga12c") and
+                not string.find(wpn_name, "wpn_fn2000") and not string.find(wpn_name, "wpn_saiga12") and
                 not string.find(wpn_name, "wpn_rpg7") and not string.find(wpn_name, "wpn_desert_eagle") and
                 not string.find(wpn_name, "wpn_toz34") and not string.find(wpn_name, "wpn_rg6")) then
                 local weapon = tabl_weapons[twa]

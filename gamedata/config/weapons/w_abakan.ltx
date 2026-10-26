@@ -91,7 +91,7 @@ silencer_light_range                  = 0.01
 silencer_light_time                   = 0.2
 silencer_light_var_color              = 0.05
 silencer_light_var_range              = 0.5
-silencer_name                         = wpn_addon_silencer
+silencer_name                         = sil_tgp-a
 silencer_smoke_particles              = weapons\generic_weapon_svu
 silencer_status                       = 0
 silencer_x                            = 236
@@ -134,20 +134,23 @@ scope_respawn_pso                     = wpn_abakan_pso
 scope_respawn_ekp                     = wpn_abakan_ekp
 scope_respawn_rakurs                  = wpn_abakan_rakurs
 
-snd_shoot                             = weapons\abakan\abakan_muzzle_mono
-snd_shoot1                            = weapons\abakan\abakan_muzzle_mono1
-snd_silncer_shot                      = weapons\draw_silent
-snd_bore                              = weapons\draw_silent
-snd_close                             = weapons\draw_silent
-snd_draw                              = weapons\draw_aanrms
-snd_holster                           = weapons\hide_aanrms
+
+snd_silncer_shot                      = weapons\abakan\abakan_shot_sil
+snd_bore                              = weapons\generic_draw
+snd_draw                              = weapons\assault_draw
 snd_empty                             = weapons\abakan\abakan_empty, 0.5
+snd_holster                           = weapons\assault_holster
 snd_reload                            = weapons\abakan\abakan_reload
 snd_reload_empty                      = weapons\abakan\abakan_reload_empty
 snd_reload_jammed                     = weapons\abakan\abakan_misfire
-snd_shoot_grenade                     = weapons\gp25_shoot_mono
 snd_reload_grenade                    = weapons\gp25_grenload
 snd_switch                            = weapons\abakan\abakan_gl_deactivate
+snd_switch_g                          = weapons\abakan\abakan_gl_activate
+snd_sprint_idle						  = weapons\sprint_assault
+
+snd_shoot							  = weapons\abakan\abakan_muzzle_mono
+snd_shoot1							  = weapons\abakan\abakan_muzzle_mono1
+snd_shoot_grenade					  = weapons\gp25_shoot_mono
 
 [wpn_abakan_hud]:hud_base
 aim_hud_offset_pos_16x9               = -0.0745,0.0333,-0.09
@@ -263,9 +266,9 @@ scope_respawn                         = wpn_abakan
 
 [wpn_abakan_okp_hud]:wpn_abakan_hud
 item_visual                           = dynamics\weapons\wpn_abakan\wpn_abakan_okp_hud.ogf
-aim_hud_offset_pos_16x9               = -0.065000,0.002000,-0.07
+aim_hud_offset_pos_16x9               = -0.064,0.0025,-0.07
 aim_hud_offset_rot_16x9               = 0.000000,0.000000,0.000000
-aim_hud_offset_pos                    = -0.065000,0.002000,-0.07
+aim_hud_offset_pos                    = -0.064,0.0025,-0.07
 aim_hud_offset_rot                    = 0.000000,0.000000,0.000000
 
 [wpn_abakan_rakurs]:wpn_abakan
