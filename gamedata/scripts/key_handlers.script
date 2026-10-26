@@ -1,13 +1,12 @@
 -- key_handlers.script для NS OGSR
 -- Прыжки с Shift + функции pokazometr
---P - КОТИК
---NUMPAD1 - Здоровье
---NUMPAD2 - показометр
---NUMPAD3 - удалить метки
---NUMPAD4 - чистильщик
---NUMPAD5 - рестикторы
---NUMPAD6 - бабло 50к
-
+-- P - КОТИК
+-- NUMPAD1 - Здоровье
+-- NUMPAD2 - показометр
+-- NUMPAD3 - удалить метки
+-- NUMPAD4 - чистильщик
+-- NUMPAD5 - рестикторы
+-- NUMPAD6 - бабло 50к
 local shift_state = false
 
 local keys = {
@@ -36,7 +35,7 @@ local keys = {
         },
 
         -- === Функции pokazometr ===
-        [DIK_keys.DIK_P] = {                    -- P
+        [DIK_keys.DIK_P] = { -- P
             func = function()
                 if pokazometr and pokazometr.final_victory then
                     pokazometr.final_victory(r)
@@ -44,7 +43,7 @@ local keys = {
             end
         },
 
-        [DIK_keys.DIK_NUMPAD1] = {              -- Numpad 1
+        [DIK_keys.DIK_NUMPAD1] = { -- Numpad 1
             func = function()
                 if pokazometr and pokazometr.zdoroviy then
                     pokazometr.zdoroviy()
@@ -52,7 +51,7 @@ local keys = {
             end
         },
 
-        [DIK_keys.DIK_NUMPAD2] = {              -- Numpad 2
+        [DIK_keys.DIK_NUMPAD2] = { -- Numpad 2
             func = function()
                 if pokazometr and pokazometr.set_spots then
                     pokazometr.set_spots()
@@ -61,22 +60,22 @@ local keys = {
         },
 
         -- [DIK_keys.DIK_NUMPAD3] = {              -- Numpad 3
-            -- func = function()
-                -- if pokazometr and pokazometr.pda_verb then
-                    -- pokazometr.pda_verb()
-                -- end
-            -- end
+        -- func = function()
+        -- if pokazometr and pokazometr.pda_verb then
+        -- pokazometr.pda_verb()
+        -- end
+        -- end
         -- },
 
-        [DIK_keys.DIK_NUMPAD4] = {              -- Numpad 4
+        [DIK_keys.DIK_NUMPAD4] = { -- Numpad 4
             func = function()
                 if pokazometr and pokazometr.cleaner then
                     pokazometr.cleaner()
                 end
             end
         },
-		
-        [DIK_keys.DIK_NUMPAD5] = {              -- Numpad 5
+
+        [DIK_keys.DIK_NUMPAD5] = { -- Numpad 5
             func = function()
                 if pokazometr and pokazometr.show_restrictors then
                     pokazometr.show_restrictors()
@@ -84,7 +83,7 @@ local keys = {
             end
         },
 
-        [DIK_keys.DIK_NUMPAD7] = {              -- Numpad 6
+        [DIK_keys.DIK_NUMPAD7] = { -- Numpad 6
             func = function()
                 if pokazometr and pokazometr.bablo then
                     pokazometr.bablo()
@@ -92,7 +91,7 @@ local keys = {
             end
         },
 
-        [DIK_keys.DIK_NUMPAD6] = {              -- Numpad 7
+        [DIK_keys.DIK_NUMPAD6] = { -- Numpad 7
             func = function()
                 if pokazometr and pokazometr.nuh_na_vse then
                     pokazometr.nuh_na_vse()
@@ -100,7 +99,7 @@ local keys = {
             end
         },
 
-        [DIK_keys.DIK_NUMPAD9] = {              -- Numpad 7
+        [DIK_keys.DIK_NUMPAD9] = { -- Numpad 7
             func = function()
                 if ban and ban.ban then
                     ban.ban()
@@ -108,7 +107,7 @@ local keys = {
             end
         },
 
-        [DIK_keys.DIK_RBRACKET] = {             -- Кнопка ]
+        [DIK_keys.DIK_RBRACKET] = { -- Кнопка ]
             func = function()
                 if pokazometr and pokazometr.show_mobs then
                     pokazometr.show_mobs()
@@ -121,7 +120,7 @@ local keys = {
             func = function()
                 shift_state = true
             end
-        },
+        }
     },
 
     ["release"] = {
@@ -129,7 +128,7 @@ local keys = {
             func = function()
                 shift_state = false
             end
-        },
+        }
     }
 }
 
@@ -154,6 +153,12 @@ end
 
 -- ====================== ATTACH ======================
 function attach(sm)
-    sm:subscribe({ signal = "on_key_down", fun = this.handler_press })
-    sm:subscribe({ signal = "on_key_up",   fun = this.handler_release })
+    sm:subscribe({
+        signal = "on_key_down",
+        fun = this.handler_press
+    })
+    sm:subscribe({
+        signal = "on_key_up",
+        fun = this.handler_release
+    })
 end
