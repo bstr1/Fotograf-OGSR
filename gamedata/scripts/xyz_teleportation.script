@@ -164,43 +164,4 @@ function delete_pripyat_mervin()
     local actor = db.actor
 end
 
------------------------------------------------tt2------------------------------------------------
-
-function mg_pripyat_new()
-    create_level_changer(20105, db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(), 581, 2141,
-        vector():set(-162.555, -1.757, 65.565), vector():set(0.0, 0.0, 0.0), "l11_pripyat", 1)
-end
-
-function del_mg_pripyat_new()
-    local sim = alife()
-    local se_obj = sim:story_object(20105)
-    if se_obj then
-        sim:release(se_obj, true)
-    end
-    local actor = db.actor
-end
-
-function bunker_brat()
-    create_level_changer(20106, db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(), 178968,
-        2618, vector():set(-31.369, 20.150, 646.914), vector():set(0.0, -0.1, 0.0), "l12_stancia_2", 1)
-end
-
-function del_bunker_brat()
-    local sim = alife()
-    local se_obj = sim:story_object(20106)
-    if se_obj then
-        sim:release(se_obj, true)
-    end
-    local actor = db.actor
-end
-
-function bunker_end()
-    create_level_changer(20107, db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(), 3231, 2514,
-        vector():set(22.659, -34.482, 13.152), vector():set(0.0, 1.5, 0.0), "l12u_control_monolith", 1)
-end
-
-function sarfinal()
-    create_level_changer(20108, db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(), 3729, 2464,
-        vector():set(11.325, 55.594, 28.993), vector():set(0.0, -0.8, 0.0), "l12u_sarcofag", 1)
-end
 

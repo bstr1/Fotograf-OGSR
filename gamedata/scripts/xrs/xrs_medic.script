@@ -5,13 +5,6 @@
 --'	TODO: 
 ----------------------------------------------------------------------------------------------------------------------
 local excluded_npcs={
-	esc_fox=true,
-	esc_vagon_wounded=true,
-	gar_bandit_stroyka3=true,
-	gar_wounded_bandit=true,
-	val_sos_wounded=true,
-	chaes_mamai_master=true,
-	atp_zahar=true,
 	val_escort_bandit_halfdead=true
 }
 

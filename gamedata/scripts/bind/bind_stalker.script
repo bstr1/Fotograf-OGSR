@@ -68,21 +68,15 @@ function actor_binder:net_spawn(data)
         xrs_ai.actor_net_spawn(self)
     end
 
-    -- added by xStream for AMK miniSDK
     amk.on_game_load(obj)
-    -- end of addition
 
     -- sak_off_corpses.off_corpses()
-    -- braad_test.mad_npc()
-    -- braad_test.false_info()
     return true
 end
 ----------------------------------------------------------------------------------------------------------------------
 function actor_binder:net_destroy()
 
-    -- added by xStream for AMK miniSDK
     amk.on_game_save(obj)
-    -- end of addition
 
     if (actor_stats.remove_from_ranking ~= nil) then
         actor_stats.remove_from_ranking(self.object:id())

@@ -745,36 +745,6 @@
 
 	</specific_character>	
 	
-<!---------------------------nychka_man---------------------->
-<specific_character id="nychka_man_zombi" team_default = "1">
-    <name>GENERATE_NAME_stalker</name>
-    <icon>ui_npc_u_skit_maska</icon>
-    <map_icon x="3" y="2"></map_icon>
-    <bio>sim_stalker_general_bio</bio>
-
-    <class>cit_doctor</class>
-    <community>zombied</community> <panic_threshold>0.0</panic_threshold>
-    <money min="200" max="300" infinitive="0"></money>
-
-    <rank>650</rank>
-    <reputation>500</reputation>
- 
-    <visual>actors\skit\skit_rukzak</visual>
-    <snd_config>characters_voice\human_01\stalker\</snd_config>
-    <crouch_type>1</crouch_type>
-
-    <supplies>
-      [spawn] \n
-			wpn_ak74 = 1 \n	
-            ammo_7.62x39_fmj = 1 \n
-#include "gameplay\character_items.xml"
-#include "gameplay\character_food.xml"
-#include "gameplay\character_drugs.xml"	  
-    </supplies>
-	
-<start_dialog>hello_dialog</start_dialog>	
-
-	</specific_character>	
 	
 <!---------------------------sidor---------------------->	
 	

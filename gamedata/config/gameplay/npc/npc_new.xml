@@ -863,12 +863,7 @@
 	<character id="bar_kogot_zombi">
 		<class>cit_doctor</class>
 	</character>
-	<character id="chaes_mamai_master">
-		<class>chaes_mamai_master</class>
-	</character>
-	<character id="chaes_mamai_master_zombi">
-		<class>cit_doctor</class>
-	</character>
+
 	<character id="chaes_master">
 		<class>chaes_master</class>
 	</character>
@@ -1032,12 +1027,6 @@
 		<class>solomon</class>
 	</character>
 	<character id="solomon_zombi">
-		<class>cit_doctor</class>
-	</character>
-	<character id="dyak">
-		<class>dyak</class>
-	</character>
-	<character id="dyak_zombi">
 		<class>cit_doctor</class>
 	</character>
 	<character id="mil_stalker1">
@@ -1302,5 +1291,3 @@
 	
 	
 	
-
-

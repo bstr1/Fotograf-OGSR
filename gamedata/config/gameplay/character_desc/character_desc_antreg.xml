@@ -736,80 +736,6 @@
 #include "gameplay\character_dialogs.xml"
 	</specific_character>
 	
-<!---------------------------lesnik2---------------------->
-<specific_character id="lesnik2" team_default = "1">
-    <name>Лесник</name>
-    <icon>ui_npc_u_stalker_lesnik</icon>
-    <map_icon x="3" y="2"></map_icon>
-    <bio>sim_stalker_general_bio</bio>
-
-    <class>lesnik2</class>
-    <community>stranger</community> <terrain_sect>stalker_terrain</terrain_sect>
-    <money min="200" max="300" infinitive="0"></money>
-    
-    <rank>650</rank>
-    <reputation>500</reputation>
- 
-    <visual>actors\lesnik</visual>
-    <snd_config>characters_voice\human_01\stalker\</snd_config>
-    <crouch_type>1</crouch_type>
-
-    <supplies>
-      [spawn] \n
-			wpn_toz34 = 1 \n	
-            ammo_12x70_buck = 3 \n
-			wpn_binoc = 1 \n
-#include "gameplay\character_items.xml" \n
-#include "gameplay\character_food.xml" \n
-#include "gameplay\character_drugs.xml"	  
-    </supplies>
-
-<actor_dialog>lesnik_grig_dialog</actor_dialog>
-<actor_dialog>lesnik_poisk_dialog_est</actor_dialog>
-<actor_dialog>lesnik_poisk_dialog</actor_dialog>
-<actor_dialog>eda_dialog_est</actor_dialog>
-<actor_dialog>eda_dialog</actor_dialog>
-<actor_dialog>lekarstvo_dialog</actor_dialog>
-<actor_dialog>mandra_est_dialog</actor_dialog>
-<actor_dialog>mandra_dialog</actor_dialog>
-<actor_dialog>lesnik_izba_dialog</actor_dialog>	
-<actor_dialog>vasiliev_dialog</actor_dialog>	
-<start_dialog>hello_dialog</start_dialog>	
-#include "gameplay\character_dialogs.xml"
-	</specific_character>	
-	
-<!---------------------------vasil2---------------------->
-<specific_character id="vasil2" team_default = "1">
-    <name>Васильев</name>
-    <icon>ui_npc_u_stalker_ecolog</icon>
-    <map_icon x="3" y="2"></map_icon>
-    <bio>yan_Ecolog</bio>
-
-    <class>vasil2</class>
-    <community>ucheniy</community> <terrain_sect>stalker_ucheniy_terrain</terrain_sect>
-    <money min="2000" max="3000" infinitive="0"></money>
-    
-    <rank>650</rank>
-    <reputation>50</reputation>
- 
-    <visual>actors\ecolog\stalker_ecolog</visual>
-    <snd_config>characters_voice\human_01\stalker\</snd_config>
-    <crouch_type>1</crouch_type>
-
-    <supplies>
-      [spawn] \n
-	  wpn_groza \n
-      ammo_9x39_ap = 5 \n
-#include "gameplay\character_items.xml" \n
-#include "gameplay\character_food.xml" \n
-#include "gameplay\character_drugs.xml"	  
-    </supplies>
-	
-<actor_dialog>yantar_dialog</actor_dialog>
-<start_dialog>hello_dialog</start_dialog>	
-#include "gameplay\character_dialogs.xml"
-	</specific_character>	
-	
 <!---------------------------nychka_man---------------------->
 <specific_character id="nychka_man" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
@@ -1922,5 +1848,3 @@
 	</specific_character>   
    
    
-
-
