@@ -127,7 +127,7 @@ snd_shoot1                            = weapons\vintorez\vss_silencer_stereo1
 snd_silncer_shot                      = weapons\vintorez\vss_silencer_stereo
 snd_bore                              = weapons\draw_silent
 snd_close                             = weapons\draw_silent
-snd_draw                              = weapons\draw_v
+snd_draw                              = weapons\assault_draw
 snd_holster                           = weapons\hide_v
 snd_empty                             = weapons\vintorez\vintorez_empty, 0.8
 snd_reload                            = weapons\vintorez\vintorez_reload
@@ -265,6 +265,11 @@ aim_hud_offset_pos                    = -0.067500,0.035500,-0.09
 aim_hud_offset_rot                    = 0.000000,0.000000,0.000000
 
 [wpn_vintorez_nimble]:wpn_vintorez
+scope_respawn_1p78                    = wpn_vintorez_nimble_1p78
+scope_respawn_okp                     = wpn_vintorez_nimble_okp
+scope_respawn_ekp                     = wpn_vintorez_nimble_ekp
+scope_respawn_9x39scope               = wpn_vintorez_nimble_9x39scope
+scope_respawn_rakurs                  = wpn_vintorez_nimble_rakurs
 ammo_mag_size                         = 20
 cam_relax_speed                       = 3.5
 cam_relax_speed_ai                    = 360
@@ -308,3 +313,73 @@ visual                                = dynamics\weapons\wpn_vintorez\wpn_vintor
 anm_reload                            = val_reload, reload
 anm_reload_empty                      = val_reload_full, reload_empty
 item_visual                           = dynamics\weapons\wpn_vintorez\wpn_vintorez_nimble_hud.ogf
+[wpn_vintorez_nimble_1p78]:wpn_vintorez_nimble
+second_scope_zoom_factor              = 100
+second_aim_enabled                    = true
+second_aim_transition_time            = 6.5
+scope_x                               = 60
+scope_y                               = -1
+scope_name                            = 1p78
+hud                                   = wpn_vintorez_nimble_1p78_hud
+scope_respawn                         = wpn_vintorez_nimble
+
+[wpn_vintorez_nimble_1p78_hud]:wpn_vintorez_nimble_hud
+aim_hud_offset_pos_16x9               = -0.0685,0.0025,-0.037
+aim_hud_offset_rot_16x9               = 0.003,-0.003,0
+aim_hud_offset_pos                    = -0.0685,0.0025,-0.037
+aim_hud_offset_rot                    = 0.003,-0.003,0
+second_aim_hud_offset_pos             = 0.003525,0.025775,0.007400
+second_aim_hud_offset_pos_16x9        = 0.003525,0.025775,0.007400
+second_aim_hud_offset_rot             = -0.002500,0.000000,0.000000
+second_aim_hud_offset_rot_16x9        = -0.002500,0.000000,0.000000
+
+[wpn_vintorez_nimble_okp]:wpn_vintorez_nimble
+scope_x                               = 76
+scope_y                               = 7
+scope_name                            = okp
+hud                                   = wpn_vintorez_nimble_okp_hud
+scope_respawn                         = wpn_vintorez_nimble
+
+[wpn_vintorez_nimble_okp_hud]:wpn_vintorez_nimble_hud
+aim_hud_offset_pos_16x9               = -0.065500,0.011500,-0.07
+aim_hud_offset_rot_16x9               = 0.000000,0.000000,0.000000
+aim_hud_offset_pos                    = -0.065500,0.011500,-0.07
+aim_hud_offset_rot                    = 0.000000,0.000000,0.000000
+
+[wpn_vintorez_nimble_ekp]:wpn_vintorez_nimble
+scope_x                               = 66
+scope_y                               = 6
+scope_name                            = ekp
+hud                                   = wpn_vintorez_nimble_ekp_hud
+scope_respawn                         = wpn_vintorez_nimble
+
+[wpn_vintorez_nimble_ekp_hud]:wpn_vintorez_nimble_hud
+aim_hud_offset_pos_16x9               = -0.070000,-0.009500,-0.07
+aim_hud_offset_rot_16x9               = 0.000000,0.000000,0.000000
+aim_hud_offset_rot                    = 0.000000,0.000000,0.000000
+
+[wpn_vintorez_nimble_9x39scope]:wpn_vintorez_nimble
+scope_x                               = 55
+scope_y                               = 7
+scope_name                            = 9x39scope
+hud                                   = wpn_vintorez_nimble_9x39scope_hud
+scope_respawn                         = wpn_vintorez_nimble
+
+[wpn_vintorez_nimble_9x39scope_hud]:wpn_vintorez_nimble_hud
+aim_hud_offset_pos_16x9               = -0.067500,0.035500,-0.09
+aim_hud_offset_rot_16x9               = 0.000000,0.000000,0.000000
+aim_hud_offset_pos                    = -0.067500,0.035500,-0.09
+aim_hud_offset_rot                    = 0.000000,0.000000,0.000000
+
+[wpn_vintorez_nimble_rakurs]:wpn_vintorez_nimble
+scope_x                               = 67
+scope_y                               = 3
+scope_name                            = rakurs
+hud                                   = wpn_vintorez_nimble_rakurs_hud
+scope_respawn                         = wpn_vintorez_nimble
+
+[wpn_vintorez_nimble_rakurs_hud]:wpn_vintorez_nimble_hud
+aim_hud_offset_pos_16x9               = -0.069500,-0.007000,-0.07
+aim_hud_offset_rot_16x9               = 0.000000,0.000000,0.000000
+aim_hud_offset_pos                    = -0.069500,-0.007000,-0.07
+aim_hud_offset_rot                    = 0.000000,0.000000,0.000000

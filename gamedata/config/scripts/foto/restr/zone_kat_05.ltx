@@ -3,7 +3,7 @@ active = sr_idle@off
 
 ;зона выключена
 [sr_idle@off]
-on_actor_inside = {=ex_trans_zone_not_off} sr_psy_antenna@start
+on_actor_inside = {=ex_trans_zone_not_off} sr_psy_antenna@start %=ex_transform.zone_mark(5)%
 
 [sr_psy_antenna@start]
 eff_intensity = 10

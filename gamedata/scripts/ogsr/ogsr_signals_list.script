@@ -12,4 +12,6 @@ addons = {
 	"amkii_transmutator",
 	"ogse_surge_mgr",
 	"ui_inv_descr",
+	"ogse_qt",
+	"ogsr_quick_saveload",
 }

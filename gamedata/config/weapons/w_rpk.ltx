@@ -263,6 +263,11 @@ anm_shoot_aim                         = ak74_aim_shoot_scope, shoot
 
 
 [wpn_rpk74]:wpn_rpk74m
+scope_respawn_okp                     = wpn_rpk74_okp
+scope_respawn_ekp                     = wpn_rpk74_ekp
+scope_respawn_rakurs                  = wpn_rpk74_rakurs
+scope_respawn_1p78                    = wpn_rpk74_1p78
+scope_respawn_pso                     = wpn_rpk74_pso
 ammo_mag_size                         = 45
 cam_relax_speed                       = 15
 cam_relax_speed_ai                    = 120.75
@@ -341,6 +346,11 @@ shell_dir                             = 0.0, 1.0, 0.0
 shell_point                           = 0,0.025,0
 
 [wpn_rpk16]:wpn_rpk74m
+scope_respawn_okp                     = wpn_rpk16_okp
+scope_respawn_ekp                     = wpn_rpk16_ekp
+scope_respawn_rakurs                  = wpn_rpk16_rakurs
+scope_respawn_1p78                    = wpn_rpk16_1p78
+scope_respawn_pso                     = wpn_rpk16_pso
 ammo_mag_size                         = 95
 cam_relax_speed                       = 10
 cam_relax_speed_ai                    = 120.75
@@ -498,3 +508,139 @@ hands_orientation_16x9                = 0,0,0
 shell_bone                            = shell
 shell_dir                             = 0.0, 1.0, 0.0
 shell_point                           = 0.07, 0.03, 0.15
+[wpn_rpk16_okp]:wpn_rpk16
+scope_x                               = 66
+scope_y                               = 5
+scope_name                            = okp
+hud                                   = wpn_rpk16_okp_hud
+scope_respawn                         = wpn_rpk16
+
+[wpn_rpk16_okp_hud]:wpn_rpk16_hud
+aim_hud_offset_pos_16x9               = 0.014000,-0.008100,0.004200
+aim_hud_offset_pos                    = 0.014000,-0.008100,0.004200
+aim_hud_offset_rot                    = 0,0,0
+aim_hud_offset_rot_16x9               = 0,0,0
+
+[wpn_rpk16_ekp]:wpn_rpk16
+scope_x                               = 61
+scope_y                               = 3
+scope_name                            = ekp
+hud                                   = wpn_rpk16_ekp_hud
+scope_respawn                         = wpn_rpk16
+
+[wpn_rpk16_ekp_hud]:wpn_rpk16_hud
+aim_hud_offset_pos_16x9               = 0.002200,-0.019100,-0.028800
+aim_hud_offset_pos                    = 0.002200,-0.019100,-0.028800
+aim_hud_offset_rot                    = 0,0,0
+aim_hud_offset_rot_16x9               = 0,0,0
+
+[wpn_rpk16_rakurs]:wpn_rpk16
+scope_x                               = 65
+scope_y                               = -1
+scope_name                            = rakurs
+hud                                   = wpn_rpk16_rakurs_hud
+scope_respawn                         = wpn_rpk16
+
+[wpn_rpk16_rakurs_hud]:wpn_rpk16_hud
+aim_hud_offset_pos_16x9               = 0.001500,-0.016400,-0.034400
+aim_hud_offset_pos                    = 0.001500,-0.016400,-0.034400
+aim_hud_offset_rot                    = 0,0,0
+aim_hud_offset_rot_16x9               = 0,0,0
+
+[wpn_rpk16_1p78]:wpn_rpk16
+scope_x                               = 51
+scope_y                               = -4
+scope_name                            = 1p78
+hud                                   = wpn_rpk16_1p78_hud
+scope_respawn                         = wpn_rpk16
+
+[wpn_rpk16_1p78_hud]:wpn_rpk16_hud
+aim_hud_offset_pos_16x9               = 0.001800,-0.008800,0.002400
+aim_hud_offset_pos                    = 0.001800,-0.008800,0.002400
+aim_hud_offset_rot                    = 0,0,0
+aim_hud_offset_rot_16x9               = 0,0,0
+
+[wpn_rpk16_pso]:wpn_rpk16
+scope_x                               = 31
+scope_y                               = 3
+scope_name                            = pso
+hud                                   = wpn_rpk16_pso_hud
+scope_respawn                         = wpn_rpk16
+
+[wpn_rpk16_pso_hud]:wpn_rpk16_hud
+aim_hud_offset_pos_16x9               = 0.016200,0.008200,0.002400
+aim_hud_offset_pos                    = 0.016200,0.008200,0.002400
+aim_hud_offset_rot                    = 0,0,0
+aim_hud_offset_rot_16x9               = 0,0,0
+[wpn_rpk74_okp]:wpn_rpk74
+scope_x                               = 66
+scope_y                               = 5
+scope_name                            = okp
+visual                                = dynamics\weapons\wpn_rpk\wpn_rpk74_okp.ogf
+hud                                   = wpn_rpk74_okp_hud
+scope_respawn                         = wpn_rpk74
+
+[wpn_rpk74_okp_hud]:wpn_rpk74_hud
+aim_hud_offset_pos_16x9               = 0.014000,-0.008100,0.004200
+aim_hud_offset_pos                    = 0.014000,-0.008100,0.004200
+aim_hud_offset_rot                    = 0,0,0
+aim_hud_offset_rot_16x9               = 0,0,0
+item_visual                           = dynamics\weapons\wpn_rpk\wpn_rpk74_okp_hud.ogf
+
+[wpn_rpk74_ekp]:wpn_rpk74
+scope_x                               = 61
+scope_y                               = 3
+scope_name                            = ekp
+visual                                = dynamics\weapons\wpn_rpk\wpn_rpk74_ekp.ogf
+hud                                   = wpn_rpk74_ekp_hud
+scope_respawn                         = wpn_rpk74
+
+[wpn_rpk74_ekp_hud]:wpn_rpk74_hud
+aim_hud_offset_pos_16x9               = 0.002200,-0.019100,-0.028800
+aim_hud_offset_pos                    = 0.002200,-0.019100,-0.028800
+aim_hud_offset_rot                    = 0,0,0
+aim_hud_offset_rot_16x9               = 0,0,0
+item_visual                           = dynamics\weapons\wpn_rpk\wpn_rpk74_ekp_hud.ogf
+
+[wpn_rpk74_rakurs]:wpn_rpk74
+scope_x                               = 65
+scope_y                               = -1
+scope_name                            = rakurs
+visual                                = dynamics\weapons\wpn_rpk\wpn_rpk74_rakurs.ogf
+hud                                   = wpn_rpk74_rakurs_hud
+scope_respawn                         = wpn_rpk74
+
+[wpn_rpk74_rakurs_hud]:wpn_rpk74_hud
+aim_hud_offset_pos_16x9               = 0.001500,-0.016400,-0.034400
+aim_hud_offset_pos                    = 0.001500,-0.016400,-0.034400
+aim_hud_offset_rot                    = 0,0,0
+aim_hud_offset_rot_16x9               = 0,0,0
+item_visual                           = dynamics\weapons\wpn_rpk\wpn_rpk74_rakurs_hud.ogf
+
+[wpn_rpk74_1p78]:wpn_rpk74
+scope_x                               = 51
+scope_y                               = -4
+scope_name                            = 1p78
+visual                                = dynamics\weapons\wpn_rpk\wpn_rpk74_1p78.ogf
+hud                                   = wpn_rpk74_1p78_hud
+scope_respawn                         = wpn_rpk74
+
+[wpn_rpk74_1p78_hud]:wpn_rpk74_hud
+aim_hud_offset_pos_16x9               = 0.001800,-0.008800,0.002400
+aim_hud_offset_pos                    = 0.001800,-0.008800,0.002400
+aim_hud_offset_rot                    = 0,0,0
+aim_hud_offset_rot_16x9               = 0,0,0
+item_visual                           = dynamics\weapons\wpn_rpk\wpn_rpk74_1p78_hud.ogf
+
+[wpn_rpk74_pso]:wpn_rpk74
+scope_x                               = 31
+scope_y                               = 3
+scope_name                            = pso
+hud                                   = wpn_rpk74_pso_hud
+scope_respawn                         = wpn_rpk74
+
+[wpn_rpk74_pso_hud]:wpn_rpk74_hud
+aim_hud_offset_pos_16x9               = 0.016200,0.008200,0.002400
+aim_hud_offset_pos                    = 0.016200,0.008200,0.002400
+aim_hud_offset_rot                    = 0,0,0
+aim_hud_offset_rot_16x9               = 0,0,0

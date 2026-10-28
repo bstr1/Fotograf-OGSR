@@ -281,6 +281,13 @@ function cmd(scmd, ...)
 	end
 	get_console():execute(scmd)
 end
+function cmd2(scmd, arg)
+	if arg == nil then
+		cmd(scmd)
+	else
+		cmd(scmd, tostring(arg))
+	end
+end
 --==============================================================================================
 log = function(...) --[[log1(...)]] end
 --***************************************************************************************************************

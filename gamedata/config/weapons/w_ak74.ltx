@@ -133,7 +133,7 @@ snd_shoot1                            = weapons\ak74\ak74_muzzle_mono1
 snd_silncer_shot                      = weapons\ak74\ak74_silencer_mono
 snd_bore                              = weapons\draw_silent
 snd_close                             = weapons\draw_silent
-snd_draw                              = weapons\draw_aanrms
+snd_draw                              = weapons\assault_draw
 snd_holster                           = weapons\hide_aanrms
 snd_empty                             = weapons\ak_empty, 0.5
 snd_reload                            = weapons\ak74\ak74_reload
@@ -314,6 +314,11 @@ aim_hud_offset_pos                    = -0.063500,0.024000,-0.09
 aim_hud_offset_rot                    = 0.000000,0.000000,0.000000
 
 [wpn_ak74_rpm]:wpn_ak74
+scope_respawn_1p78                    = wpn_ak74_rpm_1p78
+scope_respawn_okp                     = wpn_ak74_rpm_okp
+scope_respawn_pso                     = wpn_ak74_rpm_pso
+scope_respawn_ekp                     = wpn_ak74_rpm_ekp
+scope_respawn_rakurs                  = wpn_ak74_rpm_rakurs
 cost                                  = 25000
 rpm                                   = 725
 description                           = st_wpn_ak74_rpm_descr
@@ -326,3 +331,71 @@ inv_grid_y                            = 2
 hud                                   = wpn_ak74_rpm_hud
 
 [wpn_ak74_rpm_hud]:wpn_ak74_hud
+[wpn_ak74_rpm_1p78]:wpn_ak74_rpm
+max_radius                            = 800
+min_radius                            = 5
+scope_x                               = 54
+scope_y                               = 1
+scope_name                            = 1p78
+hud                                   = wpn_ak74_rpm_1p78_hud
+scope_respawn                         = wpn_ak74_rpm
+
+[wpn_ak74_rpm_1p78_hud]:wpn_ak74_rpm_hud
+aim_hud_offset_pos_16x9               = -0.0625,-0.000499989,-0.0469999
+aim_hud_offset_rot_16x9               = 0,0,0
+aim_hud_offset_pos                    = -0.0625,-0.000499989,-0.0469999
+aim_hud_offset_rot                    = 0,0,0
+
+[wpn_ak74_rpm_okp]:wpn_ak74_rpm
+scope_x                               = 68
+scope_y                               = 8
+scope_name                            = okp
+hud                                   = wpn_ak74_rpm_okp_hud
+scope_respawn                         = wpn_ak74_rpm
+
+[wpn_ak74_rpm_okp_hud]:wpn_ak74_rpm_hud
+aim_hud_offset_pos_16x9               = -0.055500,0.011000,-0.07
+aim_hud_offset_rot_16x9               = 0.000000,0.000000,0.000000
+aim_hud_offset_pos                    = -0.055500,0.011000,-0.07
+aim_hud_offset_rot                    = 0.000000,0.000000,0.000000
+
+[wpn_ak74_rpm_pso]:wpn_ak74_rpm
+max_radius                            = 800
+min_radius                            = 5
+scope_x                               = 29
+scope_y                               = 6
+scope_name                            = pso
+hud                                   = wpn_ak74_rpm_pso_hud
+scope_respawn                         = wpn_ak74_rpm
+
+[wpn_ak74_rpm_pso_hud]:wpn_ak74_rpm_hud
+aim_hud_offset_pos_16x9               = -0.063500,0.024000,-0.09
+aim_hud_offset_rot_16x9               = 0.000000,0.000000,0.000000
+aim_hud_offset_pos                    = -0.063500,0.024000,-0.09
+aim_hud_offset_rot                    = 0.000000,0.000000,0.000000
+
+[wpn_ak74_rpm_ekp]:wpn_ak74_rpm
+scope_x                               = 62
+scope_y                               = 7
+scope_name                            = ekp
+hud                                   = wpn_ak74_rpm_ekp_hud
+scope_respawn                         = wpn_ak74_rpm
+
+[wpn_ak74_rpm_ekp_hud]:wpn_ak74_rpm_hud
+aim_hud_offset_pos_16x9               = -0.061000,-0.010000,-0.07
+aim_hud_offset_rot_16x9               = 0.000000,0.000000,0.000000
+aim_hud_offset_pos                    = -0.061000,-0.010000,-0.07
+aim_hud_offset_rot                    = 0.000000,0.000000,0.000000
+
+[wpn_ak74_rpm_rakurs]:wpn_ak74_rpm
+scope_x                               = 62
+scope_y                               = 5
+scope_name                            = rakurs
+hud                                   = wpn_ak74_rpm_rakurs_hud
+scope_respawn                         = wpn_ak74_rpm
+
+[wpn_ak74_rpm_rakurs_hud]:wpn_ak74_rpm_hud
+aim_hud_offset_pos_16x9               = -0.062000,-0.008000,-0.07
+aim_hud_offset_rot_16x9               = 0.000000,0.000000,0.000000
+aim_hud_offset_pos                    = -0.062000,-0.008000,-0.07
+aim_hud_offset_rot                    = 0.000000,0.000000,0.000000

@@ -128,7 +128,7 @@ snd_shoot1                            = weapons\galil\muzzle_galil_mono1
 snd_silncer_shot                      = weapons\sig550\mono\sig550_silencer_mono_far
 snd_bore                              = weapons\draw_silent
 snd_close                             = weapons\draw_silent
-snd_draw                              = weapons\draw_acgc
+snd_draw                              = weapons\assault_draw
 snd_holster                           = weapons\hide_acgc
 snd_empty                             = weapons\ak_empty, 0.5
 snd_reload                            = weapons\galil\galil_reload
@@ -193,8 +193,8 @@ scope_respawn                         = wpn_galil
 
 [wpn_galil_ac10632_hud]:wpn_galil_hud
 item_visual                           = dynamics\weapons\wpn_galil\wpn_galil_ac10632_hud.ogf
-aim_hud_offset_pos_16x9               = 0.002700,-0.016900,0.001400
-aim_hud_offset_pos                    = 0.002700,-0.016900,0.001400
+aim_hud_offset_pos_16x9               = -0.0663,0.0021,0.0014
+aim_hud_offset_pos                    = -0.0663,0.0021,0.0014
 aim_hud_offset_rot_16x9               = 0,0,0
 aim_hud_offset_rot                    = 0,0,0
 
@@ -227,8 +227,8 @@ scope_respawn                         = wpn_galil
 
 [wpn_galil_eot_hud]:wpn_galil_hud
 item_visual                           = dynamics\weapons\wpn_galil\wpn_galil_eot_hud.ogf
-aim_hud_offset_pos_16x9               = 0.002700,-0.018100,0.001400
-aim_hud_offset_pos                    = 0.002700,-0.018100,0.001400
+aim_hud_offset_pos_16x9               = -0.0673,0.0014,0.0014
+aim_hud_offset_pos                    = -0.0673,0.0014,0.0014
 aim_hud_offset_rot_16x9               = 0,0,0
 aim_hud_offset_rot                    = 0,0,0
 
@@ -242,8 +242,8 @@ scope_respawn                         = wpn_galil
 
 [wpn_galil_microt1_hud]:wpn_galil_hud
 item_visual                           = dynamics\weapons\wpn_galil\wpn_galil_micro-t1_hud.ogf
-aim_hud_offset_pos_16x9               = 0.002700,-0.021000,0.001400
-aim_hud_offset_pos                    = 0.002700,-0.021000,0.001400
+aim_hud_offset_pos_16x9               = -0.0668,-0.00200001,0.0014
+aim_hud_offset_pos                    = -0.0668,-0.00200001,0.0014
 aim_hud_offset_rot_16x9               = 0,0,0
 aim_hud_offset_rot                    = 0,0,0
 
@@ -274,6 +274,11 @@ second_aim_hud_offset_rot             = 0,0,0
 second_aim_hud_offset_rot_16x9        = 0,0,0
 
 [wpn_galil31]:wpn_galil
+scope_respawn_ac10632                 = wpn_galil31_ac10632
+scope_respawn_acog                    = wpn_galil31_acog
+scope_respawn_eot                     = wpn_galil31_eot
+scope_respawn_microt1                 = wpn_galil31_microt1
+scope_respawn_specter                 = wpn_galil31_specter
 ammo_class                            = ammo_7.62x39_fmj, ammo_7.62x39_ap
 ammo_mag_size                         = 30
 bullet_speed                          = 600
@@ -327,3 +332,88 @@ fire_point                            = 0,0,-0.077500
 item_visual                           = dynamics\weapons\wpn_galil\wpn_galil31_hud.ogf
 aim_hud_offset_pos_16x9 			  = -0.0673,0.0189,0
 aim_hud_offset_rot_16x9 			  = -0.00825,0.00075,0
+[wpn_galil31_ac10632]:wpn_galil31
+scope_x                               = 83
+scope_y                               = -17
+scope_name                            = ac10632
+visual                                = dynamics\weapons\wpn_galil\wpn_galil31_ac10632.ogf
+hud                                   = wpn_galil31_ac10632_hud
+scope_respawn                         = wpn_galil31
+
+[wpn_galil31_ac10632_hud]:wpn_galil31_hud
+aim_hud_offset_pos_16x9               = -0.0663,0.0021,0.0014
+aim_hud_offset_pos                    = -0.0663,0.0021,0.0014
+aim_hud_offset_rot_16x9               = 0,0,0
+aim_hud_offset_rot                    = 0,0,0
+item_visual                           = dynamics\weapons\wpn_galil\wpn_galil31_ac10632_hud.ogf
+
+[wpn_galil31_acog]:wpn_galil31
+max_radius                            = 600
+min_radius                            = 5
+scope_x                               = 76
+scope_y                               = -19
+scope_name                            = acog
+visual                                = dynamics\weapons\wpn_galil\wpn_galil31_acog.ogf
+hud                                   = wpn_galil31_acog_hud
+scope_respawn                         = wpn_galil31
+
+[wpn_galil31_acog_hud]:wpn_galil31_hud
+aim_hud_offset_pos                    = 0.002400,-0.018400,-0.038700
+aim_hud_offset_pos_16x9               = 0.002400,-0.018400,-0.038700
+aim_hud_offset_rot                    = 0,0,0
+aim_hud_offset_rot_16x9               = 0,0,0
+item_visual                           = dynamics\weapons\wpn_galil\wpn_galil31_acog_hud.ogf
+
+[wpn_galil31_eot]:wpn_galil31
+scope_x                               = 83
+scope_y                               = -17
+scope_name                            = eot
+visual                                = dynamics\weapons\wpn_galil\wpn_galil31_eot.ogf
+hud                                   = wpn_galil31_eot_hud
+scope_respawn                         = wpn_galil31
+
+[wpn_galil31_eot_hud]:wpn_galil31_hud
+aim_hud_offset_pos_16x9               = -0.0673,0.0014,0.0014
+aim_hud_offset_pos                    = -0.0673,0.0014,0.0014
+aim_hud_offset_rot_16x9               = 0,0,0
+aim_hud_offset_rot                    = 0,0,0
+item_visual                           = dynamics\weapons\wpn_galil\wpn_galil31_eot_hud.ogf
+
+[wpn_galil31_microt1]:wpn_galil31
+scope_x                               = 83
+scope_y                               = -17
+scope_name                            = microt1
+visual                                = dynamics\weapons\wpn_galil\wpn_galil31_micro-t1.ogf
+hud                                   = wpn_galil31_microt1_hud
+scope_respawn                         = wpn_galil31
+
+[wpn_galil31_microt1_hud]:wpn_galil31_hud
+aim_hud_offset_pos_16x9               = -0.0668,-0.00200001,0.0014
+aim_hud_offset_pos                    = -0.0668,-0.00200001,0.0014
+aim_hud_offset_rot_16x9               = 0,0,0
+aim_hud_offset_rot                    = 0,0,0
+item_visual                           = dynamics\weapons\wpn_galil\wpn_galil31_micro-t1_hud.ogf
+
+[wpn_galil31_specter]:wpn_galil31
+second_scope_zoom_factor              = 100
+second_aim_enabled                    = true
+second_aim_transition_time            = 6.5
+max_radius                            = 900
+min_radius                            = 5
+scope_x                               = 76
+scope_y                               = -19
+scope_name                            = specter
+visual                                = dynamics\weapons\wpn_galil\wpn_galil31_specter.ogf
+hud                                   = wpn_galil31_specter_hud
+scope_respawn                         = wpn_galil31
+
+[wpn_galil31_specter_hud]:wpn_galil31_hud
+aim_hud_offset_pos                    = 0.002800,-0.021500,-0.008800
+aim_hud_offset_pos_16x9               = 0.002800,-0.021500,-0.008800
+aim_hud_offset_rot                    = 0,0,0
+aim_hud_offset_rot_16x9               = 0,0,0
+second_aim_hud_offset_pos             = 0.002800,-0.047400,-0.008800
+second_aim_hud_offset_pos_16x9        = 0.002800,-0.047400,-0.008800
+second_aim_hud_offset_rot             = 0,0,0
+second_aim_hud_offset_rot_16x9        = 0,0,0
+item_visual                           = dynamics\weapons\wpn_galil\wpn_galil31_specter_hud.ogf

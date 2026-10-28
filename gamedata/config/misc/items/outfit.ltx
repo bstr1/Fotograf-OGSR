@@ -1447,7 +1447,7 @@ fire_wound_immunity                        = 0.005
 inv_name                                   = broken_exoskeleton_name
 inv_name_short                             = broken_exoskeleton_name
 description                                = broken_exoskeleton_description
-inv_weight                                 = 15.0
+inv_weight                                 = 10.0
 
 inv_grid_x                                 = 28
 inv_grid_y                                 = 38
@@ -1457,27 +1457,27 @@ full_icon_name                             = npc_icon_broken_exo_outfit
 
 visual                                     = equipments\exoskelet
 actor_visual                               = actors\neytral\stalker_neytral_exoskeleton.ogf
-
-cost                                       = 7500
+power_loss								   = 1.05
+cost                                       = 75000
 artefact_count                             = 8
 
 immunities_sect                            = sect_broken_exoskeleton_immunities
 
 ; MEDIUM RESISTANCE
-burn_protection                            = 0.2
-strike_protection                          = 0.2
-shock_protection                           = 0.15
-wound_protection                           = 0.25
-radiation_protection                       = 0.1
-telepatic_protection                       = 0.0
+burn_protection                            = 0.15
+strike_protection                          = 0.3
+shock_protection                           = 0.05
+wound_protection                           = 0.3
+radiation_protection                       = 0.15
+telepatic_protection                       = -0.5
 chemical_burn_protection                   = 0.15
-explosion_protection                       = 0.0
+explosion_protection                       = 0.2
 fire_wound_protection                      = 0.25
 
 sprint_allowed                             = false
 
-additional_inventory_weight                = 5
-additional_inventory_weight2               = 5
+additional_inventory_weight                = 45
+additional_inventory_weight2               = 45
 
 [sect_broken_exoskeleton_immunities]
 burn_immunity                              = 0.03

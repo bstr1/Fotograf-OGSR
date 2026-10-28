@@ -123,7 +123,7 @@ snd_shoot1                            = weapons\svu\svu_muzzle_stereo1
 snd_silncer_shot                      = weapons\svu\svu_muzzle_stereo
 snd_bore                              = weapons\draw_silent
 snd_close                             = weapons\draw_silent
-snd_draw                              = weapons\draw_aanrms
+snd_draw                              = weapons\assault_draw
 snd_holster                           = weapons\hide_aanrms
 snd_empty                             = weapons\ak_empty, 0.5
 snd_reload                            = weapons\svu\svu_reload
@@ -274,6 +274,11 @@ aim_hud_offset_rot                    = 0,0,0
 aim_hud_offset_rot_16x9               = 0,0,0
 
 [wpn_svu_nimble]:wpn_svu
+scope_respawn_1p78                    = wpn_svu_nimble_1p78
+scope_respawn_okp                     = wpn_svu_nimble_okp
+scope_respawn_ekp                     = wpn_svu_nimble_ekp
+scope_respawn_pso                     = wpn_svu_nimble_pso
+scope_respawn_rakurs                  = wpn_svu_nimble_rakurs
 class                                 = WP_LR300
 ammo_mag_size                         = 20
 cam_relax_speed                       = 21
@@ -323,3 +328,81 @@ anm_firemode                          = svu_firemode
 anm_firemode_empty                    = svu_firemode, idle_empty
 anm_reload                            = svu_reload20, reload
 anm_reload_empty                      = svu_reload_empty20, reload_empty
+[wpn_svu_nimble_1p78]:wpn_svu_nimble
+max_radius                            = 800
+min_radius                            = 10
+scope_x                               = 73
+scope_y                               = -4
+scope_name                            = 1p78
+visual                                = dynamics\weapons\wpn_svu\wpn_svu_nimble_1p78.ogf
+hud                                   = wpn_svu_nimble_1p78_hud
+scope_respawn                         = wpn_svu_nimble
+
+[wpn_svu_nimble_1p78_hud]:wpn_svu_nimble_hud
+aim_hud_offset_pos                    = -0.001000,-0.018400,-0.054200
+aim_hud_offset_pos_16x9               = -0.001000,-0.018400,-0.054200
+aim_hud_offset_rot                    = 0,0,0
+aim_hud_offset_rot_16x9               = 0,0,0
+item_visual                           = dynamics\weapons\wpn_svu\wpn_svu_nimble_1p78_hud.ogf
+
+[wpn_svu_nimble_okp]:wpn_svu_nimble
+scope_x                               = 87
+scope_y                               = 4
+scope_name                            = okp
+visual                                = dynamics\weapons\wpn_svu\wpn_svu_nimble_okp.ogf
+hud                                   = wpn_svu_nimble_okp_hud
+scope_respawn                         = wpn_svu_nimble
+
+[wpn_svu_nimble_okp_hud]:wpn_svu_nimble_hud
+aim_hud_offset_pos                    = 0.004600,-0.004600,-0.073001
+aim_hud_offset_pos_16x9               = 0.004600,-0.004600,-0.073001
+aim_hud_offset_rot                    = 0,0,0
+aim_hud_offset_rot_16x9               = 0,0,0
+item_visual                           = dynamics\weapons\wpn_svu\wpn_svu_nimble_okp_hud.ogf
+
+[wpn_svu_nimble_ekp]:wpn_svu_nimble
+scope_x                               = 83
+scope_y                               = 4
+scope_name                            = ekp
+visual                                = dynamics\weapons\wpn_svu\wpn_svu_nimble_ekp.ogf
+hud                                   = wpn_svu_nimble_ekp_hud
+scope_respawn                         = wpn_svu_nimble
+
+[wpn_svu_nimble_ekp_hud]:wpn_svu_nimble_hud
+aim_hud_offset_pos                    = 0.000800,-0.021000,-0.097701
+aim_hud_offset_pos_16x9               = 0.000800,-0.021000,-0.097701
+aim_hud_offset_rot                    = 0,0,0
+aim_hud_offset_rot_16x9               = 0,0,0
+item_visual                           = dynamics\weapons\wpn_svu\wpn_svu_nimble_ekp_hud.ogf
+
+[wpn_svu_nimble_pso]:wpn_svu_nimble
+max_radius                            = 800
+min_radius                            = 10
+scope_x                               = 53
+scope_y                               = 2
+scope_name                            = pso
+visual                                = dynamics\weapons\wpn_svu\wpn_svu_nimble_pso.ogf
+hud                                   = wpn_svu_nimble_pso_hud
+scope_respawn                         = wpn_svu_nimble
+
+[wpn_svu_nimble_pso_hud]:wpn_svu_nimble_hud
+aim_hud_offset_pos                    = 0.013300,-0.003300,-0.012500
+aim_hud_offset_pos_16x9               = 0.013300,-0.003300,-0.012500
+aim_hud_offset_rot                    = 0,0,0
+aim_hud_offset_rot_16x9               = 0,0,0
+item_visual                           = dynamics\weapons\wpn_svu\wpn_svu_nimble_pso_hud.ogf
+
+[wpn_svu_nimble_rakurs]:wpn_svu_nimble
+scope_x                               = 81
+scope_y                               = 0
+scope_name                            = rakurs
+visual                                = dynamics\weapons\wpn_svu\wpn_svu_nimble_rakurs.ogf
+hud                                   = wpn_svu_nimble_rakurs_hud
+scope_respawn                         = wpn_svu_nimble
+
+[wpn_svu_nimble_rakurs_hud]:wpn_svu_nimble_hud
+aim_hud_offset_pos                    = 0.000500,-0.024100,-0.109901
+aim_hud_offset_pos_16x9               = 0.000500,-0.024100,-0.109901
+aim_hud_offset_rot                    = 0,0,0
+aim_hud_offset_rot_16x9               = 0,0,0
+item_visual                           = dynamics\weapons\wpn_svu\wpn_svu_nimble_rakurs_hud.ogf

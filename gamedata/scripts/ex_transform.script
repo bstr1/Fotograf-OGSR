@@ -208,12 +208,23 @@ function zone_not_off(actor, zone)
     return not timer_zone_off
 end
 
+function zone_mark(actor, zone, tab)
+    local num = tab and tab[1]
+    local zone_id = zone and zone:id()
+    local spot_type = num and ('trans_zone' .. num)
+    if desc_zone and zone_id and num and num ~= 0 and level.map_has_object_spot(zone_id, spot_type) == 0 then
+        level.map_add_object_spot_ser(zone_id, spot_type, zone_desc[num])
+    end
+end
+
 function zone_wel(actor, zone, tab)
     local activ_sect, lobj, lobj_pos, lobj_sect
     local activing, reagent = {}, {}
     local actor = db.actor
     local flag = false
     local num = tab[1]
+    -- 4etkiu пси-зоны отмечаем сразу при входе
+    zone_mark(actor, zone, tab)
     local agent_reagent = reagent_agent[num]
     local prosible_agent = activating_agent[num]
     local zone_pos = zone and zone:position()

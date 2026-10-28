@@ -130,7 +130,7 @@ snd_shoot1                            = weapons\mdr\mdr_muzzle_mono1
 snd_silncer_shot                      = weapons\mdr\mdr_silencer_mono_far
 snd_bore                              = weapons\draw_silent
 snd_close                             = weapons\draw_silent
-snd_draw                              = weapons\draw_afgmr
+snd_draw                              = weapons\assault_draw
 snd_holster                           = weapons\hide_afgmr
 snd_empty                             = weapons\aug\aug_empty, 0.5
 snd_reload                            = weapons\mdr\mdr_reload
@@ -214,8 +214,8 @@ scope_respawn                         = wpn_mdr
 
 [wpn_mdr_ac10632_hud]:wpn_mdr_hud
 item_visual                           = dynamics\weapons\wpn_mdr\wpn_mdr_ac10632_hud.ogf
-aim_hud_offset_pos                    = 0.002350,0.007200,-0.070800
-aim_hud_offset_pos_16x9               = 0.002350,0.007200,-0.070800
+aim_hud_offset_pos                    = -0.06715,0.0167,-0.0708
+aim_hud_offset_pos_16x9               = -0.06715,0.0167,-0.0708
 
 [wpn_mdr_acog]:wpn_mdr
 max_radius                            = 300
@@ -244,8 +244,8 @@ scope_respawn                         = wpn_mdr
 
 [wpn_mdr_eot_hud]:wpn_mdr_hud
 item_visual                           = dynamics\weapons\wpn_mdr\wpn_mdr_eot_hud.ogf
-aim_hud_offset_pos_16x9               = 0.002300,0.004300,-0.075000
-aim_hud_offset_pos                    = 0.002300,0.004300,-0.075000
+aim_hud_offset_pos_16x9               = -0.0682,0.0138,-0.075
+aim_hud_offset_pos                    = -0.0682,0.0138,-0.075
 
 [wpn_mdr_microt1]:wpn_mdr
 hud                                   = wpn_mdr_microt1_hud
@@ -257,8 +257,8 @@ scope_respawn                         = wpn_mdr
 
 [wpn_mdr_microt1_hud]:wpn_mdr_hud
 item_visual                           = dynamics\weapons\wpn_mdr\wpn_mdr_micro-t1_hud.ogf
-aim_hud_offset_pos_16x9               = 0.002300,0.004100,-0.057000
-aim_hud_offset_pos                    = 0.002300,0.004100,-0.057000
+aim_hud_offset_pos_16x9               = -0.0677,0.0131,-0.057
+aim_hud_offset_pos                    = -0.0677,0.0131,-0.057
 
 [wpn_mdr_specter]:wpn_mdr
 second_scope_zoom_factor              = 100
@@ -283,6 +283,11 @@ second_aim_hud_offset_rot             = 0,0,0
 second_aim_hud_offset_rot_16x9        = 0,0,0
 
 [wpn_mdr_drum]:wpn_mdr
+scope_respawn_ac10632                 = wpn_mdr_drum_ac10632
+scope_respawn_acog                    = wpn_mdr_drum_acog
+scope_respawn_eot                     = wpn_mdr_drum_eot
+scope_respawn_microt1                 = wpn_mdr_drum_microt1
+scope_respawn_specter                 = wpn_mdr_drum_specter
 ammo_mag_size                         = 50
 cost                                  = 170000
 description                           = st_wpn_mdr_descr_drum
@@ -302,4 +307,81 @@ silencer_x                            = 207
 silencer_y                            = 2
 hud                                   = wpn_mdr_hud_drum
 visual                                = dynamics\weapons\wpn_mdr\wpn_mdr_drum.ogf
+
+[wpn_mdr_hud_drum]:wpn_mdr_hud
+item_visual                           = dynamics\weapons\wpn_mdr\wpn_mdr_hud_drum.ogf
+
+[wpn_mdr_drum_ac10632]:wpn_mdr_drum
+scope_x                               = 114
+scope_y                               = -10
+scope_name                            = ac10632
+visual                                = dynamics\weapons\wpn_mdr\wpn_mdr_ac10632_drum.ogf
+hud                                   = wpn_mdr_drum_ac10632_hud
+scope_respawn                         = wpn_mdr_drum
+
+[wpn_mdr_drum_ac10632_hud]:wpn_mdr_hud_drum
+item_visual                           = dynamics\weapons\wpn_mdr\wpn_mdr_ac10632_hud_drum.ogf
+aim_hud_offset_pos                    = -0.06715,0.0167,-0.0708
+aim_hud_offset_pos_16x9               = -0.06715,0.0167,-0.0708
+
+[wpn_mdr_drum_acog]:wpn_mdr_drum
+max_radius                            = 300
+min_radius                            = 5
+scope_x                               = 105
+scope_y                               = -13
+scope_name                            = acog
+visual                                = dynamics\weapons\wpn_mdr\wpn_mdr_acog_drum.ogf
+hud                                   = wpn_mdr_drum_acog_hud
+scope_respawn                         = wpn_mdr_drum
+
+[wpn_mdr_drum_acog_hud]:wpn_mdr_hud_drum
+item_visual                           = dynamics\weapons\wpn_mdr\wpn_mdr_acog_hud_drum.ogf
+aim_hud_offset_pos                    = 0.002100,0.006200,-0.089500
+aim_hud_offset_pos_16x9               = 0.002100,0.006200,-0.089500
+
+[wpn_mdr_drum_eot]:wpn_mdr_drum
+scope_x                               = 114
+scope_y                               = -12
+scope_name                            = eot
+visual                                = dynamics\weapons\wpn_mdr\wpn_mdr_eot_drum.ogf
+hud                                   = wpn_mdr_drum_eot_hud
+scope_respawn                         = wpn_mdr_drum
+
+[wpn_mdr_drum_eot_hud]:wpn_mdr_hud_drum
+item_visual                           = dynamics\weapons\wpn_mdr\wpn_mdr_eot_hud_drum.ogf
+aim_hud_offset_pos_16x9               = -0.0682,0.0138,-0.075
+aim_hud_offset_pos                    = -0.0682,0.0138,-0.075
+
+[wpn_mdr_drum_microt1]:wpn_mdr_drum
+scope_x                               = 114
+scope_y                               = -12
+scope_name                            = microt1
+visual                                = dynamics\weapons\wpn_mdr\wpn_mdr_micro-t1_drum.ogf
+hud                                   = wpn_mdr_drum_microt1_hud
+scope_respawn                         = wpn_mdr_drum
+
+[wpn_mdr_drum_microt1_hud]:wpn_mdr_hud_drum
+item_visual                           = dynamics\weapons\wpn_mdr\wpn_mdr_micro-t1_hud_drum.ogf
+aim_hud_offset_pos_16x9               = -0.0677,0.0131,-0.057
+aim_hud_offset_pos                    = -0.0677,0.0131,-0.057
+
+[wpn_mdr_drum_specter]:wpn_mdr_drum
+second_scope_zoom_factor              = 100
+second_aim_enabled                    = true
+second_aim_transition_time            = 6.5
+scope_x                               = 105
+scope_y                               = -13
+scope_name                            = specter
+visual                                = dynamics\weapons\wpn_mdr\wpn_mdr_specter_drum.ogf
+hud                                   = wpn_mdr_drum_specter_hud
+scope_respawn                         = wpn_mdr_drum
+
+[wpn_mdr_drum_specter_hud]:wpn_mdr_hud_drum
+item_visual                           = dynamics\weapons\wpn_mdr\wpn_mdr_specter_hud_drum.ogf
+aim_hud_offset_pos_16x9               = 0.002200,0.003800,-0.064699
+aim_hud_offset_pos                    = 0.002200,0.003800,-0.064699
+second_aim_hud_offset_pos             = 0.002200,-0.018500,-0.039400
+second_aim_hud_offset_pos_16x9        = 0.002200,-0.018500,-0.039400
+second_aim_hud_offset_rot             = 0,0,0
+second_aim_hud_offset_rot_16x9        = 0,0,0
 

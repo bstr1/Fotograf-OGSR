@@ -124,7 +124,7 @@ snd_shoot1                            = weapons\vintorez\vss_silencer_stereo1
 snd_silncer_shot                      = weapons\vintorez\vss_silencer_stereo
 snd_bore                              = weapons\draw_silent
 snd_close                             = weapons\draw_silent
-snd_draw                              = weapons\draw_v
+snd_draw                              = weapons\assault_draw
 snd_holster                           = weapons\hide_v
 snd_empty                             = weapons\val\val_empty, 0.8
 snd_reload                            = weapons\vintorez\vintorez_reload
@@ -311,6 +311,11 @@ reload_time                           = 1.7
 reload_empty_time                     = 2.7
 hud                                   = wpn_val_nimble_hud
 visual                                = dynamics\weapons\wpn_val\wpn_val_nimble.ogf
+scope_respawn_1p78                    = wpn_val_nimble_1p78
+scope_respawn_ekp                     = wpn_val_nimble_ekp
+scope_respawn_okp                     = wpn_val_nimble_okp
+scope_respawn_9x39scope               = wpn_val_nimble_9x39scope
+scope_respawn_rakurs                  = wpn_val_nimble_rakurs
 
 [wpn_val_nimble_hud]:wpn_val_hud
 aim_hud_offset_pos                    = -0.067500,0.028000,-0.09
@@ -343,14 +348,77 @@ fire_point                            = 0.000000,-0.006400,0.177900
 fire_point2                           = 0,0,0
 item_visual                           = dynamics\weapons\wpn_val\wpn_val_nimble_hud.ogf
 
-[wpn_val_nimble_rakurs]:wpn_val
+[wpn_val_nimble_rakurs]:wpn_val_nimble
 hud                                   = wpn_val_nimble_rakurs_hud
 visual                                = dynamics\weapons\wpn_val\wpn_val_nimble_rakurs.ogf
 scope_x                               = 67
 scope_y                               = -11
-scope_respawn                         = wpn_val
+scope_respawn                         = wpn_val_nimble
 
-[wpn_val_nimble_rakurs_hud]:wpn_val_hud
+[wpn_val_nimble_rakurs_hud]:wpn_val_nimble_hud
 item_visual                           = dynamics\weapons\wpn_val\wpn_val_nimble_rakurs_hud.ogf
 aim_hud_offset_pos                    = -0.068500,-0.007500,-0.07
 aim_hud_offset_pos_16x9               = -0.068500,-0.007500,-0.07
+[wpn_val_nimble_ekp]:wpn_val_nimble
+hud                                   = wpn_val_nimble_ekp_hud
+visual                                = dynamics\weapons\wpn_val\wpn_val_nimble_ekp.ogf
+scope_x                               = 66
+scope_y                               = 6
+scope_name                            = ekp
+scope_respawn                         = wpn_val_nimble
+
+[wpn_val_nimble_ekp_hud]:wpn_val_nimble_hud
+item_visual                           = dynamics\weapons\wpn_val\wpn_val_nimble_ekp_hud.ogf
+aim_hud_offset_pos_16x9               = -0.070000,-0.010000,0.000000
+aim_hud_offset_rot_16x9               = 0.000000,0.000000,0.000000
+aim_hud_offset_rot                    = 0.000000,0.000000,0.000000
+
+[wpn_val_nimble_okp]:wpn_val_nimble
+hud                                   = wpn_val_nimble_okp_hud
+visual                                = dynamics\weapons\wpn_val\wpn_val_nimble_okp.ogf
+scope_x                               = 76
+scope_y                               = 7
+scope_name                            = okp
+scope_respawn                         = wpn_val_nimble
+
+[wpn_val_nimble_okp_hud]:wpn_val_nimble_hud
+item_visual                           = dynamics\weapons\wpn_val\wpn_val_nimble_okp_hud.ogf
+aim_hud_offset_pos_16x9               = -0.065000,0.011500,-0.07
+aim_hud_offset_rot_16x9               = 0.000000,0.000000,0.000000
+aim_hud_offset_pos                    = -0.065000,0.011500,-0.07
+aim_hud_offset_rot                    = 0.000000,0.000000,0.000000
+
+[wpn_val_nimble_1p78]:wpn_val_nimble
+second_scope_zoom_factor              = 100
+second_aim_enabled                    = true
+second_aim_transition_time            = 6.5
+hud                                   = wpn_val_nimble_1p78_hud
+visual                                = dynamics\weapons\wpn_val\wpn_val_nimble_1p78.ogf
+scope_x                               = 60
+scope_y                               = -1
+scope_name                            = 1p78
+scope_respawn                         = wpn_val_nimble
+
+[wpn_val_nimble_1p78_hud]:wpn_val_nimble_hud
+item_visual                           = dynamics\weapons\wpn_val\wpn_val_nimble_1p78_hud.ogf
+aim_hud_offset_pos_16x9               = -0.0685,0.0025,-0.04
+aim_hud_offset_rot_16x9               = 0.002,-0.003,0
+aim_hud_offset_pos                    = -0.0685,0.0025,-0.04
+aim_hud_offset_rot                    = 0.002,-0.003,0
+second_aim_hud_offset_pos             = 0.003525,0.025830,0.007400
+second_aim_hud_offset_pos_16x9        = 0.003525,0.025830,0.007400
+second_aim_hud_offset_rot             = -0.002500,0.000000,0.000000
+second_aim_hud_offset_rot_16x9        = -0.002500,0.000000,0.000000
+
+[wpn_val_nimble_9x39scope]:wpn_val_nimble
+hud                                   = wpn_val_nimble_9x39scope_hud
+scope_x                               = 54
+scope_y                               = 6
+scope_name                            = 9x39scope
+scope_respawn                         = wpn_val_nimble
+
+[wpn_val_nimble_9x39scope_hud]:wpn_val_nimble_hud
+aim_hud_offset_pos_16x9               = -0.067500,0.035500,-0.09
+aim_hud_offset_rot_16x9               = 0.000000,0.000000,0.000000
+aim_hud_offset_pos                    = -0.067500,0.035500,-0.09
+aim_hud_offset_rot                    = 0.000000,0.000000,0.000000

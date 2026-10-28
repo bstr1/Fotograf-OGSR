@@ -132,7 +132,7 @@ snd_shoot1                            = groza\groza762_muzzle_mono1
 snd_silncer_shot                      = weapons\groza\groza_silencer_mono
 snd_bore                              = weapons\draw_silent
 snd_close                             = weapons\draw_silent
-snd_draw                              = weapons\draw_afgmr
+snd_draw                              = weapons\assault_draw
 snd_holster                           = weapons\hide_afgmr
 snd_empty                             = weapons\ak_empty, 0.5
 snd_reload                            = weapons\groza\groza_reload
@@ -210,10 +210,13 @@ fire_bone                             = wpn_body
 fire_bone2                            = wpn_body
 fire_point                            = 0.000000,0.004900,0.213800
 fire_point2                           = 0,-0.054,0.358
-gl_hud_offset_pos_16x9                = 0.001000,0.000000,0.000000
-gl_hud_offset_rot_16x9                = 0,0,0
-gl_hud_offset_pos                     = 0.001000,0.000000,0.000000
+
+gl_hud_offset_pos                     = -0.0805001,0.0075,0
+gl_hud_offset_pos_16x9                = -0.0805001,0.0075,0
+
 gl_hud_offset_rot                     = 0,0,0
+gl_hud_offset_rot_16x9                = 0,0,0
+
 hands_position                        = 0.011675,-0.012100,0.051200
 hands_position_16x9                   = 0.011675,-0.012100,0.051200
 hands_orientation                     = 0,0,0
@@ -259,8 +262,10 @@ anm_switch_g                          = groza_gl_on_scope, gl_on_scope
 anm_idle_sprint_start_g               = groza_sprint_g_start, gl_idle_scope
 anm_idle_sprint_g                     = groza_sprint_g, gl_idle_scope
 anm_idle_sprint_end_g                 = groza_sprint_g_end, gl_idle_scope
-aim_hud_offset_pos_16x9               = -0.070000,0.009000,-0.09
-aim_hud_offset_pos                    = -0.070000,0.009000,-0.09
+
+aim_hud_offset_pos_16x9               = -0.061,0.044,0
+aim_hud_offset_pos                    = -0.061,0.044,0
+
 aim_hud_offset_rot_16x9               = 0.000000,0.000000,0.000000
 aim_hud_offset_rot                    = 0.000000,0.000000,0.000000
 
@@ -308,6 +313,7 @@ zoom_cam_max_angle_horz               = 50.0
 zoom_cam_step_angle_horz              = 1.2
 hud                                   = wpn_groza_nimble_hud
 visual                                = dynamics\weapons\wpn_groza\wpn_groza_nimble.ogf
+scope_respawn_po4x34                  = wpn_groza_nimble_po4x34
 
 [wpn_groza_nimble_hud]:wpn_groza_hud
 anm_bore                              = groza_unik_idle_aim
@@ -333,3 +339,41 @@ anm_idle_sprint_end                   = groza_unik_sprint_end
 anm_headlamp_on                       = groza_unik_flash
 anm_gasmask                           = groza_unik_clear
 item_visual                           = dynamics\weapons\wpn_groza\wpn_groza_nimble_hud.ogf
+
+[wpn_groza_nimble_po4x34]:wpn_groza_nimble
+max_radius                            = 200
+min_radius                            = 5
+hud                                   = wpn_groza_nimble_po4x34_hud
+scope_x                               = 82
+scope_y                               = -17
+scope_name                            = po4x34
+scope_respawn                         = wpn_groza_nimble
+
+[wpn_groza_nimble_po4x34_hud]:wpn_groza_nimble_hud
+anm_shoot_aim                         = groza_shoot_scope, shoot
+anm_shots_w_gl_when_aim               = groza_shoot_scope_w_gl, shoot
+anm_bore_g                            = groza_gl_idle_aim, gl_idle_scope
+anm_hide_g                            = groza_gl_holster, gl_idle_scope
+anm_idle_g                            = groza_gl_idle, gl_idle_scope
+anm_idle_g_aim                        = groza_gl_idle_aim, gl_idle_scope
+anm_idle_moving_crouch_g              = groza_gl_crouch, gl_idle_scope
+anm_idle_moving_slow_g                = groza_gl_moving_slow, gl_idle_scope
+anm_idle_moving_g                     = groza_gl_moving, gl_idle_scope
+anm_idle_g_aim_moving                 = groza_gl_moving_aim, gl_idle_scope
+anm_reload_g                          = groza_gl_reload, gl_reload_scope
+anm_shots_g                           = groza_gl_shoot, gl_idle_scope
+anm_show_g                            = groza_gl_draw, gl_idle_scope
+anm_switch                            = groza_gl_off_scope, gl_off_scope
+anm_switch_g                          = groza_gl_on_scope, gl_on_scope
+anm_idle_sprint_start_g               = groza_sprint_g_start, gl_idle_scope
+anm_idle_sprint_g                     = groza_sprint_g, gl_idle_scope
+anm_idle_sprint_end_g                 = groza_sprint_g_end, gl_idle_scope
+
+aim_hud_offset_pos_16x9               = -0.061,0.044,0
+aim_hud_offset_pos                    = -0.061,0.044,0
+
+aim_hud_offset_rot_16x9               = 0.000000,0.000000,0.000000
+aim_hud_offset_rot                    = 0.000000,0.000000,0.000000
+
+gl_hud_offset_pos_16x9 = -0.0610001,0.0445,0
+gl_hud_offset_rot_16x9	 = 0,0,0
