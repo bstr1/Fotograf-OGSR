@@ -1,17 +1,6 @@
 <!--for_start-->
 <info_portion id="start_spawn_actor"></info_portion>
 
-<info_portion id="second_talk_mono"></info_portion>
-<info_portion id="trade_speak_est"></info_portion>
-<info_portion id="info_way_pripyat"></info_portion>
-<info_portion id="info_way_radar"></info_portion>
-<info_portion id="haron_sar_finish"></info_portion>
-<info_portion id="mahon_sar_finish"></info_portion>
-<info_portion id="solomon_aes_finish"></info_portion>
-<info_portion id="doctor_stadion_finish"></info_portion>
-<info_portion id="doctor_about_change"></info_portion>
-<info_portion id="art_garbage_spawn"></info_portion>
-<info_portion id="art_escape_spawn"></info_portion>
 <!--for_task_manager-->
 <info_portion id="net_zadan_one"></info_portion>
 <info_portion id="net_zadan_two"></info_portion>
@@ -24,22 +13,7 @@
 <info_portion id="level_newsix"></info_portion>
 <info_portion id="saharov_dark_radar"></info_portion>
 <info_portion id="saharov_radar_dark"></info_portion>
-<info_portion id="levsha_agro_yan"></info_portion>
-<info_portion id="levsha_yan_agro"></info_portion>
-<info_portion id="zombi_yan_sarc"></info_portion>
-<info_portion id="zombi_sarc_yan"></info_portion>
-<info_portion id="zombi_perehod_info">
-      <action>braad_test.spawn_yan_sarc</action>
-</info_portion>
-<info_portion id="digger_sar_chaes2"></info_portion>
-<info_portion id="digger_chaes2_sar"></info_portion>
-<info_portion id="digger_perehod_info">
-      <action>braad_test.spawn_sar_chaes2</action>
-</info_portion>
-<info_portion id="info_rad_yan"></info_portion>
-<info_portion id="info_yan_rad"></info_portion>
-<info_portion id="info_chaes_sarc"></info_portion>
-<info_portion id="info_sarc_chaes"></info_portion>
+
 
 
 <info_portion id="doctor_info">
@@ -50,138 +24,13 @@
 <info_portion id="doc_help_speak"></info_portion>
 <info_portion id="digger_hit"></info_portion>
 <info_portion id="doctor_hit"></info_portion>
-<!--prizrak_help-->
-<info_portion id="prizrak_help_start">
-      <task>prizrak_help</task>
-</info_portion>
-<info_portion id="prizrak_help_begin"></info_portion>
-<info_portion id="prizrak_help_have"></info_portion>
-<info_portion id="prizrak_help_speak"></info_portion>
-<info_portion id="prizrak_help_fail"></info_portion>
-<info_portion id="prizrak_help_done">
-      <action>braad_test.set_pri_priz</action>
-</info_portion>
 
 
-
-
-
-<!--sidr_nacalo-->
-<info_portion id="sidr_nacalo_start">
-      <task>sidr_nacalo</task>
-</info_portion>
-<info_portion id="sidr_nacalo_done"></info_portion>
-
-<!--sidr_lab-->
-<info_portion id="sidr_lab_start">
-      <task>sidr_lab</task>
-</info_portion>
-<info_portion id="sidr_lab_done"></info_portion>
-<info_portion id="sidr_lab_have"></info_portion>
-<info_portion id="sidr_lab_spawn">
-      <action>braad_test.sidr_lab_spawn</action>
-</info_portion>
 <!--sahar_shlem-->
 <info_portion id="sahar_shlem_start">
       <task>sahar_shlem</task>
 </info_portion>
-<info_portion id="sahar_shlem_begin"></info_portion>
+
 <info_portion id="sahar_shlem_done"></info_portion>
-<info_portion id="sahar_shlem_have"></info_portion>
-<info_portion id="sahar_shlem_fail"></info_portion>
-<!--kruglov_case-->
-<info_portion id="kruglov_case_start">
-      <task>kruglov_case</task>
-</info_portion>
-<info_portion id="kruglov_case_done"></info_portion>
-<info_portion id="kruglov_case_spawn"></info_portion>
-<info_portion id="kruglov_case_fight"></info_portion>
-<info_portion id="shilo_enemy"></info_portion>
-<info_portion id="kruglov_case_have"></info_portion>
-<!--agr_und_zombi1-->
-<info_portion id="actor_v_bunker"></info_portion>
-<info_portion id="agr_und_zombi_hit">
-      <action>braad_test.new_logic</action>
-</info_portion>
-<info_portion id="agr_und_zombi_hit_new"></info_portion>
-<info_portion id="agr_und_zombi_enemy_new"></info_portion>
-<info_portion id="agr_und_zombi_enemy"></info_portion>
-<info_portion id="agr_und_zombi_have"></info_portion>
-<info_portion id="agr_und_zombi_speak"></info_portion>
-<!--petrenko_weapon-->
-<info_portion id="petrenko_weapon_start">
-      <task>petrenko_weapon</task>
-</info_portion>
 
-<!--ohranik_trava-->
-<info_portion id="ohranik_trava_start">
-      <task>ohranik_trava</task>
-</info_portion>
-<info_portion id="ohranik_trava_done"></info_portion>
-<info_portion id="ohranik_trava_have"></info_portion>
-<info_portion id="ohranik_trava_spawn">
-      <action>braad_test.ohranik_spawn</action>
-</info_portion>
-<!--knyaz_abakan-->
-<info_portion id="knyaz_abakan_start">
-      <task>knyaz_abakan</task>
-</info_portion>
-<info_portion id="knyaz_abakan_done"></info_portion>
-<info_portion id="knyaz_abakan_have"></info_portion>
-<!--mil_klyak_help-->
-<info_portion id="mil_klyak_help_start">
-      <task>mil_klyak_help</task>
-</info_portion>
-<info_portion id="mil_klyak_help_ignore"></info_portion>
-<info_portion id="mil_klyak_help_have"></info_portion>
-<info_portion id="mil_klyak_help_done"></info_portion>
-<info_portion id="mil_naem1_dead"></info_portion>
-<info_portion id="mil_naem2_dead"></info_portion>
-<info_portion id="mil_naem3_dead"></info_portion>
-<info_portion id="mil_naem4_dead"></info_portion>
-<info_portion id="mil_naem5_dead"></info_portion>
-<info_portion id="mil_naem6_dead"></info_portion>
-<info_portion id="mil_naem7_dead"></info_portion>
-<info_portion id="mil_naem8_dead"></info_portion>
-<info_portion id="mil_klyak_dead"></info_portion>
-<info_portion id="mil_klyak_hit"></info_portion>
-<!--levsha_remont_detector-->
-<info_portion id="levsha_remont_detector"></info_portion>
-<!--mil_klyak_lab-->
-<info_portion id="mil_klyak_lab_start">
-      <task>mil_klyak_lab</task>
-</info_portion>
-<info_portion id="mil_klyak_lab_done"></info_portion>
-<info_portion id="mil_klyak_lab_have"></info_portion>
-<info_portion id="mil_klyak_lab_fight"></info_portion>
-<info_portion id="lab_zasada1_hit"></info_portion>
-<info_portion id="lab_zasada2_hit"></info_portion>
-<info_portion id="lab_zasada3_hit"></info_portion>
-<info_portion id="lab_zasada4_hit"></info_portion>
-<info_portion id="lab_zasada5_hit"></info_portion>
-<info_portion id="lab_zasada6_hit"></info_portion>
-<info_portion id="lab_zasada7_hit"></info_portion>
-<info_portion id="lab_zasada8_hit"></info_portion>
-<info_portion id="mil_klyak_lab_spawn">
-      <action>braad_test.klyak_lab_spawn</action>
-</info_portion>
-<!--mil_klyak_sidr-->
-<info_portion id="mil_klyak_sidr_start">
-      <task>mil_klyak_sidr</task>
-</info_portion>
-<info_portion id="mil_klyak_sidr_zasada">
-      <action>esc_graf.spawn_fantom_ac</action>
-</info_portion>
-<info_portion id="mil_klyak_sidr_done"></info_portion>
 
-<!--finish_put-->
-<info_portion id="finish_put_start">
-      <task>finish_put</task>
-</info_portion>
-<info_portion id="finish_put_begin"></info_portion>
-<info_portion id="finish_put_done"></info_portion>
-<info_portion id="actor_poslednii_put">
-      <task>actor_poslednii_put</task>
-</info_portion>
-<info_portion id="actor_finish_dialog"></info_portion>
-<info_portion id="actor_finish_dialogs"></info_portion>

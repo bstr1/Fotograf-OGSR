@@ -1,7 +1,3 @@
-function strelok_taynik_spawn()
-    local obj = alife():create("strelok_taynik", vector():set(-71.782, -6.830, -66.728), 3328, 717)
-end
-
 function m_taynik1_spawn()
     local obj = alife():create("m_taynik1", vector():set(-154.904, -5.380, -418.506), 10780, 1296)
 end

@@ -61,9 +61,6 @@ function checking_use_item(obj)
         not has_alife_info("nato_zasada") then
         db.actor:give_info_portion("nato_zasada")
 
-    elseif level.name() == "l10_radar" and obj:section() == "wpn_vint" and not has_alife_info("pauk_les_spawn") then
-        db.actor:give_info_portion("pauk_les_spawn")
-
     elseif level.name() == "l10u_bunker" and obj:section() == "book_zombi" and not has_alife_info("pauk_x10_spawn") then
         db.actor:give_info_portion("pauk_x10_spawn")
 
@@ -114,164 +111,11 @@ function dead_npc()
     elseif level.name() == "l04_darkvalley" and not has_alife_info("actor_na_darkvalley") then
         db.actor:give_info_portion("actor_na_darkvalley")
 
-    elseif level.name() == "l11_pripyat" and has_alife_info("new_urok_dialog_start") and
-        not has_alife_info("artefact_new_spawn") then
-        db.actor:give_info_portion("artefact_new_spawn")
-
-    elseif level.name() == "l10_radar" and has_alife_info("graf_second_dialog_start") and
-        not has_alife_info("prince_spawn") then
-        db.actor:give_info_portion("prince_spawn")
-
-    elseif level.name() == "l10_radar" and has_alife_info("potapov_first_dialog_start") and
-        not has_alife_info("izlom_blue_spawn") then
-        db.actor:give_info_portion("izlom_blue_spawn")
-
-    elseif level.name() == "l08_yantar" and has_alife_info("graf_tri_dialog_start") and
-        not has_alife_info("tsezar_spawn") then
-        db.actor:give_info_portion("tsezar_spawn")
-
     elseif level.name() == "l03u_agr_underground" and not has_alife_info("teleport_spawn") then
         db.actor:give_info_portion("teleport_spawn")
 
-    elseif level.name() == "l05_bar" and has_alife_info("levsha_daet_dobro") and has_alife_info("sidr_nacalo_start") and
-        not has_alife_info("sledopyt_spawn") then
-        db.actor:give_info_portion("sledopyt_spawn")
-
-    elseif level.name() == "l03u_agr_underground" and has_alife_info("sledopyt_spawn") and
-        not has_alife_info("str_spawn") then
-        db.actor:give_info_portion("str_spawn")
-    elseif level.name() == "l05_bar" and not has_alife_info("potapov_spawn") then
-        db.actor:give_info_portion("potapov_spawn")
-
-    elseif level.name() == "l04_darkvalley" and has_alife_info("doronin_help_have") and
-        not has_alife_info("naem_td_spawn") then
-        db.actor:give_info_portion("naem_td_spawn")
-
-    elseif level.name() == "l12_stancia" and has_alife_info("actor_poslednii_put") and
-        not has_alife_info("pauk_final_spawn") then
-        db.actor:give_info_portion("pauk_final_spawn")
-
-    elseif level.name() == "l03u_agr_underground" and has_alife_info("sledopyt_first_dialog_start") and
-        not has_alife_info("doctor_und_spawn") then
-        db.actor:give_info_portion("doctor_und_spawn")
-
-    elseif level.name() == "l12u_control_monolith" and has_alife_info("gromov_first_dialog_done") and
-        not has_alife_info("gromov_del") then
-        db.actor:give_info_portion("gromov_del")
-
     elseif level.name() == "aver" and has_alife_info("babka_dialog_start") and not has_alife_info("babka_del") then
         db.actor:give_info_portion("babka_del")
-
-    elseif level.name() == "l06_rostok" and has_alife_info("lektor_dialog_start") and not has_alife_info("lektor_spawn") then
-        db.actor:give_info_portion("lektor_spawn")
-    elseif level.name() == "l07_military" and not has_alife_info("vybros_spawn") then
-        db.actor:give_info_portion("vybros_spawn")
-    elseif level.name() == "l02_garbage" and has_alife_info("potapov_first_dialog_start") and
-        not has_alife_info("vypolzen_boloto_spawn") then
-        db.actor:give_info_portion("vypolzen_boloto_spawn")
-    elseif level.name() == "l02_garbage" and has_alife_info("potapov_first_dialog_start") and
-        not has_alife_info("izlom_mini_spawn") then
-        db.actor:give_info_portion("izlom_mini_spawn")
-    elseif level.name() == "l04u_labx18" and has_alife_info("potapov_first_dialog_start") and
-        not has_alife_info("izlom_x18_spawn") then
-        db.actor:give_info_portion("izlom_x18_spawn")
-    elseif level.name() == "l08u_brainlab" and has_alife_info("potapov_first_dialog_start") and
-        not has_alife_info("izlom_x16_spawn") then
-        db.actor:give_info_portion("izlom_x16_spawn")
-
-    elseif level.name() == "l02_garbage" and has_alife_info("sledopyt_first_dialog_zasada") and
-        not has_alife_info("fantom_svalka1_spawn") then
-        db.actor:give_info_portion("fantom_svalka1_spawn")
-
-    elseif level.name() == "l02_garbage" and has_alife_info("mayor_yarofeev_start") and
-        not has_alife_info("fantom_svalka2_spawn") then
-        db.actor:give_info_portion("fantom_svalka2_spawn")
-
-    elseif level.name() == "l06_rostok" and has_alife_info("ucen_need_metka_start") and
-        not has_alife_info("fantom_rostok_spawn") then
-        db.actor:give_info_portion("fantom_rostok_spawn")
-
-    elseif level.name() == "l06_rostok" and has_alife_info("doronin_help_begin") and
-        not has_alife_info("fantom_rostok2_spawn") then
-        db.actor:give_info_portion("fantom_rostok2_spawn")
-
-    elseif level.name() == "l10_radar" and has_alife_info("black_box_start") and
-        not has_alife_info("fantom_radar2_spawn") then
-        db.actor:give_info_portion("fantom_radar2_spawn")
-
-    elseif level.name() == "l10_radar" and has_alife_info("black_box_start") and not has_alife_info("izlom_radar_spawn") then
-        db.actor:give_info_portion("izlom_radar_spawn")
-
-    elseif level.name() == "l03_agroprom" and has_alife_info("lazarev_dialog_start") and
-        not has_alife_info("vypolzen_lazarev_spawn") then
-        db.actor:give_info_portion("vypolzen_lazarev_spawn")
-
-    elseif level.name() == "l02_garbage" and has_alife_info("sledopyt_first_dialog_done") and
-        not has_alife_info("doctor_und_del") then
-        db.actor:give_info_portion("doctor_und_del")
-
-    elseif level.name() == "l05_bar" and has_alife_info("sidor_poslanie_dialog_start") and
-        not has_alife_info("killer_attak_start") then
-        db.actor:give_info_portion("killer_attak_start")
-
-    elseif level.name() == "l12_stancia" and has_alife_info("actor_poslednii_put") and
-        not has_alife_info("chaes_final_spawn") then
-        db.actor:give_info_portion("chaes_final_spawn")
-
-    elseif level.name() == "l12_stancia_2" and has_alife_info("semecky_first_dialog_done") and
-        not has_alife_info("semecky_delete") then
-        db.actor:give_info_portion("semecky_delete")
-
-    elseif level.name() == "l12u_sarcofag" and has_alife_info("magomet_start_dialog_start") and
-        not has_alife_info("semecky_spawn") then
-        db.actor:give_info_portion("semecky_spawn")
-
-    elseif level.name() == "l12u_sarcofag" and has_alife_info("actor_poslednii_put") and not has_alife_info("lch_del") then
-        db.actor:give_info_portion("lch_del")
-
-    elseif level.name() == "l05_bar" and has_alife_info("dolg_attak_dialog_start") and
-        not has_alife_info("sledopyt_delete") then
-        db.actor:give_info_portion("sledopyt_delete")
-
-    elseif level.name() == "l12u_sarcofag" and has_alife_info("sled_dialog_start") and not has_alife_info("vhod_new") then
-        db.actor:give_info_portion("vhod_new")
-
-    elseif level.name() == "l12_stancia_2" and has_alife_info("actor_poslednii_put") and
-        not has_alife_info("sled_spawn") then
-        db.actor:give_info_portion("sled_spawn")
-
-    elseif level.name() == "l12u_control_monolith" and has_alife_info("actor_poslednii_put") and
-        not has_alife_info("gromov_spawn") then
-        db.actor:give_info_portion("gromov_spawn")
-
-    elseif level.name() == "l12u_control_monolith" and has_alife_info("actor_poslednii_put") and
-        not has_alife_info("actor_finish") then
-        db.actor:give_info_portion("actor_finish")
-
-    elseif level.name() == "l10_radar" and has_alife_info("sahar_shlem_have") and not has_alife_info("crazy_delete") then
-        db.actor:give_info_portion("crazy_delete")
-
-    elseif level.name() == "l11_pripyat" and has_alife_info("finish_put_start") and not has_alife_info("zombie_spawn") then
-        db.actor:give_info_portion("zombie_spawn")
-
-    elseif level.name() == "l10_radar" and has_alife_info("sveeblov_predatel_have") and
-        not has_alife_info("amulet_1_spawn") then
-        db.actor:give_info_portion("amulet_1_spawn")
-
-    elseif level.name() == "l10_radar" and has_alife_info("sveeblov_predatel_done") and
-        not has_alife_info("strannik_spawn") then
-        db.actor:give_info_portion("strannik_spawn")
-
-    elseif level.name() == "l08u_brainlab" and has_alife_info("potapov_first_dialog_start") and
-        not has_alife_info("restr_x16_spawn") then
-        db.actor:give_info_portion("restr_x16_spawn")
-
-    elseif level.name() == "l11_pripyat" and has_alife_info("five_urok_dialog_start") and
-        not has_alife_info("mervin3_delete") then
-        db.actor:give_info_portion("mervin3_delete")
-
-    elseif has_alife_info("semeckii_treasure_start") and not has_alife_info("semeckii_treasure_article") then
-        db.actor:give_info_portion("semeckii_treasure_article")
 
     elseif level.name() == "l08_yantar" and not has_alife_info("actor_na_yantar") then
         db.actor:give_info_portion("actor_na_yantar")
@@ -317,12 +161,6 @@ function dead_npc()
         has_alife_info("volk_novic4_have") and has_alife_info("volk_novic6_have")) then
         db.actor:give_info_portion("volk_can_speak")
 
-    elseif (has_alife_info("semeckii_treasure_part5") or has_alife_info("semeckii_treasure_part6") or
-        has_alife_info("semeckii_treasure_part7") or has_alife_info("semeckii_treasure_part8")) then
-        db.actor:give_info_portion("informator_trade_semeckii")
-        -- elseif level.name()=="l10u_bunker" and has_alife_info("kruglov_case_done") and 
-        -- not has_alife_info("actor_v_bunker") then
-        -- db.actor:give_info_portion("actor_v_bunker")
     elseif level.name() == "l03_agroprom" and has_alife_info("kruglov_art_have") then
         contr_art_spawn()
     end
@@ -415,83 +253,7 @@ function dead_npc()
     end
 end
 
-function spawn_level_dark()
-    -- создается переход из ТЕМНОЙ ДОЛИНЫ НА РАДАР
-    if (not has_alife_info("saharov_dark_radar")) then
-        level_new.create_level_changer(31000, vector():set(157.544, -4.795, -88.7233), 357929, 919, 227097, 1914,
-            vector():set(660.463, -43.8839, 173.0097), vector():set(0, -0.281389117240906, 0), "l10_radar", 0)
-        db.actor:give_info_portion("saharov_dark_radar")
-    end
-    -- создается переход с РАДАРА в ТЕМНУЮ ДОЛИНУ
-    if (not has_alife_info("saharov_radar_dark")) then
-        level_new.create_level_changer(31050, vector():set(660.2858, -43.876, 168.832), 227063, 1915, 359929, 919,
-            vector():set(160.9338989, -4.352917, -82.83966), vector():set(0, 0, 0), "l04_darkvalley", 0)
-        db.actor:give_info_portion("saharov_radar_dark")
-    end
-end
 
-function spawn_level_agro()
-    -- создается переход с АГРОПРОМА НА ЯНТАРЬ
-    if (not has_alife_info("levsha_agro_yan")) then
-        level_new.create_level_changer(31100, vector():set(-129.02766, 14.4666, 199.999), 111251, 522, 15229, 1487,
-            vector():set(-68.1646, 1.669, -357.0758), vector():set(0.219999998807907, -0.349999994039536, 0.62),
-            "l08_yantar", 0)
-        db.actor:give_info_portion("levsha_agro_yan")
-    end
-    -- создается переход с ЯНТАРЯ НА АГРОПРОМ
-    if (not has_alife_info("levsha_yan_agro")) then
-        level_new.create_level_changer(31150, vector():set(-69.8496, 3.838, -362.1278), 15229, 1487, 117966, 520,
-            vector():set(-122.43, 11.38, 185.53999), vector():set(0, -2.6800000667572, 0), "l03_agroprom", 0)
-        db.actor:give_info_portion("levsha_yan_agro")
-    end
-end
-
-function spawn_yan_sarc()
-    -- создается переход с ЯНТАРЯ В САРКОФАГ
-    if (not has_alife_info("zombi_yan_sarc")) then
-        level_new.create_level_changer(31200, vector():set(-25.6117, -18.152, -85.55978), 29509, 1492, 643, 2417,
-            vector():set(-6.636368, 51.11847, 25.6256), vector():set(0.14012610912323, 0, -0.99013364315033),
-            "l12u_sarcofag", 0)
-        db.actor:give_info_portion("zombi_yan_sarc")
-    end
-    -- создается переход с САРКОФАГА НА ЯНТАРЬ
-    if (not has_alife_info("zombi_sarc_yan")) then
-        level_new.create_level_changer(31250, vector():set(-13.26, 47.71, 46.57), 200, 2417, 29509, 1492,
-            vector():set(-25.6117, -18.152, -85.55978), vector():set(-0.12247440963984, 0, -0.99247169494629),
-            "l08_yantar", 0)
-        db.actor:give_info_portion("zombi_sarc_yan")
-    end
-end
-
-function spawn_sar_chaes2()
-    -- создается переход из САРКОФАГА НА ЧАЭС2
-    if (not has_alife_info("digger_sar_chaes2")) then
-        level_new.create_level_changer(31300, vector():set(77.10116577, 58.2671585, 51.8668289), 6406, 2417, 53648,
-            2537, vector():set(67.8906097, 5.04050731, 97.7711), vector():set(0.0, -0.5, 0.0), "l12_stancia_2", 0)
-        db.actor:give_info_portion("digger_sar_chaes2")
-    end
-    -- создается переход с ЧАЭС2 в САРКОФАГ
-    if (not has_alife_info("digger_chaes2_sar")) then
-        level_new.create_level_changer(31320, vector():set(663.8462524, 0.355151146, 140.6202697), 192695, 2623, 6321,
-            2417, vector():set(85.1118, 60.11035, 50.743), vector():set(0.0, -2.0, 0.0), "l12u_sarcofag", 0)
-        db.actor:give_info_portion("digger_chaes2_sar")
-    end
-end
-
-function spawn_rad_yan()
-    -- создается переход с РАДАРА НА ЯНТАРЬ
-    if (not has_alife_info("info_rad_yan")) then
-        level_new.create_level_changer(31340, vector():set(-33.8359031677246, 4.1663, -92.70242), 469, 1959, 132440,
-            1521, vector():set(176.82000732, 14.0399999, 81.319999), vector():set(0.0, 2.0, 0.0), "l08_yantar", 0)
-        db.actor:give_info_portion("info_rad_yan")
-    end
-    -- создается переход с ЯНТАРЯ НА РАДАР
-    if (not has_alife_info("info_yan_rad")) then
-        level_new.create_level_changer(31350, vector():set(181.97956848, 19.407814, 83.3477859), 132440, 1521, 794,
-            1959, vector():set(-30.9628868103027, 2.09963, -91.5933761), vector():set(0.0, -1.5, 0.0), "l10_radar", 0)
-        db.actor:give_info_portion("info_yan_rad")
-    end
-end
 
 
 
@@ -726,19 +488,6 @@ function transfer_object_item(item)
     -- dbg.log("transfer item=%s from %s to %s", item:name(), out_object:name(), in_object:name())
 end
 
-function mervin_vzyal(actor, npc)
-    local inv_box_1 = level_object_by_sid(9608)
-    out_object = db.actor
-    in_object = inv_box_1
-    db.actor:inventory_for_each(transfer_object_items)
-end
-
-function pripyat_pustoy(actor, npc)
-    local inv_box_1 = level_object_by_sid(30174)
-    out_object = db.actor
-    in_object = inv_box_1
-    db.actor:inventory_for_each(transfer_object_items)
-end
 
 function money_out(t1, t2)
     local npc = t1
@@ -1154,11 +903,5 @@ end
 function create_final_restr()
     local se_obj = alife():create("space_restrictor", vector():set(0.054, -34.355, 17.672), 1757, 2512)
     local custom = "[logic]\ncfg = scripts\\new\\restr\\final_restr.ltx"
-    rewrite_restrictor(se_obj, custom, 5.0)
-end
-
-function create_x16_restr()
-    local se_obj = alife():create("space_restrictor", vector():set(-66.073, -19.088, -158.844), 15672, 1490)
-    local custom = "[logic]\ncfg = scripts\\new\\restr\\x16_restr.ltx"
     rewrite_restrictor(se_obj, custom, 5.0)
 end

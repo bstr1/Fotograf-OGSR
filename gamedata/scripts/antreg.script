@@ -8,9 +8,6 @@ function start_antreg()
     elseif level.name() == "aver" and not has_alife_info("lesnichok_mafon") then
         db.actor:give_info_portion("lesnichok_mafon")
 
-    elseif level.name() == "l10_radar" and not has_alife_info("spawn_rad_soldat") then
-        db.actor:give_info_portion("spawn_rad_soldat")
-
     elseif level.name() == "l12u_sarcofag" and has_alife_info("rule_konec") and not has_alife_info("pobeg_finish") then
         db.actor:give_info_portion("pobeg_finish")
 
@@ -37,35 +34,17 @@ function start_antreg()
         not has_alife_info("dogs_perehod") then
         db.actor:give_info_portion("dogs_perehod")
 
-    elseif level.name() == "l05_bar" and has_alife_info("bar_help_done") and not has_alife_info("dolg_attak_start") then
-        db.actor:give_info_portion("dolg_attak_start")
-
     elseif level.name() == "l05_bar" and not has_alife_info("antirestr_spawn") then
         db.actor:give_info_portion("antirestr_spawn")
 
     elseif level.name() == "l12_stancia_2" and not has_alife_info("dogs_ch2_spawn") then
         db.actor:give_info_portion("dogs_ch2_spawn")
 
-    elseif level.name() == "l12_stancia_2" and has_alife_info("gromov_second_dialog_done") and
-        not has_alife_info("monolit_brat_spawn") then
-        db.actor:give_info_portion("monolit_brat_spawn")
-
-    elseif level.name() == "l06_rostok" and has_alife_info("graf_tri_dialog_have") and
-        not has_alife_info("perehod_yantar") then
-        db.actor:give_info_portion("perehod_yantar")
-
-    elseif level.name() == "l06_rostok" and has_alife_info("lektor_dialog_start") and not has_alife_info("vertel_spawn") then
-        db.actor:give_info_portion("vertel_spawn")
-
     elseif level.name() == "l05_bar" and not has_alife_info("totaliz_mos") then
         db.actor:give_info_portion("totaliz_mos")
 
     elseif level.name() == "predbannik" and not has_alife_info("usa_spawn") then
         db.actor:give_info_portion("usa_spawn")
-
-    elseif level.name() == "predbannik" and has_alife_info("pekar_first_dialog_have") and
-        not has_alife_info("psy_mir_spawn") then
-        db.actor:give_info_portion("psy_mir_spawn")
 
     elseif level.name() == "swamp" and not has_alife_info("boloto_start") then
         db.actor:give_info_portion("boloto_start")
@@ -85,11 +64,6 @@ function start_antreg()
 
     elseif level.name() == "l11_pripyat" and not has_alife_info("tushkanchiki_new") then
         db.actor:give_info_portion("tushkanchiki_new")
-
-
-    elseif level.name() == "l11_pripyat" and has_alife_info("actor_poslednii_put") and
-        not has_alife_info("tushkanchiki_last") then
-        db.actor:give_info_portion("tushkanchiki_last")
 
     end
 end
@@ -182,15 +156,6 @@ function spawn_usa_blokpost()
     local obj = alife():create("usa_specnaz1", vector():set(-562.797, 15.654, 266.985), 86321, 2823)
     local obj = alife():create("usa_specnaz2", vector():set(-563.491, 14.964, 289.301), 85304, 2824)
 end
-
-function spawn_bookmaker()
-    local obj = alife():create("bookmaker", vector():set(213.899, 0.485, 110.577), 52799, 1193)
-    local params = amk.read_stalker_params(obj)
-    params.custom = "[logic]\ncfg = scripts\\new\\bookmaker.ltx"
-    params.sid = 30194
-    amk.write_stalker_params(params, obj)
-end
-
 
 function spawn_tri_boyca()
     local obj = alife():create("boec1", vector():set(-81.302, -33.626, -329.393), 186224, 99)
@@ -632,24 +597,3 @@ function spawn_mir_green()
     local obj = alife():create("greendog_mir", vector():set(-239.193, 1.487, 91.603), 571858, 2884)
     local obj = alife():create("greendog_mir", vector():set(-263.292, 0.295, 83.981), 533117, 2882)
 end
-
-function spawn_lesnik_mafon()
-    local obj = alife():create("lesnik_mafon", vector():set(-349.814, -8.502, -7.953), 268833, 2978)
-end
-
-function spawn_maloy2()
-    local obj = alife():create("maroder_yang1", vector():set(83.291, 3.776, 133.175), 436219, 3079)
-    local obj = alife():create("maroder_mg11", vector():set(82.901, 3.888, 136.069), 435685, 3079)
-    local obj = alife():create("maroder_mg22", vector():set(87.740, 4.136, 133.793), 439457, 3079)
-    local obj = alife():create("maroder_mg33", vector():set(85.695, 3.910, 132.266), 437827, 3079)
-    local obj = alife():create("maroder_mg44", vector():set(86.823, 4.172, 137.286), 438914, 3079)
-end
-
-function elchimera_spawn()
-    local obj = alife():create("elektro_chimera18", vector():set(2.821, -10.816, 19.584), 3203, 1144)
-    local params = amk.read_monster_params(obj)
-    params.custom = "[logic]\ncfg = scripts\\new\\elektro_chimera18.ltx"
-    params.sid = 30217
-    amk.write_monster_params(params, obj)
-end
-

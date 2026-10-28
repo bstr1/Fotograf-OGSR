@@ -26,13 +26,6 @@ function teleport_krysha()
     snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
 end
 
-function teleport_krysha2()
-    level.add_pp_effector("teleport.ppe", 25005, false)
-    db.actor:set_actor_position(vector():set(-118.050, 1.703, 33.029)) -- ГГ на автовокзале
-    local snd_obj = xr_sound.get_safe_sound_object([[anomaly\teleport_work_1]])
-    snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
-end
-
 function teleport_final2()
     level.add_pp_effector("teleport.ppe", 25007, false)
     db.actor:set_actor_position(vector():set(0.054, -34.355, 17.672)) -- ГГ в Бункере

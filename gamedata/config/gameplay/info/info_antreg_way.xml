@@ -1406,10 +1406,6 @@
     <action>braad_test.create_solomonchik_restr</action>
 </info_portion>
 
-<info_portion id="elchimera_start">
-    <action>antreg.elchimera_spawn</action>
-</info_portion>
-
 <info_portion id="del_yaschik">
     <action>antreg.del_yaschichek1</action>
     <action>antreg.del_yaschichek2</action>

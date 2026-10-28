@@ -1,49 +1,3 @@
-
-function spawn_monsters_x16()
-    local obj = alife():create("poltergeist_my", vector():set(-56.707, 0.821, 29.693), 19230, 1526)
-    local obj = alife():create("poltergeist_my", vector():set(-56.707, 0.821, 29.693), 19230, 1526)
-    local obj = alife():create("poltergeist_my", vector():set(-72.965, 0.813, 46.945), 17079, 1526)
-    local obj = alife():create("poltergeist_my", vector():set(-72.965, 0.813, 46.945), 17079, 1526)
-    local obj = alife():create("poltergeist_my", vector():set(-60.323, 1.031, 9.478), 21248, 1527)
-    local obj = alife():create("poltergeist_my", vector():set(-60.323, 1.031, 9.478), 21248, 1527)
-end
-
-
-function spawn_tushkano()
-    local obj = alife():create("tushkano_my", vector():set(-282.481, 0.794, 171.721), 1282, 1341)
-    local obj = alife():create("tushkano_my", vector():set(-282.481, 0.794, 171.721), 1282, 1341)
-    local obj = alife():create("tushkano_my", vector():set(-282.481, 0.794, 171.721), 1282, 1341)
-    local obj = alife():create("tushkano_my", vector():set(-282.481, 0.794, 171.721), 1282, 1341)
-    local obj = alife():create("tushkano_my", vector():set(-282.481, 0.794, 171.721), 1282, 1341)
-    local obj = alife():create("tushkano_my", vector():set(-282.481, 0.794, 171.721), 1282, 1341)
-    local obj = alife():create("tushkano_my", vector():set(-282.481, 0.794, 171.721), 1282, 1341)
-    local obj = alife():create("tushkano_my", vector():set(-282.481, 0.794, 171.721), 1282, 1341)
-    local obj = alife():create("tushkano_my", vector():set(-282.481, 0.794, 171.721), 1282, 1341)
-    local obj = alife():create("tushkano_my", vector():set(-282.481, 0.794, 171.721), 1282, 1341)
-    local obj = alife():create("tushkano_my", vector():set(-228.957, -0.001, 163.467), 18788, 1346)
-    local obj = alife():create("tushkano_my", vector():set(-228.957, -0.001, 163.467), 18788, 1346)
-    local obj = alife():create("tushkano_my", vector():set(-228.957, -0.001, 163.467), 18788, 1346)
-    local obj = alife():create("tushkano_my", vector():set(-228.957, -0.001, 163.467), 18788, 1346)
-    local obj = alife():create("tushkano_my", vector():set(-228.957, -0.001, 163.467), 18788, 1346)
-    local obj = alife():create("tushkano_my", vector():set(-228.957, -0.001, 163.467), 18788, 1346)
-    local obj = alife():create("tushkano_my", vector():set(-228.957, -0.001, 163.467), 18788, 1346)
-    local obj = alife():create("tushkano_my", vector():set(-228.957, -0.001, 163.467), 18788, 1346)
-    local obj = alife():create("tushkano_my", vector():set(-228.957, -0.001, 163.467), 18788, 1346)
-    local obj = alife():create("tushkano_my", vector():set(-228.957, -0.001, 163.467), 18788, 1346)
-    local obj = alife():create("tushkano_my", vector():set(-195.767, -0.001, 162.397), 27645, 1363)
-    local obj = alife():create("tushkano_my", vector():set(-195.767, -0.001, 162.397), 27645, 1363)
-    local obj = alife():create("tushkano_my", vector():set(-195.767, -0.001, 162.397), 27645, 1363)
-    local obj = alife():create("tushkano_my", vector():set(-195.767, -0.001, 162.397), 27645, 1363)
-    local obj = alife():create("tushkano_my", vector():set(-195.767, -0.001, 162.397), 27645, 1363)
-    local obj = alife():create("tushkano_my", vector():set(-195.767, -0.001, 162.397), 27645, 1363)
-    local obj = alife():create("tushkano_my", vector():set(-195.767, -0.001, 162.397), 27645, 1363)
-    local obj = alife():create("tushkano_my", vector():set(-195.767, -0.001, 162.397), 27645, 1363)
-    local obj = alife():create("tushkano_my", vector():set(-195.767, -0.001, 162.397), 27645, 1363)
-    local obj = alife():create("tushkano_my", vector():set(-195.767, -0.001, 162.397), 27645, 1363)
-    local obj = alife():create("tushkano_my", vector():set(-195.767, -0.001, 162.397), 27645, 1363)
-    local obj = alife():create("tushkano_my", vector():set(-195.767, -0.001, 162.397), 27645, 1363)
-end
-
 function spawn_nechist()
     local obj = alife():create("chimera_chaes2", vector():set(635.701, -0.002, 335.582), 188620, 2619)
     local obj = alife():create("chimera_chaes2", vector():set(497.616, -0.093, 246.652), 156656, 2617)
@@ -130,31 +84,6 @@ function bloodsuckers()
 end
 
 ----------------------------music_new--------------------------------
-function sound_svitok1()
-    local snd_obj = xr_sound.get_safe_sound_object([[new\svitok1]])
-    snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
-end
-
-function sound_svitok2()
-    local snd_obj = xr_sound.get_safe_sound_object([[new\svitok2]])
-    snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
-end
-
-function sound_svitok3()
-    local snd_obj = xr_sound.get_safe_sound_object([[new\svitok3]])
-    snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
-end
-
-function sound_svitok4()
-    local snd_obj = xr_sound.get_safe_sound_object([[new\svitok4]])
-    snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
-end
-
-function sound_svitok5()
-    local snd_obj = xr_sound.get_safe_sound_object([[new\svitok5]])
-    snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
-end
-
 function crystal_ship()
     local snd_obj = xr_sound.get_safe_sound_object([[new\crystal_ship]])
     snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
@@ -167,11 +96,6 @@ end
 
 function sound_saga()
     local snd_obj = xr_sound.get_safe_sound_object([[new\atmosfer]])
-    snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
-end
-
-function sound_muka()
-    local snd_obj = xr_sound.get_safe_sound_object([[new\muka]])
     snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
 end
 
@@ -190,11 +114,6 @@ function sound_voodoo()
     snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
 end
 
-function sound_bar_attak()
-    local snd_obj = xr_sound.get_safe_sound_object([[new\otec]])
-    snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
-end
-
 function sound_dark()
     local snd_obj = xr_sound.get_safe_sound_object([[new\after_dark]])
     snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
@@ -202,16 +121,6 @@ end
 
 function sound_torero()
     local snd_obj = xr_sound.get_safe_sound_object([[new\torero]])
-    snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
-end
-
-function sound_final()
-    local snd_obj = xr_sound.get_safe_sound_object([[new\final_gromov]])
-    snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
-end
-
-function sound_final_call()
-    local snd_obj = xr_sound.get_safe_sound_object([[new\final_call]])
     snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
 end
 
@@ -299,187 +208,3 @@ function sound_killrestr()
     local snd_obj = xr_sound.get_safe_sound_object([[new\killrestr]])
     snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
 end
-
-function immortal_video()
-    game.start_tutorial("mov_desire_1")
-end
-
-function final1_video()
-    game.start_tutorial("mov_join_osoznanie")
-end
-
-function final2_video()
-    game.start_tutorial("mov_desire_4")
-end
------------------------------------izlom--------------------------------------
-
-function izlom_minigun()
-    local obj = alife():create("izlom_mini", vector():set(260.015, -9.443, -141.040), 372746, 404)
-    local obj = alife():create("izlom_mini", vector():set(263.395, -9.145, -154.870), 374206, 403)
-    local obj = alife():create("izlom_mini", vector():set(207.800, -0.972, -152.620), 348150, 400)
-end
-
-function izlom_stoyanka()
-    local obj = alife():create("izlom_stoyanka1", vector():set(-351.797, -13.864, 391.912), 6015, 1847)
-    local obj = alife():create("izlom_stoyanka2", vector():set(-363.699, -13.667, 383.335), 2362, 1848)
-    local obj = alife():create("izlom_stoyanka3", vector():set(-377.084, -13.893, 391.522), 585, 1848)
-    local obj = alife():create("izlom_stoyanka4", vector():set(-357.105, -13.536, 402.171), 3950, 1848)
-end
-
-function izlom_agroprom()
-    local obj = alife():create("izlom_agro", vector():set(-130.957, 13.839, 183.171), 108959, 522)
-    local obj = alife():create("izlom_agro", vector():set(-107.686, 11.207, 173.026), 132572, 520)
-    local obj = alife():create("izlom_agro", vector():set(-104.185, 15.050, 189.896), 136165, 520)
-end
-
-function izlom_radar()
-    local obj = alife():create("izlom_rad", vector():set(345.025, -45.555, -193.453), 89994, 2099)
-    local obj = alife():create("izlom_rad", vector():set(363.216, -47.311, -172.405), 99991, 2099)
-    local obj = alife():create("izlom_rad", vector():set(379.088, -49.904, -199.959), 110277, 1872)
-end
-
-function izlom_x18()
-    -- local obj=alife():create("izlom_td",vector():set(-6.985,4.188,-2.907),1894,1112)
-    -- local obj=alife():create("izlom_td",vector():set(-0.387,-10.820,-7.000),2682,1134)
-end
-
-function izlom_x16()
-    local obj = alife():create("izlom_yantar", vector():set(-86.698, -17.096, -193.608), 9308, 1489)
-end
-
-
-function vypolzen_agroprom()
-    local obj = alife():create("vypolzen_agro", vector():set(-159.547, 1.788, 48.670), 77948, 531)
-    local obj = alife():create("vypolzen_agro", vector():set(-159.547, 1.788, 48.670), 77948, 531)
-    local obj = alife():create("vypolzen_agro", vector():set(-200.519, 6.464, 17.533), 36689, 537)
-    local obj = alife():create("vypolzen_agro", vector():set(-200.519, 6.464, 17.533), 36689, 537)
-    local obj = alife():create("vypolzen_agro", vector():set(-196.218, 2.546, 89.596), 40279, 678)
-    local obj = alife():create("vypolzen_agro", vector():set(-196.218, 2.546, 89.596), 40279, 678) -- вагончик
-    local obj = alife():create("vypolzen_agro", vector():set(-197.101, 2.476, 95.134), 39592, 678)
-    local obj = alife():create("vypolzen_agro", vector():set(-197.101, 2.476, 95.134), 39592, 678)
-end
-
-function vypolzen_svalka_boloto()
-    local obj = alife():create("vypolzen_svalka1", vector():set(-129.219, -0.875, -160.975), 289704, 398)
-    local obj = alife():create("vypolzen_svalka1", vector():set(-129.219, -0.875, -160.975), 289704, 398)
-    local obj = alife():create("vypolzen_svalka1", vector():set(117.273, -1.123, -110.276), 279903, 396)
-    local obj = alife():create("vypolzen_svalka1", vector():set(117.273, -1.123, -110.276), 279903, 396)
-end
-
-function vypolzen_svalka_vorota()
-    local obj = alife():create("vypolzen_svalka2", vector():set(32.327, 0.663, -297.362), 205376, 253)
-    local obj = alife():create("vypolzen_svalka2", vector():set(32.327, 0.663, -297.362), 205376, 253)
-    local obj = alife():create("vypolzen_svalka2", vector():set(57.676, -0.216, -280.530), 229394, 262)
-    local obj = alife():create("vypolzen_svalka2", vector():set(57.676, -0.216, -280.530), 229394, 262)
-end
-
-function vypolzen_yantar_boloto()
-    local obj = alife():create("vypolzen_yantar", vector():set(-88.651, -11.218, -217.097), 8675, 1485)
-    local obj = alife():create("vypolzen_yantar", vector():set(-88.651, -11.218, -217.097), 8675, 1485)
-    local obj = alife():create("vypolzen_yantar", vector():set(-94.224, -12.377, -241.820), 7534, 1485)
-    local obj = alife():create("vypolzen_yantar", vector():set(-94.224, -12.377, -241.820), 7534, 1485)
-    local obj = alife():create("vypolzen_yantar", vector():set(-26.301, -12.343, -304.372), 29087, 1453)
-    local obj = alife():create("vypolzen_yantar", vector():set(-26.301, -12.343, -304.372), 29087, 1453)
-    local obj = alife():create("vypolzen_yantar", vector():set(-26.301, -12.343, -304.372), 29087, 1453)
-end
-
-function vypolzen_td()
-    local obj = alife():create("vypolzen_dol1", vector():set(4.450, -4.450, -299.211), 178724, 842)
-    local obj = alife():create("vypolzen_dol2", vector():set(4.450, -4.450, -299.211), 178724, 842)
-    local obj = alife():create("vypolzen_dol3", vector():set(4.450, -4.450, -299.211), 178724, 842)
-    local obj = alife():create("vypolzen_dol4", vector():set(-35.312, -4.482, -264.325), 133803, 853)
-    local obj = alife():create("vypolzen_dol5", vector():set(-35.312, -4.482, -264.325), 133803, 853)
-    local obj = alife():create("vypolzen_dol6", vector():set(-35.312, -4.482, -264.325), 133803, 853)
-end
-
-function vypolzen_dialog_have(task, info)
-    if db.actor and db.actor:has_info("vypolzen_dol1_dead") and db.actor:has_info("vypolzen_dol2_dead") and
-        db.actor:has_info("vypolzen_dol3_dead") and db.actor:has_info("vypolzen_dol4_dead") and
-        db.actor:has_info("vypolzen_dol5_dead") and db.actor:has_info("vypolzen_dol6_dead") then
-        return db.actor:give_info_portion("vypolzen_dialog_have")
-    end
-    return false
-end
-
-function vypolzen_dialog_done(first_speaker, second_speaker)
-    flamethrower.relocate_n_items_section(second_speaker, "wpn_protecta", "in", 1)
-end
-
-function izlom_dialog_have(task, info)
-    if db.actor and db.actor:has_info("izlom_stoyanka1_dead") and db.actor:has_info("izlom_stoyanka2_dead") and
-        db.actor:has_info("izlom_stoyanka3_dead") and db.actor:has_info("izlom_stoyanka4_dead") then
-        return db.actor:give_info_portion("izlom_dialog_have")
-    end
-    return false
-end
-
-function izlom_dialog_done(first_speaker, second_speaker)
-    flamethrower.relocate_n_items_section(second_speaker, "wpn_svd_c", "in", 1)
-    flamethrower.relocate_n_items_section(second_speaker, "ammo_7.62x54_7h14", "in", 1)
-end
-
-function izlom_blue()
-    local obj = alife():create("izlom_radar", vector():set(591.140, -52.055, -363.587), 209981, 1879)
-    local obj = alife():create("izlom_radar", vector():set(596.411, -51.273, -350.179), 212658, 1880)
-    local obj = alife():create("izlom_radar", vector():set(574.052, -53.722, -260.404), 202389, 1863)
-end
-
-function zombie_pripyat()
-    local obj = alife():create("zombie1", vector():set(9.436, -2.223, -131.952), 112726, 2130)
-    local obj = alife():create("zombie1", vector():set(9.436, -2.223, -131.952), 112726, 2130)
-    local obj = alife():create("zombie3", vector():set(9.436, -2.223, -131.952), 112726, 2130)
-    local obj = alife():create("zombie1", vector():set(20.335, -2.391, -90.027), 126659, 2123)
-    local obj = alife():create("zombie1", vector():set(20.335, -2.391, -90.027), 126659, 2123)
-    local obj = alife():create("zombie4", vector():set(20.335, -2.391, -90.027), 126659, 2123)
-    local obj = alife():create("zombie2", vector():set(-21.111, -2.392, -62.583), 77789, 2132)
-    local obj = alife():create("zombie4", vector():set(-21.111, -2.392, -62.583), 77789, 2132)
-    local obj = alife():create("zombie2", vector():set(-21.111, -2.392, -62.583), 77789, 2132)
-    local obj = alife():create("zombie1", vector():set(53.969, -2.392, -62.672), 166009, 2137)
-    local obj = alife():create("zombie3", vector():set(53.969, -2.392, -62.672), 166009, 2137)
-    local obj = alife():create("zombie1", vector():set(53.969, -2.392, -62.672), 166009, 2137)
-    local obj = alife():create("zombie2", vector():set(77.608, -2.392, -17.903), 189042, 2144)
-    local obj = alife():create("zombie4", vector():set(77.608, -2.392, -17.903), 189042, 2144)
-    local obj = alife():create("zombie2", vector():set(77.608, -2.392, -17.903), 189042, 2144)
-    local obj = alife():create("zombie1", vector():set(14.304, -2.397, 66.351), 118685, 2142)
-    local obj = alife():create("zombie1", vector():set(14.304, -2.397, 66.351), 118685, 2142)
-    local obj = alife():create("zombie3", vector():set(14.304, -2.397, 66.351), 118685, 2142)
-    local obj = alife():create("zombie2", vector():set(52.179, -0.650, 92.672), 164712, 2166)
-    local obj = alife():create("zombie4", vector():set(52.179, -0.650, 92.672), 164712, 2166)
-    local obj = alife():create("zombie4", vector():set(52.179, -0.650, 92.672), 164712, 2166)
-    local obj = alife():create("zombie1", vector():set(-1.728, -0.671, 110.850), 100480, 2142)
-    local obj = alife():create("zombie1", vector():set(-1.728, -0.671, 110.850), 100480, 2142)
-    local obj = alife():create("zombie1", vector():set(-1.728, -0.671, 110.850), 100480, 2142)
-    local obj = alife():create("zombie2", vector():set(-84.625, -2.392, 57.518), 25358, 2140)
-    local obj = alife():create("zombie2", vector():set(-84.625, -2.392, 57.518), 25358, 2140)
-    local obj = alife():create("zombie2", vector():set(-84.625, -2.392, 57.518), 25358, 2140)
-    local obj = alife():create("zombie1", vector():set(-95.477, -2.210, 119.081), 19808, 2211)
-    local obj = alife():create("zombie3", vector():set(-95.477, -2.210, 119.081), 19808, 2211)
-    local obj = alife():create("zombie1", vector():set(-95.477, -2.210, 119.081), 19808, 2211)
-    local obj = alife():create("zombie2", vector():set(-51.540, -2.206, 195.688), 48062, 2153)
-    local obj = alife():create("zombie4", vector():set(-51.540, -2.206, 195.688), 48062, 2153)
-    local obj = alife():create("zombie2", vector():set(-51.540, -2.206, 195.688), 48062, 2153)
-    local obj = alife():create("zombie1", vector():set(-22.072, -0.555, 241.378), 76752, 2164)
-    local obj = alife():create("zombie1", vector():set(-22.072, -0.555, 241.378), 76752, 2164)
-    local obj = alife():create("zombie3", vector():set(-22.072, -0.555, 241.378), 76752, 2164)
-    local obj = alife():create("zombie2", vector():set(103.996, -0.581, 225.112), 215217, 2163)
-    local obj = alife():create("zombie4", vector():set(103.996, -0.581, 225.112), 215217, 2163)
-    local obj = alife():create("zombie2", vector():set(103.996, -0.581, 225.112), 215217, 2163)
-    local obj = alife():create("zombie1", vector():set(174.120, -2.218, 161.105), 254833, 2146)
-    local obj = alife():create("zombie1", vector():set(174.120, -2.218, 161.105), 254833, 2146)
-    local obj = alife():create("zombie3", vector():set(174.120, -2.218, 161.105), 254833, 2146)
-    local obj = alife():create("zombie2", vector():set(155.998, -2.224, 81.190), 247343, 2145)
-    local obj = alife():create("zombie2", vector():set(155.998, -2.224, 81.190), 247343, 2145)
-    local obj = alife():create("zombie4", vector():set(155.998, -2.224, 81.190), 247343, 2145)
-    local obj = alife():create("zombie1", vector():set(108.200, -0.004, 111.561), 219579, 2180)
-    local obj = alife():create("zombie4", vector():set(108.200, -0.004, 111.561), 219579, 2180)
-    local obj = alife():create("zombie4", vector():set(108.200, -0.004, 111.561), 219579, 2180)
-    local obj = alife():create("zombie3", vector():set(63.518, -0.684, 152.405), 175562, 2187)
-    local obj = alife():create("zombie3", vector():set(63.518, -0.684, 152.405), 175562, 2187)
-    local obj = alife():create("zombie2", vector():set(63.518, -0.684, 152.405), 175562, 2187)
-    local obj = alife():create("zombie4", vector():set(9.742, -1.218, -103.828), 113597, 2130)
-    local obj = alife():create("zombie3", vector():set(9.742, -1.218, -103.828), 113597, 2130)
-    local obj = alife():create("zombie3", vector():set(9.742, -1.218, -103.828), 113597, 2130)
-end
-
-
-
