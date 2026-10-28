@@ -175,21 +175,6 @@ function allow_wounded_dialog(object, victim, id)
 end
 
 -----------------------------------------------------------------------------------
--- LEVELS
------------------------------------------------------------------------------------
-function level_escape(first_speaker, second_speaker)
-    return level.name() == "l01_escape"
-end
-
-function level_garbage(first_speaker, second_speaker)
-    return level.name() == "l02_garbage"
-end
-
-function level_agroprom(first_speaker, second_speaker)
-    return level.name() == "l03_agroprom_ai2" or level.name() == "l03_agroprom"
-end
-
------------------------------------------------------------------------------------
 -- Relation functions
 -----------------------------------------------------------------------------------
 function is_friend(first_speaker, second_speaker)

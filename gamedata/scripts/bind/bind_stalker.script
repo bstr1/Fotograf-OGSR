@@ -527,16 +527,6 @@ function actor_binder:update(delta)
     if self.bCheckStart then
         printf("SET DEFAULT INFOS")
 
-        if not has_alife_info("storyline_actor_start") and (level.name() == "l01_escape") then
-            self.object:give_info_portion("storyline_actor_start")
-            _G.g_start_avi = true
-            printf("*AVI* RUN START AVI")
-        end
-
-        --    if not has_alife_info("encyclopedy") then
-        --      self.object:give_info_portion("encyclopedy")
-        --    end
-
         if not has_alife_info("global_dialogs") then
             self.object:give_info_portion("global_dialogs")
         end

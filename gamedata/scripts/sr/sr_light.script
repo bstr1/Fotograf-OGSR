@@ -8,7 +8,6 @@ local indoor_levels = {
 	l08u_brainlab = true,
 	l10u_bunker = true,
 	l12u_sarcofag = true,
-	l12u_control_monolith = true,
 	chugai_test = true
 }
 ---------------------------------------------------------------------------------------------------------------------

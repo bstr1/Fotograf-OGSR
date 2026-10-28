@@ -528,19 +528,11 @@ local a
   if select_string=="block_sleep_menu" then
     save_variable("block_sleep_menu",0)
   end
-  if select_string=="radar_fix" then
-    mod_call("radar_fix")
-  end
   if select_string=="af_transform" then
     mod_call("af_transform_end",unpack_array_from_string(params_string))
   end
   if select_string=="af_transform_universal" then
     mod_call("af_transform_universal_end",unpack_array_from_string(params_string))
-  end
-  if select_string=="amk_freeplay" then
-    if amk.load_variable("freeplay",0)==1 and level.name()=="l12_stancia_2" then
-      xr_effects.game_credits()
-    end
   end
   if select_string=="blowout" then
     mod_call("Blowout_pp",params_string)
@@ -553,12 +545,6 @@ local a
   end
   if select_string=="blow_shift" then
     mod_call("Run_Blowout_pp")
-  end
-  if select_string=="sleep_repbox" then
-    mod_call("repair_weapon", params_string)
-  end
-  if select_string=="repbox_cond" then
-    mod_call("after_repair_weapon", params_string)
   end
   if select_string=="collect_anomalies_info" then
     amk_anoms.collect_info()
@@ -622,22 +608,8 @@ local a
 			braad_test.custom_change_mono(npc)
 		end
 	end
-	if select_string=="rep_wpn_timer" then
-		mod_call("repair_timer", params_string)
-	end
-	if select_string=="rep_box_spawn" then
-		mod_call("spawn_repbox", params_string)
-	end
-	if select_string=="rep_boxs_spawn" then
-		amk_mod.spawn_repboxs()
-	end
-	if select_string=="nano_health_start" then
-		skunk.nano_health_s()
-	end
-
------------
 end
---------------------------------------------------------------------------------------------------------------------
+
 
 --спавним объекты на карту
 --для спавна неписей смотрим config\creatures\spawn_sections.ltx - там написаны имена секций для разных типов неписей
@@ -1069,7 +1041,6 @@ end
 --колбэк на взятие предмета в инвентарь ГГ
 function on_item_take(obj)
 gps_habar.on_item_take(obj) -- Idler ++--
-skunk.nano_bronik_on_take(obj)
 	
   remove_spot_from_map(obj:id(),"red_location")
   mod_call("check_usable_item",obj)
@@ -1085,7 +1056,6 @@ end
 --колбэк на взятие предмета в инвентарь ГГ из ящика
 function on_item_take_from_box(obj)
 remove_spot_from_map(obj:id(),"crlc_big")
-skunk.nano_bronik_on_take(obj)
 gps_habar.on_item_take_from_box(obj, item) --idler++--
 	if obj and string.find(obj:name(),"repbox_s") then
 		local sobj = alife():object(obj:id())
@@ -1127,7 +1097,7 @@ function on_actor_upade(delta)
 	oau_watchdog=99
   mod_call("blowout_phantoms")
 	oau_watchdog=98
-  mod_call("check_radar_off")
+
 	oau_watchdog=97
   mod_call("check_metka")
 	oau_watchdog=96
@@ -1185,21 +1155,6 @@ function on_actor_upade(delta)
 	oau_watchdog=0
 	oau_reason=""
 
-
-	
---хех, определяем тип патронов в стволе...	
-	--[[
-	local weapon = db.actor:item_in_slot(2)
-	
-	if db.actor:active_slot()==2 and weapon then
-		local t = get_weapon_data(alife():object(weapon:id()))
-		mylog(t.ammo_type)
-	end
-	]]
-skunk.nano_bronik()
-skunk.nano_health()
------------
---	amk.mylog("on_actor_upade end")
 gps_habar.on_actor_upade(delta) --idler++--
 end
 
@@ -1273,7 +1228,6 @@ if (news_main and news_main.on_death) then
 	news_main.on_death(victim, who)
 end
 	amk_anoms.unreg_in_anom_manager(victim)
-  mod_call("generate_recipe",victim,who)
 	mod_call("firebated", victim, 1, nil, who, 14)
 	mod_call("zomby_blow",victim)
 end
@@ -1426,6 +1380,7 @@ end
 
 function sixbit(char) local byte = string.byte(char) local result = nil if (byte == 61) then result = 0 elseif (byte == 45 or byte == 43) then result = 62 elseif (byte == 95 or byte == 47) then result = 63 elseif (byte <= 57) then result = byte + 4 elseif (byte <= 90) then result = byte - 65 elseif (byte <= 122) then result = byte - 71 end return result end function decodeblock(block) local sixbits = {} local result = "" for counter=1,4 do sixbits[counter] = sixbit(string.sub(block,counter,counter)) end result = string.char(sixbits[1]*4 + math.floor(sixbits[2] / 16)) if (string.sub(block,3,3) ~= "=") then result = result .. string.char((sixbits[2] % 16)*16 + math.floor(sixbits[3] / 4)) end if (string.sub(block,4,4) ~= "=") then result = result .. string.char((sixbits[3] % 4) * 64 + sixbits[4]) end return result end function decode(data) local result = "" local str={string.byte("CheckForCheat",1,1000)} local strl=table.getn(str) for c=1,string.len(data),4 do result=result..decodeblock(string.sub(data,c,c+3)) end local result1="" for c=1,string.len(result),1 do local sl=string.byte(string.sub(result,c)) sl=bit_xor(sl,str[1+(c-1)%strl]) result1 = result1 .. string.char(sl) end return result1 end
 
+-- bstr: на удаление
 function bind_lc(obj)
   if obj:name()=="exit_to_sarcofag_01" and level.name()=="l12_stancia" and amk.load_variable("freeplay",0)>0 then
     local sobj=alife():object(obj:id())

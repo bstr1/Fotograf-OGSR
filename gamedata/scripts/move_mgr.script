@@ -220,8 +220,6 @@ end
 
 -- Red75 +
 local safe_pp = {
-    l01_escape = "esc_specnaz_way3",
-    l02_garbage = "gar_psevdowounded_gar_way_spy"
 }
 
 -- Очищаем патрульный путь от аномалий.

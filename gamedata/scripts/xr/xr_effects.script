@@ -2060,12 +2060,8 @@ function actor_inventory_by_levels ()
     local spawn_items = {}
     local start_point = ""
     
-  if level == "l03_agroprom" then
-    start_point = "agr_start_actor" 
-  elseif level == "l05_bar" then
+  if level == "l05_bar" then
     start_point = "bar_way_if_reject_to_gar"      
-  elseif level == "l08_yantar" then
-    start_point = "yan_start_actor"     
   elseif  level == "l11_pripyat" then
     start_point = "pri_way_if_reject_to_rad"  
   end

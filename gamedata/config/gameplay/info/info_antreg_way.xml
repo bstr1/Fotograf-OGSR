@@ -1248,14 +1248,6 @@
     <action>esc_graf.sound_elisa</action>
 </info_portion>
 
-<info_portion id="pobeg_spawn">
-    <action>antreg.spawn_mono_final</action>
-</info_portion>
-
-<info_portion id="pobeg_netuda">
-    <action>xyz_teleportation.bunker_end</action>
-</info_portion>
-
 <info_portion id="pobeg_net">
     <action>antreg.kill_strelok</action>
 </info_portion>

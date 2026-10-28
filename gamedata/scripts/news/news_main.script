@@ -1522,7 +1522,7 @@ function get_point_description(level, point)
 	local dist = 10000
 	local angle = 0	
 	local m_tmp_str = ""
-	if (level == "l10u_bunker" or level == "l11_pripyat" or level == "l12_stancia" or level == "l12_stancia_2" or level == "l12u_control_monolith" or level == "l12u_sarcofag") then
+	if (level == "l10u_bunker" or level == "l11_pripyat" or level == "l12u_sarcofag") then
 		if (isRadarDeactivated() == false) then	return "" end
 	end
 	if (level and news_data.level_name[level] ~= nil) then
@@ -1711,14 +1711,11 @@ function add_spawned_object(obj)
 		end
 		-- Проверим, не монолитовцы ли это...
 		if s_comm == "monolith" then
-			if lev == "l10_radar" or lev == "l10u_bunker" or lev == "l11_pripyat" or lev == "l12_stancia" or lev == "l12_stancia_2" or lev == "l12u_control_monolith" or lev == "l12u_sarcofag" then
+			if lev == "l10u_bunker" or lev == "l11_pripyat" or lev == "l12u_sarcofag" then
 				return
 			end
 		end
 		if s_comm == "zombie" or s_comm == "zombied" then
-			if lev == "l08_yantar" then
-				return
-			end
 		end
 		local b_added = false
 		if table_spawned then

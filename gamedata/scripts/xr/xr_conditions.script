@@ -629,7 +629,6 @@ function hit_by_actor_kolt(actor, npc)
      printf("_bp: hit_by_actor: %s", if_then_else(hit_by_actor, "true", "false"))
      if hit_by_actor_kolt then
       local weapon = db.actor:item_in_slot(1)
-	  skunk.dbglog(weapon:section())
       if weapon and weapon:section() == "wpn_colt_ucen" then
         return hit_by_actor_kolt
       end
@@ -1320,20 +1319,10 @@ end
 -- Special for Trade
 -------------------------------------------------------------------------------------
 local trade_by_level = {
-	l01_escape = "escape",
-	l02_garbage = "garbage",
-	l03_agroprom = "garbage",
 	l03u_agr_underground = "garbage",
-	l04_darkvalley = "garbage",
-	k01_darkscap = "garbage",
 	l04u_labx18 = "garbage",
 	l05_bar = "bar",
-	l06_Rostok = "bar",
-	l07_military = "bar",
-	l08_yantar = "yantar",
 	l08u_brainlab = "yantar",
-	l09_deadcity = "yantar",
-	l10_radar = "radar",
 	l10u_bunker = "radar",
 	l11_pripyat = "radar"
 	}

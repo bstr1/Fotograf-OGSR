@@ -1,8 +1,5 @@
 function checking_use_item(obj)
-    if level.name() == "l12_stancia" then
-
-
-    elseif obj:section() == "money_gg" then
+    if obj:section() == "money_gg" then
         db.actor:give_info_portion("delete_ggm")
         amk.drop_item(db.actor, obj)
         amk.remove_item(obj)
@@ -90,26 +87,11 @@ function dead_npc()
     if level.name() == "l11_pripyat" and has_alife_info("prizrak_help_have") and not has_alife_info("haron_sms") then
         amk.start_timer("sms_new", math.random(100, 120))
         db.actor:give_info_portion("haron_sms")
-    elseif level.name() == "l12_stancia" and has_alife_info("prizrak_kill_start") and not has_alife_info("doctor_sms") then
-        amk.start_timer("sms_doc", math.random(10, 20))
-        db.actor:give_info_portion("doctor_sms")
-
-    elseif level.name() == "l07_military" and not has_alife_info("actor_na_scladah") then
-        db.actor:give_info_portion("actor_na_scladah")
-    elseif level.name() == "l03_agroprom" and not has_alife_info("actor_na_agro") then
-        db.actor:give_info_portion("actor_na_agro")
-    elseif level.name() == "l10_radar" and not has_alife_info("actor_na_radare") then
-        db.actor:give_info_portion("actor_na_radare")
     elseif has_alife_info("fedya_razboinik_see") and not has_alife_info("sveeblov_predatel_vpered") then
         db.actor:give_info_portion("sveeblov_predatel_fail")
     elseif (has_alife_info("levsha_dead") or has_alife_info("bes_dead")) and has_alife_info("bes_help_levsha_start") and
         not has_alife_info("bes_help_levsha_done") then
         db.actor:give_info_portion("bes_help_levsha_fail")
-    elseif level.name() == "l02_garbage" and has_alife_info("bes_help_levsha_start") and
-        not has_alife_info("bes_smart_done") then
-        db.actor:give_info_portion("bes_smart_done")
-    elseif level.name() == "l04_darkvalley" and not has_alife_info("actor_na_darkvalley") then
-        db.actor:give_info_portion("actor_na_darkvalley")
 
     elseif level.name() == "l03u_agr_underground" and not has_alife_info("teleport_spawn") then
         db.actor:give_info_portion("teleport_spawn")
@@ -117,13 +99,9 @@ function dead_npc()
     elseif level.name() == "aver" and has_alife_info("babka_dialog_start") and not has_alife_info("babka_del") then
         db.actor:give_info_portion("babka_del")
 
-    elseif level.name() == "l08_yantar" and not has_alife_info("actor_na_yantar") then
-        db.actor:give_info_portion("actor_na_yantar")
     elseif (has_alife_info("ucen_ohr1_see") or has_alife_info("ucen_ohr2_see") or has_alife_info("ucen_ohr3_see")) and
         has_alife_info("doronin_help_val") and not has_alife_info("doronin_help_have") then
         db.actor:give_info_portion("doronin_help_fail")
-    elseif level.name() == "l01_escape" and not has_alife_info("actor_na_kordon") then
-        db.actor:give_info_portion("actor_na_kordon")
     elseif (has_alife_info("volk_dead") or has_alife_info("esc_fanat_new_dead")) and
         has_alife_info("derevna_stalker_start") and not has_alife_info("derevna_stalker_done") then
         db.actor:give_info_portion("derevna_stalker_fail")
@@ -160,10 +138,8 @@ function dead_npc()
     elseif (has_alife_info("volk_novic1_have") and has_alife_info("volk_novic2_have") and
         has_alife_info("volk_novic4_have") and has_alife_info("volk_novic6_have")) then
         db.actor:give_info_portion("volk_can_speak")
-
-    elseif level.name() == "l03_agroprom" and has_alife_info("kruglov_art_have") then
-        contr_art_spawn()
     end
+
     if level.name() == "l12u_sarcofag" and not db.actor:has_info("esc_serious_talk") then
         local obj = alife():create("add_military", vector():set(-22.787176132202, -7.3171, -28.85), 284068, 1593)
         local obj = alife():create("add_military", vector():set(-22.787176132202, -7.3171, -28.85), 284068, 1593)
@@ -331,29 +307,11 @@ function help_wounded_mono(npc)
     npc:set_relation(game_object.friend, db.actor)
 end
 local smarts = {
-    l01_escape = {},
-    l02_garbage = {},
-    l03_agroprom = {},
     l03u_agr_underground = {},
-    l04_darkvalley = {},
     l04u_labx18 = {},
-    l06_rostok = {},
-    l07_military = {},
-    l08_yantar = {},
-    l10_radar = {
-        --            rad2_loner_0000 = {2,3},
-        --            rad2_loner_0001 = {2,3},
-        --            rad2_loner_0002 = {2,3}
-    },
     l11_pripyat = {
         monolith_baza = {0, 1, 2, 3},
         monolith_lenin = {0, 1, 2, 3}
-    },
-    l12_stancia = {
-        caes_mono_lager = {0, 1, 2, 3}
-    },
-    l12_stancia_2 = {
-        big_mono_aes_lager = {1, 2, 3}
     }
 }
 

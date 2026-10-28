@@ -68,7 +68,7 @@ function on_actor_spawn()
 end
 
 function can_start_surge_now()
-    return not (lname == "l12_stancia" or lname == "l12_stancia_2" or lname == "l12u_control_monolith" or lname == "l12u_sarcofag" or lname == "swamp" or lname == "l13_deep")
+    return not (lname == "l12u_sarcofag" or lname == "swamp")
 end
 
 function get_first_surge_wait_time()

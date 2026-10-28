@@ -11,17 +11,6 @@ function start_antreg()
     elseif level.name() == "l12u_sarcofag" and has_alife_info("rule_konec") and not has_alife_info("pobeg_finish") then
         db.actor:give_info_portion("pobeg_finish")
 
-    elseif level.name() == "l12u_control_monolith" and has_alife_info("pobeg_mesto") and
-        not has_alife_info("pobeg_finish") then
-        db.actor:give_info_portion("pobeg_finish")
-
-    elseif level.name() == "l12u_control_monolith" and has_alife_info("pobeg_finish") and
-        not has_alife_info("coda_final") then
-        db.actor:give_info_portion("coda_final")
-
-    elseif level.name() == "l04_darkvalley" and not has_alife_info("gigant_x18_delete") then
-        db.actor:give_info_portion("gigant_x18_delete")
-
     elseif level.name() == "predbannik" and has_alife_info("voronin_zapiska_dialog_done") and
         not has_alife_info("barman_strelka_pogovority") then
         db.actor:give_info_portion("barman_strelka_pogovority")
@@ -36,9 +25,6 @@ function start_antreg()
 
     elseif level.name() == "l05_bar" and not has_alife_info("antirestr_spawn") then
         db.actor:give_info_portion("antirestr_spawn")
-
-    elseif level.name() == "l12_stancia_2" and not has_alife_info("dogs_ch2_spawn") then
-        db.actor:give_info_portion("dogs_ch2_spawn")
 
     elseif level.name() == "l05_bar" and not has_alife_info("totaliz_mos") then
         db.actor:give_info_portion("totaliz_mos")
