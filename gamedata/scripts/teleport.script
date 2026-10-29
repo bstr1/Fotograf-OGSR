@@ -49,24 +49,12 @@ function spawn_teleport7() -- телепорт, перебрасывающий �
     amk.set_anomaly_data(t, se_obj)
 end
 
-function spawn_teleport8() -- телепорт, перебрасывающий внутрь Чаэс-2 из вне
-    local se_obj = alife():create("m_teleport_8", vector():set(116.323, -0.080, 523.742), 178968, 2618)
-    local t = amk.get_anomaly_data(se_obj)
-    t.sid = 30207
-    amk.set_anomaly_data(t, se_obj)
-end
+
 
 function spawn_teleport9() -- телепорт, перебрасывающий по крышам Чаэс-2
     local se_obj = alife():create("m_teleport_9", vector():set(578.559, 18.205, 294.443), 174619, 2613)
     local t = amk.get_anomaly_data(se_obj)
     t.sid = 30208
-    amk.set_anomaly_data(t, se_obj)
-end
-
-function spawn_teleport10() -- телепорт, перебрасывающий на крышу к последнему телепорту
-    local se_obj = alife():create("m_teleport_10", vector():set(444.904, 0.165, 143.613), 147661, 2599)
-    local t = amk.get_anomaly_data(se_obj)
-    t.sid = 30209
     amk.set_anomaly_data(t, se_obj)
 end
 

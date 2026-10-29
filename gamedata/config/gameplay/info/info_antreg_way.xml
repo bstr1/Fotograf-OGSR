@@ -1,3 +1,7 @@
+<!-- Приветствия торговца -->
+<info_portion id="esc_trader_hello_played"></info_portion>
+<info_portion id="esc_trader_bye_played"></info_portion>
+
 <info_portion id="start_manuscript">
     <action>fotograf.foto_start_manuscript</action>
 </info_portion>
@@ -88,7 +92,7 @@
 </info_portion>
 <info_portion id="dezertir_flesh_dialog_have"></info_portion>
 <info_portion id="dezertir_flesh_dialog_done"></info_portion>
-----------------------------------------------------
+
 <info_portion id="main_task_info">
     <task>main_task</task>
 </info_portion>
@@ -902,7 +906,7 @@
     <task>monolit_pogovority</task>
 </info_portion>
 <info_portion id="monolit_pogovoril"></info_portion>
--------------------------------------------------------
+
 <info_portion id="totaliz"></info_portion>
 <info_portion id="totaliz_mos">
     <action>antreg_object.spawn_totaliz_mos</action>
@@ -915,7 +919,7 @@
 <info_portion id="vertel_spawn">
     <action>antreg_object.spawn_vertel_lektor</action>
 </info_portion>
--------------------------------------------------------
+
 <info_portion id="usa_spawn">
     <action>fotograf.spawn_usa_baza</action>
     <action>fotograf.spawn_usa_blokpost</action>
@@ -927,43 +931,6 @@
 <info_portion id="parol_est"></info_portion>
 <info_portion id="propusk_est"></info_portion>
 <info_portion id="propusk_baza2"></info_portion>
-
-
-<info_portion id="f_spawn"></info_portion>
-<info_portion id="lesnik_spawn">
-    <action>antreg.spawn_lesnik</action>
-    <action>antreg.del_gluk</action>
-    <action>antreg_object.spawn_lyuk_mg</action>
-</info_portion>
-<info_portion id="f_dialog_have"></info_portion>
-
-<info_portion id="lesnichok_mafon">
-    <action>antreg.spawn_lesnik_mafon</action>
-</info_portion>
-
-
-<info_portion id="lesnik_start">
-    <task>les_dobratsya</task>
-</info_portion>
-<info_portion id="lesnik_perehod"></info_portion>
-<info_portion id="lesnik_mesto"></info_portion>
-
-<info_portion id="les_dobralis"></info_portion>
-<info_portion id="lesnik_del">
-    <action>antreg.del_lesnik</action>
-</info_portion>
-<info_portion id="mg_aver"></info_portion>
-
-<info_portion id="lesnik2_spawn">
-    <action>braad_test.create_lesnik2_restr</action>
-</info_portion>
-
-<info_portion id="lesnik2_mesto"></info_portion>
-
-<info_portion id="delete_mg_aver">
-    <action>y_level.delete_mg_aver</action>
-</info_portion>
-
 
 <info_portion id="aver_mg"></info_portion>
 <info_portion id="mg_aver1"></info_portion>
@@ -1089,176 +1056,8 @@
 <info_portion id="brown_razgovor"></info_portion>
 <info_portion id="brown_pogovoril"></info_portion>
 
-<info_portion id="foster_spawn">
-    <task>foster_poisk</task>
-    <action>braad_test.foster_zvuk_restr</action>
-</info_portion>
-<info_portion id="foster_vstal"></info_portion>
-<info_portion id="foster_restrictor"></info_portion>
-<info_portion id="foster_wounded"></info_portion>
-<info_portion id="foster_plen_dialog_done"></info_portion>
-<info_portion id="kapral_mesto"></info_portion>
-<info_portion id="kapral_poisk_dialog_done"></info_portion>
-<info_portion id="foster_dead"></info_portion>
-
-<info_portion id="brown_baza_dialog_start">
-    <task>baza_mir</task>
-</info_portion>
-<info_portion id="brown_gotov_idti"></info_portion>
-<info_portion id="start_monstry_mir"></info_portion>
-<info_portion id="brown_baza_dialog_have"></info_portion>
-<info_portion id="brown_mesto1"></info_portion>
-<info_portion id="brown_mesto2"></info_portion>
-<info_portion id="brown_baza_dialog_done"></info_portion>
-
-<info_portion id="brown_fabrika_dialog_start">
-    <task>fabrika_mir</task>
-</info_portion>
-<info_portion id="brown_fabrika_dialog_have">
-    <action>antreg.remove_metka_fab</action>
-    <action>music_antreg.pda_fab</action>
-</info_portion>
-<info_portion id="brown_fabrika_dialog_done">
-    <task>sidor_vernutsya</task>
-</info_portion>
-
-<info_portion id="mg_nechto">
-    <action>antreg.spawn_mg_nechto</action>
-    <action>antreg.del_povodyr</action>
-    <action>antreg.remove_metka_povodyr</action>
-</info_portion>
-
-<info_portion id="ac_nechto">
-    <action>antreg.spawn_ac_nechto</action>
-</info_portion>
-
-<info_portion id="swamp_nechto">
-    <action>antreg.spawn_swamp_nechto</action>
-</info_portion>
-
-<info_portion id="sverhprovodnik_dialog_start">
-    <task>sverhprovodnik</task>
-</info_portion>
-<info_portion id="sverhprovodnik_dialog_have"></info_portion>
-<info_portion id="sverhprovodnik_dialog_done"></info_portion>
-
-<info_portion id="mg_nechto_start">
-    <task>mg_voyna</task>
-    <action>antreg.spawn_zomba_nechto</action>
-    <action>esc_graf.sound_mg</action>
-</info_portion>
-<info_portion id="mg_nechto_have"></info_portion>
-<info_portion id="mg_nechto_done"></info_portion>
-
-<info_portion id="zomba1_dead"></info_portion>
-<info_portion id="zomba2_dead"></info_portion>
-<info_portion id="zomba3_dead"></info_portion>
-<info_portion id="zomba4_dead"></info_portion>
-<info_portion id="zomba5_dead"></info_portion>
-<info_portion id="zomba6_dead"></info_portion>
-<info_portion id="zomba7_dead"></info_portion>
-<info_portion id="zomba8_dead"></info_portion>
-<info_portion id="zomba9_dead"></info_portion>
-<info_portion id="zomba10_dead"></info_portion>
-<info_portion id="zomba11_dead"></info_portion>
-<info_portion id="zomba12_dead"></info_portion>
-<info_portion id="zomba13_dead"></info_portion>
-<info_portion id="zomba14_dead"></info_portion>
-<info_portion id="zomba15_dead"></info_portion>
-<info_portion id="zomba16_dead"></info_portion>
-<info_portion id="zomba17_dead"></info_portion>
-<info_portion id="zomba18_dead"></info_portion>
-<info_portion id="zomba19_dead"></info_portion>
-<info_portion id="zomba20_dead"></info_portion>
-<info_portion id="zomba21_dead"></info_portion>
-<info_portion id="zomba22_dead"></info_portion>
-<info_portion id="zomba23_dead"></info_portion>
-<info_portion id="zomba24_dead"></info_portion>
-<info_portion id="zomba25_dead"></info_portion>
-<info_portion id="zomba26_dead"></info_portion>
-<info_portion id="zomba27_dead"></info_portion>
-<info_portion id="zomba28_dead"></info_portion>
-<info_portion id="zomba29_dead"></info_portion>
-<info_portion id="zomba30_dead"></info_portion>
-<info_portion id="zomba31_dead"></info_portion>
-<info_portion id="zomba32_dead"></info_portion>
-<info_portion id="zomba33_dead"></info_portion>
-<info_portion id="zomba34_dead"></info_portion>
-<info_portion id="zomba35_dead"></info_portion>
-<info_portion id="zomba36_dead"></info_portion>
-<info_portion id="zomba37_dead"></info_portion>
-<info_portion id="zomba38_dead"></info_portion>
-<info_portion id="zomba39_dead"></info_portion>
-<info_portion id="zomba40_dead"></info_portion>
-
-<info_portion id="mir_bar"></info_portion>
-<info_portion id="bar_mir"></info_portion>
-
-<info_portion id="psy_mir_spawn">
-    <action>antreg.spawn_psy_mir</action>
-</info_portion>
-
-<info_portion id="monolit_pogovorils"></info_portion>
-
-<info_portion id="monolit_final">
-    <action>antreg.roza_action</action>
-    <action>antreg.del_brat_monolit</action>
-    <action>antreg.del_nevidimka</action>
-    <action>antreg_object.spawn_zarkost</action>
-    <action>antreg.spawn_kapitan</action>
-</info_portion>
 
 
-<info_portion id="brat_tele">
-    <action>antreg.del_kapitan</action>
-    <action>teleport.spawn_teleport8</action>
-    <action>braad_test.create_chaes2_restr</action>
-    <action>esc_graf.sound_brat2</action>
-</info_portion>
-
-<info_portion id="sled2_zovet">
-    <task>sled2_pomosch</task>
-    <action>antreg.spawn_sled2_killers</action>
-    <action>braad_test.create_sled2_restr</action>
-</info_portion>
-
-<info_portion id="sled2_help"></info_portion>
-
-<info_portion id="sled2_dead"></info_portion>
-
-<info_portion id="pobeg_start">
-    <task>actor_pobeg</task>
-    <action>time_back.StartBackTimer</action>
-</info_portion>
-<info_portion id="pobeg_mesto">
-</info_portion>
-
-<info_portion id="pobeg_finish"></info_portion>
-
-<info_portion id="pobeg_nachalo">
-    <action>braad_test.create_strelok_restr</action>
-    <action>braad_test.create_ugroza_restr</action>
-    <action>esc_graf.sound_elisa</action>
-</info_portion>
-
-<info_portion id="pobeg_net">
-    <action>antreg.kill_strelok</action>
-</info_portion>
-
-<info_portion id="coda_final">
-    <action>esc_graf.sound_coda</action>
-</info_portion>
-
-<info_portion id="end_dialog_start"></info_portion>
----------------------------rule_end----------------------------
-<info_portion id="rule_konec"></info_portion>
-<info_portion id="rule_end">
-    <action>teleport.spawn_teleport10</action>
-    <action>braad_test.create_rule_restr</action>
-    <action>braad_test.create_sarfinal_restr</action>
-    <action>braad_test.create_superfinal_restr</action>
-    <action>antreg.spawn_kontr_final1</action>
-</info_portion>
 ---------------------------money----------------------------
 <info_portion id="delete_ggm">
     <action>braad_test.money_gg</action>
@@ -1312,20 +1111,6 @@
     <action>antreg.enemy_maroder</action>
 </info_portion>
 
-<info_portion id="gena_spawn"></info_portion>
-
-<info_portion id="maroder_meet_dialog_start"></info_portion>
-
-<info_portion id="maroder_start_dialog_start">
-    <task>maroder_dialog</task>
-</info_portion>
-<info_portion id="maroder_start_dialog_have">
-    <action>antreg.del_metka_nato</action>
-</info_portion>
-<info_portion id="maroder_start_dialog_done"></info_portion>
-
-<info_portion id="smith_maroder_dialog_start"></info_portion>
-
 <info_portion id="chek_mesto"></info_portion>
 <info_portion id="chek_mesto2"></info_portion>
 
@@ -1333,67 +1118,7 @@
     <action>esc_graf.sound_mir_alarm</action>
 </info_portion>
 
-<info_portion id="monolitt_enemy">
-    <action>antreg.enemy_monolith</action>
-</info_portion>
 
-<info_portion id="nato_zasada">
-    <action>antreg.spawn_nato_zasada</action>
-</info_portion>
-
-<info_portion id="antirestr_spawn">
-    <action>braad_test.create_antirostok_restr</action>
-</info_portion>
-
-<info_portion id="david_spawn">
-    <action>antreg.spawn_david</action>
-</info_portion>
-
-<info_portion id="iuda_delete">
-    <action>antreg.del_david</action>
-</info_portion>
-
-<info_portion id="iuda_spawn">
-    <action>braad_test.create_iuda_restr</action>
-</info_portion>
-
-<info_portion id="maloy_speak">
-    <action>esc_graf.sound_maloy</action>
-    <action>antreg.spawn_maloy_mafon</action>
-</info_portion>
-
-<info_portion id="maloy_talk">
-    <action>esc_graf.sound_maloy_talk</action>
-</info_portion>
-
-<info_portion id="maroder_vrag"></info_portion>
-<info_portion id="maroder_otboy"></info_portion>
-<info_portion id="maloy_razobralsya"></info_portion>
-
-<info_portion id="leila_maroder_dialog_start">
-    <task>maloy_dialog</task>
-</info_portion>
-<info_portion id="maloy_dialog_start"></info_portion>
-<info_portion id="maloy_dialog_have"></info_portion>
-<info_portion id="maloy_dialog_done"></info_portion>
-
-<info_portion id="maloy_ushli">
-    <action>antreg.del_maloy</action>
-    <action>antreg.del_maroder_mg1</action>
-    <action>antreg.del_maroder_mg2</action>
-    <action>antreg.del_maroder_mg3</action>
-    <action>antreg.del_maroder_mg4</action>
-</info_portion>
-
-<info_portion id="solomonchik_spawn">
-    <action>braad_test.create_mon5_restr</action>
-    <action>braad_test.create_solomonchik_restr</action>
-</info_portion>
-
-<info_portion id="del_yaschik">
-    <action>antreg.del_yaschichek1</action>
-    <action>antreg.del_yaschichek2</action>
-</info_portion>
 -------------------------fotograf---------------------------
 <info_portion
     id="yan_labx16_switcher_primary_new"></info_portion>
@@ -1780,7 +1505,7 @@
 <info_portion id="dezertir_rasstrel1_dead"></info_portion>
 <info_portion id="dezertir_rasstrel2_dead"></info_portion>
 <info_portion id="krasa_mesto2"></info_portion>
-----------------------------------------------------
+
 -----------------boryan67--drink--------------------
 <info_portion id="boryan_drink_1"></info_portion>
 <info_portion id="boryan_drink_2"></info_portion>
@@ -1792,14 +1517,14 @@
 <info_portion id="boryan_drink_8"></info_portion>
 <info_portion id="boryan_drink_9"></info_portion>
 <info_portion id="boryan_gluki_1"></info_portion>
-----------------------------------------------------
+
 -----------------boryan67--infect--------------------
 <info_portion id="boryan_infect_0"></info_portion>
 <info_portion id="boryan_infect_1"></info_portion>
 <info_portion id="boryan_infect_2"></info_portion>
 <info_portion id="boryan_infect_3"></info_portion>
 <info_portion id="boryan_infect_4"></info_portion>
-----------------------------------------------------
+
 <info_portion id="del_osvedom">
     <action>fotograf.del_osvedom</action>
 </info_portion>

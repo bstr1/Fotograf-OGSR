@@ -338,7 +338,6 @@
                         <give_info>persona_16</give_info>
                         <give_info>persona_23</give_info>
                         <give_info>brigadir_spawn</give_info>
-                        <action>dialogs.break_dialog</action>
                 </phrase>
         </phrase_list>
 </dialog>

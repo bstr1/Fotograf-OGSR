@@ -205,8 +205,8 @@ end
 -- получение дудки
 function krisalov_dudka(first_speaker, second_speaker)
 	dialogs.relocate_item_section(second_speaker,"dudka","in")
-	flamethrower.relocate_n_items_section(second_speaker,"ammo_12x70_buck","in",3)
-	flamethrower.relocate_n_items_section(second_speaker,"grenade_f1","in",2)
+	dialogs.relocate_item_section(second_speaker,"ammo_12x70_buck","in",3)
+	dialogs.relocate_item_section(second_speaker,"grenade_f1","in",2)
 end
 -- прекондишен наличия мышей
 function mouse_have(first_speaker, second_speaker)

@@ -541,7 +541,7 @@ end
 function radio_nagrada(first_speaker, second_speaker)
         dialogs.relocate_item_section(second_speaker, "wpn_m79", "in", 1)
 	dialogs.relocate_item_section(second_speaker, "wpn_thompson_1928", "in", 1)
-        flamethrower.relocate_n_items_section(second_speaker, "ammo_m209", "in", 3)
+        dialogs.relocate_item_section(second_speaker, "ammo_m209", "in", 3)
         dialogs.relocate_money(first_speaker, 10000,"in")
 end
 
@@ -755,11 +755,11 @@ function restr_korona_spawn()
 end
 
 function letter_otdal(first_speaker,second_speaker)
-	flamethrower.relocate_n_items_section(second_speaker,"letter_greta","out",1)
+	dialogs.relocate_item_section(second_speaker,"letter_greta","out",1)
 end
 
 function otdal_tarakanov(first_speaker,second_speaker)
-	flamethrower.relocate_n_items_section(second_speaker,"tarakan_lich1","out",2)
+	dialogs.relocate_item_section(second_speaker,"tarakan_lich1","out",2)
 end
 
 function radio_otdal(first_speaker,second_speaker)

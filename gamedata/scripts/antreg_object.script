@@ -9,16 +9,16 @@ function spawn_skelet1_mg()
     alife():create("pauk_mini", vector():set(-32.953, -1.655, 50.272), 215372, 3043)
 end
 
-function spawn_lyuk_mg()
-    alife():create("zaz", vector():set(-139.311, 1.410, 29.843), 198806, 3043)
-    alife():create("traktor", vector():set(-154.192, 1.276, 46.802), 183840, 3043)
-    alife():create("kamaz", vector():set(-101.138, 1.292, -13.601), 242396, 3051)
-    alife():create("btr", vector():set(-208.775, 1.276, 69.492), 127963, 3031)
-    alife():create("moskvich", vector():set(-191.721, 1.256, 84.416), 143771, 3031)
-    alife():create("zaz", vector():set(-40.724, 1.268, 43.117), 310526, 3065)
-    alife():create("niva", vector():set(-25.498, 1.124, 56.583), 326901, 3065)
-    alife():create("btr", vector():set(-9.592, 1.580, 70.495), 346332, 3065)
-end
+-- function spawn_lyuk_mg()
+--     alife():create("zaz", vector():set(-139.311, 1.410, 29.843), 198806, 3043)
+--     alife():create("traktor", vector():set(-154.192, 1.276, 46.802), 183840, 3043)
+--     alife():create("kamaz", vector():set(-101.138, 1.292, -13.601), 242396, 3051)
+--     alife():create("btr", vector():set(-208.775, 1.276, 69.492), 127963, 3031)
+--     alife():create("moskvich", vector():set(-191.721, 1.256, 84.416), 143771, 3031)
+--     alife():create("zaz", vector():set(-40.724, 1.268, 43.117), 310526, 3065)
+--     alife():create("niva", vector():set(-25.498, 1.124, 56.583), 326901, 3065)
+--     alife():create("btr", vector():set(-9.592, 1.580, 70.495), 346332, 3065)
+-- end
 
 function spawn_totaliz_mos()
     alife():create("totaliz_mos", vector():set(210.468, 0.042, 102.420), 51236, 1189)
@@ -56,15 +56,5 @@ function spawn_zarskelet()
     alife():create("skelet_3", vector():set(-30.150, 0.007, 696.339), 178968, 2618)
     alife():create("skelet_3", vector():set(-29.990, 0.002, 690.576), 178968, 2618)
     alife():create("skelet_3", vector():set(-22.360, 0.002, 689.950), 178968, 2618)
-end
-
-function spawn_zarkost()
-    alife():create("skelet_foot", vector():set(-30.974, 0.004, 693.734), 178968, 2618)
-    alife():create("skelet_hend", vector():set(-20.851, 0.002, 693.588), 178968, 2618)
-    alife():create("skelet_foot", vector():set(-26.064, 0.002, 698.637), 178968, 2618)
-    -- alife():create("skelet_hend",vector():set(-22.007,0.002,696.746),178968,2618)
-    -- alife():create("skelet_foot",vector():set(-30.150,0.007,696.339),178968,2618)
-    -- alife():create("skelet_hend",vector():set(-29.990,0.002,690.576),178968,2618)
-    -- alife():create("skelet_foot",vector():set(-22.360,0.002,689.950),178968,2618)
 end
 

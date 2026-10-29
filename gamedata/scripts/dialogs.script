@@ -98,22 +98,19 @@ function relocate_item(victim, obj, type)
         -- 'news_manager.relocate_item(db.actor, type, obj)
     end
 end
+
 -- ' Use this function instead.
-function relocate_item_section(victim, section, type)
+function relocate_item_section(victim, section, type, n)
+    n = n or 1
     if db.actor and victim then
         if type == "in" then
-
-            -- ' Трансферить нужно только квестовые предметы.
-            if quest_section[section] == true and victim:object(section) ~= nil then
-                victim:transfer_item(victim:object(section), db.actor)
-            else
-                alife():create(section, db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(),
-                    db.actor:id())
+            for i = 1, n do
+                ogse.spawn_item_in_inv(section)
             end
         elseif type == "out" then
-            db.actor:transfer_item(db.actor:object(section), victim)
+            ogse.remove_inv_items_by_section(section, n)
         end
-        news_manager.relocate_item(db.actor, type, section)
+        news_manager.relocate_item(db.actor, type, section, n)
     end
 end
 

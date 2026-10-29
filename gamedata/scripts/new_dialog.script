@@ -108,7 +108,7 @@ function inform_20_pda(first_speaker, second_speaker)
     end
     item = nagrad.level_6[math.random(table.getn(nagrad.level_6))]
     new_dialog.out_item_much("zheton", 10)
-    flamethrower.relocate_n_items_section(actor, item, "in", count)
+    dialogs.relocate_item_section(actor, item, "in", count)
 end
 
 function inform_40_pda()
@@ -125,7 +125,7 @@ function trader_bratok_saiga(first_speaker, second_speaker)
         actor = second_speaker
         trader = first_speaker
     end
-    flamethrower.relocate_n_items_section(trader, "amk_kanistra", "out", 2)
+    dialogs.relocate_item_section(trader, "amk_kanistra", "out", 2)
     dialogs.relocate_item_section(actor, "wpn_saiga12", "in", 1)
 end
 
@@ -139,7 +139,7 @@ function trader_bratok_ak_47(first_speaker, second_speaker)
         actor = second_speaker
         trader = first_speaker
     end
-    flamethrower.relocate_n_items_section(trader, "amk_ballon", "out", 2)
+    dialogs.relocate_item_section(trader, "amk_ballon", "out", 2)
     dialogs.relocate_item_section(actor, "wpn_ak74", "in", 1)
 end
 
@@ -153,8 +153,8 @@ function trader_bratok_762x39_fmj(first_speaker, second_speaker)
         actor = second_speaker
         trader = first_speaker
     end
-    flamethrower.relocate_n_items_section(trader, "conserva", "out", 5)
-    flamethrower.relocate_n_items_section(actor, "ammo_7.62x39_fmj", "in", 3)
+    dialogs.relocate_item_section(trader, "conserva", "out", 5)
+    dialogs.relocate_item_section(actor, "ammo_7.62x39_fmj", "in", 3)
 end
 
 function trader_bratok_762x39_ap(first_speaker, second_speaker)
@@ -167,8 +167,8 @@ function trader_bratok_762x39_ap(first_speaker, second_speaker)
         actor = second_speaker
         trader = first_speaker
     end
-    flamethrower.relocate_n_items_section(trader, "vodka", "out", 4)
-    flamethrower.relocate_n_items_section(actor, "ammo_7.62x39_ap", "in", 3)
+    dialogs.relocate_item_section(trader, "vodka", "out", 4)
+    dialogs.relocate_item_section(actor, "ammo_7.62x39_ap", "in", 3)
 end
 
 function trader_bratok_545x39_fmj(first_speaker, second_speaker)
@@ -181,8 +181,8 @@ function trader_bratok_545x39_fmj(first_speaker, second_speaker)
         actor = second_speaker
         trader = first_speaker
     end
-    flamethrower.relocate_n_items_section(trader, "bread", "out", 5)
-    flamethrower.relocate_n_items_section(actor, "ammo_5.45x39_fmj", "in", 3)
+    dialogs.relocate_item_section(trader, "bread", "out", 5)
+    dialogs.relocate_item_section(actor, "ammo_5.45x39_fmj", "in", 3)
 end
 
 function trader_bratok_545x39_ap(first_speaker, second_speaker)
@@ -195,8 +195,8 @@ function trader_bratok_545x39_ap(first_speaker, second_speaker)
         actor = second_speaker
         trader = first_speaker
     end
-    flamethrower.relocate_n_items_section(trader, "mineral", "out", 3)
-    flamethrower.relocate_n_items_section(actor, "ammo_5.45x39_ap", "in", 3)
+    dialogs.relocate_item_section(trader, "mineral", "out", 3)
+    dialogs.relocate_item_section(actor, "ammo_5.45x39_ap", "in", 3)
 end
 
 function trader_bratok_556x45_ss190(first_speaker, second_speaker)
@@ -209,8 +209,8 @@ function trader_bratok_556x45_ss190(first_speaker, second_speaker)
         actor = second_speaker
         trader = first_speaker
     end
-    flamethrower.relocate_n_items_section(trader, "kolbasa", "out", 5)
-    flamethrower.relocate_n_items_section(actor, "ammo_5.56x45_ss190", "in", 3)
+    dialogs.relocate_item_section(trader, "kolbasa", "out", 5)
+    dialogs.relocate_item_section(actor, "ammo_5.56x45_ss190", "in", 3)
 end
 
 function trader_bratok_556x45_ap(first_speaker, second_speaker)
@@ -223,8 +223,8 @@ function trader_bratok_556x45_ap(first_speaker, second_speaker)
         actor = second_speaker
         trader = first_speaker
     end
-    flamethrower.relocate_n_items_section(trader, "vodka", "out", 4)
-    flamethrower.relocate_n_items_section(actor, "ammo_5.56x45_ap", "in", 3)
+    dialogs.relocate_item_section(trader, "vodka", "out", 4)
+    dialogs.relocate_item_section(actor, "ammo_5.56x45_ap", "in", 3)
 end
 
 function trader_bratok_762x54_7h1(first_speaker, second_speaker)
@@ -237,8 +237,8 @@ function trader_bratok_762x54_7h1(first_speaker, second_speaker)
         actor = second_speaker
         trader = first_speaker
     end
-    flamethrower.relocate_n_items_section(trader, "sguschenka", "out", 2)
-    flamethrower.relocate_n_items_section(actor, "ammo_7.62x54_7h1", "in", 3)
+    dialogs.relocate_item_section(trader, "sguschenka", "out", 2)
+    dialogs.relocate_item_section(actor, "ammo_7.62x54_7h1", "in", 3)
 end
 
 function trader_bratok_9x39_pab9(first_speaker, second_speaker)
@@ -251,8 +251,8 @@ function trader_bratok_9x39_pab9(first_speaker, second_speaker)
         actor = second_speaker
         trader = first_speaker
     end
-    flamethrower.relocate_n_items_section(trader, "shprots", "out", 2)
-    flamethrower.relocate_n_items_section(actor, "ammo_9x39_pab9", "in", 3)
+    dialogs.relocate_item_section(trader, "shprots", "out", 2)
+    dialogs.relocate_item_section(actor, "ammo_9x39_pab9", "in", 3)
 end
 
 function five_vodka_have()
@@ -324,7 +324,7 @@ function sahar_tri_af_drops_dal(first_speaker, second_speaker)
         actor = second_speaker
         trader = first_speaker
     end
-    flamethrower.relocate_n_items_section(actor, "ammo_7.62x51_fmj", "in", 2)
+    dialogs.relocate_item_section(actor, "ammo_7.62x51_fmj", "in", 2)
     new_dialog.out_item_much("paek1", 1)
 end
 
@@ -342,7 +342,7 @@ function sahar_two_af_fireball_dal(first_speaker, second_speaker)
         actor = second_speaker
         trader = first_speaker
     end
-    flamethrower.relocate_n_items_section(actor, "ammo_7.62x51_ap", "in", 2)
+    dialogs.relocate_item_section(actor, "ammo_7.62x51_ap", "in", 2)
     new_dialog.out_item_much("mineral", 2)
 end
 
@@ -360,7 +360,7 @@ function sahar_af_dummy_pellicle_dal(first_speaker, second_speaker)
         actor = second_speaker
         trader = first_speaker
     end
-    flamethrower.relocate_n_items_section(actor, "ammo_7.62x54_7h1", "in", 2)
+    dialogs.relocate_item_section(actor, "ammo_7.62x54_7h1", "in", 2)
     new_dialog.out_item_much("paek2", 1)
 end
 
@@ -450,7 +450,7 @@ function sahar_ten_mutant_tail_cat_dal(first_speaker, second_speaker)
         actor = second_speaker
         trader = first_speaker
     end
-    flamethrower.relocate_n_items_section(actor, "medkit_scientic", "in", 3)
+    dialogs.relocate_item_section(actor, "medkit_scientic", "in", 3)
     new_dialog.out_item_much("mutant_tail_cat", 10)
 end
 
@@ -468,6 +468,6 @@ function sahar_ten_mutant_burer_hand_dal(first_speaker, second_speaker)
         actor = second_speaker
         trader = first_speaker
     end
-    flamethrower.relocate_n_items_section(actor, "antirad", "in", 3)
+    dialogs.relocate_item_section(actor, "antirad", "in", 3)
     new_dialog.out_item_much("izlom_hand", 5)
 end
