@@ -902,7 +902,6 @@
     <task>monolit_pogovority</task>
 </info_portion>
 <info_portion id="monolit_pogovoril"></info_portion>
-
 -------------------------------------------------------
 <info_portion id="totaliz"></info_portion>
 <info_portion id="totaliz_mos">
@@ -928,7 +927,6 @@
 <info_portion id="parol_est"></info_portion>
 <info_portion id="propusk_est"></info_portion>
 <info_portion id="propusk_baza2"></info_portion>
-
 
 
 <info_portion id="f_spawn"></info_portion>
@@ -970,9 +968,6 @@
 <info_portion id="aver_mg"></info_portion>
 <info_portion id="mg_aver1"></info_portion>
 <info_portion id="mg_aver2"></info_portion>
-
-
-
 --------------------------swamp----------------------------
 <info_portion id="boloto_start">
     <action>antreg.spawn_doctor_mutantes</action>
@@ -1032,8 +1027,6 @@
 <info_portion id="voronin_mesto"></info_portion>
 <info_portion id="dolg_attak7_mesto"></info_portion>
 <info_portion id="dolg_attak8_mesto"></info_portion>
-
-
 -----------------------------usa--------------------------
 <info_portion
     id="sidor_one_dialog_start">
@@ -1266,7 +1259,6 @@
     <action>braad_test.create_superfinal_restr</action>
     <action>antreg.spawn_kontr_final1</action>
 </info_portion>
-
 ---------------------------money----------------------------
 <info_portion id="delete_ggm">
     <action>braad_test.money_gg</action>

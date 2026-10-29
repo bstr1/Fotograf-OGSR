@@ -1,148 +1,144 @@
-
-
-
-
---------------------ambient---------------
+<!-- ambient -->
 <info_portion id="amb_road">
-<action>val_test.create_ambroad_restr</action>
-<action>val_test.create_reproad_spawn</action>
-<action>mauvais.timer_music_poligon01</action>
+	<action>val_test.create_ambroad_restr</action>
+	<action>val_test.create_reproad_spawn</action>
+	<action>mauvais.timer_music_poligon01</action>
 </info_portion>
 
 <info_portion id="skazal_prapor">
-<action>val_test.prapor_dead</action>
+	<action>val_test.prapor_dead</action>
 </info_portion>
 
 <info_portion id="skazal_prizrak">
-<action>val_test.prizrak_wot</action>
+	<action>val_test.prizrak_wot</action>
 </info_portion>
 
 <info_portion id="amb_prip">
-<action>val_test.create_ambprip_restr</action>
-<action>mauvais.timer_music_prip01</action>
+	<action>val_test.create_ambprip_restr</action>
+	<action>mauvais.timer_music_prip01</action>
 </info_portion>
 
 <info_portion id="amb_pesh">
-<action>val_test.create_ambpesh_restr</action>
-<action>foto.spawn_peschera</action>
+	<action>val_test.create_ambpesh_restr</action>
+	<action>foto.spawn_peschera</action>
 </info_portion>
 
 <info_portion id="amb_swamp">
-<action>val_test.create_ambswamp_restr</action>
-<action>val_test.create_repswamp_spawn</action>
+	<action>val_test.create_ambswamp_restr</action>
+	<action>val_test.create_repswamp_spawn</action>
 </info_portion>
 
 <info_portion id="amb_prom">
-<action>val_test.create_ambprom_restr</action>
-<action>val_test.create_repprom_spawn</action>
-<action>mauvais.timer_music_prom01</action>
+	<action>val_test.create_ambprom_restr</action>
+	<action>val_test.create_repprom_spawn</action>
+	<action>mauvais.timer_music_prom01</action>
 </info_portion>
 
 <info_portion id="amb_agro">
-<action>val_test.create_ambagro_restr</action>
+	<action>val_test.create_ambagro_restr</action>
 </info_portion>
 
 <info_portion id="amb_bar">
-<action>val_test.create_ambbar_restr</action>
+	<action>val_test.create_ambbar_restr</action>
 </info_portion>
 
 <info_portion id="amb_pred">
-<action>val_test.create_ambpred_restr</action>
-<action>val_test.create_reppred_spawn</action>
+	<action>val_test.create_ambpred_restr</action>
+	<action>val_test.create_reppred_spawn</action>
 </info_portion>
 
 <info_portion id="amb_aver">
-<action>val_test.create_ambaver_restr</action>
+	<action>val_test.create_ambaver_restr</action>
 </info_portion>
 
 <info_portion id="intro_aver">
-<action>val_test.create_introaver</action>
+	<action>val_test.create_introaver</action>
 </info_portion>
 
 <info_portion id="amb_brain">
-<action>val_test.create_ambbrain_restr</action>
-<action>fotograf.wpn_trup_x16_spawn</action>
+	<action>val_test.create_ambbrain_restr</action>
+	<action>fotograf.wpn_trup_x16_spawn</action>
 </info_portion>
 
 <info_portion id="amb_bunk">
-<action>val_test.create_ambbunk_restr</action>
-<action>fotograf.wpn_trup_x10_spawn</action>
+	<action>val_test.create_ambbunk_restr</action>
+	<action>fotograf.wpn_trup_x10_spawn</action>
 </info_portion>
 
 <info_portion id="amb_labx">
-<action>val_test.create_amblabx_restr</action>
-<action>val_test.create_replabx_spawn</action>
-<action>foto2.irokez_del</action>
+	<action>val_test.create_amblabx_restr</action>
+	<action>val_test.create_replabx_spawn</action>
+	<action>foto2.irokez_del</action>
 </info_portion>
 
 <info_portion id="amb_dysh">
-<action>val_test.create_ambdysh_restr</action>
-<action>mauvais.timer_music_dyshlo01</action>
+	<action>val_test.create_ambdysh_restr</action>
+	<action>mauvais.timer_music_dyshlo01</action>
 </info_portion>
 
 <info_portion id="amb_dead">
-<action>val_test.create_ambdead_restr</action>
-<action>mauvais.music_deadcity01</action>
+	<action>val_test.create_ambdead_restr</action>
+	<action>mauvais.music_deadcity01</action>
 </info_portion>
 
 <info_portion id="amb_sarc">
-<action>val_test.create_ambsarc_restr</action>
-<action>mauvais.music_sar_enter</action>
-<action>fotograf.create_spynet_restr</action>
-<action>fotograf.create_spynet2_restr</action>
+	<action>val_test.create_ambsarc_restr</action>
+	<action>mauvais.music_sar_enter</action>
+	<action>fotograf.create_spynet_restr</action>
+	<action>fotograf.create_spynet2_restr</action>
 </info_portion>
 
 <info_portion id="actor_maroderubit">
-<action>val_test.actor_killmaroder</action>
+	<action>val_test.actor_killmaroder</action>
 </info_portion>
 
 <info_portion id="actor_naemubit">
-<action>val_test.actor_killnaem</action>
+	<action>val_test.actor_killnaem</action>
 </info_portion>
 
 <info_portion id="actor_namubit">
-<action>val_test.actor_killnam</action>
+	<action>val_test.actor_killnam</action>
 </info_portion>
 
 <info_portion id="actor_naemdead">
-<action>val_test.killpovodyrdead</action>
+	<action>val_test.killpovodyrdead</action>
 </info_portion>
 
 <info_portion id="shpak_buharik">
-<action>val_test.create_bucharik_restr</action>
+	<action>val_test.create_bucharik_restr</action>
 </info_portion>
 
 <info_portion id="stihoplet_dead">
-<action>val_test.actor_killpoet</action>
+	<action>val_test.actor_killpoet</action>
 </info_portion>
 
 <info_portion id="actor_suicid">
-<action>val_test.povodyrdeadactor</action>
+	<action>val_test.povodyrdeadactor</action>
 </info_portion>
 
 <info_portion id="ubilisuky">
-<action>val_test.povodyrdeadhimera</action>
+	<action>val_test.povodyrdeadhimera</action>
 </info_portion>
 
 <info_portion id="ormant_krut">
-<action>val_test.create_actorormant_restr</action>
+	<action>val_test.create_actorormant_restr</action>
 </info_portion>
 
 <info_portion id="actor_markubit">
-<action>val_test.actor_killmark</action>
+	<action>val_test.actor_killmark</action>
 </info_portion>
 
 <info_portion id="madam_actor">
-<action>val_test.actor_madam</action>
+	<action>val_test.actor_madam</action>
 </info_portion>
 
 <info_portion id="actor_atak">
-<action>val_test.create_actordyshl_restr</action>
-<action>val_test.create_actordysh_restr</action>
-<action>val_test.create_actorprom_restr</action>
+	<action>val_test.create_actordyshl_restr</action>
+	<action>val_test.create_actordysh_restr</action>
+	<action>val_test.create_actorprom_restr</action>
 </info_portion>
-----------------------predbannik-----------
 
+<!-- predbannik -->
 <info_portion id="actor_40"></info_portion>
 <info_portion id="ne_snimat"></info_portion>
 <info_portion id="gde_antirad"></info_portion>
@@ -188,8 +184,7 @@
 <info_portion id="info_valpred_40"></info_portion>
 
 
-----------------------hiding_road-----------------
-
+<!-- hiding_road -->
 <info_portion id="osved_skazal"></info_portion>
 <info_portion id="haron_skazal"></info_portion>
 <info_portion id="broun_piluli"></info_portion>
@@ -243,8 +238,7 @@
 <info_portion id="info_valroad_45"></info_portion>
 <info_portion id="info_valroad_46"></info_portion>
 
-----------------------swamp-----------------------
-
+<!-- swamp -->
 <info_portion id="info_valswamp_01"></info_portion>
 <info_portion id="info_valswamp_02"></info_portion>
 <info_portion id="info_valswamp_03"></info_portion>
@@ -270,8 +264,7 @@
 <info_portion id="info_valswamp_23"></info_portion>
 <info_portion id="info_valswamp_24"></info_portion>
 
-----------------------aver------------------------
-
+<!-- aver -->
 <info_portion id="skazal_opoet"></info_portion>
 <info_portion id="naem_les_01_dead"></info_portion>
 <info_portion id="naem_les_02_dead"></info_portion>
@@ -308,8 +301,7 @@
 <info_portion id="info_valaver_29"></info_portion>
 <info_portion id="info_valaver_30"></info_portion>
 
-----------------------promzone--------------------
-
+<!-- promzone -->
 <info_portion id="maroder_prom_01_dead"></info_portion>
 <info_portion id="maroder_prom_02_dead"></info_portion>
 <info_portion id="maroder_prom_03_dead"></info_portion>
@@ -360,8 +352,7 @@
 <info_portion id="info_valprom_43"></info_portion>
 <info_portion id="info_valprom_44"></info_portion>
 
-----------------------pripyat---------------------
-
+<!-- pripyat -->
 <info_portion id="info_valprip_01"></info_portion>
 <info_portion id="info_valprip_02"></info_portion>
 <info_portion id="info_valprip_03"></info_portion>
@@ -395,8 +386,7 @@
 <info_portion id="info_valprip_31"></info_portion>
 <info_portion id="info_valprip_32"></info_portion>
 
-----------------------brainlab--------------------
-
+<!-- brainlab -->
 <info_portion id="info_valbrain_01"></info_portion>
 <info_portion id="info_valbrain_02"></info_portion>
 <info_portion id="info_valbrain_03"></info_portion>
@@ -414,8 +404,7 @@
 <info_portion id="info_valbrain_15"></info_portion>
 <info_portion id="info_valbrain_16"></info_portion>
 
-----------------------bunker----------------------
-
+<!-- bunker -->
 <info_portion id="info_valbunk_01"></info_portion>
 <info_portion id="info_valbunk_02"></info_portion>
 <info_portion id="info_valbunk_03"></info_portion>
@@ -427,8 +416,7 @@
 <info_portion id="info_valbunk_09"></info_portion>
 <info_portion id="info_valbunk_10"></info_portion>
 
-----------------------labx18----------------------
-
+<!-- labx18 -->
 <info_portion id="prof_skazal"></info_portion>
 <info_portion id="info_vallabx_01"></info_portion>
 <info_portion id="info_vallabx_02"></info_portion>
@@ -443,8 +431,7 @@
 <info_portion id="info_vallabx_11"></info_portion>
 <info_portion id="info_vallabx_12"></info_portion>
 
-----------------------dyshlo----------------------
-
+<!-- dyshlo -->
 <info_portion id="actor_terminator"></info_portion>
 <info_portion id="info_valdysh_01"></info_portion>
 <info_portion id="info_valdysh_02"></info_portion>
@@ -471,8 +458,7 @@
 <info_portion id="info_valdysh_23"></info_portion>
 <info_portion id="info_valdysh_24"></info_portion>
 
-----------------------peshera---------------------
-
+<!-- peshera -->
 <info_portion id="info_valpesh_01"></info_portion>
 <info_portion id="info_valpesh_02"></info_portion>
 <info_portion id="info_valpesh_03"></info_portion>
@@ -480,8 +466,7 @@
 <info_portion id="info_valpesh_05"></info_portion>
 <info_portion id="info_valpesh_06"></info_portion>
 
-----------------------deadcity--------------------
-
+<!-- deadcity -->
 <info_portion id="naem_mg_01_dead"></info_portion>
 <info_portion id="naem_mg_02_dead"></info_portion>
 <info_portion id="naem_mg_03_dead"></info_portion>
@@ -508,8 +493,7 @@
 <info_portion id="info_valdead_21"></info_portion>
 <info_portion id="info_valdead_22"></info_portion>
 
-----------------------agro------------------------
-
+<!-- agro -->
 <info_portion id="info_valagro_01"></info_portion>
 <info_portion id="info_valagro_02"></info_portion>
 <info_portion id="info_valagro_03"></info_portion>
@@ -521,14 +505,13 @@
 <info_portion id="info_valagro_09"></info_portion>
 <info_portion id="info_valagro_10"></info_portion>
 
-----------------------bar-------------------------
-
+<!-- bar -->
 <info_portion id="naem_bar_01_dead"></info_portion>
 <info_portion id="naem_bar_02_dead"></info_portion>
 <info_portion id="naem_bar_03_dead"></info_portion>
 <info_portion id="levsha_skazal"></info_portion>
 <info_portion id="levsha_tronulsa">
-<action>mauvais.music_bar01</action>
+	<action>mauvais.music_bar01</action>
 </info_portion>
 <info_portion id="levsha_zahvat"></info_portion>
 <info_portion id="actor_udral"></info_portion>
@@ -540,8 +523,7 @@
 <info_portion id="info_valbar_05"></info_portion>
 <info_portion id="info_valbar_06"></info_portion>
 
----------------------stories---------------------
-
+<!-- stories -->
 <info_portion id="story_1">
 	<article>story_1</article>
 </info_portion>
@@ -589,7 +571,7 @@
 <info_portion id="story_12">
 	<article>story_12</article>
 </info_portion>
-	
+
 <info_portion id="story_13">
 	<article>story_13</article>
 </info_portion>
@@ -630,8 +612,7 @@
 	<article>story_22</article>
 </info_portion>
 
-----------------------npc---------------
-
+<!-- npc -->
 <info_portion id="persona_1">
 	<article>persona_1</article>
 </info_portion>
@@ -679,7 +660,7 @@
 <info_portion id="persona_12">
 	<article>persona_12</article>
 </info_portion>
-	
+
 <info_portion id="persona_13">
 	<article>persona_13</article>
 </info_portion>
@@ -731,14 +712,3 @@
 <info_portion id="persona_25">
 	<article>persona_25</article>
 </info_portion>
-
-
-
-
-
-
-
-
-
-
-

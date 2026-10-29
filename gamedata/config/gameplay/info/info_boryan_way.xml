@@ -1,7 +1,3 @@
-
-
-
-
 <!-- поршни Бритый -->
 <info_portion id="britiy_dialog_foto_end"></info_portion>
 <info_portion id="britiy_foto_start"></info_portion>
@@ -17,12 +13,12 @@
 <info_portion id="voronin_gans"></info_portion>
 
 <!-- поршни Петрограф -->
-<info_portion id="petrograf_start">	
-	<action>petrograf.create_petrograf</action> 
+<info_portion id="petrograf_start">
+	<action>petrograf.create_petrograf</action>
 </info_portion>
 <info_portion id="petrograf_dialog_0_done"></info_portion>
-<info_portion id="perdonit_enable">	
-	<action>petrograf.create_perdonit</action> 
+<info_portion id="perdonit_enable">
+	<action>petrograf.create_perdonit</action>
 </info_portion>
 <info_portion id="petrograf_dialog_1_done"></info_portion>
 <info_portion id="petrograf_collect"></info_portion>
@@ -30,14 +26,14 @@
 <info_portion id="transfer_perdonit"></info_portion>
 
 <!-- поршни Западло -->
-<info_portion id="kill_zapadlo">	
-	<action>boryan67.zapadlo_clear</action> 
+<info_portion id="kill_zapadlo">
+	<action>boryan67.zapadlo_clear</action>
 </info_portion>
-<info_portion id="wound_verka">	
-	<action>boryan67.verka_wound</action> 
+<info_portion id="wound_verka">
+	<action>boryan67.verka_wound</action>
 </info_portion>
-<info_portion id="kill_verka">	
-	<action>boryan67.verka_dead</action> 
+<info_portion id="kill_verka">
+	<action>boryan67.verka_dead</action>
 </info_portion>
 <info_portion id="kill_haron"></info_portion>
 <info_portion id="zapadlo_robbery_2"></info_portion>
@@ -54,8 +50,8 @@
 
 <!-- поршни Шубин -->
 <info_portion id="shubin_start"></info_portion>
-<info_portion id="shubin_enemy">	
-	<action>boryan67.remove_shubin</action> 
+<info_portion id="shubin_enemy">
+	<action>boryan67.remove_shubin</action>
 	<action>fotograf.actor_kill_shubin</action>
 </info_portion>
 <info_portion id="shubin_enemy2">
@@ -71,7 +67,7 @@
 <info_portion id="shubin_dialog_4_done"></info_portion>
 
 <info_portion id="info_prip_zadan">
-<task>codes_taynik</task>
+	<task>codes_taynik</task>
 </info_portion>
 
 <!-- поршни Шпак -->
@@ -82,7 +78,7 @@
 <info_portion id="shpak_dialog_5_done"></info_portion>
 <info_portion id="shpak_dialog_6_done"></info_portion>
 <info_portion id="shpak_dialog_7_done">
-	<action>boryan67.relocate_dunya</action> 
+	<action>boryan67.relocate_dunya</action>
 </info_portion>
 <info_portion id="shpak_vodka">
 	<task>shpak_vodka20</task>
@@ -168,12 +164,3 @@
 	<task>max_labirint</task>
 </info_portion>
 <info_portion id="max_dialog_1_done"></info_portion>
-
-
-
-
-
-
-
-
-

@@ -15,7 +15,6 @@
 <info_portion id="saharov_radar_dark"></info_portion>
 
 
-
 <info_portion id="doctor_info">
       <task>doctor_help</task>
 </info_portion>
@@ -32,5 +31,3 @@
 </info_portion>
 
 <info_portion id="sahar_shlem_done"></info_portion>
-
-
