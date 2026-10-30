@@ -1,124 +1,116 @@
 ;;;;;;;;;;;;;;;;;;;;;;;; wpn_b725 ;;;;;;;;;;;;;;;;;;;;;;;;
 [wpn_b725]:weapon_immunities,weapon_probability,default_weapon_params
-ammo_class                            = ammo_12x70_buck, ammo_12x76_zhekan
-ammo_current                          = 12
-ammo_elapsed                          = 2
-ammo_limit                            = 14
-ammo_mag_size                         = 2
-use_31_cartridge                      = false
-animation_slot                        = 3
-bullet_speed                          = 381
-cam_relax_speed                       = 14.0
-cam_relax_speed_ai                    = 360
-cam_dispersion                        = 3.8
-cam_dispersion_inc                    = 2.4
-cam_dispersion_frac                   = 1.2
-cam_max_angle                         = 50
-cam_max_angle_horz                    = 50
-cam_step_angle_horz                   = 2.0
+GroupControlSection                   = spawn_group
 cform                                 = skeleton
-condition_shot_dec                    = 0.0009
-control_inertion_factor               = 1.25f
-cost                                  = 10000
-description                           = st_wpn_b725_descr
+class                                 = WP_BM16
+min_radius                            = 0
+max_radius                            = 40
+
 ef_main_weapon_type                   = 1
 ef_weapon_type                        = 9
-fire_dispersion_base                  = 0.185
-fire_dispersion_condition_factor      = 2
-fire_distance                         = 165
-fire_modes                            = 1
-fire_point                            = 0.0, 0.168, 0.755
-fire_point2                           = 0.0, 0.168, 0.755
-flame_particles                       = weapons\new_effects\shtg_bm16
-grenade_launcher_status               = 0
-GroupControlSection                   = spawn_group
-hand_dependence                       = 1
-hit_type                              = fire_wound
-holder_fov_modifier                   = 1.0
+
 holder_range_modifier                 = 1.0
-hud                                   = wpn_b725_hud
+holder_fov_modifier                   = 1.0
+
+cost                                  = 10000
+
+ammo_elapsed                          = 2
+
+ammo_mag_size                         = 2
+fire_modes                            = 1
+
+flame_particles                       = weapons\new_effects\shtg_bm16
+smoke_particles                       = weapons\generic_weapon_riffle
+
+ammo_class                            = ammo_12x70_buck, ammo_12x76_zhekan
+
+hand_dependence                       = 1
+single_handed                         = 0
+slot                                  = 1
+animation_slot                        = 3
+
+inv_name                              = st_wpn_b725
+inv_name_short                        = st_wpn_b725
+description                           = st_wpn_b725_descr
+
+inv_weight                            = 3.5
+icon_group                            = 2
 inv_grid_height                       = 1
 inv_grid_width                        = 6
 inv_grid_x                            = 46
 inv_grid_y                            = 4
-inv_name                              = st_wpn_b725
-inv_name_short                        = st_wpn_b725
-inv_weight                            = 3.5
-kill_msg_height                       = 23
-kill_msg_width                        = 97
-kill_msg_x                            = 127
-kill_msg_y                            = 82
-light_color                           = 0.6,0.5,0.3
-light_disabled                        = false
-light_range                           = 7.0
-light_time                            = 0.07
-light_var_color                       = 0.1
-light_var_range                       = 0.7
-max_radius                            = 40
-min_radius                            = 0
+
+fire_dispersion_base                  = 0.185
+control_inertion_factor               = 1.25f
+cam_relax_speed                       = 14.0
+cam_relax_speed_ai                    = 360
+cam_dispersion                        = 3.8
+cam_dispersion_inc                    = 2.4
+cam_max_angle                         = 50
+cam_max_angle_horz                    = 50
+cam_step_angle_horz                   = 2.0
+fire_dispersion_condition_factor      = 2
 misfire_probability                   = 0.004
-change_misfire_mag                    = false
-orientation                           = 0, 30, 0
+condition_shot_dec                    = 0.0009
+
 PDM_disp_base                         = 1.05
 PDM_disp_vel_factor                   = 1.6
 PDM_disp_accel_factor                 = 1.6
 PDM_disp_crouch                       = 1.0
 PDM_disp_crouch_no_acc                = 1.0
-ph_mass                               = 4
-position                              = -0.025,-0.11,0.06
+
+hit_type                              = fire_wound
+fire_distance                         = 165
+bullet_speed                          = 381
 rpm                                   = 900
-rpm_empty_click                       = 200
-scheduled                             = off
-scope_status                          = 0
+fire_point                            = 0.0, 0.168, 0.755
+fire_point2                           = 0.0, 0.168, 0.755
 shell_point                           = 0.0, 0.183, 0.07
+
+hud                                   = wpn_b725_hud
+visual                                = dynamics\weapons\wpn_b725\wpn_b725.ogf
+light_color                           = 0.6,0.5,0.3
+light_range                           = 7.0
+light_var_color                       = 0.1
+light_var_range                       = 0.7
+light_time                            = 0.07
+light_disabled                        = false
+ph_mass                               = 4
+
+zoom_rotate_time                      = 6.7
+zoom_enabled                          = true
+
+scope_status                          = 0
 silencer_status                       = 0
-single_handed                         = 0
-slot                                  = 1
-smoke_particles                       = weapons\generic_weapon_riffle
-startup_ammo                          = 10
+grenade_launcher_status               = 0
+
+position                              = -0.025,-0.11,0.06
+orientation                           = 0, 30, 0
 strap_bone0                           = bip01_spine2
 strap_bone1                           = bip01_spine1
 strap_orientation                     = -15,-9,110
 strap_position                        = -0.26,-0.11,0.15
-visual                                = dynamics\weapons\wpn_b725\wpn_b725.ogf
-zoom_cam_relax_speed                  = 10.0
-zoom_cam_relax_speed_ai               = 120.75
-zoom_cam_dispersion                   = 3.1
-zoom_cam_dispersion_inc               = 1.5
-zoom_cam_dispersion_frac              = 1.0
-zoom_cam_max_angle                    = 50.0
-zoom_cam_max_angle_horz               = 50.0
-zoom_cam_step_angle_horz              = 1.7
-zoom_enabled                          = true
-zoom_rotate_time                      = 6.7
-reload_time                           = 2.3
-reload_empty_time                     = 2.35
-use_mag_scheme                        = true
-mag_bone_type_0                       = bullet_red, bullet1_red, shell_red, shell1_red
-mag_bone_type_1                       = bullet_blue, bullet1_blue, shell_blue, shell1_blue
-ammochange_time                       = 1.4
-class                                 = WP_BM16
-icon_group                            = 2
 
 snd_shoot                             = weapons\toz34\toz34_hole_stereo
-snd_shoot1                            = weapons\toz34\toz34_hole_stereo1
-snd_bore                              = weapons\draw_silent
-snd_close                             = weapons\draw_silent
+snd_shoot_duplet                      = weapons\toz34\toz34_hole_mono
+snd_reload                            = weapons\b725\b725_reload_empty
+snd_reload_jammed                     = weapons\b725\b725_misfire
+snd_empty                             = weapons\bm16\toz66_empty
 snd_draw                              = weapons\assault_draw
 snd_holster                           = weapons\hide_db
-snd_empty                             = weapons\bm16\toz66_empty
-snd_reload                            = weapons\b725\b725_reload_empty
+snd_close                             = weapons\draw_silent
 snd_reload_1                          = weapons\b725\b725_reload
-snd_reload_jammed                     = weapons\b725\b725_misfire
-snd_shoot_duplet                      = weapons\toz34\toz34_hole_mono
+snd_shoot1                            = weapons\toz34\toz34_hole_stereo1
 
 [wpn_b725_hud]:hud_base
 aim_hud_offset_pos                    = -0.0655,0.0368,0.009
-aim_hud_offset_pos_16x9               = -0.0655,0.0368,0.009
-
 aim_hud_offset_rot                    = 0.00175,0.00125,0
+aim_hud_offset_pos_16x9               = -0.0655,0.0368,0.009
 aim_hud_offset_rot_16x9               = 0.00175,0.00125,0
 
+anm_show_0                            = b725_draw
+anm_show_1                            = b725_draw
+anm_show_2                            = b725_draw
 anm_hide_0                            = b725_holster
 anm_hide_1                            = b725_holster
 anm_hide_2                            = b725_holster
@@ -128,57 +120,57 @@ anm_idle_2                            = b725_idle
 anm_idle_aim_0                        = b725_idle_aim
 anm_idle_aim_1                        = b725_idle_aim
 anm_idle_aim_2                        = b725_idle_aim
-anm_idle_moving_0                     = b725_moving
-anm_idle_moving_1                     = b725_moving
-anm_idle_moving_2                     = b725_moving
 anm_idle_aim_moving_0                 = b725_moving_aim
 anm_idle_aim_moving_1                 = b725_moving_aim
 anm_idle_aim_moving_2                 = b725_moving_aim
-anm_idle_moving_slow_0                = b725_moving_slow
-anm_idle_moving_slow_1                = b725_moving_slow
-anm_idle_moving_slow_2                = b725_moving_slow
+anm_idle_moving_0                     = b725_moving
+anm_idle_moving_1                     = b725_moving
+anm_idle_moving_2                     = b725_moving
 anm_idle_moving_crouch_0              = b725_crouch
 anm_idle_moving_crouch_1              = b725_crouch
 anm_idle_moving_crouch_2              = b725_crouch
-anm_reload_jammed_1                   = b725_misfire, misfire
-anm_reload_jammed_2                   = b725_misfire, misfire
-anm_reload_1                          = b725_reload, reload
-anm_reload_2                          = b725_reload_empty, reload_empty
-anm_shot_1                            = b725_shoot
-anm_shot_2                            = b725_shoot_last
+anm_idle_moving_slow_0                = b725_moving_slow
+anm_idle_moving_slow_1                = b725_moving_slow
+anm_idle_moving_slow_2                = b725_moving_slow
+anm_idle_sprint_0                     = b725_sprint
+anm_idle_sprint_1                     = b725_sprint
+anm_idle_sprint_2                     = b725_sprint
+anm_idle_sprint_end_0                 = b725_sprint_end
+anm_idle_sprint_end_1                 = b725_sprint_end
+anm_idle_sprint_end_2                 = b725_sprint_end
+anm_idle_sprint_start_0               = b725_sprint_start
+anm_idle_sprint_start_1               = b725_sprint_start
+anm_idle_sprint_start_2               = b725_sprint_start
 anm_shots_when_aim_1                  = b725_shoot_aim
 anm_shots_when_aim_2                  = b725_shoot_aim
-anm_show_0                            = b725_draw
-anm_show_1                            = b725_draw
-anm_show_2                            = b725_draw
-anm_idle_sprint_start_2               = b725_sprint_start
-anm_idle_sprint_2                     = b725_sprint
-anm_idle_sprint_end_2                 = b725_sprint_end
-anm_idle_sprint_start_1               = b725_sprint_start
-anm_idle_sprint_1                     = b725_sprint
-anm_idle_sprint_end_1                 = b725_sprint_end
-anm_idle_sprint_start_0               = b725_sprint_start
-anm_idle_sprint_0                     = b725_sprint
-anm_idle_sprint_end_0                 = b725_sprint_end
+anm_shot_1                            = b725_shoot
+anm_shot_2                            = b725_shoot_last
 anm_ammochange_1                      = b725_ammochange_1, ammochange_1
 anm_ammochange_2                      = b725_ammochange_2, ammochange_2
+anm_reload_1                          = b725_reload, reload
+anm_reload_2                          = b725_reload_empty, reload_empty
+anm_reload_jammed_1                   = b725_misfire, misfire
+anm_reload_jammed_2                   = b725_misfire, misfire
 anm_headlamp_on_0                     = b725_flash
-anm_gasmask_0                         = b725_clear
 anm_headlamp_on_1                     = b725_flash
-anm_gasmask_1                         = b725_clear
 anm_headlamp_on_2                     = b725_flash
+anm_gasmask_0                         = b725_clear
+anm_gasmask_1                         = b725_clear
 anm_gasmask_2                         = b725_clear
+
 attach_place_idx                      = 0
 fire_bone                             = wpn_body
 fire_point                            = 0.000000,0.042700,0.790400
-hands_orientation                     = 0,0,0
+
+hands_position_16x9                   = 0.007100,0.045275,-0.125899
 hands_orientation_16x9                = 0,0,0
 hands_position                        = 0.007100,0.045275,-0.125899
-hands_position_16x9                   = 0.007100,0.045275,-0.125899
-item_orientation                      = 0,0,0
+hands_orientation                     = 0,0,0
 item_position                         = 0,0,0
+item_orientation                      = 0,0,0
 item_visual                           = dynamics\weapons\wpn_b725\wpn_b725_hud.ogf
+
 shell_bone                            = wpn_body
-shell_dir                             = 0.0, 1.0, 0.0
 shell_point                           = 0,0,0
+
 zoom_hide_crosshair                   = true

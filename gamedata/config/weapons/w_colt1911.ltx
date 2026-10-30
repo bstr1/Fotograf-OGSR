@@ -1,200 +1,206 @@
 ;;;;;;;;;;;;;;;;;;;;;;;; wpn_colt1911 ;;;;;;;;;;;;;;;;;;;;;;;;
 [wpn_colt1911]:weapon_immunities,weapon_probability,default_weapon_params
-ammo_class                            = ammo_11.43x23_fmj, ammo_11.43x23_hydro
-ammo_current                          = 42
-ammo_elapsed                          = 7
-ammo_limit                            = 49
-ammo_mag_size                         = 7
-animation_slot                        = 1
-bullet_speed                          = 200
-cam_relax_speed                       = 5
-cam_relax_speed_ai                    = 360
-cam_dispersion                        = 0.4
-cam_dispersion_inc                    = 0.0
-cam_dispersion_frac                   = 1.0
-cam_max_angle                         = 30
-cam_max_angle_horz                    = 10
-cam_step_angle_horz                   = 0.3
+GroupControlSection                   = spawn_group
 cform                                 = skeleton
-condition_shot_dec                    = 0.0003
-control_inertion_factor               = 1.1f
-cost                                  = 8000
-description                           = st_wpn_colt1911_descr
+class                                 = WP_PM
+min_radius                            = 0
+max_radius                            = 70
+
 ef_main_weapon_type                   = 0
 ef_weapon_type                        = 5
-fire_dispersion_base                  = 0.23
-fire_dispersion_condition_factor      = 3.5
-fire_distance                         = 50
-fire_modes                            = 1
-fire_point                            = 0.0, 0.133, 0.161
-flame_particles                       = weapons\new_effects\pistol_45acp
-grenade_launcher_status               = 0
-GroupControlSection                   = spawn_group
-hand_dependence                       = 1
-hit_type                              = fire_wound
-holder_fov_modifier                   = 1.00
+
 holder_range_modifier                 = 1.00
-hud                                   = wpn_colt1911_hud
+holder_fov_modifier                   = 1.00
+
+cost                                  = 8000
+
+ammo_elapsed                          = 7
+
+ammo_mag_size                         = 7
+fire_modes                            = 1
+
+flame_particles                       = weapons\new_effects\pistol_45acp
+smoke_particles                       = weapons\generic_weapon_pistols
+shell_particles                       = weapons\45acp
+silencer_smoke_particles              = weapons\generic_weapon_pistols_silencer
+
+ammo_class                            = ammo_11.43x23_fmj, ammo_11.43x23_hydro
+
+hand_dependence                       = 1
+single_handed                         = 1
+slot                                  = 1
+animation_slot                        = 1
+
+inv_name                              = st_wpn_colt1911
+inv_name_short                        = st_wpn_colt1911
+description                           = st_wpn_colt1911_descr
+
+inv_weight                            = 1.1
+icon_group                            = 2
 inv_grid_height                       = 1
 inv_grid_width                        = 2
 inv_grid_x                            = 22
 inv_grid_y                            = 4
-inv_name                              = st_wpn_colt1911
-inv_name_short                        = st_wpn_colt1911
-inv_weight                            = 1.1
-kill_msg_height                       = 24
-kill_msg_width                        = 37
-kill_msg_x                            = 161
-kill_msg_y                            = 153
-light_color                           = 0.6,0.5,0.3
-light_disabled                        = false
-light_range                           = 7.0
-light_time                            = 0.07
-light_var_color                       = 0.1
-light_var_range                       = 0.7
-max_radius                            = 70
-min_radius                            = 0
+
+fire_dispersion_base                  = 0.23
+control_inertion_factor               = 1.1f
+cam_relax_speed                       = 5
+cam_relax_speed_ai                    = 360
+cam_dispersion                        = 0.4
+cam_dispersion_inc                    = 0.0
+cam_max_angle                         = 30
+cam_max_angle_horz                    = 10
+cam_step_angle_horz                   = 0.3
+fire_dispersion_condition_factor      = 3.5
 misfire_probability                   = 0.003
-orientation                           = 0, 0, 0
+condition_shot_dec                    = 0.0003
+
 PDM_disp_base                         = 1.5
 PDM_disp_vel_factor                   = 2.0
 PDM_disp_accel_factor                 = 3.0
 PDM_disp_crouch                       = 0.9
 PDM_disp_crouch_no_acc                = 0.9
-ph_mass                               = 1
-position                              = -0.021, -0.085, 0.0
+
+hit_type                              = fire_wound
+hit_power        					  = 0.47
+fire_distance                         = 50
+bullet_speed                          = 200
 rpm                                   = 250
-rpm_empty_click                       = 200
-scheduled                             = off
-scope_status                          = 0
-shell_dir                             = 0.0, 0.0, 0.4
-shell_particles                       = weapons\45acp
+use_aim_bullet                        = false
+time_to_aim                           = 1.0
+fire_point                            = 0.0, 0.133, 0.161
 shell_point                           = 0.0, 0.133, 0.047
+
+hud                                   = wpn_colt1911_hud
+visual                                = dynamics\weapons\wpn_colt1911\wpn_colt1911.ogf
+light_color                           = 0.6,0.5,0.3
+light_range                           = 7.0
+light_var_color                       = 0.1
+light_var_range                       = 0.7
+light_time                            = 0.07
+light_disabled                        = false
+ph_mass                               = 1
+
+zoom_rotate_time                      = 6.5
+zoom_enabled                          = true
+
+scope_status                          = 0
+silencer_status                       = 0
+grenade_launcher_status               = 0
+silencer_name                         = sil_45
+
+silencer_x                            = 86
+silencer_y                            = -17
+
+position                              = -0.021, -0.085, 0.0
+orientation                           = 0, 0, 0
+
+snd_silncer_shot                      = weapons\colt\mono\m1911_silencer_mono_far
+snd_shoot                             = weapons\colt\muzzle_colt1911_mono
+snd_reload                            = weapons\colt\colt_reload
+snd_reload_empty                      = weapons\colt\colt_reload_empty
+snd_reload_jammed                     = weapons\colt\colt_misfire
+snd_empty                             = weapons\colt\colt_empty
+snd_draw                              = weapons\assault_draw
+snd_holster                           = weapons\hide_p
+snd_close                             = weapons\draw_silent
+snd_shoot1                            = weapons\colt\muzzle_colt1911_mono1
+
 silencer_light_color                  = 0.6,0.5,0.3
 silencer_light_range                  = 0.01
 silencer_light_time                   = 0.2
 silencer_light_var_color              = 0.05
 silencer_light_var_range              = 0.5
-silencer_name                         = sil_45
-silencer_smoke_particles              = weapons\generic_weapon_pistols_silencer
-silencer_status                       = 0
-silencer_x                            = 86
-silencer_y                            = -17
-single_handed                         = 1
-slot                                  = 1
-smoke_particles                       = weapons\generic_weapon_pistols
-startup_ammo                          = 90
-time_to_aim                           = 1.0
-use_aim_bullet                        = false
-visual                                = dynamics\weapons\wpn_colt1911\wpn_colt1911.ogf
-zoom_cam_relax_speed                  = 10
-zoom_cam_relax_speed_ai               = 120.75
-zoom_cam_dispersion                   = 1.2
-zoom_cam_dispersion_inc               = 1.0
-zoom_cam_dispersion_frac              = 1.0
-zoom_cam_max_angle                    = 45.0
-zoom_cam_max_angle_horz               = 12.5
-zoom_cam_step_angle_horz              = 1.4
-zoom_enabled                          = true
-zoom_rotate_time                      = 6.5
-bullet_bone_name                      = bullet
-reload_time                           = 0.7
-reload_empty_time                     = 0.7
-class                                 = WP_PM
-icon_group                            = 2
-
-snd_shoot                             = weapons\colt\muzzle_colt1911_mono
-snd_shoot1                            = weapons\colt\muzzle_colt1911_mono1
-snd_silncer_shot                      = weapons\colt\mono\m1911_silencer_mono_far
-snd_bore                              = weapons\draw_silent
-snd_close                             = weapons\draw_silent
-snd_draw                              = weapons\assault_draw
-snd_holster                           = weapons\hide_p
-snd_empty                             = weapons\colt\colt_empty
-snd_reload                            = weapons\colt\colt_reload
-snd_reload_empty                      = weapons\colt\colt_reload_empty
-snd_reload_jammed                     = weapons\colt\colt_misfire
 
 [wpn_colt1911_hud]:hud_base
-aim_hud_offset_rot                    = -0.012500,0.000000,0.000000
-aim_hud_offset_rot_16x9               = -0.012500,0.000000,0.000000
 aim_hud_offset_pos                    = -0.076000,0.032000,-0.09
+aim_hud_offset_rot                    = -0.012500,0.000000,0.000000
 aim_hud_offset_pos_16x9               = -0.076000,0.032000,-0.09
-anm_bore                              = colt_idle_aim
-anm_bore_empty                        = colt_idle_aim, idle_empty
+aim_hud_offset_rot_16x9               = -0.012500,0.000000,0.000000
+
+anm_show                              = colt_draw
+anm_show_empty                        = colt_draw, idle_empty
 anm_hide                              = colt_holster
 anm_hide_empty                        = colt_holster, idle_empty
 anm_idle                              = colt_idle
 anm_idle_aim                          = colt_idle_aim
 anm_idle_aim_empty                    = colt_idle_aim, idle_empty
+anm_idle_aim_moving                   = colt_moving_aim
+anm_idle_aim_moving_empty             = colt_moving_aim, idle_empty
 anm_idle_empty                        = colt_idle, idle_empty
-anm_idle_moving_slow                  = colt_moving_slow
-anm_idle_moving_slow_empty            = colt_moving_slow, idle_empty
 anm_idle_moving                       = colt_moving
 anm_idle_moving_crouch                = colt_crouch
 anm_idle_moving_crouch_empty          = colt_crouch, idle_empty
 anm_idle_moving_empty                 = colt_moving, idle_empty
-anm_idle_aim_moving                   = colt_moving_aim
-anm_idle_aim_moving_empty             = colt_moving_aim, idle_empty
-anm_idle_sprint_start                 = colt_sprint_start
+anm_idle_moving_slow                  = colt_moving_slow
+anm_idle_moving_slow_empty            = colt_moving_slow, idle_empty
 anm_idle_sprint                       = colt_sprint
-anm_idle_sprint_end                   = colt_sprint_end
-anm_idle_sprint_start_empty           = colt_sprint_start, idle_empty
 anm_idle_sprint_empty                 = colt_sprint, idle_empty
+anm_idle_sprint_end                   = colt_sprint_end
 anm_idle_sprint_end_empty             = colt_sprint_end, idle_empty
+anm_idle_sprint_start                 = colt_sprint_start
+anm_idle_sprint_start_empty           = colt_sprint_start, idle_empty
+anm_bore                              = colt_idle_aim
+anm_bore_empty                        = colt_idle_aim, idle_empty
+anm_shots                             = colt_shoot, shoot
+anm_shot_l                            = colt_shoot, idle_empty
+anm_shoot_aim                         = colt_shoot_aim, shoot
 anm_reload                            = colt_reload, reload
 anm_reload_empty                      = colt_reload_empty, reload_empty
 anm_reload_jammed                     = colt_misfire, misfire
-anm_shot_l                            = colt_shoot, idle_empty
-anm_shots                             = colt_shoot, shoot
-anm_shoot_aim                         = colt_shoot_aim, shoot
-anm_show                              = colt_draw
-anm_show_empty                        = colt_draw, idle_empty
 anm_headlamp_on                       = colt_flash
-anm_gasmask                           = colt_clear
 anm_headlamp_on_empty                 = colt_flash, idle_empty
+anm_gasmask                           = colt_clear
 anm_gasmask_empty                     = colt_clear, idle_empty
+
 attach_place_idx                      = 0
 fire_bone                             = wpn_body
 fire_point                            = 0.000000,0.072600,0.238701
+
 gl_hud_offset_pos                     = 0,0,0
 gl_hud_offset_rot                     = 0,0,0
-hands_position                        = 0.000000,-0.077200,-0.008500
-hands_orientation                     = 0.0,0.0,0.0
+
 hands_position_16x9                   = 0.000000,-0.077200,-0.008500
 hands_orientation_16x9                = 0.0,0.0,0.0
-item_orientation                      = 0,0,0
+hands_position                        = 0.000000,-0.077200,-0.008500
+hands_orientation                     = 0.0,0.0,0.0
 item_position                         = 0,0,0
+item_orientation                      = 0,0,0
 item_visual                           = dynamics\weapons\wpn_colt1911\wpn_colt1911_hud.ogf
-lean_hud_offset_pos                   = 0,0,0
-lean_hud_offset_rot                   = 0,0,0
+
 shell_bone                            = wpn_body
 shell_point                           = 0.03,0.09,0.15
+
 zoom_hide_crosshair                   = true
-inertion_origin_aim_offset            = -0.03
-inertion_offset_LRUD_aim              = 0.01, 0.01, 0.01, 0.01
-inertion_offset_z                     = 0
 
 [wpn_coltm45a1]:wpn_colt1911
 cost                                  = 6500
+
+inv_name                              = st_wpn_coltm45a1
+inv_name_short                        = st_wpn_coltm45a1
 description                           = st_wpn_coltm45a1_descr
+
+inv_weight                            = 1.0
 inv_grid_height                       = 1
 inv_grid_width                        = 2
 inv_grid_x                            = 22
 inv_grid_y                            = 9
-inv_name                              = st_wpn_coltm45a1
-inv_name_short                        = st_wpn_coltm45a1
-inv_weight                            = 1.0
-silencer_status                       = 2
-silencer_x                            = 84
-silencer_y                            = -16
+
 bullet_speed                          = 250
+hit_power        					  = 0.53
+
 hud                                   = wpn_coltm45a1_hud
 visual                                = dynamics\weapons\wpn_colt1911\wpn_coltm45a1.ogf
 
+silencer_status                       = 2
+
+silencer_x                            = 84
+silencer_y                            = -16
+
 [wpn_coltm45a1_hud]:wpn_colt1911_hud
-aim_hud_offset_rot                    = -0.0125,0,0
-aim_hud_offset_rot_16x9               = -0.0125,0,0
 aim_hud_offset_pos                    = -0.0764,0.0295,-0.09
+aim_hud_offset_rot                    = -0.0125,0,0
 aim_hud_offset_pos_16x9               = -0.0764,0.0295,-0.09
+aim_hud_offset_rot_16x9               = -0.0125,0,0
+
 item_visual                           = dynamics\weapons\wpn_colt1911\wpn_coltm45a1_hud.ogf

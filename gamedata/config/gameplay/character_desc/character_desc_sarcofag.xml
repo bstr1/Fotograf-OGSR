@@ -611,7 +611,7 @@
 	  	<crouch_type>0</crouch_type>
         <supplies>
             [spawn] \n
-            wpn_m700 \n
+            wpn_scarh \n
 			ammo_7.62x51_fmj = 3 \n
 #include "gameplay\character_drugs.xml"
 #include "gameplay\character_items.xml" \n

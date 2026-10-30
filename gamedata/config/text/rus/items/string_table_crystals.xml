@@ -1,0 +1,223 @@
+
+	<string id="ks_active_descr">
+		<text>Кристалл неизвестной природы.</text>
+	</string>
+
+	<string id="ks_active_01_inv">
+		<text>Кристалл № 1</text>
+	</string>
+
+	<string id="ks_active_02_inv">
+		<text>Кристалл № 2</text>
+	</string>
+
+	<string id="ks_active_03_inv">
+		<text>Кристалл № 3</text>
+	</string>
+
+	<string id="ks_active_04_inv">
+		<text>Кристалл № 4</text>
+	</string>
+
+	<string id="ks_active_05_inv">
+		<text>Кристалл № 5</text>
+	</string>
+
+	<string id="ks_active_06_inv">
+		<text>Кристалл № 6</text>
+	</string>
+
+	<string id="ks_active_07_inv">
+		<text>Кристалл № 7</text>
+	</string>
+
+	<string id="ks_active_08_inv">
+		<text>Кристалл № 8</text>
+	</string>
+
+	<string id="ks_active_09_inv">
+		<text>Кристалл № 9</text>
+	</string>
+
+	<string id="ks_active_10_inv">
+		<text>Кристалл № 10</text>
+	</string>
+
+	<string id="ks_active_11_inv">
+		<text>Кристалл № 11</text>
+	</string>
+
+	<string id="ks_active_12_inv">
+		<text>Кристалл № 12</text>
+	</string>
+
+	<string id="ks_reagent_01_inv">
+		<text>Кристалл № 1</text>
+	</string>
+
+	<string id="ks_reagent_02_inv">
+		<text>Кристалл № 2</text>
+	</string>
+
+	<string id="ks_reagent_03_inv">
+		<text>Кристалл № 3</text>
+	</string>
+
+	<string id="ks_reagent_04_inv">
+		<text>Кристалл № 4</text>
+	</string>
+
+	<string id="ks_reagent_05_inv">
+		<text>Кристалл № 5</text>
+	</string>
+
+	<string id="ks_reagent_06_inv">
+		<text>Кристалл № 6</text>
+	</string>
+
+	<string id="ks_reagent_07_inv">
+		<text>Кристалл № 7</text>
+	</string>
+
+	<string id="ks_reagent_08_inv">
+		<text>Кристалл № 8</text>
+	</string>
+
+	<string id="ks_reagent_09_inv">
+		<text>Кристалл № 9</text>
+	</string>
+
+	<string id="ks_reagent_10_inv">
+		<text>Кристалл № 10</text>
+	</string>
+
+	<string id="ks_reagent_11_inv">
+		<text>Кристалл № 11</text>
+	</string>
+
+	<string id="ks_reagent_12_inv">
+		<text>Кристалл № 12</text>
+	</string>
+
+	<string id="ks_absolut_descr">
+		<text>Абсолют. Производное от двух неизвестных кристаллов.</text>
+	</string>
+
+	<string id="ks_absolut_01_inv">
+		<text>Абсолют № 1</text>
+	</string>
+
+	<string id="ks_absolut_02_inv">
+		<text>Абсолют № 2</text>
+	</string>
+
+	<string id="ks_absolut_03_inv">
+		<text>Абсолют № 3</text>
+	</string>
+
+	<string id="ks_absolut_04_inv">
+		<text>Абсолют № 4</text>
+	</string>
+
+	<string id="ks_absolut_05_inv">
+		<text>Абсолют № 5</text>
+	</string>
+
+	<string id="ks_absolut_06_inv">
+		<text>Абсолют № 6</text>
+	</string>
+
+	<string id="ks_absolut_07_inv">
+		<text>Абсолют № 7</text>
+	</string>
+
+	<string id="ks_absolut_08_inv">
+		<text>Абсолют № 8</text>
+	</string>
+
+	<string id="ks_absolut_09_inv">
+		<text>Абсолют № 9</text>
+	</string>
+
+	<string id="ks_absolut_10_inv">
+		<text>Абсолют № 10</text>
+	</string>
+
+	<string id="ks_absolut_11_inv">
+		<text>Абсолют № 11</text>
+	</string>
+
+	<string id="ks_absolut_12_inv">
+		<text>Абсолют № 12</text>
+	</string>
+
+	<string id="ks_talisman_descr">
+		<text>Талисман. Образован в процессе слияния двух минералов-абсолютов в особой пси-зоне.</text>
+	</string>
+
+	<string id="ks_talisman_01_inv">
+		<text>Талисман № 1</text>
+	</string>
+
+	<string id="ks_talisman_02_inv">
+		<text>Талисман № 2</text>
+	</string>
+
+	<string id="ks_talisman_03_inv">
+		<text>Талисман № 3</text>
+	</string>
+
+	<string id="ks_talisman_04_inv">
+		<text>Талисман № 4</text>
+	</string>
+
+	<string id="ks_talisman_05_inv">
+		<text>Талисман № 5</text>
+	</string>
+
+	<string id="ks_talisman_06_inv">
+		<text>Талисман № 6</text>
+	</string>
+
+	<string id="ks_obereg_01_inv">
+		<text>Оберег № 1</text>
+	</string>
+	<string id="ks_obereg_01_descr">
+		<text>Оберег. Образован в процессе синтеза минерала-Талисмана и биологической материи в виде когтя Электрохимеры. Обладает рядом защитных свойств, самым сильным из которых является защита от электрошока.</text>
+	</string>
+
+	<string id="ks_obereg_02_inv">
+		<text>Оберег № 2</text>
+	</string>
+	<string id="ks_obereg_02_descr">
+		<text>Оберег. Образован в процессе синтеза минерала-Талисмана и биологической материи в виде кисти Излома. Обладает рядом защитных свойств, самым сильным из которых является защита от удара.</text>
+	</string>
+
+	<string id="ks_obereg_03_inv">
+		<text>Оберег № 3</text>
+	</string>
+	<string id="ks_obereg_03_descr">
+		<text>Оберег. Образован в процессе синтеза минерала-Талисмана и биологической материи в виде руки Контролёра. Обладает рядом защитных свойств, самым сильным из которых является защита от телепатического воздействия.</text>
+	</string>
+
+	<string id="ks_obereg_04_inv">
+		<text>Оберег № 4</text>
+	</string>
+	<string id="ks_obereg_04_descr">
+		<text>Оберег. Образован в процессе синтеза минерала-Талисмана и биологической материи в виде когтя Огенной Химеры. Обладает рядом защитных свойств, самым сильным из которых является защита от огня.</text>
+	</string>
+
+	<string id="ks_obereg_05_inv">
+		<text>Оберег № 5</text>
+	</string>
+	<string id="ks_obereg_05_descr">
+		<text>Оберег. Образован в процессе синтеза минерала-Талисмана и биологической материи в виде Хребета Пещерного Выползня. Обладает рядом защитных свойств, самым сильным из которых является защита от химического ожога.</text>
+	</string>
+
+	<string id="ks_obereg_06_inv">
+		<text>Оберег № 6</text>
+	</string>
+	<string id="ks_obereg_06_descr">
+		<text>Оберег. Образован в процессе синтеза минерала-Талисмана и биологической материи в виде Рога Стального Когтя. Обладает рядом защитных свойств, самым сильным из которых является защита от разрывов.</text>
+	</string>
+

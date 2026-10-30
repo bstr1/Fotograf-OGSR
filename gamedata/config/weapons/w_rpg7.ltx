@@ -1,146 +1,144 @@
 ;;;;;;;;;;;;;;;;;;;;;;;; wpn_rpg7 ;;;;;;;;;;;;;;;;;;;;;;;;
 [wpn_rpg7]:weapon_immunities,weapon_probability,default_weapon_params
-ammo_class                            = ammo_og-7b
-ammo_current                          = 6
+GroupControlSection                   = spawn_group
+cform                                 = skeleton
+class                                 = WP_RPG7
+min_radius                            = 50
+max_radius                            = 1200
+
+ef_main_weapon_type                   = 4
+ef_weapon_type                        = 12
+
+holder_range_modifier                 = 2.00
+holder_fov_modifier                   = 1.00
+
+cost                                  = 10000
+
 ammo_elapsed                          = 1
-ammo_limit                            = 7
+
 ammo_mag_size                         = 1
-use_31_cartridge                      = false
-animation_slot                        = 4
+
+flame_particles                       = weapons\generic_weapon_riffle
+smoke_particles                       = weapons\generic_weapon02
+
+ammo_class                            = ammo_og-7b
+rocket_class                          = wpn_rpg7_missile
+launch_speed                          = 200
 auto_spawn_ammo                       = false
-bullet_speed                          = 110
+
+hand_dependence                       = 1
+single_handed                         = 0
+sprint_allowed                        = true
+slot                                  = 1
+animation_slot                        = 4
+
+inv_name                              = st_wpn_rpg7
+inv_name_short                        = st_wpn_rpg7
+description                           = st_wpn_rpg7_descr
+
+inv_weight                            = 6.3
+icon_group                            = 2
+inv_grid_height                       = 2
+inv_grid_width                        = 5
+inv_grid_x                            = 26
+inv_grid_y                            = 0
+
+fire_dispersion_base                  = 1.5
+control_inertion_factor               = 1.8f
 cam_relax_speed                       = 2.0
 cam_relax_speed_ai                    = 360
 cam_dispersion                        = 6.0
 cam_max_angle                         = 30
 cam_max_angle_horz                    = 10
 cam_step_angle_horz                   = 0.5
-cform                                 = skeleton
-condition_shot_dec                    = 0.005
-control_inertion_factor               = 1.8f
-cost                                  = 10000
-description                           = st_wpn_rpg7_descr
-discovery_dependency                  = 
-ef_main_weapon_type                   = 4
-ef_weapon_type                        = 12
-fire_dispersion_base                  = 1.5
 fire_dispersion_condition_factor      = 5
-fire_distance                         = 150
-fire_point                            = 0.0, 0.162, 0.35
-flame_particles                       = weapons\generic_weapon_riffle
-grenade_launcher_status               = 0
-GroupControlSection                   = spawn_group
-hand_dependence                       = 1
-hit_power                             = 3.0
-hit_type                              = explosion
-holder_fov_modifier                   = 1.00
-holder_range_modifier                 = 2.00
-hud                                   = wpn_rpg7_hud
-inv_grid_height                       = 2
-inv_grid_width                        = 5
-inv_grid_x                            = 26
-inv_grid_y                            = 0
-inv_name                              = st_wpn_rpg7
-inv_name_short                        = st_wpn_rpg7
-inv_weight                            = 6.3
-kill_msg_height                       = 19
-kill_msg_width                        = 73
-kill_msg_x                            = 0
-kill_msg_y                            = 85
-launch_speed                          = 200
-light_color                           = 0.95,0.95,0.3
-light_range                           = 20.0
-light_time                            = 0.75
-light_var_color                       = 0.1
-light_var_range                       = 0.5
-max_radius                            = 1200
-max_zoom_factor                       = 5
-min_radius                            = 50
 misfire_probability                   = 0.0001
-change_misfire_mag                    = false
-orientation                           = 0, 0, 0
+condition_shot_dec                    = 0.005
+
 PDM_disp_base                         = 2.0
 PDM_disp_vel_factor                   = 1.0
 PDM_disp_accel_factor                 = 1.0
 PDM_disp_crouch                       = 1.0
 PDM_disp_crouch_no_acc                = 1.0
-ph_mass                               = 6
-position                              = -0.027, -0.113, 0.0
-rocket_class                          = wpn_rpg7_missile
+
+hit_power                             = 3.0
+hit_type                              = explosion
+fire_distance                         = 150
+bullet_speed                          = 110
 rpm                                   = 700
-rpm_empty_click                       = 150
-scheduled                             = off
-scope_status                          = 0
-scope_texture                         = wpn_crosshair_rpg
+fire_point                            = 0.0, 0.162, 0.35
 shell_point                           = 0.0, 0.0, 0.0
+
+hud                                   = wpn_rpg7_hud
+visual                                = dynamics\weapons\wpn_rpg7\wpn_rpg7
+light_color                           = 0.95,0.95,0.3
+light_range                           = 20.0
+light_var_color                       = 0.1
+light_var_range                       = 0.5
+light_time                            = 0.75
+ph_mass                               = 6
+
+zoom_rotate_time                      = 6.2
+zoom_enabled                          = true
+max_zoom_factor                       = 5
+
+scope_status                          = 0
 silencer_status                       = 0
-single_handed                         = 0
-slot                                  = 1
-smoke_particles                       = weapons\generic_weapon02
-sprint_allowed                        = true
+grenade_launcher_status               = 0
+scope_texture                         = wpn_crosshair_rpg
+
+position                              = -0.027, -0.113, 0.0
+orientation                           = 0, 0, 0
 strap_bone0                           = bip01_spine2
 strap_bone1                           = bip01_spine1
 strap_orientation                     = -15,-189,110
 strap_position                        = -0.28,-0.20,0.25
-visual                                = dynamics\weapons\wpn_rpg7\wpn_rpg7
-zoom_cam_relax_speed                  = 10
-zoom_cam_relax_speed_ai               = 360
-zoom_cam_dispersion                   = 0.4
-zoom_cam_dispersion_inc               = 0.2
-zoom_cam_dispersion_frac              = 1.0
-zoom_cam_max_angle                    = 50.0
-zoom_cam_max_angle_horz               = 50.0
-zoom_cam_step_angle_horz              = 0.5
-zoom_enabled                          = true
-zoom_rotate_time                      = 6.2
-reload_time                           = 3.4
-reload_empty_time                     = 3.4
-class                                 = WP_RPG7
-icon_group                            = 2
 
 snd_shoot                             = weapons\rpg7\rpg7_shoot
-snd_bore                              = weapons\draw_silent
-snd_close                             = weapons\draw_silent
+snd_reload                            = weapons\rpg7\rpg7_reload
+snd_empty                             = weapons\rpg7\rpg7_empty, 0.5
 snd_draw                              = weapons\assault_draw
 snd_holster                           = weapons\hide_r
-snd_empty                             = weapons\rpg7\rpg7_empty, 0.5
-snd_reload                            = weapons\rpg7\rpg7_reload
+snd_close                             = weapons\draw_silent
 
 [wpn_rpg7_hud]:hud_base
-aim_hud_offset_pos_16x9               = -0.0716,-0.012,-0.09
-aim_hud_offset_rot_16x9               = -0.02025,0,0
 aim_hud_offset_pos                    = -0.0716,-0.012,-0.09
 aim_hud_offset_rot                    = -0.02025,0,0
-anm_bore                              = rpg7_idle_aim
+aim_hud_offset_pos_16x9               = -0.0716,-0.012,-0.09
+aim_hud_offset_rot_16x9               = -0.02025,0,0
+
+anm_show                              = rpg7_draw
 anm_hide                              = rpg7_holster
 anm_idle                              = rpg7_idle
 anm_idle_aim                          = rpg7_idle_aim
-anm_idle_moving                       = rpg7_moving
-anm_idle_moving_slow                  = rpg7_moving_slow
-anm_idle_moving_crouch                = rpg7_crouch
 anm_idle_aim_moving                   = rpg7_moving_aim
-anm_reload                            = rpg7_reload, reload
-anm_reload_empty                      = rpg7_reload, reload
-anm_shots                             = rpg7_shoot, shoot
-anm_shoot_aim                         = rpg7_shoot_aim, shoot
-anm_show                              = rpg7_draw
-anm_idle_sprint_start                 = rpg7_sprint_start
+anm_idle_moving                       = rpg7_moving
+anm_idle_moving_crouch                = rpg7_crouch
+anm_idle_moving_slow                  = rpg7_moving_slow
 anm_idle_sprint                       = rpg7_sprint
 anm_idle_sprint_end                   = rpg7_sprint_end
+anm_idle_sprint_start                 = rpg7_sprint_start
+anm_bore                              = rpg7_idle_aim
+anm_shots                             = rpg7_shoot, shoot
+anm_shoot_aim                         = rpg7_shoot_aim, shoot
+anm_reload                            = rpg7_reload, reload
+anm_reload_empty                      = rpg7_reload, reload
 anm_headlamp_on                       = rpg7_flash
 anm_gasmask                           = rpg7_clear
+
 attach_place_idx                      = 0
 fire_bone                             = wpn_body
 fire_point                            = -0.020000,0.001400,0.880171
+
 gl_hud_offset_pos                     = 0,0,0
 gl_hud_offset_rot                     = 0,0,0
+
 hands_position_16x9                   = -0.037550,-0.011450,-0.087675
 hands_orientation_16x9                = -0.053817,-0.676293,-1.050000
 hands_position                        = -0.037550,-0.011450,-0.087675
 hands_orientation                     = -0.053817,-0.676293,-1.050000
-item_orientation                      = 0,0,0
 item_position                         = 0,0,0
+item_orientation                      = 0,0,0
 item_visual                           = dynamics\weapons\wpn_rpg7\wpn_rpg7_hud
-lean_hud_offset_pos                   = 0,0,0
-lean_hud_offset_rot                   = 0,0,0
+
 zoom_hide_crosshair                   = true

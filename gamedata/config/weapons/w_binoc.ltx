@@ -1,160 +1,156 @@
 [wpn_binoc]:identity_immunities,weapon_probability,default_weapon_params
-icon_group											= 2
-
-catch_snd                                          = weapons\generic_draw
-found_snd                                          = weapons\generic_draw
-snd_close                                          = weapons\generic_draw
-snd_draw                                           = weapons\bino_draw
-snd_empty                                          = weapons\generic_draw
-snd_gyro                                           = weapons\generic_draw
-snd_holster                                        = weapons\bino_holster
-snd_reload                                         = weapons\generic_draw
-snd_shoot                                          = weapons\generic_draw
-snd_zoomin                                         = weapons\generic_draw
-snd_zoomout                                        = weapons\generic_draw
-snd_sprint_idle								   	   = weapons\sprint_pistol
-
-vision_present				= false
-vis_frame_speed				= 4
-vis_frame_color				= 0.7,0.7,0.7,1.0	; цвет рамки RGBA (A) Не учитывается
-found_snd					= detectors\DA-2_beep1
-
+GroupControlSection                                = spawn_group
+$spawn                                             = "weapons\binocular"
 $npc                                               = on
 $prefetch                                          = 8
-$spawn                                             = "weapons\binocular"
-ammo_class                                         = ammo_12x76_zhekan_heli
-ammo_current                                       = 0
-ammo_elapsed                                       = 0
-ammo_limit                                         = 0
-ammo_mag_size                                      = 0
-ammo_mag_size_ui                                   = 0
-animation_slot                                     = 13
-use_31_cartridge								   = false
-attach_angle_offset                                = 3.080506,-1.493053,-1.202040
-attach_bone_name                                   = bip01_r_hand
-attach_position_offset                             = 0.080000,0.021273,0.100000
-auto_attach                                        = false
-bullet_speed                                       = 1
-block_bore										   = true
-cam_dispersion                                     = 5.5
-cam_max_angle                                      = 2
-cam_max_angle_horz                                 = 5
-cam_relax_speed                                    = 5.5
-cam_step_angle_horz                                = 0.5
 cform                                              = skeleton
 class                                              = WP_BINOC
-condition_queue_shot_dec                           = 0.00001
-condition_shot_dec                                 = 0.00002
-cost                                               = 800
-description                                        = st_binocular_descr
-direction                                          = 0, 0, 1
-disp_crouch_factor                                 = 0.75
-disp_jump_factor                                   = 3
-disp_vel_factor                                    = 0.1
+min_radius                                         = 100
+max_radius                                         = 150
+
 ef_main_weapon_type                                = 5
 ef_weapon_type                                     = 0
-fire_dispersion_base							   = 0.1
-fire_dispersion_condition_factor                   = 5
-fire_distance                                      = 1
-fire_point                                         = 0.0, 0.133, 0.161
+
+cost                                               = 800
+
+ammo_elapsed                                       = 0
+
+ammo_mag_size                                      = 0
+ammo_mag_size_ui                                   = 0
+
 flame_particles                                    = weapons\generic_weapon05
-grenade_launcher_status                            = 0
-GroupControlSection                                = spawn_group
+smoke_particles                                    = weapons\generic_shoot_00
+shell_particles                                    = weapons\fake_shells
+
+ammo_class                                         = ammo_12x76_zhekan_heli
+
 hand_dependence                                    = 1
-highlight_equipped                                 = true
-hit_impulse                                        = 1
-hit_power                                          = 1
-hit_type                                           = fire_wound
-hud                                                = wpn_binoc_hud
+single_handed                                      = 0
+slot                                               = 4
+animation_slot                                     = 13
+block_bore										   = true
+
+inv_name                                           = st_binocular_name
+inv_name_short                                     = st_binocular_name
+description                                        = st_binocular_descr
+
+inv_weight                                         = 1.0
+icon_group											= 2
 inv_grid_height                                    = 1
 inv_grid_width                                     = 2
 inv_grid_x                                         = 22
 inv_grid_y                                         = 1
-inv_name                                           = st_binocular_name
-inv_name_short                                     = st_binocular_name
-inv_weight                                         = 1.0
-light_color                                        = 0.6,0.5,0.3
-light_range                                        = 3.0
-light_time                                         = 0.07
-light_var_color                                    = 0.1
-light_var_range                                    = 0.5
-max_radius                                         = 150
-min_radius                                         = 100
-misfire_end_condition                              = 0.1
-misfire_end_prob                                   = 0.02
+highlight_equipped                                 = true
+
+fire_dispersion_base							   = 0.1
+cam_relax_speed                                    = 5.5
+cam_dispersion                                     = 5.5
+cam_max_angle                                      = 2
+cam_max_angle_horz                                 = 5
+cam_step_angle_horz                                = 0.5
+fire_dispersion_condition_factor                   = 5
 misfire_probability                                = 0.0001
-misfire_start_condition                            = 0.6
-misfire_start_prob                                 = 0.001
-normal                                             = 0, 1, 0
-orientation                                        = 0, -90, 70
+condition_shot_dec                                 = 0.00002
+use_condition                                      = false
+disp_vel_factor                                    = 0.1
+disp_crouch_factor                                 = 0.75
+disp_jump_factor                                   = 3
+
 PDM_disp_base           						   = 1.0
 PDM_disp_vel_factor     						   = 1.0
 PDM_disp_accel_factor   						   = 1.0
 PDM_disp_crouch         						   = 1.0
 PDM_disp_crouch_no_acc  						   = 1.0
-ph_mass                                            = 1
-position                                           = -0.08 , -0.05 , 0.05
-reload_dof                                         = 0.0, 0.5, 5, 1.7
+
+hit_power                                          = 1
+hit_impulse                                        = 1
+hit_type                                           = fire_wound
+fire_distance                                      = 1
+bullet_speed                                       = 1
 rpm                                                = 1
-rpm_empty_click                                    = 1
-scheduled                                          = off
-scope_dynamic_zoom 								   = true
-scope_status                          = 1
-scope_texture                                      = wpn\wpn_crosshair_bino
-scope_zoom_factor                                  = 13
-shell_dir                                          = 0.0, 0.0, 0.4
-shell_particles                                    = weapons\fake_shells
+fire_point                                         = 0.0, 0.133, 0.161
 shell_point                                        = 0.0, 0.133, 0.047
-show_ammo                                          = false
-silencer_status                                    = 0
-single_handed                                      = 0
-slot                                               = 4
-smoke_particles                                    = weapons\generic_shoot_00
-startup_ammo                                       = 0
-use_condition                                      = false
+
+hud                                                = wpn_binoc_hud
 visual                                             = dynamics\devices\dev_binoculars\dev_binoculars.ogf
-zoom_enabled                                       = true
+show_ammo                                          = false
+light_color                                        = 0.6,0.5,0.3
+light_range                                        = 3.0
+light_var_color                                    = 0.1
+light_var_range                                    = 0.5
+light_time                                         = 0.07
+ph_mass                                            = 1
+vis_frame_color				= 0.7,0.7,0.7,1.0	; цвет рамки RGBA (A) Не учитывается
+vis_frame_speed				= 4
+vision_present				= false
+
+reload_dof                                         = 0.0, 0.5, 5, 1.7
 zoom_rotate_time                                   = 7.5
-scope_zoom_steps                                   = 6
+zoom_enabled                                       = true
+scope_dynamic_zoom 								   = true
+
+scope_status                          = 1
+silencer_status                                    = 0
+grenade_launcher_status                            = 0
+scope_zoom_factor                                  = 13
+scope_texture                                      = wpn\wpn_crosshair_bino
+
+attach_position_offset                             = 0.080000,0.021273,0.100000
+attach_angle_offset                                = 3.080506,-1.493053,-1.202040
+attach_bone_name                                   = bip01_r_hand
+auto_attach                                        = false
+position                                           = -0.08 , -0.05 , 0.05
+orientation                                        = 0, -90, 70
+
+snd_shoot                                          = weapons\generic_draw
+snd_reload                                         = weapons\generic_draw
+snd_empty                                          = weapons\generic_draw
+snd_draw                                           = weapons\bino_draw
+snd_holster                                        = weapons\bino_holster
+snd_close                                          = weapons\generic_draw
+snd_zoomin                                         = weapons\generic_draw
+snd_zoomout                                        = weapons\generic_draw
+snd_gyro                                           = weapons\generic_draw
+
+found_snd                                          = weapons\generic_draw
+found_snd					= detectors\DA-2_beep1
 
 ;sprint_start_time 						 		   = 0.035
 
-
 [wpn_binoc_hud]:hud_base
 aim_hud_offset_pos								   = -0.0700,0.0190,0.0000
-aim_hud_offset_pos_16x9							   = 0,-0.01,-0.045
 aim_hud_offset_rot								   = 0,0,0
+aim_hud_offset_pos_16x9							   = 0,-0.01,-0.045
 aim_hud_offset_rot_16x9							   = 0,0,0
+
 anm_show										   = binoculars_draw
 anm_hide										   = binoculars_holster
 anm_idle										   = binoculars_idle
 anm_idle_aim									   = binoculars_idle
-anm_idle_moving_slow							   = binoculars_idle_moving_slow
 anm_idle_moving									   = binoculars_idle_moving
 anm_idle_moving_crouch							   = binoculars_idle_moving_crouch
-anm_bore										   = binoculars_idle
-
-anm_switch_device                                  = binoculars_flash
-anm_gasmask                                        = binoculars_clear
-
+anm_idle_moving_slow							   = binoculars_idle_moving_slow
 anm_sprint_start         				           = binoculars_sprint_start
 anm_sprint_idle         				           = binoculars_sprint
 anm_sprint_end         					           = binoculars_sprint_end
+anm_bore										   = binoculars_idle
+anm_switch_device                                  = binoculars_flash
+anm_gasmask                                        = binoculars_clear
 
 attach_place_idx                                   = 0
 fire_bone                                          = wpn_body
 fire_point                                         = 0,0,0
+
 gl_hud_offset_pos                                  = 0,0,0
 gl_hud_offset_rot                                  = 0,0,0
-hands_position              					   = 0.000000,-0.080000,0.000000
+
 hands_position_16x9         					   = 0.000000,-0.080000,0.000000
-hands_orientation           					   = 0,0,0
 hands_orientation_16x9      					   = 0,0,0
-item_orientation                                   = 0,0,0
+hands_position              					   = 0.000000,-0.080000,0.000000
+hands_orientation           					   = 0,0,0
 item_position                                      = 0,0,0
+item_orientation                                   = 0,0,0
 item_visual                                        = dynamics\devices\dev_binoculars\dev_binoculars_hud
-lean_hud_offset_pos                                = 0,0,0
-lean_hud_offset_rot                                = 0,0,0
-zoom_hide_crosshair                                = true
 
 identity_blend_scale 							   = true
+zoom_hide_crosshair                                = true

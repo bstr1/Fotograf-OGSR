@@ -1,293 +1,310 @@
 ;;;;;;;;;;;;;;;;;;;;;;;; wpn_saiga12 ;;;;;;;;;;;;;;;;;;;;;;;;
 [wpn_saiga12]:weapon_immunities,weapon_probability,default_weapon_params
-ammo_class                            = ammo_12x70_buck, ammo_12x76_zhekan
-ammo_current                          = 48
-ammo_elapsed                          = 0
-ammo_limit                            = 56
-ammo_mag_size                         = 5
-animation_slot                        = 2
-bullet_speed                          = 250
-cam_relax_speed                       = 7.0
-cam_relax_speed_ai                    = 120.75
-cam_dispersion                        = 2.7
-cam_dispersion_inc                    = 2.7
-cam_dispersion_frac                   = 1.3
-cam_max_angle                         = 30
-cam_max_angle_horz                    = 10
-cam_step_angle_horz                   = 1.7
+GroupControlSection                   = spawn_group
 cform                                 = skeleton
-condition_shot_dec                    = 0.00055
-control_inertion_factor               = 1.2f
-cost                                  = 7500
-description                           = st_wpn_saiga12_descr
+class                                 = WP_LR300
+min_radius                            = 0
+max_radius                            = 30
+
 ef_main_weapon_type                   = 1
 ef_weapon_type                        = 9
-fire_dispersion_base                  = 0.46
-fire_dispersion_condition_factor      = 2.5
-fire_modes                            = 1
-fire_point                            = 0.0, 0.133, 0.686
-fire_point2                           = 0.0, 0.103, 0.686
-flame_particles                       = weapons\new_effects\shtg_bm16
-fire_distance                         = 50
-grenade_launcher_status               = 0
-GroupControlSection                   = spawn_group
-hand_dependence                       = 1
-hit_type                              = fire_wound
-holder_fov_modifier                   = 1.0
+
 holder_range_modifier                 = 1.0
-grenade_class                         = ammo_vog-25
+holder_fov_modifier                   = 1.0
+
+cost                                  = 7500
+
+ammo_elapsed                          = 0
+
+ammo_mag_size                         = 5
+fire_modes                            = 1
+
+flame_particles                       = weapons\new_effects\shtg_bm16
+smoke_particles                       = weapons\generic_weapon_riffle
 grenade_flame_particles               = weapons\generic_weapon_svu
-hud                                   = wpn_saiga12_hud
+shell_particles                       = weapons\12ga
+silencer_smoke_particles              = weapons\generic_weapon_svu
+
+ammo_class                            = ammo_12x70_buck, ammo_12x76_zhekan
+grenade_class                         = ammo_vog-25
+launch_speed                          = 0
+
+hand_dependence                       = 1
+single_handed                         = 0
+slot                                  = 1
+animation_slot                        = 2
+
+inv_name                              = st_wpn_saiga12
+inv_name_short                        = st_wpn_saiga12
+description                           = st_wpn_saiga12_descr
+
+inv_weight                            = 3.5
+icon_group                            = 2
 inv_grid_height                       = 2
 inv_grid_width                        = 5
 inv_grid_x                            = 36
 inv_grid_y                            = 12
-inv_name                              = st_wpn_saiga12
-inv_name_short                        = st_wpn_saiga12
-inv_weight                            = 3.5
-kill_msg_height                       = 20
-kill_msg_width                        = 80
-kill_msg_x                            = 91
-kill_msg_y                            = 104
-light_color                           = 0.6,0.5,0.3
-light_disabled                        = false
-light_range                           = 7.0
-light_time                            = 0.07
-light_var_color                       = 0.1
-light_var_range                       = 0.7
-launch_speed                          = 0
-min_radius                            = 0
-max_radius                            = 30
+
+fire_dispersion_base                  = 0.46
+control_inertion_factor               = 1.2f
+cam_relax_speed                       = 7.0
+cam_relax_speed_ai                    = 120.75
+cam_dispersion                        = 2.7
+cam_dispersion_inc                    = 2.7
+cam_max_angle                         = 30
+cam_max_angle_horz                    = 10
+cam_step_angle_horz                   = 1.7
+fire_dispersion_condition_factor      = 2.5
 misfire_probability                   = 0.005
+condition_shot_dec                    = 0.00055
+
 PDM_disp_base                         = 2.0
 PDM_disp_vel_factor                   = 3.0
 PDM_disp_accel_factor                 = 5.0
 PDM_disp_crouch                       = 1.0
 PDM_disp_crouch_no_acc                = 1.0
+
+hit_type                              = fire_wound
+fire_distance                         = 50
+bullet_speed                          = 250
+rpm                                   = 250
+use_aim_bullet                        = false
+fire_point                            = 0.0, 0.133, 0.686
+fire_point2                           = 0.0, 0.103, 0.686
+shell_point                           = 0.0, 0.138, 0.07
+
+hud                                   = wpn_saiga12_hud
+visual                                = dynamics\weapons\wpn_saiga12\wpn_saiga12.ogf
+light_color                           = 0.6,0.5,0.3
+light_range                           = 7.0
+light_var_color                       = 0.1
+light_var_range                       = 0.7
+light_time                            = 0.07
+light_disabled                        = false
 ph_mass                               = 4
+
+zoom_rotate_time                      = 6.5
+zoom_enabled                          = true
+
+scope_status                          = 2
+silencer_status                       = 2
+grenade_launcher_status               = 0
+scope_name                            = okp
+scope_names                           = okp, ekp, rakurs
+silencer_name                         = sil_gexagon
+scope_respawn_ekp                     = wpn_saiga12_ekp
+scope_respawn_okp                     = wpn_saiga12_okp
+scope_respawn_rakurs                  = wpn_saiga12_rakurs
+
+silencer_x                            = 221
+silencer_y                            = 18
+
 position                              = -0.026,-0.213,0.0
 orientation                           = 0,0,0
-rpm                                   = 250
-rpm_empty_click                       = 200
-scheduled                             = off
-shell_particles                       = weapons\12ga
-shell_point                           = 0.0, 0.138, 0.07
-single_handed                         = 0
-slot                                  = 1
-smoke_particles                       = weapons\generic_weapon_riffle
-startup_ammo                          = 90
 strap_bone0                           = bip01_spine2
 strap_bone1                           = bip01_spine1
 strap_orientation                     = -15,-9,110
 strap_position                        = -0.36,-0.09,0.25
-scope_status                          = 2
+
+snd_silncer_shot                      = weapons\saiga\mono\saiga_silencer_mono
+snd_shoot                             = weapons\saiga\saiga_muzzle_stereo
+snd_reload                            = weapons\saiga\saiga_reload
+snd_reload_empty                      = weapons\saiga\saiga_reload_empty
+snd_reload_jammed                     = weapons\saiga\saiga_misfire
+snd_empty                             = weapons\ak_empty, 0.5
+snd_draw                              = weapons\assault_draw
+snd_holster                           = weapons\hide_acgc
+snd_close                             = weapons\draw_silent
+snd_shoot1                            = weapons\saiga\saiga_muzzle_stereo1
+
 silencer_light_color                  = 0.6,0.5,0.3
 silencer_light_range                  = 0.01
 silencer_light_time                   = 0.2
 silencer_light_var_color              = 0.05
 silencer_light_var_range              = 0.5
-silencer_name                         = sil_gexagon
-silencer_smoke_particles              = weapons\generic_weapon_svu
-silencer_status                       = 2
-silencer_x                            = 221
-silencer_y                            = 18
-use_aim_bullet                        = false
-visual                                = dynamics\weapons\wpn_saiga12\wpn_saiga12.ogf
-zoom_cam_relax_speed                  = 10
-zoom_cam_relax_speed_ai               = 360
-zoom_cam_dispersion                   = 3.4
-zoom_cam_dispersion_inc               = 1.6
-zoom_cam_dispersion_frac              = 1.1
-zoom_cam_max_angle                    = 50.0
-zoom_cam_max_angle_horz               = 50.0
-zoom_cam_step_angle_horz              = 1.55
-zoom_enabled                          = true
-zoom_rotate_time                      = 6.5
-reload_time                           = 1.8
-reload_empty_time                     = 2.7
-use_mag_scheme                        = true
-mag_bone_type_0                       = bullet_red, shell_red
-mag_bone_type_1                       = bullet_blue, shell_blue
-ammochange_time                       = 1.0
-class                                 = WP_LR300
-icon_group                            = 2
-scope_name                            = okp
-scope_names                           = okp, ekp, rakurs
-scope_respawn_okp                     = wpn_saiga12_okp
-scope_respawn_ekp                     = wpn_saiga12_ekp
-scope_respawn_rakurs                  = wpn_saiga12_rakurs
-
-snd_shoot                             = weapons\saiga\saiga_muzzle_stereo
-snd_shoot1                            = weapons\saiga\saiga_muzzle_stereo1
-snd_silncer_shot                      = weapons\saiga\mono\saiga_silencer_mono
-snd_bore                              = weapons\draw_silent
-snd_close                             = weapons\draw_silent
-snd_draw                              = weapons\assault_draw
-snd_holster                           = weapons\hide_acgc
-snd_empty                             = weapons\ak_empty, 0.5
-snd_reload                            = weapons\saiga\saiga_reload
-snd_reload_empty                      = weapons\saiga\saiga_reload_empty
-snd_reload_jammed                     = weapons\saiga\saiga_misfire
 
 [wpn_saiga12_hud]:hud_base
-aim_hud_offset_pos_16x9               = -0.064500,0.029500,-0.09
 aim_hud_offset_pos                    = -0.064500,0.029500,-0.09
-aim_hud_offset_rot_16x9               = 0.000000,0.000000,0.000000
 aim_hud_offset_rot                    = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9               = -0.064500,0.029500,-0.09
+aim_hud_offset_rot_16x9               = 0.000000,0.000000,0.000000
+
 anm_show                              = saiga12_draw
 anm_hide                              = saiga12_hide
 anm_idle                              = saiga12_idle
-anm_idle_moving_slow                  = saiga12_walk_slow
+anm_idle_aim                          = saiga12_idle_aim
+anm_idle_aim_moving                   = saiga12_aim_walk
 anm_idle_moving                       = saiga12_walk
+anm_idle_moving_crouch                = saiga12_walk_down
+anm_idle_moving_slow                  = saiga12_walk_slow
+anm_idle_sprint                       = saiga12_sprint
+anm_idle_sprint_end                   = saiga12_sprint_end
+anm_idle_sprint_start                 = saiga12_sprint_start
+anm_bore                              = saiga12_idle_aim
 anm_shots                             = saiga12_shoot, shoot
 anm_shoot_aim                         = saiga12_aim_shoot, shoot
 anm_reload                            = saiga12_reload, reload
 anm_reload_empty                      = saiga12_reload_empty, reload_empty
 anm_reload_jammed                     = saiga12_revival, misfire
-anm_idle_moving_crouch                = saiga12_walk_down
-anm_idle_aim                          = saiga12_idle_aim
-anm_idle_aim_moving                   = saiga12_aim_walk
-anm_bore                              = saiga12_idle_aim
-anm_idle_sprint_start                 = saiga12_sprint_start
-anm_idle_sprint                       = saiga12_sprint
-anm_idle_sprint_end                   = saiga12_sprint_end
 anm_headlamp_on                       = saiga12_flash
 anm_gasmask                           = saiga12_clear
+
 attach_place_idx                      = 0
 fire_bone                             = muzzle
 fire_bone2                            = muzzle
 fire_point                            = 0,0.004400,0.17
 fire_point2                           = 0.0,0.0,0.0
+
 hands_position_16x9                   = -0.011100,-0.065400,0.065000
 hands_orientation_16x9                = 0.000000,0.000000,0.000000
 hands_position                        = -0.011100,-0.065400,0.065000
 hands_orientation                     = 0.000000,0.000000,0.000000
-item_orientation                      = 0.0,0.0,0.0
 item_position                         = 0.0,0.0,0.0
+item_orientation                      = 0.0,0.0,0.0
 item_visual                           = dynamics\weapons\wpn_saiga12\wpn_saiga12_hud.ogf
+
 shell_bone                            = bullet
-shell_dir                             = 0.0, 1.0, 0.0
 shell_point                           = 0.02,0.025,0.0
+
 zoom_hide_crosshair                   = true
 
 [wpn_saiga12_ekp]:wpn_saiga12
 hud                                   = wpn_saiga12_ekp_hud
 visual                                = dynamics\weapons\wpn_saiga12\wpn_saiga12_ekp.ogf
-scope_x                               = 65
-scope_y                               = 6
+
 scope_name                            = ekp
 scope_respawn                         = wpn_saiga12
 
+scope_x                               = 65
+scope_y                               = 6
+
 [wpn_saiga12_ekp_hud]:wpn_saiga12_hud
-item_visual                           = dynamics\weapons\wpn_saiga12\wpn_saiga12_ekp_hud.ogf
-aim_hud_offset_pos_16x9               = -0.062600,-0.010500,-0.07
 aim_hud_offset_pos                    = -0.062600,-0.010500,-0.07
+aim_hud_offset_pos_16x9               = -0.062600,-0.010500,-0.07
+
+item_visual                           = dynamics\weapons\wpn_saiga12\wpn_saiga12_ekp_hud.ogf
 
 [wpn_saiga12_okp]:wpn_saiga12
 hud                                   = wpn_saiga12_okp_hud
 visual                                = dynamics\weapons\wpn_saiga12\wpn_saiga12_okp.ogf
-scope_x                               = 73
-scope_y                               = 6
+
 scope_name                            = okp
 scope_respawn                         = wpn_saiga12
 
+scope_x                               = 73
+scope_y                               = 6
+
 [wpn_saiga12_okp_hud]:wpn_saiga12_hud
-item_visual                           = dynamics\weapons\wpn_saiga12\wpn_saiga12_okp_hud.ogf
-aim_hud_offset_pos_16x9               = -0.059000,0.007500,-0.07
 aim_hud_offset_pos                    = -0.059000,0.007500,-0.07
+aim_hud_offset_pos_16x9               = -0.059000,0.007500,-0.07
+
+item_visual                           = dynamics\weapons\wpn_saiga12\wpn_saiga12_okp_hud.ogf
 
 [wpn_saiga12_rakurs]:wpn_saiga12
 hud                                   = wpn_saiga12_rakurs_hud
 visual                                = dynamics\weapons\wpn_saiga12\wpn_saiga12_rakurs.ogf
-scope_x                               = 67
-scope_y                               = 3
+
 scope_name                            = rakurs
 scope_respawn                         = wpn_saiga12
 
+scope_x                               = 67
+scope_y                               = 3
+
 [wpn_saiga12_rakurs_hud]:wpn_saiga12_hud
-item_visual                           = dynamics\weapons\wpn_saiga12\wpn_saiga12_rakurs_hud.ogf
-aim_hud_offset_pos_16x9               = -0.061000,0.000000,-0.07
 aim_hud_offset_pos                    = -0.061000,0.000000,-0.07
+aim_hud_offset_pos_16x9               = -0.061000,0.000000,-0.07
+
+item_visual                           = dynamics\weapons\wpn_saiga12\wpn_saiga12_rakurs_hud.ogf
 
 [wpn_saiga12m]:wpn_saiga12
-scope_respawn_okp                     = wpn_saiga12m_okp
-scope_respawn_ekp                     = wpn_saiga12m_ekp
-scope_respawn_rakurs                  = wpn_saiga12m_rakurs
-ammo_mag_size                         = 10
-cam_relax_speed                       = 10
-cam_relax_speed_ai                    = 120.75
-cam_dispersion                        = 3.7
-cam_dispersion_inc                    = 1.5
-cam_dispersion_frac                   = 1.1
-cam_max_angle                         = 50.0
-cam_max_angle_horz                    = 50.0
-cam_step_angle_horz                   = 2.25
 cost                                  = 60000
-description                           = st_wpn_saiga12m_descr
-flame_particles                       = weapons\new_effects\akmsl_pkm
-fire_distance                         = 155
+
+ammo_mag_size                         = 10
 fire_modes                            = 1, -1
-fire_dispersion_base                  = 0.3
+
+flame_particles                       = weapons\new_effects\akmsl_pkm
+smoke_particles                       = weapons\generic_weapon_machine_gun
+
+inv_name                              = st_wpn_saiga12m
+inv_name_short                        = st_wpn_saiga12m
+description                           = st_wpn_saiga12m_descr
+
+inv_weight                            = 4.1
 inv_grid_height                       = 2
 inv_grid_width                        = 6
 inv_grid_x                            = 36
 inv_grid_y                            = 20
-inv_name                              = st_wpn_saiga12m
-inv_name_short                        = st_wpn_saiga12m
-inv_weight                            = 4.1
-silencer_x                            = 234
-silencer_y                            = 3
-rpm                                   = 320
-smoke_particles                       = weapons\generic_weapon_machine_gun
+
+fire_dispersion_base                  = 0.3
+cam_relax_speed                       = 10
+cam_relax_speed_ai                    = 120.75
+cam_dispersion                        = 3.7
+cam_dispersion_inc                    = 1.5
+cam_max_angle                         = 50.0
+cam_max_angle_horz                    = 50.0
+cam_step_angle_horz                   = 2.25
+
 PDM_disp_base                         = 1.04
 PDM_disp_vel_factor                   = 1.9
 PDM_disp_accel_factor                 = 1.9
 PDM_disp_crouch                       = 1.0
 PDM_disp_crouch_no_acc                = 1.0
-zoom_cam_relax_speed                  = 8
-zoom_cam_relax_speed_ai               = 360
-zoom_cam_dispersion                   = 3.2
-zoom_cam_dispersion_inc               = 1.4
-zoom_cam_dispersion_frac              = 1.0
-zoom_cam_max_angle                    = 50.0
-zoom_cam_max_angle_horz               = 50.0
-zoom_cam_step_angle_horz              = 1.4
+
+fire_distance                         = 155
+rpm                                   = 320
+
 hud                                   = wpn_saiga12m_hud
 visual                                = dynamics\weapons\wpn_saiga12\wpn_saiga12m.ogf
 
+scope_respawn_ekp                     = wpn_saiga12m_ekp
+scope_respawn_okp                     = wpn_saiga12m_okp
+scope_respawn_rakurs                  = wpn_saiga12m_rakurs
+
+silencer_x                            = 234
+silencer_y                            = 3
+
 [wpn_saiga12m_hud]:wpn_saiga12_hud
-fire_point                            = 0,0.004400,0.27
 anm_firemode                          = saiga12_firemode
+
+fire_point                            = 0,0.004400,0.27
+
 item_visual                           = dynamics\weapons\wpn_saiga12\wpn_saiga12m_hud.ogf
+
 [wpn_saiga12m_okp]:wpn_saiga12m
+hud                                   = wpn_saiga12m_okp_hud
+
+scope_name                            = okp
+scope_respawn                         = wpn_saiga12m
+
 scope_x                               = 73
 scope_y                               = 6
-scope_name                            = okp
-hud                                   = wpn_saiga12m_okp_hud
-scope_respawn                         = wpn_saiga12m
 
 [wpn_saiga12m_okp_hud]:wpn_saiga12m_hud
-aim_hud_offset_pos_16x9               = -0.059000,0.007500,-0.07
 aim_hud_offset_pos                    = -0.059000,0.007500,-0.07
+aim_hud_offset_pos_16x9               = -0.059000,0.007500,-0.07
 
 [wpn_saiga12m_ekp]:wpn_saiga12m
+hud                                   = wpn_saiga12m_ekp_hud
+
+scope_name                            = ekp
+scope_respawn                         = wpn_saiga12m
+
 scope_x                               = 65
 scope_y                               = 6
-scope_name                            = ekp
-hud                                   = wpn_saiga12m_ekp_hud
-scope_respawn                         = wpn_saiga12m
 
 [wpn_saiga12m_ekp_hud]:wpn_saiga12m_hud
-aim_hud_offset_pos_16x9               = -0.062600,-0.010500,-0.07
 aim_hud_offset_pos                    = -0.062600,-0.010500,-0.07
+aim_hud_offset_pos_16x9               = -0.062600,-0.010500,-0.07
 
 [wpn_saiga12m_rakurs]:wpn_saiga12m
-scope_x                               = 67
-scope_y                               = 3
-scope_name                            = rakurs
 hud                                   = wpn_saiga12m_rakurs_hud
+
+scope_name                            = rakurs
 scope_respawn                         = wpn_saiga12m
 
+scope_x                               = 67
+scope_y                               = 3
+
 [wpn_saiga12m_rakurs_hud]:wpn_saiga12m_hud
-aim_hud_offset_pos_16x9               = -0.061000,0.000000,-0.07
 aim_hud_offset_pos                    = -0.061000,0.000000,-0.07
+aim_hud_offset_pos_16x9               = -0.061000,0.000000,-0.07

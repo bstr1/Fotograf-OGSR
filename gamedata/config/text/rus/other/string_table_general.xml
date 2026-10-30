@@ -417,6 +417,9 @@
 <string id="descr_knife_distance">
     <text>Дистанция удара</text>
 </string>
+<string id="descr_knife_power">
+    <text>Сила удара (наносимый урон)</text>
+</string>
 <string id="descr_mag_size">
     <text>Вместимость</text>
 </string>
@@ -431,6 +434,9 @@
 </string>
 <string id="descr_rate">
     <text>Скорострельность</text>
+<string id="descr_resource">
+    <text>Ресурс</text>
+</string>
 </string>
 <string id="descr_rub">
     <text>Рублей</text>

@@ -1,297 +1,332 @@
 ;;;;;;;;;;;;;;;;;;;;;;;; wpn_ak74u ;;;;;;;;;;;;;;;;;;;;;;;;
 [wpn_ak74u]:weapon_immunities,weapon_probability,default_weapon_params
-ammo_class                            = ammo_5.45x39_fmj,ammo_5.45x39_ap
-ammo_current                          = 180
-ammo_elapsed                          = 30
-ammo_limit                            = 210
-ammo_mag_size                         = 30
-animation_slot                        = 2
-bullet_speed                          = 600
-cam_relax_speed                       = 4.0
-cam_relax_speed_ai                    = 120.75
-cam_dispersion                        = 0.35
-cam_dispersion_inc                    = 0.5
-cam_dispersion_frac                   = 1.1
-cam_max_angle                         = 25
-cam_max_angle_horz                    = 12.5
-cam_step_angle_horz                   = 1.5
+GroupControlSection                   = spawn_group
 cform                                 = skeleton
-condition_shot_dec                    = 0.0002
-control_inertion_factor               = 1.1f
-cost                                  = 1500
-description                           = st_wpn_ak74u_descr
+class                                 = WP_LR300
+min_radius                            = 0
+max_radius                            = 370
+
 ef_main_weapon_type                   = 2
 ef_weapon_type                        = 6
-fire_dispersion_base                  = 0.33
-fire_dispersion_condition_factor      = 2.5
-fire_distance                         = 110
-fire_modes                            = 1, -1
-fire_point                            = 0.0, 0.262, 0.447
-fire_point2                           = 0.0, 0.262, 0.547
-flame_particles                       = weapons\new_effects\aksu
-grenade_class                         = ammo_vog-25
-grenade_flame_particles               = weapons\generic_weapon01
-grenade_launcher_name                 = 
-grenade_launcher_status               = 0
-grenade_launcher_x                    = 
-grenade_launcher_y                    = 
-GroupControlSection                   = spawn_group
-hand_dependence                       = 1
-hit_type                              = fire_wound
-hit_power                             = 0.9
-holder_fov_modifier                   = 1.0
+
 holder_range_modifier                 = 1.0
-hud                                   = wpn_ak74u_hud
+holder_fov_modifier                   = 1.0
+
+cost                                  = 1500
+
+ammo_elapsed                          = 30
+
+ammo_mag_size                         = 30
+fire_modes                            = 1, -1
+
+flame_particles                       = weapons\new_effects\aksu
+smoke_particles                       = weapons\generic_weapon_svu
+grenade_flame_particles               = weapons\generic_weapon01
+shell_particles                       = weapons\545x39
+silencer_smoke_particles              = weapons\generic_weapon_svu
+
+ammo_class                            = ammo_5.45x39_fmj,ammo_5.45x39_ap
+grenade_class                         = ammo_vog-25
+launch_speed                          = 0
+
+hand_dependence                       = 1
+single_handed                         = 0
+slot                                  = 1
+animation_slot                        = 2
+
+inv_name                              = st_wpn_ak74u
+inv_name_short                        = st_wpn_ak74u
+description                           = st_wpn_ak74u_descr
+
+inv_weight                            = 2.7
+icon_group                            = 2
 inv_grid_height                       = 2
 inv_grid_width                        = 4
 inv_grid_x                            = 36
 inv_grid_y                            = 0
-inv_name                              = st_wpn_ak74u
-inv_name_short                        = st_wpn_ak74u
-inv_weight                            = 2.7
-kill_msg_height                       = 30
-kill_msg_width                        = 69
-kill_msg_x                            = 0
-kill_msg_y                            = 123
-launch_speed                          = 0
-light_color                           = 0.6,0.5,0.3
-light_disabled                        = false
-light_range                           = 7.0
-light_time                            = 0.07
-light_var_color                       = 0.1
-light_var_range                       = 0.7
-max_radius                            = 370
-min_radius                            = 0
+
+fire_dispersion_base                  = 0.33
+control_inertion_factor               = 1.1f
+cam_relax_speed                       = 4.0
+cam_relax_speed_ai                    = 120.75
+cam_dispersion                        = 0.35
+cam_dispersion_inc                    = 0.5
+cam_max_angle                         = 25
+cam_max_angle_horz                    = 12.5
+cam_step_angle_horz                   = 1.5
+fire_dispersion_condition_factor      = 2.5
 misfire_probability                   = 0.0025
-orientation                           = 0,0,0
+condition_shot_dec                    = 0.0002
+
 PDM_disp_base                         = 2.0
 PDM_disp_vel_factor                   = 2.5
 PDM_disp_accel_factor                 = 4.0
 PDM_disp_crouch                       = 1.0
 PDM_disp_crouch_no_acc                = 1.0
-ph_mass                               = 3
-position                              = -0.026, -0.175, 0.0
+
+hit_power                             = 0.9
+hit_type                              = fire_wound
+fire_distance                         = 110
+bullet_speed                          = 600
 rpm                                   = 660
-rpm_empty_click                       = 200
-scheduled                             = off
+use_aim_bullet                        = false
+time_to_aim                           = 1.0
+fire_point                            = 0.0, 0.262, 0.447
+fire_point2                           = 0.0, 0.262, 0.547
+shell_bone                            = wpn_body
+shell_point                           = 0.0, 0.262, 0.1896
+
+hud                                   = wpn_ak74u_hud
+visual                                = dynamics\weapons\wpn_ak74u\wpn_ak74u.ogf
+light_color                           = 0.6,0.5,0.3
+light_range                           = 7.0
+light_var_color                       = 0.1
+light_var_range                       = 0.7
+light_time                            = 0.07
+light_disabled                        = false
+ph_mass                               = 3
+
+zoom_rotate_time                      = 6.5
+zoom_enabled                          = true
+
 scope_status                          = 2
+silencer_status                       = 2
+grenade_launcher_status               = 0
+scope_name                            = okp
+scope_names                           = okp, ekp, rakurs, 1p78
+silencer_name                         = sil_pbs-4
+grenade_launcher_name                 = 
+scope_respawn_1p78                    = wpn_ak74u_1p78
+scope_respawn_ekp                     = wpn_ak74u_ekp
+scope_respawn_okp                     = wpn_ak74u_okp
+scope_respawn_rakurs                  = wpn_ak74u_rakurs
+
 scope_x                               = 23
 scope_y                               = 7
-shell_particles                       = weapons\545x39
-shell_point                           = 0.0, 0.262, 0.1896
-shell_dir                             = 0,1,0
-shell_bone                            = wpn_body
+silencer_x                            = 172
+silencer_y                            = 15
+grenade_launcher_x                    = 
+grenade_launcher_y                    = 
+
+position                              = -0.026, -0.175, 0.0
+orientation                           = 0,0,0
+strap_bone0                           = bip01_spine2
+strap_bone1                           = bip01_spine1
+strap_orientation                     = -10,-5,10
+strap_position                        = -0.17,-0.43,0.2
+
+snd_silncer_shot                      = weapons\ak74u\ak74u_silencer_mono
+snd_shoot                             = weapons\ak74u\ak74u_muzzle_mono
+snd_reload                            = weapons\ak74u\ak74u_reload
+snd_reload_empty                      = weapons\ak74u\ak74u_reload_empty
+snd_reload_jammed                     = weapons\ak74u\ak74u_misfire
+snd_empty                             = weapons\ak_empty, 0.5
+snd_draw                              = weapons\assault_draw
+snd_holster                           = weapons\hide_acgc
+snd_close                             = weapons\draw_silent
+snd_shoot1                            = weapons\ak74u\ak74u_muzzle_mono1
+
 silencer_light_color                  = 0.6,0.5,0.3
 silencer_light_range                  = 0.01
 silencer_light_time                   = 0.2
 silencer_light_var_color              = 0.05
 silencer_light_var_range              = 0.5
-silencer_name                         = sil_pbs-4
-silencer_smoke_particles              = weapons\generic_weapon_svu
-silencer_status                       = 2
-silencer_x                            = 172
-silencer_y                            = 15
-single_handed                         = 0
-slot                                  = 1
-smoke_particles                       = weapons\generic_weapon_svu
-startup_ammo                          = 90
-strap_bone0                           = bip01_spine2
-strap_bone1                           = bip01_spine1
-strap_position                        = -0.17,-0.43,0.2
-strap_orientation                     = -10,-5,10
-time_to_aim                           = 1.0
-use_aim_bullet                        = false
-visual                                = dynamics\weapons\wpn_ak74u\wpn_ak74u.ogf
-zoom_cam_relax_speed                  = 10
-zoom_cam_relax_speed_ai               = 360
-zoom_cam_dispersion                   = 0.8
-zoom_cam_dispersion_inc               = 0.6
-zoom_cam_dispersion_frac              = 0.9
-zoom_cam_max_angle                    = 50.0
-zoom_cam_max_angle_horz               = 50.0
-zoom_cam_step_angle_horz              = 1.6
-zoom_enabled                          = true
-zoom_rotate_time                      = 6.5
-reload_time                           = 1.8
-reload_empty_time                     = 2.7
-class                                 = WP_LR300
-icon_group                            = 2
-scope_name                            = okp
-scope_names                           = okp, ekp, rakurs, 1p78
-scope_respawn_okp                     = wpn_ak74u_okp
-scope_respawn_ekp                     = wpn_ak74u_ekp
-scope_respawn_rakurs                  = wpn_ak74u_rakurs
-scope_respawn_1p78                    = wpn_ak74u_1p78
-
-snd_shoot                             = weapons\ak74u\ak74u_muzzle_mono
-snd_shoot1                            = weapons\ak74u\ak74u_muzzle_mono1
-snd_silncer_shot                      = weapons\ak74u\ak74u_silencer_mono
-snd_bore                              = weapons\draw_silent
-snd_close                             = weapons\draw_silent
-snd_draw                              = weapons\assault_draw
-snd_holster                           = weapons\hide_acgc
-snd_empty                             = weapons\ak_empty, 0.5
-snd_reload                            = weapons\ak74u\ak74u_reload
-snd_reload_empty                      = weapons\ak74u\ak74u_reload_empty
-snd_reload_jammed                     = weapons\ak74u\ak74u_misfire
 
 [wpn_ak74u_hud]:hud_base
-aim_hud_offset_pos_16x9               = -0.064000,0.020000,-0.09
 aim_hud_offset_pos                    = -0.064000,0.020000,-0.09
-aim_hud_offset_rot_16x9               = 0.000000,0.000000,0.000000
 aim_hud_offset_rot                    = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9               = -0.064000,0.020000,-0.09
+aim_hud_offset_rot_16x9               = 0.000000,0.000000,0.000000
+
 anm_show                              = aksu_draw
 anm_hide                              = aksu_hide
 anm_idle                              = aksu_idle
-anm_idle_moving_slow                  = aksu_walk_slow
+anm_idle_aim                          = aksu_idle_aim
+anm_idle_aim_moving                   = aksu_aim_walk
 anm_idle_moving                       = aksu_walk
+anm_idle_moving_crouch                = aksu_walk_down
+anm_idle_moving_slow                  = aksu_walk_slow
+anm_idle_sprint                       = aksu_sprint
+anm_idle_sprint_end                   = aksu_sprint_end
+anm_idle_sprint_start                 = aksu_sprint_start
+anm_bore                              = aksu_idle_aim
 anm_shots                             = aksu_shoot, shoot
 anm_shoot_aim                         = aksu_aim_shoot, shoot
 anm_reload                            = aksu_reload, reload
 anm_reload_empty                      = aksu_reload_empty, reload_empty
 anm_reload_jammed                     = aksu_revival, misfire
-anm_idle_moving_crouch                = aksu_walk_down
-anm_idle_aim                          = aksu_idle_aim
-anm_idle_aim_moving                   = aksu_aim_walk
-anm_bore                              = aksu_idle_aim
 anm_firemode                          = aksu_firemode
-anm_idle_sprint_start                 = aksu_sprint_start
-anm_idle_sprint                       = aksu_sprint
-anm_idle_sprint_end                   = aksu_sprint_end
 anm_headlamp_on                       = aksu_flash
 anm_gasmask                           = aksu_clear
+
 attach_place_idx                      = 0
 fire_bone                             = muzzle
 fire_bone2                            = muzzle
 fire_point                            = 0.000000,0.000000,0.000000
 fire_point2                           = 0,0,0
+
 gl_hud_offset_pos                     = 0,0,0
-gl_hud_offset_pos_16x9                = 0,0,0
 gl_hud_offset_rot                     = 0,0,0
+gl_hud_offset_pos_16x9                = 0,0,0
 gl_hud_offset_rot_16x9                = 0,0,0
+
 hands_position_16x9                   = -0.011100,-0.065400,0.065000
 hands_orientation_16x9                = 0.000000,0.000000,0.000000
 hands_position                        = -0.011100,-0.065400,0.065000
 hands_orientation                     = 0.000000,0.000000,0.000000
-item_orientation                      = 0,0,0
 item_position                         = 0,0,0
+item_orientation                      = 0,0,0
 item_visual                           = dynamics\weapons\wpn_ak74u\wpn_ak74u_hud.ogf
-lean_hud_offset_pos                   = 0,0,0
-lean_hud_offset_rot                   = 0,0,0
+
 shell_bone                            = bullet
-shell_dir                             = 0.0, 1.0, 0.0
 shell_point                           = 0,0.01,0
+
 zoom_hide_crosshair                   = true
 
 [wpn_ak74u_ekp]:wpn_ak74u
 hud                                   = wpn_ak74u_ekp_hud
 visual                                = dynamics\weapons\wpn_ak74u\wpn_ak74u_ekp.ogf
-scope_x                               = 62
-scope_y                               = 5
+
 scope_name                            = ekp
 scope_respawn                         = wpn_ak74u
 
+scope_x                               = 62
+scope_y                               = 5
+
 [wpn_ak74u_ekp_hud]:wpn_ak74u_hud
-item_visual                           = dynamics\weapons\wpn_ak74u\wpn_ak74u_ekp_hud.ogf
-aim_hud_offset_pos_16x9               = -0.062500,-0.013000,-0.07
 aim_hud_offset_pos                    = -0.062500,-0.013000,-0.07
-aim_hud_offset_rot_16x9               = 0.000000,0.000000,0.000000
 aim_hud_offset_rot                    = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9               = -0.062500,-0.013000,-0.07
+aim_hud_offset_rot_16x9               = 0.000000,0.000000,0.000000
+
+item_visual                           = dynamics\weapons\wpn_ak74u\wpn_ak74u_ekp_hud.ogf
 
 [wpn_ak74u_okp]:wpn_ak74u
 hud                                   = wpn_ak74u_okp_hud
 visual                                = dynamics\weapons\wpn_ak74u\wpn_ak74u_okp.ogf
-scope_x                               = 68
-scope_y                               = 6
+
 scope_name                            = okp
 scope_respawn                         = wpn_ak74u
 
+scope_x                               = 68
+scope_y                               = 6
+
 [wpn_ak74u_okp_hud]:wpn_ak74u_hud
-item_visual                           = dynamics\weapons\wpn_ak74u\wpn_ak74u_okp_hud.ogf
-aim_hud_offset_pos_16x9               = -0.056000,0.006000,-0.07
 aim_hud_offset_pos                    = -0.056000,0.006000,-0.07
-aim_hud_offset_rot_16x9               = 0.000000,0.000000,0.000000
 aim_hud_offset_rot                    = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9               = -0.056000,0.006000,-0.07
+aim_hud_offset_rot_16x9               = 0.000000,0.000000,0.000000
+
+item_visual                           = dynamics\weapons\wpn_ak74u\wpn_ak74u_okp_hud.ogf
 
 [wpn_ak74u_rakurs]:wpn_ak74u
 hud                                   = wpn_ak74u_rakurs_hud
 visual                                = dynamics\weapons\wpn_ak74u\wpn_ak74u_rakurs.ogf
-scope_x                               = 64
-scope_y                               = 1
+
 scope_name                            = rakurs
 scope_respawn                         = wpn_ak74u
 
+scope_x                               = 64
+scope_y                               = 1
+
 [wpn_ak74u_rakurs_hud]:wpn_ak74u_hud
-item_visual                           = dynamics\weapons\wpn_ak74u\wpn_ak74u_rakurs_hud.ogf
-aim_hud_offset_pos_16x9               = -0.062500,-0.010500,-0.07
 aim_hud_offset_pos                    = -0.062500,-0.010500,-0.07
-aim_hud_offset_rot_16x9               = 0.000000,0.000000,0.000000
 aim_hud_offset_rot                    = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9               = -0.062500,-0.010500,-0.07
+aim_hud_offset_rot_16x9               = 0.000000,0.000000,0.000000
+
+item_visual                           = dynamics\weapons\wpn_ak74u\wpn_ak74u_rakurs_hud.ogf
 
 [wpn_ak74u_1p78]:wpn_ak74u
-max_radius                            = 200
 min_radius                            = 5
+max_radius                            = 200
+
 hud                                   = wpn_ak74u_1p78_hud
 visual                                = dynamics\weapons\wpn_ak74u\wpn_ak74u_1p78.ogf
-scope_x                               = 53
-scope_y                               = -2
+
 scope_name                            = 1p78
 scope_respawn                         = wpn_ak74u
 
+scope_x                               = 53
+scope_y                               = -2
+
 [wpn_ak74u_1p78_hud]:wpn_ak74u_hud
-item_visual                           = dynamics\weapons\wpn_ak74u\wpn_ak74u_1p78_hud.ogf
-anm_shoot_aim                         = aksu_shoot_scope, shoot
-aim_hud_offset_pos_16x9               = -0.062,-0.0025,-0.0445
 aim_hud_offset_pos                    = -0.062,-0.0025,-0.0445
-aim_hud_offset_rot_16x9               = 0.0005,-0.0025,0
 aim_hud_offset_rot                    = 0.0005,-0.0025,0
+aim_hud_offset_pos_16x9               = -0.062,-0.0025,-0.0445
+aim_hud_offset_rot_16x9               = 0.0005,-0.0025,0
+
+anm_shoot_aim                         = aksu_shoot_scope, shoot
+
+item_visual                           = dynamics\weapons\wpn_ak74u\wpn_ak74u_1p78_hud.ogf
+
+
+[wpn_ak74u_m1]:wpn_ak74u
+description                             = enc_weapons_wpn_ak74u_m1
+inv_name                                = wpn_ak74u_m1_1
+inv_name_short                          = wpn_ak74u_m1_2
+silencer_status                         = 1
+condition_shot_dec                      = 0.000000
+cost                                    = 3500
+smoke_particles                         = weapons\generic_shoot_00
+flame_particles                         = 
+light_disabled                          = true
+
+snd_shoot                               = weapons\ak74u\ak74u_m1_shot
+snd_shoot1                              = weapons\ak74u\ak74u_m1_shot
+snd_shoot2                              = weapons\ak74u\ak74u_m1_shot
+snd_shoot3                              = weapons\ak74u\ak74u_m1_shot
+
 
 [wpn_ak74u_snag]:wpn_ak74u
-ammo_elapsed                          = 45
-ammo_mag_size                         = 45
-cam_relax_speed                       = 10
-cam_relax_speed_ai                    = 360
-cam_dispersion                        = 0.7
-cam_dispersion_inc                    = 0.5
-cam_dispersion_frac                   = 1.0
-cam_max_angle                         = 50.0
-cam_max_angle_horz                    = 50.0
-cam_step_angle_horz                   = 2.0
 cost                                  = 35000
+
+ammo_elapsed                          = 45
+
+ammo_mag_size                         = 45
+
+inv_name                              = st_wpn_ak74u_snag
+inv_name_short                        = st_wpn_ak74u_snag
 description                           = st_wpn_ak74u_snag_descr
-fire_distance                         = 450
-fire_dispersion_base                  = 0.24
+
+inv_weight                            = 3.3
 inv_grid_height                       = 2
 inv_grid_width                        = 5
 inv_grid_x                            = 31
 inv_grid_y                            = 8
-inv_name                              = st_wpn_ak74u_snag
-inv_name_short                        = st_wpn_ak74u_snag
-inv_weight                            = 3.3
-ph_mass                               = 4
-scope_status                          = 0
-silencer_x                            = 210
-silencer_y                            = 0
+
+fire_dispersion_base                  = 0.24
+cam_relax_speed                       = 10
+cam_relax_speed_ai                    = 360
+cam_dispersion                        = 0.7
+cam_dispersion_inc                    = 0.5
+cam_max_angle                         = 50.0
+cam_max_angle_horz                    = 50.0
+cam_step_angle_horz                   = 2.0
+
 PDM_disp_base                         = 1.2
 PDM_disp_vel_factor                   = 1.9
 PDM_disp_accel_factor                 = 1.9
 PDM_disp_crouch                       = 1.0
 PDM_disp_crouch_no_acc                = 1.0
-zoom_cam_relax_speed                  = 10
-zoom_cam_relax_speed_ai               = 360
-zoom_cam_dispersion                   = 0.45
-zoom_cam_dispersion_inc               = 0.45
-zoom_cam_dispersion_frac              = 0.7
-zoom_cam_max_angle                    = 50.0
-zoom_cam_max_angle_horz               = 50.0
-zoom_cam_step_angle_horz              = 1.25
+
+fire_distance                         = 450
+
 hud                                   = wpn_ak74u_snag_hud
 visual                                = dynamics\weapons\wpn_ak74u\wpn_ak74u_snag
+ph_mass                               = 4
+
+scope_status                          = 0
+
+silencer_x                            = 210
+silencer_y                            = 0
 
 [wpn_ak74u_snag_hud]:wpn_ak74u_hud
 aim_hud_offset_pos                    = -0.064500,0.023500,-0.09
-aim_hud_offset_pos_16x9               = -0.064500,0.023500,-0.09
 aim_hud_offset_rot                    = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9               = -0.064500,0.023500,-0.09
 aim_hud_offset_rot_16x9               = 0.000000,0.000000,0.000000
+
 fire_point                            = 0.000000,0.000000,0.134400
+
 item_visual                           = dynamics\weapons\wpn_ak74u\wpn_ak74u_snag_hud

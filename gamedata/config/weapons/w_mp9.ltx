@@ -1,244 +1,253 @@
 ;;;;;;;;;;;;;;;;;;;;;;;; wpn_mp9 ;;;;;;;;;;;;;;;;;;;;;;;;
 [wpn_mp9]:weapon_immunities,weapon_probability,default_weapon_params
-ammo_class                            = ammo_9x19_fmj, ammo_9x19_pbp
-ammo_current                          = 180
-ammo_elapsed                          = 30
-ammo_limit                            = 210
-ammo_mag_size                         = 30
-animation_slot                        = 8
-bullet_speed                          = 400
-cam_relax_speed                       = 5
-cam_relax_speed_ai                    = 120.75
-cam_dispersion                        = 0.7
-cam_dispersion_inc                    = 0.25
-cam_dispersion_frac                   = 1.0
-cam_max_angle                         = 50.0
-cam_max_angle_horz                    = 50.0
-cam_step_angle_horz                   = 1.5
+GroupControlSection                   = spawn_group
 cform                                 = skeleton
-condition_shot_dec                    = 0.00105
-control_inertion_factor               = 1.1f
-cost                                  = 12000
-description                           = st_wpn_mp9_descr
+class                                 = WP_VAL
+min_radius                            = 0
+max_radius                            = 100
+
 ef_main_weapon_type                   = 2
 ef_weapon_type                        = 6
-fire_dispersion_base                  = 0.26
-fire_dispersion_condition_factor      = 10
-fire_distance                         = 200
-fire_modes                            = 1, -1
-fire_point                            = 0.0, 0.188, 0.392
-fire_point2                           = 0.0, 0.188, 0.392
-flame_particles                       = weapons\new_effects\pistol_9x19
-grenade_class                         = ammo_vog-25
-grenade_flame_particles               = weapons\generic_weapon_svu
-grenade_launcher_name                 = 
-grenade_launcher_status               = 0
-grenade_launcher_x                    = 
-grenade_launcher_y                    = 
-GroupControlSection                   = spawn_group
-hand_dependence                       = 1
-hit_type                              = fire_wound
-hit_power                             = 1.1
-holder_fov_modifier                   = 1.00
+
 holder_range_modifier                 = 1.00
-hud                                   = wpn_mp9_hud
+holder_fov_modifier                   = 1.00
+
+cost                                  = 12000
+
+ammo_elapsed                          = 30
+
+ammo_mag_size                         = 30
+fire_modes                            = 1, -1
+
+flame_particles                       = weapons\new_effects\pistol_9x19
+smoke_particles                       = weapons\generic_weapon_pistols
+grenade_flame_particles               = weapons\generic_weapon_svu
+shell_particles                       = weapons\9x19
+silencer_smoke_particles              = weapons\generic_weapon_pistols_silencer
+
+ammo_class                            = ammo_9x19_fmj, ammo_9x19_pbp
+grenade_class                         = ammo_vog-25
+launch_speed                          = 0
+
+hand_dependence                       = 1
+single_handed                         = 0
+slot                                  = 1
+animation_slot                        = 8
+
+inv_name                              = st_wpn_mp9
+inv_name_short                        = st_wpn_mp9
+description                           = st_wpn_mp9_descr
+
+inv_weight                            = 1.4
+icon_group                            = 2
 inv_grid_height                       = 2
 inv_grid_width                        = 4
 inv_grid_x                            = 42
 inv_grid_y                            = 28
-inv_name                              = st_wpn_mp9
-inv_name_short                        = st_wpn_mp9
-inv_weight                            = 1.4
-kill_msg_height                       = 23
-kill_msg_width                        = 56
-kill_msg_x                            = 72
-kill_msg_y                            = 82
-launch_speed                          = 0
-light_color                           = 0.6,0.5,0.3
-light_disabled                        = false
-light_range                           = 7.0
-light_time                            = 0.07
-light_var_color                       = 0.1
-light_var_range                       = 0.7
-max_radius                            = 100
-min_radius                            = 0
+
+fire_dispersion_base                  = 0.26
+control_inertion_factor               = 1.1f
+cam_relax_speed                       = 5
+cam_relax_speed_ai                    = 120.75
+cam_dispersion                        = 0.7
+cam_dispersion_inc                    = 0.25
+cam_max_angle                         = 50.0
+cam_max_angle_horz                    = 50.0
+cam_step_angle_horz                   = 1.5
+fire_dispersion_condition_factor      = 10
 misfire_probability                   = 0.005
-orientation                           = 0, -10, 0
+condition_shot_dec                    = 0.00105
+
 PDM_disp_base                         = 1.2
 PDM_disp_vel_factor                   = 1.9
 PDM_disp_accel_factor                 = 1.9
 PDM_disp_crouch                       = 1.0
 PDM_disp_crouch_no_acc                = 1.0
-ph_mass                               = 2
-position                              = -0.026, -0.138, -0.05
+
+hit_power                             = 1.1
+hit_type                              = fire_wound
+fire_distance                         = 200
+bullet_speed                          = 400
 rpm                                   = 700
-rpm_empty_click                       = 200
-scheduled                             = off
+use_aim_bullet                        = false
+time_to_aim                           = 3.0
+fire_point                            = 0.0, 0.188, 0.392
+fire_point2                           = 0.0, 0.188, 0.392
+shell_point                           = 0.0, 0.188, 0.082
+
+hud                                   = wpn_mp9_hud
+visual                                = dynamics\weapons\wpn_mp9\wpn_mp9.ogf
+light_color                           = 0.6,0.5,0.3
+light_range                           = 7.0
+light_var_color                       = 0.1
+light_var_range                       = 0.7
+light_time                            = 0.07
+light_disabled                        = false
+ph_mass                               = 2
+
+zoom_rotate_time                      = 6.5
+zoom_enabled                          = true
+
 scope_status                          = 2
+silencer_status                       = 2
+grenade_launcher_status               = 0
+scope_name                            = ac10632
+scope_names                           = ac10632, eot, microt1
+silencer_name                         = sil_mp9
+grenade_launcher_name                 = 
+scope_respawn_ac10632                 = wpn_mp9_ac10632
+scope_respawn_eot                     = wpn_mp9_eot
+scope_respawn_microt1                 = wpn_mp9_microt1
+
 scope_x                               = 47
 scope_y                               = 0
-shell_dir                             = 0.0, 1.0, 0.0
-shell_particles                       = weapons\9x19
-shell_point                           = 0.0, 0.188, 0.082
+silencer_x                            = 171
+silencer_y                            = -1
+grenade_launcher_x                    = 
+grenade_launcher_y                    = 
+
+position                              = -0.026, -0.138, -0.05
+orientation                           = 0, -10, 0
+strap_bone0                           = bip01_spine2
+strap_bone1                           = bip01_spine1
+strap_orientation                     = -10,-5,10
+strap_position                        = -0.16,-0.36,0.15
+
+snd_silncer_shot                      = weapons\mp9\silencer_mp9_mono_far
+snd_shoot                             = mp9\muzzle_mp9_mono
+snd_reload                            = weapons\mp9\mp9_reload
+snd_reload_empty                      = weapons\mp9\mp9_reload_empty
+snd_reload_jammed                     = weapons\mp9\mp9_misfire
+snd_empty                             = weapons\mp9\mp9_empty, 0.5
+snd_draw                              = weapons\assault_draw
+snd_holster                           = weapons\hide_bvsm
+snd_close                             = weapons\draw_silent
+snd_shoot1                            = mp9\muzzle_mp9_mono1
+
 silencer_light_color                  = 0.6,0.5,0.3
 silencer_light_range                  = 0.01
 silencer_light_time                   = 0.2
 silencer_light_var_color              = 0.05
 silencer_light_var_range              = 0.5
-silencer_name                         = sil_mp9
-silencer_smoke_particles              = weapons\generic_weapon_pistols_silencer
-silencer_status                       = 2
-silencer_x                            = 171
-silencer_y                            = -1
-single_handed                         = 0
-slot                                  = 1
-smoke_particles                       = weapons\generic_weapon_pistols
-startup_ammo                          = 90
-strap_bone0                           = bip01_spine2
-strap_bone1                           = bip01_spine1
-strap_orientation                     = -10,-5,10
-strap_position                        = -0.16,-0.36,0.15
-time_to_aim                           = 3.0
-use_aim_bullet                        = false
-visual                                = dynamics\weapons\wpn_mp9\wpn_mp9.ogf
-zoom_cam_relax_speed                  = 10
-zoom_cam_relax_speed_ai               = 120.75
-zoom_cam_dispersion                   = 0.45
-zoom_cam_dispersion_inc               = 0.2
-zoom_cam_dispersion_frac              = 0.9
-zoom_cam_max_angle                    = 50.0
-zoom_cam_max_angle_horz               = 50.0
-zoom_cam_step_angle_horz              = 1.5
-zoom_enabled                          = true
-zoom_rotate_time                      = 6.5
-reload_time                           = 1.9
-reload_empty_time                     = 2.6
-class                                 = WP_VAL
-icon_group                            = 2
-scope_name                            = ac10632
-scope_names                           = ac10632, eot, microt1
-scope_respawn_ac10632                 = wpn_mp9_ac10632
-scope_respawn_eot                     = wpn_mp9_eot
-scope_respawn_microt1                 = wpn_mp9_microt1
-
-snd_shoot                             = mp9\muzzle_mp9_mono
-snd_shoot1                            = mp9\muzzle_mp9_mono1
-snd_silncer_shot                      = weapons\mp9\silencer_mp9_mono_far
-snd_bore                              = weapons\draw_silent
-snd_close                             = weapons\draw_silent
-snd_draw                              = weapons\assault_draw
-snd_holster                           = weapons\hide_bvsm
-snd_empty                             = weapons\mp9\mp9_empty, 0.5
-snd_reload                            = weapons\mp9\mp9_reload
-snd_reload_empty                      = weapons\mp9\mp9_reload_empty
-snd_reload_jammed                     = weapons\mp9\mp9_misfire
 
 [wpn_mp9_hud]:hud_base
 aim_hud_offset_pos                    = -0.068500,0.033500,-0.09
-aim_hud_offset_pos_16x9               = -0.068500,0.033500,-0.09
 aim_hud_offset_rot                    = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9               = -0.068500,0.033500,-0.09
 aim_hud_offset_rot_16x9               = 0.000000,0.000000,0.000000
-anm_bore                              = mp9_idle_aim
+
+anm_show                              = mp9_draw
+anm_show_empty                        = mp9_draw, idle_empty
 anm_hide                              = mp9_holster
+anm_hide_empty                        = mp9_holster, idle_empty
 anm_idle                              = mp9_idle
 anm_idle_aim                          = mp9_idle_aim
-anm_idle_moving_slow                  = mp9_moving_slow
+anm_idle_aim_empty                    = mp9_idle_aim, idle_empty
+anm_idle_aim_moving                   = mp9_moving_aim
+anm_idle_aim_moving_empty             = mp9_moving_aim, idle_empty
+anm_idle_empty                        = mp9_idle, idle_empty
 anm_idle_moving                       = mp9_moving
 anm_idle_moving_crouch                = mp9_crouch
+anm_idle_moving_crouch_empty          = mp9_crouch, idle_empty
+anm_idle_moving_empty                 = mp9_moving, idle_empty
+anm_idle_moving_slow                  = mp9_moving_slow
+anm_idle_moving_slow_empty            = mp9_moving_slow, idle_empty
+anm_idle_sprint                       = mp9_sprint
+anm_idle_sprint_empty                 = mp9_sprint, idle_empty
+anm_idle_sprint_end                   = mp9_sprint_end
+anm_idle_sprint_end_empty             = mp9_sprint_end, idle_empty
+anm_idle_sprint_start                 = mp9_sprint_start
+anm_idle_sprint_start_empty           = mp9_sprint_start, idle_empty
+anm_bore                              = mp9_idle_aim
+anm_bore_empty                        = mp9_idle_aim, idle_empty
+anm_shots                             = mp9_shoot, shoot
+anm_shots_last                        = mp9_shoot, idle_empty
+anm_shots_when_aim_last               = mp9_shoot_aim, idle_empty
+anm_shoot_aim                         = mp9_shoot_aim, shoot
 anm_reload                            = mp9_reload, reload
 anm_reload_empty                      = mp9_reload_empty, reload_empty
 anm_reload_jammed                     = mp9_misfire, misfire
-anm_shots                             = mp9_shoot, shoot
-anm_show                              = mp9_draw
-anm_shoot_aim                         = mp9_shoot_aim, shoot
 anm_firemode                          = mp9_firemode
-anm_idle_aim_moving                   = mp9_moving_aim
-anm_bore_empty                        = mp9_idle_aim, idle_empty
-anm_hide_empty                        = mp9_holster, idle_empty
-anm_idle_empty                        = mp9_idle, idle_empty
-anm_idle_aim_empty                    = mp9_idle_aim, idle_empty
-anm_idle_moving_slow_empty            = mp9_moving_slow, idle_empty
-anm_idle_moving_empty                 = mp9_moving, idle_empty
-anm_idle_moving_crouch_empty          = mp9_crouch, idle_empty
-anm_shots_last                        = mp9_shoot, idle_empty
-anm_show_empty                        = mp9_draw, idle_empty
-anm_shots_when_aim_last               = mp9_shoot_aim, idle_empty
 anm_firemode_empty                    = mp9_firemode, idle_empty
-anm_idle_aim_moving_empty             = mp9_moving_aim, idle_empty
-anm_idle_sprint_start                 = mp9_sprint_start
-anm_idle_sprint                       = mp9_sprint
-anm_idle_sprint_end                   = mp9_sprint_end
-anm_idle_sprint_start_empty           = mp9_sprint_start, idle_empty
-anm_idle_sprint_empty                 = mp9_sprint, idle_empty
-anm_idle_sprint_end_empty             = mp9_sprint_end, idle_empty
 anm_headlamp_on                       = mp9_flash
-anm_gasmask                           = mp9_clear
 anm_headlamp_on_empty                 = mp9_flash, idle_empty
+anm_gasmask                           = mp9_clear
 anm_gasmask_empty                     = mp9_clear, idle_empty
+
 attach_place_idx                      = 0
 fire_bone                             = muzzle
 fire_bone2                            = muzzle
 fire_point                            = 0,0,0
 fire_point2                           = 0,0,0
+
 gl_hud_offset_pos                     = 0,0,0
-gl_hud_offset_pos_16x9                = 0,0,0
 gl_hud_offset_rot                     = 0,0,0
+gl_hud_offset_pos_16x9                = 0,0,0
 gl_hud_offset_rot_16x9                = 0,0,0
-hands_position                        = -0.048025,-0.163000,-0.281103
+
 hands_position_16x9                   = -0.048025,-0.163000,-0.281103
-hands_orientation                     = 0,0,0
 hands_orientation_16x9                = 0,0,0
-item_orientation                      = 0,0,0
+hands_position                        = -0.048025,-0.163000,-0.281103
+hands_orientation                     = 0,0,0
 item_position                         = 0,0,0
+item_orientation                      = 0,0,0
 item_visual                           = dynamics\weapons\wpn_mp9\wpn_mp9_hud.ogf
-lean_hud_offset_pos                   = 0,0,0
-lean_hud_offset_rot                   = 0,0,0
+
 shell_bone                            = wpn_body
-shell_dir                             = 0.0, 1.0, 0.0
 shell_point                           = 0.0,0.04,0.0
+
 zoom_hide_crosshair                   = true
 
 [wpn_mp9_ac10632]:wpn_mp9
 hud                                   = wpn_mp9_ac10632_hud
 visual                                = dynamics\weapons\wpn_mp9\wpn_mp9_ac10632.ogf
-scope_x                               = 115
-scope_y                               = -20
+
 scope_name                            = ac10632
 scope_respawn                         = wpn_mp9
 
+scope_x                               = 115
+scope_y                               = -20
+
 [wpn_mp9_ac10632_hud]:wpn_mp9_hud
-item_visual                           = dynamics\weapons\wpn_mp9\wpn_mp9_ac10632_hud.ogf
 aim_hud_offset_pos                    = -0.068500,0.008500,-0.07
-aim_hud_offset_pos_16x9               = -0.068500,0.008500,-0.07
 aim_hud_offset_rot                    = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9               = -0.068500,0.008500,-0.07
 aim_hud_offset_rot_16x9               = 0.000000,0.000000,0.000000
+
+item_visual                           = dynamics\weapons\wpn_mp9\wpn_mp9_ac10632_hud.ogf
 
 [wpn_mp9_eot]:wpn_mp9
 hud                                   = wpn_mp9_eot_hud
 visual                                = dynamics\weapons\wpn_mp9\wpn_mp9_eot.ogf
-scope_x                               = 115
-scope_y                               = -20
+
 scope_name                            = eot
 scope_respawn                         = wpn_mp9
 
+scope_x                               = 115
+scope_y                               = -20
+
 [wpn_mp9_eot_hud]:wpn_mp9_hud
-item_visual                           = dynamics\weapons\wpn_mp9\wpn_mp9_eot_hud.ogf
 aim_hud_offset_pos                    = -0.068500,0.005000,-0.07
-aim_hud_offset_pos_16x9               = -0.068500,0.005000,-0.07
 aim_hud_offset_rot                    = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9               = -0.068500,0.005000,-0.07
 aim_hud_offset_rot_16x9               = 0.000000,0.000000,0.000000
+
+item_visual                           = dynamics\weapons\wpn_mp9\wpn_mp9_eot_hud.ogf
 
 [wpn_mp9_microt1]:wpn_mp9
 hud                                   = wpn_mp9_microt1_hud
 visual                                = dynamics\weapons\wpn_mp9\wpn_mp9_micro-t1.ogf
-scope_x                               = 115
-scope_y                               = -22
+
 scope_name                            = microt1
 scope_respawn                         = wpn_mp9
 
+scope_x                               = 115
+scope_y                               = -22
+
 [wpn_mp9_microt1_hud]:wpn_mp9_hud
-item_visual                           = dynamics\weapons\wpn_mp9\wpn_mp9_micro-t1_hud.ogf
 aim_hud_offset_pos                    = -0.068500,0.004500,-0.07
-aim_hud_offset_pos_16x9               = -0.068500,0.004500,-0.07
 aim_hud_offset_rot                    = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9               = -0.068500,0.004500,-0.07
 aim_hud_offset_rot_16x9               = 0.000000,0.000000,0.000000
+
+item_visual                           = dynamics\weapons\wpn_mp9\wpn_mp9_micro-t1_hud.ogf

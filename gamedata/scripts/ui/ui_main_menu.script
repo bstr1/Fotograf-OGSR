@@ -223,6 +223,10 @@ function main_menu:OnKeyboard(dik, keyboard_action)
             get_console():execute("main_menu off")
         elseif dik == DIK_keys.DIK_M then -- personal_test
             chetkiu.spawn_gl()
+            get_console():execute("main_menu off")
+
+        elseif dik == DIK_keys.DIK_J then -- personal_test
+            chetkiu.spawn_kristals()
             get_console():execute("main_menu off")			
 			
 		end

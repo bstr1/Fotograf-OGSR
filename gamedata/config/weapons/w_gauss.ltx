@@ -1,249 +1,241 @@
 ;;;;;;;;;;;;;;;;;;;;;;;; wpn_gauss ;;;;;;;;;;;;;;;;;;;;;;;;
 [wpn_gauss]:weapon_immunities,weapon_probability,default_weapon_params
-ammo_class                            = ammo_gauss, ammo_gauss_cardan
-ammo_current                          = 60
-ammo_elapsed                          = 10
-ammo_limit                            = 70
-ammo_mag_size                         = 10
-animation_slot                        = 2
-bullet_speed                          = 16500
-cam_relax_speed                       = 3
-cam_relax_speed_ai                    = 360
-cam_dispersion                        = 0.7
-cam_dispersion_inc                    = 0.01
-cam_dispersion_frac                   = 1.0
-cam_max_angle                         = 0.01
-cam_max_angle_horz                    = 0.01
-cam_step_angle_horz                   = 0.01
+GroupControlSection                   = spawn_group
 cform                                 = skeleton
-condition_shot_dec                    = 0.002
-control_inertion_factor               = 1.4f
-cost                                  = 300000
-description                           = st_wpn_gauss_descr
-discovery_dependency                  = 
+class                                 = WP_SVD
+min_radius                            = 5
+max_radius                            = 900
+
 ef_main_weapon_type                   = 3
 ef_weapon_type                        = 11
-fire_dispersion_base                  = 0.020
-fire_dispersion_condition_factor      = 4
-fire_distance                         = 4000
-fire_point                            = 0.00,0.12,0.69
-fire_point2                           = 0.00,0.12,0.69
+
+holder_range_modifier                 = 2.85
+holder_fov_modifier                   = 1.00
+
+cost                                  = 300000
+
+ammo_elapsed                          = 10
+
+ammo_mag_size                         = 10
+
 flame_particles                       = weapons\generic_weapon_gauss
 smoke_particles                       = weapons\generic_weapon07
-grenade_launcher_status               = 0
-GroupControlSection                   = spawn_group
+shell_particles                       = weapons\fake_shells
+
+ammo_class                            = ammo_gauss, ammo_gauss_cardan
+launch_speed                          = 0
+
 hand_dependence                       = 1
-hit_type                              = fire_wound
-holder_fov_modifier                   = 1.00
-holder_range_modifier                 = 2.85
-hud                                   = wpn_gauss_hud
+single_handed                         = 0
+sprint_allowed                        = true
+slot                                  = 1
+animation_slot                        = 2
+
+inv_name                              = st_wpn_gauss
+inv_name_short                        = st_wpn_gauss
+description                           = st_wpn_gauss_descr
+
+inv_weight                            = 5.5
+icon_group                            = 2
 inv_grid_height                       = 2
 inv_grid_width                        = 6
 inv_grid_x                            = 42
 inv_grid_y                            = 30
-inv_name                              = st_wpn_gauss
-inv_name_short                        = st_wpn_gauss
-inv_weight                            = 5.5
-kill_msg_height                       = 23
-kill_msg_width                        = 82
-kill_msg_x                            = 166
-kill_msg_y                            = 59
-launch_speed                          = 0
-light_color                           = 1.3,1.5,2
-light_disabled                        = false
-light_range                           = 4.0
-light_time                            = 0.5
-light_var_color                       = 0.1
-light_var_range                       = 0.5
-max_radius                            = 900
-min_radius                            = 5
+
+fire_dispersion_base                  = 0.020
+control_inertion_factor               = 1.4f
+cam_relax_speed                       = 3
+cam_relax_speed_ai                    = 360
+cam_dispersion                        = 0.7
+cam_dispersion_inc                    = 0.01
+cam_max_angle                         = 0.01
+cam_max_angle_horz                    = 0.01
+cam_step_angle_horz                   = 0.01
+fire_dispersion_condition_factor      = 4
 misfire_probability                   = 0.006
-change_misfire_mag                    = false
-orientation                           = 0, 0, 0
+condition_shot_dec                    = 0.002
+
 PDM_disp_base                         = 1.2
 PDM_disp_vel_factor                   = 2.0
 PDM_disp_accel_factor                 = 2.0
 PDM_disp_crouch                       = 1.0
 PDM_disp_crouch_no_acc                = 1.0
-ph_mass                               = 6
-position                              = -0.026, -0.070, 0.0
+
+hit_type                              = fire_wound
+fire_distance                         = 4000
+bullet_speed                          = 16500
 rpm                                   = 30
-rpm_empty_click                       = 150
-scheduled                             = off
+use_aim_bullet                        = false
+time_to_aim                           = 1.0
+fire_point                            = 0.00,0.12,0.69
+fire_point2                           = 0.00,0.12,0.69
+shell_point                           = 0.0, 0.129, 0.192
+
+hud                                   = wpn_gauss_hud
+visual                                = dynamics\weapons\wpn_gauss\wpn_gauss.ogf
+light_color                           = 1.3,1.5,2
+light_range                           = 4.0
+light_var_color                       = 0.1
+light_var_range                       = 0.5
+light_time                            = 0.5
+light_disabled                        = false
+ph_mass                               = 6
+
+zoom_rotate_time                      = 6.5
+zoom_enabled                          = true
 scope_dynamic_zoom                    = on
-scope_inertion_factor                 = 3
+
 scope_status                          = 0
+silencer_status                       = 0
+grenade_launcher_status               = 0
 scope_zoom_factor                     = 7.5
-3d_zoom_factor                        = 65
-3d_fov                                = 0.075
+scope_inertion_factor                 = 3
 scope_texture                         = wpn_crosshair_gauss
+
 scope_x                               = 60
 scope_y                               = -2
-shell_dir                             = 0.0, 0.0, 0.4
-shell_particles                       = weapons\fake_shells
-shell_point                           = 0.0, 0.129, 0.192
-silencer_status                       = 0
-single_handed                         = 0
-slot                                  = 1
-sprint_allowed                        = true
-startup_ammo                          = 90
+
+position                              = -0.026, -0.070, 0.0
+orientation                           = 0, 0, 0
 strap_bone0                           = bip01_spine2
 strap_bone1                           = bip01_spine1
 strap_orientation                     = -15,-9,110
 strap_position                        = -0.26,-0.11,0.15
-time_to_aim                           = 1.0
-use_aim_bullet                        = false
-visual                                = dynamics\weapons\wpn_gauss\wpn_gauss.ogf
-zoom_cam_relax_speed                  = 3
-zoom_cam_relax_speed_ai               = 360
-zoom_cam_dispersion                   = 0.2
-zoom_cam_dispersion_inc               = 0.01
-zoom_cam_dispersion_frac              = 1.0
-zoom_cam_max_angle                    = 0.01
-zoom_cam_max_angle_horz               = 0.01
-zoom_cam_step_angle_horz              = 0.01
-zoom_enabled                          = true
-zoom_rotate_time                      = 6.5
-scope_zoom_steps                      = 4
-reload_time                           = 3.3
-reload_empty_time                     = 3.3
-use_mag_scheme                        = true
-mag_bone_type_0                       = mag1
-mag_bone_type_1                       = mag2
-ammochange_time                       = 2.3
-class                                 = WP_SVD
-icon_group                            = 2
 
 snd_shoot                             = weapons\gauss\gauss_shoot
-snd_bore                              = weapons\draw_silent
-snd_close                             = weapons\draw_silent
-snd_draw                              = weapons\assault_draw
-snd_holster                           = weapons\hide_gw
-snd_empty                             = weapons\gauss\gauss_empty, 0.5
 snd_reload                            = weapons\gauss\gauss_reload
 snd_reload_empty                      = weapons\gauss\gauss_reload
 snd_reload_jammed                     = weapons\gauss\gauss_misfire
+snd_empty                             = weapons\gauss\gauss_empty, 0.5
+snd_draw                              = weapons\assault_draw
+snd_holster                           = weapons\hide_gw
+snd_close                             = weapons\draw_silent
 
 [wpn_gauss_hud]:hud_base
 aim_hud_offset_pos                    = -0.003500,0.015100,-0.017800
-aim_hud_offset_pos_16x9               = -0.003500,0.015100,-0.017800
 aim_hud_offset_rot                    = 0,0,0
+aim_hud_offset_pos_16x9               = -0.003500,0.015100,-0.017800
 aim_hud_offset_rot_16x9               = 0,0,0
+
 anm_show                              = gauss_draw, gauss_draw
+anm_show_empty                        = gauss_draw, draw
 anm_hide                              = gauss_hide, idle
+anm_hide_empty                        = gauss_hide, idle
+anm_idle                              = gauss_idle, idle
+anm_idle_aim                          = gauss_idle_aim, idle
+anm_idle_aim_empty                    = gauss_idle_aim, idle
+anm_idle_aim_moving                   = gauss_aim_walk, idle
+anm_idle_aim_moving_empty             = gauss_aim_walk, idle
+anm_idle_empty                        = gauss_idle, idle
+anm_idle_moving                       = gauss_walk, idle
+anm_idle_moving_crouch                = gauss_walk_down, idle
+anm_idle_moving_crouch_empty          = gauss_walk_down, idle
+anm_idle_moving_empty                 = gauss_walk, idle
+anm_idle_moving_slow                  = gauss_walk_slow, idle
+anm_idle_moving_slow_empty            = gauss_walk_slow, idle
+anm_idle_sprint                       = gauss_sprint, idle
+anm_idle_sprint_empty                 = gauss_sprint, idle
+anm_idle_sprint_end                   = gauss_sprint_end, idle
+anm_idle_sprint_end_empty             = gauss_sprint_end, idle
+anm_idle_sprint_start                 = gauss_sprint_start, idle
+anm_idle_sprint_start_empty           = gauss_sprint_start, idle
+anm_bore                              = gauss_idle_aim, idle
+anm_bore_empty                        = gauss_idle_aim, idle
 anm_shots                             = gauss_shoot, gauss_shoot
 anm_shots_last                        = gauss_shoot, gauss_shoot
-anm_shoot_aim                         = gauss_shoot_scope, gauss_shoot
 anm_shots_when_aim_last               = gauss_shoot_scope, gauss_shoot
+anm_shoot_aim                         = gauss_shoot_scope, gauss_shoot
 anm_reload                            = gauss_reload, gauss_reload
 anm_reload_empty                      = gauss_reload, gauss_reload_empty
 anm_reload_jammed                     = gauss_revival, gauss_revival
-anm_bore                              = gauss_idle_aim, idle
-anm_idle                              = gauss_idle, idle
-anm_idle_aim                          = gauss_idle_aim, idle
-anm_idle_moving_slow                  = gauss_walk_slow, idle
-anm_idle_moving                       = gauss_walk, idle
-anm_idle_moving_crouch                = gauss_walk_down, idle
-anm_idle_aim_moving                   = gauss_aim_walk, idle
-anm_show_empty                        = gauss_draw, draw
-anm_hide_empty                        = gauss_hide, idle
-anm_bore_empty                        = gauss_idle_aim, idle
-anm_idle_empty                        = gauss_idle, idle
-anm_idle_aim_empty                    = gauss_idle_aim, idle
-anm_idle_moving_slow_empty            = gauss_walk_slow, idle
-anm_idle_moving_empty                 = gauss_walk, idle
-anm_idle_moving_crouch_empty          = gauss_walk_down, idle
-anm_idle_aim_moving_empty             = gauss_aim_walk, idle
-anm_idle_sprint_start                 = gauss_sprint_start, idle
-anm_idle_sprint                       = gauss_sprint, idle
-anm_idle_sprint_end                   = gauss_sprint_end, idle
-anm_idle_sprint_start_empty           = gauss_sprint_start, idle
-anm_idle_sprint_empty                 = gauss_sprint, idle
-anm_idle_sprint_end_empty             = gauss_sprint_end, idle
 anm_headlamp_on                       = gauss_flash, idle
 anm_gasmask                           = gauss_clear, idle
+
 attach_place_idx                      = 0
 fire_bone                             = wpn_body
 fire_point                            = 0.000000,0.000000,0.243000
+
 gl_hud_offset_pos                     = 0,0,0
 gl_hud_offset_rot                     = 0,0,0
-hands_position                        = 0.003500,-0.015000,-0.022000
+
 hands_position_16x9                   = 0.003500,-0.015000,-0.022000
-hands_orientation                     = 0,0,0
 hands_orientation_16x9                = 0,0,0
-item_orientation                      = 0,0,0
+hands_position                        = 0.003500,-0.015000,-0.022000
+hands_orientation                     = 0,0,0
 item_position                         = 0,0,0
+item_orientation                      = 0,0,0
 item_visual                           = dynamics\weapons\wpn_gauss\wpn_gauss_hud.ogf
-lean_hud_offset_pos                   = 0,0,0
-lean_hud_offset_rot                   = 0,0,0
+
 shell_bone                            = wpn_body
-shell_dir                             = 0.0, 1.0, 0.0
 shell_point                           = 0,0,0
+
 zoom_hide_crosshair                   = true
-nearwall_aim_collide_pos              = -0.01
 
 [wpn_gauss_comp]:wpn_gauss
 cost                                  = 450000
-condition_shot_dec                    = 0.0012
-control_inertion_factor               = 1.35f
+
+inv_name                              = st_wpn_gauss_comp
+inv_name_short                        = st_wpn_gauss_comp
 description                           = st_wpn_gauss_comp_descr
-fire_dispersion_base                  = 0.005
+
+inv_weight                            = 5.0
 inv_grid_height                       = 2
 inv_grid_width                        = 6
 inv_grid_x                            = 46
 inv_grid_y                            = 28
-inv_name                              = st_wpn_gauss_comp
-inv_name_short                        = st_wpn_gauss_comp
-inv_weight                            = 5.0
+
+fire_dispersion_base                  = 0.005
+control_inertion_factor               = 1.35f
 misfire_probability                   = 0.005
-scope_zoom_factor                     = 4.3
-scope_inertion_factor                 = 2.5
-3d_fov                                = 0.043
-scope_zoom_steps                      = 6
+condition_shot_dec                    = 0.0012
+
 rpm                                   = 45
-bullet_bone_name                      = mui_amount_
-use_gauss_scheme                      = true
+
 hud                                   = wpn_gauss_comp_hud
 visual                                = dynamics\weapons\wpn_gauss\wpn_gauss_comp.ogf
 
+scope_zoom_factor                     = 4.3
+scope_inertion_factor                 = 2.5
+
 [wpn_gauss_comp_hud]:wpn_gauss_hud
-anm_on_mui                            = gauss_mui_on, gauss_mui_on
-anm_off_mui                           = gauss_mui_off, gauss_mui_off
-anm_on_mui_empty                      = gauss_mui_on, gauss_mui_on_empty
-anm_off_mui_empty                     = gauss_mui_off, gauss_mui_off_empty
 anm_show_mui                          = gauss_draw, gauss_mui_draw
+anm_show_mui_empty                    = gauss_draw, gauss_mui_draw_empty
 anm_hide_mui                          = gauss_hide, idle_mui
+anm_hide_mui_empty                    = gauss_hide, idle_mui_empty
+anm_idle_aim_moving_mui               = gauss_aim_walk, idle_mui
+anm_idle_aim_moving_mui_empty         = gauss_aim_walk, idle_mui_empty
+anm_idle_aim_mui                      = gauss_idle_aim, idle_mui
+anm_idle_aim_mui_empty                = gauss_idle_aim, idle_mui_empty
+anm_idle_moving_crouch_mui            = gauss_walk_down, idle_mui
+anm_idle_moving_crouch_mui_empty      = gauss_walk_down, idle_mui_empty
+anm_idle_moving_mui                   = gauss_walk, idle_mui
+anm_idle_moving_mui_empty             = gauss_walk, idle_mui_empty
+anm_idle_moving_slow_mui              = gauss_walk_slow, idle_mui
+anm_idle_moving_slow_mui_empty        = gauss_walk_slow, idle_mui_empty
+anm_idle_mui                          = gauss_idle, idle_mui
+anm_idle_mui_empty                    = gauss_idle, idle_mui_empty
+anm_idle_sprint_empty_mui             = gauss_sprint, idle_mui_empty
+anm_idle_sprint_end_empty_mui         = gauss_sprint_end, idle_mui_empty
+anm_idle_sprint_end_mui               = gauss_sprint_end, idle_mui
+anm_idle_sprint_mui                   = gauss_sprint, idle_mui
+anm_idle_sprint_start_empty_mui       = gauss_sprint_start, idle_mui_empty
+anm_idle_sprint_start_mui             = gauss_sprint_start, idle_mui
+anm_bore_mui                          = gauss_idle_aim, idle_mui
+anm_bore_mui_empty                    = gauss_idle_aim, idle_mui_empty
 anm_shots_mui                         = gauss_shoot, gauss_shoot_mui
 anm_shots_mui_last                    = gauss_shoot, gauss_shoot_mui_empty
 anm_shots_when_aim_mui                = gauss_shoot_scope, gauss_shoot_mui
 anm_shots_when_aim_mui_last           = gauss_shoot_scope, gauss_shoot_mui_empty
+anm_reload_jammed_mui                 = gauss_revival, gauss_revival_mui
 anm_reload_mui                        = gauss_reload, gauss_reload_mui
 anm_reload_mui_empty                  = gauss_reload, gauss_reload_mui_empty
-anm_reload_jammed_mui                 = gauss_revival, gauss_revival_mui
-anm_bore_mui                          = gauss_idle_aim, idle_mui
-anm_idle_mui                          = gauss_idle, idle_mui
-anm_idle_aim_mui                      = gauss_idle_aim, idle_mui
-anm_idle_moving_slow_mui              = gauss_walk_slow, idle_mui
-anm_idle_moving_mui                   = gauss_walk, idle_mui
-anm_idle_moving_crouch_mui            = gauss_walk_down, idle_mui
-anm_idle_aim_moving_mui               = gauss_aim_walk, idle_mui
-anm_show_mui_empty                    = gauss_draw, gauss_mui_draw_empty
-anm_hide_mui_empty                    = gauss_hide, idle_mui_empty
-anm_bore_mui_empty                    = gauss_idle_aim, idle_mui_empty
-anm_idle_mui_empty                    = gauss_idle, idle_mui_empty
-anm_idle_aim_mui_empty                = gauss_idle_aim, idle_mui_empty
-anm_idle_moving_slow_mui_empty        = gauss_walk_slow, idle_mui_empty
-anm_idle_moving_mui_empty             = gauss_walk, idle_mui_empty
-anm_idle_moving_crouch_mui_empty      = gauss_walk_down, idle_mui_empty
-anm_idle_aim_moving_mui_empty         = gauss_aim_walk, idle_mui_empty
-anm_idle_sprint_start_mui             = gauss_sprint_start, idle_mui
-anm_idle_sprint_mui                   = gauss_sprint, idle_mui
-anm_idle_sprint_end_mui               = gauss_sprint_end, idle_mui
-anm_idle_sprint_start_empty_mui       = gauss_sprint_start, idle_mui_empty
-anm_idle_sprint_empty_mui             = gauss_sprint, idle_mui_empty
-anm_idle_sprint_end_empty_mui         = gauss_sprint_end, idle_mui_empty
 anm_headlamp_on_mui                   = gauss_flash, idle_mui
-anm_gasmask_mui                       = gauss_clear, idle_mui
 anm_headlamp_on_mui_empty             = gauss_flash, idle_mui_empty
+anm_gasmask_mui                       = gauss_clear, idle_mui
 anm_gasmask_mui_empty                 = gauss_clear, idle_mui_empty
+anm_off_mui                           = gauss_mui_off, gauss_mui_off
+anm_off_mui_empty                     = gauss_mui_off, gauss_mui_off_empty
+anm_on_mui                            = gauss_mui_on, gauss_mui_on
+anm_on_mui_empty                      = gauss_mui_on, gauss_mui_on_empty
+
 item_visual                           = dynamics\weapons\wpn_gauss\wpn_gauss_comp_hud.ogf

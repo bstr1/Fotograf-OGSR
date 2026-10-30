@@ -1,284 +1,270 @@
 ;;;;;;;;;;;;;;;;;;;;;;;; wpn_fn2000 ;;;;;;;;;;;;;;;;;;;;;;;;
 [wpn_fn2000]:weapon_immunities,weapon_probability,default_weapon_params
-ammo_class                            = ammo_5.56x45_ss190, ammo_5.56x45_ap
-ammo_current                          = 180
-ammo_elapsed                          = 30
-ammo_limit                            = 210
-ammo_mag_size                         = 30
-animation_slot                        = 8
-bullet_speed                          = 900
-cam_relax_speed                       = 5
-cam_relax_speed_ai                    = 360
-cam_dispersion                        = 0.65
-cam_dispersion_inc                    = 0.3
-cam_dispersion_frac                   = 0.9
-cam_max_angle                         = 50.0
-cam_max_angle_horz                    = 50.0
-cam_step_angle_horz                   = 1.5
+GroupControlSection                   = spawn_group
 cform                                 = skeleton
-condition_shot_dec                    = 0.0007
-control_inertion_factor               = 1.25f
-cost                                  = 75000
-description                           = st_wpn_fn2000_descr
+class                                 = WP_AK74
+min_radius                            = 1
+max_radius                            = 680
+
 ef_main_weapon_type                   = 2
 ef_weapon_type                        = 8
-fire_dispersion_base                  = 0.165
-fire_dispersion_condition_factor      = 10
-fire_distance                         = 550
-fire_modes                            = 1, -1
-fire_point                            = 0.000000,0.184,0.35
-fire_point2                           = 0.0, 0.123, 0.398
-flame_particles                       = weapons\new_effects\fn2000
-grenade_class                         = ammo_m209
-grenade_flame_particles               = weapons\generic_weapon_svu
-grenade_launcher_name                 = wpn_addon_grenade_launcher_gl1
-grenade_launcher_status               = 2
-grenade_launcher_x                    = 124
-grenade_launcher_y                    = 5
-grenade_vel                           = 76
-grenade_rpm                           = 30
-GroupControlSection                   = spawn_group
-hand_dependence                       = 1
-hit_type                              = fire_wound
-holder_fov_modifier                   = 1.00
+
 holder_range_modifier                 = 1.25
-hud                                   = wpn_fn2000_hud
+holder_fov_modifier                   = 1.00
+
+cost                                  = 75000
+
+ammo_elapsed                          = 30
+
+ammo_mag_size                         = 30
+fire_modes                            = 1, -1
+
+flame_particles                       = weapons\new_effects\fn2000
+smoke_particles                       = weapons\generic_weapon_machine_gun
+grenade_flame_particles               = weapons\generic_weapon_svu
+shell_particles                       = weapons\556x45
+silencer_smoke_particles              = weapons\generic_weapon_svu
+
+ammo_class                            = ammo_5.56x45_ss190, ammo_5.56x45_ap
+grenade_class                         = ammo_m209
+launch_speed                          = 76
+grenade_vel                           = 76
+
+hand_dependence                       = 1
+single_handed                         = 0
+slot                                  = 1
+animation_slot                        = 8
+
+inv_name                              = st_wpn_fn2000
+inv_name_short                        = st_wpn_fn2000
+description                           = st_wpn_fn2000_descr
+
+inv_weight                            = 4
+icon_group                            = 2
 inv_grid_height                       = 2
 inv_grid_width                        = 5
 inv_grid_x                            = 31
 inv_grid_y                            = 12
-inv_name                              = st_wpn_fn2000
-inv_name_short                        = st_wpn_fn2000
-inv_weight                            = 4
-kill_msg_height                       = 30
-kill_msg_width                        = 64
-kill_msg_x                            = 131
-kill_msg_y                            = 123
-launch_speed                          = 76
-lens_texture                          = wpn\wpn_crosshair_g36_lens
-lens_texture_h                        = 648
-lens_texture_w                        = 648
-lens_texture_x                        = 183
-lens_texture_y                        = 75
-light_color                           = 0.6,0.5,0.3
-light_disabled                        = false
-light_range                           = 7.0
-light_time                            = 0.07
-light_var_color                       = 0.1
-light_var_range                       = 0.7
-max_radius                            = 680
-min_radius                            = 1
+
+fire_dispersion_base                  = 0.165
+control_inertion_factor               = 1.25f
+cam_relax_speed                       = 5
+cam_relax_speed_ai                    = 360
+cam_dispersion                        = 0.65
+cam_dispersion_inc                    = 0.3
+cam_max_angle                         = 50.0
+cam_max_angle_horz                    = 50.0
+cam_step_angle_horz                   = 1.5
+fire_dispersion_condition_factor      = 10
 misfire_probability                   = 0.005
-orientation                           = 0, 0, 0
+condition_shot_dec                    = 0.0007
+
 PDM_disp_base                         = 1.0
 PDM_disp_vel_factor                   = 1.5
 PDM_disp_accel_factor                 = 1.5
 PDM_disp_crouch                       = 1.0
 PDM_disp_crouch_no_acc                = 1.0
-ph_mass                               = 5
-position                              = -0.026, -0.072, -0.15
-reload_gl_dof                         = 0.0, 0.5, 5, 2.9
+
+hit_type                              = fire_wound
+fire_distance                         = 550
+bullet_speed                          = 900
 rpm                                   = 850
-rpm_empty_click                       = 200
-scheduled                             = off
+use_aim_bullet                        = false
+time_to_aim                           = 1.0
+fire_point                            = 0.000000,0.184,0.35
+fire_point2                           = 0.0, 0.123, 0.398
+shell_point                           = -0.020000,0.186000,0.200000
+
+hud                                   = wpn_fn2000_hud
+visual                                = dynamics\weapons\wpn_fn2000\wpn_fn2000.ogf
+light_color                           = 0.6,0.5,0.3
+light_range                           = 7.0
+light_var_color                       = 0.1
+light_var_range                       = 0.7
+light_time                            = 0.07
+light_disabled                        = false
+ph_mass                               = 5
+
+zoom_rotate_time                      = 6.5
+zoom_enabled                          = true
+
 scope_status                          = 1
+silencer_status                       = 2
+grenade_launcher_status               = 2
+scope_zoom_factor                     = 37.5
+scope_inertion_factor                 = 1.4
 scope_texture                         = wpn\wpn_crosshair_fn2000
+silencer_name                         = sil_nato
+grenade_launcher_name                 = wpn_addon_grenade_launcher_gl1
+
 scope_x                               = -15
 scope_y                               = 10
-scope_zoom_factor                     = 37.5
-3d_zoom_factor                        = 65
-3d_fov                                = 0.37
-scope_inertion_factor                 = 1.4
-shell_dir                             = 0.0, 1.0, 0.0
-shell_particles                       = weapons\556x45
-shell_point                           = -0.020000,0.186000,0.200000
+silencer_x                            = 228
+silencer_y                            = 14
+grenade_launcher_x                    = 124
+grenade_launcher_y                    = 5
+
+position                              = -0.026, -0.072, -0.15
+orientation                           = 0, 0, 0
+strap_bone0                           = bip01_spine2
+strap_bone1                           = bip01_spine1
+strap_orientation                     = -10,-5,10
+strap_position                        = -0.15,-0.35,0.27
+
+snd_silncer_shot                      = weapons\fn2000\silencer_fn2000_mono_far
+snd_shoot                             = weapons\fn2000\muzzle_fn2000_mono
+snd_shoot_grenade                     = weapons\m203_shoot_mono
+snd_reload                            = weapons\fn2000\fn2000_reload
+snd_reload_empty                      = weapons\fn2000\fn2000_reload_empty
+snd_reload_jammed                     = weapons\fn2000\fn2000_misfire
+snd_reload_grenade                    = weapons\fn2000\fn2000_gl_reload
+snd_empty                             = weapons\fn2000\fn2000_empty, 0.5
+snd_draw                              = weapons\assault_draw
+snd_holster                           = weapons\hide_afgmr
+snd_close                             = weapons\draw_silent
+snd_switch                            = weapons\fn2000\fn2000_gl_deactivate
+snd_shoot1                            = weapons\fn2000\muzzle_fn2000_mono1
+
 silencer_light_color                  = 0.6,0.5,0.3
 silencer_light_range                  = 0.01
 silencer_light_time                   = 0.2
 silencer_light_var_color              = 0.05
 silencer_light_var_range              = 0.5
-silencer_name                         = sil_nato
-silencer_smoke_particles              = weapons\generic_weapon_svu
-silencer_status                       = 2
-silencer_x                            = 228
-silencer_y                            = 14
-single_handed                         = 0
-slot                                  = 1
-smoke_particles                       = weapons\generic_weapon_machine_gun
-startup_ammo                          = 90
-strap_bone0                           = bip01_spine2
-strap_bone1                           = bip01_spine1
-strap_orientation                     = -10,-5,10
-strap_position                        = -0.15,-0.35,0.27
-time_to_aim                           = 1.0
-use_aim_bullet                        = false
-visual                                = dynamics\weapons\wpn_fn2000\wpn_fn2000.ogf
-zoom_cam_relax_speed                  = 5
-zoom_cam_relax_speed_ai               = 360
-zoom_cam_dispersion                   = 0.4
-zoom_cam_dispersion_inc               = 0.3
-zoom_cam_dispersion_frac              = 0.6
-zoom_cam_max_angle                    = 50.0
-zoom_cam_max_angle_horz               = 50.0
-zoom_cam_step_angle_horz              = 1.0
-zoom_enabled                          = true
-zoom_rotate_time                      = 6.5
-second_scope_zoom_factor              = 100
-second_aim_enabled                    = true
-second_aim_transition_time            = 6.5
-bone_to_gl_hide                       = handguard
-use_mag_scheme                        = true
-mag_bone_type_0                       = wpn_launcher_grenade_blue
-mag_bone_type_1                       = wpn_launcher_grenade_red
-ammochange_time                       = 0.1
-reload_time                           = 2.3
-reload_empty_time                     = 3.2
-reload_g_time                         = 2.1
-class                                 = WP_AK74
-icon_group                            = 2
-
-snd_shoot                             = weapons\fn2000\muzzle_fn2000_mono
-snd_shoot1                            = weapons\fn2000\muzzle_fn2000_mono1
-snd_silncer_shot                      = weapons\fn2000\silencer_fn2000_mono_far
-snd_bore                              = weapons\draw_silent
-snd_close                             = weapons\draw_silent
-snd_draw                              = weapons\assault_draw
-snd_holster                           = weapons\hide_afgmr
-snd_empty                             = weapons\fn2000\fn2000_empty, 0.5
-snd_reload                            = weapons\fn2000\fn2000_reload
-snd_reload_empty                      = weapons\fn2000\fn2000_reload_empty
-snd_reload_jammed                     = weapons\fn2000\fn2000_misfire
-snd_shoot_grenade                     = weapons\m203_shoot_mono
-snd_reload_grenade                    = weapons\fn2000\fn2000_gl_reload
-snd_switch                            = weapons\fn2000\fn2000_gl_deactivate
 
 [wpn_fn2000_hud]:hud_base
-aim_hud_offset_pos_16x9               = -0.067000,0.024500,-0.09
 aim_hud_offset_pos                    = -0.067000,0.024500,-0.09
-second_aim_hud_offset_pos             = 0.004300,-0.017700,-0.016801
-second_aim_hud_offset_pos_16x9        = 0.004300,-0.017700,-0.016801
-second_aim_hud_offset_rot             = 0,0,0
-second_aim_hud_offset_rot_16x9        = 0,0,0
-anm_bore                              = fn2000_idle_aim
+aim_hud_offset_pos_16x9               = -0.067000,0.024500,-0.09
+
+anm_show                              = fn2000_draw, draw
+anm_show_g                            = fn2000_g_draw, draw_g
+anm_show_w_gl                         = fn2000_wgl_draw, draw
 anm_hide                              = fn2000_holster
+anm_hide_g                            = fn2000_g_holster, idle_g
+anm_hide_w_gl                         = fn2000_wgl_holster
 anm_idle                              = fn2000_idle
 anm_idle_aim                          = fn2000_idle_aim
 anm_idle_aim_moving                   = fn2000_moving_aim
-anm_idle_moving_slow                  = fn2000_moving_slow
+anm_idle_g                            = fn2000_g_idle, idle_g
+anm_idle_g_aim                        = fn2000_g_idle_aim, idle_g
+anm_idle_g_aim_moving                 = fn2000_g_moving_aim, idle_g
 anm_idle_moving                       = fn2000_moving
 anm_idle_moving_crouch                = fn2000_crouch
-anm_reload                            = fn2000_reload, reload
-anm_reload_empty                      = fn2000_reload_empty, reload_empty
-anm_reload_jammed                     = fn2000_misfire, misfire
-anm_firemode                          = fn2000_firemode, firemode
-anm_shots                             = fn2000_shoot, shoot
-anm_shoot_aim                         = fn2000_shoot_scope, shoot
-anm_show                              = fn2000_draw, draw
-anm_idle_sprint_start                 = fn2000_sprint_start, sprint_start
-anm_idle_sprint                       = fn2000_sprint, sprint
-anm_idle_sprint_end                   = fn2000_sprint_end, sprint_end
-anm_idle_w_gl_aim_moving              = fn2000_wgl_moving_aim
-anm_show_w_gl                         = fn2000_wgl_draw, draw
-anm_hide_w_gl                         = fn2000_wgl_holster
-anm_idle_w_gl                         = fn2000_wgl_idle
+anm_idle_moving_crouch_g              = fn2000_g_crouch, idle_g
+anm_idle_moving_crouch_w_gl           = fn2000_wgl_crouch
+anm_idle_moving_g                     = fn2000_g_moving, idle_g
+anm_idle_moving_slow                  = fn2000_moving_slow
+anm_idle_moving_slow_g                = fn2000_g_moving_slow, idle_g
 anm_idle_moving_slow_w_gl             = fn2000_wgl_moving_slow
 anm_idle_moving_w_gl                  = fn2000_wgl_moving
-anm_shots_w_gl                        = fn2000_wgl_shoot, shoot
-anm_shots_w_gl_when_aim               = fn2000_wgl_shoot_scope, shoot
-anm_reload_w_gl                       = fn2000_wgl_reload, reload
-anm_reload_empty_w_gl                 = fn2000_wgl_reload_empty, reload_empty
-anm_reload_w_gl_misfire               = fn2000_wgl_misfire, misfire
-anm_idle_moving_crouch_w_gl           = fn2000_wgl_crouch
-anm_idle_w_gl_aim                     = fn2000_wgl_idle_aim
-anm_bore_w_gl                         = fn2000_wgl_idle_aim
-anm_firemode_w_gl                     = fn2000_wgl_firemode, firemode
+anm_idle_sprint                       = fn2000_sprint, sprint
+anm_idle_sprint_end                   = fn2000_sprint_end, sprint_end
+anm_idle_sprint_end_g                 = fn2000_sprint_g_end, sprint_end_g
+anm_idle_sprint_end_w_gl              = fn2000_sprint_w_gl_end, sprint_end
+anm_idle_sprint_g                     = fn2000_sprint_g, sprint_g
+anm_idle_sprint_start                 = fn2000_sprint_start, sprint_start
+anm_idle_sprint_start_g               = fn2000_sprint_g_start, sprint_start_g
 anm_idle_sprint_start_w_gl            = fn2000_sprint_w_gl_start, sprint_start
 anm_idle_sprint_w_gl                  = fn2000_sprint_w_gl, sprint
-anm_idle_sprint_end_w_gl              = fn2000_sprint_w_gl_end, sprint_end
+anm_idle_w_gl                         = fn2000_wgl_idle
+anm_idle_w_gl_aim                     = fn2000_wgl_idle_aim
+anm_idle_w_gl_aim_moving              = fn2000_wgl_moving_aim
+anm_bore                              = fn2000_idle_aim
+anm_bore_g                            = fn2000_g_idle_aim, idle_g
+anm_bore_w_gl                         = fn2000_wgl_idle_aim
+anm_shots                             = fn2000_shoot, shoot
+anm_shots_g                           = fn2000_g_shoot, shoot_g
+anm_shots_w_gl                        = fn2000_wgl_shoot, shoot
+anm_shots_w_gl_when_aim               = fn2000_wgl_shoot_scope, shoot
+anm_shoot_aim                         = fn2000_shoot_scope, shoot
+anm_reload                            = fn2000_reload, reload
+anm_reload_empty                      = fn2000_reload_empty, reload_empty
+anm_reload_empty_w_gl                 = fn2000_wgl_reload_empty, reload_empty
+anm_reload_g                          = fn2000_g_reload, reload_g
+anm_reload_jammed                     = fn2000_misfire, misfire
+anm_reload_w_gl                       = fn2000_wgl_reload, reload
+anm_reload_w_gl_misfire               = fn2000_wgl_misfire, misfire
+anm_firemode                          = fn2000_firemode, firemode
+anm_firemode_w_gl                     = fn2000_wgl_firemode, firemode
 anm_switch                            = fn2000_g_off, off_g
 anm_switch_g                          = fn2000_g_on, on_g
-anm_show_g                            = fn2000_g_draw, draw_g
-anm_hide_g                            = fn2000_g_holster, idle_g
-anm_idle_g                            = fn2000_g_idle, idle_g
-anm_reload_g                          = fn2000_g_reload, reload_g
-anm_idle_g_aim                        = fn2000_g_idle_aim, idle_g
-anm_shots_g                           = fn2000_g_shoot, shoot_g
-anm_idle_moving_g                     = fn2000_g_moving, idle_g
-anm_idle_moving_slow_g                = fn2000_g_moving_slow, idle_g
-anm_idle_moving_crouch_g              = fn2000_g_crouch, idle_g
-anm_idle_g_aim_moving                 = fn2000_g_moving_aim, idle_g
-anm_bore_g                            = fn2000_g_idle_aim, idle_g
-anm_idle_sprint_start_g               = fn2000_sprint_g_start, sprint_start_g
-anm_idle_sprint_g                     = fn2000_sprint_g, sprint_g
-anm_idle_sprint_end_g                 = fn2000_sprint_g_end, sprint_end_g
 anm_headlamp_on                       = fn2000_flash
-anm_gasmask                           = fn2000_clear
-anm_headlamp_on_w_gl                  = fn2000_flash_w_gl
-anm_gasmask_w_gl                      = fn2000_clear_w_gl
 anm_headlamp_on_g                     = fn2000_flash_g, idle_g
+anm_headlamp_on_w_gl                  = fn2000_flash_w_gl
+anm_gasmask                           = fn2000_clear
 anm_gasmask_g                         = fn2000_clear_g, idle_g
+anm_gasmask_w_gl                      = fn2000_clear_w_gl
+
 attach_place_idx                      = 0
 fire_bone                             = wpn_body
 fire_bone2                            = wpn_launcher
 fire_point                            = 0.000000,0.012600,0.337200
 fire_point2                           = 0.000000,-0.001100,0.262600
+
 gl_hud_offset_pos                     = -0.1061,0.005,0
-gl_hud_offset_pos_16x9                = -0.1061,0.005,0
 gl_hud_offset_rot                     = -0.0035,-0.011,0
+gl_hud_offset_pos_16x9                = -0.1061,0.005,0
 gl_hud_offset_rot_16x9                = -0.0035,-0.011,0
-hands_position                        = 0.008475,-0.025600,0.068000
+
 hands_position_16x9                   = 0.008475,-0.025600,0.068000
-hands_orientation                     = 0,0,0
 hands_orientation_16x9                = 0,0,0
-item_orientation                      = 0,0,0
+hands_position                        = 0.008475,-0.025600,0.068000
+hands_orientation                     = 0,0,0
 item_position                         = 0,0,0
+item_orientation                      = 0,0,0
 item_visual                           = dynamics\weapons\wpn_fn2000\wpn_fn2000_hud.ogf
-lean_hud_offset_pos                   = 0,0,0
-lean_hud_offset_rot                   = 0,0,0
+
 shell_bone                            = wpn_body
-shell_dir                             = 0.0, 1.0, 0.0
 shell_point                           = 0.055,0.034,0.19
+
 zoom_hide_crosshair                   = true
 
 [wpn_fn2000_nimble]:wpn_fn2000
-ammo_mag_size                         = 40
+min_radius                            = 0
+max_radius                            = 150
+
 cost                                  = 110000
-control_inertion_factor               = 1.2f
-description                           = st_wpn_fn2000_nimble_descr
-grenade_launcher_x                    = 121
-grenade_launcher_y                    = -11
-inv_grid_width                        = 5
-inv_grid_height                       = 2
-inv_grid_x                            = 42
-inv_grid_y                            = 26
+
+ammo_mag_size                         = 40
+
 inv_name                              = st_wpn_fn2000_nimble
 inv_name_short                        = st_wpn_fn2000_nimble
+description                           = st_wpn_fn2000_nimble_descr
+
 inv_weight                            = 3.8
-max_radius                            = 150
-min_radius                            = 0
-scope_status                          = 0
-scope_zoom_factor                     = 100
-silencer_x                            = 221
-silencer_y                            = -1
-second_aim_enabled                    = false
+inv_grid_height                       = 2
+inv_grid_width                        = 5
+inv_grid_x                            = 42
+inv_grid_y                            = 26
+
+control_inertion_factor               = 1.2f
+
 hud                                   = wpn_fn2000_nimble_hud
 visual                                = dynamics\weapons\wpn_fn2000\wpn_fn2000_nimble.ogf
 
+scope_status                          = 0
+scope_zoom_factor                     = 100
+
+silencer_x                            = 221
+silencer_y                            = -1
+grenade_launcher_x                    = 121
+grenade_launcher_y                    = -11
+
 [wpn_fn2000_nimble_hud]:wpn_fn2000_hud
 aim_hud_offset_pos                    = -0.067000,0.024500,-0.09
-aim_hud_offset_pos_16x9               = -0.067000,0.024500,-0.09
 aim_hud_offset_rot                    = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9               = -0.067000,0.024500,-0.09
 aim_hud_offset_rot_16x9               = 0.000000,0.000000,0.000000
 
-gl_hud_offset_pos                     = -0.1061,0.005,0
-gl_hud_offset_pos_16x9				  = -0.1061,0.005,0
-gl_hud_offset_rot					  = -0.0035,-0.011,0
-gl_hud_offset_rot_16x9	 			  = -0.0035,-0.011,0
-
+anm_shots_w_gl_when_aim               = fn2000_wgl_shoot_aim, shoot
+anm_shoot_aim                         = fn2000_shoot_aim, shoot
 anm_reload                            = fn2000_reload40, reload
 anm_reload_empty                      = fn2000_reload_empty40, reload_empty
-anm_reload_w_gl                       = fn2000_wgl_reload40, reload
 anm_reload_empty_w_gl                 = fn2000_wgl_reload_empty40, reload_empty
-anm_shoot_aim                         = fn2000_shoot_aim, shoot
-anm_shots_w_gl_when_aim               = fn2000_wgl_shoot_aim, shoot
+anm_reload_w_gl                       = fn2000_wgl_reload40, reload
+
+gl_hud_offset_pos                     = -0.1061,0.005,0
+gl_hud_offset_rot					  = -0.0035,-0.011,0
+gl_hud_offset_pos_16x9				  = -0.1061,0.005,0
+gl_hud_offset_rot_16x9	 			  = -0.0035,-0.011,0
+
 item_visual                           = dynamics\weapons\wpn_fn2000\wpn_fn2000_nimble_hud.ogf

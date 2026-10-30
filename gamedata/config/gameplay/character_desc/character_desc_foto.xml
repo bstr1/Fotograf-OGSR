@@ -241,7 +241,7 @@
 	        zheton = 1 \n
 			wpn_walther \n
 			ammo_9x19_pbp = 1 \n
-			wpn_abakan = 1, scope \n
+			wpn_abakan \n
 			ammo_5.45x39_ap = 2 \n
 			grenade_rgd5 = 1 \n
 			device_torch \n
@@ -281,7 +281,7 @@
 	        zheton = 1 \n
 			wpn_walther \n
 			ammo_9x19_pbp = 1 \n
-			wpn_abakan = 1, scope \n
+			wpn_abakan = 1 \n
 			ammo_5.45x39_ap = 2 \n
 			grenade_rgd5 = 1 \n
 			device_torch \n
@@ -318,8 +318,6 @@
 		<supplies>
 			[spawn] \n
 			zheton = 1 \n
-			wpn_mp5 \n
-			ammo_9x18_fmj \n
             wpn_abakan \n
             ammo_5.45x39_ap = 2 \n
 			device_torch \n
@@ -499,10 +497,8 @@
     <supplies>
       [spawn] \n
 	        zheton = 1 \n
-			wpn_mp5 \n
-			ammo_9x18_fmj \n
-			wpn_mp5 \n
-			ammo_9x19_fmj = 2 \n
+			wpn_ak74 \n
+			ammo_5.45x39_fmj = 2 \n
 			grenade_rgd5 = 1 \n
 			device_torch \n
 #include "gameplay\character_drugs.xml" \n
@@ -539,10 +535,8 @@
     <supplies>
       [spawn] \n
 	        hand_radio \n
-			wpn_mp5 \n
-			ammo_9x18_fmj \n
-			wpn_mp5 \n
-			ammo_9x19_fmj = 2 \n
+			wpn_ak74 \n
+			ammo_5.45x39_fmj = 2 \n
 			zheton = 1 \n
 			device_torch \n
 #include "gameplay\character_drugs.xml" \n
@@ -620,8 +614,6 @@
     <supplies>
       [spawn] \n
 	  zheton = 1 \n
-	  wpn_mp5 \n
-	  ammo_9x18_fmj \n
       wpn_groza \n
       ammo_9x39_pab9 = 2 \n
 	  grenade_rgd5 = 1 \n
@@ -663,10 +655,8 @@
     <supplies>
       [spawn] \n
 	  zheton = 1 \n
-	  wpn_mp5 \n
-	  ammo_9x18_fmj \n
-      wpn_ak74u \n
-      ammo_5.45x39_fmj = 2 \n
+      wpn_ak103 \n
+      ammo_7.62x39_fmj = 3 \n
 	  grenade_rgd5 = 1 \n
       device_torch \n
 #include "gameplay\character_drugs.xml" \n
@@ -706,8 +696,8 @@
       [spawn] \n
 	  vodka \n
 	  zheton \n
-	  wpn_mp5 \n
-	  ammo_9x18_fmj \n
+	  wpn_vpo101 \n
+	  ammo_7.62x39_fmj = 2 \n
 	  medkit_army \n
       device_torch \n
 #include "gameplay\character_drugs.xml" \n
@@ -755,8 +745,8 @@
       [spawn] \n
 	  vodka \n
 	  zheton \n
-	  wpn_mp5 \n
-	  ammo_9x18_fmj \n
+	  wpn_ak74 \n
+	  ammo_5.45x39_fmj = 2 \n
 	  medkit_army \n
       device_torch \n
 #include "gameplay\character_drugs.xml"
@@ -2403,7 +2393,7 @@
 			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_fmj \n
-            wpn_m700 \n
+            wpn_mp133 \n
 			ammo_12x70_buck = 2 \n
 			grenade_rgd5 = 1 \n
 			medkit = 1 \n
@@ -2442,9 +2432,9 @@
 		<supplies>
 			[spawn] \n
 			wpn_mp5 \n
-			ammo_9x18_fmj \n
-            wpn_m700 \n
-			ammo_12x70_buck = 2 \n
+			ammo_9x19_fmj \n
+            wpn_pm \n
+			ammo_9x18_fmj = 2 \n
 			grenade_rgd5 = 1 \n
 			medkit = 1 \n
 			device_torch \n
@@ -4393,8 +4383,8 @@
 		<supplies>
 			[spawn] \n
 			zheton = 1 \n
-			wpn_mp5 \n
-			ammo_9x19_fmj = 2 \n
+	        wpn_ak74 \n
+	        ammo_5.45x39_fmj = 2 \n
 			medkit_army = 1 \n
 			device_torch \n
 #include "gameplay\character_food.xml" \n
@@ -4486,8 +4476,6 @@
 		<crouch_type>0</crouch_type>
 		<supplies>
 			[spawn] \n
-			wpn_mp5 \n
-			ammo_9x18_fmj \n
 			wpn_sks = 1 \n
 			ammo_11.43x23_fmj = 2 \n
 			medkit_army = 1 \n
@@ -4773,7 +4761,7 @@
 			[spawn] \n
 			wpn_mp5 = 1 \n
 			ammo_9x18_fmj = 2 \n
-			wpn_m1891_30_scope = 1 \n
+			wpn_sks = 1 \n
 			ammo_7.62x54_7h1 = 1 \n
 			ammo_7.62x54_7h14 = 1 \n
 			ammo_7.62x54_7h1 = 1 \n

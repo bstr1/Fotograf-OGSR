@@ -1,177 +1,173 @@
 ;;;;;;;;;;;;;;;;;;;;;;;; wpn_hpsa ;;;;;;;;;;;;;;;;;;;;;;;;
 [wpn_hpsa]:weapon_immunities,weapon_probability,default_weapon_params
-ammo_class                            = ammo_9x19_fmj, ammo_9x19_pbp
-ammo_current                          = 78
-ammo_elapsed                          = 13
-ammo_limit                            = 91
-ammo_mag_size                         = 16
-animation_slot                        = 1
-bullet_speed                          = 360
-cam_relax_speed                       = 5
-cam_relax_speed_ai                    = 360
-cam_dispersion                        = 0.9
-cam_dispersion_inc                    = 0.9
-cam_dispersion_frac                   = 1.0
-cam_max_angle                         = 30.0
-cam_max_angle_horz                    = 14.0
-cam_step_angle_horz                   = 1.45
+GroupControlSection                   = spawn_group
 cform                                 = skeleton
-condition_shot_dec                    = 0.0015
-control_inertion_factor               = 1.0f
-cost                                  = 2000
-description                           = st_wpn_hpsa_descr
+class                                 = WP_PM
+min_radius                            = 0
+max_radius                            = 60
+
 ef_main_weapon_type                   = 0
 ef_weapon_type                        = 5
-fire_dispersion_base                  = 0.27
-fire_dispersion_condition_factor      = 15
-fire_distance                         = 60
-fire_modes                            = 1
-fire_point                            = 0.0, 0.133, 0.179
-flame_particles                       = weapons\new_effects\pistol_9x19
-grenade_launcher_status               = 0
-GroupControlSection                   = spawn_group
-hand_dependence                       = 1
-hit_type                              = fire_wound
-holder_fov_modifier                   = 1.00
+
 holder_range_modifier                 = 1.00
-hud                                   = wpn_hpsa_hud
+holder_fov_modifier                   = 1.00
+
+cost                                  = 2000
+
+ammo_elapsed                          = 13
+
+ammo_mag_size                         = 16
+fire_modes                            = 1
+
+flame_particles                       = weapons\new_effects\pistol_9x19
+smoke_particles                       = weapons\generic_weapon_pistols
+shell_particles                       = weapons\9x19
+silencer_smoke_particles              = weapons\generic_weapon_pistols_silencer
+
+ammo_class                            = ammo_9x19_fmj, ammo_9x19_pbp
+
+hand_dependence                       = 1
+single_handed                         = 1
+slot                                  = 1
+animation_slot                        = 1
+
+inv_name                              = st_wpn_hpsa
+inv_name_short                        = st_wpn_hpsa
+description                           = st_wpn_hpsa_descr
+
+inv_weight                            = 1.12
+icon_group                            = 2
 inv_grid_height                       = 1
 inv_grid_width                        = 2
 inv_grid_x                            = 20
 inv_grid_y                            = 7
-inv_name                              = st_wpn_hpsa
-inv_name_short                        = st_wpn_hpsa
-inv_weight                            = 1.12
-kill_msg_height                       = 23
-kill_msg_width                        = 35
-kill_msg_x                            = 126
-kill_msg_y                            = 154
-light_color                           = 0.6,0.5,0.3
-light_disabled                        = false
-light_range                           = 7.0
-light_time                            = 0.07
-light_var_color                       = 0.1
-light_var_range                       = 0.7
-max_radius                            = 60
-min_radius                            = 0
+
+fire_dispersion_base                  = 0.27
+control_inertion_factor               = 1.0f
+cam_relax_speed                       = 5
+cam_relax_speed_ai                    = 360
+cam_dispersion                        = 0.9
+cam_dispersion_inc                    = 0.9
+cam_max_angle                         = 30.0
+cam_max_angle_horz                    = 14.0
+cam_step_angle_horz                   = 1.45
+fire_dispersion_condition_factor      = 15
 misfire_probability                   = 0.005
-orientation                           = 0, 0, 0
+condition_shot_dec                    = 0.0015
+
 PDM_disp_base                         = 1.4
 PDM_disp_vel_factor                   = 1.1
 PDM_disp_accel_factor                 = 1.1
 PDM_disp_crouch                       = 1.0
 PDM_disp_crouch_no_acc                = 1.0
-ph_mass                               = 1
-position                              = -0.021, -0.085, 0.0
+
+hit_type                              = fire_wound
+fire_distance                         = 60
+bullet_speed                          = 360
 rpm                                   = 310
-rpm_empty_click                       = 200
-scheduled                             = off
-scope_status                          = 0
-shell_dir                             = 0.0, 0.0, 0.4
-shell_particles                       = weapons\9x19
+use_aim_bullet                        = false
+time_to_aim                           = 1.0
+fire_point                            = 0.0, 0.133, 0.179
 shell_point                           = 0.0, 0.133, 0.047
+
+hud                                   = wpn_hpsa_hud
+visual                                = dynamics\weapons\wpn_hpsa\wpn_hpsa.ogf
+light_color                           = 0.6,0.5,0.3
+light_range                           = 7.0
+light_var_color                       = 0.1
+light_var_range                       = 0.7
+light_time                            = 0.07
+light_disabled                        = false
+ph_mass                               = 1
+
+zoom_rotate_time                      = 6.5
+zoom_enabled                          = true
+
+scope_status                          = 0
+silencer_status                       = 0
+grenade_launcher_status               = 0
+silencer_name                         = sil_9x19
+
+silencer_x                            = 87
+silencer_y                            = -19
+
+position                              = -0.021, -0.085, 0.0
+orientation                           = 0, 0, 0
+
+snd_silncer_shot                      = weapons\hpsa\muzzle_hpsa_mono
+snd_shoot                             = weapons\hpsa\muzzle_hpsa_mono
+snd_reload                            = weapons\hpsa\hpsa_reload
+snd_reload_empty                      = weapons\hpsa\hpsa_reload_empty
+snd_reload_jammed                     = weapons\hpsa\hpsa_misfire
+snd_empty                             = weapons\hpsa\hpsa_empty
+snd_draw                              = weapons\assault_draw
+snd_holster                           = weapons\hide_p
+snd_close                             = weapons\draw_silent
+snd_shoot1                            = weapons\hpsa\muzzle_hpsa_mono1
+
 silencer_light_color                  = 0.6,0.5,0.3
 silencer_light_range                  = 0.01
 silencer_light_time                   = 0.2
 silencer_light_var_color              = 0.05
 silencer_light_var_range              = 0.5
-silencer_name                         = sil_9x19
-silencer_smoke_particles              = weapons\generic_weapon_pistols_silencer
-silencer_status                       = 0
-silencer_x                            = 87
-silencer_y                            = -19
-single_handed                         = 1
-slot                                  = 1
-smoke_particles                       = weapons\generic_weapon_pistols
-startup_ammo                          = 90
-time_to_aim                           = 1.0
-use_aim_bullet                        = false
-visual                                = dynamics\weapons\wpn_hpsa\wpn_hpsa.ogf
-zoom_cam_relax_speed                  = 10
-zoom_cam_relax_speed_ai               = 120.75
-zoom_cam_dispersion                   = 0.3
-zoom_cam_dispersion_inc               = 0.75
-zoom_cam_dispersion_frac              = 0.7
-zoom_cam_max_angle                    = 15.0
-zoom_cam_max_angle_horz               = 7.0
-zoom_cam_step_angle_horz              = 1.35
-zoom_enabled                          = true
-zoom_rotate_time                      = 6.5
-reload_time                           = 1.9
-reload_empty_time                     = 2.6
-class                                 = WP_PM
-icon_group                            = 2
-
-snd_shoot                             = weapons\hpsa\muzzle_hpsa_mono
-snd_shoot1                            = weapons\hpsa\muzzle_hpsa_mono1
-snd_silncer_shot                      = weapons\hpsa\muzzle_hpsa_mono
-snd_bore                              = weapons\draw_silent
-snd_close                             = weapons\draw_silent
-snd_draw                              = weapons\assault_draw
-snd_holster                           = weapons\hide_p
-snd_empty                             = weapons\hpsa\hpsa_empty
-snd_reload                            = weapons\hpsa\hpsa_reload
-snd_reload_empty                      = weapons\hpsa\hpsa_reload_empty
-snd_reload_jammed                     = weapons\hpsa\hpsa_misfire
 
 [wpn_hpsa_hud]:hud_base
 aim_hud_offset_pos                    = -0.0762001,0.0314,0
-aim_hud_offset_pos_16x9               = -0.0762001,0.0314,0
-
 aim_hud_offset_rot                    = -0.02325,0,0
+aim_hud_offset_pos_16x9               = -0.0762001,0.0314,0
 aim_hud_offset_rot_16x9               = -0.02325,0,0
 
-anm_bore                              = hpsa_idle_aim
-anm_bore_empty                        = hpsa_idle_aim, idle_empty
+anm_show                              = hpsa_draw
+anm_show_empty                        = hpsa_draw, idle_empty
 anm_hide                              = hpsa_holster
 anm_hide_empty                        = hpsa_holster, idle_empty
 anm_idle                              = hpsa_idle
 anm_idle_aim                          = hpsa_idle_aim
 anm_idle_aim_empty                    = hpsa_idle_aim, idle_empty
+anm_idle_aim_moving                   = hpsa_moving_aim
+anm_idle_aim_moving_empty             = hpsa_moving_aim, idle_empty
 anm_idle_empty                        = hpsa_idle, idle_empty
-anm_idle_moving_slow                  = hpsa_moving_slow
-anm_idle_moving_slow_empty            = hpsa_moving_slow, idle_empty
 anm_idle_moving                       = hpsa_moving
 anm_idle_moving_crouch                = hpsa_crouch
 anm_idle_moving_crouch_empty          = hpsa_crouch, idle_empty
 anm_idle_moving_empty                 = hpsa_moving, idle_empty
-anm_idle_aim_moving                   = hpsa_moving_aim
-anm_idle_aim_moving_empty             = hpsa_moving_aim, idle_empty
-anm_idle_sprint_start                 = hpsa_sprint_start
+anm_idle_moving_slow                  = hpsa_moving_slow
+anm_idle_moving_slow_empty            = hpsa_moving_slow, idle_empty
 anm_idle_sprint                       = hpsa_sprint
-anm_idle_sprint_end                   = hpsa_sprint_end
-anm_idle_sprint_start_empty           = hpsa_sprint_start, idle_empty
 anm_idle_sprint_empty                 = hpsa_sprint, idle_empty
+anm_idle_sprint_end                   = hpsa_sprint_end
 anm_idle_sprint_end_empty             = hpsa_sprint_end, idle_empty
+anm_idle_sprint_start                 = hpsa_sprint_start
+anm_idle_sprint_start_empty           = hpsa_sprint_start, idle_empty
+anm_bore                              = hpsa_idle_aim
+anm_bore_empty                        = hpsa_idle_aim, idle_empty
+anm_shots                             = hpsa_shoot, shoot
+anm_shot_l                            = hpsa_shoot, idle_empty
+anm_shoot_aim                         = hpsa_shoot_aim, shoot
 anm_reload                            = hpsa_reload, reload
 anm_reload_empty                      = hpsa_reload_empty, reload_empty
 anm_reload_jammed                     = hpsa_misfire, misfire
-anm_shot_l                            = hpsa_shoot, idle_empty
-anm_shots                             = hpsa_shoot, shoot
-anm_shoot_aim                         = hpsa_shoot_aim, shoot
-anm_show                              = hpsa_draw
-anm_show_empty                        = hpsa_draw, idle_empty
 anm_headlamp_on                       = hpsa_flash
-anm_gasmask                           = hpsa_clear
 anm_headlamp_on_empty                 = hpsa_flash, idle_empty
+anm_gasmask                           = hpsa_clear
 anm_gasmask_empty                     = hpsa_clear, idle_empty
+
 attach_place_idx                      = 0
 fire_bone                             = wpn_body
 fire_point                            = -0.005500,0.067100,0.260701
+
 gl_hud_offset_pos                     = 0,0,0
 gl_hud_offset_rot                     = 0,0,0
-hands_position                        = 0.000000,-0.077200,-0.008500
-hands_orientation                     = 0.0,0.0,0.0
+
 hands_position_16x9                   = 0.000000,-0.077200,-0.008500
 hands_orientation_16x9                = 0.0,0.0,0.0
-item_orientation                      = 0,0,0
+hands_position                        = 0.000000,-0.077200,-0.008500
+hands_orientation                     = 0.0,0.0,0.0
 item_position                         = 0,0,0
+item_orientation                      = 0,0,0
 item_visual                           = dynamics\weapons\wpn_hpsa\wpn_hpsa_hud.ogf
-lean_hud_offset_pos                   = 0,0,0
-lean_hud_offset_rot                   = 0,0,0
+
 shell_bone                            = wpn_body
 shell_point                           = 0.075,0.1,0.1
+
 zoom_hide_crosshair                   = true
-inertion_origin_aim_offset            = -0.03
-inertion_offset_LRUD_aim              = 0.01, 0.01, 0.01, 0.01
-inertion_offset_z                     = 0

@@ -1,233 +1,227 @@
 ;;;;;;;;;;;;;;;;;;;;;;;; wpn_p90 ;;;;;;;;;;;;;;;;;;;;;;;;
 [wpn_p90]:weapon_immunities,weapon_probability,default_weapon_params
-ammo_class                            = ammo_5.7x28_fmj
-ammo_current                          = 180
-ammo_elapsed                          = 30
-ammo_limit                            = 210
-ammo_mag_size                         = 50
-animation_slot                        = 8
-bullet_speed                          = 715
-cam_relax_speed                       = 5
-cam_relax_speed_ai                    = 120.75
-cam_dispersion                        = 0.6
-cam_dispersion_inc                    = 0.15
-cam_dispersion_frac                   = 0.9
-cam_max_angle                         = 50.0
-cam_max_angle_horz                    = 50.0
-cam_step_angle_horz                   = 1.2
+GroupControlSection                   = spawn_group
 cform                                 = skeleton
-condition_shot_dec                    = 0.0004
-control_inertion_factor               = 1.15f
-cost                                  = 35000
-description                           = st_wpn_p90_descr
+class                                 = WP_VAL
+min_radius                            = 0
+max_radius                            = 300
+
 ef_main_weapon_type                   = 2
 ef_weapon_type                        = 6
-fire_dispersion_base                  = 0.21
-fire_dispersion_condition_factor      = 10
-fire_distance                         = 250
-fire_modes                            = 1, -1
-fire_point                            = 0.0, 0.188, 0.392
-fire_point2                           = 0.0, 0.188, 0.392
-flame_particles                       = weapons\new_effects\p90
-grenade_class                         = ammo_vog-25
-grenade_flame_particles               = weapons\generic_weapon_svu
-grenade_launcher_name                 = 
-grenade_launcher_status               = 0
-grenade_launcher_x                    = 
-grenade_launcher_y                    = 
-GroupControlSection                   = spawn_group
-hand_dependence                       = 1
-hit_type                              = fire_wound
-holder_fov_modifier                   = 1.00
+
 holder_range_modifier                 = 1.00
-hud                                   = wpn_p90_hud
-hit_power                             = 1.05, 1.05, 1.05, 1.05
+holder_fov_modifier                   = 1.00
+
+cost                                  = 35000
+
+ammo_elapsed                          = 30
+
+ammo_mag_size                         = 50
+fire_modes                            = 1, -1
+
+flame_particles                       = weapons\new_effects\p90
+smoke_particles                       = weapons\generic_weapon_pistols
+grenade_flame_particles               = weapons\generic_weapon_svu
+shell_particles                       = weapons\556x45_p90
+silencer_smoke_particles              = weapons\generic_weapon_pistols_silencer
+
+ammo_class                            = ammo_5.7x28_fmj
+grenade_class                         = ammo_vog-25
+launch_speed                          = 0
+
+hand_dependence                       = 1
+single_handed                         = 0
+slot                                  = 1
+animation_slot                        = 8
+
+inv_name                              = st_wpn_p90
+inv_name_short                        = st_wpn_p90
+description                           = st_wpn_p90_descr
+
+inv_weight                            = 2.9
+icon_group                            = 2
 inv_grid_height                       = 2
 inv_grid_width                        = 4
 inv_grid_x                            = 42
 inv_grid_y                            = 14
-inv_name                              = st_wpn_p90
-inv_name_short                        = st_wpn_p90
-inv_weight                            = 2.9
-kill_msg_height                       = 23
-kill_msg_width                        = 56
-kill_msg_x                            = 72
-kill_msg_y                            = 82
-launch_speed                          = 0
-light_color                           = 0.6,0.5,0.3
-light_disabled                        = false
-light_range                           = 7.0
-light_time                            = 0.07
-light_var_color                       = 0.1
-light_var_range                       = 0.7
-max_radius                            = 300
-min_radius                            = 0
+
+fire_dispersion_base                  = 0.21
+control_inertion_factor               = 1.15f
+cam_relax_speed                       = 5
+cam_relax_speed_ai                    = 120.75
+cam_dispersion                        = 0.6
+cam_dispersion_inc                    = 0.15
+cam_max_angle                         = 50.0
+cam_max_angle_horz                    = 50.0
+cam_step_angle_horz                   = 1.2
+fire_dispersion_condition_factor      = 10
 misfire_probability                   = 0.005
-orientation                           = 0, -10, 0
+condition_shot_dec                    = 0.0004
+
 PDM_disp_base                         = 0.95
 PDM_disp_vel_factor                   = 1.6
 PDM_disp_accel_factor                 = 1.6
 PDM_disp_crouch                       = 0.95
 PDM_disp_crouch_no_acc                = 0.95
-ph_mass                               = 3
-position                              = -0.026, -0.140, -0.08
+
+hit_power                             = 1.05, 1.05, 1.05, 1.05
+hit_type                              = fire_wound
+fire_distance                         = 250
+bullet_speed                          = 715
 rpm                                   = 900
-rpm_empty_click                       = 200
-scheduled                             = off
+use_aim_bullet                        = false
+time_to_aim                           = 3.0
+fire_point                            = 0.0, 0.188, 0.392
+fire_point2                           = 0.0, 0.188, 0.392
+shell_point                           = 0.0, 0.188, 0.082
+
+hud                                   = wpn_p90_hud
+visual                                = dynamics\weapons\wpn_p90\wpn_p90.ogf
+light_color                           = 0.6,0.5,0.3
+light_range                           = 7.0
+light_var_color                       = 0.1
+light_var_range                       = 0.7
+light_time                            = 0.07
+light_disabled                        = false
+ph_mass                               = 3
+
+zoom_rotate_time                      = 6.5
+zoom_enabled                          = true
+
 scope_status                          = 2
+silencer_status                       = 2
+grenade_launcher_status               = 0
+scope_name                            = ac10632
+scope_names                           = ac10632, eot, microt1
+silencer_name                         = sil_p90
+grenade_launcher_name                 = 
+scope_respawn_ac10632                 = wpn_p90_ac10632
+scope_respawn_eot                     = wpn_p90_eot
+scope_respawn_microt1                 = wpn_p90_microt1
+
 scope_x                               = 121
 scope_y                               = -13
-shell_dir                             = 0.0, 1.0, 0.0
-shell_particles                       = weapons\556x45_p90
-shell_point                           = 0.0, 0.188, 0.082
+silencer_x                            = 152
+silencer_y                            = 25
+grenade_launcher_x                    = 
+grenade_launcher_y                    = 
+
+position                              = -0.026, -0.140, -0.08
+orientation                           = 0, -10, 0
+strap_bone0                           = bip01_spine2
+strap_bone1                           = bip01_spine1
+strap_orientation                     = -10,-5,10
+strap_position                        = -0.16,-0.36,0.15
+
+snd_silncer_shot                      = weapons\p90\mono\p90_silencer_mono_far
+snd_shoot                             = p90\muzzle_p90_mono
+snd_reload                            = weapons\p90\p90_reload
+snd_reload_empty                      = weapons\p90\p90_reload_empty
+snd_reload_jammed                     = weapons\p90\p90_misfire
+snd_empty                             = weapons\p90\p90_empty, 0.5
+snd_draw                              = weapons\assault_draw
+snd_holster                           = weapons\hide_fp
+snd_close                             = weapons\draw_silent
+snd_shoot1                            = p90\muzzle_p90_mono1
+
 silencer_light_color                  = 0.6,0.5,0.3
 silencer_light_range                  = 0.01
 silencer_light_time                   = 0.2
 silencer_light_var_color              = 0.05
 silencer_light_var_range              = 0.5
-silencer_name                         = sil_p90
-silencer_smoke_particles              = weapons\generic_weapon_pistols_silencer
-silencer_status                       = 2
-silencer_x                            = 152
-silencer_y                            = 25
-single_handed                         = 0
-slot                                  = 1
-smoke_particles                       = weapons\generic_weapon_pistols
-startup_ammo                          = 90
-strap_bone0                           = bip01_spine2
-strap_bone1                           = bip01_spine1
-strap_orientation                     = -10,-5,10
-strap_position                        = -0.16,-0.36,0.15
-time_to_aim                           = 3.0
-use_aim_bullet                        = false
-visual                                = dynamics\weapons\wpn_p90\wpn_p90.ogf
-zoom_cam_relax_speed                  = 5
-zoom_cam_relax_speed_ai               = 360
-zoom_cam_dispersion                   = 0.3
-zoom_cam_dispersion_inc               = 0.15
-zoom_cam_dispersion_frac              = 0.75
-zoom_cam_max_angle                    = 50.0
-zoom_cam_max_angle_horz               = 50.0
-zoom_cam_step_angle_horz              = 1.0
-zoom_enabled                          = true
-zoom_rotate_time                      = 6.5
-second_scope_zoom_factor              = 100
-second_aim_enabled                    = true
-second_aim_transition_time            = 6.5
-reload_time                           = 2.5
-reload_empty_time                     = 3.3
-class                                 = WP_VAL
-icon_group                            = 2
-scope_name                            = ac10632
-scope_names                           = ac10632, eot, microt1
-scope_respawn_ac10632                 = wpn_p90_ac10632
-scope_respawn_eot                     = wpn_p90_eot
-scope_respawn_microt1                 = wpn_p90_microt1
-
-snd_shoot                             = p90\muzzle_p90_mono
-snd_shoot1                            = p90\muzzle_p90_mono1
-snd_silncer_shot                      = weapons\p90\mono\p90_silencer_mono_far
-snd_bore                              = weapons\draw_silent
-snd_close                             = weapons\draw_silent
-snd_draw                              = weapons\assault_draw
-snd_holster                           = weapons\hide_fp
-snd_empty                             = weapons\p90\p90_empty, 0.5
-snd_reload                            = weapons\p90\p90_reload
-snd_reload_empty                      = weapons\p90\p90_reload_empty
-snd_reload_jammed                     = weapons\p90\p90_misfire
 
 [wpn_p90_hud]:hud_base
 aim_hud_offset_pos                    = -0.0696001,0.0214,-0.0925
-aim_hud_offset_pos_16x9               = -0.0696001,0.0214,-0.0925
-
-aim_hud_offset_rot_16x9               = 0,0,0
 aim_hud_offset_rot                    = 0,0,0
+aim_hud_offset_pos_16x9               = -0.0696001,0.0214,-0.0925
+aim_hud_offset_rot_16x9               = 0,0,0
 
-second_aim_hud_offset_pos             = 0.006400,0.021400,-0.110800
-second_aim_hud_offset_pos_16x9        = 0.006400,0.021400,-0.110800
-second_aim_hud_offset_rot             = 0,0,0
-second_aim_hud_offset_rot_16x9        = 0,0,0
-anm_bore                              = p90_idle_aim
 anm_show                              = p90_draw
 anm_hide                              = p90_holster
 anm_idle                              = p90_idle
 anm_idle_aim                          = p90_idle_aim
-anm_idle_moving_slow                  = p90_moving_slow
+anm_idle_aim_moving                   = p90_moving_aim
 anm_idle_moving                       = p90_moving
 anm_idle_moving_crouch                = p90_crouch
-anm_idle_aim_moving                   = p90_moving_aim
+anm_idle_moving_slow                  = p90_moving_slow
+anm_idle_sprint                       = p90_sprint
+anm_idle_sprint_end                   = p90_sprint_end
+anm_idle_sprint_start                 = p90_sprint_start
+anm_bore                              = p90_idle_aim
+anm_shots                             = p90_shoot, shoot
+anm_shoot_aim                         = p90_shoot_aim, shoot
 anm_reload                            = p90_reload, reload
 anm_reload_empty                      = p90_reload_empty, reload_empty
 anm_reload_jammed                     = p90_misfire, misfire
-anm_shots                             = p90_shoot, shoot
-anm_shoot_aim                         = p90_shoot_aim, shoot
 anm_firemode                          = p90_firemode
-anm_idle_sprint_start                 = p90_sprint_start
-anm_idle_sprint                       = p90_sprint
-anm_idle_sprint_end                   = p90_sprint_end
 anm_headlamp_on                       = p90_flash
 anm_gasmask                           = p90_clear
+
 attach_place_idx                      = 0
 fire_bone                             = wpn_body
 fire_bone2                            = wpn_body
 fire_point                            = 0.000000,0.011000,0.173100
 fire_point2                           = 0,0,0
+
 gl_hud_offset_pos                     = 0,0,0
-gl_hud_offset_pos_16x9                = 0,0,0
 gl_hud_offset_rot                     = 0,0,0
+gl_hud_offset_pos_16x9                = 0,0,0
 gl_hud_offset_rot_16x9                = 0,0,0
-hands_position                        = -0.028625,0.027275,-0.233324
+
 hands_position_16x9                   = -0.028625,0.027275,-0.233324
-hands_orientation                     = 0,0,0
 hands_orientation_16x9                = 0,0,0
-item_orientation                      = 0,0,0
+hands_position                        = -0.028625,0.027275,-0.233324
+hands_orientation                     = 0,0,0
 item_position                         = 0,0,0
+item_orientation                      = 0,0,0
 item_visual                           = dynamics\weapons\wpn_p90\wpn_p90_hud.ogf
-lean_hud_offset_pos                   = 0,0,0
-lean_hud_offset_rot                   = 0,0,0
+
 shell_bone                            = shell
-shell_dir                             = 0.0, 1.0, 0.0
 shell_point                           = 0,0,0
+
 zoom_hide_crosshair                   = true
 
 [wpn_p90_ac10632]:wpn_p90
 hud                                   = wpn_p90_ac10632_hud
 visual                                = dynamics\weapons\wpn_p90\wpn_p90_ac10632.ogf
+
 scope_name                            = ac10632
 scope_respawn                         = wpn_p90
 
 [wpn_p90_ac10632_hud]:wpn_p90_hud
-item_visual                           = dynamics\weapons\wpn_p90\wpn_p90_ac10632_hud.ogf
 aim_hud_offset_pos                    = -0.0693,-0.0098,-0.0925
-aim_hud_offset_pos_16x9               = -0.0693,-0.0098,-0.0925
-
 aim_hud_offset_rot                    = 0.000000, 0.000000, 0.000000
+aim_hud_offset_pos_16x9               = -0.0693,-0.0098,-0.0925
 aim_hud_offset_rot_16x9               = 0.000000, 0.000000, 0.000000
+
+item_visual                           = dynamics\weapons\wpn_p90\wpn_p90_ac10632_hud.ogf
 
 [wpn_p90_eot]:wpn_p90
 hud                                   = wpn_p90_eot_hud
 visual                                = dynamics\weapons\wpn_p90\wpn_p90_eot.ogf
+
 scope_name                            = eot
 scope_respawn                         = wpn_p90
 
 [wpn_p90_eot_hud]:wpn_p90_hud
-item_visual                           = dynamics\weapons\wpn_p90\wpn_p90_eot_hud.ogf
 aim_hud_offset_pos                    = -0.0697,-0.0112,-0.0925
-aim_hud_offset_pos_16x9               = -0.0697,-0.0112,-0.0925
-
 aim_hud_offset_rot                    = 0.000000, 0.000000, 0.000000
+aim_hud_offset_pos_16x9               = -0.0697,-0.0112,-0.0925
 aim_hud_offset_rot_16x9               = 0.000000, 0.000000, 0.000000
+
+item_visual                           = dynamics\weapons\wpn_p90\wpn_p90_eot_hud.ogf
 
 [wpn_p90_microt1]:wpn_p90
 hud                                   = wpn_p90_microt1_hud
 visual                                = dynamics\weapons\wpn_p90\wpn_p90_micro-t1.ogf
+
 scope_name                            = microt1
 scope_respawn                         = wpn_p90
 
 [wpn_p90_microt1_hud]:wpn_p90_hud
-item_visual                           = dynamics\weapons\wpn_p90\wpn_p90_micro-t1_hud.ogf
 aim_hud_offset_pos                    = -0.0691001,0.0046,-0.0925
-aim_hud_offset_pos_16x9               = -0.0691001,0.0046,-0.0925
-
 aim_hud_offset_rot                    = 0.000000, 0.000000, 0.000000
+aim_hud_offset_pos_16x9               = -0.0691001,0.0046,-0.0925
 aim_hud_offset_rot_16x9               = 0.000000, 0.000000, 0.000000
+
+item_visual                           = dynamics\weapons\wpn_p90\wpn_p90_micro-t1_hud.ogf

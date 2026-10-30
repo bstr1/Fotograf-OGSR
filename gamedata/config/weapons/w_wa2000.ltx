@@ -1,181 +1,177 @@
 ;;;;;;;;;;;;;;;;;;;;;;;; wpn_wa2000 ;;;;;;;;;;;;;;;;;;;;;;;;
 [wpn_wa2000]:weapon_immunities,weapon_probability,default_weapon_params
-ammo_class                            = ammo_300_win
-ammo_current                          = 60
-ammo_elapsed                          = 6
-ammo_limit                            = 70
-ammo_mag_size                         = 6
-animation_slot                        = 2
-bullet_speed                          = 987
-cam_relax_speed                       = 22
-cam_relax_speed_ai                    = 360
-cam_dispersion                        = 3.0
-cam_dispersion_inc                    = 2.5
-cam_dispersion_frac                   = 1.1
-cam_max_angle                         = 50.0
-cam_max_angle_horz                    = 50.0
-cam_step_angle_horz                   = 2.25
+GroupControlSection                   = spawn_group
 cform                                 = skeleton
-condition_shot_dec                    = 0.0006
-control_inertion_factor               = 1.4f
-cost                                  = 300000
-description                           = st_wpn_wa2000_descr
+class                                 = WP_SVD
+min_radius                            = 10
+max_radius                            = 150
+
 ef_main_weapon_type                   = 3
 ef_weapon_type                        = 11
-fire_dispersion_base                  = 0.05
-fire_dispersion_condition_factor      = 2.5
-fire_distance                         = 1000
-fire_modes                            = 1
-fire_point                            = 0.0, 0.128, 0.522
-fire_point2                           = 0.0, 0.128, 0.522
-flame_particles                       = weapons\new_effects\ak74
-grenade_launcher_status               = 0
-GroupControlSection                   = spawn_group
-hand_dependence                       = 1
-hit_type                              = fire_wound
-holder_fov_modifier                   = 1.00
+
 holder_range_modifier                 = 2.00
-hud                                   = wpn_wa2000_hud
+holder_fov_modifier                   = 1.00
+
+cost                                  = 300000
+
+ammo_elapsed                          = 6
+
+ammo_mag_size                         = 6
+fire_modes                            = 1
+
+flame_particles                       = weapons\new_effects\ak74
+smoke_particles                       = weapons\generic_weapon_riffle
+shell_particles                       = weapons\762x54
+silencer_smoke_particles              = weapons\generic_weapon_svu
+
+ammo_class                            = ammo_300_win
+
+hand_dependence                       = 1
+single_handed                         = 0
+slot                                  = 1
+animation_slot                        = 2
+
+inv_name                              = st_wpn_wa2000
+inv_name_short                        = st_wpn_wa2000
+description                           = st_wpn_wa2000_descr
+
+inv_weight                            = 7.7
+icon_group                            = 2
 inv_grid_height                       = 2
 inv_grid_width                        = 6
 inv_grid_x                            = 47
 inv_grid_y                            = 26
-inv_name                              = st_wpn_wa2000
-inv_name_short                        = st_wpn_wa2000
-inv_weight                            = 7.7
-kill_msg_height                       = 26
-kill_msg_width                        = 80
-kill_msg_x                            = 0
-kill_msg_y                            = 59
-light_color                           = 0.6,0.5,0.3
-light_disabled                        = false
-light_range                           = 7.0
-light_time                            = 0.07
-light_var_color                       = 0.1
-light_var_range                       = 0.7
-max_radius                            = 150
-min_radius                            = 10
+
+fire_dispersion_base                  = 0.05
+control_inertion_factor               = 1.4f
+cam_relax_speed                       = 22
+cam_relax_speed_ai                    = 360
+cam_dispersion                        = 3.0
+cam_dispersion_inc                    = 2.5
+cam_max_angle                         = 50.0
+cam_max_angle_horz                    = 50.0
+cam_step_angle_horz                   = 2.25
+fire_dispersion_condition_factor      = 2.5
 misfire_probability                   = 0.002
-orientation                           = 0, 0, 0
+condition_shot_dec                    = 0.0006
+
 PDM_disp_base                         = 1.1
 PDM_disp_vel_factor                   = 3.0
 PDM_disp_accel_factor                 = 5.0
 PDM_disp_crouch                       = 0.9
 PDM_disp_crouch_no_acc                = 0.8
-ph_mass                               = 8
-position                              = -0.026, -0.084, 0.0
+
+hit_type                              = fire_wound
+fire_distance                         = 1000
+bullet_speed                          = 987
 rpm                                   = 225
-rpm_empty_click                       = 200
-scheduled                             = off
-scope_zoom_factor                     = 6
-3d_zoom_factor                        = 65
+use_aim_bullet                        = false
+time_to_aim                           = 1.0
+fire_point                            = 0.0, 0.128, 0.522
+fire_point2                           = 0.0, 0.128, 0.522
+shell_point                           = 0.0, 0.128, 0.0
+
+hud                                   = wpn_wa2000_hud
+visual                                = dynamics\weapons\wpn_wa2000\wpn_wa2000.ogf
+light_color                           = 0.6,0.5,0.3
+light_range                           = 7.0
+light_var_color                       = 0.1
+light_var_range                       = 0.7
+light_time                            = 0.07
+light_disabled                        = false
+ph_mass                               = 8
+
+zoom_rotate_time                      = 6
+zoom_enabled                          = true
 scope_dynamic_zoom                    = on
-3d_fov                                = 0.06
-scope_inertion_factor                 = 3
+
 scope_status                          = 1
+silencer_status                       = 0
+grenade_launcher_status               = 0
+scope_zoom_factor                     = 6
+scope_inertion_factor                 = 3
 scope_texture                         = wpn\wpn_crosshair_wa2000
+silencer_name                         = wpn_addon_silencer
+
 scope_x                               = 60
 scope_y                               = -2
-shell_dir                             = 0.0, 0.0, 0.4
-shell_particles                       = weapons\762x54
-shell_point                           = 0.0, 0.128, 0.0
-silencer_name                         = wpn_addon_silencer
-silencer_smoke_particles              = weapons\generic_weapon_svu
-silencer_status                       = 0
 silencer_x                            = 224
 silencer_y                            = 13
-single_handed                         = 0
-slot                                  = 1
-smoke_particles                       = weapons\generic_weapon_riffle
-startup_ammo                          = 20
+
+position                              = -0.026, -0.084, 0.0
+orientation                           = 0, 0, 0
 strap_bone0                           = bip01_spine2
 strap_bone1                           = bip01_spine1
 strap_orientation                     = -15,-9,110
 strap_position                        = -0.26,-0.11,0.25
-time_to_aim                           = 1.0
-use_aim_bullet                        = false
-visual                                = dynamics\weapons\wpn_wa2000\wpn_wa2000.ogf
-zoom_cam_relax_speed                  = 24
-zoom_cam_relax_speed_ai               = 120.75
-zoom_cam_dispersion                   = 1.7
-zoom_cam_dispersion_inc               = 1.6
-zoom_cam_dispersion_frac              = 0.8
-zoom_cam_max_angle                    = 50.0
-zoom_cam_max_angle_horz               = 50.0
-zoom_cam_step_angle_horz              = 1.5
-zoom_enabled                          = true
-zoom_rotate_time                      = 6
-scope_zoom_steps                      = 5
-reload_time                           = 2.15
-reload_empty_time                     = 3.0
-class                                 = WP_SVD
-icon_group                            = 2
 
 snd_shoot                             = weapons\wa2000\wa2000_muzzle_mono
-snd_bore                              = weapons\draw_silent
-snd_close                             = weapons\draw_silent
-snd_draw                              = weapons\assault_draw
-snd_holster                           = weapons\hide_gw
-snd_empty                             = weapons\ak_empty, 0.5
 snd_reload                            = weapons\wa2000\wa2000_reload
 snd_reload_empty                      = weapons\wa2000\wa2000_reload_empty
 snd_reload_jammed                     = weapons\wa2000\wa2000_misfire
+snd_empty                             = weapons\ak_empty, 0.5
+snd_draw                              = weapons\assault_draw
+snd_holster                           = weapons\hide_gw
+snd_close                             = weapons\draw_silent
 
 [wpn_wa2000_hud]:hud_base
 aim_hud_offset_pos                    = -0.0706,0.0116,-0.0031
-aim_hud_offset_pos_16x9               = -0.0706,0.0116,-0.0031
 aim_hud_offset_rot                    = 0,0,0
+aim_hud_offset_pos_16x9               = -0.0706,0.0116,-0.0031
 aim_hud_offset_rot_16x9               = 0,0,0
-anm_bore                              = wa2000_idle_aim
-anm_bore_empty                        = wa2000_idle_aim, idle_empty
+
+anm_show                              = wa2000_draw, draw
+anm_show_empty                        = wa2000_draw, draw_empty
 anm_hide                              = wa2000_holster, hide
 anm_hide_empty                        = wa2000_holster, idle_empty
 anm_idle                              = wa2000_idle
-anm_idle_empty                        = wa2000_idle, idle_empty
 anm_idle_aim                          = wa2000_idle_aim
 anm_idle_aim_empty                    = wa2000_idle_aim, idle_empty
+anm_idle_aim_moving                   = wa2000_moving_aim
+anm_idle_aim_moving_empty             = wa2000_moving_aim, idle_empty
+anm_idle_empty                        = wa2000_idle, idle_empty
 anm_idle_moving                       = wa2000_moving, walk
-anm_idle_moving_empty                 = wa2000_moving, walk_empty
 anm_idle_moving_crouch                = wa2000_crouch, crouch
 anm_idle_moving_crouch_empty          = wa2000_crouch, crouch_empty
+anm_idle_moving_empty                 = wa2000_moving, walk_empty
+anm_idle_moving_slow                  = wa2000_moving_slow, walk_slow
+anm_idle_moving_slow_empty            = wa2000_moving_slow, walk_slow_empty
+anm_idle_sprint                       = wa2000_sprint, sprint
+anm_idle_sprint_empty                 = wa2000_sprint, sprint_empty
+anm_idle_sprint_end                   = wa2000_sprint_end, sprint_end
+anm_idle_sprint_end_empty             = wa2000_sprint_end, sprint_end_empty
+anm_idle_sprint_start                 = wa2000_sprint_start, sprint_start
+anm_idle_sprint_start_empty           = wa2000_sprint_start, sprint_start_empty
+anm_bore                              = wa2000_idle_aim
+anm_bore_empty                        = wa2000_idle_aim, idle_empty
+anm_shots                             = wa2000_shoot, shoot
+anm_shots_last                        = wa2000_shoot, shoot_last
+anm_shots_when_aim_last               = wa2000_shoot_scope, shoot_scope_last
+anm_shoot_aim                         = wa2000_shoot_scope, shoot_scope
 anm_reload                            = wa2000_reload, reload
 anm_reload_empty                      = wa2000_reload_empty, reload_empty
 anm_reload_jammed                     = wa2000_misfire, revival
-anm_shots                             = wa2000_shoot, shoot
-anm_shots_last                        = wa2000_shoot, shoot_last
-anm_shoot_aim                         = wa2000_shoot_scope, shoot_scope
-anm_shots_when_aim_last               = wa2000_shoot_scope, shoot_scope_last
-anm_show                              = wa2000_draw, draw
-anm_show_empty                        = wa2000_draw, draw_empty
-anm_idle_moving_slow                  = wa2000_moving_slow, walk_slow
-anm_idle_moving_slow_empty            = wa2000_moving_slow, walk_slow_empty
-anm_idle_aim_moving                   = wa2000_moving_aim
-anm_idle_aim_moving_empty             = wa2000_moving_aim, idle_empty
-anm_idle_sprint_start                 = wa2000_sprint_start, sprint_start
-anm_idle_sprint                       = wa2000_sprint, sprint
-anm_idle_sprint_end                   = wa2000_sprint_end, sprint_end
-anm_idle_sprint_start_empty           = wa2000_sprint_start, sprint_start_empty
-anm_idle_sprint_empty                 = wa2000_sprint, sprint_empty
-anm_idle_sprint_end_empty             = wa2000_sprint_end, sprint_end_empty
 anm_headlamp_on                       = wa2000_flash, flash
-anm_gasmask                           = wa2000_clear, clear
 anm_headlamp_on_empty                 = wa2000_flash, flash_empty
+anm_gasmask                           = wa2000_clear, clear
 anm_gasmask_empty                     = wa2000_clear, clear_empty
+
 attach_place_idx                      = 0
 fire_bone                             = wpn_body
 fire_point                            = 0.000000,0.025000,0.591802
+
 gl_hud_offset_pos                     = 0,0,0
 gl_hud_offset_rot                     = 0,0,0
-hands_position                        = -0.071000,0.030000,-0.507500
+
 hands_position_16x9                   = -0.071000,0.030000,-0.507500
-hands_orientation                     = 0,0,0
 hands_orientation_16x9                = 0,0,0
-item_orientation                      = 0,0,0
+hands_position                        = -0.071000,0.030000,-0.507500
+hands_orientation                     = 0,0,0
 item_position                         = 0,0,0
+item_orientation                      = 0,0,0
 item_visual                           = dynamics\weapons\wpn_wa2000\wpn_wa2000_hud
-lean_hud_offset_pos                   = 0,0,0
-lean_hud_offset_rot                   = 0,0,0
+
 shell_bone                            = shell
-shell_dir                             = 0.0, 1.0, 0.0
 shell_point                           = 0.06,0,-0.05
+
 zoom_hide_crosshair                   = true

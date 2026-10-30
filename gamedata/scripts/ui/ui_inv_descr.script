@@ -192,7 +192,7 @@ function CUIDescriptionWnd:OnMouseWheel(mode)
 	self.scroll_v:SetScrollPos(self.scrollPos)
 end
 
-function CUIDescriptionWnd:ShowProps(tbl, separator)
+function CUIDescriptionWnd:ShowProps(tbl, separator, no_indent)
 	local st
 	for i = 1, #tbl, 2 do
 		local a = tbl[i]
@@ -247,7 +247,9 @@ function CUIDescriptionWnd:ShowProps(tbl, separator)
 		self.addH = self.addH + st:GetHeight() + vert_interval
 	end
 
-	self:AddIndent(20)
+	if not no_indent then
+		self:AddIndent(20)
+	end
 end
 
 function CUIDescriptionWnd:ShowPropFromIni(tbl, separator, type)
@@ -410,7 +412,14 @@ function CUIDescriptionWnd:ShowDescription(item)
 	-- knife
 	elseif item:is_knife() then
 		local d = get_float(self.section, "fire_distance", 0.0)
-		self:ShowProps({{"fire_distance", game.translate_string("descr_knife_distance"), string.format("%.2f %s", d, game.translate_string("descr_meters")), {255, 255, 255, 255}}}, false)
+		self:ShowProps({{"fire_distance", game.translate_string("descr_knife_distance"), string.format("%.2f %s", d, game.translate_string("descr_meters")), {255, 255, 255, 255}}}, false, true)
+
+		local p1 = get_float(self.section, "hit_power", 0.0)
+		local p2 = get_float(self.section, "hit_power_2", 0.0)
+		if p1 > 0.0 then
+			local txt = p2 > 0.0 and string.format("%.2f | %.2f", p1, p2) or string.format("%.2f", p1)
+			self:ShowProps({{"hit_power", game.translate_string("descr_knife_power"), txt, {255, 255, 255, 255}}}, false)
+		end
 	-- grenade
 	elseif item:is_grenade() then
 		local fr = get_float(self.section, "frags_r", 0.0)
@@ -540,6 +549,13 @@ function CUIDescriptionWnd:ShowWeaponParams()
 			end
 			table.insert(params, {t.prop, t.text, txt, {255, 255, 255, 255}})
 		end
+	end
+
+	-- ресурс
+	local n = get_float(self.section, "condition_shot_dec", 0.0)
+	if n > 0.0 then
+		local txt = string.format("%d", math.floor(1.0 / n + 0.5))
+		table.insert(params, {"time", game.translate_string("descr_resource"), txt, color_default})
 	end
 
 	if #params > 0 then
@@ -707,6 +723,21 @@ function CUIDescriptionWnd:ShowOutfitParams()
 				table.insert(params, {t.prop, t.text, txt, val > 0 and color_green or color_red})
 			end
 		end
+	end
+
+	if get_float(self.section, "power_loss", 0.0) > 0.0 then
+		local obj = self.item:get_outfit()
+		local val = obj and obj.power_loss or get_float(self.section, "power_loss", 1.0)
+		local txt
+		if outfit and outfit:id() ~= self.item:id() then
+			local cur_obj = outfit:get_outfit()
+			local cur = cur_obj and cur_obj.power_loss or get_float(outfit:section(), "power_loss", 1.0)
+			local delta = (val - cur) * 100
+			txt = (val > 1.0 and "%c[red]" or "%c[green]") .. string.format("*%.0f%%", val * 100) .. "%c[gray2] | " .. (delta > 0 and "%c[red]+" or "%c[green]") .. string.format("%.0f%%", delta)
+		else
+			txt = (val > 1.0 and "%c[red]" or "%c[green]") .. string.format("*%.0f%%", val * 100)
+		end
+		table.insert(params, {"power", game.translate_string("ui_inv_power_loss"), txt, val > 1.0 and color_red or color_green})
 	end
 
 	if #params > 0 then

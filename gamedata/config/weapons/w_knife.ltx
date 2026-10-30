@@ -1,268 +1,293 @@
 [wpn_knife]:weapon_probability,default_weapon_params
-icon_group											= 2
-snd_close                                           = weapons\draw_silent
-snd_empty                                           = weapons\draw_silent
-snd_reload                                          = weapons\draw_silent
-snd_shoot				                            = weapons\knife\knife_1
-snd_shoot1				                            = weapons\knife\knife_2
-snd_shoot2				                            = weapons\knife\knife_3
+GroupControlSection                                 = spawn_group
+$spawn                                              = "weapons\knife"
 $npc                                                = off
 $prefetch                                           = 8
-$spawn                                              = "weapons\knife"
-ammo_class                                          = ammo_knife
-ammo_current                                        = 0
-ammo_elapsed                                        = 0
-ammo_limit                                          = 0
-ammo_mag_size                                       = 0
-ammo_mag_size_ui                                    = 0
-animation_slot                                      = 5
-use_31_cartridge								    = false
-bullet_speed                                        = 1000
-block_bore										    = false
-cam_relax_speed         						    = 8
-cam_dispersion          						    = 0.65
-cam_dispersion_inc								    = 0.0
-cam_dispersion_frac								    = 1.0
-cam_max_angle									    = 20.0
-cam_max_angle_horz								    = 10.0
-cam_step_angle_horz								    = 0.9
 cform                                               = skeleton
 class                                               = WP_KNIFE
-condition_queue_shot_dec                            = 0
-condition_shot_dec                                  = 0
-cost                                                = 500
-crosshair_inertion                                  = 0.01
-description                                         = st_knife_descr
-discovery_dependency                                = 
+min_radius                                          = 0
+max_radius                                          = 3
+
 ef_main_weapon_type                                 = 0
 ef_weapon_type                                      = 1
-fire_dispersion_base                                = 0.5
-fire_dispersion_condition_factor                    = 0
-fire_distance                                       = 1.7
-fire_point                                          = 0.0, 0.133, 0.161
-flame_particles                                     = 
-grenade_launcher_status                             = 0
-GroupControlSection                                 = spawn_group
-hand_dependence                                     = 1
-highlight_equipped                                  = true
-hit_impulse                                         = 10
-hit_impulse_2                                       = 50
-hit_power                                           = 1.0, 1.0, 1.0, 1.0
-hit_power_2                                         = 1.5, 1.5, 1.5, 1.5
-hit_power_critical_2                                = 0.0, 0.0, 0.0, 0.0
-hit_probability_gd_master                           = 0.80
-hit_probability_gd_novice                           = 0.80
-hit_probability_gd_stalker                          = 0.80
-hit_probability_gd_veteran                          = 0.80
-hit_type                                            = wound
-hit_type_2                                          = wound
-holder_fov_modifier                                 = 1.5
+
 holder_range_modifier                               = 1.0
-hud                                                 = wpn_knife_hud
-installed_upgrades                                  = 
+holder_fov_modifier                                 = 1.5
+
+cost                                                = 500
+weapon_class                                        = 
+
+ammo_elapsed                                        = 0
+
+ammo_mag_size                                       = 0
+ammo_mag_size_ui                                    = 0
+
+flame_particles                                     = 
+smoke_particles                                     = 
+shell_particles                                     = weapons\fake_shells
+
+ammo_class                                          = ammo_knife
+
+hand_dependence                                     = 1
+single_handed                                       = 1
+slot                                                = 0
+animation_slot                                      = 5
+block_bore										    = false
+
+inv_name                                            = st_knife
+inv_name_short                                      = st_knife
+description                                         = st_knife_descr
+
+inv_weight                                          = 0.28
+icon_group											= 2
 inv_grid_height                                     = 1
 inv_grid_width                                      = 2
 inv_grid_x                                          = 26
 inv_grid_y                                          = 33
-inv_name                                            = st_knife
-inv_name_short                                      = st_knife
-inv_weight                                          = 0.28
-kill_msg_height                                     = 16
-kill_msg_width                                      = 53
-kill_msg_x                                          = 197
-kill_msg_y                                          = 177
-light_disabled                                      = true
-max_radius                                          = 3
-min_radius                                          = 0
-misfire_end_condition                               = 0
-misfire_end_prob                                    = 0
+highlight_equipped                                  = true
+installed_upgrades                                  = 
+
+fire_dispersion_base                                = 0.5
+cam_relax_speed         						    = 8
+cam_dispersion          						    = 0.65
+cam_dispersion_inc								    = 0.0
+cam_max_angle									    = 20.0
+cam_max_angle_horz								    = 10.0
+cam_step_angle_horz								    = 0.9
+fire_dispersion_condition_factor                    = 0
 misfire_probability                                 = 0
-misfire_start_condition                             = 0
-misfire_start_prob                                  = 0
-orientation                                         = 0, 90, 0
-PDM_disp_accel_factor                               = 0.8
+condition_shot_dec                                  = 0
+use_condition                                       = false
+hit_probability_gd_novice                           = 0.80
+hit_probability_gd_stalker                          = 0.80
+hit_probability_gd_veteran                          = 0.80
+hit_probability_gd_master                           = 0.80
+
 PDM_disp_base                                       = 1.0
+PDM_disp_vel_factor                                 = 0.8
+PDM_disp_accel_factor                               = 0.8
 PDM_disp_crouch                                     = 1.0
 PDM_disp_crouch_no_acc                              = 1.0
-PDM_disp_vel_factor                                 = 0.8
-ph_mass                                             = 1
-position                                            = -0.021, -0.085, 0.024
-reload_dof                                          = 0.0, 0.5, 5, 1.7
+
+hit_power                                           = 3.1
+hit_power_2                                         = 3.2
+hit_power_critical_2                                = 0.0, 0.0, 0.0, 0.0
+hit_impulse                                         = 10
+hit_impulse_2                                       = 50
+hit_type                                            = wound
+hit_type_2                                          = wound
+fire_distance                                       = 2.3
+bullet_speed                                        = 1000
 rpm                                                 = 1000
-rpm_empty_click                                     = 1000
-scheduled                                           = off
-scope_status                                        = 0
-scopes 											    = none
-shell_dir                                           = 0.0, 0.0, 0.4
-shell_particles                                     = weapons\fake_shells
+use_aim_bullet                                      = false
+time_to_aim                                         = 1.0
+fire_point                                          = 0.0, 0.133, 0.161
 shell_point                                         = 0.0, 0.133, 0.047
+
+hud                                                 = wpn_knife_hud
+visual                                              = dynamics\weapons\wpn_knife\wpn_knife.ogf
 show_ammo                                           = false
+light_disabled                                      = true
+ph_mass                                             = 1
+
+reload_dof                                          = 0.0, 0.5, 5, 1.7
+zoom_enabled                                        = false
+
+scope_status                                        = 0
 silencer_status                                     = 0
-single_handed                                       = 1
-slot                                                = 0
-smoke_particles                                     = 
-spash1_dist                                         = 1.2
-spash1_radius                                       = 0.5
-spash2_dist                                         = 1.2
-spash2_radius                                       = 0.5
+grenade_launcher_status                             = 0
+scopes 											    = none
+
+position                                            = -0.021, -0.085, 0.024
+orientation                                         = 0, 90, 0
+
+snd_shoot				                            = weapons\knife\knife_1
+snd_reload                                          = weapons\draw_silent
+snd_empty                                           = weapons\draw_silent
+snd_close                                           = weapons\draw_silent
+snd_shoot1				                            = weapons\knife\knife_2
+snd_shoot2				                            = weapons\knife\knife_3
+
+splash_hit_divide_factor                            = 0.75
 splash1_direction                                   = 0.0, -0.3, 1.0
 splash1_hits_count                                  = 3
 splash1_pervictim_hcount                            = 1
 splash2_direction                                   = 0.0, 0.0, 1.0
 splash2_hits_count                                  = 2
-splash_hit_divide_factor                            = 0.75
-startup_ammo                                        = 0
-time_to_aim                                         = 1.0
-use_aim_bullet                                      = false
-use_condition                                       = false
-visual                                              = dynamics\weapons\wpn_knife\wpn_knife.ogf
-weapon_class                                        = 
+spash1_dist                                         = 1.2
+spash1_radius                                       = 0.5
+spash2_dist                                         = 1.2
+spash2_radius                                       = 0.5
+
 wm_size                                             = 0.10
-zoom_enabled                                        = false
 
 ;sprint_start_time 						 		    = 0.035
-
 
 [wpn_knife_hud]:hud_base
 aim_hud_offset_pos                                  = 0,0,0
 aim_hud_offset_rot                                  = 0,0,0
+
 anm_show										    = knife_draw
 anm_hide             							    = knife_holster
 anm_idle             							    = knife_idle
 anm_idle_aim									    = knife_idle
-anm_attack										    = knife_kick1
-anm_attack2 									    = knife_kick2
-anm_idle_moving_slow        					    = knife_moving_slow
 anm_idle_moving 								    = knife_moving
 anm_idle_moving_crouch							    = knife_crouch
+anm_idle_moving_slow        					    = knife_moving_slow
 anm_sprint_start         						    = knife_sprint_start
 anm_sprint_idle         						    = knife_sprint
 anm_sprint_end         						   	    = knife_sprint_end
 anm_bore										    = knife_bore
-
-
 anm_switch_device                                   = knife_flash
+anm_attack										    = knife_kick1
 anm_gasmask                                         = knife_clear
+anm_attack2 									    = knife_kick2
 
 attach_place_idx                                    = 0
 fire_bone                                           = knife
 fire_point                                          = 0,0,0
+
 gl_hud_offset_pos                                   = 0,0,0
 gl_hud_offset_rot                                   = 0,0,0
-hands_orientation                                   = 0,0,0
+
+hands_position_16x9                                 = 0.027700,-0.090925,0.024550
 hands_orientation_16x9                              = 0,0,0
 hands_position                                      = 0.027700,-0.090925,0.024550
-hands_position_16x9                                 = 0.027700,-0.090925,0.024550
+hands_orientation                                   = 0,0,0
 item_position									    = 0,0,0
 item_orientation								    = 0,0,0
 item_visual                                         = dynamics\weapons\wpn_knife\wpn_knife_hud.ogf
-lean_hud_offset_pos                                 = 0,0,0
-lean_hud_offset_rot                                 = 0,0,0
+
 shell_bone                                          = wpn_body
 shell_point                                         = 0,0,0
+
 zoom_hide_crosshair                                 = true
 
 [wpn_knife_m9]:wpn_knife
-snd_close                                           = weapons\draw_silent
-snd_empty                                           = weapons\draw_silent
-snd_reload                                          = weapons\draw_silent
 cost                                                = 1500
+
+inv_name                                            = st_knife_m9
+inv_name_short                                      = st_knife_m9
 description                                         = st_knife_m9_descr
-fire_distance                                       = 1.8
-hud                                                 = wpn_knife_m9_hud
+
+inv_weight                                          = 0.38
 inv_grid_height                                     = 1
 inv_grid_width                                      = 2
 inv_grid_x                                          = 28
 inv_grid_y                                          = 33
-inv_name                                            = st_knife_m9
-inv_name_short                                      = st_knife_m9
-inv_weight                                          = 0.38
-hit_power                                           = 1.1, 1.1, 1.1, 1.1
-hit_power_2                                         = 1.6, 1.6, 1.6, 1.6
+
+hit_power                                           = 3.3
+hit_power_2                                         = 3.4
+fire_distance                                       = 2.4
+
+hud                                                 = wpn_knife_m9_hud
+visual                                        	    = dynamics\weapons\wpn_knife\wpn_knife_m9.ogf
+
+snd_reload                                          = weapons\draw_silent
+snd_empty                                           = weapons\draw_silent
+snd_close                                           = weapons\draw_silent
+
 spash1_dist                                         = 1.25
 spash1_radius                                       = 0.55
 spash2_dist                                         = 1.25
 spash2_radius                                       = 0.55
-visual                                        	    = dynamics\weapons\wpn_knife\wpn_knife_m9.ogf
 
 [wpn_knife_m9_hud]:wpn_knife_hud
 item_visual                                         = dynamics\weapons\wpn_knife\wpn_knife_m9_hud.ogf
 
 [wpn_knife_ots04]:wpn_knife
-snd_close                                           = weapons\draw_silent
-snd_empty                                           = weapons\draw_silent
-snd_reload                                          = weapons\draw_silent
 cost                                                = 1800
+
+inv_name                                            = st_knife_ots04
+inv_name_short                                      = st_knife_ots04
 description                                         = st_knife_ots04_descr
-fire_distance                                       = 1.9
-hud                                                 = wpn_knife_ots04_hud
+
+inv_weight                                          = 0.4
 inv_grid_height                                     = 1
 inv_grid_width                                      = 2
 inv_grid_x                                          = 22
 inv_grid_y                                          = 2
-inv_name                                            = st_knife_ots04
-inv_name_short                                      = st_knife_ots04
-inv_weight                                          = 0.4
-hit_power                                           = 1.1, 1.1, 1.1, 1.1
-hit_power_2                                         = 1.6, 1.6, 1.6, 1.6
+
+hit_power                                           = 3.5
+hit_power_2                                         = 3.6
+fire_distance                                       = 2.5
+
+hud                                                 = wpn_knife_ots04_hud
+visual                                        	    = dynamics\weapons\wpn_knife\wpn_knife_ots04.ogf
+animator_sect 									    = harvest_wpn_knife_ots04
+
+snd_reload                                          = weapons\draw_silent
+snd_empty                                           = weapons\draw_silent
+snd_close                                           = weapons\draw_silent
+
 spash1_dist                                         = 1.3
 spash1_radius                                       = 0.6
 spash2_dist                                         = 1.3
 spash2_radius                                       = 0.6
-visual                                        	    = dynamics\weapons\wpn_knife\wpn_knife_ots04.ogf
-animator_sect 									    = harvest_wpn_knife_ots04
 
 [wpn_knife_ots04_hud]:wpn_knife_hud
 item_visual                                         = dynamics\weapons\wpn_knife\wpn_knife_ots04_hud.ogf
 
 [wpn_knife_extreme]:wpn_knife
-snd_close                                           = weapons\draw_silent
-snd_empty                                           = weapons\draw_silent
-snd_reload                                          = weapons\draw_silent
 cost                                                = 5000
+
+inv_name                                            = st_knife_extreme
+inv_name_short                                      = st_knife_extreme
 description                                         = st_knife_extreme_descr
-fire_distance                                       = 1.85
-hud                                                 = wpn_knife_extreme_hud
+
+inv_weight                                          = 0.375
 inv_grid_height                                     = 1
 inv_grid_width                                      = 2
 inv_grid_x                                          = 34
 inv_grid_y                                          = 36
-inv_name                                            = st_knife_extreme
-inv_name_short                                      = st_knife_extreme
-inv_weight                                          = 0.375
-hit_power                                           = 1.2, 1.2, 1.2, 1.2
-hit_power_2                                         = 2.01, 2.01, 2.01, 2.01
+
+hit_power                                           = 3.7
+hit_power_2                                         = 3.8
+fire_distance                                       = 2.6
+
+hud                                                 = wpn_knife_extreme_hud
+visual                                        	    = dynamics\weapons\wpn_knife\wpn_knife_extreme.ogf
+
+snd_reload                                          = weapons\draw_silent
+snd_empty                                           = weapons\draw_silent
+snd_close                                           = weapons\draw_silent
+
 spash1_dist                                         = 1.3
 spash1_radius                                       = 0.55
 spash2_dist                                         = 1.3
 spash2_radius                                       = 0.55
-visual                                        	    = dynamics\weapons\wpn_knife\wpn_knife_extreme.ogf
 
 [wpn_knife_extreme_hud]:wpn_knife_hud
 item_visual                                         = dynamics\weapons\wpn_knife\wpn_knife_extreme_hud.ogf
 
 [wpn_knife_km2000]:wpn_knife
-snd_close                                           = weapons\draw_silent
-snd_empty                                           = weapons\draw_silent
-snd_reload                                          = weapons\draw_silent
 cost                                                = 10000
+
+inv_name                                            = st_knife_km2000
+inv_name_short                                      = st_knife_km2000
 description                                         = st_knife_km2000_descr
-fire_distance                                       = 2
-hud                                                 = wpn_knife_km2000_hud
+
+inv_weight                                          = 0.35
 inv_grid_height                                     = 1
 inv_grid_width                                      = 2
 inv_grid_x                                          = 36
 inv_grid_y                                          = 36
-inv_name                                            = st_knife_km2000
-inv_name_short                                      = st_knife_km2000
-inv_weight                                          = 0.35
-hit_power                                           = 1.3, 1.3, 1.3, 1.3
-hit_power_2                                         = 2.11, 2.11, 2.11, 2.11
+
+hit_power                                           = 3.9
+hit_power_2                                         = 4
+fire_distance                                       = 2.7
+
+hud                                                 = wpn_knife_km2000_hud
+visual                                        	    = dynamics\weapons\wpn_knife\wpn_knife_km2000.ogf
+
+snd_reload                                          = weapons\draw_silent
+snd_empty                                           = weapons\draw_silent
+snd_close                                           = weapons\draw_silent
+
 spash1_dist                                         = 1.35
 spash1_radius                                       = 0.65
 spash2_dist                                         = 1.35
 spash2_radius                                       = 0.65
-visual                                        	    = dynamics\weapons\wpn_knife\wpn_knife_km2000.ogf
 
 [wpn_knife_km2000_hud]:wpn_knife_hud
 item_visual                                         = dynamics\weapons\wpn_knife\wpn_knife_km2000_hud.ogf
@@ -270,5 +295,4 @@ item_visual                                         = dynamics\weapons\wpn_knife
 ;[wpn_yknife]:wpn_knife
 ;hud                                                = wpn_yknife_hud
 ;parent_section  								    = wpn_yknife
-
 ;[wpn_yknife_hud]:wpn_knife_hud

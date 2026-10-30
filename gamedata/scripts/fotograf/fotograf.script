@@ -2609,11 +2609,11 @@ function spawn_bratok_dusha()
 end
 
 function glushak_have()
-	return new_dialog.item_much("wpn_addon_silencer",1) ~= false
+	return new_dialog.item_much("sil_9x19",1) ~= false
 end
 
 function glushak_otdal(first_speaker, second_speaker)
-	new_dialog.out_item_much("wpn_addon_silencer",1)
+	new_dialog.out_item_much("sil_9x19",1)
 	dialogs.relocate_item_section(second_speaker, "sguschenka", "in", 1)
 	dialogs.relocate_money(first_speaker, 1000,"in")
 end
