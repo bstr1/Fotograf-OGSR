@@ -5,7 +5,7 @@ Copyright © AMK TEAM 2007-2008
 
 ]]
 
-----------------
+local table_sort = table.sort
 local npc_spawner={}  --служебный массив, работает автоматически - не трогать шаловливыми русками
 
 local timers={}   --хранит реал-тайм таймеры
@@ -2479,3 +2479,8 @@ function get_ver()
 	return ver
 end
 
+-- функция сравнения для сортировки таймеров
+-- в конце таблицы таймеры с самым маленьким временем
+function timersSort(t1, t2)
+	return t1[2] > t2[2]
+end

@@ -60,14 +60,6 @@ function on_monster_use(victim, who)
 
 		-- archievements.acv_count_event("acv_gvdr", 500, "∆иводЄр")
 
-		local difficulty = level.get_game_difficulty()
-		if difficulty > 0 then
-			bind_stalker.hide_weapon()
-			amk.remove_timer("monster_parts")
-			amk.start_timer("monster_parts", difficulty * 2, 0)
-		end
-		-- process_wpn(knife)
-
 		local mbone = get_mbone_name(monster)
 		if mbone then
 			local h = hit()
