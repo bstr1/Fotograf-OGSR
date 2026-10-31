@@ -31,7 +31,6 @@ function off_corpses()
             end
             local wpn_name = obj:name()
             if (obj.parent_id and obj.parent_id == 65535 and not string.find(wpn_name, "_m1") and
-                not string.find(wpn_name, "_m2") and not string.find(wpn_name, "hunters_toz") and
                 not string.find(wpn_name, "wpn_knife") and not string.find(wpn_name, "wpn_binoc") and
                 not string.find(wpn_name, "wpn_flame") and not string.find(wpn_name, "wpn_ak103") and
                 not string.find(wpn_name, "wpn_svd") and not string.find(wpn_name, "wpn_abakan") and

@@ -6070,3 +6070,20 @@ end
 function kill_strelok()
     db.actor:kill(db.actor)
 end
+
+-- 4etkiu
+function havchik_vodka_have()
+return new_dialog.item_much("vodka",2) ~= false
+end
+
+function havchik_sguschenka_have()
+return new_dialog.item_much("sguschenka",1) ~= false
+end
+
+function havchik_gribki_have()
+return new_dialog.item_much("gribki",1) ~= false
+end
+
+function havchik_ogirki_have()
+return new_dialog.item_much("ogirki",1) ~= false
+end

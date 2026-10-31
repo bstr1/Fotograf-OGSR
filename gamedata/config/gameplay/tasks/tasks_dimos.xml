@@ -542,10 +542,27 @@
           <infoportion_fail>soldaty_enemy</infoportion_fail>
      </objective>
      <objective>
-          <text>Раздобыть для кладовщика: две бутылки водки, баночку сгущёнки, маринованные грибы и
-               банку солёных огурцов.</text>
+          <text>Добыть две бутылки водки.</text>
           <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
-          <function_complete>fotograf.havchik_have</function_complete>
+          <function_complete>fotograf.havchik_vodka_have</function_complete>
+          <infoportion_set_complete>havchik_have</infoportion_set_complete>
+     </objective>
+     <objective>
+          <text>Добыть баночку сгущёнки.</text>
+          <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
+          <function_complete>fotograf.havchik_sguschenka_have</function_complete>
+          <infoportion_set_complete>havchik_have</infoportion_set_complete>
+     </objective>
+     <objective>
+          <text>Добыть маринованные грибы.</text>
+          <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
+          <function_complete>fotograf.havchik_gribki_have</function_complete>
+          <infoportion_set_complete>havchik_have</infoportion_set_complete>
+     </objective>
+     <objective>
+          <text>Добыть банку солёных огурцов.</text>
+          <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
+          <function_complete>fotograf.havchik_ogirki_have</function_complete>
           <infoportion_set_complete>havchik_have</infoportion_set_complete>
      </objective>
      <objective>

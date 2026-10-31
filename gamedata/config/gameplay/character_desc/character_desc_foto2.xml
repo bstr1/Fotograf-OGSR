@@ -832,7 +832,7 @@
 		<supplies>
 			[spawn] \n
 			zheton = 1 \n
-			wpn_mp5_m1 \n
+			wpn_vector \n
 			ammo_9x19_fmj \n
 			device_torch \n
 #include "gameplay\character_items.xml" \n
@@ -894,7 +894,7 @@
 		<supplies>
 			[spawn] \n
 			zheton = 1 \n
-			wpn_mp5_m2 \n
+			wpn_mp5 \n
 			ammo_9x19_fmj \n
 			device_torch \n
 #include "gameplay\character_items.xml" \n
@@ -987,7 +987,7 @@
 		<supplies>
 			[spawn] \n
 			zheton = 1 \n
-			wpn_mp5_m1 \n
+			wpn_vector \n
 			ammo_9x19_fmj \n
 			device_torch \n
 #include "gameplay\character_items.xml" \n
@@ -1049,7 +1049,7 @@
 		<supplies>
 			[spawn] \n
 			zheton = 1 \n
-			wpn_mp5_m2 \n
+			wpn_mp5 \n
 			ammo_9x19_fmj \n
 			device_torch \n
 #include "gameplay\character_items.xml" \n

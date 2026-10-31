@@ -4631,7 +4631,7 @@
 		<crouch_type>1</crouch_type>
 		<supplies>
 			[spawn] \n
-			wpn_beretta_m1 \n
+			wpn_beretta \n
 			wpn_ak74u \n
 			ammo_5.45x39_fmj = 1 \n
 			device_torch \n
@@ -6354,7 +6354,7 @@
 			[spawn] \n
 			wpn_pb \n
 			ammo_9x18_fmj = 1 \n
-			wpn_ak74u_m1 \n
+			wpn_ak74u \n
 			ammo_5.45x39_fmj \n
 			device_torch \n
 			hand_radio \n
@@ -6387,7 +6387,7 @@
 
     <supplies>
       [spawn] \n
-      wpn_walther_m1 \n
+      wpn_walther \n
       ammo_9x18_pmm = 2 \n
       wpn_ak74 = 1\n
       ammo_5.45x39_ap \n

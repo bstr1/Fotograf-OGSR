@@ -1582,7 +1582,6 @@ quest_section["bad_psy_helmet"]   = true
 quest_section["decoder"]      = true
 quest_section["dynamite"]     = true
 quest_section["quest_case_01"]    = true
-quest_section["hunters_toz"]    = true
 quest_section["bar_ecolog_flash"] = true
 quest_section["bar_tiran_pda"]    = true
 quest_section["bar_lucky_pda"]    = true

@@ -85,7 +85,7 @@ zoom_rotate_time                      = 6.5
 zoom_enabled                          = true
 scope_dynamic_zoom                    = on
 
-scope_status                          = 0
+scope_status                          = 1
 silencer_status                       = 0
 grenade_launcher_status               = 0
 scope_zoom_factor                     = 7.5
@@ -170,72 +170,3 @@ shell_bone                            = wpn_body
 shell_point                           = 0,0,0
 
 zoom_hide_crosshair                   = true
-
-[wpn_gauss_comp]:wpn_gauss
-cost                                  = 450000
-
-inv_name                              = st_wpn_gauss_comp
-inv_name_short                        = st_wpn_gauss_comp
-description                           = st_wpn_gauss_comp_descr
-
-inv_weight                            = 5.0
-inv_grid_height                       = 2
-inv_grid_width                        = 6
-inv_grid_x                            = 46
-inv_grid_y                            = 28
-
-fire_dispersion_base                  = 0.005
-control_inertion_factor               = 1.35f
-misfire_probability                   = 0.005
-condition_shot_dec                    = 0.0012
-
-rpm                                   = 45
-
-hud                                   = wpn_gauss_comp_hud
-visual                                = dynamics\weapons\wpn_gauss\wpn_gauss_comp.ogf
-
-scope_zoom_factor                     = 4.3
-scope_inertion_factor                 = 2.5
-
-[wpn_gauss_comp_hud]:wpn_gauss_hud
-anm_show_mui                          = gauss_draw, gauss_mui_draw
-anm_show_mui_empty                    = gauss_draw, gauss_mui_draw_empty
-anm_hide_mui                          = gauss_hide, idle_mui
-anm_hide_mui_empty                    = gauss_hide, idle_mui_empty
-anm_idle_aim_moving_mui               = gauss_aim_walk, idle_mui
-anm_idle_aim_moving_mui_empty         = gauss_aim_walk, idle_mui_empty
-anm_idle_aim_mui                      = gauss_idle_aim, idle_mui
-anm_idle_aim_mui_empty                = gauss_idle_aim, idle_mui_empty
-anm_idle_moving_crouch_mui            = gauss_walk_down, idle_mui
-anm_idle_moving_crouch_mui_empty      = gauss_walk_down, idle_mui_empty
-anm_idle_moving_mui                   = gauss_walk, idle_mui
-anm_idle_moving_mui_empty             = gauss_walk, idle_mui_empty
-anm_idle_moving_slow_mui              = gauss_walk_slow, idle_mui
-anm_idle_moving_slow_mui_empty        = gauss_walk_slow, idle_mui_empty
-anm_idle_mui                          = gauss_idle, idle_mui
-anm_idle_mui_empty                    = gauss_idle, idle_mui_empty
-anm_idle_sprint_empty_mui             = gauss_sprint, idle_mui_empty
-anm_idle_sprint_end_empty_mui         = gauss_sprint_end, idle_mui_empty
-anm_idle_sprint_end_mui               = gauss_sprint_end, idle_mui
-anm_idle_sprint_mui                   = gauss_sprint, idle_mui
-anm_idle_sprint_start_empty_mui       = gauss_sprint_start, idle_mui_empty
-anm_idle_sprint_start_mui             = gauss_sprint_start, idle_mui
-anm_bore_mui                          = gauss_idle_aim, idle_mui
-anm_bore_mui_empty                    = gauss_idle_aim, idle_mui_empty
-anm_shots_mui                         = gauss_shoot, gauss_shoot_mui
-anm_shots_mui_last                    = gauss_shoot, gauss_shoot_mui_empty
-anm_shots_when_aim_mui                = gauss_shoot_scope, gauss_shoot_mui
-anm_shots_when_aim_mui_last           = gauss_shoot_scope, gauss_shoot_mui_empty
-anm_reload_jammed_mui                 = gauss_revival, gauss_revival_mui
-anm_reload_mui                        = gauss_reload, gauss_reload_mui
-anm_reload_mui_empty                  = gauss_reload, gauss_reload_mui_empty
-anm_headlamp_on_mui                   = gauss_flash, idle_mui
-anm_headlamp_on_mui_empty             = gauss_flash, idle_mui_empty
-anm_gasmask_mui                       = gauss_clear, idle_mui
-anm_gasmask_mui_empty                 = gauss_clear, idle_mui_empty
-anm_off_mui                           = gauss_mui_off, gauss_mui_off
-anm_off_mui_empty                     = gauss_mui_off, gauss_mui_off_empty
-anm_on_mui                            = gauss_mui_on, gauss_mui_on
-anm_on_mui_empty                      = gauss_mui_on, gauss_mui_on_empty
-
-item_visual                           = dynamics\weapons\wpn_gauss\wpn_gauss_comp_hud.ogf

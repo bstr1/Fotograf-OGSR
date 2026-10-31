@@ -22,7 +22,7 @@ local solid_list = {
     experienced_section = { -- Аммуниция--
     "grenade_rgd5", "grenade_gd-05", "grenade_f1", "ammo_9x19_pbp", "ammo_9x18_pmm", "ammo_5.45x39_fmj",
     "ammo_11.43x23_fmj", "ammo_5.56x45_ss190", -- Пушки--
-    "wpn_addon_scope", "wpn_mp5", "wpn_ak74u", "wpn_ak74u_m1", "wpn_walther", -- Прочее--
+    "wpn_addon_scope", "wpn_mp5", "wpn_ak74u", "wpn_ak74u", "wpn_walther", -- Прочее--
     "mutant_dog_tail", "mutant_boar_leg", "kolbasa", "medkit", "antirad", "energy_drink", "conserva"},
 
     veteran_section = { -- Аммуниция--

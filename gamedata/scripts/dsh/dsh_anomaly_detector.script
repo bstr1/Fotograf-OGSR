@@ -7,7 +7,7 @@ local excluded_npc = {
 }
 
 local invisible_npc = {
-    -- квестовые NPC: зоны не бьют (visible_for_zones=false, см. _g.script) и детектор аномалий выключен
+    -- зоны не бьют и аномалии выключены
     ["dunya"] = true,
     ["stalker_zub"] = true,
     ["stalker_sniper"] = true,

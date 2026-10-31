@@ -3954,7 +3954,7 @@
 		<supplies>
 			[spawn] \n
 			zheton = 1 \n
-			wpn_fort_m1 \n
+			wpn_fort_snag \n
 			ammo_9x18_fmj \n
 			device_torch \n
 #include "gameplay\character_food.xml" \n
@@ -4931,7 +4931,7 @@
 			[spawn] \n
 			wpn_vector = 1 \n
 			ammo_11.43x23_hydro = 2 \n
-			wpn_val_m1 = 1 \n
+			wpn_val_nimble = 1 \n
 			ammo_9x39_pab9 = 2 \n
 			medkit_scientic = 1 \n
 			#include "gameplay\character_items.xml"

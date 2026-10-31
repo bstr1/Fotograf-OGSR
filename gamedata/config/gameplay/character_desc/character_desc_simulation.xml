@@ -3040,7 +3040,7 @@
 			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_fmj \n	
-			wpn_abakan_m1 = 1 \n
+			wpn_ak12 = 1 \n
 			ammo_5.45x39_fmj = 1 \n
 			device_torch \n
 #include "gameplay\character_items.xml"\n
@@ -3076,7 +3076,7 @@
 			[spawn] \n
 			wpn_usp  \n
 			ammo_11.43x23_hydro = 1 \n
-			wpn_sig_m2 \n
+			wpn_sig550_luckygun \n
 			ammo_5.56x45_ap = 1 \n
 #include "gameplay\character_items.xml"	\n
 #include "gameplay\character_food.xml" \n
@@ -3108,7 +3108,7 @@
 			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_fmj \n
-			wpn_l85_m1 \n
+			wpn_scarh \n
 			ammo_5.56x45_ap = 1 \n
 			device_torch \n
 #include "gameplay\character_items.xml"\n
@@ -3142,7 +3142,7 @@
 			[spawn] \n
 			wpn_pb \n
 			ammo_9x18_pmm = 1 \n
-			wpn_mp5_m2 \n
+			wpn_mp5 \n
 			ammo_9x19_pbp = 1\n
 			device_torch \n
 #include "gameplay\character_drugs.xml"
@@ -3175,7 +3175,7 @@
 			[spawn] \n
 			wpn_usp  \n
 			ammo_11.43x23_hydro = 1 \n
-			wpn_winchester_m1 = 1 \n
+			wpn_wincheaster1300_trapper = 1 \n
 			ammo_12x76_dart = 1 \n
 			device_torch \n
 #include "gameplay\character_items.xml"\n
@@ -3272,7 +3272,7 @@
 			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_fmj \n		
-			wpn_spas12_m1 \n
+			wpn_spas12_nimble \n
 			ammo_12x76_zhekan = 1 \n
 			ammo_12x70_buck = 1 \n
 			device_torch \n
@@ -3304,7 +3304,7 @@
 			[spawn] \n
 			wpn_usp  \n
 			ammo_11.43x23_hydro = 1 \n
-			wpn_groza_m1 \n
+			wpn_groza_nimble \n
 			ammo_5.45x39_ap = 1 \n
 			ammo_vog-25 = 2 \n
 #include "gameplay\character_items.xml"	\n
@@ -3335,7 +3335,7 @@
 		<crouch_type>-1</crouch_type>
 		<supplies>
 			[spawn] \n
-			wpn_colt_m1 \n
+			wpn_colt1911 \n
 			ammo_11.43x23_hydro \n
 			wpn_abakan \n
 			ammo_5.45x39_fmj = 1 \n
@@ -3370,7 +3370,7 @@
 			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_fmj \n
-			wpn_l85_m2 \n
+			wpn_scarh \n
 			ammo_5.56x45_ap = 1 \n
 			device_torch \n
 #include "gameplay\character_items.xml"\n
@@ -3440,7 +3440,7 @@
 			[spawn] \n
 			wpn_usp \n
 			ammo_11.43x23_hydro = 1 \n
-			wpn_sig_m2 \n
+			wpn_sig550_luckygun \n
 			ammo_5.56x45_ap = 1 \n
 #include "gameplay\character_items.xml"	\n
 #include "gameplay\character_food.xml" \n
@@ -3506,7 +3506,7 @@
 			[spawn] \n
 			wpn_walther \n
 			ammo_9x19_fmj \n
-			wpn_abakan_m2 \n		
+			wpn_ak12 \n		
 			ammo_5.45x39_ap = 1 \n
 			device_torch \n
 #include "gameplay\character_items.xml"			
