@@ -478,30 +478,6 @@ local a
   if select_string=="brown_dva_wait" then
     fotograf.sms_brown_dva()
   end
-  if select_string=="sms_solomon" then
-    braad_test.sms_solomon()
-  end 
-  if select_string=="sms_new" then
-    braad_test.sms_new()
-  end
-  if select_string=="sms_doc" then
-    braad_test.sms_doc()
-  end
-  if select_string=="mono_prizrak_spawn" then
-    braad_test.mono_prizrak_spawn()
-  end
-  if select_string=="bes_zasada" then
-    braad_test.bes_zasada()
-  end
-  if select_string=="spawn_military_tech" then
-    braad_test.spawn_military_tech()
-  end
-  if select_string=="sms_sidr" then
-    braad_test.sms_sidr()
-  end
-  if select_string=="prizrak_pda" then
-    braad_test.prizrak_pda()
-  end
   if select_string=="show_news" then
     mod_call("show_news")
   end
@@ -604,8 +580,6 @@ local a
 		if math.random(1,100) > 50 then
 			npc:set_character_community(npc_com)
 			npc:set_relation(game_object.enemy, db.actor)
-		else
-			braad_test.custom_change_mono(npc)
 		end
 	end
 end

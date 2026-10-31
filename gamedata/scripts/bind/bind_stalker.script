@@ -299,7 +299,6 @@ function actor_binder:article_callback(npc, group, name)
 end
 ----------------------------------------------------------------------------------------------------------------------
 function actor_binder:on_item_take(obj)
-    fotograf_correct_addon.visual_fix(obj)
     level_tasks.proceed(self.object)
     -- game_stats.update_take_item (obj, self.object)
     local item = obj

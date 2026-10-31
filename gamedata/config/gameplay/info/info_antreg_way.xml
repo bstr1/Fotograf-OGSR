@@ -884,23 +884,6 @@
     id="peschera_door_unlock"></info_portion>
 <info_portion id="start_peschera_monstry"></info_portion>
 
-<!-- monolit_brat -->
-<info_portion
-    id="monolit_brat_spawn">
-    <action>garry_object.spawn_brat_monolit</action>
-    <action>anomalia_spawn.spawn_monolit_zone</action>
-    <action>braad_test.create_kristall_restr</action>
-    <action>anomalia_spawn.spawn_zharka1</action>
-    <action>anomalia_spawn.spawn_zharka2</action>
-    <action>anomalia_spawn.spawn_zharka3</action>
-    <action>anomalia_spawn.spawn_zharka4</action>
-    <action>anomalia_spawn.spawn_zharka5</action>
-    <action>anomalia_spawn.spawn_zharka6</action>
-    <action>anomalia_spawn.spawn_zharka7</action>
-    <action>anomalia_spawn.spawn_zharts</action>
-    <action>braad_test.create_monolit_restr</action>
-</info_portion>
-
 <info_portion id="totaliz"></info_portion>
 
 <info_portion id="usa_spawn">
@@ -933,8 +916,7 @@
 </info_portion>
 
 <!-- usa -->
-<info_portion
-    id="sidor_one_dialog_start">
+<info_portion id="sidor_one_dialog_start">
     <task>sidor_cognak</task>
 </info_portion>
 <info_portion id="smith_start_dialog_start"></info_portion>
@@ -1003,14 +985,6 @@
 <info_portion id="maroder_enemy">
     <action>antreg.enemy_maroder</action>
 </info_portion>
-
-<info_portion id="chek_mesto"></info_portion>
-<info_portion id="chek_mesto2"></info_portion>
-
-<info_portion id="nato_enemy">
-    <action>esc_graf.sound_mir_alarm</action>
-</info_portion>
-
 
 <!-- fotograf -->
 <info_portion
