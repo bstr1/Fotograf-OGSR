@@ -323,9 +323,6 @@
 <actor_dialog>doctor_nach_dialog</actor_dialog>
 <actor_dialog>doctor_one_dialog</actor_dialog>
 <actor_dialog>doctor_vstrecha_dialog</actor_dialog>
-<actor_dialog>doctor_about_change</actor_dialog>
-<actor_dialog>doctor_change</actor_dialog>
-
 </specific_character>
 
 <!---------------------------swamp_trader---------------------->

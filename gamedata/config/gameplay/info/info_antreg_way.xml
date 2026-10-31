@@ -6,6 +6,9 @@
     <action>fotograf.enemy_soldaty</action>
 </info_portion>
 
+<info_portion id="doctor_vstrecha_start"></info_portion>
+<info_portion id="doctor_one_start"></info_portion>
+
 <info_portion id="rus_btr_killed">
     <action>fotograf.enemy_usa</action>
 </info_portion>

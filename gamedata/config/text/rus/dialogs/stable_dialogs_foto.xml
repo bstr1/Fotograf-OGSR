@@ -1,4 +1,48 @@
-  <string id="dron_start_dialog_0">
+<string id="doctor_vstrecha_dialog_0">
+  <text>Здравствуйте, Доктор!</text>
+</string>
+<string id="doctor_vstrecha_dialog_1">
+  <text>Приветствую, молодой человек. Кто вы и какими судьбами забрели в наши края?</text>
+</string>
+<string id="doctor_vstrecha_dialog_2">
+  <text>Меня называют Фотографом. Занесла меня сюда к Вам на Болота "нелёгкая".</text>
+</string>
+
+<string id="doctor_one_dialog_0">
+  <text>Доктор, скажите, я случайно не сошёл с ума?</text>
+</string>
+<string id="doctor_one_dialog_1">
+  <text>А что такое случилось?</text>
+</string>
+<string id="doctor_one_dialog_2">
+  <text>Чего-то я не пойму, что у вас тут творится... В Вашем доме...</text>
+</string>
+<string id="doctor_one_dialog_3">
+  <text>А-а, вы про моих "пациентов"? Так не стоит пугаться, это обиженные судьбой существа, которым я помогаю хоть как-то продлить их немного разумное существование.</text>
+</string>
+<string id="doctor_one_dialog_4">
+  <text>Но ведь это же мутанты. Они же опасны, Док!</text>
+</string>
+<string id="doctor_one_dialog_5">
+  <text>Опасны, говорите? Не более чем мы с вами, смею вас заверить.</text>
+</string>
+<string id="doctor_one_dialog_6">
+  <text>Ну как же, они же звери. Жестокие и беспощадные. Их нужно уничтожать, или они уничтожат нас.</text>
+</string>
+<string id="doctor_one_dialog_7">
+  <text>А вот этого делать не стоит... Вначале нужно понять, что послужило причиной для тех метаморфоз, которые поспособствовали таким зловещим мутациям. А после этого решить, как не допустить такого в дальнейшем.</text>
+</string>
+<string id="doctor_one_dialog_8">
+  <text>Слушайте, Доктор, а как Вам удалось их приручить? Говорят, что вы колдун и вдобавок сумасшедший.</text>
+</string>
+<string id="doctor_one_dialog_9">
+  <text>Ну-у, молодой человек, не нужно верить всяким слухам и сплетням. Я простой учёный, биолог. Я всего лишь исследователь жизни, который пытается жить в гармонии с природой и использует её скрытые ресурсы, о которых другие даже и не догадываются, понимаете?</text>
+</string>
+<string id="doctor_one_dialog_10">
+  <text>Да, Док, я всё понимаю. Спасибо за разъяснения.</text>
+</string>
+
+<string id="dron_start_dialog_0">
     <text>Доброго дня.</text>
   </string>
   <string id="dron_start_dialog_1">

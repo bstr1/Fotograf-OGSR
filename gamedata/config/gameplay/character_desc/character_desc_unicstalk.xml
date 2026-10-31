@@ -1841,7 +1841,7 @@
 		 </supplies>
 
 		<actor_dialog>feldsher_start_dialog</actor_dialog> 
-		<actor_dialog>digger_repair</actor_dialog>
+		<actor_dialog>escape_trader_repair</actor_dialog>
 <start_dialog>hello_dialog</start_dialog>		
 <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
 #include "gameplay\character_criticals.xml"
