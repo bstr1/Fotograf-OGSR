@@ -18,7 +18,8 @@
     <action>mauvais.music_mk04</action>
     <action>fotograf.check_foto_smith</action>
 </info_portion>
---------------------------cars-----------------------
+
+<!-- cars -->
 <info_portion id="car_benzin_est"></info_portion>
 <info_portion id="car_benzin1_est"></info_portion>
 <info_portion id="car_benzin2_est"></info_portion>
@@ -108,7 +109,7 @@
 <info_portion id="about_vintorez">
     <action>fotograf.about_vintorez</action>
 </info_portion>
--------------------------povodyr----------------------------
+<!-- povodyr -->
 <info_portion id="povodyr_mazay"></info_portion>
 <info_portion id="povodyr_aver_start">
     <action>val_test.povodyractor</action>
@@ -123,7 +124,7 @@
 <info_portion id="pda_pmc_aver_est">
     <action>y_level.lch_aver_dyshlo</action>
 </info_portion>
------------------------start_syujet-------------------------
+<!-- start_syujet -->
 <info_portion id="start_syujet">
     <action>fotograf.start_syujet</action>
 </info_portion>
@@ -165,7 +166,7 @@
 <info_portion id="dyshlo_second_enter">
     <action>mauvais.music_dyshlo02</action>
 </info_portion>
-----------------------------doors---------------------------
+<!-- doors -->
 <info_portion
     id="x18_codelock1_unlock"></info_portion>
 <info_portion id="x18_codelock2_unlock"></info_portion>
@@ -174,7 +175,7 @@
 <info_portion id="x10_codelock11_unlock"></info_portion>
 <info_portion id="x10_codelock2_unlock"></info_portion>
 <info_portion id="x10_codelock3_unlock"></info_portion>
--------------------------anom_zond--------------------------
+<!-- anom_zond -->
 <info_portion
     id="kruglov_anoms_dialog_start">
     <task>anom_research</task>
@@ -208,7 +209,7 @@
 <info_portion id="gravi_first_research">
     <article>anom_gravi</article>
 </info_portion>
---------------------------mutantes--------------------------
+<!-- mutantes -->
 <info_portion id="flesh_story">
     <article>flesh_story</article>
     <action>fotograf.sms_new_mutant</action>
@@ -362,7 +363,7 @@
     <action>fotograf.sms_new_mutant</action>
     <action>fotograf.about_mouse</action>
 </info_portion>
-----------------------info_random_zadan---------------------
+<!-- info_random_zadan -->
 <info_portion id="fake_info_random"></info_portion>
 <info_portion id="items_random_spawn">
     <action>fotograf.nebo_walther_m1_spawn</action>
@@ -493,7 +494,7 @@
 <info_portion id="freedom_find_artefact_3_info">
     <action>fotograf.free_dinamit_spawn</action>
 </info_portion>
-----------------------level_changers------------------------
+<!-- level_changers -->
 <info_portion id="lch_mk_road"></info_portion>
 <info_portion id="lch_road_mk"></info_portion>
 <info_portion id="lch_mk_prom"></info_portion>
@@ -529,8 +530,9 @@
 <info_portion id="lch_prip_peschera"></info_portion>
 <info_portion id="lch_peschera_prip"></info_portion>
 <info_portion id="lch_peschera_sar"></info_portion>
-<info_portion id="lch_sar_peschera"></info_portion> ---------------------спавн
-кристаллов-----------------------
+<info_portion id="lch_sar_peschera"></info_portion>
+
+<!-- спавн кристаллов -->
 <info_portion id="crystall_pred_spawn">
     <action>crystall_spawn.crystall_mk</action>
 </info_portion>
@@ -587,13 +589,13 @@
     <action>crystall_spawn.crystall_peschera</action>
     <action>fotograf.spawn_peschera_tayniki</action>
 </info_portion>
------------------saharov_crystall_test-----------
+<!-- saharov_crystall_test -->
 <info_portion id="sahar_start_dialog_start"></info_portion>
 <info_portion id="sahar_start_dialog_mesto"></info_portion>
 <info_portion id="sahar_na_meste"></info_portion>
 
 <info_portion id="zone_test_active"></info_portion>
-------------------------end----------------------
+
 <info_portion id="smith_nachalo_start">
     <task>smith_start</task>
 </info_portion>
@@ -877,11 +879,12 @@
 <info_portion id="fotki_zastavka_dialog_start"></info_portion>
 
 <info_portion id="agent_mk_spawn"></info_portion>
--------------------peschera_doors_monstry------------------
+<!-- peschera_doors_monstry -->
 <info_portion
     id="peschera_door_unlock"></info_portion>
 <info_portion id="start_peschera_monstry"></info_portion>
------------------------monolit_brat------------------------
+
+<!-- monolit_brat -->
 <info_portion
     id="monolit_brat_spawn">
     <action>garry_object.spawn_brat_monolit</action>
@@ -898,27 +901,7 @@
     <action>braad_test.create_monolit_restr</action>
 </info_portion>
 
-<info_portion id="zharka_start">
-    <action>antreg_object.spawn_zarskelet</action>
-</info_portion>
-
-<info_portion id="monolit_govorit">
-    <task>monolit_pogovority</task>
-</info_portion>
-<info_portion id="monolit_pogovoril"></info_portion>
-
 <info_portion id="totaliz"></info_portion>
-<info_portion id="totaliz_mos">
-    <action>antreg_object.spawn_totaliz_mos</action>
-</info_portion>
-
-<info_portion id="dogs_ch2_spawn">
-    <action>antreg.spawn_dogs_chaes2</action>
-</info_portion>
-
-<info_portion id="vertel_spawn">
-    <action>antreg_object.spawn_vertel_lektor</action>
-</info_portion>
 
 <info_portion id="usa_spawn">
     <action>fotograf.spawn_usa_baza</action>
@@ -935,7 +918,7 @@
 <info_portion id="aver_mg"></info_portion>
 <info_portion id="mg_aver1"></info_portion>
 <info_portion id="mg_aver2"></info_portion>
---------------------------swamp----------------------------
+<!-- swamp -->
 <info_portion id="boloto_start">
     <action>antreg.spawn_doctor_mutantes</action>
 </info_portion>
@@ -948,53 +931,8 @@
 <info_portion id="enemy_doctor">
     <action>antreg.enemy_doc</action>
 </info_portion>
-------------------------pripyat---------------------------
-<info_portion id="mervin_anim">
-    <action>antreg.spawn_pripyat</action>
-</info_portion>
----------------------attak_bar_dolg-----------------------
-<info_portion id="dolg_attak_start">
-    <action>antreg.spawn_dolg_attak</action>
-    <action>braad_test.bar_attak_restr</action>
-</info_portion>
 
-<info_portion id="plichko_hit"></info_portion>
-<info_portion id="voronin_hit"></info_portion>
-<info_portion id="barman_dolg_hit"></info_portion>
-<info_portion id="dolg_attak1_hit"></info_portion>
-<info_portion id="dolg_attak2_hit"></info_portion>
-<info_portion id="dolg_attak3_hit"></info_portion>
-<info_portion id="dolg_attak4_hit"></info_portion>
-<info_portion id="dolg_attak5_hit"></info_portion>
-<info_portion id="dolg_attak6_hit"></info_portion>
-<info_portion id="dolg_attak7_hit"></info_portion>
-<info_portion id="dolg_attak8_hit"></info_portion>
-<info_portion id="dolg_attak9_hit"></info_portion>
-<info_portion id="dolg_attak10_hit"></info_portion>
-<info_portion id="voronin_ohr1_hit"></info_portion>
-<info_portion id="voronin_ohr2_hit"></info_portion>
-<info_portion id="voronin_ohr3_hit"></info_portion>
-
-<info_portion id="dolg_attak_dialog_start">
-    <task>dolg_attak</task>
-</info_portion>
-<info_portion id="dolg_attak_dialog_have"></info_portion>
-<info_portion id="dolg_attak_dialog_done"></info_portion>
-
-<info_portion id="voronin_bar_dialog_start">
-    <task>voronin_bar_dialog</task>
-</info_portion>
-<info_portion id="voronin_bar_dialog_have"></info_portion>
-<info_portion id="voronin_bar_dialog_done">
-    <task>barman_new</task>
-</info_portion>
-<info_portion id="barman_new_talk"></info_portion>
-
-<info_portion id="plichko_vpered"></info_portion>
-<info_portion id="voronin_mesto"></info_portion>
-<info_portion id="dolg_attak7_mesto"></info_portion>
-<info_portion id="dolg_attak8_mesto"></info_portion>
------------------------------usa--------------------------
+<!-- usa -->
 <info_portion
     id="sidor_one_dialog_start">
     <task>sidor_cognak</task>
@@ -1056,57 +994,12 @@
 <info_portion id="brown_razgovor"></info_portion>
 <info_portion id="brown_pogovoril"></info_portion>
 
-
-
----------------------------money----------------------------
-<info_portion id="delete_ggm">
-    <action>braad_test.money_gg</action>
-</info_portion>
-
-<info_portion id="delete_gggm">
-    <action>braad_test.money_gg</action>
-</info_portion>
-
-<info_portion id="delete_ggggm">
-    <action>braad_test.money_gg</action>
-</info_portion>
-
-<info_portion id="delete_gggggm">
-    <action>braad_test.money_gg</action>
-</info_portion>
-
+<!-- money -->
 <info_portion id="delete_2">
     <action>fotograf.money_2</action>
 </info_portion>
 
-<info_portion id="delete_5">
-    <action>braad_test.money_5</action>
-</info_portion>
-
-<info_portion id="delete_10">
-    <action>braad_test.money_10</action>
-</info_portion>
-
-<info_portion id="delete_15">
-    <action>braad_test.money_15</action>
-</info_portion>
-
-<info_portion id="delete_20">
-    <action>braad_test.money_20</action>
-</info_portion>
-
-<info_portion id="delete_25">
-    <action>braad_test.money_25</action>
-</info_portion>
-
-<info_portion id="delete_30">
-    <action>braad_test.money_30</action>
-</info_portion>
-
-<info_portion id="delete_50">
-    <action>braad_test.money_50</action>
-</info_portion>
---------------------------maroder---------------------------
+<!-- maroder -->
 <info_portion id="maroder_enemy">
     <action>antreg.enemy_maroder</action>
 </info_portion>
@@ -1119,7 +1012,7 @@
 </info_portion>
 
 
--------------------------fotograf---------------------------
+<!-- fotograf -->
 <info_portion
     id="yan_labx16_switcher_primary_new"></info_portion>
 <info_portion id="x16_claw_dead"></info_portion>
@@ -1255,7 +1148,9 @@
 
 <info_portion id="road_baza_alarm"></info_portion>
 <info_portion id="rus_baza_alarm"></info_portion>
-<info_portion id="heli_uletaet"></info_portion> --------------fotografirovanie----------------
+<info_portion id="heli_uletaet"></info_portion>
+
+<!-- fotografirovanie -->
 <info_portion id="sms_vzone">
     <action>fotograf.sms_vzone</action>
 </info_portion>
@@ -1300,7 +1195,7 @@
     <action>fotograf.sms_nevzone</action>
 </info_portion>
 <info_portion id="vse_foto_sdelal"></info_portion>
-------------end_fotografirovanie--------------
+
 <info_portion id="lager_uchen_spawn">
     <action>fotograf.spawn_lager_uchen</action>
     <action>fotograf.spawn_cat_trup1</action>
@@ -1491,7 +1386,7 @@
 <info_portion id="dezertir_ataka05_dead"></info_portion>
 <info_portion id="dezertir_ataka07_dead"></info_portion>
 <info_portion id="dezertir_ataka08_dead"></info_portion>
-----------------------Расстрел---------------------
+
 <info_portion id="start_rasstrel"></info_portion>
 <info_portion id="rasstrel_mesto"></info_portion>
 <info_portion id="rasstrel_poshli"></info_portion>
@@ -1506,7 +1401,7 @@
 <info_portion id="dezertir_rasstrel2_dead"></info_portion>
 <info_portion id="krasa_mesto2"></info_portion>
 
------------------boryan67--drink--------------------
+
 <info_portion id="boryan_drink_1"></info_portion>
 <info_portion id="boryan_drink_2"></info_portion>
 <info_portion id="boryan_drink_3"></info_portion>
@@ -1518,7 +1413,6 @@
 <info_portion id="boryan_drink_9"></info_portion>
 <info_portion id="boryan_gluki_1"></info_portion>
 
------------------boryan67--infect--------------------
 <info_portion id="boryan_infect_0"></info_portion>
 <info_portion id="boryan_infect_1"></info_portion>
 <info_portion id="boryan_infect_2"></info_portion>
@@ -1826,7 +1720,7 @@
 
 <info_portion id="brown_timer_dyshlo_over"></info_portion>
 <info_portion id="brown_eight_dialog_start"></info_portion>
----------------------------dolg-----------------------------
+
 <info_portion
     id="voronin_dyshlo_attak_dialog_start">
     <task>dyshlo_attak</task>

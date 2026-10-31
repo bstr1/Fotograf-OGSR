@@ -71,11 +71,7 @@ function transfer_medkit(first_speaker, second_speaker)
         second_speaker:set_relation(game_object.friend, first_speaker)
     else
         first_speaker:change_character_reputation(10)
-        if db.actor:character_community() == "monolith" then
-            braad_test.help_wounded_mono(second_speaker)
-        else
             xr_wounded.help_wounded(second_speaker)
-        end
     end
 
 end
