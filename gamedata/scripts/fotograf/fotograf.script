@@ -173,7 +173,7 @@ function checking_fotograf_item(obj)
             amk.drop_item(actor, obj)
             amk.remove_item(obj)
 
-        elseif (sect == "wpn_vintorez" or sect == "wpn_val_haron") and not has_alife_info("about_vintorez") then
+        elseif (sect == "wpn_vintorez" or sect == "wpn_vintorez_nimble") and not has_alife_info("about_vintorez") then
             actor:give_info_portion("about_vintorez")
 
         elseif sect == "razuvaev_pda" and not has_alife_info("razuvaev_pda_est") then
@@ -868,7 +868,7 @@ local tbl_walther = {{
 }}
 function nebo_walther_m1_spawn()
     local a = tbl_walther[math.random(table.getn(tbl_walther))]
-    alife():create("wpn_walther_m1", vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv)
+    alife():create("wpn_walther", vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv)
 end
 
 local tbl_planshetka = {{
@@ -1280,7 +1280,7 @@ local tbl_eagle = {{
 }}
 function barman_eagle_spawn()
     local a = tbl_eagle[math.random(table.getn(tbl_eagle))]
-    alife():create("wpn_eagle_m1", vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv)
+    alife():create("wpn_desert_eagle_nimble", vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv)
 end
 
 local tbl_sig = {{
@@ -1326,7 +1326,7 @@ local tbl_sig = {{
 }}
 function barman_avtomat_spawn()
     local a = tbl_sig[math.random(table.getn(tbl_sig))]
-    alife():create("wpn_sig_m2", vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv)
+    alife():create("wpn_sig550_luckygun", vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv)
 end
 
 local tbl_sahar_outfit = {{
@@ -1418,7 +1418,7 @@ local tbl_l85 = {{
 }}
 function dolg_stvol1_spawn()
     local a = tbl_l85[math.random(table.getn(tbl_l85))]
-    alife():create("wpn_l85_m1", vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv)
+    alife():create("wpn_sig550_luckygun", vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv)
 end
 
 local tbl_winchester = {{
@@ -1464,7 +1464,7 @@ local tbl_winchester = {{
 }}
 function dolg_stvol2_spawn()
     local a = tbl_winchester[math.random(table.getn(tbl_winchester))]
-    alife():create("wpn_winchester_m1", vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv)
+    alife():create("wpn_wincheaster1300_trapper", vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv)
 end
 
 local tbl_svd = {{
@@ -1507,7 +1507,7 @@ local tbl_svd = {{
 }}
 function freedom_stvol1_spawn()
     local a = tbl_svd[math.random(table.getn(tbl_svd))]
-    alife():create("wpn_svd", vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv)
+    alife():create("wpn_svu_nimble", vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv)
 end
 
 local tbl_spas12 = {{
@@ -1553,7 +1553,7 @@ local tbl_spas12 = {{
 }}
 function freedom_stvol2_spawn()
     local a = tbl_spas12[math.random(table.getn(tbl_spas12))]
-    alife():create("wpn_spas12_m1", vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv)
+    alife():create("wpn_spas12_nimble", vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv)
 end
 
 local tbl_outfit_specnaz = {{
@@ -4183,8 +4183,8 @@ end
 
 function brom_mg_dialog_done(first_speaker, second_speaker)
     new_dialog.out_item_much("anom_remover", 1)
-    dialogs.relocate_item_section(second_speaker, "wpn_gp100", "in", 1)
-    dialogs.relocate_item_section(second_speaker, "ammo_357sw_jfp", "in", 6)
+    dialogs.relocate_item_section(second_speaker, "wpn_taurus", "in", 1)
+    dialogs.relocate_item_section(second_speaker, "ammo_44mag", "in", 6)
 end
 
 local tbl_likvidator = {{
@@ -4355,7 +4355,7 @@ end
 
 function genrih_striker_dal(first_speaker, second_speaker)
     dialogs.relocate_item_section(second_speaker, "monolit_black_outfit", "in", 1)
-    dialogs.relocate_item_section(second_speaker, "wpn_protecta_col", "in", 1)
+    dialogs.relocate_item_section(second_speaker, "wpn_protecta_nimble", "in", 1)
 end
 
 ---------------------del_german------------------------
@@ -5424,7 +5424,7 @@ end
 
 function plichko_tri_dialog_done(first_speaker, second_speaker)
     new_dialog.out_item_much("pda_pmc_dyshlo", 1)
-    dialogs.relocate_item_section(second_speaker, "wpn_val_haron", "in", 1)
+    dialogs.relocate_item_section(second_speaker, "wpn_vintorez_nimble", "in", 1)
     dialogs.relocate_item_section(second_speaker, "ammo_9x39_sp5", "in", 3)
 end
 
@@ -5449,7 +5449,7 @@ end
 function shubin_tushki_otdal(first_speaker, second_speaker)
     new_dialog.out_item_much("mutant_crow", 1)
     new_dialog.out_item_much("mutant_mouse", 1)
-    dialogs.relocate_item_section(second_speaker, "wpn_m1918", "in", 1)
+    dialogs.relocate_item_section(second_speaker, "wpn_rpk16", "in", 1)
 end
 
 function del_shubin2()
@@ -5741,8 +5741,8 @@ end
 
 function smith_marodery_dialog_dal(first_speaker, second_speaker)
     new_dialog.out_item_much("info_actor", 1)
-    dialogs.relocate_item_section(second_speaker, "wpn_rg6_m1", "in", 1)
-    dialogs.relocate_item_section(second_speaker, "ammo_m209", "in", 6)
+    dialogs.relocate_item_section(second_speaker, "wpn_rg6", "in", 1)
+    dialogs.relocate_item_section(second_speaker, "ammo_vog-25", "in", 12)
 end
 
 function pashka_sguschenka_have()

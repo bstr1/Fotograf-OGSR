@@ -2,6 +2,14 @@
 <info_portion id="esc_trader_hello_played"></info_portion>
 <info_portion id="esc_trader_bye_played"></info_portion>
 
+<info_portion id="esc_btr_killed">
+    <action>fotograf.enemy_soldaty</action>
+</info_portion>
+
+<info_portion id="rus_btr_killed">
+    <action>fotograf.enemy_usa</action>
+</info_portion>
+
 <info_portion id="start_manuscript">
     <action>fotograf.foto_start_manuscript</action>
 </info_portion>
