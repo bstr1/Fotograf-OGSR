@@ -3727,7 +3727,7 @@ function ZondDrop(obj)
                 if info then
                     -- удаляем зонд
                     remove_obj(obj, "new\\zond")
-                    if not has_alife_info(info) and check_belt("anom_pribor") then
+                    if not has_alife_info(info) and has_anom_pribor("anom_pribor") then
                         actor:give_info_portion(info)
                         sms_new_anom()
                     end

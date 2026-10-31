@@ -1,4 +1,4 @@
-[wpn_foto]:default_weapon_params
+[wpn_foto]:identity_immunities
 GroupControlSection	              = spawn_group
 discovery_dependency              =
 $spawn                            = "weapons\foto"	; option for Level Editor
@@ -20,7 +20,6 @@ ef_weapon_type			          = 8
 protected_item					  = true
 
 CartridgeInTheChamberEnabled      = false
-dsh_rukzak.override_show_type     = other
 
 ;-----------------------------------------------------------------------------------
 holder_range_modifier	          = 2.85           ; во сколько раз увеличивается eye_range
@@ -134,7 +133,7 @@ silencer_status			          = 0
 grenade_launcher_status	          = 0
 
 zoom_enabled			          = true
-scope_zoom_factor	              = 2
+scope_zoom_factor	              = 45
 scope_texture			          = starter\items\fot\fot_cross.dds
 scope_name 				          = wpn_addon_scope
 scope_x 				          = 60
@@ -146,8 +145,9 @@ snd_holster				          = weapons\generic_holster
 snd_shoot				          = starter\weapons\fot\fot_shot
 snd_empty				          = starter\weapons\fot\fot_empty, 0.5
 snd_reload				          = starter\weapons\fot\fot_reload, 1.0, 1.0, 2
-
 hidden_bones 		              = lens
+
+
 [wpn_foto_hud]
 zoom_hide_crosshair			      = true
 attach_place_idx			      = 0

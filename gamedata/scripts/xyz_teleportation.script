@@ -1,0 +1,65 @@
+-- function attach(sm)
+    -- sm:subscribe({signal = "on_spawn", fun = this.on_spawn})
+    -- sm:subscribe({signal = "on_save",  fun = this.on_save})
+    -- sm:subscribe({signal = "on_load",  fun = this.on_load})
+-- end
+
+-- local show_wnd_tutorial
+
+-- function on_spawn()
+    -- if not show_wnd_tutorial then
+        -- return
+    -- end
+
+    -- local text = string.format("%s", "later_other")
+    -- local hud = get_hud()
+    -- hud:AddCustomStatic("main_task_new", true)
+    -- hud:GetCustomStatic("main_task_new"):wnd():SetTextST(text)
+    -- hud:GetCustomStatic("main_task_new").m_endTime = time_global() / 1000 + 10
+    -- show_wnd_tutorial = false
+-- end
+
+-- function on_save()
+    -- ogse.save_var("teleport_tutorial", show_wnd_tutorial)
+-- end
+
+-- function on_load()
+    -- show_wnd_tutorial = ogse.load_var("teleport_tutorial", false)
+-- end
+
+function teleport_actor(pos, dir, level_name)
+    dsh.wait_condition(function() return db.actor:dont_has_info("ui_talk") end, 
+    function()
+        level.add_pp_effector("black.ppe", 2006, false)
+
+        if type(pos) == "table" then
+            pos = vector():set(unpack(pos))
+        end
+
+        if not dir then
+            dir = vector():set(0, 0, 0)
+        elseif type(dir) == "table" then
+            dir = vector():set(unpack(dir))
+        end
+
+        local lv, gv = get_lv_gv(level_name, pos)
+        log3("teleport_actor level_name %s lv %s, gv %s", level_name, lv, gv)
+
+        dsh.timeout(1000, function()
+            level.change_level(gv, lv, pos, dir)
+        end)
+    end)
+end
+
+-----------------------------Телепортация--------------------------------
+
+function hiding_road()
+    teleport_actor(vector():set(50.65, 3.00, 308.49), vector():set(0.0, 0.0, 0.0), "hiding_road")
+    local snd_obj = xr_sound.get_safe_sound_object([[car\apc_start]])
+    snd_obj:play(db.actor, 0, sound_object.s2d)
+end
+
+-- function swamp_karina()
+    -- local pp = patrol("lc_swamp_mg")
+    -- teleport_actor(pp:point(0), vector():set(0.0, 0.5, 0.0), "swamp")
+-- end

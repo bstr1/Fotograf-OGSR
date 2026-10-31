@@ -1694,3 +1694,20 @@ math.clamp = function( n, min, max )
 	if min>max then min,max=max,min end
 	return (n>max and max) or (n<min and min) or n
 end
+
+function get_lv_gv(level_name, pos)
+    local lg = level_graph()
+    local ct = cross_table()
+
+    if level.name() ~= level_name then
+        lg = level_graph(level_name)
+        ct = cross_table(level_name)
+    end
+
+    local lv = lg:vertex_id(pos)
+    if not lg:valid_vertex_id(lv) then
+        lv = lg:nearest_vertex_id(pos)
+    end
+    local gv = ct:vertex(lv):game_vertex_id()
+    return lv, gv
+end

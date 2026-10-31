@@ -231,6 +231,9 @@ function main_menu:OnKeyboard(dik, keyboard_action)
 			
 		end
 
+        elseif dik == DIK_keys.DIK_R then
+        ui_cheat_main.start_menu(self)
+
 	end
 
 	return true

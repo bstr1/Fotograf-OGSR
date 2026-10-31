@@ -1833,8 +1833,8 @@
 		<visual>actors\amerikanec</visual>
 		<supplies>
 			[spawn] \n
-			wpn_pm \n
-			ammo_9x18_fmj = 1 \n
+			wpn_pm_actor \n
+			ammo_9x18_fmj = 2 \n
 #include "gameplay\character_items.xml" \n
 #include "gameplay\character_food.xml" \n
 #include "gameplay\character_drugs.xml"	
