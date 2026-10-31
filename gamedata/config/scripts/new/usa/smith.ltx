@@ -31,31 +31,15 @@ def_state_standing = ward
 danger = danger_condition@smith
 on_actor_dist_le_nvis = 2.3 | remark@smith1
 
-[camper@smith2]
-path_walk = smith_walk
-path_look = smith_look
-meet = meet@smith
-def_state_standing = ward
-danger = danger_condition@smith
-on_actor_dist_le_nvis = 5 | {+smith_start_dialog_start -voronin_vstrecha_start} remark@smith2, {+voronin_vstrecha_start -brown_two_dialog_vhod} remark@smith2 %+brown_total_proval%, {+voronin_vstrecha_start +brown_two_dialog_vhod} remark@smith2
-
 [remark@smith1]
 anim = ward
 target = actor
 snd = smith
 meet = no_meet
 danger = danger_condition@smith
-on_signal = sound_end | camper@smith3
+on_signal = sound_end | camper@smith2
 
-[remark@smith2]
-anim = ward
-target = actor
-snd = smith2
-meet = no_meet
-danger = danger_condition@smith
-on_signal = sound_end | camper@smith3
-
-[camper@smith3]
+[camper@smith2]
 path_walk = smith_walk
 path_look = smith_look
 meet = meet@smith
