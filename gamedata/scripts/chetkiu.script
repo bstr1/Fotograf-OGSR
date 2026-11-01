@@ -22,6 +22,35 @@ dsh.wait_condition(function() return db.actor:dont_has_info("ui_talk") end,
     end)
 end
 
+
+function mg_group_release()
+	local mg_group_sids = {
+	20048, 20049, 20050, 20051, 20052, 20053, 20054, 20055, 20056, 30198, 30199, 30223, 30224, 30231, 30232, 30235,
+	}
+    local sim = alife()
+    for _, sid in ipairs(mg_group_sids) do
+        local sobj = sim:story_object(sid)
+        if sobj then
+            sim:release(sobj, true)
+        end
+    end
+end
+
+function mg_group_del()
+    mg_group_release()
+    dsh.wait_condition(function() return db.actor:dont_has_info("ui_talk") end,
+    function()
+        level.add_pp_effector("black.ppe", 2006, false)
+        dsh.timeout(1000, function()
+            -- local pos = patrol("jagger_vyhod_look")
+            -- db.actor:set_actor_position(pos:point(0))
+            db.actor:give_info_portion("german_spasenie_gotovo")
+			xyz_teleportation.teleport_deadcity()
+			sms2("Похоже переход стал закрытым, нужно поискать что-нибудь или кого-нибудь в этом городе...", nil, nil, 10)
+        end)
+    end)
+end
+
 function spawn_kristals()
 amk.spawn_item_in_inv("ks_active_01")
 amk.spawn_item_in_inv("ks_active_02")

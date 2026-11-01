@@ -4253,7 +4253,7 @@ end
 
 -- Таймер отложенного диалога
 function check_time_mg_vyhod()
-    amk.g_start_timer("mg_vyhod_wait", 0, 0, 10, 0)
+    amk.g_start_timer("mg_vyhod_wait", 0, 0, 0, 0.1)
 end
 
 function metka_vzryv_spawn()
@@ -4264,7 +4264,7 @@ function metka_vzryv_spawn()
 end
 
 function sms_mg_vyhod()
-    news_manager.send_tip(db.actor, "%c[255,255,75,75]Это Генрих.\\nВыдвигаемся!", nil, nil, 20000)
+    news_manager.send_tip(db.actor, "%c[255,255,75,75]Генрих.\\nСпасибо за помощь, Фотограф!", nil, nil, 20000)
     db.actor:give_info_portion("mg_vyhod_start")
 end
 
@@ -4491,25 +4491,6 @@ function del_koop_ohran_vhod()
 end
 
 -------------------del_german_end----------------------
-
-function german_zasada_spawn()
-    local sim = alife()
-    sim:create("german_zasada1", vector():set(41.777, 1.250, -61.783), 328921, 1327)
-    sim:create("german_zasada2", vector():set(41.777, 1.250, -61.783), 328921, 1327)
-    sim:create("german_zasada3", vector():set(41.777, 1.250, -61.783), 328921, 1327)
-    sim:create("german_zasada4", vector():set(41.777, 1.250, -61.783), 328921, 1327)
-    sim:create("german_zasada5", vector():set(41.777, 1.250, -61.783), 328921, 1327)
-    -- sim:create("german_zasada6",vector():set(16.594,1.082,29.726),309718,1325)
-    -- sim:create("german_zasada7",vector():set(16.594,1.082,29.726),309718,1325)
-    -- sim:create("german_zasada8",vector():set(16.594,1.082,29.726),309718,1325)
-    -- sim:create("german_zasada9",vector():set(16.594,1.082,29.726),309718,1325)
-    -- sim:create("german_zasada10",vector():set(16.594,1.082,29.726),309718,1325)
-    -- sim:create("german_zasada11",vector():set(16.181,3.674,-1.211),309095,1320)
-    -- sim:create("german_zasada12",vector():set(16.181,3.674,-1.211),309095,1320)
-    -- sim:create("german_zasada13",vector():set(16.181,3.674,-1.211),309095,1320)
-    -- sim:create("german_zasada14",vector():set(16.181,3.674,-1.211),309095,1320)
-    -- sim:create("german_zasada15",vector():set(16.181,3.674,-1.211),309095,1320)
-end
 
 function del_osvedom_new()
     local sim = alife()

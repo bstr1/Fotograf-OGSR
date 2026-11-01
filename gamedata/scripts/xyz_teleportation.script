@@ -69,3 +69,29 @@ end
     -- local pp = patrol("lc_swamp_mg")
     -- teleport_actor(pp:point(0), vector():set(0.0, 0.5, 0.0), "swamp")
 -- end
+
+
+
+
+-- По локации
+function teleportation(pos, dir)
+    if type(pos) == "table" then
+        pos = vector():set(unpack(pos))
+    end
+
+    if not dir then
+        dir = vector():set(0, 0, 0)
+    elseif type(dir) == "table" then
+        dir = vector():set(unpack(dir))
+    end
+
+    level.add_pp_effector("black.ppe", 2006, false)
+    -- local snd_obj = xr_sound.get_safe_sound_object([[anomaly\teleport_work_1]])
+    -- snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+    db.actor:set_actor_position(pos)
+    db.actor:set_actor_direction(dir)
+end
+
+function teleport_deadcity()
+    teleportation(vector():set(132.17, 8.12, -70.50)) -- постройка между куполами
+end

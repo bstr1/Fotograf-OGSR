@@ -1521,14 +1521,15 @@
     <action>fotograf.del_osvedom_new</action>
 </info_portion>
 <info_portion id="mg_vyhod_start">
-    <action>fotograf.german_zasada_spawn</action>
+    <!-- <action>fotograf.german_zasada_spawn</action> -->
     <action>fotograf.del_mg_barokamera00</action>
     <action>fotograf.del_mg_barokamera03</action>
     <action>fotograf.del_mg_barokamera04</action>
-    <action>fotograf.mg_vzryv1</action>
-    <action>fotograf.mg_vzryv2</action>
-    <action>fotograf.mg_vzryv3</action>
-    <action>mauvais.music_deadcity03</action>
+    <!-- <action>fotograf.mg_vzryv1</action> -->
+    <!-- <action>fotograf.mg_vzryv2</action> -->
+    <!-- <action>fotograf.mg_vzryv3</action> -->
+    <!-- <action>mauvais.music_deadcity03</action> -->
+	<action>chetkiu.mg_group_del</action>
 </info_portion>
 <info_portion id="mg_vyhod_proval"></info_portion>
 
