@@ -1,267 +1,238 @@
 [wpn_flame]:identity_immunities
-cform                                    = skeleton
-class                                    = WP_LR300
-min_radius                               = 30
-max_radius                               = 100
+cform                                       = skeleton
+class                                       = WP_LR300
 
-ef_main_weapon_type                      = 2
-ef_weapon_type                           = 6
+min_radius                                  = 30
+max_radius                                  = 100
 
-holder_range_modifier                    = 1.0
-holder_fov_modifier                      = 1.0
+ef_main_weapon_type                         = 2
+ef_weapon_type                              = 6
 
-cost                                     = 30000
+holder_range_modifier                       = 1.0
+holder_fov_modifier                         = 1.0
 
-ammo_elapsed                             = 150
+cost                                        = 30000
 
-ammo_mag_size                            = 150
-fire_modes                               = -1
+ammo_elapsed                                = 150
 
-flame_particles                          = shoker_mod\flame_01
-smoke_particles                          = weapons\generic_shoot_00
-;grenade_flame_particles                  = weapons\generic_weapon01
+ammo_mag_size                               = 150
+fire_modes                                  = -1
 
-ammo_class                               = ammo_flame
-grenade_class                            = ammo_vog-25, ammo_vog-25p
-CartridgeInTheChamberEnabled             = true
-CartridgeInTheChamberEnabled             = false
+flame_particles                             = shoker_mod\flame_01
+smoke_particles                             = weapons\generic_shoot_00
+;grenade_flame_particles                    = weapons\generic_weapon01
 
-hand_dependence                          = 1
-single_handed                            = 0
-sprint_allowed                           = true
-slot                                     = 2
-animation_slot                           = 10
+ammo_class                                  = ammo_flame
+grenade_class                               = ammo_vog-25, ammo_vog-25p
+CartridgeInTheChamberEnabled                = true
+CartridgeInTheChamberEnabled                = false
 
-inv_name                                 = wpn-flame_name
-inv_name_short                           = wpn-flame_name
-description                              = wpn-flame_readme
+hand_dependence                             = 1
+single_handed                               = 0
+sprint_allowed                              = true
+slot                                        = 2
+animation_slot                              = 10
 
-default_to_ruck                          = false
-inv_weight                               = 7.5
-inv_grid_height                       = 2
-inv_grid_width                        = 6
-inv_grid_x                            = 36
-inv_grid_y                            = 29
+visual                                      = dynamics\weapons\wpn_flamer\wpn_flamer.ogf
+description                                 = st_wpn_flame_descr
 
-fire_dispersion_base                     = 2.3
-control_inertion_factor                  = 1.8f
-cam_relax_speed                          = 0
-cam_relax_speed_ai                       = 360
-cam_dispersion                           = 0.001
-cam_dispersion_inc                       = 0.00001
-cam_max_angle                            = 0.00001
-cam_max_angle_horz                       = 0.01
-cam_step_angle_horz                      = 1.1
-fire_dispersion_condition_factor         = 0.001
-misfire_probability                      = 0.005
-condition_shot_dec                       = 0
-hit_probability_gd_novice                = 0.9
-hit_probability_gd_stalker               = 0.9
-hit_probability_gd_veteran               = 0.9
-hit_probability_gd_master                = 0.9
+inv_name                                    = st_wpn_flame
+inv_name_short                              = st_wpn_flame_s
+inv_weight                                  = 7.5
 
-PDM_disp_base                            = 1.0
-PDM_disp_vel_factor                      = 1.3
-PDM_disp_accel_factor                    = 1.5
-PDM_disp_crouch                          = 0.4
-PDM_disp_crouch_no_acc                   = 0.3
+inv_grid_height                             = 2
+inv_grid_width                              = 6
+inv_grid_x                                  = 36
+inv_grid_y                                  = 29
 
-hit_power                                = 2, 2, 2, 2
-hit_impulse                              = 5
-hit_type                                 = fire_wound
-fire_distance                            = 15
-bullet_speed                             = 230
-rpm                                      = 650
-fire_point                               = 0, 0.210, 0.800
-fire_point2                              = 0, 0.161, 0.583
-shell_point                              = -0.020000, 0.167000, 0.082000
+icon_name                                   = flamer
 
-hud                                      = wpn_flamer_hud
-hud_fov                                  = 0.7
-visual                                   = dynamics\weapons\wpn_flamer\wpn_flamer.ogf
-keep_visual                              = true
-fall_aim_hud_offset_pos                  = 0.0, 0.03, -0.01
-fall_aim_hud_offset_rot                  = 0.0, -2.5, 3.0
-jump_aim_hud_offset_pos                  = 0.0, -0.03, 0.01
-jump_aim_hud_offset_rot                  = 0.0, 2.5, -3.0
-jump_aim_transition_time                 = 0.5
-walk_hud_offset_pos                      = -0.015, -0.015, -0.02
-lookout_transition_time                  = 0.2
-light_color                              = 0.6, 0.5, 0.3
-light_range                              = 15
-light_var_color                          = 0.05
-light_var_range                          = 0.8
-light_time                               = 2
-light_disabled                           = false
-ph_mass                                  = 5
-forced_particle_hud_mode                 = true
+default_to_ruck                             = false
 
-dof_reload_params                        = 0, 0, 1, 0
-dof_transition_time                      = 0.3
-dof_zoom_params                          = 0.1, 0.3, 0, 1.6
-zoom_rotate_time                         = 0.25
-zoom_enabled                             = false
+fire_dispersion_base                        = 2.3
+control_inertion_factor                     = 1.8f
+cam_relax_speed                             = 0
+cam_relax_speed_ai                          = 360
+cam_dispersion                              = 0.001
+cam_dispersion_inc                          = 0.00001
+cam_max_angle                               = 0.00001
+cam_max_angle_horz                          = 0.01
+cam_step_angle_horz                         = 1.1
+fire_dispersion_condition_factor            = 0.001
+misfire_probability                         = 0.005
+condition_shot_dec                          = 0
+hit_probability_gd_novice                   = 0.9
+hit_probability_gd_stalker                  = 0.9
+hit_probability_gd_veteran                  = 0.9
+hit_probability_gd_master                   = 0.9
 
-scope_status                             = 0
-silencer_status                          = 0
-grenade_launcher_status                  = 0
-scope_name                               = wpn_addon_scope
-scope_zoom_factor                        = 1
-scope_zoom_hud_fov                       = 0.65
-ironsight_zoom_factor                    = 1.0
-grenade_launcher_name                    = wpn_addon_grenade_launcher
+PDM_disp_base                               = 1.0
+PDM_disp_vel_factor                         = 1.3
+PDM_disp_accel_factor                       = 1.5
+PDM_disp_crouch                             = 0.4
+PDM_disp_crouch_no_acc                      = 0.3
 
-scope_x                                  = 100
-scope_y                                  = 100
-grenade_launcher_x                       = 0
-grenade_launcher_y                       = 0
+hit_power                                   = 2, 2, 2, 2
+hit_impulse                                 = 5
+hit_type                                    = fire_wound
+fire_distance                               = 15
+bullet_speed                                = 230
+rpm                                         = 650
+fire_point                                  = 0, 0.210, 0.800
+fire_point2                                 = 0, 0.161, 0.583
+shell_point                                 = -0.020000, 0.167000, 0.082000
 
-position                                 = -0.026, -0.1, 0
-orientation                              = 0, 0, 0
-strap_bone0                              = bip01_spine2
-strap_bone1                              = bip01_spine1
-strap_orientation                        = -15, -9, 110
-strap_position                           = -0.26, -0.11, 0.15
+hud                                         = wpn_flamer_hud
+hud_fov                                     = 0.7
 
-snd_shoot                                = weapons\flamer\flamer_shoot
-snd_reload                               = weapons\flamer\flamer_reload, 0.7
-snd_empty                                = weapons\flamer\gen_empty, 0.5
-snd_draw                                 = weapons\assault_draw
-snd_holster                              = weapons\hide_aanrms
-snd_aim_start                            = weapons\aimin\aim_in_1
-snd_aim_end                              = weapons\aimout\aim_out_1
-snd_aim_end1                             = weapons\aimout\aim_out_2
-snd_aim_end2                             = weapons\aimout\aim_out_3
-snd_aim_end3                             = weapons\aimout\aim_out_4
-snd_aim_end4                             = weapons\aimout\aim_out_5
-snd_aim_end5                             = weapons\aimout\aim_out_6
-snd_aim_end6                             = weapons\aimout\aim_out_7
-snd_aim_end7                             = weapons\aimout\aim_out_8
-snd_aim_end8                             = weapons\aimout\aim_out_9
-snd_aim_end9                             = weapons\aimout\aim_out_10
-snd_aim_start1                           = weapons\aimin\aim_in_2
-snd_aim_start2                           = weapons\aimin\aim_in_3
-snd_aim_start3                           = weapons\aimin\aim_in_4
-snd_aim_start4                           = weapons\aimin\aim_in_5
-snd_aim_start5                           = weapons\aimin\aim_in_6
-snd_aim_start6                           = weapons\aimin\aim_in_7
-snd_aim_start7                           = weapons\aimin\aim_in_8
-snd_aim_start8                           = weapons\aimin\aim_in_9
-snd_aim_start9                           = weapons\aimin\aim_in_10
-snd_shoot1                               = weapons\flamer\flamer_shoot1
-snd_shoot2                               = weapons\flamer\flamer_shoot2
-snd_shoot3                               = weapons\flamer\flamer_shoot3
+keep_visual                                 = true
+fall_aim_hud_offset_pos                     = 0.0, 0.03, -0.01
+fall_aim_hud_offset_rot                     = 0.0, -2.5, 3.0
+jump_aim_hud_offset_pos                     = 0.0, -0.03, 0.01
+jump_aim_hud_offset_rot                     = 0.0, 2.5, -3.0
+jump_aim_transition_time                    = 0.5
+walk_hud_offset_pos                         = -0.015, -0.015, -0.02
+lookout_transition_time                     = 0.2
+light_color                                 = 0.6, 0.5, 0.3
+light_range                                 = 15
+light_var_color                             = 0.05
+light_var_range                             = 0.8
+light_time                                  = 2
+light_disabled                              = false
+ph_mass                                     = 5
+forced_particle_hud_mode                    = true
 
-;fall_hud_offset_pos = 0.0, -0.03, 0.03
-;fall_hud_offset_rot = 0.0, 6.0, 6.0
+dof_reload_params                           = 0, 0, 1, 0
+dof_transition_time                         = 0.3
+dof_zoom_params                             = 0.1, 0.3, 0, 1.6
+zoom_rotate_time                            = 0.25
+zoom_enabled                                = false
+
+scope_status                                = 0
+silencer_status                             = 0
+grenade_launcher_status                     = 0
+scope_name                                  = wpn_addon_scope
+scope_zoom_factor                           = 1
+scope_zoom_hud_fov                          = 0.65
+ironsight_zoom_factor                       = 1.0
+grenade_launcher_name                       = wpn_addon_grenade_launcher
+
+scope_x                                     = 100
+scope_y                                     = 100
+grenade_launcher_x                          = 0
+grenade_launcher_y                          = 0
+
+position                                    = -0.026, -0.1, 0
+orientation                                 = 0, 0, 0
+strap_bone0                                 = bip01_spine2
+strap_bone1                                 = bip01_spine1
+strap_orientation                           = -15, -9, 110
+strap_position                              = -0.26, -0.11, 0.15
+
+snd_shoot                                   = weapons\flamer\flamer_shoot
+snd_reload                                  = weapons\flamer\flamer_reload, 0.7
+snd_empty                                   = weapons\flamer\gen_empty, 0.5
+snd_draw                                    = weapons\assault_draw
+snd_holster                                 = weapons\hide_aanrms
+snd_aim_start                               = weapons\aimin\aim_in_1
+snd_aim_end                                 = weapons\aimout\aim_out_1
+snd_aim_end1                                = weapons\aimout\aim_out_2
+snd_aim_end2                                = weapons\aimout\aim_out_3
+snd_aim_end3                                = weapons\aimout\aim_out_4
+snd_aim_end4                                = weapons\aimout\aim_out_5
+snd_aim_end5                                = weapons\aimout\aim_out_6
+snd_aim_end6                                = weapons\aimout\aim_out_7
+snd_aim_end7                                = weapons\aimout\aim_out_8
+snd_aim_end8                                = weapons\aimout\aim_out_9
+snd_aim_end9                                = weapons\aimout\aim_out_10
+snd_aim_start1                              = weapons\aimin\aim_in_2
+snd_aim_start2                              = weapons\aimin\aim_in_3
+snd_aim_start3                              = weapons\aimin\aim_in_4
+snd_aim_start4                              = weapons\aimin\aim_in_5
+snd_aim_start5                              = weapons\aimin\aim_in_6
+snd_aim_start6                              = weapons\aimin\aim_in_7
+snd_aim_start7                              = weapons\aimin\aim_in_8
+snd_aim_start8                              = weapons\aimin\aim_in_9
+snd_aim_start9                              = weapons\aimin\aim_in_10
+snd_shoot1                                  = weapons\flamer\flamer_shoot1
+snd_shoot2                                  = weapons\flamer\flamer_shoot2
+snd_shoot3                                  = weapons\flamer\flamer_shoot3
+
+;fall_hud_offset_pos                        = 0.0, -0.03, 0.03
+;fall_hud_offset_rot                        = 0.0, 6.0, 6.0
 // ДЕФОЛТ КОНФИГ
 // icon_name                                = flamer
-;jump_hud_offset_pos = 0.0, 0.06, -0.09
-;jump_hud_offset_rot = 0.0, -10.0, -10.0
-;jump_transition_time = 0.35
+;jump_hud_offset_pos                        = 0.0, 0.06, -0.09
+;jump_hud_offset_rot                        = 0.0, -10.0, -10.0
+;jump_transition_time                       = 0.35
 
 [wpn_flamer_hud]:hud_base
-aim_hud_offset_pos                       = 0, 0, 0
-aim_hud_offset_rot                       = 0, 0, 0
-aim_hud_offset_pos_16x9                  = 0, 0, 0
-aim_hud_offset_rot_16x9                  = 0, 0, 0
+aim_hud_offset_pos                          = 0, 0, 0
+aim_hud_offset_rot                          = 0, 0, 0
+aim_hud_offset_pos_16x9                     = 0, 0, 0
+aim_hud_offset_rot_16x9                     = 0, 0, 0
 
 ;Доставание///////////////////////////////////////////////////
-anm_show                                 = lancew_flamer_draw, idle
-anm_show_empty                           = lancew_flamer_draw, idle
-anm_show_jammed                          = lancew_flamer_draw, idle
+anm_show                                    = lancew_flamer_draw, idle
+anm_show_empty                              = lancew_flamer_draw, idle
+anm_show_jammed                             = lancew_flamer_draw, idle
 ;Убирание/////////////////////////////////////////////////////
-anm_hide                                 = lancew_flamer_holster, idle
-anm_hide_empty                           = lancew_flamer_holster, idle
-anm_hide_jammed                          = lancew_flamer_holster, idle
+anm_hide                                    = lancew_flamer_holster, idle
+anm_hide_empty                              = lancew_flamer_holster, idle
+anm_hide_jammed                             = lancew_flamer_holster, idle
 ;Бездействие//////////////////////////////////////////////////
-anm_idle                                 = lancew_flamer_idle, idle
-anm_idle_empty                           = lancew_flamer_idle, idle
-anm_idle_jammed                          = lancew_flamer_idle, idle
+anm_idle                                    = lancew_flamer_idle, idle
+anm_idle_empty                              = lancew_flamer_idle, idle
+anm_idle_jammed                             = lancew_flamer_idle, idle
 ;Ходьба ВПЕРЕД//////////////////////////////////////////////////////////////////////////
-anm_idle_moving                          = lancew_flamer_moving, idle
+anm_idle_moving                             = lancew_flamer_moving, idle
 ;Ходьба в полуприсяди (CTRL) ВПЕРЕД//////////////////////////////////////////////////////////////////////////
-anm_idle_moving_crouch                   = lancew_flamer_moving, idle
-anm_idle_moving_crouch_empty             = lancew_flamer_moving, idle
-anm_idle_moving_crouch_empty_speed_k     = 0.6
-anm_idle_moving_crouch_jammed            = lancew_flamer_moving, idle
-anm_idle_moving_crouch_jammed_speed_k    = 0.6
+anm_idle_moving_crouch                      = lancew_flamer_moving, idle
+anm_idle_moving_crouch_empty                = lancew_flamer_moving, idle
+anm_idle_moving_crouch_empty_speed_k        = 0.6
+anm_idle_moving_crouch_jammed               = lancew_flamer_moving, idle
+anm_idle_moving_crouch_jammed_speed_k       = 0.6
 ;Ходьба в присяде (CTRL+SHIFT) ВПЕРЕД/////////////////////////////////////////////////////////////////////////
-anm_idle_moving_crouch_slow              = lancew_flamer_moving, idle
-anm_idle_moving_crouch_slow_empty        = lancew_flamer_moving, idle
-anm_idle_moving_crouch_slow_empty_speed_k = 0.4
-anm_idle_moving_crouch_slow_jammed       = lancew_flamer_moving, idle
-anm_idle_moving_crouch_slow_jammed_speed_k = 0.4
-anm_idle_moving_crouch_slow_speed_k      = 0.4
-anm_idle_moving_crouch_speed_k           = 0.6
-anm_idle_moving_empty                    = lancew_flamer_moving, idle
-anm_idle_moving_jammed                   = lancew_flamer_moving, idle
+anm_idle_moving_crouch_slow                 = lancew_flamer_moving, idle
+anm_idle_moving_crouch_slow_empty           = lancew_flamer_moving, idle
+anm_idle_moving_crouch_slow_empty_speed_k   = 0.4
+anm_idle_moving_crouch_slow_jammed          = lancew_flamer_moving, idle
+anm_idle_moving_crouch_slow_jammed_speed_k  = 0.4
+anm_idle_moving_crouch_slow_speed_k         = 0.4
+anm_idle_moving_crouch_speed_k              = 0.6
+anm_idle_moving_empty                       = lancew_flamer_moving, idle
+anm_idle_moving_jammed                      = lancew_flamer_moving, idle
 ;Ходьба медленная (SHIFT) ВПЕРЕД//////////////////////////////////////////////////////////////////////////
-anm_idle_moving_slow                     = lancew_flamer_moving, idle
-anm_idle_moving_slow_empty               = lancew_flamer_moving, idle
-anm_idle_moving_slow_empty_speed_k       = 0.8
-anm_idle_moving_slow_jammed              = lancew_flamer_moving, idle
-anm_idle_moving_slow_jammed_speed_k      = 0.8
-anm_idle_moving_slow_speed_k             = 0.8
+anm_idle_moving_slow                        = lancew_flamer_moving, idle
+anm_idle_moving_slow_empty                  = lancew_flamer_moving, idle
+anm_idle_moving_slow_empty_speed_k          = 0.8
+anm_idle_moving_slow_jammed                 = lancew_flamer_moving, idle
+anm_idle_moving_slow_jammed_speed_k         = 0.8
+anm_idle_moving_slow_speed_k                = 0.8
 ;Бег//////////////////////////////////////////////////////////////////
-anm_idle_sprint                          = lancew_flamer_sprint, idle
-anm_idle_sprint_empty                    = lancew_flamer_sprint, idle
-anm_idle_sprint_jammed                   = lancew_flamer_sprint, idle
+anm_idle_sprint                             = lancew_flamer_sprint, idle
+anm_idle_sprint_empty                       = lancew_flamer_sprint, idle
+anm_idle_sprint_jammed                      = lancew_flamer_sprint, idle
 ;Выстрелы обычными патронами/////////////////////////////////////////////////////////////////////
-anm_shots                                = lancew_flamer_shoot, shoot
-anm_shots_l                              = lancew_flamer_shoot, shoot
+anm_shots                                   = lancew_flamer_shoot, shoot
+anm_shots_l                                 = lancew_flamer_shoot, shoot
 ;Перезарядка/////////////////////////////////////////////////////////////////////
-anm_reload                               = lancew_flamer_reload, reload
-anm_reload_empty                         = lancew_flamer_reload, reload
+anm_reload                                  = lancew_flamer_reload, reload
+anm_reload_empty                            = lancew_flamer_reload, reload
 
-fire_bone                                = wpn_body
-fire_bone2                               = wpn_body
-fire_point                               = 0.0, 0.015569, 0.813101
-fire_point2                              = 0.0, 0.0, 0.0
-shoot_point                              = 0.0, 0.015569, -0.113101
+fire_bone                                   = wpn_body
+fire_bone2                                  = wpn_body
+fire_point                                  = 0.0, 0.015569, 0.813101
+fire_point2                                 = 0.0, 0.0, 0.0
+shoot_point                                 = 0.0, 0.015569, -0.113101
 
-hands_position_16x9                      = -0.022000, -0.306000, -0.038000
-hands_orientation_16x9                   = 2.779999, 3.769999, 0.000000
-hands_position                           = -0.022000, -0.306000, -0.038000
-hands_orientation                        = 2.779999, 3.769999, 0.000000
-item_position                            = 0, 0, 0
-item_orientation                         = 0, 0, 0
-item_visual                              = dynamics\weapons\wpn_flamer\wpn_flamer_hud
+hands_position_16x9                         = -0.022000, -0.306000, -0.038000
+hands_orientation_16x9                      = 2.779999, 3.769999, 0.000000
+hands_position                              = -0.022000, -0.306000, -0.038000
+hands_orientation                           = 2.779999, 3.769999, 0.000000
+item_position                               = 0, 0, 0
+item_orientation                            = 0, 0, 0
+item_visual                                 = dynamics\weapons\wpn_flamer\wpn_flamer_hud
 
-shell_bone                               = wpn_body
-shell_point                              = 0.017, 0.054, 0.17
-
-[ammo_flame]:ammo_base
-cform                                    = skeleton
-class                                    = AMMO
-
-cost                                     = 3500 ;200
-
-buck_shot                                = 16
-
-inv_name                                 = ammo_flame_name
-inv_name_short                           = ammo_flame_name
-description                              = ammo_flame_name
-
-inv_weight                               = 7.5
-inv_grid_height                       = 2
-inv_grid_width                        = 6
-inv_grid_x                            = 36
-inv_grid_y                            = 29
-
-k_disp                                   = 1
-k_dist                                   = 1
-k_hit                                    = 0.25
-k_impulse                                = 0
-k_pierce                                 = 0
-impair                                   = 1
-
-tracer                                   = off
-
-visual                                   = dynamics\weapons\ammo\flame_ballon.ogf
-
-box_size                                 = 150 ;60
-
-wm_size                                  = 0.05
-
-// icon_name                                = flame_1
+shell_bone                                  = wpn_body
+shell_point                                 = 0.017, 0.054, 0.17

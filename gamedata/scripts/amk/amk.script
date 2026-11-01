@@ -1081,7 +1081,6 @@ function on_actor_upade(delta)
 	oau_watchdog=94
   --mod_call("check_armor")
 	oau_watchdog=93
-  mod_call("firebat_ammo")
   --!!! alcohol modification by Terrapack
 	oau_watchdog=931
  -- amk_alcohol.check_alcohol()

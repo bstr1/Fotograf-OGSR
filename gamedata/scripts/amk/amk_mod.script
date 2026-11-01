@@ -1662,19 +1662,6 @@ function on_repbox()
 	end
 end
 
-function firebat_ammo()
-	local ammo=db.actor:object("ammo_flame")
-	if ammo then
-		db.actor:iterate_inventory(
-			function(dummy,item)
-				if item:section()=="ammo_flame" then
-					alife():release(alife():object(item:id()))
-				end
-			end
-			, db.actor)
-	end
-end
-
 
 -- op2ogsr: более расширенная версия спавна
 function other_spawn(obj, from_komp)

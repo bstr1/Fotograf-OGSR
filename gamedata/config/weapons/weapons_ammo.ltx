@@ -1122,7 +1122,7 @@ inv_grid_height                          = 1
 inv_grid_x                               = 6
 inv_grid_y                               = 6
 
-icon_name                                = gauss
+icon_name                                = ammo_gauss
 
 k_dist                                   = 1.5
 k_disp                                   = 1
@@ -1166,6 +1166,37 @@ wm_size                                  = 0.05
 tracer                                   = on
 
 
+[ammo_flame]:ammo_base
+visual                                   = dynamics\weapons\wpn_ammo\ammo_flame.ogf
+description                              = st_ammo_flame_descr
+
+cost                                     = 5000
+
+box_size                                 = 150
+
+inv_name                                 = st_ammo_flame
+inv_name_short                           = st_ammo_flame_s
+inv_weight                               = 7.5
+
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 8
+inv_grid_y                               = 1
+
+icon_name                                = flame_1
+
+k_dist                                   = 1
+k_disp                                   = 1
+k_hit                                    = 10
+k_impulse                                = 1
+k_pierce                                 = 1.5
+impair                                   = 1
+buck_shot                                = 1
+tracer                                   = off
+wm_size                                  = 0.05
+explosive                                = off
+
+
 [ammo_og-7b]:ammo_base
 cform                                    = skeleton
 class                                    = A_OG7B
@@ -1186,7 +1217,7 @@ inv_grid_height                          = 1
 inv_grid_x                               = 8
 inv_grid_y                               = 3
 
-icon_name                                = rpg7
+icon_name                                = ammo_rpg7
 
 k_dist                                   = 1
 k_disp                                   = 1
