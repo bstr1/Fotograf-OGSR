@@ -4,14 +4,15 @@
 -- например те, у которых имя модуля не начинается на ogse
 
 addons = {
+	"amkii_transmutator",
 	"dsh_anomaly_detector",
-	"key_handlers",
+	-- "dsh",
 	"dsh_fixes",
 	"dsh_vodka_sleep",
-	-- "dsh",
-	"amkii_transmutator",
-	"ogse_surge_mgr",
-	"ui_inv_descr",
+	"fotograf",
+	"key_handlers",
 	"ogse_qt",
+	"ogse_surge_mgr",
 	"ogsr_quick_saveload",
+	"ui_inv_descr",
 }

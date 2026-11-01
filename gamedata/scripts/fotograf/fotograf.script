@@ -2,11 +2,7 @@ function start_fotograf()
     local actor = db.actor
     if actor then
 
-        if (has_alife_info("agent_mk_see") or has_alife_info("agent_mk_ohr1_see") or has_alife_info("agent_mk_ohr2_see")) and
-            has_alife_info("zhorik_start_dialog_start") and not has_alife_info("brown_start_dialog_mesto") then
-            actor:give_info_portion("agent_mk_vrag")
-
-        elseif (has_alife_info("plichko_dead") or has_alife_info("drozdov_dead") or has_alife_info("dolg_mask6_dead")) and
+        if (has_alife_info("plichko_dead") or has_alife_info("drozdov_dead") or has_alife_info("dolg_mask6_dead")) and
             not has_alife_info("dolg_ataka_have") and not has_alife_info("dolg_ataka_proval") then
             actor:give_info_portion("dolg_ataka_proval")
 
@@ -4186,7 +4182,7 @@ end
 function brom_mg_dialog_done(first_speaker, second_speaker)
     new_dialog.out_item_much("anom_remover", 1)
     dialogs.relocate_item_section(second_speaker, "wpn_taurus", "in", 1)
-    dialogs.relocate_item_section(second_speaker, "ammo_44mag", "in", 6)
+    dialogs.relocate_item_section(second_speaker, "ammo_357_ap_mag", "in", 6)
 end
 
 local tbl_likvidator = {{
@@ -6056,17 +6052,30 @@ end
 
 -- 4etkiu
 function havchik_vodka_have()
-return new_dialog.item_much("vodka",2) ~= false
+    return new_dialog.item_much("vodka",2) ~= false
 end
 
 function havchik_sguschenka_have()
-return new_dialog.item_much("sguschenka",1) ~= false
+    return new_dialog.item_much("sguschenka",1) ~= false
 end
 
 function havchik_gribki_have()
-return new_dialog.item_much("gribki",1) ~= false
+    return new_dialog.item_much("gribki",1) ~= false
 end
 
 function havchik_ogirki_have()
-return new_dialog.item_much("ogirki",1) ~= false
+    return new_dialog.item_much("ogirki",1) ~= false
+end
+
+local function distance_check()
+    if not has_alife_info("zhorik_start_dialog_start") or not has_alife_info("agent_mk_spawn") or has_alife_info("agent_mk_vrag") then return end
+    local mk_agent = level_object_by_sid(story_ids.mk_agent)
+    if mk_agent and distance_between(mk_agent, db.actor) < 55 then
+        db.actor:give_info_portion("agent_mk_vrag")
+    end
+end
+
+function attach(sm)
+    sm:subscribe({signal = "on_update",         fun = distance_check})
+    -- sm:subscribe({signal = "on_first_update",   fun = on_first_update})
 end

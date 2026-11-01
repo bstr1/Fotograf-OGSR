@@ -824,10 +824,6 @@
 <info_portion id="agent_mk_dead"></info_portion>
 <info_portion id="ostalnye_poshli"></info_portion>
 
-<info_portion id="agent_mk_see"></info_portion>
-<info_portion id="agent_mk_ohr1_see"></info_portion>
-<info_portion id="agent_mk_ohr2_see"></info_portion>
-
 <info_portion id="del_agent_mk">
     <action>fotograf.del_agent_mk</action>
 </info_portion>
