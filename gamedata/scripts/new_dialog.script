@@ -6,9 +6,9 @@ local nagrad = {
                "af_dummy_battery", "af_cristall", "gold_art", "af_soul", "af_dummy_pellicle", "af_rusty_kristall",
                "af_night_star", "af_gold_fish", "af_fuzz_kolobok", "af_rusty_sea-urchin", "af_dummy_glassbeads"},
     level_3 = {"wpn_sig550_luckygun", "wpn_scarh", "wpn_abakan_m2", "wpn_desert_eagle_nimble", "wpn_wincheaster1300_trapper", "wpn_spas12_nimble",
-               "wpn_groza_nimble", "wpn_mp9", "wpn_sig550", "wpn_bizon", "wpn_vector", "wpn_tt33", "wpn_m1891_30_scope",
+               "wpn_groza_nimble", "wpn_mp9", "wpn_sig550", "wpn_bizon", "wpn_vector", "wpn_tt33", "wpn_mosin",
                "wpn_vector"},
-    level_4 = {"wpn_galatz_sk1", "wpn_sig550_luckygun", "wpn_m16a2_sk1", "wpn_vpo101", "wpn_svu_nimble", "wpn_gauss"},
+    level_4 = {"wpn_g28", "wpn_sig550_luckygun", "wpn_lr300", "wpn_vpo101", "wpn_svu_nimble", "wpn_gauss"},
     level_5 = {"ammo_9x39_ap", "ammo_7.62x51_fmj", "ammo_7.62x51_ap", "ammo_7.62x54_7h14", "ammo_7.62x54_7h1",
                "ammo_7.62x54_7h1", "ammo_gauss", "ammo_9x39_pab9"},
     level_6 = {"ammo_9x39_ap", "ammo_7.62x51_fmj", "ammo_7.62x51_ap", "ammo_7.62x54_7h14", "ammo_7.62x54_7h1",
@@ -378,7 +378,7 @@ function sahar_tri_af_soul_dal(first_speaker, second_speaker)
         actor = second_speaker
         trader = first_speaker
     end
-    dialogs.relocate_item_section(actor, "wpn_galatz_sk1", "in", 1)
+    dialogs.relocate_item_section(actor, "wpn_g28", "in", 1)
     new_dialog.out_item_much("tarakan_lich2", 20)
 end
 

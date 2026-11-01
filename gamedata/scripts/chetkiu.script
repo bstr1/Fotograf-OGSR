@@ -2,6 +2,26 @@ function broken_exo()
 ogse.spawn_item_in_inv("broken_exoskeleton")
 end
 
+function dez_mask_teleport(first_speaker, second_speaker)
+dsh.wait_condition(function() return db.actor:dont_has_info("ui_talk") end, 
+    function()
+        level.add_pp_effector("black.ppe", 2006, false)
+        dsh.timeout(1000, function()
+            local sim = alife()
+            local pos = patrol("dez_mask1_walk")
+            local last = pos:count() - 1
+            for a = 1, 65534 do
+                local sobj = sim:object(a)
+                if sobj and sobj:section_name() == "dez_mask" then
+                    sim:teleport_object(a, pos:point(last), pos:level_vertex_id(last), pos:game_vertex_id(last))
+                    break
+                end
+            end
+            db.actor:set_actor_position(pos:point(last))
+        end)
+    end)
+end
+
 function spawn_kristals()
 amk.spawn_item_in_inv("ks_active_01")
 amk.spawn_item_in_inv("ks_active_02")

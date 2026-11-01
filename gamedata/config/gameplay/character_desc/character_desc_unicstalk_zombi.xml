@@ -115,8 +115,8 @@ wpn_ak74wpn_ak74wpn_ak74
 		<visual>actors\shubin_inv</visual>
 		<supplies>
 			[spawn] \n
-			wpn_obrez = 1 \n
-			ammo_new  = 2 \n
+			wpn_toz34 = 1 \n
+			ammo_12x70_buck  = 2 \n
 			#include "gameplay\character_items.xml" \n
 			#include "gameplay\character_food.xml" \n
 			#include "gameplay\character_drugs.xml"	
@@ -147,7 +147,7 @@ wpn_ak74wpn_ak74wpn_ak74
 		<visual>actors\starik</visual>
 		<supplies>
 			[spawn] \n
-			wpn_ppsh \n
+			wpn_bizon \n
 			ammo_7.62x25 = 5 \n
 #include "gameplay\character_items.xml" \n
 #include "gameplay\character_food.xml" \n
@@ -443,7 +443,7 @@ wpn_ak74wpn_ak74wpn_ak74
 			[spawn] \n
 			zheton = 1 \n
 			pda_agent_aver \n
-			wpn_vint \n
+			wpn_vintorez \n
 			ammo_7.62x39_fmj = 1 \n
 			device_torch \n
 #include "gameplay\character_items.xml" \n			
@@ -1896,9 +1896,7 @@ wpn_ak74wpn_ak74wpn_ak74
 		<crouch_type>1</crouch_type>
 		<supplies>
 			[spawn] \n
-			wpn_fnc \n
-			ammo_357sw_jhp \n
-			ammo_357sw_jfp \n
+			wpn_g36_nimble \n
             wpn_wincheaster1300 \n
 	        ammo_12x76_dart = 2 \n
 			medkit = 1 \n
@@ -2331,7 +2329,7 @@ wpn_ak74wpn_ak74wpn_ak74
 			wpn_walther \n
 			ammo_9x19_pbp \n
 			grenade_rgd5 \n
-			wpn_scorpion \n
+			wpn_vector \n
 			ammo_9x18_pmm = 2 \n	
 #include "gameplay\character_items.xml"	\n
 #include "gameplay\character_food.xml" \n
@@ -2473,7 +2471,7 @@ wpn_ak74wpn_ak74wpn_ak74
 			[spawn] \n
 			pda_pmc_dyshlo = 1 \n
 			zheton = 1 \n
-			wpn_l86 \n
+			wpn_l85 \n
 			ammo_9x19_pbp = 2 \n
 			wpn_ak12 \n
 			ammo_9x39_ap = 2 \n	

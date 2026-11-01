@@ -383,7 +383,7 @@ reward_reputation = +40
 reward_relation   = newstalk, +60
 reward_rank       = 7
 time              = 604800
-reward_item       = wpn_addon_grenade_launcher_m203, wpn_addon_scope_susat, wpn_addon_silencer
+reward_item       = wpn_ak103, sil_pbs1, wpn_addon_grenade_launcher, 1p78, ammo_vog-25p, ammo_vog-25p, ammo_vog-25p, ammo_vog-25p, ammo_vog-25p, ammo_vog-25p, ammo_7.62x39_ap, ammo_7.62x39_ap, ammo_7.62x39_ap, ammo_7.62x39_ap, ammo_7.62x39_ap
 prior             = 5
 
 [barmen_find_item_1]
@@ -394,9 +394,10 @@ text              = barmen_find_item_1_text
 description       = barmen_find_item_1_descr
 parent            = barman
 target            = outfit_stalker_m1
-reward_money      = 8500
+reward_money      = 10000
 reward_reputation = +30
 reward_rank       = 5
+reward_item       = sil_gexagon, rakurs
 time              = 604800
 prior             = 2
 start_info        = bar_find_item_1
@@ -409,9 +410,10 @@ text              = barmen_find_item_2_text
 description       = barmen_find_item_2_descr
 parent            = barman
 target            = wpn_desert_eagle_nimble
-reward_money      = 8000
+reward_money      = 5000
 reward_reputation = +35
 reward_rank       = 6
+reward_item       = wpn_glock18, sil_glock
 time              = 604800
 prior             = 1
 start_info        = bar_find_item_2
@@ -424,9 +426,10 @@ text              = barmen_find_item_3_text
 description       = barmen_find_item_3_descr
 parent            = barman
 target            = wpn_sig550_luckygun
-reward_money      = 9700
+reward_money      = 2000
 reward_reputation = +40
 reward_rank       = 8
+reward_item       = wpn_g36_nimble
 time              = 604800
 prior             = 3
 start_info        = bar_find_item_3
@@ -438,7 +441,7 @@ text              = barmen_monster_part_1_text
 description       = barmen_monster_part_1_descr
 parent            = barman
 target            = mutant_flesh_eye
-reward_money      = 500
+reward_money      = 1500
 reward_reputation = +20
 reward_relation   = newstalk, +80
 reward_rank       = 5
@@ -453,10 +456,11 @@ text              = barmen_monster_part_2_text
 description       = barmen_monster_part_2_descr
 parent            = barman
 target            = mutant_boar_leg
-reward_money      = 700
+reward_money      = 2000
 reward_reputation = +20
 reward_relation   = stalker, +80
 reward_rank       = 5
+reward_item       = sweets
 time              = 604800
 prior             = 2
 
@@ -699,23 +703,6 @@ prior             = 6
 
 ;---------Find Thing----------
 
-[nebo_find_artefact_1]
-type              = artefact
-community         = actor
-condlist          = {-nebo_find_artefact_1_info}
-text              = nebo_find_artefact_1_text
-description       = nebo_find_artefact_1_descr
-parent            = nebo
-target            = microscope
-reward_money      = 3500
-reward_reputation = +5
-reward_rank       = 2
-reward_relation   = newstalk, +10
-reward_item       = grenade_f1, medkit_scientic, medkit_scientic
-time              = 604800
-prior             = 2
-start_info        = levsha_find_artefact_1
-
 [nebo_find_artefact_2]
 type              = artefact
 community         = actor
@@ -724,14 +711,33 @@ text              = nebo_find_artefact_2_text
 description       = nebo_find_artefact_2_descr
 parent            = nebo
 target            = raciya_new
-reward_money      = 2000
+reward_money      = 3500
 reward_reputation = +10
 reward_rank       = 2
 reward_relation   = nebo, +15
-reward_item       = grenade_f1, medkit_scientic 
+reward_item       = grenade_f1, medkit_scientic, wpn_mp153 
 time              = 604800
 prior             = 1
 start_info        = levsha_find_artefact_2
+
+
+[nebo_find_artefact_1]
+type              = artefact
+community         = actor
+condlist          = {-nebo_find_artefact_1_info}
+text              = nebo_find_artefact_1_text
+description       = nebo_find_artefact_1_descr
+parent            = nebo
+target            = microscope
+reward_money      = 5500
+reward_reputation = +5
+reward_rank       = 2
+reward_relation   = newstalk, +10
+reward_item       = wpn_rpk74
+time              = 604800
+prior             = 2
+start_info        = levsha_find_artefact_1
+
 
 [nebo_find_artefact_3]
 type              = artefact
@@ -741,14 +747,15 @@ text              = nebo_find_artefact_3_text
 description       = nebo_find_artefact_3_descr
 parent            = nebo
 target            = tiski
-reward_money      = 1500
+reward_money      = 6000
 reward_reputation = +15
 reward_rank       = 5
 reward_relation   = nebo, +45
-reward_item       = medkit_scientic, medkit_scientic
+reward_item       = medkit_scientic, medkit_scientic, medkit_scientic, medkit_scientic, medkit_scientic, grenade_f1
 time              = 604800
 prior             = 3
 start_info        = levsha_find_artefact_3
+
 
 [nebo_find_artefact_4]
 type              = artefact
@@ -762,7 +769,7 @@ reward_money      = 1500
 reward_reputation = +15
 reward_rank       = 5
 reward_relation   = nebo, +50
-reward_item       = medkit_scientic
+reward_item       = nebo_scientific_outfit
 time              = 604800
 prior             = 4
 start_info        = levsha_find_artefact_4
@@ -869,11 +876,11 @@ text              = nebo_find_item_1_text
 description       = nebo_find_item_1_descr
 parent            = nebo
 target            = wpn_walther
-reward_money      = 1800
+reward_money      = 2500
 reward_reputation = +5
 reward_relation   = newstalk, +15
 reward_rank       = 2
-reward_item       = grenade_f1, grenade_f1 
+reward_item       = grenade_f1, grenade_f1
 time              = 604800
 prior             = 1
 start_info        = levsha_find_item_1
@@ -1066,7 +1073,7 @@ text              = freedom_monster_part_1_text
 description       = freedom_monster_part_1_descr
 parent            = freedom
 target            = mutant_boar_leg
-reward_money      = 500
+reward_money      = 1500
 reward_reputation = +10
 reward_relation   = freedom, +15
 reward_rank       = 2
@@ -1132,12 +1139,12 @@ condlist          = {-freedom_find_item_1_info}
 text              = freedom_find_item_1_text
 description       = freedom_find_item_1_descr
 parent            = freedom
-target            = wpn_svd
+target            = wpn_svu_nimble
 reward_money      = 5500
 reward_reputation = +5
 reward_relation   = freedom, +20
 reward_rank       = 2
-reward_item       = grenade_f1, grenade_f1  
+reward_item       = grenade_f1, grenade_f1
 time              = 604800
 prior             = 1
 start_info        = free_find_item_1
@@ -1167,14 +1174,68 @@ text              = freedom_find_item_3_text
 description       = freedom_find_item_3_descr
 parent            = freedom
 target            = outfit_specnaz_m1
-reward_money      = 7500
+reward_money      = 10000
 reward_reputation = +10
 reward_relation   = freedom, +35
 reward_rank       = 5
-reward_item       = medkit_army, conserva, conserva 
+reward_item       = medkit_army, conserva, conserva, energy_drink, energy_drink, vodka, vodka
 time              = 604800
 prior             = 2
 start_info        = free_find_item_3
+
+
+[freedom_find_artefact_2]
+type              = artefact
+community         = actor
+condlist          = {-freedom_find_artefact_2_info}
+text              = freedom_find_artefact_2_text
+description       = freedom_find_artefact_2_descr
+parent            = freedom
+target            = fonarik
+reward_money      = 4000
+reward_reputation = +10
+reward_relation   = freedom, +25
+reward_rank       = 2
+reward_item       = ammo_12x70_buck, ammo_12x70_buck, wpn_addon_grenade_launcher_ag36, sil_nato
+time              = 604800
+prior             = 1
+start_info        = free_find_artefact_2
+
+
+[freedom_find_artefact_1]
+type              = artefact
+community         = actor
+condlist          = {-freedom_find_artefact_1_info}
+text              = freedom_find_artefact_1_text
+description       = freedom_find_artefact_1_descr
+parent            = freedom
+target            = koloda
+reward_money      = 2000
+reward_reputation = +5
+reward_relation   = freedom, +20
+reward_rank       = 2
+reward_item       = ammo_12x70_buck, medkit, medkit, wpn_g36, ammo_5.56x45_ap, ammo_5.56x45_ap, ammo_5.56x45_ap, ammo_5.56x45_ap
+time              = 604800
+prior             = 2
+start_info        = free_find_artefact_1
+
+
+[freedom_find_artefact_3]
+type              = artefact
+community         = actor
+condlist          = {-freedom_find_artefact_3_info}
+text              = freedom_find_artefact_3_text
+description       = freedom_find_artefact_3_descr
+parent            = freedom
+target            = yaschik_freedom
+reward_money      = 6000
+reward_reputation = +15
+reward_relation   = freedom, +35
+reward_rank       = 3
+reward_item       = grenade_f1, medkit, wpn_m320, ammo_m209, ammo_m209, ammo_m209, ammo_m209, ammo_m209
+time              = 604800
+prior             = 3
+start_info        = free_find_artefact_3
 
 
 [dolg_find_artefact_1]
@@ -1229,58 +1290,3 @@ reward_item       = medkit_army, grenade_f1, wpn_val_nimble, sil_vihr, ekp
 ;time             = 604800
 prior             = 3
 start_info        = do_find_artefact_3
-
-
-[freedom_find_artefact_1]
-type              = artefact
-community         = actor
-condlist          = {-freedom_find_artefact_1_info}
-text              = freedom_find_artefact_1_text
-description       = freedom_find_artefact_1_descr
-parent            = freedom
-target            = koloda
-reward_money      = 500
-reward_reputation = +5
-reward_relation   = freedom, +20
-reward_rank       = 2
-reward_item       = ammo_12x70_buck, ammo_12x70_buck
-time              = 604800
-prior             = 2
-start_info        = free_find_artefact_1
-
-
-[freedom_find_artefact_2]
-type              = artefact
-community         = actor
-condlist          = {-freedom_find_artefact_2_info}
-text              = freedom_find_artefact_2_text
-description       = freedom_find_artefact_2_descr
-parent            = freedom
-target            = fonarik
-reward_money      = 800
-reward_reputation = +10
-reward_relation   = freedom, +25
-reward_rank       = 2
-reward_item       = ammo_12x70_buck, medkit
-time              = 604800
-prior             = 1
-start_info        = free_find_artefact_2
-
-
-[freedom_find_artefact_3]
-type              = artefact
-community         = actor
-condlist          = {-freedom_find_artefact_3_info}
-text              = freedom_find_artefact_3_text
-description       = freedom_find_artefact_3_descr
-parent            = freedom
-target            = yaschik_freedom
-reward_money      = 1500
-reward_reputation = +15
-reward_relation   = freedom, +35
-reward_rank       = 3
-reward_item       = grenade_f1, medkit
-time              = 604800
-prior             = 3
-start_info        = free_find_artefact_3
-

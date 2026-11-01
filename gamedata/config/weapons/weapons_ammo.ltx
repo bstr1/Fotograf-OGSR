@@ -1,1588 +1,1924 @@
 [ammo_base]:identity_immunities
-class                    = AMMO
-cform                    = skeleton
-explosive                = off
-tracer                   = off
-tracer_color_ID          = 0
-keep_visual              = true
+class                                    = AMMO
+cform                                    = skeleton
+explosive                                = off
+tracer                                   = off
+tracer_color_ID                          = 0
+keep_visual                              = true
 
 
 [ammo_knife]:ammo_base
-visual                   = dynamics\devices\dev_harmonica\dev_harmonica.ogf
-description              = st_ammo_knife_descr
+visual                                   = dynamics\devices\dev_harmonica\dev_harmonica.ogf
+description                              = st_ammo_knife_descr
 
-cost                     = 20
+cost                                     = 20
 
-box_size                 = 1
+box_size                                 = 1
 
-inv_name                 = st_ammo_knife
-inv_name_short           = st_ammo_knife
-inv_weight               = 0.1
+inv_name                                 = st_ammo_knife
+inv_name_short                           = st_ammo_knife
+inv_weight                               = 0.1
 
-inv_grid_height          = 1
-inv_grid_width           = 1
-inv_grid_x               = 1
-inv_grid_y               = 4
+inv_grid_height                          = 1
+inv_grid_width                           = 1
+inv_grid_x                               = 1
+inv_grid_y                               = 4
 
-icon_name                = 2222222
-
-k_dist                   = 1
-k_disp                   = 1
-k_hit                    = 1
-k_impulse                = 1
-k_pierce                 = 1
-impair                   = 1
-buck_shot                = 1
-tracer                   = off
-wm_size                  = 0.05
+k_dist                                   = 1
+k_disp                                   = 1
+k_hit                                    = 1
+k_impulse                                = 1
+k_pierce                                 = 1
+impair                                   = 1
+buck_shot                                = 1
+tracer                                   = off
+wm_size                                  = 0.05
 
 
 [ammo_12x70_buck]:ammo_base
-visual                   = dynamics\weapons\wpn_ammo\ammo_12x70_buck.ogf
-description              = st_ammo_12x70_buck_descr
+visual                                   = dynamics\weapons\wpn_ammo\ammo_12x70_buck.ogf
+description                              = st_ammo_12x70_buck_descr
 
-cost                     = 620
+cost                                     = 620
 
-box_size                 = 10
+box_size                                 = 10
 
-inv_name                 = st_ammo_12x70_buck
-inv_name_short           = st_ammo_12x70_buck_s
-inv_weight               = 0.45
+inv_name                                 = st_ammo_12x70_buck
+inv_name_short                           = st_ammo_12x70_buck_s
+inv_weight                               = 0.45
 
-inv_grid_width           = 2
-inv_grid_height          = 1
-inv_grid_x               = 2
-inv_grid_y               = 8
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 2
+inv_grid_y                               = 8
 
-icon_name                = 12x70buck
+icon_name                                = 12x70buck
 
-k_dist                   = 0.8
-k_disp                   = 10
-k_hit                    = 1.0
-k_impulse                = 1.2
-k_pierce                 = 1
-impair                   = 1.2
-buck_shot                = 12
-tracer                   = off
-wm_size                  = 0.05
+k_dist                                   = 0.8
+k_disp                                   = 10
+k_hit                                    = 1.0
+k_impulse                                = 1.2
+k_pierce                                 = 1
+impair                                   = 1.2
+buck_shot                                = 12
+tracer                                   = off
+wm_size                                  = 0.05
 
 
 [ammo_12x76_zhekan]:ammo_base
-visual                   = dynamics\weapons\wpn_ammo\ammo_12x76_zhekan.ogf
-description              = st_ammo_12x76_zhekan_descr
+visual                                   = dynamics\weapons\wpn_ammo\ammo_12x76_zhekan.ogf
+description                              = st_ammo_12x76_zhekan_descr
 
-cost                     = 850
+cost                                     = 850
 
-box_size                 = 10
+box_size                                 = 10
 
-inv_name                 = st_ammo_12x76_zhekan
-inv_name_short           = st_ammo_12x76_zhekan_s
-inv_weight               = 0.50
+inv_name                                 = st_ammo_12x76_zhekan
+inv_name_short                           = st_ammo_12x76_zhekan_s
+inv_weight                               = 0.50
 
-inv_grid_width           = 2
-inv_grid_height          = 1
-inv_grid_x               = 4
-inv_grid_y               = 0
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 4
+inv_grid_y                               = 0
 
-icon_name                = 12x70zhekan
+icon_name                                = 12x70zhekan
 
-k_dist                   = 1.5
-k_disp                   = 1.2
-k_hit                    = 6.5
-k_impulse                = 1.5
-k_pierce                 = 1.1
-impair                   = 1.1
-buck_shot                = 1
-tracer                   = off
-wm_size                  = 0.05
-explosive                = off 
+k_dist                                   = 1.5
+k_disp                                   = 1.2
+k_hit                                    = 6.5
+k_impulse                                = 1.5
+k_pierce                                 = 1.1
+impair                                   = 1.1
+buck_shot                                = 1
+tracer                                   = off
+wm_size                                  = 0.05
+explosive                                = off 
 
 
 [ammo_12x76_dart]:ammo_12x76_zhekan
-; visual                 = dynamics\weapons\wpn_ammo\ammo_12x76_zhekan.ogf
-; description            = st_ammo_12x76_zhekan_descr
+visual                                   = dynamics\weapons\wpn_ammo\ammo_12x76_dart.ogf
+description                              = st_ammo_12x76_dart_descr
 
-cost                     = 1000
+cost                                     = 1000
 
-box_size                 = 10
+box_size                                 = 10
 
-; inv_name               = st_ammo_12x76_zhekan
-; inv_name_short         = st_ammo_12x76_zhekan_s
-inv_weight               = 0.50
+inv_name                                 = st_ammo_12x76_dart
+inv_name_short                           = st_ammo_12x76_dart_s
+inv_weight                               = 0.50
 
-inv_grid_width           = 2
-inv_grid_height          = 1
-inv_grid_x               = 4
-inv_grid_y               = 1
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 4
+inv_grid_y                               = 1
 
-icon_name                = 12x70dart
+icon_name                                = 12x70dart
 
-k_dist                   = 2.3
-k_disp                   = 1.1
-k_hit                    = 6.7
-k_impulse                = 1.4
-k_pierce                 = 2.3
-impair                   = 1.15
-buck_shot                = 1
-tracer                   = on
-wm_size                  = 0.05
-explosive                = off
+k_dist                                   = 2.3
+k_disp                                   = 1.1
+k_hit                                    = 6.7
+k_impulse                                = 1.4
+k_pierce                                 = 2.3
+impair                                   = 1.15
+buck_shot                                = 1
+tracer                                   = on
+wm_size                                  = 0.05
+explosive                                = off
 
 
 [ammo_12x76_zhekan_heli]:ammo_12x76_zhekan
-inv_grid_width           = 2
-inv_grid_height          = 1
-inv_grid_x               = 4
-inv_grid_y               = 8
+visual                                   = dynamics\weapons\wpn_ammo\ammo_12x76_dart.ogf
+description                              = st_ammo_12x76_zhekan_heli_descr
 
-icon_name                = 12x70izo
+cost                                     = 1000
 
-k_dist                   = 2.5
-k_disp                   = 1.2
-k_hit                    = 10
-k_impulse                = 2
-k_pierce                 = 2.5
-impair                   = 1.2
-buck_shot                = 1
-tracer                   = on
-wm_size                  = 0.05
-explosive                = on
+box_size                                 = 10
+
+inv_name                                 = st_ammo_12x76_zhekan_heli
+inv_name_short                           = st_ammo_12x76_zhekan_heli_s
+inv_weight                               = 0.50
+
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 4
+inv_grid_y                               = 8
+
+icon_name                                = 12x70izo
+
+k_dist                                   = 2.5
+k_disp                                   = 1.2
+k_hit                                    = 10
+k_impulse                                = 2
+k_pierce                                 = 2.5
+impair                                   = 1.2
+buck_shot                                = 1
+tracer                                   = on
+wm_size                                  = 0.05
+explosive                                = off
 
 
 [ammo_9x18_fmj]:ammo_base
-visual                   = dynamics\weapons\wpn_ammo\ammo_9x18_fmj.ogf
-description              = st_ammo_9x18_fmj_descr
+visual                                   = dynamics\weapons\wpn_ammo\ammo_9x18_fmj.ogf
+description                              = st_ammo_9x18_fmj_descr
 
-cost                     = 800
+cost                                     = 800
 
-box_size                 = 20
+box_size                                 = 20
 
-inv_name                 = st_ammo_9x18_fmj
-inv_name_short           = st_ammo_9x18_fmj_s
-inv_weight               = 0.21
+inv_name                                 = st_ammo_9x18_fmj
+inv_name_short                           = st_ammo_9x18_fmj_s
+inv_weight                               = 0.21
 
-inv_grid_width           = 1
-inv_grid_height          = 1
-inv_grid_x               = 0
-inv_grid_y               = 0
+inv_grid_width                           = 1
+inv_grid_height                          = 1
+inv_grid_x                               = 0
+inv_grid_y                               = 0
 
-icon_name                = 9x18
+icon_name                                = 9x18
 
-k_dist                   = 1
-k_disp                   = 1.1
-k_hit                    = 3.95
-k_impulse                = 1
-k_pierce                 = 1
-impair                   = 1
-buck_shot                = 1
-tracer                   = off
-wm_size                  = 0.0325
+k_dist                                   = 1
+k_disp                                   = 1.1
+k_hit                                    = 3.95
+k_impulse                                = 1
+k_pierce                                 = 1
+impair                                   = 1
+buck_shot                                = 1
+tracer                                   = off
+wm_size                                  = 0.0325
 
 
 [ammo_9x18_pmm]:ammo_base
-visual                   = dynamics\weapons\wpn_ammo\ammo_9x18_pmm.ogf
-description              = st_ammo_9x18_pmm_descr
+visual                                   = dynamics\weapons\wpn_ammo\ammo_9x18_pmm.ogf
+description                              = st_ammo_9x18_pmm_descr
 
-cost                     = 1000
+cost                                     = 1000
 
-box_size                 = 20
+box_size                                 = 20
 
-inv_name                 = st_ammo_9x18_pmm
-inv_name_short           = st_ammo_9x18_pmm_s
-inv_weight               = 0.26
+inv_name                                 = st_ammo_9x18_pmm
+inv_name_short                           = st_ammo_9x18_pmm_s
+inv_weight                               = 0.26
 
-inv_grid_width           = 1
-inv_grid_height          = 1
-inv_grid_x               = 1
-inv_grid_y               = 0
+inv_grid_width                           = 1
+inv_grid_height                          = 1
+inv_grid_x                               = 1
+inv_grid_y                               = 0
 
-icon_name                = 9x18pb
+icon_name                                = 9x18pb
 
-k_dist                   = 1.3
-k_disp                   = 1.1
-k_hit                    = 3.95
-k_impulse                = 1.5
-k_pierce                 = 1.3
-impair                   = 1.03
-buck_shot                = 1
-tracer                   = off
-wm_size                  = 0.05
+k_dist                                   = 1.3
+k_disp                                   = 1.1
+k_hit                                    = 3.95
+k_impulse                                = 1.5
+k_pierce                                 = 1.3
+impair                                   = 1.03
+buck_shot                                = 1
+tracer                                   = off
+wm_size                                  = 0.05
 
 
 [ammo_7.62x25]:ammo_base
-visual                   = dynamics\weapons\wpn_ammo\ammo_tt33.ogf
-description              = st_ammo_7.62x25_descr
+visual                                   = dynamics\weapons\wpn_ammo\ammo_tt33.ogf
+description                              = st_ammo_7.62x25_descr
 
-cost                     = 1100
+cost                                     = 1100
 
-box_size                 = 20
+box_size                                 = 20
 
-inv_name                 = st_ammo_7.62x25
-inv_name_short           = st_ammo_7.62x25_s
-inv_weight               = 0.36
+inv_name                                 = st_ammo_7.62x25
+inv_name_short                           = st_ammo_7.62x25_s
+inv_weight                               = 0.36
 
-inv_grid_width           = 2
-inv_grid_height          = 1
-inv_grid_x               = 0
-inv_grid_y               = 2
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 0
+inv_grid_y                               = 2
 
-icon_name                = 7.62x25_p
+icon_name                                = 7.62x25_p
 
-k_dist                     = 1
-k_disp                     = 1.1
-k_hit                      = 4.3
-k_impulse                  = 1.1
-k_pierce                   = 2.5
-impair                     = 1
-buck_shot                  = 1
-tracer                     = off
-wm_size                    = 0.04
+k_dist                                   = 1
+k_disp                                   = 1.1
+k_hit                                    = 4.3
+k_impulse                                = 1.1
+k_pierce                                 = 2.5
+impair                                   = 1
+buck_shot                                = 1
+tracer                                   = off
+wm_size                                  = 0.04
 
 
-[ammo_7.62x25_ps]:ammo_7.62x25
-cost                     = 1300
+[ammo_7.62x25_ps]:ammo_base
+visual                                   = dynamics\weapons\wpn_ammo\ammo_tt33.ogf
+description                              = st_ammo_7.62x25_ps_descr
 
-; inv_name               = st_ammo_7.62x25
-; inv_name_short         = st_ammo_7.62x25_s
-; inv_weight             = 0.36
+cost                                     = 1300
 
-inv_grid_width           = 2
-inv_grid_height          = 1
-inv_grid_x               = 0
-inv_grid_y               = 3
+box_size                                 = 20
 
-icon_name                = 7.62x25_ps
+inv_name                                 = st_ammo_7.62x25_ps
+inv_name_short                           = st_ammo_7.62x25_ps_s
+inv_weight                               = 0.36
 
-k_hit                    = 0.4
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 0
+inv_grid_y                               = 3
 
+icon_name                                = 7.62x25_ps
+
+k_dist                                   = 1
+k_disp                                   = 1.1
+k_hit                                    = 4.3
+k_impulse                                = 1.1
+k_pierce                                 = 2.5
+impair                                   = 1
+buck_shot                                = 1
+tracer                                   = off
+wm_size                                  = 0.04
 
 
 [ammo_9x19_fmj]:ammo_base
-visual                   = dynamics\weapons\wpn_ammo\ammo_9x19_fmj.ogf
-description              = st_ammo_9x19_fmj_descr
+visual                                   = dynamics\weapons\wpn_ammo\ammo_9x19_fmj.ogf
+description                              = st_ammo_9x19_fmj_descr
 
-cost                     = 900
+cost                                     = 900
 
-box_size                 = 20
+box_size                                 = 20
 
-inv_name                 = st_ammo_9x19_fmj
-inv_name_short           = st_ammo_9x19_fmj_s
-inv_weight               = 0.24
+inv_name                                 = st_ammo_9x19_fmj
+inv_name_short                           = st_ammo_9x19_fmj_s
+inv_weight                               = 0.24
 
-inv_grid_width           = 1
-inv_grid_height          = 1
-inv_grid_x               = 0
-inv_grid_y               = 1
+inv_grid_width                           = 1
+inv_grid_height                          = 1
+inv_grid_x                               = 0
+inv_grid_y                               = 1
 
-icon_name                = 9x19
+icon_name                                = 9x19
 
-k_dist                   = 1
-k_disp                   = 1.2
-k_hit                    = 3.9
-k_impulse                = 1
-k_pierce                 = 1
-impair                   = 1
-buck_shot                = 1
-wm_size                  = 0.06
-tracer                   = off
+k_dist                                   = 1
+k_disp                                   = 1.2
+k_hit                                    = 3.9
+k_impulse                                = 1
+k_pierce                                 = 1
+impair                                   = 1
+buck_shot                                = 1
+wm_size                                  = 0.06
+tracer                                   = off
 
 
 [ammo_9x19_pbp]:ammo_base
-visual                   = dynamics\weapons\wpn_ammo\ammo_9x19_pbp.ogf
-description              = st_ammo_9x19_pbp_descr
+visual                                   = dynamics\weapons\wpn_ammo\ammo_9x19_pbp.ogf
+description                              = st_ammo_9x19_pbp_descr
 
-cost                     = 1100
+cost                                     = 1100
 
-box_size                 = 20
+box_size                                 = 20
 
-inv_name                 = st_ammo_9x19_pbp
-inv_name_short           = st_ammo_9x19_pbp_s
-inv_weight               = 0.3
+inv_name                                 = st_ammo_9x19_pbp
+inv_name_short                           = st_ammo_9x19_pbp_s
+inv_weight                               = 0.3
 
-inv_grid_width           = 1
-inv_grid_height          = 1
-inv_grid_x               = 1
-inv_grid_y               = 1
+inv_grid_width                           = 1
+inv_grid_height                          = 1
+inv_grid_x                               = 1
+inv_grid_y                               = 1
 
-icon_name                = 9x19bp
+icon_name                                = 9x19bp
 
-k_dist                   = 1.2
-k_disp                   = 1.1
-k_hit                    = 4.1
-k_impulse                = 1
-k_pierce                 = 1.1
-impair                   = 1
-buck_shot                = 1
-wm_size                  = 0.06
-tracer                   = off
-
-
-[ammo_9x21]:ammo_base
-visual                   = dynamics\weapons\wpn_ammo\ammo_9x21.ogf
-description              = st_ammo_9x21_descr
-
-cost                     = 1750
-
-box_size                 = 20
-
-inv_name                 = st_ammo_9x21
-inv_name_short           = st_ammo_9x21_s
-inv_weight               = 0.27
-
-inv_grid_height          = 1
-inv_grid_width           = 2
-inv_grid_x               = 20
-inv_grid_y               = 25
-
-icon_name                = 2222222
-
-k_dist                   = 1
-k_disp                   = 1.14
-k_hit                    = 3.5
-k_impulse                = 2
-k_pierce                 = 1
-impair                   = 1.20
-buck_shot                = 1
-wm_size                  = 0.0533
+k_dist                                   = 1.2
+k_disp                                   = 1.1
+k_hit                                    = 4.1
+k_impulse                                = 1
+k_pierce                                 = 1.1
+impair                                   = 1
+buck_shot                                = 1
+wm_size                                  = 0.06
+tracer                                   = off
 
 
 [ammo_11.43x23_fmj]:ammo_base
-visual                   = dynamics\weapons\wpn_ammo\ammo_1143x23_fmj.ogf
-description              = st_ammo_11.43x23_fmj_descr
+visual                                   = dynamics\weapons\wpn_ammo\ammo_1143x23_fmj.ogf
+description                              = st_ammo_11.43x23_fmj_descr
 
-cost                     = 1200
+cost                                     = 1200
 
-box_size                 = 20
+box_size                                 = 20
 
-inv_name                 = st_ammo_11.43x23_fmj
-inv_name_short           = st_ammo_11.43x23_fmj_s
-inv_weight               = 0.28
+inv_name                                 = st_ammo_11.43x23_fmj
+inv_name_short                           = st_ammo_11.43x23_fmj_s
+inv_weight                               = 0.28
 
-inv_grid_width           = 2
-inv_grid_height          = 1
-inv_grid_x               = 0
-inv_grid_y               = 4
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 0
+inv_grid_y                               = 4
 
-icon_name                = 11_43x23
+icon_name                                = 11_43x23
 
-k_dist                  = 1
-k_disp                  = 1.2
-k_hit                   = 3.9
-k_impulse               = 3
-k_pierce                = 1
-impair                  = 1
-buck_shot               = 1
-tracer                  = off
-wm_size                  = 0.05
+k_dist                                   = 1
+k_disp                                   = 1.2
+k_hit                                    = 3.9
+k_impulse                                = 3
+k_pierce                                 = 1
+impair                                   = 1
+buck_shot                                = 1
+tracer                                   = off
+wm_size                                  = 0.05
 
 
 [ammo_11.43x23_hydro]:ammo_base
-visual                   = dynamics\weapons\wpn_ammo\ammo_1143x23_hydro.ogf
-description              = st_ammo_11.43x23_hydro_descr
+visual                                   = dynamics\weapons\wpn_ammo\ammo_1143x23_hydro.ogf
+description                              = st_ammo_11.43x23_hydro_descr
 
-cost                     = 1500
+cost                                     = 1500
 
-box_size                 = 20
+box_size                                 = 20
 
-inv_name                 = st_ammo_11.43x23_hydro
-inv_name_short           = st_ammo_11.43x23_hydro_s
-inv_weight               = 0.35
+inv_name                                 = st_ammo_11.43x23_hydro
+inv_name_short                           = st_ammo_11.43x23_hydro_s
+inv_weight                               = 0.35
 
-inv_grid_width           = 2
-inv_grid_height          = 1
-inv_grid_x               = 0
-inv_grid_y               = 5
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 0
+inv_grid_y                               = 5
 
-icon_name                = 11_43x23g
+icon_name                                = 11_43x23g
 
-k_dist                   = 1
-k_disp                   = 1.1
-k_hit                    = 4.1
-k_impulse                = 3.5
-k_pierce                 = 1.3
-impair                   = 1
-buck_shot                = 1
-tracer                   = on
-wm_size                  = 0.05
-
-
-[ammo_44mag]:ammo_base
-visual                   = dynamics\weapons\wpn_ammo\ammo_44_mag.ogf
-description              = st_ammo_44mag_descr
-
-cost                     = 2400
-
-box_size                 = 16
-
-inv_name                 = st_ammo_44mag
-inv_name_short           = st_ammo_44mag_s
-inv_weight               = 0.45
-
-inv_grid_width           = 2
-inv_grid_height          = 1
-inv_grid_x               = 0
-inv_grid_y               = 5
-
-icon_name                = 357_hp_mag
-
-k_dist                   = 1.1
-k_disp                   = 1.1
-k_hit                    = 6.5
-k_impulse                = 3.0
-k_pierce                 = 1.1
-impair                   = 1
-buck_shot                = 1
-tracer                   = off
-wm_size                  = 0.06
+k_dist                                   = 1
+k_disp                                   = 1.1
+k_hit                                    = 4.1
+k_impulse                                = 3.5
+k_pierce                                 = 1.3
+impair                                   = 1
+buck_shot                                = 1
+tracer                                   = on
+wm_size                                  = 0.05
 
 
-[ammo_44mag_boom]:ammo_44mag
-visual                   = dynamics\weapons\wpn_ammo\ammo_44_mag_boom.ogf
-description              = st_ammo_44mag_boom_descr
+[ammo_357_hp_mag]:ammo_base
+visual                                   = dynamics\weapons\wpn_ammo\ammo_357_jhp.ogf
+description                              = st_ammo_357_hp_mag_descr
 
-cost                     = 4800
+cost                                     = 2400
 
-inv_name                 = st_ammo_44mag_boom
-inv_name_short           = st_ammo_44mag_boom_s
-inv_weight               = 0.55
+box_size                                 = 8
 
-inv_grid_width           = 2
-inv_grid_height          = 1
-inv_grid_x               = 0
-inv_grid_y               = 5
+inv_name                                 = st_ammo_357_hp_mag
+inv_name_short                           = st_ammo_357_hp_mag_s
+inv_weight                               = 0.5
 
-icon_name                = 357_ap_mag
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 0
+inv_grid_y                               = 5
 
-k_dist                     = 1.2
-k_disp                     = 1.2
-k_hit                      = 7.1
-k_impulse                  = 3.5
-k_pierce                   = 1
-impair                     = 1
-buck_shot                  = 1
-tracer                     = off
-wm_size                    = 0.06
-explosive                  = on
+icon_name                                = 357_hp_mag
+
+k_dist                                   = 1.1
+k_disp                                   = 1.1
+k_hit                                    = 6.5
+k_impulse                                = 3.0
+k_pierce                                 = 1.1
+impair                                   = 1
+buck_shot                                = 1
+tracer                                   = off
+wm_size                                  = 0.06
 
 
-[ammo_50ae]:ammo_base
-visual                   = dynamics\weapons\wpn_ammo\ammo_50_ae.ogf
-description              = st_ammo_50_ae_descr
+[ammo_357_ap_mag]:ammo_base
+visual                                   = dynamics\weapons\wpn_ammo\ammo_357_jhp.ogf
+description                              = st_ammo_357_ap_mag_descr
 
-cost                     = 2800
+cost                                     = 4800
 
-box_size                 = 20
+box_size                                 = 8
 
-inv_name                 = st_ammo_50_ae
-inv_name_short           = st_ammo_50_ae_s
-inv_weight               = 0.65
+inv_name                                 = st_ammo_ammo_357_ap_mag
+inv_name_short                           = st_ammo_ammo_357_ap_mag_s
+inv_weight                               = 0.5
 
-inv_grid_height          = 1
-inv_grid_width           = 2
-inv_grid_x               = 20
-inv_grid_y               = 18
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 0
+inv_grid_y                               = 5
 
-icon_name                = 2222222
+icon_name                                = 357_ap_mag
 
-k_dist                   = 1.1
-k_disp                   = 1.1
-k_hit                    = 5
-k_impulse                = 2
-k_pierce                 = 1.1
-impair                   = 1
-buck_shot                = 1
-tracer                   = off
-wm_size                  = 0.06
+k_dist                                   = 1.2
+k_disp                                   = 1.2
+k_hit                                    = 7.1
+k_impulse                                = 3.5
+k_pierce                                 = 1
+impair                                   = 1
+buck_shot                                = 1
+tracer                                   = off
+wm_size                                  = 0.06
+explosive                                = off
 
 
 [ammo_5.45x39_fmj]:ammo_base
-visual                   = dynamics\weapons\wpn_ammo\ammo_545x39_fmj.ogf
-description              = st_ammo_5.45x39_fmj_descr
+visual                                   = dynamics\weapons\wpn_ammo\ammo_545x39_fmj.ogf
+description                              = st_ammo_5.45x39_fmj_descr
 
-cost                     = 1400
+cost                                     = 1400
 
-box_size                 = 30
+box_size                                 = 30
 
-inv_name                 = st_ammo_5.45x39_fmj
-inv_name_short           = st_ammo_5.45x39_fmj_s
-inv_weight               = 0.31
+inv_name                                 = st_ammo_5.45x39_fmj
+inv_name_short                           = st_ammo_5.45x39_fmj_s
+inv_weight                               = 0.31
 
-inv_grid_width           = 2
-inv_grid_height          = 1
-inv_grid_x               = 0
-inv_grid_y               = 8
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 0
+inv_grid_y                               = 8
 
-icon_name                = 545
+icon_name                                = 545
 
-k_dist                   = 1
-k_disp                   = 1.2
-k_hit                    = 3.35
-k_impulse                = 1
-k_pierce                 = 2
-impair                   = 1
-buck_shot                = 1
-wm_size                  = 0.05
-tracer                   = off
-explosive                = off 
+k_dist                                   = 1
+k_disp                                   = 1.2
+k_hit                                    = 3.35
+k_impulse                                = 1
+k_pierce                                 = 2
+impair                                   = 1
+buck_shot                                = 1
+wm_size                                  = 0.05
+tracer                                   = off
+explosive                                = off 
 
 
 [ammo_5.45x39_ap]:ammo_base
-visual                   = dynamics\weapons\wpn_ammo\ammo_545x39_ap.ogf
-description              = st_ammo_5.45x39_ap_descr
+visual                                   = dynamics\weapons\wpn_ammo\ammo_545x39_ap.ogf
+description                              = st_ammo_5.45x39_ap_descr
 
-cost                     = 1900
+cost                                     = 1900
 
-box_size                 = 30
+box_size                                 = 30
 
-inv_name                 = st_ammo_5.45x39_ap
-inv_name_short           = st_ammo_5.45x39_ap_s
-inv_weight               = 0.36
+inv_name                                 = st_ammo_5.45x39_ap
+inv_name_short                           = st_ammo_5.45x39_ap_s
+inv_weight                               = 0.36
 
-inv_grid_width           = 2
-inv_grid_height          = 1
-inv_grid_x               = 0
-inv_grid_y               = 9
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 0
+inv_grid_y                               = 9
 
-icon_name                = 545ap
+icon_name                                = 545ap
 
-k_dist                   = 1.2
-k_disp                   = 1
-k_hit                    = 3.35
-k_impulse                = 1
-k_pierce                 = 2.5
-impair                   = 1
-buck_shot                = 1
-tracer                   = off
-wm_size                  = 0.05
-explosive                = off 
+k_dist                                   = 1.2
+k_disp                                   = 1
+k_hit                                    = 3.35
+k_impulse                                = 1
+k_pierce                                 = 2.5
+impair                                   = 1
+buck_shot                                = 1
+tracer                                   = off
+wm_size                                  = 0.05
+explosive                                = off 
 
 
-[ammo_5.45x39_izomorf]:ammo_5.45x39_ap
-inv_grid_width           = 2
-inv_grid_height          = 1
-inv_grid_x               = 4
-inv_grid_y               = 9
+[ammo_5.45x39_izomorf]:ammo_base
+visual                                   = dynamics\weapons\wpn_ammo\ammo_545x39_ap.ogf
+description                              = st_ammo_5.45x39_izomorf_descr
 
-icon_name                = 545izo
+cost                                     = 1900
 
-k_hit                    = 4
+box_size                                 = 30
+
+inv_name                                 = st_ammo_5.45x39_izomorf
+inv_name_short                           = st_ammo_5.45x39_izomorf_s
+inv_weight                               = 0.36
+
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 4
+inv_grid_y                               = 9
+
+icon_name                                = 545izo
+
+k_dist                                   = 1.2
+k_disp                                   = 1
+k_hit                                    = 4
+k_impulse                                = 1
+k_pierce                                 = 2.5
+impair                                   = 1
+buck_shot                                = 1
+tracer                                   = off
+wm_size                                  = 0.05
+explosive                                = off 
 
 
 [ammo_5.56x45_ss190]:ammo_base
-visual                   = dynamics\weapons\wpn_ammo\ammo_556x45_ss190.ogf
-description              = st_ammo_5.56x45_ss190_descr
+visual                                   = dynamics\weapons\wpn_ammo\ammo_556x45_ss190.ogf
+description                              = st_ammo_5.56x45_ss190_descr
 
-cost                     = 1750
+cost                                     = 1750
 
-box_size                 = 30
+box_size                                 = 30
 
-inv_name                 = st_ammo_5.56x45_ss190
-inv_name_short           = st_ammo_5.56x45_ss190_s
-inv_weight               = 0.33
+inv_name                                 = st_ammo_5.56x45_ss190
+inv_name_short                           = st_ammo_5.56x45_ss190_s
+inv_weight                               = 0.33
 
-inv_grid_width           = 2
-inv_grid_height          = 1
-inv_grid_x               = 2
-inv_grid_y               = 0
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 2
+inv_grid_y                               = 0
 
-icon_name                = 556
+icon_name                                = 556
 
-k_dist                                               = 1
-k_disp                                               = 1.3
-k_hit                                                = 3.33
-k_impulse                                            = 1
-k_pierce                                             = 2
-impair                                               = 1
-buck_shot                                            = 1
-tracer                                               = on
-wm_size                                              = 0.05
-explosive                                            = off
+k_dist                                   = 1
+k_disp                                   = 1.3
+k_hit                                    = 3.33
+k_impulse                                = 1
+k_pierce                                 = 2
+impair                                   = 1
+buck_shot                                = 1
+tracer                                   = on
+wm_size                                  = 0.05
+explosive                                = off
 
 
 [ammo_5.56x45_ap]:ammo_base
-visual                   = dynamics\weapons\wpn_ammo\ammo_556x45_ap.ogf
-description              = st_ammo_5.56x45_ap_descr
+visual                                   = dynamics\weapons\wpn_ammo\ammo_556x45_ap.ogf
+description                              = st_ammo_5.56x45_ap_descr
 
-cost                     = 2250
+cost                                     = 2250
 
-box_size                 = 30
+box_size                                 = 30
 
-inv_name                 = st_ammo_5.56x45_ap
-inv_name_short           = st_ammo_5.56x45_ap_s
-inv_weight               = 0.38
+inv_name                                 = st_ammo_5.56x45_ap
+inv_name_short                           = st_ammo_5.56x45_ap_s
+inv_weight                               = 0.38
 
-inv_grid_width           = 2
-inv_grid_height          = 1
-inv_grid_x               = 2
-inv_grid_y               = 1
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 2
+inv_grid_y                               = 1
 
-icon_name                = 556ap
+icon_name                                = 556ap
 
-k_dist                                               = 1.2
-k_disp                                               = 1.1
-k_hit                                                = 3.33
-k_impulse                                            = 0.9
-k_pierce                                             = 2.3
-impair                                               = 1
-buck_shot                                            = 1
-tracer                                               = on
-wm_size                                              = 0.05
-explosive                                            = off 
+k_dist                                   = 1.2
+k_disp                                   = 1.1
+k_hit                                    = 3.33
+k_impulse                                = 0.9
+k_pierce                                 = 2.3
+impair                                   = 1
+buck_shot                                = 1
+tracer                                   = off
+wm_size                                  = 0.05
+explosive                                = off 
 
 
 [ammo_5.7x28_fmj]:ammo_base
-visual                   = dynamics\weapons\wpn_ammo\ammo_57x28_fmj.ogf
-description              = st_ammo_5.7x28_fmj_descr
+visual                                   = dynamics\weapons\wpn_ammo\ammo_57x28_fmj.ogf
+description                              = st_ammo_5.7x28_fmj_descr
 
-cost                     = 2500
+cost                                     = 2500
 
-box_size                 = 30
+box_size                                 = 20
 
-inv_name                 = st_ammo_5.7x28_fmj
-inv_name_short           = st_ammo_5.7x28_fmj_s
-inv_weight               = 0.35
+inv_name                                 = st_ammo_5.7x28_fmj
+inv_name_short                           = st_ammo_5.7x28_fmj_s
+inv_weight                               = 0.35
 
-inv_grid_width           = 2
-inv_grid_height          = 1
-inv_grid_x               = 0
-inv_grid_y               = 5
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 0
+inv_grid_y                               = 5
 
-icon_name                = 5_728
+icon_name                                = 5_728
 
-k_dist                                               = 1
-k_disp                                               = 1.3
-k_hit                                                = 3.2
-k_impulse                                            = 1
-k_pierce                                             = 1
-impair                                               = 1
-buck_shot                                            = 1
-tracer                                               = on
-wm_size                                              = 0.05
+k_dist                                   = 1
+k_disp                                   = 1.3
+k_hit                                    = 3.2
+k_impulse                                = 1
+k_pierce                                 = 1
+impair                                   = 1
+buck_shot                                = 1
+tracer                                   = off
+wm_size                                  = 0.05
 
 
-[ammo_5.7x28_ss190]:ammo_5.7x28_fmj
-inv_grid_width           = 2
-inv_grid_height          = 1
-inv_grid_x               = 0
-inv_grid_y               = 5
+[ammo_5.7x28_ap]:ammo_base
+visual                                   = dynamics\weapons\wpn_ammo\ammo_57x28_ap.ogf
+description                              = st_ammo_5.7x28_ap_descr
 
-icon_name                = 5_728bp
+cost                                     = 2700
 
-k_dist                                               = 1
-k_disp                                               = 1.3
-k_hit                                                = 3.3
-k_impulse                                            = 1
-k_pierce                                             = 2
-impair                                               = 1
-buck_shot                                            = 1
-tracer                                               = on
-wm_size                                              = 0.05
+box_size                                 = 20
+
+inv_name                                 = st_ammo_5.7x28_ap
+inv_name_short                           = st_ammo_5.7x28_ap_s
+inv_weight                               = 0.35
+
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 0
+inv_grid_y                               = 5
+
+icon_name                                = 5_728bp
+
+k_dist                                   = 1
+k_disp                                   = 1.3
+k_hit                                    = 3.6
+k_impulse                                = 1
+k_pierce                                 = 1
+impair                                   = 1
+buck_shot                                = 1
+tracer                                   = on
+wm_size                                  = 0.05
 
 
 [ammo_9x39_pab9]:ammo_base
-visual                   = dynamics\weapons\wpn_ammo\ammo_9x39_pab9.ogf
-description              = st_ammo_9x39_pab9_descr
+visual                                   = dynamics\weapons\wpn_ammo\ammo_9x39_pab9.ogf
+description                              = st_ammo_9x39_pab9_descr
 
-cost                     = 2100
+cost                                     = 2100
 
-box_size                 = 20
+box_size                                 = 30
 
-inv_name                 = st_ammo_9x39_pab9
-inv_name_short           = st_ammo_9x39_pab9_s
-inv_weight               = 0.75
+inv_name                                 = st_ammo_9x39_pab9
+inv_name_short                           = st_ammo_9x39_pab9_s
+inv_weight                               = 0.7
 
-inv_grid_width           = 2
-inv_grid_height          = 1
-inv_grid_x               = 2
-inv_grid_y               = 2
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 2
+inv_grid_y                               = 2
 
-icon_name                = 939pab9
+icon_name                                = 939pab9
 
-k_dist                                               = 1
-k_disp                                               = 2
-k_hit                                                = 6.8
-k_impulse                                            = 1
-k_pierce                                             = 2
-impair                                               = 1.05
-buck_shot                                            = 1
-tracer                                               = on
-wm_size                                              = 0.05
-explosive                                            = off
+k_dist                                   = 1
+k_disp                                   = 2
+k_hit                                    = 6.8
+k_impulse                                = 1
+k_pierce                                 = 2
+impair                                   = 1.05
+buck_shot                                = 1
+tracer                                   = on
+wm_size                                  = 0.05
+explosive                                = off
 
 
 [ammo_9x39_ap]:ammo_base
-visual                   = dynamics\weapons\wpn_ammo\ammo_9x39_ap.ogf
-description              = st_ammo_9x39_ap_descr
+visual                                   = dynamics\weapons\wpn_ammo\ammo_9x39_ap.ogf
+description                              = st_ammo_9x39_ap_descr
 
-cost                     = 2600
+cost                                     = 2600
 
-box_size                 = 20
+box_size                                 = 30
 
-inv_name                 = st_ammo_9x39_ap
-inv_name_short           = st_ammo_9x39_ap_s
-inv_weight               = 0.8
+inv_name                                 = st_ammo_9x39_ap
+inv_name_short                           = st_ammo_9x39_ap_s
+inv_weight                               = 0.7
 
-inv_grid_width           = 2
-inv_grid_height          = 1
-inv_grid_x               = 2
-inv_grid_y               = 4
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 2
+inv_grid_y                               = 4
 
-icon_name                = 939sp6
+icon_name                                = 939sp6
 
-k_dist                                               = 1.2
-k_disp                                               = 1.1
-k_hit                                                = 7
-k_impulse                                            = 1
-k_pierce                                             = 4
-impair                                               = 1
-buck_shot                                            = 1
-tracer                                               = off
-wm_size                                              = 0.04
-
-
-[ammo_9x39_sp5]:ammo_9x39_ap
-inv_grid_width           = 2
-inv_grid_height          = 1
-inv_grid_x               = 2
-inv_grid_y               = 3
-
-icon_name                = 939sp5
-
-k_dist                                               = 1.3
-k_disp                                               = 0.8
-k_hit                                                = 6.8
-k_impulse                                            = 1
-k_pierce                                             = 3.5
-impair                                               = 1
-buck_shot                                            = 1
-tracer                                               = on
-wm_size                                              = 0.04
+k_dist                                   = 1.2
+k_disp                                   = 1.1
+k_hit                                    = 7
+k_impulse                                = 1
+k_pierce                                 = 4
+impair                                   = 1
+buck_shot                                = 1
+tracer                                   = off
+wm_size                                  = 0.04
 
 
-[ammo_12.7x55_fmj]:ammo_base
-visual                   = dynamics\weapons\wpn_ammo\ammo_127x55_fmj.ogf
-description              = st_ammo_12.7x55_fmj_descr
+[ammo_9x39_sp5]:ammo_base
+visual                                   = dynamics\weapons\wpn_ammo\ammo_9x39_sp5.ogf
+description                              = st_ammo_9x39_sp5_descr
 
-cost                     = 4600
+cost                                     = 2600
 
-box_size                 = 20
+box_size                                 = 30
 
-inv_name                 = st_ammo_12.7x55_fmj
-inv_name_short           = st_ammo_12.7x55_fmj_s
-inv_weight               = 0.5
+inv_name                                 = st_ammo_9x39_sp5
+inv_name_short                           = st_ammo_9x39_sp5_s
+inv_weight                               = 0.7
 
-inv_grid_height          = 1
-inv_grid_width           = 2
-inv_grid_x               = 12
-inv_grid_y               = 40
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 2
+inv_grid_y                               = 3
 
-icon_name                = 2222222
+icon_name                                = 939sp5
 
-k_dist                   = 1.5
-k_disp                   = 1.0
-k_hit                    = 8
-k_impulse                = 25
-k_pierce                 = 3
-impair                   = 1.05
-buck_shot                = 1
-tracer                   = off
-wm_size                  = 0.092
+k_dist                                   = 1.3
+k_disp                                   = 0.8
+k_hit                                    = 6.8
+k_impulse                                = 1
+k_pierce                                 = 3.5
+impair                                   = 1
+buck_shot                                = 1
+tracer                                   = on
+wm_size                                  = 0.04
 
 
-[ammo_12.7x55_ap]:ammo_base
-visual                   = dynamics\weapons\wpn_ammo\ammo_127x55_ap.ogf
-description              = st_ammo_12.7x55_ap_descr
+[ammo_9x39_izomorf]:ammo_base
+visual                                   = dynamics\weapons\wpn_ammo\ammo_9x39_ap.ogf
+description                              = st_ammo_9x39_izomorf_descr
 
-cost                     = 5200
+cost                                     = 2600
 
-box_size                 = 20
+box_size                                 = 30
 
-inv_name                 = st_ammo_12.7x55_ap
-inv_name_short           = st_ammo_12.7x55_ap_s
-inv_weight               = 0.5
+inv_name                                 = st_ammo_9x39_izomorf
+inv_name_short                           = st_ammo_9x39_izomorf_s
+inv_weight                               = 0.7
 
-inv_grid_height          = 1
-inv_grid_width           = 2
-inv_grid_x               = 14
-inv_grid_y               = 40
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 6
+inv_grid_y                               = 1
 
-icon_name                = 2222222
+icon_name                                = 939izo
 
-k_dist                   = 1.5
-k_disp                   = 1.0
-k_hit                    = 8.5
-k_impulse                = 25
-k_pierce                 = 3
-impair                   = 1.05
-buck_shot                = 1
-tracer                   = off
-wm_size                  = 0.092
+k_dist                                   = 1.3
+k_disp                                   = 0.8
+k_hit                                    = 7.5
+k_impulse                                = 1
+k_pierce                                 = 3.5
+impair                                   = 1
+buck_shot                                = 1
+tracer                                   = on
+wm_size                                  = 0.04
+
+explosive                                = off
+
+
+[ammo_12.7x108]:ammo_base
+visual                                   = dynamics\weapons\wpn_ammo\ammo_86x70_fmj.ogf
+description                              = st_ammo_12.7x108_descr
+
+cost                                     = 5000
+
+box_size                                 = 10
+
+inv_name                                 = st_ammo_12.7x108
+inv_name_short                           = st_ammo_12.7x108_s
+inv_weight                               = 0.3
+
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 6
+inv_grid_y                               = 0
+
+icon_name                                = 127108
+
+k_dist                                   = 1
+k_disp                                   = 1
+k_hit                                    = 12.6
+k_impulse                                = 1
+k_pierce                                 = 1.5
+impair                                   = 1
+buck_shot                                = 1
+tracer                                   = on
+wm_size                                  = 0.04
+
+explosive                                = off
 
 
 [ammo_7.62x39_fmj]:ammo_base
-visual                   = dynamics\weapons\wpn_ammo\ammo_762x39_fmj.ogf
-description              = st_ammo_7.62x39_fmj_descr
+visual                                   = dynamics\weapons\wpn_ammo\ammo_762x39_fmj.ogf
+description                              = st_ammo_7.62x39_fmj_descr
 
-cost                     = 1900
+cost                                     = 1900
 
-box_size                 = 30
+box_size                                 = 30
 
-inv_name                 = st_ammo_7.62x39_fmj
-inv_name_short           = st_ammo_7.62x39_fmj_s
-inv_weight               = 0.45
+inv_name                                 = st_ammo_7.62x39_fmj
+inv_name_short                           = st_ammo_7.62x39_fmj_s
+inv_weight                               = 0.45
 
-inv_grid_width           = 2
-inv_grid_height          = 1
-inv_grid_x               = 4
-inv_grid_y               = 2
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 4
+inv_grid_y                               = 2
 
-icon_name                = 762
+icon_name                                = 762
 
-k_dist                     = 1
-k_disp                     = 1.1
-k_hit                      = 3.35
-k_impulse                  = 1.1
-k_pierce                   = 2
-impair                     = 1
-buck_shot                  = 1
-tracer                     = off
-wm_size                    = 0.05
+k_dist                                   = 1
+k_disp                                   = 1.1
+k_hit                                    = 3.35
+k_impulse                                = 1.1
+k_pierce                                 = 2
+impair                                   = 1
+buck_shot                                = 1
+tracer                                   = off
+wm_size                                  = 0.05
 
 
 [ammo_7.62x39_ap]:ammo_base
-visual                   = dynamics\weapons\wpn_ammo\ammo_762x39_ap.ogf
-description              = st_ammo_7.62x39_ap_descr
+visual                                   = dynamics\weapons\wpn_ammo\ammo_762x39_ap.ogf
+description                              = st_ammo_7.62x39_ap_descr
 
-cost                     = 2400
+cost                                     = 2400
 
-box_size                 = 30
+box_size                                 = 30
 
-inv_name                 = st_ammo_7.62x39_ap
-inv_name_short           = st_ammo_7.62x39_ap_s
-inv_weight               = 0.5
+inv_name                                 = st_ammo_7.62x39_ap
+inv_name_short                           = st_ammo_7.62x39_ap_s
+inv_weight                               = 0.5
 
-inv_grid_width           = 2
-inv_grid_height          = 1
-inv_grid_x               = 4
-inv_grid_y               = 3
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 4
+inv_grid_y                               = 3
 
-icon_name                = 762ap
+icon_name                                = 762ap
 
-k_dist                     = 1.3
-k_disp                     = 1
-k_hit                      = 3.35
-k_impulse                  = 1
-k_pierce                   = 2.5 
-impair                     = 1
-buck_shot                  = 1
-tracer                     = on
-wm_size                    = 0.05
+k_dist                                   = 1.3
+k_disp                                   = 1
+k_hit                                    = 3.35
+k_impulse                                = 1
+k_pierce                                 = 2.5 
+impair                                   = 1
+buck_shot                                = 1
+tracer                                   = on
+wm_size                                  = 0.05
+
+
+[ammo_7.62x39_k]:ammo_base
+visual                                   = dynamics\weapons\wpn_ammo\ammo_762x39_ap.ogf
+description                              = st_ammo_7.62x39_k_descr
+
+cost                                     = 5000
+
+box_size                                 = 30
+
+inv_name                                 = st_ammo_7.62x39_k
+inv_name_short                           = st_ammo_7.62x39_k_s
+inv_weight                               = 0.5
+
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 4
+inv_grid_y                               = 4
+
+icon_name                                = 762izo
+
+k_dist                                   = 1
+k_disp                                   = 1
+k_hit                                    = 5.35
+k_impulse                                = 1
+k_pierce                                 = 1.5 
+impair                                   = 1
+buck_shot                                = 1
+tracer                                   = on
+wm_size                                  = 0.05
 
 
 [ammo_7.62x51_fmj]:ammo_base
-visual                   = dynamics\weapons\wpn_ammo\ammo_762x51_fmj.ogf
-description              = st_ammo_7.62x51_fmj_descr
+visual                                   = dynamics\weapons\wpn_ammo\ammo_762x51_fmj.ogf
+description                              = st_ammo_7.62x51_fmj_descr
 
-cost                     = 3200
+cost                                     = 3200
 
-box_size                 = 20
+box_size                                 = 20
 
-inv_name                 = st_ammo_7.62x51_fmj
-inv_name_short           = st_ammo_7.62x51_fmj_s
-inv_weight               = 0.51
+inv_name                                 = st_ammo_7.62x51_fmj
+inv_name_short                           = st_ammo_7.62x51_fmj_s
+inv_weight                               = 0.51
 
-inv_grid_width           = 2
-inv_grid_height          = 1
-inv_grid_x               = 8
-inv_grid_y               = 7
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 8
+inv_grid_y                               = 7
 
-icon_name                = 76251
+icon_name                                = 76251
 
-k_dist                     = 1.2
-k_disp                     = 1.1 
-k_hit                      = 7.1
-k_impulse                  = 1.2
-k_pierce                   = 2
-impair                     = 1
-buck_shot                  = 1
-tracer                     = on
-wm_size                    = 0.05
-explosive                  = off
+k_dist                                   = 1.2
+k_disp                                   = 1.1 
+k_hit                                    = 7.1
+k_impulse                                = 1.2
+k_pierce                                 = 2
+impair                                   = 1
+buck_shot                                = 1
+tracer                                   = on
+wm_size                                  = 0.05
+explosive                                = off
 
 
 [ammo_7.62x51_ap]:ammo_base
-visual                   = dynamics\weapons\wpn_ammo\ammo_762x51_ap.ogf
-description              = st_ammo_7.62x51_ap_descr
+visual                                   = dynamics\weapons\wpn_ammo\ammo_762x51_ap.ogf
+description                              = st_ammo_7.62x51_ap_descr
 
-cost                     = 4000
+cost                                     = 4000
 
-box_size                 = 20
+box_size                                 = 20
 
-inv_name                 = st_ammo_7.62x51_ap
-inv_name_short           = st_ammo_7.62x51_ap_s
-inv_weight               = 0.56
+inv_name                                 = st_ammo_7.62x51_ap
+inv_name_short                           = st_ammo_7.62x51_ap_s
+inv_weight                               = 0.56
 
-inv_grid_width           = 2
-inv_grid_height          = 1
-inv_grid_x               = 8
-inv_grid_y               = 8
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 8
+inv_grid_y                               = 8
 
-icon_name                = 76251ap
+icon_name                                = 76251ap
 
-k_dist                     = 1.3
-k_disp                     = 1 
-k_hit                      = 7.1
-k_impulse                  = 1.1
-k_pierce                   = 3
-impair                     = 1.03
-buck_shot                  = 1
-tracer                     = on
-wm_size                    = 0.05
-explosive                  = off
+k_dist                                   = 1.3
+k_disp                                   = 1 
+k_hit                                    = 7.1
+k_impulse                                = 1.1
+k_pierce                                 = 3
+impair                                   = 1.03
+buck_shot                                = 1
+tracer                                   = on
+wm_size                                  = 0.05
+explosive                                = off
 
 
 [ammo_7.62x54_7h1]:ammo_base
-visual                   = dynamics\weapons\wpn_ammo\ammo_762x54_7h1.ogf
-description              = st_ammo_7.62x54_7h1_descr
+visual                                   = dynamics\weapons\wpn_ammo\ammo_762x54_7h1.ogf
+description                              = st_ammo_7.62x54_7h1_descr
 
-cost                     = 4000
+cost                                     = 4000
 
-box_size                 = 20
+box_size                                 = 20
 
-inv_name                 = st_ammo_7.62x54_7h1
-inv_name_short           = st_ammo_7.62x54_7h1_s
-inv_weight               = 0.36
+inv_name                                 = st_ammo_7.62x54_7h1
+inv_name_short                           = st_ammo_7.62x54_7h1_s
+inv_weight                               = 0.36
 
-inv_grid_width           = 2
-inv_grid_height          = 1
-inv_grid_x               = 2
-inv_grid_y               = 5
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 2
+inv_grid_y                               = 5
 
-icon_name                = 76254_h1
+icon_name                                = 76254_h1
 
-k_dist                                               = 1.5
-k_disp                                               = 1.0
-k_hit                                                = 7.1
-k_impulse                                            = 1
-k_pierce                                             = 2.8
-impair                                               = 1
-buck_shot                                            = 1
-tracer                                               = off
-wm_size                                              = 0.05
-explosive                                            = off
+k_dist                                   = 1.5
+k_disp                                   = 1.0
+k_hit                                    = 7.1
+k_impulse                                = 1
+k_pierce                                 = 2.8
+impair                                   = 1
+buck_shot                                = 1
+tracer                                   = off
+wm_size                                  = 0.05
+explosive                                = off
 
 
 [ammo_7.62x54_7h14]:ammo_base
-visual                   = dynamics\weapons\wpn_ammo\ammo_762x54_7h14.ogf
-description              = st_ammo_7.62x54_7h13_descr
+visual                                   = dynamics\weapons\wpn_ammo\ammo_762x54_7h14.ogf
+description                              = st_ammo_7.62x54_7h14_descr
 
-cost                     = 4400
+cost                                     = 4400
 
-box_size                 = 20
+box_size                                 = 10
 
-inv_name                 = st_ammo_7.62x54_7h13
-inv_name_short           = st_ammo_7.62x54_7h13_s
-inv_weight               = 0.23
+inv_name                                 = st_ammo_7.62x54_7h14
+inv_name_short                           = st_ammo_7.62x54_7h14_s
+inv_weight                               = 0.23
 
-inv_grid_width           = 2
-inv_grid_height          = 1
-inv_grid_x               = 2
-inv_grid_y               = 6
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 2
+inv_grid_y                               = 6
 
-icon_name                = 76254_h14
+icon_name                                = 76254_h14
 
-k_dist                                               = 1.5
-k_disp                                               = 0.9
-k_hit                                                = 7.2
-k_impulse                                            = 0.8
-k_pierce                                             = 3.2
-impair                                               = 1
-buck_shot                                            = 1
-tracer                                               = off
-wm_size                                              = 0.05
-explosive                                            = off
+k_dist                                   = 1.5
+k_disp                                   = 0.9
+k_hit                                    = 7.2
+k_impulse                                = 0.8
+k_pierce                                 = 3.2
+impair                                   = 1
+buck_shot                                = 1
+tracer                                   = off
+wm_size                                  = 0.05
+explosive                                = off
 
 
-[ammo_7.62x54_ap]:ammo_7.62x54_7h14
-; visual                 = weapons\ammo\ammo_762x54_ap.ogf
-; description            = enc_weapons1_ammo_ammo-7.62x54-ap
+[ammo_7.62x54_ap]:ammo_base
+visual                                   = dynamics\weapons\wpn_ammo\ammo_762x54_ap.ogf
+description                              = st_ammo_7.62x54_ap_descr
 
-; inv_name               = ammo-7.62x54-ap
-; inv_name_short         = ammo-7.62x54-ap_s
+cost                                     = 4800
 
-inv_grid_width           = 2
-inv_grid_height          = 1
-inv_grid_x               = 2
-inv_grid_y               = 7
+box_size                                 = 10
 
-icon_name                = 76254_ap
+inv_name                                 = st_ammo_7.62x54_ap
+inv_name_short                           = st_ammo_7.62x54_ap_s
+inv_weight                               = 0.23
 
-k_dist                                               = 1.5
-k_disp                                               = 1.05
-k_hit                                                = 7.3
-k_impulse                                            = 1
-k_pierce                                             = 3.5
-impair                                               = 1
-buck_shot                                            = 1
-tracer                                               = off
-wm_size                                              = 0.05
-explosive                                            = off
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 2
+inv_grid_y                               = 7
+
+icon_name                                = 76254_ap
+
+k_dist                                   = 1.5
+k_disp                                   = 1.05
+k_hit                                    = 7.3
+k_impulse                                = 1
+k_pierce                                 = 3.5
+impair                                   = 1
+buck_shot                                = 1
+tracer                                   = off
+wm_size                                  = 0.05
+explosive                                = off
 
 
 [ammo_7.62x54_izomorf]:ammo_7.62x54_7h14
-inv_weight               = 0.33
+visual                                   = dynamics\weapons\wpn_ammo\ammo_762x54_ap.ogf
+description                              = st_ammo_7.62x54_izomorf_descr
 
-inv_grid_width           = 2
-inv_grid_height          = 1
-inv_grid_x               = 6
-inv_grid_y               = 2
+cost                                     = 5000
 
-icon_name                = 76254_izo
+box_size                                 = 10
 
+inv_name                                 = st_ammo_7.62x54_izomorf
+inv_name_short                           = st_ammo_7.62x54_izomorf_s
+inv_weight                               = 0.33
 
-[ammo_300_win]:ammo_base
-visual                   = dynamics\weapons\wpn_ammo\ammo_300_win.ogf
-description              = st_ammo_300_win_descr
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 6
+inv_grid_y                               = 2
 
-cost                     = 4400
+icon_name                                = 76254_izo
 
-box_size                 = 20
-
-inv_name                 = st_ammo_300_win
-inv_name_short           = st_ammo_300_win_s
-inv_weight               = 0.6
-
-inv_grid_height          = 1
-inv_grid_width           = 2
-inv_grid_x               = 10
-inv_grid_y               = 40
-
-icon_name                = 2222222
-
-k_dist                   = 1.2
-k_disp                   = 1.03
-k_hit                    = 8
-k_impulse                = 30
-k_pierce                 = 1.3
-impair                   = 1.4
-buck_shot                = 1
-wm_size                  = 0.095
-
-
-[ammo_338_lm]:ammo_base
-visual                   = dynamics\weapons\wpn_ammo\ammo_338_lm.ogf
-description              = st_ammo_338_lm_descr
-
-cost                     = 5200
-
-box_size                 = 20
-
-inv_name                 = st_ammo_338_lm
-inv_name_short           = st_ammo_338_lm_s
-inv_weight               = 0.7
-
-inv_grid_height          = 1
-inv_grid_width           = 2
-inv_grid_x               = 26
-inv_grid_y               = 32
-
-icon_name                = 2222222
-
-k_dist                   = 1.2
-k_disp                   = 1.03
-k_hit                    = 8.5
-k_impulse                = 40
-k_pierce                 = 1.45
-impair                   = 1.5
-buck_shot                = 1
-tracer                   = off
-wm_size                  = 0.1
+k_dist                                   = 1
+k_disp                                   = 1
+k_hit                                    = 9.5
+k_impulse                                = 1
+k_pierce                                 = 1.5
+impair                                   = 1
+buck_shot                                = 1
+tracer                                   = off
+wm_size                                  = 0.05
+explosive                                = off
 
 
 [ammo_gauss]:ammo_base
-visual                   = dynamics\weapons\wpn_ammo\ammo_gauss.ogf
-description              = st_ammo_gauss_descr
+visual                                   = dynamics\weapons\wpn_ammo\ammo_gauss.ogf
+description                              = st_ammo_gauss_descr
 
-cost                     = 7200
+cost                                     = 7200
 
-box_size                 = 10
+box_size                                 = 10
 
-inv_name                 = st_ammo_gauss
-inv_name_short           = st_ammo_gauss_s
-inv_weight               = 0.5
+inv_name                                 = st_ammo_gauss
+inv_name_short                           = st_ammo_gauss_s
+inv_weight                               = 0.5
 
-inv_grid_width           = 1
-inv_grid_height          = 1
-inv_grid_x               = 6
-inv_grid_y               = 6
+inv_grid_width                           = 1
+inv_grid_height                          = 1
+inv_grid_x                               = 6
+inv_grid_y                               = 6
 
-icon_name                = gauss
+icon_name                                = gauss
 
-k_dist                                               = 1.5
-k_disp                                               = 1
-k_hit                                                = 8.3
-k_impulse                                            = 0.3
-k_pierce                                             = 25
-impair                                               = 0.3
-buck_shot                                            = 1
-tracer                                               = off
-wm_size                                              = 0.02
-explosive                                            = on
-
-
-[ammo_gauss_cardan]:ammo_gauss
-visual                   = dynamics\weapons\wpn_ammo\ammo_gauss_custom.ogf
-description              = st_ammo_gauss_cardan_descr
-
-cost                     = 4700
-
-box_size                 = 10
-
-inv_name                 = st_ammo_gauss_cardan
-inv_name_short           = st_ammo_gauss_cardan_s
-inv_weight               = 0.8
-
-
-k_hit                    = 16
-impair                   = 5.0
+k_dist                                   = 1.5
+k_disp                                   = 1
+k_hit                                    = 8.3
+k_impulse                                = 0.3
+k_pierce                                 = 25
+impair                                   = 0.3
+buck_shot                                = 1
+tracer                                   = off
+wm_size                                  = 0.02
+explosive                                = off
 
 
 [ammo_7.62x54r]:ammo_base
-visual                   = dynamics\weapons\wpn_ammo\ammo_pkm.ogf
-description              = st_ammo_7.62x54_pkm_descr
+visual                                   = dynamics\weapons\wpn_ammo\ammo_762x54r_box.ogf
+description                              = st_ammo_7.62x54_pkm_descr
 
-cost                     = 6400
+cost                                     = 6400
 
-box_size                 = 100
+box_size                                 = 100
 
-inv_name                 = st_ammo_7.62x54_pkm
-inv_name_short           = st_ammo_7.62x54_pkm_s
-inv_weight               = 3.9
+inv_name                                 = st_ammo_7.62x54_pkm
+inv_name_short                           = st_ammo_7.62x54_pkm_s
+inv_weight                               = 3.9
 
-inv_grid_width           = 2
-inv_grid_height          = 1
-inv_grid_x               = 6
-inv_grid_y               = 7
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 6
+inv_grid_y                               = 7
 
-icon_name                = 762x54r
+icon_name                                = 762x54r
 
-k_dist                                               = 1
-k_disp                                               = 1.1
-k_hit                                                = 6.5
-k_impulse                                            = 1
-k_pierce                                             = 3.2
-impair                                               = 1.05
-buck_shot                                            = 1
-wm_size                                              = 0.05
-tracer                                               = on
-
-
-[ammo_pkm_100]:ammo_base
-visual                   = dynamics\weapons\wpn_ammo\ammo_pkm.ogf
-description              = st_ammo_7.62x54_pkm_descr
-
-cost                     = 6400
-
-box_size                 = 100
-
-inv_name                 = st_ammo_7.62x54_pkm
-inv_name_short           = st_ammo_7.62x54_pkm_s
-inv_weight               = 3.9
-
-inv_grid_height          = 1
-inv_grid_width           = 2
-inv_grid_x               = 0
-inv_grid_y               = 9
-
-icon_name                = 2222222
-
-k_dist                   = 1
-k_disp                   = 1.00
-k_hit                    = 7
-k_impulse                = 20
-k_pierce                 = 1.1
-impair                   = 1.50
-buck_shot                = 1
-wm_size                  = 0.092
+k_dist                                   = 1
+k_disp                                   = 1.1
+k_hit                                    = 6.5
+k_impulse                                = 1
+k_pierce                                 = 3.2
+impair                                   = 1.05
+buck_shot                                = 1
+wm_size                                  = 0.05
+tracer                                   = on
 
 
 [ammo_og-7b]:ammo_base
-cform                    = skeleton
-class                    = A_OG7B
+cform                                    = skeleton
+class                                    = A_OG7B
 
-visual                   = dynamics\weapons\wpn_ammo\ammo_og_7b.ogf
-description              = st_ammo_og_7b_descr
+visual                                   = dynamics\weapons\wpn_ammo\ammo_og_7b.ogf
+description                              = st_ammo_og_7b_descr
 
-cost                     = 4000
+cost                                     = 3000
 
-box_size                 = 1
+box_size                                 = 1
 
-inv_name                 = st_ammo_og_7b
-inv_name_short           = st_ammo_og_7b_s
-inv_weight               = 2.0
+inv_name                                 = st_ammo_og_7b
+inv_name_short                           = st_ammo_og_7b_s
+inv_weight                               = 2.2
 
-inv_grid_width           = 3
-inv_grid_height          = 1
-inv_grid_x               = 8
-inv_grid_y               = 3
+inv_grid_width                           = 3
+inv_grid_height                          = 1
+inv_grid_x                               = 8
+inv_grid_y                               = 3
 
-icon_name                = rpg7
+icon_name                                = rpg7
 
-buck_shot                = 1
-can_be_unlimited         = true
-explosive                = on
-k_dist                                               = 1
-k_disp                                               = 1
-k_hit                                                = 1.5
-k_impulse                                            = 1
-k_pierce                                             = 1.25
-impair                                               = 1.15
-tracer                                               = off
-wm_size                                              = 0.1
+k_dist                                   = 1
+k_disp                                   = 1
+k_hit                                    = 1.2
+k_impulse                                = 1
+k_pierce                                 = 1.05
+impair                                   = 1.15
+buck_shot                                = 0
+tracer_color_ID                          = 4
+wm_size                                  = 0.1
+
+;могут ли боеприпасы быть неограниченными : 1 - могут, 0 - не могут
+can_be_unlimited                         = true
 
 
 [ammo_vog-25]:ammo_base
-cform                    = skeleton
-class                    = A_VOG25
+cform                                    = skeleton
+class                                    = A_VOG25
 
-visual                   = dynamics\weapons\wpn_ammo\ammo_vog_25.ogf
-description              = st_ammo_vog_25_descr
+visual                                   = dynamics\weapons\wpn_ammo\ammo_vog_25.ogf
+description                              = st_ammo_vog_25_descr
 
-cost                     = 1000
+cost                                     = 1000
 
-box_size                 = 1
+box_size                                 = 1
 
-inv_name                 = st_ammo_vog_25
-inv_name_short           = st_ammo_vog_25_s
-inv_weight               = 0.250
+inv_name                                 = st_ammo_vog_25
+inv_name_short                           = st_ammo_vog_25_s
+inv_weight                               = 0.25
 
-inv_grid_width           = 1
-inv_grid_height          = 1
-inv_grid_x               = 6
-inv_grid_y               = 3
+inv_grid_width                           = 1
+inv_grid_height                          = 1
+inv_grid_x                               = 6
+inv_grid_y                               = 3
 
-icon_name                = vog25
+icon_name                                = vog25
 
-buck_shot                = 0
-can_be_unlimited         = true
-explosive                = on
-fake_grenade_name        = wpn_fake_vog-25
-impair                   = 1
-k_ap                     = 0
-k_dist                                               = 1.1
-k_disp                                               = 1.5
-k_hit                                                = 8.0
-k_impulse                = 1
-k_pierce                 = 0
-k_cam_dispersion         = 8
-kill_msg_height          = 22
-kill_msg_width           = 21
-kill_msg_x               = 38
-kill_msg_y               = 233
-tracer                   = off
-wm_size                  = 0.1
+k_dist                                   = 1
+k_disp                                   = 1
+k_hit                                    = 1
+k_impulse                                = 1
+k_pierce                                 = 1.25
+impair                                   = 1
+buck_shot                                = 0
+tracer                                   = off
+wm_size                                  = 0.1
 
+fake_grenade_name                        = wpn_fake_missile
 
-[explosive_vog_immunities_sect]
-burn_immunity            = 0.5
-chemical_burn_immunity   = 0.5
-explosion_immunity       = 1.0
-fire_wound_immunity      = 1.0
-radiation_immunity       = 0.0
-shock_immunity           = 0.5
-strike_immunity          = 0.5
-telepatic_immunity       = 0.0
-wound_immunity           = 0.5
-
-
-[ammo_vog-25_misfire]:ammo_vog-25,delayed_action_fuse,default_weapon_params
-cform                    = skeleton
-class                    = II_EXPLO
-
-inv_name                 = st_ammo_vog_25_misfire
-inv_name_short           = st_ammo_vog_25_misfire
-inv_weight               = 0
-
-inv_grid_height          = 1
-inv_grid_width           = 1
-inv_grid_x               = 9
-inv_grid_y               = 9
-
-snd_bore                 = weapons\draw_silent
-snd_close                = weapons\draw_silent
-blast                    = 4.5
-blast_impulse            = 240
-blast_impulse_factor     = 1
-blast_r                  = 5
-can_take                 = false
-can_trade                = false
-explode_duration         = 5
-explode_particles        = explosions\explosion_01
-frag_ap                  = 0.46
-frag_hit                 = 0.60
-frag_hit_impulse         = 100
-fragment_speed           = 150
-frags                    = 100
-frags_r                  = 9.50
-hit_type_blast           = explosion
-hit_type_frag            = fire_wound
-immunities_sect          = explosive_vog_immunities_sect
-light_color              = 1.9, 1.2, 0.5
-light_range              = 25.0
-light_time               = 0.5
-lights_enabled           = false
-up_throw_factor          = 0.7
-wallmark_section         = explosion_marks
-wm_size                  = 0.1
-detonation_threshold_hit = 1
-condition_to_explode     = 1.0f
-time_to_explode          = 0.01f
+;могут ли боеприпасы быть неограниченными : 1 - могут, 0 - не могут
+can_be_unlimited                         = true
 
 
 [ammo_vog-25p]:ammo_base
-cform                    = skeleton
-class                    = A_VOG25
+cform                                    = skeleton
+class                                    = A_VOG25
 
-visual                   = dynamics\weapons\wpn_ammo\ammo_vog_25p.ogf
-description              = st_ammo_vog_25p_descr
+visual                                   = dynamics\weapons\wpn_ammo\ammo_vog_25p.ogf
+description                              = st_ammo_vog_25p_descr
 
-cost                     = 1400
+cost                                     = 1400
 
-box_size                 = 1
+box_size                                 = 1
 
-inv_name                 = st_ammo_vog_25p
-inv_name_short           = st_ammo_vog_25p_s
-inv_weight               = 0.260
+inv_name                                 = st_ammo_vog_25p
+inv_name_short                           = st_ammo_vog_25p_s
+inv_weight                               = 0.260
 
-inv_grid_width           = 1
-inv_grid_height          = 1
-inv_grid_x               = 6
-inv_grid_y               = 4
+inv_grid_width                           = 1
+inv_grid_height                          = 1
+inv_grid_x                               = 6
+inv_grid_y                               = 4
 
-icon_name                = vog25p
+icon_name                                = vog25p
 
-buck_shot                = 0
-can_be_unlimited         = true
-explosive                = on
-fake_grenade_name        = wpn_fake_vog-25p
-impair                   = 1
-k_ap                     = 0
-k_dist                                               = 1.1
-k_disp                                               = 1.5
-k_hit                                                = 9.0
-k_impulse                = 1
-k_pierce                 = 0
-k_cam_dispersion         = 10
-kill_msg_height          = 22
-kill_msg_width           = 21
-kill_msg_x               = 38
-kill_msg_y               = 233
-tracer                   = off
-wm_size                  = 0.1
+k_dist                                   = 1.3
+k_disp                                   = 1
+k_hit                                    = 1
+k_impulse                                = 1
+k_pierce                                 = 1.25
+impair                                   = 1
+buck_shot                                = 0
+tracer                                   = off
+wm_size                                  = 0.1
+
+jump_height                              = 1.5
+fake_grenade_name                        = wpn_fake_missile1
+
+;могут ли боеприпасы быть неограниченными : 1 - могут, 0 - не могут
+can_be_unlimited                         = true
+
+; Для полетов
+[ammo_vog-25_fly]:ammo_vog-25p
+k_hit                                    = 100
+k_impulse                                = 50
+fake_grenade_name                        = wpn_fake_missile_fly
 
 
 [ammo_vog-25p_misfire]:ammo_vog-25p,delayed_action_fuse,default_weapon_params
-cform                    = skeleton
-class                    = II_EXPLO
+cform                                    = skeleton
+class                                    = II_EXPLO
 
-inv_name                 = st_ammo_vog_25p_misfire
-inv_name_short           = st_ammo_vog_25p_misfire
-inv_weight               = 0
+inv_name                                 = st_ammo_vog_25p_misfire
+inv_name_short                           = st_ammo_vog_25p_misfire
+inv_weight                               = 0
 
-inv_grid_height          = 1
-inv_grid_width           = 1
-inv_grid_x               = 9
-inv_grid_y               = 9
+inv_grid_height                          = 1
+inv_grid_width                           = 1
+inv_grid_x                               = 9
+inv_grid_y                               = 9
 
-snd_bore                 = weapons\draw_silent
-snd_close                = weapons\draw_silent
-blast                    = 4.5
-blast_impulse            = 240
-blast_impulse_factor     = 1
-blast_r                  = 5
-can_take                 = false
-can_trade                = false
-explode_duration         = 5
-explode_particles        = explosions\explosion_01
-frag_ap                  = 0.46
-frag_hit                 = 0.60
-frag_hit_impulse         = 100
-fragment_speed           = 100
-frags                    = 150
-frags_r                  = 9.50
-hit_type_blast           = explosion
-hit_type_frag            = fire_wound
-immunities_sect          = explosive_vog_immunities_sect
-light_color              = 1.9, 1.2, 0.5
-light_range              = 25.0
-light_time               = 0.5
-lights_enabled           = false
-up_throw_factor          = 0.7
-wallmark_section         = explosion_marks
-wm_size                  = 0.1
-detonation_threshold_hit = 1
-condition_to_explode     = 1.0f
-time_to_explode          = 0.01f
+snd_bore                                 = weapons\draw_silent
+snd_close                                = weapons\draw_silent
+blast                                    = 4.5
+blast_impulse                            = 240
+blast_impulse_factor                     = 1
+blast_r                                  = 5
+can_take                                 = false
+can_trade                                = false
+explode_duration                         = 5
+explode_particles                        = explosions\explosion_01
+frag_ap                                  = 0.46
+frag_hit                                 = 0.60
+frag_hit_impulse                         = 100
+fragment_speed                           = 100
+frags                                    = 150
+frags_r                                  = 9.50
+hit_type_blast                           = explosion
+hit_type_frag                            = fire_wound
+immunities_sect                          = explosive_vog_immunities_sect
+light_color                              = 1.9, 1.2, 0.5
+light_range                              = 25.0
+light_time                               = 0.5
+lights_enabled                           = false
+up_throw_factor                          = 0.7
+wallmark_section                         = explosion_marks
+wm_size                                  = 0.1
+detonation_threshold_hit                 = 1
+condition_to_explode                     = 1.0f
+time_to_explode                          = 0.01f
 
 
 [ammo_m209]:ammo_base
-cform                    = skeleton
-class                    = A_M209
+cform                                    = skeleton
+class                                    = A_M209
 
-visual                   = dynamics\weapons\wpn_ammo\ammo_m209.ogf
-description              = st_ammo_m209_descr
+visual                                   = dynamics\weapons\wpn_ammo\ammo_m209.ogf
+description                              = st_ammo_m209_descr
 
-cost                     = 1400
+cost                                     = 1400
 
-box_size                 = 1
+box_size                                 = 1
 
-inv_name                 = st_ammo_m209
-inv_name_short           = st_ammo_m209_s
-inv_weight               = 0.265
+inv_name                                 = st_ammo_m209
+inv_name_short                           = st_ammo_m209_s
+inv_weight                               = 0.265
 
-inv_grid_width           = 1
-inv_grid_height          = 1
-inv_grid_x               = 6
-inv_grid_y               = 5
+inv_grid_width                           = 1
+inv_grid_height                          = 1
+inv_grid_x                               = 6
+inv_grid_y                               = 5
 
-icon_name                = ammo209
+icon_name                                = ammo209
 
-buck_shot                = 0
-can_be_unlimited         = true
-fake_grenade_name        = wpn_fake_m209
-impair                   = 1
-k_ap                     = 0
-k_dist                                               = 1.1
-k_disp                                               = 1.3
-k_hit                                                = 9.3
-k_impulse                = 1
-k_pierce                 = 0
-k_cam_dispersion         = 8
-kill_msg_height          = 22
-kill_msg_width           = 19
-kill_msg_x               = 61
-kill_msg_y               = 232
-tracer                   = off
-wm_size                  = 0.1
+k_dist                                   = 1
+k_disp                                   = 1
+k_hit                                    = 1
+k_impulse                                = 1
+k_pierce                                 = 1.25
+impair                                   = 1
+buck_shot                                = 0
+tracer                                   = off
+wm_size                                  = 0.1
+
+fake_grenade_name                        = wpn_fake_missile2
+
+;могут ли боеприпасы быть неограниченными : 1 - могут, 0 - не могут
+can_be_unlimited                         = true
 
 
-[ammo_m209_misfire]:ammo_m209,delayed_action_fuse,default_weapon_params
-cform                    = skeleton
-class                    = II_EXPLO
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Fake Missiles and Grenades
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-visual                   = dynamics\weapons\wpn_ammo\ammo_m209_fake.ogf
+[wpn_fake_missile]:identity_immunities
+visual                                   = dynamics\weapons\wpn_ammo\ammo_vog_25.ogf
+cform                                    = skeleton
+class                                    = G_FAKE
 
-inv_name                 = st_ammo_m209_misfire
-inv_name_short           = st_ammo_m209_misfire
-inv_weight               = 0
+inv_weight                               = 0
 
-inv_grid_height          = 1
-inv_grid_width           = 1
-inv_grid_x               = 9
-inv_grid_y               = 9
+cost                                     = 150
 
-snd_bore                 = weapons\draw_silent
-snd_close                = weapons\draw_silent
-blast                    = 4.5
-blast_impulse            = 240
-blast_impulse_factor     = 1
-blast_r                  = 5
-can_take                 = false
-can_trade                = false
-explode_duration         = 5
-explode_particles        = explosions\explosion_01
-frag_ap                  = 0.46
-frag_hit                 = 0.60
-frag_hit_impulse         = 100
-fragment_speed           = 100
-frags                    = 100
-frags_r                  = 9.82
-hit_type_blast           = explosion
-hit_type_frag            = fire_wound
-immunities_sect          = explosive_vog_immunities_sect
-light_color              = 1.9, 1.2, 0.5
-light_range              = 25.0
-light_time               = 0.5
-lights_enabled           = false
-up_throw_factor          = 0.7
-wallmark_section         = explosion_marks
-wm_size                  = 0.1
-detonation_threshold_hit = 1
-condition_to_explode     = 1.0f
-time_to_explode          = 0.01f
+blast                                    = 5
+blast_r                                  = 5
+blast_impulse                            = 125
+
+;delete
+blast_impulse_factor                     = 1
+
+frags                                    = 0
+frags_r                                  = 10
+frag_hit                                 = 0.01
+frag_hit_impulse                         = 2.4
+
+hit_type_blast                           = explosion
+hit_type_frag                            = fire_wound
+
+up_throw_factor                          = 0.7
+
+;trail                                   = weapons\rpg_trail_01, weapons\rpg_trail_02
+explode_particles                        = explosions\explosion_01
+
+light_color                              = 1.9, 1.2, 0.5
+light_range                              = 25.0
+light_time                               = 0.5
+
+ph_mass                                  = 5
+
+;engine_f                                = 530
+;engine_u                                = 90
+jump_height                              = 0.2
+
+wm_size                                  = 0.1
+
+fragment_speed                           = 2000
+
+explode_duration                         = 5
+
+;звуки
+snd_explode                              = wpn_gl_explode
+
+;wallmarks
+wallmark_section                         = explosion_marks
+
+;свойства которые читаются, но не используются
+inv_name                                 = ammo-vog-25
+inv_name_short                           = ammo-vog-25
+inv_weight                               = 0.2
+
+inv_grid_width                           = 1
+inv_grid_height                          = 1
+inv_grid_x                               = 19
+inv_grid_y                               = 10
+
+;; Свойства CustomRocket
+engine_present                           = false ;присутствует ли в ракете двигатель
+lights_enabled                           = false ;свет вокруг ракеты, во время полета
+force_explode_time                       = 10000
+safe_dist_to_explode                     = 5
+
+
+[wpn_fake_missile1]:identity_immunities
+visual                                   = dynamics\weapons\wpn_ammo\ammo_vog_25p.ogf
+cform                                    = skeleton
+class                                    = G_FAKE
+
+inv_weight                               = 0
+
+cost                                     = 150
+
+blast                                    = 5
+blast_r                                  = 5
+blast_impulse                            = 125
+
+;delete
+blast_impulse_factor                     = 1
+
+frags                                    = 200
+frags_r                                  = 20
+frag_hit                                 = 1.5
+frag_hit_impulse                         = 1.2
+
+hit_type_blast                           = explosion
+hit_type_frag                            = fire_wound
+
+up_throw_factor                          = 0.7
+
+;trail                                   = weapons\rpg_trail_01, weapons\rpg_trail_02
+explode_particles                        = explosions\explosion_01
+
+light_color                              = 1.9, 1.4, 0.5
+light_range                              = 14.0
+light_time                               = 0.85
+
+ph_mass                                  = 5
+
+;engine_f                                = 530
+;engine_u                                = 90
+jump_height                              = 1.5
+
+fragment_speed                           = 2000
+
+wm_size                                  = 0.1
+
+;wallmarks
+wallmark_section                         = explosion_marks
+explode_duration                         = 5
+
+;звуки
+snd_explode                              = wpn_gl_explode
+
+;свойства которые читаются, но не используются
+inv_name                                 = ammo-vog-25p
+inv_name_short                           = ammo-vog-25p
+inv_weight                               = 0.2
+
+inv_grid_width                           = 1
+inv_grid_height                          = 1
+inv_grid_x                               = 19
+inv_grid_y                               = 9
+
+;; Свойства CustomRocket
+engine_present                           = false ;присутствует ли в ракете двигатель
+lights_enabled                           = true ;свет вокруг ракеты, во время полета
+trail_light_color                        = 0.6, 0.5, 0.3
+trail_light_range                        = 8.0
+force_explode_time                       = 10000
+safe_dist_to_explode                     = 5
+
+
+[wpn_fake_missile_fly]:wpn_fake_missile1
+blast                                    = 5.0
+
+
+[wpn_fake_missile2]:identity_immunities
+visual                                   = dynamics\weapons\wpn_ammo\ammo_m209.ogf
+cform                                    = skeleton
+class                                    = G_FAKE
+
+inv_weight                               = 0
+
+cost                                     = 150
+
+blast                                    = 5
+blast_r                                  = 5
+blast_impulse                            = 175
+
+;delete
+blast_impulse_factor                     = 1
+
+frags                                    = 0
+frags_r                                  = 10
+frag_hit                                 = 0.01
+frag_hit_impulse                         = 4.8
+
+hit_type_blast                           = explosion
+hit_type_frag                            = fire_wound
+
+up_throw_factor                          = 0.7
+
+;trail                                   = weapons\rpg_trail_01, weapons\rpg_trail_02
+explode_particles                        = explosions\explosion_01
+
+light_color                              = 1.9, 1.4, 0.5
+light_range                              = 14.0
+light_time                               = 0.85
+
+ph_mass                                  = 5
+
+;engine_f                                = 530
+;engine_u                                = 90
+jump_height                              = 1
+
+fragment_speed                           = 2000 ;300
+
+;wallmarks
+wallmark_section                         = explosion_marks
+wm_size                                  = 0.1 ;0.05
+
+explode_duration                         = 5
+
+;звуки
+snd_explode                              = wpn_gl_explode
+
+;свойства которые читаются, но не используются
+inv_name                                 = ammo-m209
+inv_name_short                           = "M209"
+inv_weight                               = 0.2
+
+inv_grid_width                           = 1
+inv_grid_height                          = 1
+inv_grid_x                               = 5
+inv_grid_y                               = 13
+
+;; Свойства CustomRocket
+engine_present                           = false ;присутствует ли в ракете двигатель
+lights_enabled                           = true ;свет вокруг ракеты, во время полета
+trail_light_color                        = 0.6, 0.5, 0.3
+trail_light_range                        = 8.0
+force_explode_time                       = 10000
+safe_dist_to_explode                     = 5
+
+
+;------------------------------------------------------------------------
+;------------------------------- IWP AMMO -------------------------------
+;------------------------------------------------------------------------
+[ammo_9x21]:ammo_base
+visual                                   = dynamics\weapons\wpn_ammo\ammo_9x21.ogf
+description                              = st_ammo_9x21_descr
+
+cost                                     = 1750
+
+box_size                                 = 20
+
+inv_name                                 = st_ammo_9x21
+inv_name_short                           = st_ammo_9x21_s
+inv_weight                               = 0.27
+
+inv_grid_height                          = 1
+inv_grid_width                           = 2
+inv_grid_x                               = 20
+inv_grid_y                               = 25
+
+k_dist                                   = 1
+k_disp                                   = 1.14
+k_hit                                    = 3.5
+k_impulse                                = 2
+k_pierce                                 = 1
+impair                                   = 1.20
+buck_shot                                = 1
+wm_size                                  = 0.0533
+
+
+[ammo_44mag]:ammo_base
+visual                                   = dynamics\weapons\wpn_ammo\ammo_44_mag.ogf
+description                              = st_ammo_44mag_descr
+
+cost                                     = 2400
+
+box_size                                 = 16
+
+inv_name                                 = st_ammo_44mag
+inv_name_short                           = st_ammo_44mag_s
+inv_weight                               = 0.45
+
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 0
+inv_grid_y                               = 5
+
+k_dist                                   = 1.1
+k_disp                                   = 1.1
+k_hit                                    = 6.5
+k_impulse                                = 3.0
+k_pierce                                 = 1.1
+impair                                   = 1
+buck_shot                                = 1
+tracer                                   = off
+wm_size                                  = 0.06
+
+
+[ammo_44mag_boom]:ammo_44mag
+visual                                   = dynamics\weapons\wpn_ammo\ammo_44_mag_boom.ogf
+description                              = st_ammo_44mag_boom_descr
+
+cost                                     = 4800
+
+inv_name                                 = st_ammo_44mag_boom
+inv_name_short                           = st_ammo_44mag_boom_s
+inv_weight                               = 0.55
+
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 0
+inv_grid_y                               = 5
+
+k_dist                                   = 1.2
+k_disp                                   = 1.2
+k_hit                                    = 7.1
+k_impulse                                = 3.5
+k_pierce                                 = 1
+impair                                   = 1
+buck_shot                                = 1
+tracer                                   = off
+wm_size                                  = 0.06
+explosive                                = off
+
+
+[ammo_50ae]:ammo_base
+visual                                   = dynamics\weapons\wpn_ammo\ammo_50_ae.ogf
+description                              = st_ammo_50_ae_descr
+
+cost                                     = 2800
+
+box_size                                 = 20
+
+inv_name                                 = st_ammo_50_ae
+inv_name_short                           = st_ammo_50_ae_s
+inv_weight                               = 0.65
+
+inv_grid_height                          = 1
+inv_grid_width                           = 2
+inv_grid_x                               = 20
+inv_grid_y                               = 18
+
+k_dist                                   = 1.1
+k_disp                                   = 1.1
+k_hit                                    = 5
+k_impulse                                = 2
+k_pierce                                 = 1.1
+impair                                   = 1
+buck_shot                                = 1
+tracer                                   = off
+wm_size                                  = 0.06
+
+
+[ammo_12.7x55_fmj]:ammo_base
+visual                                   = dynamics\weapons\wpn_ammo\ammo_127x55_fmj.ogf
+description                              = st_ammo_12.7x55_fmj_descr
+
+cost                                     = 4600
+
+box_size                                 = 20
+
+inv_name                                 = st_ammo_12.7x55_fmj
+inv_name_short                           = st_ammo_12.7x55_fmj_s
+inv_weight                               = 0.5
+
+inv_grid_height                          = 1
+inv_grid_width                           = 2
+inv_grid_x                               = 12
+inv_grid_y                               = 40
+
+k_dist                                   = 1.5
+k_disp                                   = 1.0
+k_hit                                    = 8
+k_impulse                                = 25
+k_pierce                                 = 3
+impair                                   = 1.05
+buck_shot                                = 1
+tracer                                   = off
+wm_size                                  = 0.092
+
+
+[ammo_12.7x55_ap]:ammo_base
+visual                                   = dynamics\weapons\wpn_ammo\ammo_127x55_ap.ogf
+description                              = st_ammo_12.7x55_ap_descr
+
+cost                                     = 5200
+
+box_size                                 = 20
+
+inv_name                                 = st_ammo_12.7x55_ap
+inv_name_short                           = st_ammo_12.7x55_ap_s
+inv_weight                               = 0.5
+
+inv_grid_height                          = 1
+inv_grid_width                           = 2
+inv_grid_x                               = 14
+inv_grid_y                               = 40
+
+k_dist                                   = 1.5
+k_disp                                   = 1.0
+k_hit                                    = 8.5
+k_impulse                                = 25
+k_pierce                                 = 3
+impair                                   = 1.05
+buck_shot                                = 1
+tracer                                   = off
+wm_size                                  = 0.092
+
+
+[ammo_300_win]:ammo_base
+visual                                   = dynamics\weapons\wpn_ammo\ammo_300_win.ogf
+description                              = st_ammo_300_win_descr
+
+cost                                     = 4400
+
+box_size                                 = 20
+
+inv_name                                 = st_ammo_300_win
+inv_name_short                           = st_ammo_300_win_s
+inv_weight                               = 0.6
+
+inv_grid_height                          = 1
+inv_grid_width                           = 2
+inv_grid_x                               = 10
+inv_grid_y                               = 40
+
+k_dist                                   = 1.2
+k_disp                                   = 1.03
+k_hit                                    = 8
+k_impulse                                = 30
+k_pierce                                 = 1.3
+impair                                   = 1.4
+buck_shot                                = 1
+wm_size                                  = 0.095
+
+
+[ammo_338_lm]:ammo_base
+visual                                   = dynamics\weapons\wpn_ammo\ammo_338_lm.ogf
+description                              = st_ammo_338_lm_descr
+
+cost                                     = 5200
+
+box_size                                 = 20
+
+inv_name                                 = st_ammo_338_lm
+inv_name_short                           = st_ammo_338_lm_s
+inv_weight                               = 0.7
+
+inv_grid_height                          = 1
+inv_grid_width                           = 2
+inv_grid_x                               = 26
+inv_grid_y                               = 32
+
+k_dist                                   = 1.2
+k_disp                                   = 1.03
+k_hit                                    = 8.5
+k_impulse                                = 40
+k_pierce                                 = 1.45
+impair                                   = 1.5
+buck_shot                                = 1
+tracer                                   = off
+wm_size                                  = 0.1
+
+
+[ammo_gauss_cardan]:ammo_gauss
+visual                                   = dynamics\weapons\wpn_ammo\ammo_gauss_custom.ogf
+description                              = st_ammo_gauss_cardan_descr
+
+cost                                     = 4700
+
+box_size                                 = 10
+
+inv_name                                 = st_ammo_gauss_cardan
+inv_name_short                           = st_ammo_gauss_cardan_s
+inv_weight                               = 0.8
+
+
+k_hit                                    = 16
+impair                                   = 5.0
+
+
+[ammo_pkm_100]:ammo_base
+visual                                   = dynamics\weapons\wpn_ammo\ammo_pkm.ogf
+description                              = st_ammo_7.62x54_pkm_descr
+
+cost                                     = 6400
+
+box_size                                 = 100
+
+inv_name                                 = st_ammo_7.62x54_pkm
+inv_name_short                           = st_ammo_7.62x54_pkm_s
+inv_weight                               = 3.9
+
+inv_grid_height                          = 1
+inv_grid_width                           = 2
+inv_grid_x                               = 0
+inv_grid_y                               = 9
+
+k_dist                                   = 1
+k_disp                                   = 1.00
+k_hit                                    = 7
+k_impulse                                = 20
+k_pierce                                 = 1.1
+impair                                   = 1.50
+buck_shot                                = 1
+wm_size                                  = 0.092
 
 
 [ammo_m397a1]:ammo_base
-box_size                 = 1
-buck_shot                = 0
-can_be_unlimited         = true
-cform                    = skeleton
-class                    = AMMO
-cost                     = 1800
-description              = st_ammo_m397a1_descr
-fake_grenade_name        = wpn_fake_m397a1
-impair                   = 1
-inv_grid_height          = 1
-inv_grid_width           = 1
-inv_grid_x               = 24
-inv_grid_y               = 7
-icon_group               = 2
-inv_name                 = st_ammo_m397a1
-inv_name_short           = st_ammo_m397a1_s
-inv_weight               = 0.275
-k_ap                     = 0
-k_dist                                               = 1.1
-k_disp                                               = 1.3
-k_hit                                                = 9.3
-k_impulse                = 1
-k_pierce                 = 0
-k_cam_dispersion         = 10
-kill_msg_height          = 22
-kill_msg_width           = 19
-kill_msg_x               = 61
-kill_msg_y               = 232
-tracer                   = off
-visual                   = dynamics\weapons\wpn_ammo\ammo_m397a1.ogf
-wm_size                  = 0.1
+box_size                                 = 1
+buck_shot                                = 0
+can_be_unlimited                         = true
+cform                                    = skeleton
+class                                    = AMMO
+cost                                     = 1800
+description                              = st_ammo_m397a1_descr
+fake_grenade_name                        = wpn_fake_m397a1
+impair                                   = 1
+inv_grid_height                          = 1
+inv_grid_width                           = 1
+inv_grid_x                               = 24
+inv_grid_y                               = 7
+icon_group                               = 2
+inv_name                                 = st_ammo_m397a1
+inv_name_short                           = st_ammo_m397a1_s
+inv_weight                               = 0.275
+k_ap                                     = 0
+k_dist                                   = 1.1
+k_disp                                   = 1.3
+k_hit                                    = 9.3
+k_impulse                                = 1
+k_pierce                                 = 0
+k_cam_dispersion                         = 10
+kill_msg_height                          = 22
+kill_msg_width                           = 19
+kill_msg_x                               = 61
+kill_msg_y                               = 232
+tracer                                   = off
+visual                                   = dynamics\weapons\wpn_ammo\ammo_m397a1.ogf
+wm_size                                  = 0.1
 
 [ammo_m397a1_misfire]:ammo_m397a1,delayed_action_fuse,default_weapon_params
-snd_bore                 = weapons\draw_silent
-snd_close                = weapons\draw_silent
-blast                    = 4.5
-blast_impulse            = 240
-blast_impulse_factor     = 1
-blast_r                  = 5
-can_take                 = false
-can_trade                = false
-cform                    = skeleton
-class                    = II_EXPLO
-explode_duration         = 5
-explode_particles        = explosions\explosion_01
-frag_ap                  = 0.46
-frag_hit                 = 0.60
-frag_hit_impulse         = 100
-fragment_speed           = 120
-frags                    = 150
-frags_r                  = 9.82
-hit_type_blast           = explosion
-hit_type_frag            = fire_wound
-immunities_sect          = explosive_vog_immunities_sect
-inv_grid_height          = 1
-inv_grid_width           = 1
-inv_grid_x               = 9
-inv_grid_y               = 9
-icon_group               = 2
-inv_name                 = st_ammo_m397a1_misfire
-inv_name_short           = st_ammo_m397a1_misfire
-light_color              = 1.9, 1.2, 0.5
-light_range              = 25.0
-light_time               = 0.5
-lights_enabled           = false
-up_throw_factor          = 0.7
-wallmark_section         = explosion_marks
-wm_size                  = 0.1
-detonation_threshold_hit = 1
-condition_to_explode     = 1.0f
-time_to_explode          = 0.01f
-visual                   = dynamics\weapons\wpn_ammo\ammo_m397a1_fake.ogf
-
+snd_bore                                 = weapons\draw_silent
+snd_close                                = weapons\draw_silent
+blast                                    = 4.5
+blast_impulse                            = 240
+blast_impulse_factor                     = 1
+blast_r                                  = 5
+can_take                                 = false
+can_trade                                = false
+cform                                    = skeleton
+class                                    = II_EXPLO
+explode_duration                         = 5
+explode_particles                        = explosions\explosion_01
+frag_ap                                  = 0.46
+frag_hit                                 = 0.60
+frag_hit_impulse                         = 100
+fragment_speed                           = 120
+frags                                    = 150
+frags_r                                  = 9.82
+hit_type_blast                           = explosion
+hit_type_frag                            = fire_wound
+immunities_sect                          = explosive_vog_immunities_sect
+inv_grid_height                          = 1
+inv_grid_width                           = 1
+inv_grid_x                               = 9
+inv_grid_y                               = 9
+icon_group                               = 2
+inv_name                                 = st_ammo_m397a1_misfire
+inv_name_short                           = st_ammo_m397a1_misfire
+light_color                              = 1.9, 1.2, 0.5
+light_range                              = 25.0
+light_time                               = 0.5
+lights_enabled                           = false
+up_throw_factor                          = 0.7
+wallmark_section                         = explosion_marks
+wm_size                                  = 0.1
+detonation_threshold_hit                 = 1
+condition_to_explode                     = 1.0f
+time_to_explode                          = 0.01f
+visual                                   = dynamics\weapons\wpn_ammo\ammo_m397a1_fake.ogf

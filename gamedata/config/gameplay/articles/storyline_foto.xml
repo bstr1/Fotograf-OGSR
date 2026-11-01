@@ -16,7 +16,7 @@
 
 <article id="levsha_cryst" article_type="task">
     <texture x="0" y="650" width="150" height="50">ui\ui_recepts</texture>
-    <text>Нужно найти два кристалла для модернизации фотокамеры и принести эти кристаллы Левше.</text>
+    <text>Нужно найти два кристалла № 6 и № 9 для модернизации фотокамеры и принести эти кристаллы Левше.</text>
 </article>
 
 <article id="lavrov_poisk" article_type="task">

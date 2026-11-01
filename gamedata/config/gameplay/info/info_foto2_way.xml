@@ -170,7 +170,9 @@
 <info_portion id="prom_zasada">
     <action>foto2.set_prom_zasada</action>
 </info_portion>
-<info_portion id="prom_popal"></info_portion>
+<info_portion id="prom_popal">
+<action>chetkiu.broken_exo</action>
+</info_portion>
 <info_portion id="mg_zasada">
     <action>foto2.set_mg_zasada</action>
 </info_portion>

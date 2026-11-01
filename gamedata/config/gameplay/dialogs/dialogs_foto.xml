@@ -2661,6 +2661,7 @@
             <action>fotograf.metka_foto_09</action>
             <action>fotograf.metka_foto_10</action>
             <action>dialogs.break_dialog</action>
+			<action>xyz_teleportation.swamp</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -2887,7 +2888,6 @@
             <give_info>brown_tri_dialog_gotovo</give_info>
             <action>fotograf.brown_mousetrap_dal</action>
             <action>val_test.browndialog</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -2935,7 +2935,6 @@
             <give_info>brown_tri_dialog_gotovo</give_info>
             <action>fotograf.brown_mousetrap_dal</action>
             <action>val_test.browndialog1</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>

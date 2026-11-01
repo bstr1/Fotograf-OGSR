@@ -207,7 +207,7 @@ ui_inv_descr.hide_description     = true
 
 cost			                  = 350
 
-box_size		                  = 10
+box_size		                  = 25
 
 inv_name		                  = ammo_sd
 inv_name_short	                  = ammo_sd
@@ -233,43 +233,42 @@ explosive		                  = on
 
 dsh_rukzak.override_show_type     = other
 
-; ========================================================================
-; wpn_foto1 - vtoraya kamera (fotokvesty restr foto_01..10, dialogi),
-; vosstanovleno iz originalnogo konfiga moda (starye modeli item_foto1)
-; ========================================================================
+
 [wpn_foto1]:wpn_foto
 $spawn                  = "weaponsoto1"
-description            = "Цифровая фотокамера, оснащённая специальным уникальным объективом, который позволяет делать снимки в зоне повышенной аномальной и радиационной активности с минимальными искажениями."
+inv_name				= "Модернизированная цифровая фотокамера"
+inv_name_short			= "Модернизированная цифровая фотокамера"
+description             = "Модернизированная цифровая фотокамера, оснащённая улучшенным объективом, который позволяет делать снимки в зоне повышенной аномальной и радиационной активности с минимальными искажениями."
 script_binding          = bind_photo.init
 inv_weight				= 1.3
 cost					= 35000
 
-inv_grid_width			= 3
-inv_grid_height			= 2
-inv_grid_x				= 32
-inv_grid_y				= 14
+// inv_grid_width			= 3
+// inv_grid_height			= 2
+// inv_grid_x				= 32
+// inv_grid_y				= 14
 
-visual                  = items\item_foto1.ogf
-hud                     = item_foto1_hud
+// visual                  = items\item_foto1.ogf
+// hud                     = item_foto1_hud
 
-[item_foto1_hud]
-shell_point			= 0.0000,0.000,0.000				; position (3rd person view) for shell to throw out
-fire_point			= 0.0000,0.000,0.000
-fire_bone               	= flash
-orientation             = 0, 0, 0
-position                = 0, 0, 0
-visual                  = items\item_foto1_hud.ogf
+// [item_foto1_hud]
+// shell_point			= 0.0000,0.000,0.000				; position (3rd person view) for shell to throw out
+// fire_point			= 0.0000,0.000,0.000
+// fire_bone               	= flash
+// orientation             = 0, 0, 0
+// position                = 0, 0, 0
+// visual                  = items\item_foto1_hud.ogf
 
-anim_idle					= idle
-anim_idle_aim				= idle_aim
-anim_reload					= reload
-anim_draw					= draw
-anim_holster				= holster
-anim_shoot					= shoot
-anim_idle_sprint			= idle_sprint
+// anim_idle					= idle
+// anim_idle_aim				= idle_aim
+// anim_reload					= reload
+// anim_draw					= draw
+// anim_holster				= holster
+// anim_shoot					= shoot
+// anim_idle_sprint			= idle_sprint
 
-zoom_hide_crosshair			= true
-zoom_rotate_time			= 0.25
-zoom_offset					= -0.10,0.06,0.0
-zoom_rotate_x				= 0.0
-zoom_rotate_y				= 0.0
+// zoom_hide_crosshair			= true
+// zoom_rotate_time			= 0.25
+// zoom_offset					= -0.10,0.06,0.0
+// zoom_rotate_x				= 0.0
+// zoom_rotate_y				= 0.0

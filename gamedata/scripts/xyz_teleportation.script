@@ -59,6 +59,12 @@ function hiding_road()
     snd_obj:play(db.actor, 0, sound_object.s2d)
 end
 
+function swamp()
+    teleport_actor(vector():set(267.67, 6.91, 67.16), vector():set(0.0, 0.0, 0.0), "swamp")
+    local snd_obj = xr_sound.get_safe_sound_object([[car\apc_start]])
+    snd_obj:play(db.actor, 0, sound_object.s2d)
+end
+
 -- function swamp_karina()
     -- local pp = patrol("lc_swamp_mg")
     -- teleport_actor(pp:point(0), vector():set(0.0, 0.5, 0.0), "swamp")

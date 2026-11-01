@@ -1583,9 +1583,6 @@ quest_section["decoder"]      = true
 quest_section["dynamite"]     = true
 quest_section["quest_case_01"]    = true
 quest_section["bar_ecolog_flash"] = true
-quest_section["bar_tiran_pda"]    = true
-quest_section["bar_lucky_pda"]    = true
-
 
 -- Спавн секции в инвентарь актора без вывода сообщения
 function got_item(s, c)

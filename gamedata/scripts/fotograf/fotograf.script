@@ -3573,10 +3573,12 @@ end
 
 function brown_mousetrap_dal(first_speaker, second_speaker)
     dialogs.relocate_item_section(second_speaker, "propusk", "in", 1)
-    dialogs.relocate_item_section(second_speaker, "medkit_army", "in", 1)
-    dialogs.relocate_item_section(second_speaker, "bandage", "in", 2)
-    dialogs.relocate_item_section(second_speaker, "wpn_lr300", "in", 1)
-    dialogs.relocate_item_section(second_speaker, "ammo_5.56x45_ss190", "in", 3)
+    dialogs.relocate_item_section(second_speaker, "medkit_army", "in", 2)
+    dialogs.relocate_item_section(second_speaker, "bandage", "in", 3)
+    dialogs.relocate_item_section(second_speaker, "ammo_5.56x45_ss190", "in", 4)
+	dialogs.relocate_item_section(second_speaker, "sil_nato", "in", 1)
+	dialogs.relocate_item_section(second_speaker, "eot", "in", 1)
+	dialogs.relocate_item_section(second_speaker, "wpn_sig550_luckygun", "in", 1)
 end
 
 function voronin_perehod_nagrada(first_speaker, second_speaker)
