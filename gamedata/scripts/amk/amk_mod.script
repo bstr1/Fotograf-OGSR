@@ -12,26 +12,8 @@ local nrg,med,cnt,gv,lv,w
 in_hide=false
 local sound_obj_right,sound_obj_left,snd_volume,snd_obj_eq
 local sync_done=false
-local dynlasthour
 zombied={}
 
-local weather_types={
-	dyshlo=0,
-	promzone=0,
-	l03u_agr_underground=1,
-	predbannik=0,
-	l04u_labx18=1,
-	l05_bar=0,
-	aver=0,
-	av_peshera=1,
-	swamp=0,
-	l08u_brainlab=1,
-	deadcity=0,
-    hiding_road=0,
-	l10u_bunker=1,
-	l11_pripyat=0,
-	l12u_sarcofag=1
-}
 
 --'*******************************************************************************
 --'   **   **   **   **   **    **   **   **        FIRST_RUN          **   **   **   **   **    **   **   **   ** 
@@ -116,21 +98,15 @@ function check_spawn()
 	end
   end
 
-	if weather_types[lname]==0 then
-		w=amk.load_variable("dynweather",nil) or level.get_weather() 
-	else
-		w=level.get_weather() 
-	end
+	w=level.get_weather()
 	if amk.load_variable("blowout",0)>0 then amk.save_variable("weather",level.get_weather()) end
-	level.set_weather("amk_for_blow",true)
 	game.start_tutorial("restore_sun")
-	level.set_weather("val_for_dead",true)
+	if has_alife_info("parallel_mg") then level.set_weather("w_deadcity",true) end
 
 	if amk.load_variable("blowout",0)>0 and amk.load_variable("blowout",0)<4 then
 		local bt=blowout_type()
 		level.add_cam_effector("camera_effects\\earthquake.anm", 2002, true, "")
 		if bt<1 then
-			level.set_weather("amk_for_blow",true)
 			level.add_pp_effector("vibros.ppe", 2001, true)
 			blowout_psy_sound("start")
 		end
@@ -166,7 +142,7 @@ function restore_sun()
         local lname = level.name()
         local sname = amk.load_variable("level_on_save","")
     amk.save_variable("level_on_save",lname)
-    if amk.load_variable("blowout",0) == 0 then
+    if w and w~="" and amk.load_variable("blowout",0) == 0 then
     level.set_weather(w,true)
  end
     --[[if amk.load_variable("blow_started", 0) == 0 then
@@ -562,10 +538,6 @@ function Blowout_pp(phase)
 			local snd_obj = xr_sound.get_safe_sound_object([[anomaly\teleport_work2]])
 			snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
 		
-			level.set_weather("amk_groza_groza_"..level.get_time_hours())
-			amk.save_variable("dynw","groza")
-			amk.save_variable("dynlasthour", level.get_time_hours())
-			amk.save_variable("dynweather", "amk_groza_groza_"..level.get_time_hours())
 		end
 		amk.del_variable("blowout")
 		db.actor:give_info_portion("blowout_end")
@@ -1221,86 +1193,16 @@ function spawn_military_tech_pack(obj, spawn_item)
 	obj:STATE_Read(packet, packet:w_tell())
 end
 
---'*******************************************************************************
---'   **   **   **   **   **    **   **   **       DYNWEATHERS       **   **   **   **   **    **   **   **   
---'*******************************************************************************
-dynweathers={
-	clear={
-		clear=70,
-		pasmurno=10,
-		rain=5,
-		groza=5,
-		mist=10
-	},
-	pasmurno={		
-		clear=70,
-		pasmurno=10,
-		rain=5,
-		groza=5,
-		mist=10	
-	},
-	mist={		
-		clear=70,
-		pasmurno=10,
-		rain=5,
-		groza=5,
-		mist=10	
-	},
-	rain={
-		clear=70,
-		pasmurno=10,
-		rain=5,
-		groza=5,
-		mist=10
-	},
-	groza={
-		clear=70,
-		pasmurno=10,
-		rain=5,
-		groza=5,
-		mist=10	
-	}
-}
 
 function weather_manager()
 	if sync_done==false then return end
-	local hour = level.get_time_hours()
-	local dynlasthour = amk.load_variable("dynlasthour",-1) 
-	--' При такой проверке, если лечь спать в 23 часа, то наступит "вечная ночь"(lsclon)
-	--if dynlasthour<hour or (hour==0 and dynlasthour==23) then
-	if dynlasthour < hour or (dynlasthour == 23 and (hour >= 0 and hour ~= 23)) then
-		local next_weather 
-		local rnd = math.random(0,100)
-		local dynw = amk.load_variable("dynw","clear")
-		for k,v in pairs(dynweathers[dynw]) do
-			if rnd<=v then 
-				next_weather=k 
-				break
-			end
-			rnd=rnd-v
-		end
-		local bt=blowout_type()
-		if (amk.load_variable("blowout",0)==0 and bt<1) or level.name()==0 then 
-			level.set_weather("amk_"..dynw.."_"..next_weather.."_"..hour)
-		end
-		amk.mylog(hour.." "..dynw.."->"..next_weather)
-		if (news_main and news_main.on_weather_change) then
-			news_main.on_weather_change(dynw, next_weather)	
-		end
-		
-		amk.save_variable("dynw",next_weather)
-		amk.save_variable("dynlasthour",hour)
-		amk.save_variable("dynweather","amk_"..dynw.."_"..next_weather.."_"..hour)
-	end
-	-- проверим на параллельный мир
 	if has_alife_info("parallel_mg") then	-- мы в параллельном мире
-		if level.get_weather()~="val_for_dead" then -- меняем погоду
-			level.set_weather("val_for_dead",true)
+		if level.get_weather()~="w_deadcity" then -- меняем погоду
+			level.set_weather("w_deadcity",true)
 		end
 	else
-		if level.get_weather()=="val_for_dead" then 
-			cur_weather = amk.load_variable("dynweather", "amk_clear_clear_"..hour)
-			level.set_weather(cur_weather) -- восстановим погоду		
+		if level.get_weather()=="w_deadcity" then 
+			level_weathers.get_weather_manager():reset() -- restore standard level weather -- восстановим погоду		
 		end
 	end
 	-- закончим проверку

@@ -448,15 +448,15 @@ end
 local tbl_exchange = {
 	['statya_false'] = 'statya',
 	['af_evergy1_false'] = 'evergy1_true',
-	['af_evergy2_false'] = 'ammo_5.5x40_ucen',
-	['af_evergy3_false'] = 'evergy1_true',
-	['af_evergy4_false'] = 'young_d',
+	['af_evergy2_false'] = 'ammo_9x39_izomorf',
+	['af_evergy3_false'] = 'ammo_9x39_izomorf',
+	['af_evergy4_false'] = 'ammo_7.62x54_izomorf',
 	['af_evergy5_false'] = 'evergy3_true',
-	['af_evergy6_false'] = 'wpn_ak00u',
-	['af_evergy7_false'] = 'pribor_zh',
+	['af_evergy6_false'] = 'ammo_5.45x39_izomorf',
+	['af_evergy7_false'] = 'ammo_5.45x39_izomorf',
 	['af_evergy8_false'] = 'pribor_zh',
 	['af_evergy9_false'] = 'evergy2_true',
-	['af_evergy10_false'] = 'evergy4_true',
+	['af_evergy10_false'] = 'ammo_7.62x54_izomorf',
 	['af_evergy11_false'] = 'evergy3_true',
 	['af_evergy12_false'] = 'evergy3_true',
 	['af_evergy14_false'] = 'evergy1_true',
@@ -979,6 +979,7 @@ function parallel_spawn(first_speaker, second_speaker)
 	end
 	-- меняем погоду
 	db.actor:give_info_portion("parallel_mg")
+	level.set_weather("w_deadcity",true)
 end
 
 -- удаление объектов параллельного мира
@@ -990,6 +991,7 @@ function parallel_release(first_speaker, second_speaker)
 	local sim = alife()
 	-- возвращаем погоду
 	db.actor:disable_info_portion("parallel_mg")
+	level_weathers.get_weather_manager():reset()
 	-- удаляем аномалии
 	for a=1, table.getn(tbl_mg) do
 		sobj = sim:object(tbl_mg[a])
@@ -999,18 +1001,13 @@ function parallel_release(first_speaker, second_speaker)
 	end
 	tbl_mg = {}
 	amk.del_variable("mg_tbl")
-	-- удаляем арты и оружие
+	-- удаляем предметы параллельного мира
 	for a = 1, 65534 do
 		sobj = sim:object(a)
 		if sobj then
 			sect = sobj:section_name()
 			if (sect and string.find(sect, 'af_evergy') and string.find(sect, '_false')) 
-				or sect=="pribor_zh" 
-				or sect=="evergy2_true" 
-				or sect=="wpn_ak00u" 
-				or sect=="zapis_w"
-				or sect=="statya"
-				or sect=="ammo_5.5x40_ucen" then
+				or sect=="pribor_zh" or sect=="young_d"	or sect=="evergy2_true" or sect=="evergy1_true" or sect=="evergy3_true" or sect=="evergy4_true"	or sect=="zapis_w" or sect=="statya" then
 					sim:release(sobj,true)
 			end		
 		end
