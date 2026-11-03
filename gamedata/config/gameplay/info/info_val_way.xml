@@ -1,141 +1,141 @@
 <!-- ambient -->
 <info_portion id="amb_road">
-	<action>val_test.create_ambroad_restr</action>
-	<action>val_test.create_reproad_spawn</action>
-	<action>mauvais.timer_music_poligon01</action>
+    <action>val_test.create_ambroad_restr</action>
+    <action>val_test.create_reproad_spawn</action>
+    <action>mauvais.timer_music_poligon01</action>
 </info_portion>
 
 <info_portion id="skazal_prapor">
-	<action>val_test.prapor_dead</action>
+    <action>val_test.prapor_dead</action>
 </info_portion>
 
 <info_portion id="skazal_prizrak">
-	<action>val_test.prizrak_wot</action>
+    <action>val_test.prizrak_wot</action>
 </info_portion>
 
 <info_portion id="amb_prip">
-	<action>val_test.create_ambprip_restr</action>
-	<action>mauvais.timer_music_prip01</action>
+    <action>val_test.create_ambprip_restr</action>
+    <action>mauvais.timer_music_prip01</action>
 </info_portion>
 
 <info_portion id="amb_pesh">
-	<action>val_test.create_ambpesh_restr</action>
-	<action>foto.spawn_peschera</action>
+    <action>val_test.create_ambpesh_restr</action>
+    <action>foto.spawn_peschera</action>
 </info_portion>
 
 <info_portion id="amb_swamp">
-	<action>val_test.create_ambswamp_restr</action>
-	<action>val_test.create_repswamp_spawn</action>
+    <action>val_test.create_ambswamp_restr</action>
+    <action>val_test.create_repswamp_spawn</action>
 </info_portion>
 
 <info_portion id="amb_prom">
-	<action>val_test.create_ambprom_restr</action>
-	<action>val_test.create_repprom_spawn</action>
-	<action>mauvais.timer_music_prom01</action>
+    <action>val_test.create_ambprom_restr</action>
+    <action>val_test.create_repprom_spawn</action>
+    <action>mauvais.timer_music_prom01</action>
 </info_portion>
 
 <info_portion id="amb_agro">
-	<action>val_test.create_ambagro_restr</action>
+    <action>val_test.create_ambagro_restr</action>
 </info_portion>
 
 <info_portion id="amb_bar">
-	<action>val_test.create_ambbar_restr</action>
+    <action>val_test.create_ambbar_restr</action>
 </info_portion>
 
 <info_portion id="amb_pred">
-	<action>val_test.create_ambpred_restr</action>
-	<action>val_test.create_reppred_spawn</action>
+    <action>val_test.create_ambpred_restr</action>
+    <action>val_test.create_reppred_spawn</action>
 </info_portion>
 
 <info_portion id="amb_aver">
-	<action>val_test.create_ambaver_restr</action>
+    <action>val_test.create_ambaver_restr</action>
 </info_portion>
 
 <info_portion id="intro_aver">
-	<action>val_test.create_introaver</action>
+    <action>val_test.create_introaver</action>
 </info_portion>
 
 <info_portion id="amb_brain">
-	<action>val_test.create_ambbrain_restr</action>
-	<action>fotograf.wpn_trup_x16_spawn</action>
+    <action>val_test.create_ambbrain_restr</action>
+    <action>fotograf.wpn_trup_x16_spawn</action>
 </info_portion>
 
 <info_portion id="amb_bunk">
-	<action>val_test.create_ambbunk_restr</action>
-	<action>fotograf.wpn_trup_x10_spawn</action>
+    <action>val_test.create_ambbunk_restr</action>
+    <action>fotograf.wpn_trup_x10_spawn</action>
 </info_portion>
 
 <info_portion id="amb_labx">
-	<action>val_test.create_amblabx_restr</action>
-	<action>val_test.create_replabx_spawn</action>
-	<action>foto2.irokez_del</action>
+    <action>val_test.create_amblabx_restr</action>
+    <action>val_test.create_replabx_spawn</action>
+    <action>foto2.irokez_del</action>
 </info_portion>
 
 <info_portion id="amb_dysh">
-	<action>val_test.create_ambdysh_restr</action>
-	<action>mauvais.timer_music_dyshlo01</action>
+    <action>val_test.create_ambdysh_restr</action>
+    <action>mauvais.timer_music_dyshlo01</action>
 </info_portion>
 
 <info_portion id="amb_dead">
-	<action>val_test.create_ambdead_restr</action>
-	<action>mauvais.music_deadcity01</action>
+    <action>val_test.create_ambdead_restr</action>
+    <action>mauvais.music_deadcity01</action>
 </info_portion>
 
 <info_portion id="amb_sarc">
-	<action>val_test.create_ambsarc_restr</action>
-	<action>mauvais.music_sar_enter</action>
-	<action>fotograf.create_spynet_restr</action>
-	<action>fotograf.create_spynet2_restr</action>
+    <action>val_test.create_ambsarc_restr</action>
+    <action>mauvais.music_sar_enter</action>
+    <action>fotograf.create_spynet_restr</action>
+    <action>fotograf.create_spynet2_restr</action>
 </info_portion>
 
 <info_portion id="actor_maroderubit">
-	<action>val_test.actor_killmaroder</action>
+    <action>val_test.actor_killmaroder</action>
 </info_portion>
 
 <info_portion id="actor_naemubit">
-	<action>val_test.actor_killnaem</action>
+    <action>val_test.actor_killnaem</action>
 </info_portion>
 
 <info_portion id="actor_namubit">
-	<action>val_test.actor_killnam</action>
+    <action>val_test.actor_killnam</action>
 </info_portion>
 
 <info_portion id="actor_naemdead">
-	<action>val_test.killpovodyrdead</action>
+    <action>val_test.killpovodyrdead</action>
 </info_portion>
 
 <info_portion id="shpak_buharik">
-	<action>val_test.create_bucharik_restr</action>
+    <action>val_test.create_bucharik_restr</action>
 </info_portion>
 
 <info_portion id="stihoplet_dead">
-	<action>val_test.actor_killpoet</action>
+    <action>val_test.actor_killpoet</action>
 </info_portion>
 
 <info_portion id="actor_suicid">
-	<action>val_test.povodyrdeadactor</action>
+    <action>val_test.povodyrdeadactor</action>
 </info_portion>
 
 <info_portion id="ubilisuky">
-	<action>val_test.povodyrdeadhimera</action>
+    <action>val_test.povodyrdeadhimera</action>
 </info_portion>
 
 <info_portion id="ormant_krut">
-	<action>val_test.create_actorormant_restr</action>
+    <action>val_test.create_actorormant_restr</action>
 </info_portion>
 
 <info_portion id="actor_markubit">
-	<action>val_test.actor_killmark</action>
+    <action>val_test.actor_killmark</action>
 </info_portion>
 
 <info_portion id="madam_actor">
-	<action>val_test.actor_madam</action>
+    <action>val_test.actor_madam</action>
 </info_portion>
 
 <info_portion id="actor_atak">
-	<action>val_test.create_actordyshl_restr</action>
-	<action>val_test.create_actordysh_restr</action>
-	<action>val_test.create_actorprom_restr</action>
+    <action>val_test.create_actordyshl_restr</action>
+    <action>val_test.create_actordysh_restr</action>
+    <action>val_test.create_actorprom_restr</action>
 </info_portion>
 
 <!-- predbannik -->
@@ -511,7 +511,7 @@
 <info_portion id="naem_bar_03_dead"></info_portion>
 <info_portion id="levsha_skazal"></info_portion>
 <info_portion id="levsha_tronulsa">
-	<action>mauvais.music_bar01</action>
+    <action>mauvais.music_bar01</action>
 </info_portion>
 <info_portion id="levsha_zahvat"></info_portion>
 <info_portion id="actor_udral"></info_portion>
@@ -525,190 +525,190 @@
 
 <!-- stories -->
 <info_portion id="story_1">
-	<article>story_1</article>
+    <article>story_1</article>
 </info_portion>
 
 <info_portion id="story_2">
-	<article>story_2</article>
+    <article>story_2</article>
 </info_portion>
 
 <info_portion id="story_3">
-	<article>story_3</article>
+    <article>story_3</article>
 </info_portion>
 
 <info_portion id="story_4">
-	<article>story_4</article>
+    <article>story_4</article>
 </info_portion>
 
 <info_portion id="story_5">
-	<article>story_5</article>
+    <article>story_5</article>
 </info_portion>
 
 <info_portion id="story_6">
-	<article>story_6</article>
+    <article>story_6</article>
 </info_portion>
 
 <info_portion id="story_7">
-	<article>story_7</article>
+    <article>story_7</article>
 </info_portion>
 
 <info_portion id="story_8">
-	<article>story_8</article>
+    <article>story_8</article>
 </info_portion>
 
 <info_portion id="story_9">
-	<article>story_9</article>
+    <article>story_9</article>
 </info_portion>
 
 <info_portion id="story_10">
-	<article>story_10</article>
+    <article>story_10</article>
 </info_portion>
 
 <info_portion id="story_11">
-	<article>story_11</article>
+    <article>story_11</article>
 </info_portion>
 
 <info_portion id="story_12">
-	<article>story_12</article>
+    <article>story_12</article>
 </info_portion>
 
 <info_portion id="story_13">
-	<article>story_13</article>
+    <article>story_13</article>
 </info_portion>
 
 <info_portion id="story_14">
-	<article>story_14</article>
+    <article>story_14</article>
 </info_portion>
 
 <info_portion id="story_15">
-	<article>story_15</article>
+    <article>story_15</article>
 </info_portion>
 
 <info_portion id="story_16">
-	<article>story_16</article>
+    <article>story_16</article>
 </info_portion>
 
 <info_portion id="story_17">
-	<article>story_17</article>
+    <article>story_17</article>
 </info_portion>
 
 <info_portion id="story_18">
-	<article>story_18</article>
+    <article>story_18</article>
 </info_portion>
 
 <info_portion id="story_19">
-	<article>story_19</article>
+    <article>story_19</article>
 </info_portion>
 
 <info_portion id="story_20">
-	<article>story_20</article>
+    <article>story_20</article>
 </info_portion>
 
 <info_portion id="story_21">
-	<article>story_21</article>
+    <article>story_21</article>
 </info_portion>
 
 <info_portion id="story_22">
-	<article>story_22</article>
+    <article>story_22</article>
 </info_portion>
 
 <!-- npc -->
 <info_portion id="persona_1">
-	<article>persona_1</article>
+    <article>persona_1</article>
 </info_portion>
 
 <info_portion id="persona_2">
-	<article>persona_2</article>
+    <article>persona_2</article>
 </info_portion>
 
 <info_portion id="persona_3">
-	<article>persona_3</article>
+    <article>persona_3</article>
 </info_portion>
 
 <info_portion id="persona_4">
-	<article>persona_4</article>
+    <article>persona_4</article>
 </info_portion>
 
 <info_portion id="persona_5">
-	<article>persona_5</article>
+    <article>persona_5</article>
 </info_portion>
 
 <info_portion id="persona_6">
-	<article>persona_6</article>
+    <article>persona_6</article>
 </info_portion>
 
 <info_portion id="persona_7">
-	<article>persona_7</article>
+    <article>persona_7</article>
 </info_portion>
 
 <info_portion id="persona_8">
-	<article>persona_8</article>
+    <article>persona_8</article>
 </info_portion>
 
 <info_portion id="persona_9">
-	<article>persona_9</article>
+    <article>persona_9</article>
 </info_portion>
 
 <info_portion id="persona_10">
-	<article>persona_10</article>
+    <article>persona_10</article>
 </info_portion>
 
 <info_portion id="persona_11">
-	<article>persona_11</article>
+    <article>persona_11</article>
 </info_portion>
 
 <info_portion id="persona_12">
-	<article>persona_12</article>
+    <article>persona_12</article>
 </info_portion>
 
 <info_portion id="persona_13">
-	<article>persona_13</article>
+    <article>persona_13</article>
 </info_portion>
 
 <info_portion id="persona_14">
-	<article>persona_14</article>
+    <article>persona_14</article>
 </info_portion>
 
 <info_portion id="persona_15">
-	<article>persona_15</article>
+    <article>persona_15</article>
 </info_portion>
 
 <info_portion id="persona_16">
-	<article>persona_16</article>
+    <article>persona_16</article>
 </info_portion>
 
 <info_portion id="persona_17">
-	<article>persona_17</article>
+    <article>persona_17</article>
 </info_portion>
 
 <info_portion id="persona_18">
-	<article>persona_18</article>
+    <article>persona_18</article>
 </info_portion>
 
 <info_portion id="persona_19">
-	<article>persona_19</article>
+    <article>persona_19</article>
 </info_portion>
 
 <info_portion id="persona_20">
-	<article>persona_20</article>
+    <article>persona_20</article>
 </info_portion>
 
 <info_portion id="persona_21">
-	<article>persona_21</article>
+    <article>persona_21</article>
 </info_portion>
 
 <info_portion id="persona_22">
-	<article>persona_22</article>
+    <article>persona_22</article>
 </info_portion>
 
 <info_portion id="persona_23">
-	<article>persona_23</article>
+    <article>persona_23</article>
 </info_portion>
 
 <info_portion id="persona_24">
-	<article>persona_24</article>
+    <article>persona_24</article>
 </info_portion>
 
 <info_portion id="persona_25">
-	<article>persona_25</article>
+    <article>persona_25</article>
 </info_portion>

@@ -1,11 +1,11 @@
 <article article_type="encyclopedia" group="Аномалии" id="anom_zharka" name="Жарка">
-   <texture x="1050" y="450" width="200" height="150">ui\ui_icon_photo</texture>
-   <text>enc_zone_anomalies_zharka</text>
+        <texture x="1050" y="450" width="200" height="150">ui\ui_icon_photo</texture>
+        <text>enc_zone_anomalies_zharka</text>
 </article>
 
 <article article_type="encyclopedia" group="Аномалии" id="anom_electra" name="Электра">
-   <texture x="0" y="700" width="200" height="150">ui\ui_icon_photo</texture>
-   <text>enc_zone_anomalies_electra</text>
+        <texture x="0" y="700" width="200" height="150">ui\ui_icon_photo</texture>
+        <text>enc_zone_anomalies_electra</text>
 </article>
 
 <article article_type="encyclopedia" group="Аномалии" id="anom_buzz" name="Студень">

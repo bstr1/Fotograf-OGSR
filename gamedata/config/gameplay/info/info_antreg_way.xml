@@ -178,8 +178,7 @@
     <action>mauvais.music_dyshlo02</action>
 </info_portion>
 <!-- doors -->
-<info_portion
-    id="x18_codelock1_unlock"></info_portion>
+<info_portion id="x18_codelock1_unlock"></info_portion>
 <info_portion id="x18_codelock2_unlock"></info_portion>
 
 <info_portion id="x10_codelock1_unlock"></info_portion>
@@ -187,8 +186,7 @@
 <info_portion id="x10_codelock2_unlock"></info_portion>
 <info_portion id="x10_codelock3_unlock"></info_portion>
 <!-- anom_zond -->
-<info_portion
-    id="kruglov_anoms_dialog_start">
+<info_portion id="kruglov_anoms_dialog_start">
     <task>anom_research</task>
 </info_portion>
 <info_portion id="kruglov_anoms_dialog_done"></info_portion>
@@ -887,8 +885,7 @@
 
 <info_portion id="agent_mk_spawn"></info_portion>
 <!-- peschera_doors_monstry -->
-<info_portion
-    id="peschera_door_unlock"></info_portion>
+<info_portion id="peschera_door_unlock"></info_portion>
 <info_portion id="start_peschera_monstry"></info_portion>
 
 <info_portion id="totaliz"></info_portion>
@@ -994,8 +991,7 @@
 </info_portion>
 
 <!-- fotograf -->
-<info_portion
-    id="yan_labx16_switcher_primary_new"></info_portion>
+<info_portion id="yan_labx16_switcher_primary_new"></info_portion>
 <info_portion id="x16_claw_dead"></info_portion>
 
 <info_portion id="haron_spawn"></info_portion>
@@ -1525,7 +1521,7 @@
     <!-- <action>fotograf.mg_vzryv2</action> -->
     <!-- <action>fotograf.mg_vzryv3</action> -->
     <!-- <action>mauvais.music_deadcity03</action> -->
-	<action>chetkiu.mg_group_del</action>
+    <action>chetkiu.mg_group_del</action>
 </info_portion>
 <info_portion id="mg_vyhod_proval"></info_portion>
 
@@ -1703,8 +1699,7 @@
 <info_portion id="brown_timer_dyshlo_over"></info_portion>
 <info_portion id="brown_eight_dialog_start"></info_portion>
 
-<info_portion
-    id="voronin_dyshlo_attak_dialog_start">
+<info_portion id="voronin_dyshlo_attak_dialog_start">
     <task>dyshlo_attak</task>
 </info_portion>
 

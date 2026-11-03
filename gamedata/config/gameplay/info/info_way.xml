@@ -34,7 +34,7 @@
 
 <!-- freeman_turist -->
 <info_portion id="freeman_turist_start">
-       <task>freeman_turist</task>
+      <task>freeman_turist</task>
 </info_portion>
 <info_portion id="freeman_turist_speak1"></info_portion>
 <info_portion id="freeman_turist_speak2"></info_portion>

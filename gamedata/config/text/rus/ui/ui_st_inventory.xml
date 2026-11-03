@@ -163,9 +163,9 @@
 <string id="ui_inv_outfit_wound_protection">
     <text>Разрыв</text>
 </string>
-  <string id="ui_inv_actor_rad_unit">
+<string id="ui_inv_actor_rad_unit">
     <text>%</text>
-  </string>
+</string>
 <string id="ui_inv_outfits">
     <text>Костюмы</text>
 </string>

@@ -9,5 +9,4 @@
 #include "text\rus\storyline\*.xml"
 #include "text\rus\task\*.xml"
 #include "text\rus\ui\*.xml"
-#include "text\rus\weapons\*.xml"
 </string_table>

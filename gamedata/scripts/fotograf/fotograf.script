@@ -6068,7 +6068,7 @@ function havchik_ogirki_have()
 end
 
 local function distance_check()
-    if not has_alife_info("zhorik_start_dialog_start") or not has_alife_info("agent_mk_spawn") or has_alife_info("agent_mk_vrag") then return end
+    if not has_alife_info("zhorik_start_dialog_start") or has_alife_info("brown_start_dialog_mesto") or has_alife_info("agent_mk_vrag") then return end
     local mk_agent = level_object_by_sid(story_ids.mk_agent)
     if mk_agent and distance_between(mk_agent, db.actor) < 55 then
         db.actor:give_info_portion("agent_mk_vrag")

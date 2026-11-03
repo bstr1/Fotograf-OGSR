@@ -2523,7 +2523,7 @@
             <give_info>dezertir_plan_dialog_done</give_info>
             <give_info>persona_9</give_info>
             <action>dialogs.break_dialog</action>
-			<action>chetkiu.dez_mask_teleport</action>
+            <action>chetkiu.dez_mask_teleport</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -2661,7 +2661,7 @@
             <action>fotograf.metka_foto_09</action>
             <action>fotograf.metka_foto_10</action>
             <action>dialogs.break_dialog</action>
-			<action>xyz_teleportation.swamp</action>
+            <action>xyz_teleportation.swamp</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -2731,7 +2731,7 @@
             <give_info>brown_tri_dialog_start</give_info>
             <action>fotograf.sd_brown_dal</action>
             <action>dialogs.break_dialog</action>
-			<action>xyz_teleportation.hiding_road</action>
+            <action>xyz_teleportation.hiding_road</action>
         </phrase>
     </phrase_list>
 </dialog>
