@@ -100,7 +100,6 @@
         <phrase id="6">
             <text>dron_start_dialog_6</text>
             <give_info>dron_start_dialog_start</give_info>
-            <action>fotograf.spawn_dron_plasch</action>
             <action>val_test.dron_plasc</action>
         </phrase>
     </phrase_list>
@@ -478,7 +477,6 @@
             <text>lukash_start_dialog_18</text>
             <give_info>lukash_start_dialog_start</give_info>
             <action>fotograf.pda_lukash_dal</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -599,7 +597,6 @@
             <give_info>persona_21</give_info>
             <action>fotograf.spawn_metka_lch_prom</action>
             <action>fotograf.metka_lch_prom</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -622,7 +619,6 @@
         <phrase id="11">
             <text>prom_desant_dialog_11</text>
             <give_info>prom_desant_done</give_info>
-            <action>dialogs.break_dialog</action>
         </phrase>
         <phrase id="2">
             <has_info>prom_desant_ubil</has_info>
@@ -633,7 +629,6 @@
             <text>prom_desant_dialog_3</text>
             <give_info>prom_desant_done</give_info>
             <action>fotograf.max_nagrada</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -861,7 +856,6 @@
             <text>doctor_nach_dialog_12</text>
             <give_info>doctor_nach_dialog_start</give_info>
             <action>fotograf.lavrov_spawn</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -997,7 +991,6 @@
             <text>sahar_four_dialog_8</text>
             <give_info>sahar_four_dialog_start</give_info>
             <action>fotograf.doctor_pismo_otdal</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -1064,7 +1057,6 @@
             <text>sahar_ks_dialog_4</text>
             <give_info>sbor_recepts_ks_start</give_info>
             <give_info>start_crystalls</give_info>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -2444,7 +2436,6 @@
             <give_info>dezertir_plan_dialog_nachalo</give_info>
             <give_info>story_7</give_info>
             <action>val_test.novis_ruk_spawn</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -2590,7 +2581,6 @@
         <phrase id="8">
             <text>smith_two_dialog_8</text>
             <give_info>smith_two_dialog_start</give_info>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -2791,7 +2781,6 @@
         <phrase id="12">
             <text>drozdov_start_dialog_12</text>
             <give_info>drozdov_start_dialog_start</give_info>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -2840,7 +2829,6 @@
             <give_info>haron_spawn</give_info>
             <action>fotograf.metka_lch_aver</action>
             <action>mauvais.timer_music_poligon03</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -2997,7 +2985,6 @@
             <give_info>persona_13</give_info>
             <action>fotograf.haron_case_dal</action>
             <action>y_level.lch_mk_prom</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -3137,7 +3124,6 @@
             <text>kruglov_anoms_dialog_10</text>
             <give_info>kruglov_anoms_dialog_start</give_info>
             <action>fotograf.kruglov_pribory_dal</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -5029,12 +5015,9 @@
         <phrase id="4">
             <text>mario_key_dialog_4</text>
             <give_info>mario_key_dialog_start</give_info>
-            <action>cars.instrument_case_spawn</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
         <phrase id="41">
             <text>mario_key_dialog_41</text>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -5084,11 +5067,9 @@
         <phrase id="4">
             <text>voronin_key_dialog_4</text>
             <give_info>voronin_key_dialog_start</give_info>
-            <action>dialogs.break_dialog</action>
         </phrase>
         <phrase id="41">
             <text>voronin_key_dialog_41</text>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -5138,11 +5119,9 @@
         <phrase id="4">
             <text>polischuk_key_dialog_4</text>
             <give_info>polischuk_key_dialog_start</give_info>
-            <action>dialogs.break_dialog</action>
         </phrase>
         <phrase id="41">
             <text>polischuk_key_dialog_41</text>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>

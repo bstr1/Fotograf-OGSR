@@ -343,7 +343,7 @@
           <text>Отнести Шершню ПДА от Лукаша</text>
           <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
           <map_location_type hint="Шершень">blue_location</map_location_type>
-          <object_story_id>digger_06</object_story_id>
+          <object_story_id>shershen</object_story_id>
           <infoportion_complete>shershen_start_dialog_start</infoportion_complete>
      </objective>
      <objective>
@@ -393,6 +393,8 @@
      </objective>
      <objective>
           <text>Поговорить с Максом.</text>
+          <map_location_type hint="Макс">blue_location</map_location_type>
+          <object_story_id>max</object_story_id>
           <infoportion_complete>prom_desant_done</infoportion_complete>
      </objective>
 </game_task>
@@ -448,6 +450,8 @@
      <objective>
           <text>Зайти к Доктору.</text>
           <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
+          <map_location_type hint="Доктор">blue_location</map_location_type>
+          <object_story_id>swamp_doctor</object_story_id>
           <infoportion_complete>doctor_tri_dialog_start</infoportion_complete>
      </objective>
      <objective>
@@ -1440,13 +1444,13 @@
           <infoportion_fail>dezertiry_enemy</infoportion_fail>
      </objective>
      <objective>
-          <text>Найти на юго-западе Промзоны мутировавшую свинью и вынуть из неё Винчестер.</text>
+          <text>Найти на юго-западе Промзоны мутировавшую свинью и вынуть из неё SPAS-12.</text>
           <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
           <function_complete>fotograf.check_dezertir_winch</function_complete>
           <infoportion_set_complete>dezertir_flesh_dialog_have</infoportion_set_complete>
      </objective>
      <objective>
-          <text>Принести Винчестер Шурупу.</text>
+          <text>Принести дробовик Шурупу.</text>
           <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
           <infoportion_complete>dezertir_flesh_dialog_done</infoportion_complete>
      </objective>

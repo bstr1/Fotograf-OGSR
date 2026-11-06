@@ -294,6 +294,8 @@
      </objective>
      <objective>
           <text>Принести Шпаку ящик водки.</text>
+          <map_location_type hint="Майор Шпак">blue_location</map_location_type>
+          <object_story_id>shpak</object_story_id>
           <infoportion_complete>shpak_dialog_2_done</infoportion_complete>
      </objective>
 </game_task>

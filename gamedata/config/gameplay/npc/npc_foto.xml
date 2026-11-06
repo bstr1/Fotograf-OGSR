@@ -149,3 +149,83 @@
 <character id="varvara">
     <class>varvara</class>
 </character>
+
+<character id="zombik_stalk1">
+    <class>zombik_stalk1</class>
+</character>
+
+<character id="zombik_stalk2">
+    <class>zombik_stalk2</class>
+</character>
+
+<character id="zombik_stalk3">
+    <class>zombik_stalk3</class>
+</character>
+
+<character id="zombik_stalk4">
+    <class>zombik_stalk4</class>
+</character>
+
+<character id="zombik_stalk5">
+    <class>zombik_stalk5</class>
+</character>
+
+<character id="zombik_stalk6">
+    <class>zombik_stalk6</class>
+</character>
+
+<character id="zombik_stalk7">
+    <class>zombik_stalk7</class>
+</character>
+
+<character id="zombik_stalk8">
+    <class>zombik_stalk8</class>
+</character>
+
+<character id="zombik_stalk9">
+    <class>zombik_stalk9</class>
+</character>
+
+<character id="zombik_stalk10">
+    <class>zombik_stalk10</class>
+</character>
+
+<character id="zombik_stalk11">
+    <class>zombik_stalk11</class>
+</character>
+
+<character id="zombik_stalk12">
+    <class>zombik_stalk12</class>
+</character>
+
+<character id="zombik_stalk13">
+    <class>zombik_stalk13</class>
+</character>
+
+<character id="zombik_stalk14">
+    <class>zombik_stalk14</class>
+</character>
+
+<character id="zombik_stalk15">
+    <class>zombik_stalk15</class>
+</character>
+
+<character id="zombik_stalk16">
+    <class>zombik_stalk16</class>
+</character>
+
+<character id="zombik_stalk17">
+    <class>zombik_stalk17</class>
+</character>
+
+<character id="zombik_stalk18">
+    <class>zombik_stalk18</class>
+</character>
+
+<character id="zombik_stalk19">
+    <class>zombik_stalk19</class>
+</character>
+
+<character id="neytral_new_02_zombi">
+    <class>cit_doctor</class>
+</character>
