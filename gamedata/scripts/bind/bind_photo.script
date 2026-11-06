@@ -140,8 +140,8 @@ end
 
 function photo_binder:reload(section)
 	object_binder.reload(self, section)
-	self.sound_ok = sound_object([[starter\weapons\fot\fot_ok]])
-	self.sound_poor = sound_object([[starter\weapons\fot\fot_poor]])
+	self.sound_ok = sound_object([[weapons\foto\fot_ok]])
+	self.sound_poor = sound_object([[weapons\foto\fot_poor]])
 end
 
 function photo_binder:reinit()
@@ -173,6 +173,14 @@ end
 function photo_binder:frame_update(delta)
 	object_binder.update(self, delta)
 	if not has_alife_info("start_photo") then return end	-- нет разрешения фотогрфировать
+	local ai = db.actor:active_item()
+	if ai == nil or ai:id() ~= self.oid then -- 4etkiu
+		self.rbutton_pressed = false
+		self.lbutton_pressed = false
+		self.new_target_id = nil
+		self.exposured = false
+		return
+	end
 	local ammo_elapsed = self.object:get_ammo_in_magazine()
 	--позиция камеры
 	self.photo_pos = device().cam_pos

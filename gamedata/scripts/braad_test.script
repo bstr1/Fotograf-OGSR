@@ -1,0 +1,48 @@
+local function on_info(npc, info_id)
+
+    if info_id == "usa_spawn" then
+        spawn_ai_location("bandit_master_outfit", vector():set(5.91, 11.70, -34.00), "predbannik")
+        spawn_ai_location("wpn_desert_eagle_nimble", vector():set(-456.51, 24.11, -223.27), "predbannik")
+		spawn_ai_location("table_lampa", vector():set(-42.58, 3.56, -8.64), "predbannik")
+		spawn_ai_location("instrument_case", vector():set(-30.198, 8.953, -233.035), "predbannik")
+		spawn_ai_location("planshetka", vector():set(-62.16, 3.74, -16.38), "predbannik")
+		spawn_ai_location("yaschik_freedom", vector():set(72.582, 2.510, -66.634), "predbannik")
+
+		spawn_ai_location("vidik", vector():set(-72.79, 2.47, 266.66), "swamp")
+		spawn_ai_location("outfit_specnaz_m1", vector():set(264.67, 19.41, 80.88), "swamp")
+
+		spawn_ai_location("memory_module", vector():set(215.420, 12.814, 18.598), "hiding_road")
+		spawn_ai_location("kolba", vector():set(202.608, -2.217, -271.155), "hiding_road")
+		spawn_ai_location("fonarik", vector():set(86.20, 5.85, -267.23), "hiding_road")
+
+		spawn_ai_location("samopisec", vector():set(-85.16, 8.47, 210.73), "promzone")
+		spawn_ai_location("koloda", vector():set(55.014, 22.949, -141.729), "promzone")
+
+		spawn_ai_location("wpn_spas12_nimble", vector():set(228.41, 1.38, -36.29), "l05_bar")
+		
+		spawn_ai_location("wpn_wincheaster1300_trapper", vector():set(12.82, 33.87, -99.42), "dyshlo")
+		spawn_ai_location("wpn_usp_nimble", vector():set(137.24, 35.84, -125.16), "dyshlo")
+		spawn_ai_location("wpn_sig550_luckygun", vector():set(121.92624664307, 34.218044281006, -117.80423736572), "dyshlo")
+
+		spawn_ai_location("outfit_stalker_m2", vector():set(-9.3343095779419, -17.171783447266, 58.502548217773), "l10u_bunker")
+    end
+end
+
+function spawn_ai_location(section, pos, lvid_or_lname, gvid)
+    if type(pos) == "table" then
+        pos = vector():set(unpack(pos))
+    end
+    local obj
+    if type(lvid_or_lname) == "string" then
+        obj = alife_create(section, lvid_or_lname, pos)
+    else
+        obj = alife():create(section, pos, lvid_or_lname, gvid)
+    end
+    alife():use_ai_locations(obj, false)
+
+    return obj
+end
+
+function attach(sm)
+	sm:subscribe({signal = "on_info",          fun = on_info})
+end

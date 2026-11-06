@@ -3004,7 +3004,7 @@
             [spawn] \n
             wpn_walther \n
             ammo_9x19_pbp = 1 \n
-            wpn_abakan = 1, scope silencer \n
+            wpn_abakan \n
             ammo_5.45x39_ap \n
             device_torch \n
 #include "gameplay\character_drugs.xml" \n
@@ -4147,7 +4147,7 @@
             [spawn] \n
             wpn_walther \n
             ammo_9x19_pbp = 1 \n
-            wpn_abakan = 1, scope silencer \n
+            wpn_abakan \n
             ammo_5.45x39_ap \n
             device_torch \n
 #include "gameplay\character_drugs.xml" \n
@@ -5563,7 +5563,7 @@
             ammo_9x19_pbp \n
             wpn_sig550 = 1 \n
             ammo_5.56x45_ap = 1 \n
-            wpn_addon_scope = 1 \n
+            microt1 = 1 \n
 #include "gameplay\character_items.xml" \n
 #include "gameplay\character_drugs.xml" \n
 #include "gameplay\character_food.xml"            
@@ -5849,7 +5849,7 @@
 
     <supplies>
       [spawn] \n
-      wpn_val_nimble \n
+      wpn_vihr \n
       ammo_9x39_pab9 = 1 \n
       device_torch \n
 #include "gameplay\character_drugs.xml" \n

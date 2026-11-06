@@ -3133,7 +3133,7 @@
             [spawn] \n
             wpn_walther \n
             ammo_9x19_fmj \n    
-            wpn_ak12 = 1 \n
+            wpn_ak12 \n
             ammo_5.45x39_fmj = 1 \n
             device_torch \n
 #include "gameplay\character_items.xml"\n

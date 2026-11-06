@@ -1708,3 +1708,8 @@ function get_lv_gv(level_name, pos)
     local gv = ct:vertex(lv):game_vertex_id()
     return lv, gv
 end
+
+function alife_create(section, level_name, pos)
+    local lv, gv = get_lv_gv(level_name, pos)
+    return alife():create(section, pos, lv, gv)
+end

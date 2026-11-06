@@ -1,0 +1,537 @@
+<specific_character id="zombik_stalk1" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_npc_u_stalker_zombie3</icon>
+    <map_icon x="7" y="0"></map_icon>
+    <bio>sim_zombied_veteran_bio</bio>
+
+<class>zombik_stalk1</class>
+<community>zombied</community> <panic_threshold>0.0</panic_threshold>
+    
+    <rank>40</rank>
+    <reputation>-20</reputation>
+    <money min="0" max="0" infinitive="0"/>        
+
+    <visual>actors\stalker_zombi\stalker_zombie3</visual>
+    <snd_config>characters_voice\human_01\zombied\</snd_config>
+    <crouch_type>0</crouch_type>
+    <supplies>
+        [spawn] \n
+        wpn_bm16 \n
+        ammo_12x70_buck = 2 \n
+    </supplies>
+        
+#include "gameplay\character_dialogs.xml"
+</specific_character>    
+
+
+<specific_character id="zombik_stalk2" team_default = "1">
+    <name>Зомбированный наёмник</name>
+    <icon>ui_npc_u_stalker_zombie4</icon>
+    <map_icon x="7" y="0"></map_icon>
+    <bio>sim_zombied_veteran_bio</bio>
+
+<class>zombik_stalk2</class>
+<community>zombied</community> <panic_threshold>0.0</panic_threshold>
+    
+    <rank>40</rank>
+    <reputation>-20</reputation>
+    <money min="0" max="0" infinitive="0"/>
+    
+    <visual>actors\stalker_zombi\stalker_zombie4</visual>
+    <snd_config>characters_voice\human_02\zombied\</snd_config>
+    <crouch_type>0</crouch_type>
+    <supplies>
+        [spawn] \n
+        zheton = 1 \n
+        wpn_ump45 \n
+        ammo_11.43x23_fmj = 2 \n
+    </supplies>
+        
+#include "gameplay\character_dialogs.xml"
+</specific_character>    
+
+
+<specific_character id="zombik_stalk3" team_default = "1">
+    <name>Зомбированный наёмник</name>
+    <icon>ui_npc_u_stalker_zombie5</icon>
+    <map_icon x="7" y="0"></map_icon>
+    <bio>sim_zombied_veteran_bio</bio>
+
+<class>zombik_stalk3</class>
+<community>zombied</community> <panic_threshold>0.0</panic_threshold>
+    
+    <rank>60</rank>
+    <reputation>-30</reputation>
+    <money min="0" max="0" infinitive="0"/>
+    
+    <visual>actors\stalker_zombi\stalker_zombie5</visual>
+    <snd_config>characters_voice\human_03\zombied\</snd_config>
+    <crouch_type>0</crouch_type>
+    <supplies>
+        [spawn] \n
+        zheton = 1 \n            
+        wpn_ak74 \n
+        ammo_5.45x39_fmj = 2 \n
+    </supplies>
+        
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+
+<specific_character id="zombik_stalk4" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_npc_u_stalker_zombie6</icon>
+    <map_icon x="7" y="0"></map_icon>
+    <bio>sim_zombied_veteran_bio</bio>
+
+    <class>zombik_stalk4</class>
+    <community>zombied</community> <panic_threshold>0.0</panic_threshold>
+    
+    <rank>60</rank>
+    <reputation>-50</reputation>
+    <money min="0" max="0" infinitive="0"/>        
+
+    <visual>actors\stalker_zombi\stalker_zombie6</visual>
+    <snd_config>characters_voice\human_01\zombied\</snd_config>
+    <crouch_type>0</crouch_type>
+    <supplies>
+        [spawn] \n
+        wpn_spas12 \n
+        ammo_12x70_buck = 2 \n
+        device_torch \n
+    </supplies>
+
+#include "gameplay\character_dialogs.xml"
+</specific_character>    
+
+
+<specific_character id="zombik_stalk5" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_npc_u_stalker_zombie7</icon>
+    <map_icon x="7" y="0"></map_icon>
+    <bio>sim_zombied_veteran_bio</bio>
+
+    <class>zombik_stalk5</class>
+    <community>zombied</community> <panic_threshold>0.0</panic_threshold>
+
+    <rank>60</rank>
+    <reputation>-50</reputation>
+    <money min="0" max="0" infinitive="0"/>        
+
+    <visual>actors\stalker_zombi\stalker_zombie7</visual>
+    <snd_config>characters_voice\human_03\zombied\</snd_config>
+    <crouch_type>0</crouch_type>
+    <supplies>
+        [spawn] \n
+        wpn_ak74u \n
+        ammo_5.45x39_fmj = 2 \n
+    </supplies>
+
+#include "gameplay\character_dialogs.xml"
+</specific_character>    
+
+
+    <specific_character id="zombik_stalk6" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_npc_u_stalker_zombie8</icon>
+    <map_icon x="7" y="0"></map_icon>
+    <bio>sim_zombied_veteran_bio</bio>
+
+    <class>zombik_stalk6</class>
+    <community>zombied</community> <panic_threshold>0.0</panic_threshold>
+    
+    <rank>60</rank>
+    <reputation>-50</reputation>
+    <money min="0" max="0" infinitive="0"/>        
+
+    <visual>actors\stalker_zombi\stalker_zombie8</visual>
+    <snd_config>characters_voice\human_02\zombied\</snd_config>
+    <crouch_type>0</crouch_type>        
+    <supplies>
+        [spawn] \n
+        wpn_mp5 \n
+        ammo_9x19_fmj = 2 \n
+    </supplies>
+        
+    #include "gameplay\character_dialogs.xml"
+</specific_character>
+
+
+    <specific_character id="zombik_stalk7" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_npc_u_stalker_zombie1</icon>
+    <map_icon x="7" y="0"></map_icon>
+    <bio>sim_zombied_veteran_bio</bio>
+
+    <class>zombik_stalk7</class>
+    <community>zombied</community> <panic_threshold>0.0</panic_threshold>
+    
+    <rank>50</rank>
+    <reputation>-35</reputation>
+    <money min="0" max="0" infinitive="0"/>        
+
+    <visual>actors\stalker_zombi\stalker_zombie1</visual>
+    <snd_config>characters_voice\human_01\zombied\</snd_config>
+    <crouch_type>0</crouch_type>        
+    <supplies>
+        [spawn] \n
+        wpn_mp5 \n
+        ammo_9x19_fmj = 2 \n
+    </supplies>
+        
+    #include "gameplay\character_dialogs.xml"
+</specific_character>
+
+
+    <specific_character id="zombik_stalk8" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_npc_u_zombie_fresh_2</icon>
+    <map_icon x="7" y="0"></map_icon>
+    <bio>sim_zombied_veteran_bio</bio>
+
+    <class>zombik_stalk8</class>
+    <community>zombied</community> <panic_threshold>0.0</panic_threshold>
+    
+    <rank>60</rank>
+    <reputation>-38</reputation>
+    <money min="0" max="0" infinitive="0"/>        
+
+    <visual>actors\stalker_zombi\zombie_fresh_2</visual>
+    <snd_config>characters_voice\human_01\zombied\</snd_config>
+    <crouch_type>0</crouch_type>        
+    <supplies>
+        [spawn] \n
+        wpn_ak74u \n
+        ammo_5.45x39_fmj = 2 \n
+    </supplies>
+        
+    #include "gameplay\character_dialogs.xml"
+</specific_character>
+
+
+    <specific_character id="zombik_stalk9" team_default = "1">
+    <name>GENERATE_NAME_sergeant</name>
+    <icon>ui_npc_u_stalker_zombie_specnaz</icon>
+    <map_icon x="7" y="0"></map_icon>
+    <bio>sim_zombied_veteran_bio</bio>
+
+    <class>zombik_stalk9</class>
+    <community>zombied</community> <panic_threshold>0.0</panic_threshold>
+    
+    <rank>75</rank>
+    <reputation>-25</reputation>
+    <money min="0" max="0" infinitive="0"/>        
+
+    <visual>actors\stalker_zombi\stalker_zombie_specnaz</visual>
+    <snd_config>characters_voice\human_03\zombied\</snd_config>
+    <crouch_type>0</crouch_type>        
+    <supplies>
+        [spawn] \n
+        zheton = 1 \n
+        wpn_ak74 \n
+        ammo_5.45x39_fmj = 2 \n
+        device_torch \n
+    </supplies>
+        
+    #include "gameplay\character_dialogs.xml"
+</specific_character>
+
+
+    <specific_character id="zombik_stalk10" team_default = "1">
+    <name>Зомбированный учёный</name>
+    <icon>ui_npc_u_stalker_ecolog_military</icon>
+    <map_icon x="7" y="0"></map_icon>
+    <bio>sim_zombied_veteran_bio</bio>
+
+    <class>zombik_stalk10</class>
+    <community>zombied</community> <panic_threshold>0.0</panic_threshold>
+    
+    <rank>50</rank>
+    <reputation>-15</reputation>
+    <money min="0" max="0" infinitive="0"/>        
+
+    <visual>actors\stalker_zombi\stalker_zombied_ecolog_green</visual>
+    <snd_config>characters_voice\human_01\zombied\</snd_config>
+    <crouch_type>0</crouch_type>        
+    <supplies>
+        [spawn] \n
+        wpn_ak74u \n
+        ammo_5.45x39_fmj = 2 \n
+        device_torch \n
+    </supplies>
+        
+    #include "gameplay\character_dialogs.xml"
+</specific_character>
+
+
+    <specific_character id="zombik_stalk11" team_default = "1">
+    <name>Зомбированный учёный</name>
+    <icon>ui_npc_u_stalker_ecolog</icon>
+    <map_icon x="7" y="0"></map_icon>
+    <bio>sim_zombied_veteran_bio</bio>
+
+    <class>zombik_stalk11</class>
+    <community>zombied</community> <panic_threshold>0.0</panic_threshold>
+    
+    <rank>58</rank>
+    <reputation>-20</reputation>
+    <money min="0" max="0" infinitive="0"/>        
+
+    <visual>actors\stalker_zombi\stalker_zombied_ecolog_red</visual>
+    <snd_config>characters_voice\human_02\zombied\</snd_config>
+    <crouch_type>0</crouch_type>        
+    <supplies>
+        [spawn] \n
+        wpn_mp5 \n
+        ammo_9x19_fmj = 2 \n
+        device_torch \n
+    </supplies>
+        
+    #include "gameplay\character_dialogs.xml"
+</specific_character>
+
+
+    <specific_character id="zombik_stalk12" team_default = "1">
+    <name>Зомбированный учёный</name>
+    <icon>ui_npc_uchen_white</icon>
+    <map_icon x="7" y="0"></map_icon>
+    <bio>sim_zombied_veteran_bio</bio>
+
+    <class>zombik_stalk12</class>
+    <community>zombied</community> <panic_threshold>0.0</panic_threshold>
+    
+    <rank>53</rank>
+    <reputation>-18</reputation>
+    <money min="0" max="0" infinitive="0"/>        
+
+    <visual>actors\stalker_zombi\stalker_zombied_ecolog_white</visual>
+    <snd_config>characters_voice\human_01\zombied\</snd_config>
+    <crouch_type>0</crouch_type>        
+    <supplies>
+        [spawn] \n
+        wpn_mp5 \n
+        ammo_9x19_fmj = 2 \n
+        device_torch \n
+    </supplies>
+        
+    #include "gameplay\character_dialogs.xml"
+</specific_character>
+
+
+    <specific_character id="zombik_stalk13" team_default = "1">
+    <name>GENERATE_NAME_bandit</name>
+    <icon>ui_npc_u_stalker_zombie1</icon>
+    <map_icon x="7" y="0"></map_icon>
+    <bio>sim_zombied_veteran_bio</bio>
+
+    <class>zombik_stalk13</class>
+    <community>zombied</community> <panic_threshold>0.0</panic_threshold>
+    
+    <rank>30</rank>
+    <reputation>-43</reputation>
+    <money min="0" max="0" infinitive="0"/>        
+
+    <visual>actors\stalker_zombi\stalker_zombie9</visual>
+    <snd_config>characters_voice\human_03\zombied\</snd_config>
+    <crouch_type>0</crouch_type>        
+    <supplies>
+        [spawn] \n
+        wpn_mp5 \n
+        ammo_9x19_fmj = 2 \n
+    </supplies>
+        
+    #include "gameplay\character_dialogs.xml"
+</specific_character>
+
+
+    <specific_character id="zombik_stalk14" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_npc_u_zombie_fresh_2</icon>
+    <map_icon x="7" y="0"></map_icon>
+    <bio>sim_zombied_veteran_bio</bio>
+
+    <class>zombik_stalk14</class>
+    <community>zombied</community> <panic_threshold>0.0</panic_threshold>
+    
+    <rank>60</rank>
+    <reputation>-38</reputation>
+    <money min="0" max="0" infinitive="0"/>        
+
+    <visual>actors\stalker_zombi\stalker_zombie10</visual>
+    <snd_config>characters_voice\human_01\zombied\</snd_config>
+    <crouch_type>0</crouch_type>        
+    <supplies>
+        [spawn] \n
+        wpn_ak74u \n
+        ammo_5.45x39_fmj = 2 \n
+    </supplies>
+        
+    #include "gameplay\character_dialogs.xml"
+</specific_character>    
+
+
+<specific_character id="zombik_stalk15" team_default = "1">
+    <name>Зомбированный наёмник</name>
+    <icon>ui_npc_u_stalker_zombie4</icon>
+    <map_icon x="7" y="0"></map_icon>
+    <bio>sim_zombied_veteran_bio</bio>
+
+<class>zombik_stalk15</class>
+<community>zombied</community> <panic_threshold>0.0</panic_threshold>
+    
+    <rank>40</rank>
+    <reputation>-20</reputation>
+    <money min="0" max="0" infinitive="0"/>
+    
+    <visual>actors\stalker_zombi\stalker_zombie11</visual>
+    <snd_config>characters_voice\human_02\zombied\</snd_config>
+    <crouch_type>0</crouch_type>
+    <supplies>
+        [spawn] \n
+        zheton = 1 \n
+        wpn_ump45 \n
+        ammo_11.43x23_fmj = 2 \n
+    </supplies>
+        
+#include "gameplay\character_dialogs.xml"
+</specific_character>    
+
+
+<specific_character id="zombik_stalk16" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_npc_u_stalker_zombie6</icon>
+    <map_icon x="7" y="0"></map_icon>
+    <bio>sim_zombied_veteran_bio</bio>
+
+    <class>zombik_stalk16</class>
+    <community>zombied</community> <panic_threshold>0.0</panic_threshold>
+    
+    <rank>60</rank>
+    <reputation>-50</reputation>
+    <money min="0" max="0" infinitive="0"/>        
+
+    <visual>actors\stalker_zombi\stalker_zombie12</visual>
+    <snd_config>characters_voice\human_01\zombied\</snd_config>
+    <crouch_type>0</crouch_type>
+    <supplies>
+        [spawn] \n
+        wpn_spas12 \n
+        ammo_12x70_buck = 2 \n
+        device_torch \n
+    </supplies>
+
+#include "gameplay\character_dialogs.xml"
+</specific_character>    
+
+
+<specific_character id="zombik_stalk17" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_npc_u_stalker_zombie7</icon>
+    <map_icon x="7" y="0"></map_icon>
+    <bio>sim_zombied_veteran_bio</bio>
+
+    <class>zombik_stalk17</class>
+    <community>zombied</community> <panic_threshold>0.0</panic_threshold>
+
+    <rank>45</rank>
+    <reputation>-23</reputation>
+    <money min="0" max="0" infinitive="0"/>        
+
+    <visual>actors\stalker_zombi\stalker_zombie13</visual>
+    <snd_config>characters_voice\human_03\zombied\</snd_config>
+    <crouch_type>0</crouch_type>
+    <supplies>
+        [spawn] \n
+        wpn_ak74u \n
+        ammo_5.45x39_fmj = 2 \n
+    </supplies>
+
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+
+<specific_character id="zombik_stalk18" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_npc_zombik3</icon>
+    <map_icon x="7" y="0"></map_icon>
+    <bio>sim_zombied_veteran_bio</bio>
+
+    <class>zombik_stalk18</class>
+    <community>zombied</community> <panic_threshold>0.0</panic_threshold>
+
+    <rank>35</rank>
+    <reputation>-15</reputation>
+    <money min="0" max="0" infinitive="0"/>        
+
+    <visual>actors\stalker_zombi\stalker_zombie14</visual>
+    <snd_config>characters_voice\human_01\zombied\</snd_config>
+    <crouch_type>0</crouch_type>
+    <supplies>
+        [spawn] \n
+        wpn_wincheaster1300 \n
+        ammo_12x70_buck = 1 \n
+    </supplies>
+
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+
+<specific_character id="zombik_stalk19" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_npc_zombik3</icon>
+    <map_icon x="7" y="0"></map_icon>
+    <bio>sim_zombied_veteran_bio</bio>
+
+    <class>zombik_stalk19</class>
+    <community>zombied</community> <panic_threshold>0.0</panic_threshold>
+
+    <rank>38</rank>
+    <reputation>-17</reputation>
+    <money min="0" max="0" infinitive="0"/>        
+
+    <visual>actors\stalker_zombi\stalker_zombie15</visual>
+    <snd_config>characters_voice\human_02\zombied\</snd_config>
+    <crouch_type>0</crouch_type>
+    <supplies>
+        [spawn] \n
+        wpn_mp9 \n
+        ammo_9x19_fmj = 2 \n
+    </supplies>
+
+#include "gameplay\character_dialogs.xml"
+</specific_character>    
+
+
+<specific_character id="neytral_new_02_zombi" team_default = "1">
+    <name>Санчо</name>
+    <icon>ui_npc_u_tsezar</icon>
+    <map_icon x="3" y="2"></map_icon>
+    <bio>sim_stalker_general_bio</bio>
+
+    <class>cit_doctor</class>
+    <community>zombied</community><panic_threshold>0.0</panic_threshold>
+
+    <rank>370</rank>
+    <reputation>120</reputation>
+    <money min="1400" max="1600" infinitive="0"/>        
+
+    <visual>actors\neytral\lisiy</visual>
+    <snd_config>characters_voice\human_02\stalker\</snd_config>
+    <crouch_type>-1</crouch_type>
+    <supplies>
+        [spawn] \n
+        wpn_pm \n
+        ammo_9x18_fmj = 2 \n
+        wpn_ak74u = 1 \n
+        ammo_5.45x39_fmj = 2 \n
+        medkit = 1 \n
+        device_torch \n
+#include "gameplay\character_food.xml" \n
+#include "gameplay\character_drugs.xml"
+    </supplies>
+    
+<start_dialog>hello_dialog</start_dialog>
+<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>                    
+#include "gameplay\character_criticals.xml"
+#include "gameplay\character_dialogs.xml"
+</specific_character>

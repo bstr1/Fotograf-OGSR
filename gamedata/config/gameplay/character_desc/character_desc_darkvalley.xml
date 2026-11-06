@@ -654,10 +654,8 @@
             [spawn] \n
             wpn_pb \n
             ammo_9x18_fmj \n
-            wpn_abakan = 1, scope \n
+            wpn_abakan \n
             ammo_5.45x39_ap = 1 \n
-
-            wpn_addon_scope \n
     </supplies>
         
 #include "gameplay\character_criticals.xml"

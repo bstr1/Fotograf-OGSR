@@ -11,8 +11,10 @@ addons = {
 	"dsh_vodka_sleep",
 	"fotograf",
 	"key_handlers",
+	"ogse_anomaly",
 	"ogse_qt",
 	"ogse_surge_mgr",
 	"ogsr_quick_saveload",
 	"ui_inv_descr",
+	"braad_test",
 }

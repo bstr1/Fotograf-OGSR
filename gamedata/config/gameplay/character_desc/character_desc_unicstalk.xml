@@ -373,8 +373,8 @@
     <supplies>
             [spawn] \n
             zheton = 1 \n
-            wpn_mp5_nimble \n
-            ammo_9x19_fmj = 1 \n
+            wpn_ump45 \n
+            ammo_11.43x23_fmj = 1 \n
             device_torch \n
 #include "gameplay\character_items.xml" \n            
 #include "gameplay\character_food.xml" \n
@@ -441,8 +441,8 @@
     <supplies>
             [spawn] \n
             zheton = 1 \n
-            wpn_mp5_nimble \n
-            ammo_9x19_fmj = 2 \n
+            wpn_ump45 \n
+            ammo_11.43x23_fmj = 2 \n
             device_torch \n
 #include "gameplay\character_items.xml" \n            
 #include "gameplay\character_food.xml" \n
@@ -511,8 +511,8 @@
     <supplies>
             [spawn] \n
             zheton = 1 \n
-            wpn_mp5_nimble \n
-            ammo_9x19_fmj = 2 \n
+            wpn_ump45 \n
+            ammo_11.43x23_fmj = 2 \n
             device_torch \n
 #include "gameplay\character_items.xml" \n            
 #include "gameplay\character_food.xml" \n
@@ -649,8 +649,8 @@
     <supplies>
             [spawn] \n
             zheton = 1 \n
-            wpn_mp5_nimble \n
-            ammo_9x19_fmj = 2 \n
+            wpn_ump45 \n
+            ammo_11.43x23_fmj = 2 \n
             device_torch \n
 #include "gameplay\character_items.xml" \n            
 #include "gameplay\character_food.xml" \n
@@ -2051,8 +2051,8 @@
     <crouch_type>1</crouch_type>
     <supplies>
             [spawn] \n
-            wpn_mp5_nimble \n
-            ammo_9x19_fmj = 2 \n
+            wpn_ump45 \n
+            ammo_11.43x23_fmj = 2 \n
             medkit = 1 \n
             #include "gameplay\character_food.xml" \n
             #include "gameplay\character_drugs.xml"

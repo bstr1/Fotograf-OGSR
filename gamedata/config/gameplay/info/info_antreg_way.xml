@@ -288,6 +288,7 @@
 <info_portion id="spider_story">
     <article>spider_story</article>
     <action>fotograf.sms_new_mutant</action>
+	<action>fotograf.about_pauk</action>
 </info_portion>
 
 <info_portion id="kostolom_story">
@@ -375,16 +376,10 @@
 <!-- info_random_zadan -->
 <info_portion id="fake_info_random"></info_portion>
 <info_portion id="items_random_spawn">
-    <action>fotograf.nebo_walther_m1_spawn</action>
     <action>fotograf.barman_outfit_spawn</action>
     <action>fotograf.barman_eagle_spawn</action>
-    <action>fotograf.barman_avtomat_spawn</action>
-    <action>fotograf.sahar_outfit_spawn</action>
     <action>fotograf.dolg_stvol1_spawn</action>
-    <action>fotograf.dolg_stvol2_spawn</action>
     <action>fotograf.freedom_stvol1_spawn</action>
-    <action>fotograf.freedom_stvol2_spawn</action>
-    <action>fotograf.freedom_stvol3_spawn</action>
 </info_portion>
 
 <info_portion id="nebo_find_artefact_1_info">
@@ -406,11 +401,9 @@
 <info_portion id="nebo_find_item_1_info"></info_portion>
 
 <info_portion id="tm_find_artefact_1_info">
-    <action>fotograf.tm_planshetka_spawn</action>
 </info_portion>
 
 <info_portion id="tm_find_artefact_2_info">
-    <action>fotograf.tm_vidik_spawn</action>
 </info_portion>
 
 <info_portion id="tm_find_artefact_3_info">
@@ -418,7 +411,6 @@
 </info_portion>
 
 <info_portion id="tm_find_artefact_4_info">
-    <action>fotograf.tm_icona_spawn</action>
 </info_portion>
 
 <info_portion id="tm_find_item_1_info"></info_portion>
@@ -480,29 +472,17 @@
 
 <info_portion id="freedom_find_item_3_info"></info_portion>
 
-<info_portion id="dolg_find_artefact_1_info">
-    <action>fotograf.dolg_modul_spawn</action>
-</info_portion>
+<info_portion id="dolg_find_artefact_1_info"></info_portion>
 
-<info_portion id="dolg_find_artefact_2_info">
-    <action>fotograf.dolg_kolba_spawn</action>
-</info_portion>
+<info_portion id="dolg_find_artefact_2_info"></info_portion>
 
-<info_portion id="dolg_find_artefact_3_info">
-    <action>fotograf.dolg_samopisec_spawn</action>
-</info_portion>
+<info_portion id="dolg_find_artefact_3_info"></info_portion>
 
-<info_portion id="freedom_find_artefact_1_info">
-    <action>fotograf.free_koloda_spawn</action>
-</info_portion>
+<info_portion id="freedom_find_artefact_1_info"></info_portion>
 
-<info_portion id="freedom_find_artefact_2_info">
-    <action>fotograf.free_fonarik_spawn</action>
-</info_portion>
+<info_portion id="freedom_find_artefact_2_info"></info_portion>
 
-<info_portion id="freedom_find_artefact_3_info">
-    <action>fotograf.free_dinamit_spawn</action>
-</info_portion>
+<info_portion id="freedom_find_artefact_3_info"></info_portion>
 <!-- level_changers -->
 <info_portion id="lch_mk_road"></info_portion>
 <info_portion id="lch_road_mk"></info_portion>

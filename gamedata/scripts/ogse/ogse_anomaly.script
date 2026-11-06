@@ -1,0 +1,974 @@
+
+-----------------------------------------------------------------------
+-- Модуль учета, респавна аномалий и спавна артов на месте удаленных аномалий после выброса
+-- Унаследован от ogsm_anomaly авторы DEXXX, Offbar
+-- Dusty79, KamikaZze (c) OGS Evolution Team
+-- KRodin (с) 2016: Выкинул всё лишнее, оптимизировал скрипт.
+-- Используется некоторый код Dsh мода.
+-- version 3.0 (23/11/2016)
+-----------------------------------------------------------------------
+function attach(sm)
+	sm:subscribe({signal = "on_spawn",                  fun = this.anom_update})
+	sm:subscribe({signal = "on_after_blowout",          fun = this.on_after_blowout})
+	sm:subscribe({signal = "on_anomaly_spawn",          fun = this.on_anomaly_spawn})
+	sm:subscribe({signal = "on_anomaly_net_destroy",    fun = this.on_anomaly_net_destroy})
+	--sm:subscribe({signal = "on_first_update",           fun = this.debug_zone})
+end
+
+local DISABLE_ANOMS_RESPAWN = false -- DBG
+
+local list_anom_id = {}
+local lvids_forbidden = {}
+local position_forbidden = {}
+--
+local anti_spawn_zones = {}
+local anom_list = {} --В этой таблице находятся только онлайновые аномалии.
+local get_lists_inited = false
+
+local spawn_anom_prob = system_ini():r_s32("options","spawn_anom_prob") -- Коэффициент кол-ва аномалий
+
+local level_anoms = { --Локации, на которых можно респавнить аномалии после выброса. Значение - походу коэффициент для рассчёта кол-ва аномалий.
+	l01_escape     = { 15, 35},
+	l02_garbage    = { 20, 40},
+	l03_agroprom   = { 20, 30}, 
+	l04_darkvalley = { 40, 45},
+	l06_rostok     = { 25, 30},
+	l08_yantar     = { 20, 30},
+	l07_military   = { 30, 45},
+	l10_radar      = { 20, 35},
+	l11_pripyat    = { 15, 35},
+	l12_stancia    = { 35, 40},
+	l10_red_forest = { 10, 20},
+	l13_deep       = { 10, 15},
+	swamp          = { 20, 40},
+}
+--
+local excluded_anoms = { --Секции и имена аномалий, которые запрещено удалять после выброса.
+--========================[Секции]=========================
+	--Секции очагов радиации
+	['zone_radioactive'] = true,
+	['zone_radioactive_weak'] = true,
+	['zone_radioactive_average'] = true,
+	['zone_radioactive_strong'] = true,
+	['zone_radioactive_killing'] = true,
+	['handmade_zone_radioactive'] = true,
+
+	["zone_ameba"] = true, --секция какой-то уникальной аномалии
+	["zone_hvatalka"] = true, --секция хваталок
+	["zone_liana"] = true, --секция лиан
+
+	["fireball_zone"] = true,
+	["fireball_electric_zone"] = true,
+	["fireball_acidic_zone"] = true,
+
+	["zone_field_acidic"] = true,
+	["zone_field_acidic_weak"] = true,
+	["zone_field_acidic_average"] = true,
+	["zone_field_acidic_strong"] = true,
+	["zone_field_psychic"] = true,
+	["zone_field_psychic_weak"] = true,
+	["zone_field_psychic_average"] = true,
+	["zone_field_psychic_strong"] = true,
+	["zone_field_thermal"] = true,
+	["zone_field_thermal_weak"] = true,
+	["zone_field_thermal_average"] = true,
+	["zone_field_thermal_strong"] = true,
+
+	["zone_mincer_special"] = true,
+
+--===========================================================
+--=======================[Далее имена]=======================
+	["esc_tutorial_mincer_01"] = true,
+	["esc_tutorial_mincer_01_0000"] = true,
+	["esc_tutorial_mosquito_bald_01"] = true,
+	["esc_tutorial_mosquito_bald_01_0000"] = true,
+
+	["pri_zone_gravi_zone_average_secret_2"] = true,
+	["pri_zone_gravi_zone_strong_secret_1"] = true,
+	["pri_zone_mincer_strong_secret_1"] = true,
+	["pri_zone_mosquito_bald_average_secret_2"] = true,
+	["pri_zone_mosquito_bald_strong_secret_1"] = true,
+	["pri_zone_mosquito_bald_strong_secret_2"] = true,
+
+	["esc_zone_witches_galantine"] = true,
+	["esc_zone_witches_galantine_0000"] = true,
+	["esc_zone_witches_galantine_0001"] = true,
+	["esc_zone_witches_galantine_0002"] = true,
+	["esc_zone_witches_galantine_0003"] = true,
+	["esc_zone_witches_galantine_0004"] = true,
+	["esc_zone_witches_galantine_0005"] = true,
+	["esc_zone_witches_galantine_0006"] = true,
+	["esc_zone_witches_galantine_0007"] = true,
+
+	["gar_zone_mosquito_bald_weak_noart_0000"] = true,
+	["gar_zone_mosquito_bald_weak_noart_0001"] = true,
+	["gar_zone_mosquito_bald_weak_noart_0002"] = true,
+	["gar_zone_mosquito_bald_weak_noart_0003"] = true,
+	["gar_zone_mosquito_bald_weak_noart_0004"] = true,
+	["gar_zone_mosquito_bald_weak_noart_0005"] = true,
+	["gar_zone_mosquito_bald_weak_noart_0006"] = true,
+	["gar_zone_mosquito_bald_weak_noart_0007"] = true,
+	["gar_zone_mosquito_bald_weak_noart_0008"] = true,
+	["gar_zone_mosquito_bald_weak_noart_0009"] = true,
+	["gar_zone_mosquito_bald_weak_noart_0010"] = true,	
+	["gar_zone_mincer_strong_0003"] = true,
+	["gar_zone_mincer_strong_0007"] = true,
+	["gar_zone_mincer_strong_0012"] = true,
+
+	["rostok_zone_buzz"] = true,
+
+	["rostok_zone_witches_galantine_average"] = true,
+	["rostok_zone_witches_galantine_average_0000"] = true,
+	["rostok_zone_witches_galantine_average_0001"] = true,
+	["rostok_zone_witches_galantine_average_0002"] = true,
+	["rostok_zone_witches_galantine_average_0003"] = true,
+	["rostok_zone_witches_galantine_average_0004"] = true,
+
+	--Тоннель с жарками на ДТ
+	["rostok_zone_zharka_static_average"] = true,
+	["rostok_zone_zharka_static_average_0000"] = true,
+	["rostok_zone_zharka_static_average_0001"] = true,
+	["rostok_zone_zharka_static_average_0002"] = true,
+	["rostok_zone_zharka_static_average_0003"] = true,
+	["rostok_zone_zharka_static_average_0004"] = true,
+	["rostok_zone_zharka_static_average_0005"] = true,
+	["rostok_zone_zharka_static_average_0006"] = true,
+	["rostok_zone_zharka_static_average_0007"] = true,
+	["rostok_zone_zharka_static_average_0008"] = true,
+	["rostok_zone_zharka_static_average_0009"] = true,
+	["rostok_zone_zharka_static_average_0010"] = true,
+	["rostok_zone_zharka_static_average_0011"] = true,
+	["rostok_zone_zharka_static_average_0012"] = true,
+	["rostok_zone_zharka_static_average_0013"] = true,
+	["rostok_zone_zharka_static_average_0014"] = true,
+	["rostok_zone_zharka_static_average_0015"] = true,
+	["rostok_zone_zharka_static_average_0016"] = true,
+	["rostok_zone_zharka_static_average_0017"] = true,
+	["rostok_zone_zharka_static_average_0018"] = true,
+	["rostok_zone_zharka_static_average_0019"] = true,
+	["rostok_zone_zharka_static_average_0020"] = true,
+	["rostok_zone_zharka_static_average_0021"] = true,
+	["rostok_zone_zharka_static_average_0022"] = true,
+
+	["mil_zone_witches_galantine0000_0000"] = true,
+	["mil_zone_witches_galantine0000"] = true,
+	["mil_zone_zharka_static_strong"] = true,
+	["mil_zone_zharka_static_strong_0000"] = true,
+	["mil_zone_zharka_static_strong_0001"] = true,
+	["mil_zone_zharka_static_strong_0002"] = true,
+
+	["level_prefix_zone_mincer_average"] = true,
+	["level_prefix_zone_mincer_average_0000"] = true,
+	["level_prefix_zone_mincer_average_0001"] = true,
+	["level_prefix_zone_mincer_average_0002"] = true,
+	["level_prefix_zone_mincer_average_0003"] = true,
+	["level_prefix_zone_mincer_average_0004"] = true,
+	["level_prefix_zone_mincer_average_0005"] = true,
+	["level_prefix_zone_mincer_average_0006"] = true,
+	["level_prefix_zone_mincer_average_0007"] = true,
+	["level_prefix_zone_mincer_average_0008"] = true,
+	["level_prefix_zone_mincer_average_0009"] = true,
+	["level_prefix_zone_mincer_average_0010"] = true,
+	["level_prefix_zone_mincer_average_0011"] = true,
+
+--===========================================================
+}
+local not_anomal_zones = { --Секции объектов, которые созданы на классах аномалий, но не являются аномалиями. Они не добавляются в anom_list и не удаляются после выброса.
+	--Туман
+	["zone_fog"] = true,
+	["zone_fog_ground"] = true,
+	["zone_fog_move"] = true,
+	["zone_fog_cigarette"] = true,
+	["zone_fog_indoor"] = true,
+
+	--Огонь
+	["zone_campfire_mp_nolight"] = true,
+	["zone_campfire_grill"] = true,
+	["zone_flame"] = true,
+	["zone_flame_small"] = true,
+
+	--Мины
+	["zone_mine_field"] = true,
+
+	--Аномальная зона в саркофаге
+	["zone_monolith"] = true,
+
+	--Какая-то аномалия в Припяти
+	["zone_no_gravity"] = true,
+	["handmade_zone_no_gravity"] = true,
+
+--==================[Телепорты]===================
+	['zone_teleport'] = true,
+	['zone_teleport_out'] = true,
+	['zone_teleport_monolith'] = true,
+	['zone_teleport_2'] = true,
+	['m_teleport'] = true,
+	['m_teleport_1'] = true,
+	['m_teleport_2'] = true,
+	['m_teleport_3'] = true,
+	['m_teleport_4'] = true,
+	['m_teleport_5'] = true,
+	['m_teleport_6'] = true,
+	['m_teleport_7'] = true,
+	['m_teleport_8'] = true,
+	['m_teleport_9'] = true,
+	['m_teleport_10'] = true,
+	['m_teleport_11'] = true,
+	['m_teleport_12'] = true,
+	['m_teleport_13'] = true,
+	['m_teleport_14'] = true,
+	['m_teleport_15'] = true,
+	['m_teleport_16'] = true,
+	['m_teleport_17'] = true,
+	['m_teleport_18'] = true,
+	
+	-- Туннель на Янтаре:
+	["yantar_tunnel_restrictor_2"] = true,
+	["yantar_tunnel_restrictor_3"] = true,
+	["yantar_tunnel_restrictor_4"] = true,
+	
+--=================================================
+}
+--Зоны, внутри которых запрещено спавнить аномалии. Надо учитывать, что аномалии автоматически НЕ спавнятся рядом с укрытиями, переходами,
+--позициями сталкеров, монстров, аномалий (которые запрещено удалять) и объектов на классах аномалий (мин, и даже туманов? и костров?)
+--Все остальные зоны надо вносить в эту таблицу.
+local bad_circle_table = {
+	["l01_escape"] = {
+		{313.16,  3.70,   116.90,  15},	-- лагерь "в поле"
+		{-156.70, -29.60, -369.30, 70},	-- армейский кордон
+		{20.72,   15.95,  668.35,  25},	-- заброшенный кордон
+		{-8.98,   2.42,   78.63,   25}	-- элеватор
+	},
+	["l02_garbage"] = {
+		{ -16.76,   0.54, 284.90, 10},	-- точка перехода
+		{-282.50,   3.29, -24.80, 10},	-- точка перехода
+		{36.45,   0.48,-305.70, 10},	-- точка перехода
+		{-225.36,  -8.24,-139.30, 35},	-- лагерь за кладбищем техники
+		{15.16,   0.40, -14.70, 15},    -- автобусная остановка напротив ангара
+		{180.257, 0.395, 165.035, 50}   -- сделка братвы
+	},
+	["l03_agroprom"] = {
+		{76.33,  -0.05,  33.20, 20} 	-- место боя нейтралов с солдатнёй
+	},
+	["l04_darkvalley"] = {
+		{75.99, 2.762, 111.491, 15} 	-- переход с Радара в ТД
+	},
+	["l05_bar"] = {
+		{389.00,  11.23,-419.00, 10},	-- точка перехода
+		{-30.30,  -6.45, 380.60, 10},	-- точка перехода
+		{160.00, 0.00, 100.00, 150},	-- территория
+		{70.56, -0.29, 251.31, 40}      -- тело Одноглазого
+	},
+	["l06_rostok"] = {
+		{-242.20,   4.00,  50.20, 30},	-- стройка наёмников
+		{-236.37,   0.00,  -9.50, 40},	-- дозорный одиночка {после X-10}
+		{-87.05, -15.75, -218.77, 25},	-- переход на янтарь
+		{-147.7, -13.093, -258.66, 5},	-- трупик с антизомбином
+		{-227.32, -0.001, -60.125, 5},	-- засада наёмников 1 точка
+		{-213.101, 0.045, -45.737, 5}	-- засада наёмников 2 точка
+	},
+	["l07_military"] = {
+		{99.65,  -0.30, 304.30, 35},	-- лагерь у Барьера
+		{-199.60, -12.90,  46.30, 30},	-- хутор
+		{-349.19,-24.28,25.06, 10},     -- тачка Кульгавого 3
+		{-194.78, -3.9, -14.0, 5},      -- переход в ТД
+		{-84.962, -7.97, 414.32, 10}    -- переход в МГ
+	},
+	["l08_yantar"] = {
+		{106.30,  -8.80,-213.20, 10},	-- вход в трубу
+		{109.70,  -8.80,-207.70, 10},	-- труба
+		{113.50,  -8.80,-201.70, 10},	-- труба
+		{116.80,  -8.80,-195.70, 10},	-- труба
+		{125.00,  -8.80,-181.00, 10},	-- труба
+		{127.00,  -8.80,-168.70, 10},	-- труба
+		{128.00,  -8.80,-148.50, 10},	-- труба
+		{129.50,  -8.80,-128.00, 10},	-- труба
+		{141.50,  -8.80,-122.70, 10},	-- выход из трубы
+		{31.55,  -11.70,-272.40, 50}, 	-- лагерь экологов
+		{-144.47, 3.09, -142.59, 10},	-- переход в рыжик
+		{-66.073, -1.80,-350.11, 10},	-- переход на агро
+		{161.050, 0.90, 81.8995, 10}	-- переход на радар
+	},
+	["l10_radar"] = {
+		{251.20, -35.85,  69.50,  5},	-- точка на подъёме к антенному комплексу
+		{279.00, -42.40,  57.70, 15},	-- костёр на подъёме к антенному комплексу
+		{187.40, -12.05,  81.50, 15},	-- костёр на подъёме к антенному комплексу
+		{107.55,   0.35,  28.10, 20}	-- костёр после подъёма к антенному комплексу
+	},
+	["l11_pripyat"] = {
+		{-159.815, -2.391, 65.8, 15},   -- Мервин
+		{124.365, 2.8, -34.84, 40},     -- Призрак и Клык
+		{73.00, -3.0, -9.8, 20},        -- Нападение на призрака
+		{203.00, 6.0, 207.8, 20},       -- Восточный Гастроном
+		{-125.1, 6.0, 101.2, 20},       -- Западный Гастроном
+		{106.1, -2.0, 258.2, 20},       -- Махон с компашкой
+		{-118.1, -3.0, 32.2, 30},       -- Вокзал
+		{10.1, -2.0, 28.2, 40},         -- Площадь
+		{10.1, 0.2, 118.2, 50}          -- Площадь
+	},
+	["l10_red_forest"] = {
+		{26.867, 0.000, 21.54, 30},     -- Хата лесника
+		{201.97, -7.972, -121.69, 40},  -- Точка охотников
+		{104.18, -2.968, -301.21, 10},  -- Спавн Васильева
+		{-97.69, -0.821, -192.16, 60},  -- Спавн Карины
+		{-11.492, 0.06, -400.182, 10},  -- Переход на янтарь
+		{-138.33, -6.5, -270.52, 20},   -- Мост
+		{-176.314, 0.13, -280.356, 10}  -- Переход в МГ
+	},
+	["l12_stancia"] = {
+		{382.215, -20.0, 29.315, 60},   -- Переход + засада фантомов в финале
+		{920.51, 0.0, -323.046, 20},    -- Точка спауна собак
+		{284.891, 0.0, -214.98, 20}     -- Точка Дьяка
+	},
+	["l13_deep"] = {
+		{43.215, 1.3, 43.315, 60},      -- База миротворцев
+		{-11.215, 1.3, 201.315, 40},    -- Вторая база миротворцев
+		{82.215, 8.54, 425.315, 20},    -- Станция
+		{-81.215, 1.88, 385.315, 60},   -- Деревня
+		{79.215, 1.38, 502.315, 70},    -- Мародеры и сходка торговцев
+		{-110.215, 1.4, 111.315, 10},   -- Домик пекаря
+		{-323.215, 1.4, 82.315, 40},    -- КПП миротворцев
+		{176.215, 1.4, 587.315, 40}     -- Пещера
+
+
+	},
+	["swamp"] = {
+		{-55.589, 2.629, 267.736, 30},  -- Хата доктора
+		{-247.707, 3.190, 67.339, 100}, -- Пункт скитальцев
+		{91.584, 3.041, 235.683, 30}   -- Костолом
+	},
+}
+local bad_sector_table = { --Скорее всего, это координаты, за пределами которых запрещено спавнить аномалии (места за пределами локаций).
+	-- Кордон --- fixed by KamikaZze
+	["l01_escape"] = {
+		x1 = {  -89, 145, 373,  83 },
+		x2 = { -286,  90, 346,  29 },
+		y1 = { -182, -50, -49, 134 },
+		y2 = { -100,  12, -15, 182 },
+	},
+	-- Свалка --- fixed by KamikaZze
+	["l02_garbage"] = {
+		x1 = {  -41,  68,   38, -230, 306,  120,  -182 },
+		x2 = { -146,  15,   32, -306, 291,   35,  -272 },
+		y1 = {    -9, 199, -323,  -32, 132, 140,  -177 },
+		y2 = {    29, 262, -289,  -13, 154, 185,  -133 },
+	},
+	-- Агропром --- fixed by KamikaZze
+	["l03_agroprom"] = {
+		x1 = {   67, -188,  -89, 291, 255 },
+		x2 = { -100, -209, -211, 265, 220 },
+		y1 = {  -36,   78, -241,   0, -16 },
+		y2 = {   58,  102, -117,   5,   7 },
+	},
+	-- Темная долина --- fixed by KamikaZze
+	["l04_darkvalley"] = {
+		x1 = { -131, -100,  191, 122,  51,  51, -29, -26 },
+		x2 = { -217, -155,   96,  82, -12, -33, -73, -32 },
+		y1 = { -211, -532, -301, -20, -91,  25, -23, -22 },
+		y2 = { -175, -455, -200,   8, -16,  50, -18,  25 },
+	},
+	-- Дикая территория --- fixed by KamikaZze
+	["l06_rostok"] = {
+		x1 = {  37,  -58, -235, -113, -215 },
+		x2 = {   9, -103, -285, -213, -297 },
+		y1 = { 117,  113,   78, -123,  119 },
+		y2 = { 156,  151,  112,  -49,  172 },
+	},
+	-- Янтарь
+	["l08_yantar"] = {
+		x1 = { 116 },
+		x2 = {  55 },
+		y1 = { -58 },
+		y2 = { -34 },
+	},
+	-- Армейские склады --- fixed by KamikaZze
+	["l07_military"] = {
+		x1 = { -198, -324, -160,  -83, 113,   75,  92 },
+		x2 = { -233, -386, -195, -105,  87, -141,  12 },
+		y1 = {  185,  371,  350,  207, 160,  -62, 335 },
+		y2 = {  211,  411,  391,  235, 184,  122, 403 },
+	},
+	-- Радар --- fixed by KamikaZze
+	["l10_radar"] = {
+		x1 = { 149, 390, 664 },
+		x2 = {  75, 377, 609 },
+		y1 = { -35, 141, 167 },
+		y2 = { -20, 162, 200 },
+	},
+	-- Припять  --- fixed by KamikaZze
+	["l11_pripyat"] = {
+		x1 = {   31, 118, 115,  36,  18,   33 },
+		x2 = {   11,  58,  96,  27, -17,  -15 },
+		y1 = { -296,  -2, 110, 280, 191, -307 },
+		y2 = { -266,  33, 159, 301, 210,  -60 },
+	},
+}
+
+function on_anomaly_spawn(obj)
+	if is_not_anomaly(alife():object(obj:id())) then return end --НЕ аномалии не учитываем. Они сюда и не должны попадать, но на всякий случай.
+	--
+	--log3("[%s(%s)] obj:get_shape_radius(): [%s]", script_name(), obj:name(), obj:get_shape_radius())
+	--
+	anom_list[obj:id()] = { pos = obj:position(), clsid = obj:clsid(), radius = obj:get_shape_radius(), section = obj:section() }
+	--log3("--[%s] Anomaly registered: [%s]", script_name(), obj:name())
+end
+
+function on_anomaly_net_destroy(obj)
+	--log3("!![%s] Destroying anomaly: [%s]", script_name(), obj:name())
+	anom_list[obj:id()] = nil
+end
+
+--Функция предназначена для определения ближайшей к точке аномалии
+function get_nearest_anomaly_by_point(position)
+	local dist, mindist, anomid = 0, 20, nil
+
+	for id, anom in pairs(anom_list) do
+		dist = position:distance_to(anom.pos) - anom.radius
+		if dist < mindist then
+			mindist = dist --Минимальное расстояние до аномалии
+			anomid = id
+		end
+	end
+
+	if anomid then
+		--log3("[get_nearest_anomaly_by_point] dist from [%s] to [%s, %s, %s] = %s, OLD dist: [%s]", level.object_by_id(anomid):name(), position.x, position.y, position.z, mindist, (level.object_by_id(anomid):position()):distance_to(position))
+		--log3("%s", debug.traceback())
+		local anom_desc = anom_list[anomid]
+		return true, anomid, anom_desc.pos, anom_desc.clsid, mindist, anom_desc.radius, anom_desc.section
+	else
+		return false
+	end
+end
+
+function get_all_nearest_anomalies_by_point_in_radius(position, rads)
+	local anom_out = {}
+	for id, anom in pairs(anom_list) do
+		local dist = position:distance_to(anom.pos) - anom.radius
+		if dist < rads then
+			--log3("[get_all_nearest_anomalies_by_point_in_radius] dist from [%s] to [%s] = [%s], max radius = [%s]", level.object_by_id(id):name(), position, dist, rads)
+			--log3("%s", debug.traceback())
+			table.insert(anom_out, { 
+				["id"] = id,
+				["pos"] = anom.pos,
+				["clsid"] = anom.clsid,
+				["dist"] = dist, --Расстояние до аномалии 
+				["radius"] = anom.radius,
+				["sect"] = anom.section
+			})
+		end
+	end
+
+	return anom_out
+end
+
+
+function bad_position(p_vector) --Проверяем, попадает ли аномалия рядом с занятой позицией
+	for k, v in pairs(position_forbidden) do
+		if p_vector:distance_to(v) < 10 then
+			return true
+		end
+	end
+
+	return false
+end
+
+function bad_sector(p_vector, lname) --Видимо, нужно для того, чтобы аномалии за пределами локаций не спавнились.
+	local bad_list = bad_sector_table[lname] --формируется по принципу x1 > x2, y2 > y1
+	if not bad_list then return false end
+
+	for k,v in pairs(bad_list.x1) do
+		if (p_vector.x >= (bad_list.x2[k]) and (p_vector.x <= bad_list.x1[k])) and (p_vector.z >= (bad_list.y1[k]) and p_vector.z <= (bad_list.y2[k])) then
+			return true
+		end
+	end
+
+	return false
+end
+
+function bad_zone(p_vector) --Проверяем, попадает ли аномалия в зоны укрытий
+	for _, id in pairs(ogse_hideouts.restrictor_list) do
+		local sobj = alife():object(id)
+		if sobj then
+			local _, radius = sobj:get_shape_radius()
+			if radius then
+				if p_vector:distance_to(sobj.position) <= (tonumber(radius) + 10) then --Запрещено спавнить аномалии рядом с укрытиями
+					return true
+				end
+			end
+		end
+	end
+
+	return false
+end
+
+function bad_circle(pos)
+	for k, v in ipairs(anti_spawn_zones) do
+		if pos:distance_to(v[1]) <= v[2] then return true end
+	end
+	return false
+end
+
+
+function is_exclusion_location(lname) --Вернет true если на локации нельзя респавнить аномалии
+	return DISABLE_ANOMS_RESPAWN or not level_anoms[lname]
+end
+
+function is_exclusion_anomaly(sobj)
+	return excluded_anoms[sobj:section_name()] or excluded_anoms[sobj:name()]
+end
+
+function is_not_anomaly(sobj)
+	return not_anomal_zones[sobj:section_name()]
+end
+
+
+function on_after_blowout()
+	get_lists_inited = false
+	add_anom()
+
+	list_anom_id = {} --После обновления аномалий очищаем таблицы
+	lvids_forbidden = {}
+	position_forbidden = {}
+end
+
+
+function get_lists() --Вызывается из add_anom и generate_anoms, если нужно.
+	list_anom_id = {}
+	lvids_forbidden = { [db.actor:level_vertex_id()] = true }
+	position_forbidden = { db.actor:position() }
+
+	local lname = level.name()
+	local t = {}
+	for id, sobj in alife():objects() do
+		local sobj_lname = object_level_name( sobj )
+		if IsAnomaly(sobj) then
+			local status = get_anomaly_mode(sobj)
+			local forbidden_anom = is_not_anomaly(sobj) or is_exclusion_anomaly(sobj) or string.find(sobj:section_name(), "burning_fuzz")
+			if status ~= "anom_off" then
+				if not forbidden_anom then
+					if not list_anom_id[sobj_lname] then
+						list_anom_id[sobj_lname] = {}
+					end
+					list_anom_id[sobj_lname][id] = id
+				end
+			end
+			if sobj_lname == lname then
+				if forbidden_anom then
+					lvids_forbidden[ sobj.m_level_vertex_id ] = true
+					table.insert(position_forbidden, sobj.position)
+				end
+			else --Безопасно удалять аномалии можно только находясь на другой локации.
+				if status == "anom_off" then
+					table.insert(t, sobj)
+				end
+			end
+		elseif isLc(sobj) then
+			--Учитываем точки входа на локациях.
+			local lc = sobj:get_level_changer()
+			local dest_vertex = lc.dest_game_vertex_id
+			local dest_lname  = alife():level_name(
+				game_graph():vertex( dest_vertex ):level_id()
+			)
+			if dest_lname == lname then
+				lvids_forbidden[lc.dest_level_vertex_id] = true
+				table.insert(position_forbidden, lc.dest_position)
+			end
+			if sobj_lname == lname then --Учитываем точки ухода с локаций
+				lvids_forbidden[ sobj.m_level_vertex_id ] = true
+				table.insert( position_forbidden, sobj.position )
+			end
+		else --Не создавать аномалии там, где вообще хоть что-нибудь есть. Не важно, сталкер это или физический объект и тд.
+			if sobj_lname == lname then
+				lvids_forbidden[ sobj.m_level_vertex_id ] = true
+				table.insert( position_forbidden, sobj.position )
+			end
+		end
+	end
+
+	for _, sobj in ipairs(t) do
+		if not string.find(sobj:section_name(), "burning_fuzz") then
+			alife():release(sobj)
+		end
+	end
+
+	get_lists_inited = true
+	--log3("--[%s]Get_lists inited!", script_name())
+end
+
+
+--Отключаем динамические аномалии на всех локациях и спавним новые аномалии на текущей локации.
+--На месте отключенной аномалии с какой-то вероятностью спавним артефакт.
+function add_anom(levelname) --вызывается из anom_update() и сигналом из модуля выброса.
+	levelname = levelname or level.name()
+	if is_exclusion_location(levelname) then return end --Запрещено спавнить аномалии
+
+	if not get_lists_inited then
+		get_lists()
+	end
+
+	--log3("Called add_anom for level: [%s]", levelname)
+	--log3("Debug list_anom_id = %s", list_anom_id)
+	local list_loc_anom_id = list_anom_id[levelname]
+	if list_loc_anom_id then
+		for k,v in pairs(list_loc_anom_id) do
+			local sobj = alife():object(v)
+			if sobj then
+				set_anomaly_mode(v, "anom_off")
+			end
+		end
+	end
+
+	if levelname == level.name() then --Спавним аномалии незамедлительно
+		generate_anoms(levelname)
+	else --аномалии будут заспавнены при переходе на локацию
+		ogse.delete_var(script_name().."."..levelname)
+		ogse.save_var(script_name().."."..levelname, 1.5) --1.5 = старые аномалии на локации отключены, новые будут заспавнены при переходе на локацию
+	end
+end
+
+function spawn_anomaly(section, pos, lv, gv, shape)
+	local sobj = alife():create( section, pos, lv, gv )
+	ASSERT( sobj, "Can't generate_anomaly [%s], [%s], [%s], [%s]", section or "nil", pos or "nil", lv or "nil", gv or "nil")
+	local pk = get_netpk( sobj, 1 )
+	ASSERT( ( pk and pk:isOk() ), "can't read netpacket of %s", sobj:name() )
+	local data = pk:get()
+	if shape.shtype == 0 then
+		data.shapes:addSphere(shape.radius, vector():set(unpack(shape.center)))
+	else
+		data.shapes:addBox(
+			vector():set( unpack( shape.v1 ) ),
+			vector():set( unpack( shape.v2 ) ),
+			vector():set( unpack( shape.v3 ) ),
+			vector():set( unpack( shape.offset ) )
+		)
+	end
+	--level.map_add_object_spot(sobj.id, "green_location", sobj:name())
+	pk:set( data )
+	return alife():object(sobj.id)
+end
+
+--Создаёт набор аномалий на уровне
+function generate_anoms(lname)
+	if not get_lists_inited then
+		get_lists()
+	end
+
+	--log3("--Called generate_anoms for level [%s]", lname)
+	local v = level_anoms[lname]
+	local rnd = math.floor(spawn_anom_prob * math.random(v[1],v[2]) * (0.9+(level.get_game_difficulty()+1)*0.1))
+	for i=1, rnd do
+		local pos, new_lv, new_gv = anomaly_position_choice(lname)
+		local section, shape = anomaly_section_choice(lname)
+		ASSERT(shape.shtype ~= 0 or ( shape.radius and shape.radius > 0 ), "Incorrect shape radius for section [%s]", section)
+		--shape.radius = shape.radius * get_float(section, "effective_radius", 1)
+		spawn_anomaly( section, pos, new_lv, new_gv, shape )
+		--log3("--[%s] Generated anomaly [%s] on level [%s]", script_name(), section, lname)
+
+		lvids_forbidden[new_lv] = true
+		table.insert(position_forbidden, pos)
+		
+	end
+	ogse.delete_var(script_name().."."..lname)
+	ogse.save_var(script_name().."."..lname, 1) --1 = аномалии на локации обновлены.
+	move_mgr.invalidate_pp_accessibility()
+end
+
+function anom_update()
+	local lname = level.name()
+	local bad_pos_tbl = bad_circle_table[lname]
+	if bad_pos_tbl then
+		for _, pos in pairs(bad_pos_tbl) do
+			table.insert( anti_spawn_zones, { vector():set( pos[ 1 ], pos[ 2 ], pos[ 3 ] ), pos[ 4 ] } )
+		end
+		--log3("~~anti_spawn_zones_tbl: %s", anti_spawn_zones)
+	end
+
+	if has_alife_info("blowout") then return end --Во время выброса делать нечего
+
+	for k,_ in pairs(level_anoms) do
+		local anom_chek = tonumber(ogse.load_var_safe(script_name().."."..k) or 2) --Если в хранилище нет данных по аномалиям на локации, значит запустили игру в первый раз и аномалии надо обновить.
+		if anom_chek == 2 then --Требуется обновление после выброса
+			add_anom(k) --на текущей локации аномалии обновятся сразу, на остальных - будут обновлены только при переходе на локацию
+		elseif anom_chek == 1.5 and k == lname and not is_exclusion_location(k) then --Новые аномалии будут заспавнены только при переходе на локацию.
+			generate_anoms(lname)
+		end
+	end
+
+	list_anom_id = {} --После обновления аномалий очищаем таблицы
+	lvids_forbidden = {}
+	position_forbidden = {}
+end
+
+--Поднимаем флаги выброса для локаций
+function blow_flags() --вызывается из менеджера выброса
+	for k,_ in pairs(level_anoms) do
+		ogse.delete_var(script_name().."."..k)
+		ogse.save_var(script_name().."."..k, 2) --2 = требуется обновление аномалий на локации
+	end
+end
+
+
+--Получаем статус аномалии
+function get_anomaly_mode(sobj)
+	local ini = sobj:spawn_ini()
+	if ini and ini:section_exist( "m_anom" ) then
+		return get_string( "m_anom", "status", "", ini )
+	end
+
+	return ""
+end
+
+--Устанавливаем статус аномалии. По факту статус можно установить один - anom_off. В других статусах нет надобности.
+function set_anomaly_mode(anom_id, status)
+	local sobj = alife():object(anom_id)
+	if not sobj then return end
+
+	local ini = sobj:spawn_ini()
+	ini.readonly = false
+	ini:w_string( "m_anom", "status", status )
+	sobj:save_spawn_ini()
+
+	ASSERT(status == "anom_off", "strange anomaly status: [%s]", status)
+
+	if status == "anom_off" then
+		anom_list[anom_id] = nil
+		local obj = level.object_by_id(anom_id)
+		if obj then
+			obj:disable_anomaly()
+			dsh_anomaly_detector.remove_restriction(anom_id)
+		end
+	end
+	--log3("[%s.set_anomaly_mode] New status for anom [%s] = [%s]. Level: [%s]", script_name(), sobj:name(), status, object_level_name(sobj))
+end
+
+function anomaly_position_choice(lname)
+	ASSERT( lname == level.name(), "level.vertex_count() work only on current level!" )
+
+	local lvx = level.vertex_count() - 1
+	local new_lv, pos
+
+	repeat --Подбираем свободный level_vertex и position
+		new_lv = math.random(lvx)
+		pos = level.vertex_position(new_lv)
+	until not lvids_forbidden[new_lv] and not (
+		   bad_sector(pos, lname) --Скорее всего, места за пределами локаций
+		or bad_position(pos) --Монстры, НПС, актор, точки переходов, квестовые аномалии и тп...
+		--or bad_zone(pos, lname) --Укрытия
+		or bad_circle(pos) --Места, в которых по каким-то причинам нельзя спавнить аномалии (лагеря, квестовые сцены и тд.). Настраиваются вручную.
+	)
+
+	local new_gv = cross_table():vertex( new_lv ):game_vertex_id()
+
+	return pos, new_lv, new_gv
+end
+
+local anom_types = {
+	l01_escape = {
+		mosquito_bald     = 0.3,
+		gravi_zone        = 0.25,
+		mincer            = 0.25,
+		witches_galantine = 0.1,
+		zharka_static     = 0.1
+	},
+	l02_garbage = {
+		mosquito_bald     = 0.2,
+		gravi_zone        = 0.2,
+		mincer            = 0.2,
+		witches_galantine = 0.2,
+		zharka_static     = 0.15,
+		buzz              = 0.05
+	},
+	l03_agroprom = {
+		mosquito_bald     = 0.2,
+		gravi_zone        = 0.2,
+		mincer            = 0.2,
+		witches_galantine = 0.25,
+		zharka_static     = 0.1,
+		buzz              = 0.05
+	},
+	l04_darkvalley = {
+		mosquito_bald     = 0.2,
+		gravi_zone        = 0.2,
+		mincer            = 0.2,
+		witches_galantine = 0.2,
+		zharka_static     = 0.15,
+		buzz              = 0.05
+	},
+	l05_bar = {
+		mosquito_bald     = 0.2,
+		gravi_zone        = 0.2,
+		mincer            = 0.3,
+		witches_galantine = 0.15,
+		zharka_static     = 0.15
+	},
+	l06_rostok = {
+		mosquito_bald     = 0.1,
+		gravi_zone        = 0.1,
+		mincer            = 0.15,
+		witches_galantine = 0.25,
+		zharka_static     = 0.4
+	},
+	l07_military = {
+		mosquito_bald     = 0.1,
+		gravi_zone        = 0.2,
+		mincer            = 0.2,
+		witches_galantine = 0.3,
+		zharka_static     = 0.15,
+		buzz              = 0.05
+	},
+	l08_yantar = {
+		mosquito_bald     = 0.05,
+		gravi_zone        = 0.15,
+		mincer            = 0.15,
+		witches_galantine = 0.25,
+		zharka_static     = 0.15,
+		buzz              = 0.25
+	},
+	l10_radar = {
+		mosquito_bald     = 0.1,
+		gravi_zone        = 0.2,
+		mincer            = 0.2,
+		witches_galantine = 0.2,
+		zharka_static     = 0.2,
+		buzz              = 0.1
+	},
+	l11_pripyat = {
+		mosquito_bald     = 0.1,
+		gravi_zone        = 0.2,
+		mincer            = 0.2,
+		witches_galantine = 0.2,
+		zharka_static     = 0.2,
+		buzz              = 0.1
+	},
+	l12_stancia = {
+		mosquito_bald     = 0.17,
+		gravi_zone        = 0.17,
+		mincer            = 0.17,
+		witches_galantine = 0.17,
+		zharka_static     = 0.17,
+		buzz              = 0.15
+	},
+	other = {
+		mosquito_bald     = 0.2,
+		gravi_zone        = 0.2,
+		mincer            = 0.2,
+		witches_galantine = 0.2,
+		zharka_static     = 0.2
+	}
+}
+
+local anom_power = {
+	l01_escape =     {{postfix = "_weak", val =   1}, {postfix = "_average", val = 0.3}, {postfix = "_strong", val = 0.01}},
+	l02_garbage =    {{postfix = "_weak", val =   1}, {postfix = "_average", val = 0.6}, {postfix = "_strong", val = 0.05}},
+	l03_agroprom =   {{postfix = "_weak", val = 0.8}, {postfix = "_average", val =   1}, {postfix = "_strong", val =  0.2}},
+	l04_darkvalley = {{postfix = "_weak", val = 0.7}, {postfix = "_average", val =   1}, {postfix = "_strong", val =  0.3}},
+	l05_bar =        {{postfix = "_weak", val =   1}, {postfix = "_average", val = 0.6}, {postfix = "_strong", val =  0.1}},
+	l06_rostok =     {{postfix = "_weak", val = 0.6}, {postfix = "_average", val =   1}, {postfix = "_strong", val =  0.3}},
+	l07_military =   {{postfix = "_weak", val = 0.3}, {postfix = "_average", val =   1}, {postfix = "_strong", val =  0.6}},
+	l08_yantar =     {{postfix = "_weak", val = 0.7}, {postfix = "_average", val =   1}, {postfix = "_strong", val =  0.3}},
+	l10_radar =      {{postfix = "_weak", val = 0.2}, {postfix = "_average", val = 0.6}, {postfix = "_strong", val =    1}},
+	l11_pripyat =    {{postfix = "_weak", val = 0.1}, {postfix = "_average", val = 0.5}, {postfix = "_strong", val =    1}},
+	l12_stancia =    {{postfix = "_weak", val = 0.1}, {postfix = "_average", val = 0.4}, {postfix = "_strong", val =    1}},
+	other =          {{postfix = "_weak", val = 0.6}, {postfix = "_average", val =   1}, {postfix = "_strong", val =  0.3}}
+}
+
+local anoms_sections = {
+	buzz              = {"buzz",              {shtype=0, radius=1.5, center={0,0,0}}},
+	gravi_zone        = {"gravi_zone",        {shtype=0, radius=3,   center={0,0,0}}},
+	mincer            = {"mincer",            {shtype=0, radius=3.5, center={0,0,0}}},
+	mosquito_bald     = {"mosquito_bald",     {shtype=0, radius=3,   center={0,0,0}}},
+	witches_galantine = {"witches_galantine", {shtype=0, radius=4,   center={0,0,0}}},
+	zharka_static     = {"zharka_static",     {shtype=1, v1={1,0,0}, v2={0,7,0}, v3={0,0,1}, offset={0,0,0}}}
+}
+
+local anom_prefix = "noartf_" --KRodin: Префикс не влияет на спавн артов, нужен только для того чтобы отличить аномалии созданные выбросом от всех остальных аномалий.
+function anomaly_section_choice(levelname)
+	local anom_to_spawn, name_anom_to_spawn, postfix_anom_to_spawn, anom_table_name
+	local anom_table_name = anom_types[levelname] or anom_types.other
+	local type_choose = math.random()
+	local b1, b2 = 0.0, 0.0
+	for k,v in pairs(anom_table_name) do
+		b2 = b2 + v
+		if type_choose >= b1 and type_choose <= b2 then
+			name_anom_to_spawn = k
+			break
+		end
+		b1 = b2
+	end
+
+	local anom_table_postfix = anom_power[levelname] or anom_power.other
+	local spawn_choose = math.random()
+	local low_level = 0.0
+
+	table.sort(anom_table_postfix,function(a,b) return a.val < b.val end)
+
+	for key, value in pairs(anom_table_postfix) do
+		if spawn_choose < value.val and spawn_choose >= low_level then
+			postfix_anom_to_spawn = value.postfix
+		end
+		low_level = value.val
+	end
+
+	if name_anom_to_spawn and postfix_anom_to_spawn then
+		anom_to_spawn = anom_prefix .. name_anom_to_spawn .. postfix_anom_to_spawn
+	end
+
+	return anom_to_spawn, anoms_sections[name_anom_to_spawn][2]
+end
+
+function check_hideouts( pos )
+	local hides = amk_hideouts.hide[level.name()]
+	if hides then
+		for i, o in ipairs( hides ) do
+			if o.zone then
+				for j, v in ipairs( o.zone ) do
+					local tmp
+					if v.p3 then
+						tmp = ogse.check_npc_in_box_amk(
+							pos,
+							vector():set( unpack( v.p1 ) ),
+							vector():set( unpack( v.p2 ) ),
+							vector():set( unpack( v.p3 ) )
+						)
+					else
+						tmp = ogse.check_npc_in_box(
+							pos,
+							vector():set( unpack( v.p1 ) ),
+							vector():set( unpack( v.p2 ) )
+						)
+					end
+					if tmp == true then
+						return false
+					end
+				end
+			end
+		end
+	end
+	return true
+end
+
+function debug_zone()
+	local level_name = level.name()
+
+	-- Отрисовка сфер
+	local bad_pos_tbl = bad_circle_table[level_name]
+	if bad_pos_tbl then
+		for k = 1, #bad_pos_tbl do
+			local pos = bad_pos_tbl[k]
+			local sphere_pos = vector():set(pos[1], pos[2], pos[3])
+			local sphere_radius = pos[4]
+			script_debug_render.draw_sphere(sphere_pos, sphere_radius, fcolor():set(0, 1, 0, 1), "sphere " .. k)
+		end
+	end
+
+	-- Отрисовка коробок
+	local bad_list = bad_sector_table[level_name]
+	if bad_list then
+		for k = 1, #bad_list.x1 do
+			local x1, x2 = bad_list.x1[k], bad_list.x2[k]
+			local y1, y2 = bad_list.y1[k], bad_list.y2[k]
+			local z_min, z_max = 0, 30
+			script_debug_render.draw_box(x1, x2, y1, y2, z_min, z_max, fcolor():set(0, 0, 1, 1), "box " .. k)
+		end
+	end
+end

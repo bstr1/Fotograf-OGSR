@@ -118,7 +118,7 @@ function spawn_rifle()
     amk.spawn_item_in_inv("wpn_ash12") -- АШ-12
     amk.spawn_item_in_inv("wpn_groza") -- ОЦ-14 «Гроза»
     amk.spawn_item_in_inv("wpn_groza_nimble") -- ОЦ-14 «Шторм»
-    amk.spawn_item_in_inv("wpn_val_nimble") -- СР-3М «Вихрь»
+    amk.spawn_item_in_inv("wpn_vihr") -- СР-3М «Вихрь»
     amk.spawn_item_in_inv("wpn_mdr") -- DT MDR
     amk.spawn_item_in_inv("wpn_l85") -- Enfield L85A2
     amk.spawn_item_in_inv("wpn_fn2000") -- FN F2000
@@ -154,7 +154,7 @@ function spawn_smg()
     amk.spawn_item_in_inv("wpn_sr2m") -- СР-2МП «Вереск»
     amk.spawn_item_in_inv("wpn_mp9") -- B&T MP9
     amk.spawn_item_in_inv("wpn_mp5") -- H&K MP5A5
-    amk.spawn_item_in_inv("wpn_mp5_nimble") -- H&K UMP45
+    amk.spawn_item_in_inv("wpn_ump45") -- H&K UMP45
     amk.spawn_item_in_inv("wpn_p90") -- FN P90
     amk.spawn_item_in_inv("wpn_vector") -- TDI Kriss Vector
 end
@@ -210,7 +210,6 @@ function spawn_pistol()
     amk.spawn_item_in_inv("wpn_fort_snag") -- ОЦ-33 «Пернач»
     amk.spawn_item_in_inv("wpn_sr1m") -- СР-1МП «Гюрза»
     amk.spawn_item_in_inv("wpn_tt33") -- ТТ-33
-    amk.spawn_item_in_inv("wpn_rsh12") -- РШ-12
     amk.spawn_item_in_inv("wpn_beretta") -- Beretta M9A1
     amk.spawn_item_in_inv("wpn_hpsa") -- CZ 75B
     amk.spawn_item_in_inv("wpn_colt1911") -- Colt M1911

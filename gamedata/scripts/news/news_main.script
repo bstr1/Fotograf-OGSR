@@ -577,7 +577,7 @@ function get_weapon_type(weapon)
 			id == "wpn_hpsa" or
 			id == "wpn_usp" or
 			id == "wpn_bizon" or
-                        id == "wpn_mp5_nimble" or
+                        id == "wpn_ump45" or
                         id == "wpn_mp5" or
 			id == "wpn_vector" or
 			id == "wpn_mp5" or
@@ -631,7 +631,7 @@ function get_weapon_type(weapon)
 			id == "wpn_gauss" then
 			return 2 --"Винтовка "..m_act:section()
 		        elseif id == "wpn_val" or
-			id == "wpn_val_nimble" or
+			id == "wpn_vihr" or
                         id == "wpn_ak12" or
 			id == "wpn_ak74" or	
 			id == "wpn_ak74_m1" or
@@ -657,13 +657,11 @@ function get_weapon_type(weapon)
                         id == "wpn_aug" or
                         id == "wpn_g36" or
                         id == "wpn_l85" or
-                        id == "wpn_m4" or
                         id == "wpn_aug" or
                         id == "wpn_bizon" or
                         id == "wpn_sr2m" or
                         id == "wpn_sr2m" or
                         id == "wpn_sa58" or
-                        id == "wpn_lewis" or
                         id == "wpn_mp5" or
                         id == "wpn_vityaz" or
                         id == "wpn_stg44" or
@@ -672,8 +670,6 @@ function get_weapon_type(weapon)
                         id == "wpn_vector" or
                         id == "wpn_ak74u_snag" or
                         id == "wpn_groza" or
-                        id == "wpn_groza" or
-                        id == "wpn_pkm" or
                         id == "wpn_pkm" or
                         id == "wpn_ak103" or
                         id == "wpn_g36" or
