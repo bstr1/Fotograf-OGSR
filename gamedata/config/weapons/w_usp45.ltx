@@ -46,7 +46,7 @@ inv_grid_x                            = 20
 inv_grid_y                            = 9
 
 fire_dispersion_base                  = 0.25
-control_inertion_factor               = 1.1f
+control_inertion_factor               = 1.0f
 cam_relax_speed                       = 6.3
 cam_relax_speed_ai                    = 360
 cam_dispersion                        = 0.53
@@ -110,7 +110,7 @@ snd_reload_empty                      = weapons\usp45\usp45_reload_empty
 snd_reload_jammed                     = weapons\usp45\usp45_misfire
 snd_empty                             = weapons\usp45\usp45_empty
 snd_draw                              = weapons\assault_draw
-snd_holster                           = weapons\hide_p
+snd_holster                           = weapons\assault_holster
 snd_close                             = weapons\draw_silent
 snd_shoot1                            = weapons\p220\muzzle_p220_mono1
 
@@ -198,7 +198,7 @@ inv_grid_x                            = 22
 inv_grid_y                            = 24
 
 fire_dispersion_base                  = 0.17
-control_inertion_factor               = 1.0
+control_inertion_factor               = 1.0f
 
 PDM_disp_base                         = 0.4
 PDM_disp_vel_factor                   = 1
@@ -219,9 +219,10 @@ silencer_x                            = 63
 silencer_y                            = -12
 
 [wpn_usp_nimble_hud]:wpn_usp_hud
-aim_hud_offset_pos                    = -0.076000,0.029500,-0.09
+aim_hud_offset_pos                    = -0.0755,0.0305,-0.09
+aim_hud_offset_pos_16x9               = -0.0755,0.0305,-0.09
+
 aim_hud_offset_rot                    = 0.000000,0.000000,0.000000
-aim_hud_offset_pos_16x9               = -0.076000,0.029500,-0.09
 aim_hud_offset_rot_16x9               = 0.000000,0.000000,0.000000
 
 anm_show                              = fnx45_draw

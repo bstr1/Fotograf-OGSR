@@ -1,0 +1,277 @@
+[wpn_rpk16]:weapon_immunities,weapon_probability,default_weapon_params
+GroupControlSection                   = spawn_group
+cform                                 = skeleton
+class                                 = WP_LR300
+min_radius                            = 0
+max_radius                            = 670
+
+ef_main_weapon_type                   = 2
+ef_weapon_type                        = 6
+
+holder_range_modifier                 = 1.0
+holder_fov_modifier                   = 1.0
+
+cost                                  = 60000
+
+ammo_elapsed                          = 60
+
+ammo_mag_size                         = 95
+fire_modes                            = 1, -1
+
+flame_particles                       = weapons\new_effects\akmsl
+smoke_particles                       = weapons\generic_weapon_machine_gun
+grenade_flame_particles               = weapons\generic_weapon_svu
+shell_particles                       = weapons\545x39
+silencer_smoke_particles              = weapons\generic_weapon_svu
+
+ammo_class                            = ammo_5.45x39_fmj, ammo_5.45x39_ap, ammo_5.45x39_izomorf
+grenade_class                         = ammo_vog-25
+launch_speed                          = 0
+
+hand_dependence                       = 1
+single_handed                         = 0
+slot                                  = 1
+animation_slot                        = 2
+
+inv_name                              = st_wpn_rpk16
+inv_name_short                        = st_wpn_rpk16
+description                           = st_wpn_rpk16_descr
+
+inv_weight                            = 5.25
+icon_group                            = 2
+inv_grid_height                       = 2
+inv_grid_width                        = 6
+inv_grid_x                            = 40
+inv_grid_y                            = 6
+
+fire_dispersion_base                  = 0.19
+control_inertion_factor               = 1.0f
+cam_relax_speed                       = 10
+cam_relax_speed_ai                    = 120.75
+cam_dispersion                        = 0.8
+cam_dispersion_inc                    = 0.5
+cam_max_angle                         = 50.0
+cam_max_angle_horz                    = 50.0
+cam_step_angle_horz                   = 1.3
+fire_dispersion_condition_factor      = 10
+misfire_probability                   = 0.005
+condition_shot_dec                    = 0.00065
+
+PDM_disp_base                         = 0.9
+PDM_disp_vel_factor                   = 1.6
+PDM_disp_accel_factor                 = 1.6
+PDM_disp_crouch                       = 1.0
+PDM_disp_crouch_no_acc                = 1.0
+
+hit_power                             = 1.13, 1.13, 1.13, 1.13
+hit_type                              = fire_wound
+fire_distance                         = 700
+bullet_speed                          = 930
+rpm                                   = 700
+use_aim_bullet                        = false
+time_to_aim                           = 1.0
+fire_point                            = 0,0.218,0.656
+fire_point2                           = 0,0.161,0.583
+shell_bone                            = wpn_body
+shell_point                           = 0.07,0.2,0.466
+
+hud                                   = wpn_rpk16_hud
+visual                                = dynamics\weapons\wpn_rpk\wpn_rpk16.ogf
+light_color                           = 0.6,0.5,0.3
+light_range                           = 7.0
+light_var_color                       = 0.1
+light_var_range                       = 0.7
+light_time                            = 0.07
+light_disabled                        = false
+ph_mass                               = 5
+
+zoom_rotate_time                      = 6.5
+zoom_enabled                          = true
+
+scope_status                          = 0
+silencer_status                       = 2
+grenade_launcher_status               = 0
+scope_name                            = ac10632
+scope_names                           = ac10632, acog, eot, microt1, specter
+silencer_name                         = sil_tgp-a
+grenade_launcher_name                 = 
+scope_respawn_ac10632                 = wpn_rpk16_ac10632
+scope_respawn_acog                    = wpn_rpk16_acog
+scope_respawn_eot                     = wpn_rpk16_eot
+scope_respawn_microt1                 = wpn_rpk16_microt1
+scope_respawn_specter                 = wpn_rpk16_specter
+
+scope_x                               = 23
+scope_y                               = 7
+silencer_x                            = 271
+silencer_y                            = 9
+grenade_launcher_x                    = 
+grenade_launcher_y                    = 
+
+position                              = -0.026,-0.175,0
+orientation                           = 0,0,0
+strap_bone0                           = bip01_spine2
+strap_bone1                           = bip01_spine1
+strap_orientation                     = -10,-5,10
+strap_position                        = -0.165,-0.38,0.15
+
+snd_silncer_shot					  = weapons\ak103\ak103_silencer_mono
+snd_shoot							  = weapons\rpk\rpk74m_shoot
+
+snd_reload                            = weapons\rpk\545\rpk16_reload
+snd_reload_empty                      = weapons\rpk\545\rpk16_reload_empty
+snd_reload_misfire                    = weapons\rpk\545\rpk16_misfire
+
+snd_reload_jammed                     = weapons\rpk\rpk74m_misfire
+snd_empty                             = weapons\ak_empty, 0.5
+
+snd_draw                              = weapons\assault_draw
+snd_holster                           = weapons\assault_holster
+snd_close                             = weapons\draw_silent
+
+silencer_light_color                  = 0.6,0.5,0.3
+silencer_light_range                  = 0.01
+silencer_light_time                   = 0.2
+silencer_light_var_color              = 0.05
+silencer_light_var_range              = 0.5
+
+[wpn_rpk16_hud]:hud_base
+aim_hud_offset_pos                    = -0.0718,0.0205,-0.09
+aim_hud_offset_rot                    = 0,0,0
+aim_hud_offset_pos_16x9               = -0.0718,0.0205,-0.09
+aim_hud_offset_rot_16x9               = 0,0,0
+
+anm_show                              = rpk16_draw
+anm_hide                              = rpk16_holster
+anm_idle                              = rpk16_idle
+anm_idle_aim                          = rpk16_idle_aim
+anm_idle_aim_moving                   = rpk16_moving_aim
+anm_idle_moving                       = rpk16_moving
+anm_idle_moving_crouch                = rpk16_crouch
+anm_idle_moving_slow                  = rpk16_moving_slow
+anm_idle_sprint                       = rpk16_sprint
+anm_idle_sprint_end                   = rpk16_sprint_end
+anm_idle_sprint_start                 = rpk16_sprint_start
+anm_bore                              = rpk16_idle_aim
+anm_shots                             = rpk16_shoot, shoot
+anm_shoot_aim                         = rpk16_shoot_aim, shoot
+anm_reload                            = rpk16_reload, reload
+anm_reload_empty                      = rpk16_reload_empty, reload_empty
+anm_reload_jammed                     = rpk16_misfire, misfire
+anm_firemode                          = rpk16_firemode
+anm_headlamp_on                       = rpk16_flash
+anm_gasmask                           = rpk16_clear
+
+attach_place_idx                      = 0
+fire_bone                             = wpn_body
+fire_bone2                            = wpn_body
+fire_point                            = 0.000000,-0.006600,0.497201
+fire_point2                           = 0,0,0
+
+gl_hud_offset_pos                     = 0,0,0
+gl_hud_offset_rot                     = 0,0,0
+gl_hud_offset_pos_16x9                = 0,0,0
+gl_hud_offset_rot_16x9                = 0,0,0
+
+hands_position_16x9                   = -0.020000,0.000000,-0.171000
+hands_orientation_16x9                = 0,0,0
+hands_position                        = -0.020000,0.000000,-0.171000
+hands_orientation                     = 0,0,0
+item_position                         = 0,0,0
+item_orientation                      = 0,0,0
+item_visual                           = dynamics\weapons\wpn_rpk\wpn_rpk16_hud.ogf
+
+shell_bone                            = shell
+shell_point                           = 0,0.03,0.15
+
+zoom_hide_crosshair                   = true
+
+[wpn_rpk16_ac10632]:wpn_rpk16
+hud                                   = wpn_rpk16_ac10632_hud
+visual                                = dynamics\weapons\wpn_rpk\wpn_rpk16_ac10632.ogf
+
+scope_name                            = ac10632
+scope_respawn                         = wpn_rpk16
+
+scope_x                               = 86
+scope_y                               = -8
+
+[wpn_rpk16_ac10632_hud]:wpn_rpk16_hud
+aim_hud_offset_pos                    = -0.071500,0.001000,-0.07
+aim_hud_offset_rot                    = 0,0,0
+aim_hud_offset_pos_16x9               = -0.071500,0.001000,-0.07
+aim_hud_offset_rot_16x9               = 0,0,0
+
+item_visual                           = dynamics\weapons\wpn_rpk\wpn_rpk16_ac10632_hud.ogf
+
+[wpn_rpk16_acog]:wpn_rpk16
+hud                                   = wpn_rpk16_acog_hud
+visual                                = dynamics\weapons\wpn_rpk\wpn_rpk16_acog.ogf
+
+scope_name                            = acog
+scope_respawn                         = wpn_rpk16
+
+scope_x                               = 65
+scope_y                               = -9
+
+[wpn_rpk16_acog_hud]:wpn_rpk16_hud
+aim_hud_offset_pos                    = -0.066800,-0.011600,-0.070000
+aim_hud_offset_rot                    = 0,0,0
+aim_hud_offset_pos_16x9               = -0.066800,-0.011600,-0.070000
+aim_hud_offset_rot_16x9               = 0,0,0
+
+item_visual                           = dynamics\weapons\wpn_rpk\wpn_rpk16_acog_hud.ogf
+
+[wpn_rpk16_eot]:wpn_rpk16
+hud                                   = wpn_rpk16_eot_hud
+visual                                = dynamics\weapons\wpn_rpk\wpn_rpk16_eot.ogf
+
+scope_name                            = eot
+scope_respawn                         = wpn_rpk16
+
+scope_x                               = 88
+scope_y                               = -10
+
+[wpn_rpk16_eot_hud]:wpn_rpk16_hud
+aim_hud_offset_pos                    = -0.072000,-0.001000,-0.07
+aim_hud_offset_rot                    = 0,0,0
+aim_hud_offset_pos_16x9               = -0.072000,-0.001000,-0.07
+aim_hud_offset_rot_16x9               = 0,0,0
+
+item_visual                           = dynamics\weapons\wpn_rpk\wpn_rpk16_eot_hud.ogf
+
+[wpn_rpk16_microt1]:wpn_rpk16
+hud                                   = wpn_rpk16_microt1_hud
+visual                                = dynamics\weapons\wpn_rpk\wpn_rpk16_micro-t1.ogf
+
+scope_name                            = microt1
+scope_respawn                         = wpn_rpk16
+
+scope_x                               = 85
+scope_y                               = -10
+
+[wpn_rpk16_microt1_hud]:wpn_rpk16_hud
+aim_hud_offset_pos                    = -0.071500,-0.003000,-0.07
+aim_hud_offset_rot                    = 0,0,0
+aim_hud_offset_pos_16x9               = -0.071500,-0.003000,-0.07
+aim_hud_offset_rot_16x9               = 0,0,0
+
+item_visual                           = dynamics\weapons\wpn_rpk\wpn_rpk16_micro-t1_hud.ogf
+
+[wpn_rpk16_specter]:wpn_rpk16
+hud                                   = wpn_rpk16_specter_hud
+visual                                = dynamics\weapons\wpn_rpk\wpn_rpk16_specter.ogf
+
+scope_name                            = specter
+scope_respawn                         = wpn_rpk16
+
+scope_x                               = 69
+scope_y                               = -11
+
+[wpn_rpk16_specter_hud]:wpn_rpk16_hud
+aim_hud_offset_pos                    = -0.071500,-0.002600,-0.095000
+aim_hud_offset_rot                    = 0,0,0
+aim_hud_offset_pos_16x9               = -0.071500,-0.002600,-0.095000
+aim_hud_offset_rot_16x9               = 0,0,0
+
+item_visual                           = dynamics\weapons\wpn_rpk\wpn_rpk16_specter_hud.ogf

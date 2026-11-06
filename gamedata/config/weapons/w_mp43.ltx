@@ -41,7 +41,7 @@ inv_grid_x                            = 27
 inv_grid_y                            = 13
 
 fire_dispersion_base                  = 0.4
-control_inertion_factor               = 1.1f
+control_inertion_factor               = 1.0f
 cam_relax_speed                       = 8.0
 cam_relax_speed_ai                    = 360
 cam_dispersion                        = 4.5
@@ -91,16 +91,18 @@ strap_bone1                           = bip01_spine1
 strap_orientation                     = -15,-9,110
 strap_position                        = -0.26,-0.11,0.15
 
-snd_shoot                             = weapons\bm16\bm16_short_hole_stereo
-snd_shoot_duplet                      = weapons\bm16\bm16_hole_mono
+snd_shoot                             = weapons\mp43\mp43_shoot
+snd_shoot1                            = weapons\mp43\mp43_shoot
+snd_shoot_duplet                      = weapons\mp43\mp43_shoot
+
 snd_reload                            = weapons\mp43\mp43_reload_empty
 snd_reload_jammed                     = weapons\mp43\mp43_misfire
 snd_empty                             = weapons\bm16\toz66_empty
 snd_draw                              = weapons\assault_draw
-snd_holster                           = weapons\hide_db
+snd_holster                           = weapons\assault_holster
 snd_close                             = weapons\draw_silent
 snd_reload_1                          = weapons\mp43\mp43_reload
-snd_shoot1                            = weapons\bm16\bm16_short_hole_stereo1
+
 
 [wpn_mp43_hud]:hud_base
 aim_hud_offset_pos                    = -0.066225,0.036,-0.00135
@@ -195,7 +197,7 @@ inv_grid_x                            = 46
 inv_grid_y                            = 7
 
 fire_dispersion_base                  = 0.21
-control_inertion_factor               = 1.25f
+control_inertion_factor               = 1.0f
 cam_relax_speed                       = 12.0
 cam_relax_speed_ai                    = 360
 cam_dispersion                        = 4.2

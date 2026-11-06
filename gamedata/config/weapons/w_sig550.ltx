@@ -46,7 +46,7 @@ inv_grid_x                            = 31
 inv_grid_y                            = 25
 
 fire_dispersion_base                  = 0.15
-control_inertion_factor               = 1.35f
+control_inertion_factor               = 1.0f
 cam_relax_speed                       = 5.5
 cam_relax_speed_ai                    = 360
 cam_dispersion                        = 0.15
@@ -113,16 +113,18 @@ strap_bone1                           = bip01_spine1
 strap_orientation                     = -15,-9,110
 strap_position                        = -0.26,-0.11,0.25
 
-snd_silncer_shot                      = weapons\galil\silencer_galil_stereo
-snd_shoot                             = weapons\sig550\mono\sig552_muzzle_shoot_mono
+snd_silncer_shot                      = weapons\sig550\sil_shot
+snd_shoot                             = weapons\sig550\sig550_shoot
+snd_shoot1                            = weapons\sig550\sig550_shoot
+
 snd_reload                            = weapons\sig550\sig550_reload
 snd_reload_empty                      = weapons\sig550\sig550_reload_empty
 snd_reload_jammed                     = weapons\sig550\sig550_misfire
 snd_empty                             = weapons\sig550\sig550_empty, 0.5
+
 snd_draw                              = weapons\assault_draw
-snd_holster                           = weapons\hide_a
+snd_holster                           = weapons\assault_holster
 snd_close                             = weapons\draw_silent
-snd_shoot1                            = weapons\sig550\mono\sig552_muzzle_shoot_mono1
 
 silencer_light_color                  = 0.6,0.5,0.3
 silencer_light_range                  = 0.01
@@ -319,7 +321,7 @@ inv_grid_x                            = 45
 inv_grid_y                            = 20
 
 fire_dispersion_base                  = 0.08
-control_inertion_factor               = 1.3f
+control_inertion_factor               = 1.0f
 cam_dispersion                        = 0.4
 cam_dispersion_inc                    = 0.2
 fire_dispersion_condition_factor      = 2.5
@@ -347,6 +349,9 @@ scope_zoom_factor                     = 10
 scope_inertion_factor                 = 3
 scope_texture                         = wpn\wpn_crosshair_pso1
 
+snd_shoot                             = weapons\sig550\sig550_shot_sil
+snd_shoot1                            = weapons\sig550\sig550_shot_sil
+
 [wpn_sig550_sniper_hud]:wpn_sig550_hud
 aim_hud_offset_pos                    = -0.0698,0.0132,0.0159
 aim_hud_offset_rot                    = 0.0,0.0,0.0
@@ -363,8 +368,6 @@ fire_point                            = 0.000000,0.0315,0.6852
 item_visual                           = dynamics\weapons\wpn_sig550\wpn_sig550_sniper_hud.ogf
 
 [wpn_sig550_luckygun]:wpn_sig550
-ef_weapon_type                        = 8
-
 cost                                  = 100000
 
 ammo_elapsed                          = 60
@@ -384,7 +387,7 @@ inv_grid_x                            = 31
 inv_grid_y                            = 31
 
 fire_dispersion_base                  = 0.21
-control_inertion_factor               = 1.25f
+control_inertion_factor               = 1.0f
 cam_dispersion                        = 0.5
 cam_dispersion_inc                    = 0.3
 condition_shot_dec                    = 0.0008
@@ -471,6 +474,10 @@ item_visual                           = dynamics\weapons\wpn_sig550\wpn_sig550_l
 
 shell_bone                            = wpn_body
 shell_point                           = 0.078,0.07,-0.01
+
+snd_reload                            = weapons\hk416\hk416_reload
+snd_reload_empty                      = weapons\hk416\hk416_reload_empty
+snd_reload_misfire                    = weapons\hk416\hk416_misfire
 
 [wpn_sig550_luckygun_ac10632]:wpn_sig550_luckygun
 hud                                   = wpn_sig550_luckygun_ac10632_hud

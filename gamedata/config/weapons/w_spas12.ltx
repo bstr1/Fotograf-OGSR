@@ -43,7 +43,7 @@ inv_grid_x                            = 36
 inv_grid_y                            = 29
 
 fire_dispersion_base                  = 0.45
-control_inertion_factor               = 1.3f
+control_inertion_factor               = 1.0f
 cam_relax_speed                       = 6
 cam_relax_speed_ai                    = 120.75
 cam_dispersion                        = 2.0
@@ -93,18 +93,20 @@ strap_bone1                           = bip01_spine1
 strap_orientation                     = -15,-9,110
 strap_position                        = -0.26,-0.10,0.05
 
-snd_shoot                             = weapons\spas12\muzzle_spas12_stereo
-snd_shoot_duplet                      = weapons\spas12\muzzle_spas12_mono
-snd_reload                            = weapons\spas12\spas12_reload
-snd_reload_jammed                     = weapons\spas12\spas12_misfire
+snd_shoot							  = weapons\spas12\spas12_shoot
+snd_shoot_duplet					  = weapons\spas12\spas12_shoot
+
+snd_bore                              = weapons\generic_draw
+snd_draw                              = weapons\shotgun_draw
 snd_empty                             = weapons\spas12\spas12_empty, 0.5
-snd_draw                              = weapons\assault_draw
-snd_holster                           = weapons\hide_slmp
+snd_holster                           = weapons\shotgun_holster
+snd_add_cartridge                     = weapons\spas12\spas12_reload
+snd_add_cartridge_empty               = weapons\spas12\spas12_reload_empty
 snd_open_weapon                       = weapons\spas12\spas12_reload_start
 snd_close_weapon                      = weapons\spas12\spas12_reload_end
-snd_add_cartridge                     = weapons\spas12\spas12_reload
-snd_close                             = weapons\draw_silent
-snd_shoot1                            = weapons\spas12\muzzle_spas12_stereo1
+snd_reload                            = weapons\spas12\spas12_reload
+snd_reload_jammed                     = weapons\spas12\spas12_misfire
+snd_sprint_idle						  = weapons\sprint_assault
 
 [wpn_spas12_hud]:hud_base
 aim_hud_offset_pos                    = -0.060600,0.028300,-0.09
@@ -190,7 +192,7 @@ inv_grid_x                            = 36
 inv_grid_y                            = 18
 
 fire_dispersion_base                  = 0.28
-control_inertion_factor               = 1.2f
+control_inertion_factor               = 1.0f
 
 PDM_disp_base                         = 0.95
 PDM_disp_vel_factor                   = 1.8
@@ -208,6 +210,19 @@ scope_status                          = 0
 
 position                              = -0.024, -0.081, 0.02
 orientation                           = 0,-5,0
+
+snd_shoot							  = weapons\spas12\spas12_shoot
+snd_bore                              = weapons\generic_draw
+snd_draw                              = weapons\shotgun_draw
+snd_empty                             = weapons\spas12\spas12_empty, 0.5
+snd_holster                           = weapons\shotgun_holster
+snd_add_cartridge_empty               = weapons\spas12\spas12_reload_empty
+snd_open_weapon                       = weapons\spas12\spas12_reload_start
+snd_close_weapon                      = weapons\spas12\spas12_reload_end
+snd_reload_jammed                     = weapons\spas12\spas12_misfire
+snd_add_cartridge                     = weapons\m1014\m1014_reload
+snd_reload	 	                      = weapons\m1014\m1014_reload
+snd_sprint_idle						  = weapons\sprint_assault
 
 [wpn_spas12_nimble_hud]:wpn_spas12_hud
 aim_hud_offset_pos                    = -0.066100,0.028300,-0.09

@@ -1,0 +1,171 @@
+[wpn_vihr]:wpn_val
+cost                                  = 85000
+
+ammo_mag_size                         = 30
+
+flame_particles                       = weapons\new_effects\akmsl
+smoke_particles                       = weapons\generic_weapon_svu
+silencer_smoke_particles              = weapons\generic_weapon_svu
+
+inv_name                              = st_wpn_val_nimble
+description                           = st_wpn_val_nimble_descr
+
+inv_weight                            = 2.46
+inv_grid_height                       = 2
+inv_grid_width                        = 4
+inv_grid_x                            = 42
+inv_grid_y                            = 18
+
+fire_dispersion_base                  = 0.12
+control_inertion_factor               = 1.0f
+cam_relax_speed                       = 4
+cam_relax_speed_ai                    = 360
+cam_dispersion                        = 0.5
+cam_dispersion_inc                    = 0.25
+cam_max_angle                         = 50.0
+cam_max_angle_horz                    = 50.0
+cam_step_angle_horz                   = 1.3
+misfire_probability                   = 0.005
+condition_shot_dec                    = 0.00105
+
+PDM_disp_base                         = 0.7
+PDM_disp_vel_factor                   = 1.4
+PDM_disp_accel_factor                 = 1.4
+PDM_disp_crouch                       = 0.9
+PDM_disp_crouch_no_acc                = 0.9
+
+hit_power                             = 0.95, 0.95, 0.95, 0.95
+fire_distance                         = 500
+bullet_speed                          = 295
+rpm                                   = 900
+
+hud                                   = wpn_vihr_hud
+visual                                = dynamics\weapons\wpn_val\wpn_val_nimble.ogf
+
+silencer_status                       = 2
+silencer_name                         = sil_vihr
+scope_respawn_1p78                    = wpn_vihr_1p78
+scope_respawn_9x39scope               = wpn_vihr_9x39scope
+scope_respawn_ekp                     = wpn_vihr_ekp
+scope_respawn_okp                     = wpn_vihr_okp
+scope_respawn_rakurs                  = wpn_vihr_rakurs
+
+silencer_x                            = 177
+silencer_y                            = 2
+
+[wpn_vihr_hud]:wpn_val_hud
+aim_hud_offset_pos                    = -0.067500,0.028000,-0.09
+aim_hud_offset_rot                    = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9               = -0.067500,0.028000,-0.09
+aim_hud_offset_rot_16x9               = 0.000000,0.000000,0.000000
+
+anm_show                              = vihr_draw
+anm_hide                              = vihr_holster
+anm_idle                              = vihr_idle
+anm_idle_aim                          = vihr_idle_aim
+anm_idle_aim_moving                   = vihr_moving_aim
+anm_idle_moving                       = vihr_moving
+anm_idle_moving_crouch                = vihr_crouch
+anm_idle_moving_slow                  = vihr_moving_slow
+anm_idle_sprint                       = vihr_sprint
+anm_idle_sprint_end                   = vihr_sprint_end
+anm_idle_sprint_start                 = vihr_sprint_start
+anm_bore                              = vihr_idle_aim
+anm_shots                             = vihr_shoot, shoot
+anm_shoot_aim                         = vihr_shoot_aim, shoot
+anm_reload                            = vihr_reload, reload
+anm_reload_empty                      = vihr_reload_empty, reload_empty
+anm_reload_jammed                     = vihr_misfire, misfire
+anm_firemode                          = vihr_firemode
+anm_headlamp_on                       = vihr_flash
+anm_gasmask                           = vihr_clear
+
+fire_bone                             = wpn_body
+fire_bone2                            = wpn_body
+fire_point                            = 0.000000,-0.006400,0.177900
+fire_point2                           = 0,0,0
+
+item_visual                           = dynamics\weapons\wpn_val\wpn_val_nimble_hud.ogf
+
+[wpn_vihr_rakurs]:wpn_vihr
+hud                                   = wpn_vihr_rakurs_hud
+visual                                = dynamics\weapons\wpn_val\wpn_val_nimble_rakurs.ogf
+
+scope_respawn                         = wpn_vihr
+
+scope_x                               = 67
+scope_y                               = -11
+
+[wpn_vihr_rakurs_hud]:wpn_vihr_hud
+aim_hud_offset_pos                    = -0.068500,-0.007500,-0.07
+aim_hud_offset_pos_16x9               = -0.068500,-0.007500,-0.07
+
+item_visual                           = dynamics\weapons\wpn_val\wpn_val_nimble_rakurs_hud.ogf
+
+[wpn_vihr_ekp]:wpn_vihr
+hud                                   = wpn_vihr_ekp_hud
+visual                                = dynamics\weapons\wpn_val\wpn_val_nimble_ekp.ogf
+
+scope_name                            = ekp
+scope_respawn                         = wpn_vihr
+
+scope_x                               = 66
+scope_y                               = 6
+
+[wpn_vihr_ekp_hud]:wpn_vihr_hud
+aim_hud_offset_rot                    = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9               = -0.070000,-0.010000,0.000000
+aim_hud_offset_rot_16x9               = 0.000000,0.000000,0.000000
+
+item_visual                           = dynamics\weapons\wpn_val\wpn_val_nimble_ekp_hud.ogf
+
+[wpn_vihr_okp]:wpn_vihr
+hud                                   = wpn_vihr_okp_hud
+visual                                = dynamics\weapons\wpn_val\wpn_val_nimble_okp.ogf
+
+scope_name                            = okp
+scope_respawn                         = wpn_vihr
+
+scope_x                               = 76
+scope_y                               = 7
+
+[wpn_vihr_okp_hud]:wpn_vihr_hud
+aim_hud_offset_pos                    = -0.065000,0.011500,-0.07
+aim_hud_offset_rot                    = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9               = -0.065000,0.011500,-0.07
+aim_hud_offset_rot_16x9               = 0.000000,0.000000,0.000000
+
+item_visual                           = dynamics\weapons\wpn_val\wpn_val_nimble_okp_hud.ogf
+
+[wpn_vihr_1p78]:wpn_vihr
+hud                                   = wpn_vihr_1p78_hud
+visual                                = dynamics\weapons\wpn_val\wpn_val_nimble_1p78.ogf
+
+scope_name                            = 1p78
+scope_respawn                         = wpn_vihr
+
+scope_x                               = 60
+scope_y                               = -1
+
+[wpn_vihr_1p78_hud]:wpn_vihr_hud
+aim_hud_offset_pos                    = -0.0685,0.0025,-0.04
+aim_hud_offset_rot                    = 0.002,-0.003,0
+aim_hud_offset_pos_16x9               = -0.0685,0.0025,-0.04
+aim_hud_offset_rot_16x9               = 0.002,-0.003,0
+
+item_visual                           = dynamics\weapons\wpn_val\wpn_val_nimble_1p78_hud.ogf
+
+[wpn_vihr_9x39scope]:wpn_vihr
+hud                                   = wpn_vihr_9x39scope_hud
+
+scope_name                            = 9x39scope
+scope_respawn                         = wpn_vihr
+
+scope_x                               = 54
+scope_y                               = 6
+
+[wpn_vihr_9x39scope_hud]:wpn_vihr_hud
+aim_hud_offset_pos                    = -0.067500,0.035500,-0.09
+aim_hud_offset_rot                    = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9               = -0.067500,0.035500,-0.09
+aim_hud_offset_rot_16x9               = 0.000000,0.000000,0.000000

@@ -43,7 +43,7 @@ inv_grid_x                            = 25
 inv_grid_y                            = 6
 
 fire_dispersion_base                  = 0.47
-control_inertion_factor               = 1.1f
+control_inertion_factor               = 1.0f
 cam_relax_speed                       = 8.0
 cam_relax_speed_ai                    = 120.75
 cam_dispersion                        = 2.7
@@ -93,18 +93,23 @@ strap_bone1                           = bip01_spine1
 strap_orientation                     = -15,-9,110
 strap_position                        = -0.26,-0.10,0.05
 
-snd_shoot                             = weapons\mp133\mp133_shoot_muzzle_stereo
-snd_shoot_duplet                      = weapons\mp133\mp133_shoot_muzzle_stereo
-snd_reload                            = weapons\mp133\mp133_reload
-snd_reload_jammed                     = weapons\spas12\spas12_misfire
+snd_shoot							  = weapons\mp133\mp153_fire1
+snd_shoot1							  = weapons\mp133\mp153_fire1
+snd_shoot_duplet					  = weapons\mp133\mp153_fire1
+snd_breechblock            		      = $no_sound
+
+snd_bore                              = weapons\generic_draw
+snd_draw                              = weapons\shotgun_draw
 snd_empty                             = weapons\spas12\spas12_empty, 0.5
-snd_draw                              = weapons\assault_draw
-snd_holster                           = weapons\hide_slmp
-snd_open_weapon                       = weapons\mp133\mp133_reload_start
-snd_close_weapon                      = weapons\mp133\mp133_reload_end
+snd_holster                           = weapons\shotgun_holster
 snd_add_cartridge                     = weapons\mp133\mp133_reload
-snd_close                             = weapons\draw_silent
-snd_shoot1                            = weapons\mp133\mp133_shoot_muzzle_stereo1
+snd_add_cartridge_empty               = weapons\mp133\mp133_reload_empty
+snd_open_weapon                       = weapons\spas12\spas12_reload_start
+snd_close_weapon                      = weapons\spas12\spas12_reload_end
+snd_reload_misfire                    = weapons\spas12\spas12_misfire
+snd_reload                            = weapons\mp133\mp133_reload
+snd_reload_jammed                     = weapons\mp133\mp133_reload_empty
+snd_sprint_idle						  = weapons\sprint_assault
 
 [wpn_mp153_hud]:hud_base
 aim_hud_offset_pos                    = -0.060000,0.039100,-0.09

@@ -43,7 +43,7 @@ inv_grid_x                            = 42
 inv_grid_y                            = 30
 
 fire_dispersion_base                  = 0.020
-control_inertion_factor               = 1.4f
+control_inertion_factor               = 1.0f
 cam_relax_speed                       = 3
 cam_relax_speed_ai                    = 360
 cam_dispersion                        = 0.7
@@ -64,7 +64,7 @@ PDM_disp_crouch_no_acc                = 1.0
 hit_type                              = fire_wound
 fire_distance                         = 4000
 bullet_speed                          = 16500
-rpm                                   = 30
+rpm                                   = 60
 use_aim_bullet                        = false
 time_to_aim                           = 1.0
 fire_point                            = 0.00,0.12,0.69
@@ -102,19 +102,21 @@ strap_bone1                           = bip01_spine1
 strap_orientation                     = -15,-9,110
 strap_position                        = -0.26,-0.11,0.15
 
-snd_shoot                             = weapons\gauss\gauss_shoot
+snd_shoot                             = weapons\gauss\gauss_shot
+
 snd_reload                            = weapons\gauss\gauss_reload
-snd_reload_empty                      = weapons\gauss\gauss_reload
+snd_reload_empty                      = weapons\gauss\gauss_reload_empty
 snd_reload_jammed                     = weapons\gauss\gauss_misfire
 snd_empty                             = weapons\gauss\gauss_empty, 0.5
+
 snd_draw                              = weapons\assault_draw
-snd_holster                           = weapons\hide_gw
+snd_holster                           = weapons\sniper_holster
 snd_close                             = weapons\draw_silent
 
 [wpn_gauss_hud]:hud_base
-aim_hud_offset_pos                    = -0.003500,0.015100,-0.017800
+aim_hud_offset_pos                    = -0.0825001,0.0446,-0.0178
 aim_hud_offset_rot                    = 0,0,0
-aim_hud_offset_pos_16x9               = -0.003500,0.015100,-0.017800
+aim_hud_offset_pos_16x9               = -0.0825001,0.0446,-0.0178
 aim_hud_offset_rot_16x9               = 0,0,0
 
 anm_show                              = gauss_draw, gauss_draw

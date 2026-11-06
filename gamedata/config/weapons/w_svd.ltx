@@ -7,7 +7,7 @@ min_radius                            = 0
 max_radius                            = 1200
 
 ef_main_weapon_type                   = 3
-ef_weapon_type                        = 11
+ef_weapon_type                        = 8
 
 holder_range_modifier                 = 2.15
 holder_fov_modifier                   = 1.00
@@ -43,7 +43,7 @@ inv_grid_x                            = 25
 inv_grid_y                            = 7
 
 fire_dispersion_base                  = 0.05
-control_inertion_factor               = 1.35f
+control_inertion_factor               = 1.0f
 cam_relax_speed                       = 5
 cam_relax_speed_ai                    = 360
 cam_dispersion                        = 0.95
@@ -110,16 +110,18 @@ strap_bone1                           = bip01_spine1
 strap_orientation                     = -25,-189,65
 strap_position                        = -0.15,-0.15,0.45
 
-snd_silncer_shot                      = weapons\svd\svd_silencer_mono
-snd_shoot                             = weapons\svd\svd_muzzle_stereo
+snd_silncer_shot                      = weapons\svd\svd_shot_sil
+snd_shoot                             = weapons\svd\svd_shoot_new
+snd_shoot1                            = weapons\svd\svd_shoot_new
+
 snd_reload                            = weapons\svd\svd_reload
 snd_reload_empty                      = weapons\svd\svd_reload_empty
 snd_reload_jammed                     = weapons\svd\svd_misfire
 snd_empty                             = weapons\ak_empty, 0.7
+
 snd_draw                              = weapons\assault_draw
-snd_holster                           = weapons\hide_bcv
+snd_holster                           = weapons\sniper_holster
 snd_close                             = weapons\draw_silent
-snd_shoot1                            = weapons\svd\svd_muzzle_stereo1
 
 silencer_light_color                  = 0.6,0.5,0.3
 silencer_light_range                  = 0.01
@@ -307,7 +309,7 @@ inv_grid_x                            = 40
 inv_grid_y                            = 0
 
 fire_dispersion_base                  = 0.07
-control_inertion_factor               = 1.3f
+control_inertion_factor               = 1.0f
 cam_relax_speed                       = 21
 cam_relax_speed_ai                    = 360
 cam_dispersion                        = 2.1

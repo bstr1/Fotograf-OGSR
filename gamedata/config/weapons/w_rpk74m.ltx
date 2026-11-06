@@ -1,0 +1,282 @@
+[wpn_rpk74m]:weapon_immunities,weapon_probability,default_weapon_params
+GroupControlSection                   = spawn_group
+cform                                 = skeleton
+class                                 = WP_LR300
+min_radius                            = 0
+max_radius                            = 670
+
+ef_main_weapon_type                   = 2
+ef_weapon_type                        = 6
+
+holder_range_modifier                 = 1.0
+holder_fov_modifier                   = 1.0
+
+cost                                  = 25000
+
+ammo_elapsed                          = 60
+
+ammo_mag_size                         = 60
+fire_modes                            = 1, -1
+
+flame_particles                       = weapons\new_effects\akmsl
+smoke_particles                       = weapons\generic_weapon_machine_gun
+grenade_flame_particles               = weapons\generic_weapon_svu
+shell_particles                       = weapons\545x39
+silencer_smoke_particles              = weapons\generic_weapon_svu
+
+ammo_class                            = ammo_5.45x39_fmj, ammo_5.45x39_ap, ammo_5.45x39_izomorf
+grenade_class                         = ammo_vog-25
+launch_speed                          = 0
+
+hand_dependence                       = 1
+single_handed                         = 0
+slot                                  = 1
+animation_slot                        = 2
+
+inv_name                              = st_wpn_rpk74m
+inv_name_short                        = st_wpn_rpk74m
+description                           = st_wpn_rpk74m_descr
+
+inv_weight                            = 4.76
+icon_group                            = 2
+inv_grid_height                       = 2
+inv_grid_width                        = 6
+inv_grid_x                            = 40
+inv_grid_y                            = 8
+
+fire_dispersion_base                  = 0.19
+control_inertion_factor               = 1.0f
+cam_relax_speed                       = 12
+cam_relax_speed_ai                    = 120.75
+cam_dispersion                        = 0.8
+cam_dispersion_inc                    = 0.6
+cam_max_angle                         = 50.0
+cam_max_angle_horz                    = 50.0
+cam_step_angle_horz                   = 1.7
+fire_dispersion_condition_factor      = 10
+misfire_probability                   = 0.005
+condition_shot_dec                    = 0.00065
+
+PDM_disp_base                         = 1.3
+PDM_disp_vel_factor                   = 1.8
+PDM_disp_accel_factor                 = 1.8
+PDM_disp_crouch                       = 1.0
+PDM_disp_crouch_no_acc                = 1.0
+
+hit_power                             = 1.1, 1.1, 1.1, 1.1
+hit_type                              = fire_wound
+fire_distance                         = 650
+bullet_speed                          = 960
+rpm                                   = 650
+use_aim_bullet                        = false
+time_to_aim                           = 1.0
+fire_point                            = 0,0.218,0.656
+fire_point2                           = 0,0.161,0.583
+shell_bone                            = wpn_body
+shell_point                           = 0.07,0.2,0.466
+
+hud                                   = wpn_rpk74m_hud
+visual                                = dynamics\weapons\wpn_rpk\wpn_rpk74m.ogf
+light_color                           = 0.6,0.5,0.3
+light_range                           = 7.0
+light_var_color                       = 0.1
+light_var_range                       = 0.7
+light_time                            = 0.07
+light_disabled                        = false
+ph_mass                               = 5
+
+zoom_rotate_time                      = 6.5
+zoom_enabled                          = true
+
+scope_status                          = 2
+silencer_status                       = 2
+grenade_launcher_status               = 0
+scope_name                            = okp
+scope_names                           = okp, ekp, rakurs, 1p78, pso
+silencer_name                         = sil_tgp-a
+grenade_launcher_name                 = 
+scope_respawn_1p78                    = wpn_rpk74m_1p78
+scope_respawn_ekp                     = wpn_rpk74m_ekp
+scope_respawn_okp                     = wpn_rpk74m_okp
+scope_respawn_pso                     = wpn_rpk74m_pso
+scope_respawn_rakurs                  = wpn_rpk74m_rakurs
+
+scope_x                               = 23
+scope_y                               = 7
+silencer_x                            = 286
+silencer_y                            = 12
+grenade_launcher_x                    = 
+grenade_launcher_y                    = 
+
+position                              = -0.026,-0.175,0
+orientation                           = 0,0,0
+strap_bone0                           = bip01_spine2
+strap_bone1                           = bip01_spine1
+strap_orientation                     = -10,-5,10
+strap_position                        = -0.165,-0.38,0.15
+
+snd_silncer_shot					  = weapons\ak103\ak103_silencer_mono
+snd_shoot							  = weapons\rpk\rpk74m_shoot
+
+snd_reload                            = weapons\rpk\rpk74m_reload
+snd_reload_empty                      = weapons\rpk\rpk74m_reload_empty
+snd_reload_misfire                    = weapons\rpk\rpk74m_misfire
+
+snd_reload_jammed                     = weapons\rpk\rpk74m_misfire
+snd_empty                             = weapons\ak_empty, 0.5
+
+snd_draw                              = weapons\assault_draw
+snd_holster                           = weapons\assault_holster
+snd_close                             = weapons\draw_silent
+
+silencer_light_color                  = 0.6,0.5,0.3
+silencer_light_range                  = 0.01
+silencer_light_time                   = 0.2
+silencer_light_var_color              = 0.05
+silencer_light_var_range              = 0.5
+
+[wpn_rpk74m_hud]:hud_base
+aim_hud_offset_pos                    = -0.0635,0.0226,0
+aim_hud_offset_rot                    = 0.00075,0.00125,0
+aim_hud_offset_pos_16x9               = -0.0635,0.0226,0
+aim_hud_offset_rot_16x9               = 0.00075,0.00125,0
+
+anm_show                              = ak74_draw
+anm_hide                              = ak74_hide
+anm_idle                              = ak74_idle
+anm_idle_aim                          = ak74_idle_aim
+anm_idle_aim_moving                   = ak74_aim_walk
+anm_idle_moving                       = ak74_walk
+anm_idle_moving_crouch                = ak74_walk_slow_down
+anm_idle_moving_slow                  = ak74_walk_slow
+anm_idle_sprint                       = ak74_sprint
+anm_idle_sprint_end                   = ak74_sprint_end
+anm_idle_sprint_start                 = ak74_sprint_start
+anm_bore                              = ak74_idle_aim
+anm_shots                             = ak74_shoot, shoot
+anm_shoot_aim                         = ak74_aim_shoot, shoot
+anm_reload                            = rpk74m_reload, reload
+anm_reload_empty                      = rpk74m_reload_empty, reload_empty
+anm_reload_jammed                     = ak74_revival, revival
+anm_firemode                          = ak74_firemode
+anm_headlamp_on                       = ak74_flash
+anm_gasmask                           = ak74_clear
+
+attach_place_idx                      = 0
+fire_bone                             = wpn_body
+fire_bone2                            = wpn_body
+fire_point                            = 0.000000,-0.006600,0.470801
+fire_point2                           = 0,0,0
+
+gl_hud_offset_pos                     = 0,0,0
+gl_hud_offset_rot                     = 0,0,0
+gl_hud_offset_pos_16x9                = 0,0,0
+gl_hud_offset_rot_16x9                = 0,0,0
+
+hands_position_16x9                   = 0.004800,-0.009400,-0.024700
+hands_orientation_16x9                = 0,0,0
+hands_position                        = 0.004800,-0.009400,-0.024700
+hands_orientation                     = 0,0,0
+item_position                         = 0,0,0
+item_orientation                      = 0,0,0
+item_visual                           = dynamics\weapons\wpn_rpk\wpn_rpk74m_hud.ogf
+
+shell_bone                            = bullet
+shell_point                           = 0.07,0.025,0
+
+zoom_hide_crosshair                   = true
+
+[wpn_rpk74m_ekp]:wpn_rpk74m
+hud                                   = wpn_rpk74m_ekp_hud
+visual                                = dynamics\weapons\wpn_rpk\wpn_rpk74m_ekp.ogf
+
+scope_name                            = ekp
+scope_respawn                         = wpn_rpk74m
+
+scope_x                               = 61
+scope_y                               = 3
+
+[wpn_rpk74m_ekp_hud]:wpn_rpk74m_hud
+aim_hud_offset_pos                    = -0.0603,-0.0096,-0.0288
+aim_hud_offset_rot                    = 0,0,0
+aim_hud_offset_pos_16x9               = -0.0603,-0.0096,-0.0288
+aim_hud_offset_rot_16x9               = 0,0,0
+
+item_visual                           = dynamics\weapons\wpn_rpk\wpn_rpk74m_ekp_hud.ogf
+
+[wpn_rpk74m_okp]:wpn_rpk74m
+hud                                   = wpn_rpk74m_okp_hud
+visual                                = dynamics\weapons\wpn_rpk\wpn_rpk74m_okp.ogf
+
+scope_name                            = okp
+scope_respawn                         = wpn_rpk74m
+
+scope_x                               = 66
+scope_y                               = 5
+
+[wpn_rpk74m_okp_hud]:wpn_rpk74m_hud
+aim_hud_offset_pos                    = -0.055,0.0119,0.0042
+aim_hud_offset_rot                    = 0,0,0
+aim_hud_offset_pos_16x9               = -0.055,0.0119,0.0042
+aim_hud_offset_rot_16x9               = 0,0,0
+
+item_visual                           = dynamics\weapons\wpn_rpk\wpn_rpk74m_okp_hud.ogf
+
+[wpn_rpk74m_rakurs]:wpn_rpk74m
+hud                                   = wpn_rpk74m_rakurs_hud
+visual                                = dynamics\weapons\wpn_rpk\wpn_rpk74m_rakurs.ogf
+
+scope_name                            = rakurs
+scope_respawn                         = wpn_rpk74m
+
+scope_x                               = 65
+scope_y                               = -1
+
+[wpn_rpk74m_rakurs_hud]:wpn_rpk74m_hud
+aim_hud_offset_pos                    = -0.0615,-0.0064,-0.0344
+aim_hud_offset_rot                    = 0,0,0
+aim_hud_offset_pos_16x9               = -0.0615,-0.0064,-0.0344
+aim_hud_offset_rot_16x9               = 0,0,0
+
+item_visual                           = dynamics\weapons\wpn_rpk\wpn_rpk74m_rakurs_hud.ogf
+
+[wpn_rpk74m_1p78]:wpn_rpk74m
+hud                                   = wpn_rpk74m_1p78_hud
+visual                                = dynamics\weapons\wpn_rpk\wpn_rpk74m_1p78.ogf
+
+scope_name                            = 1p78
+scope_respawn                         = wpn_rpk74m
+
+scope_x                               = 51
+scope_y                               = -4
+
+[wpn_rpk74m_1p78_hud]:wpn_rpk74m_hud
+aim_hud_offset_pos                    = -0.0822001,0.0342,0.0024
+aim_hud_offset_rot                    = 0,0,0
+aim_hud_offset_pos_16x9               = -0.0822001,0.0342,0.0024
+aim_hud_offset_rot_16x9               = 0,0,0
+
+hands_position_16x9                   = 0.0203,-0.0284,-0.0247
+hands_orientation_16x9                = 0,0,0
+
+anm_shoot_aim                         = ak74_aim_shoot_scope, shoot
+
+item_visual                           = dynamics\weapons\wpn_rpk\wpn_rpk74m_1p78_hud.ogf
+
+[wpn_rpk74m_pso]:wpn_rpk74m
+hud                                   = wpn_rpk74m_pso_hud
+visual                                = dynamics\weapons\wpn_rpk\wpn_rpk74m_pso.ogf
+
+scope_name                            = pso
+scope_respawn                         = wpn_rpk74m
+
+scope_x                               = 31
+scope_y                               = 3
+
+[wpn_rpk74m_pso_hud]:wpn_rpk74m_hud
+aim_hud_offset_pos                    = -0.0488,0.0132,0.0024
+aim_hud_offset_rot                    = 0,0,0
+aim_hud_offset_pos_16x9               = -0.0488,0.0132,0.0024
+aim_hud_offset_rot_16x9               = 0,0,0
+
+anm_shoot_aim                         = ak74_aim_shoot_scope, shoot

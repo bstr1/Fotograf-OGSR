@@ -1,60 +1,60 @@
 
 ; IWP port bases (style of NLC OBT, assets from IWP GUNS)
 [weapon_immunities]:identity_immunities
-default_to_ruck				= false
-zoom_enabled				= true
-strap_bone0				= bip01_spine2
-strap_bone1				= bip01_spine1
-scope_x					= 0
-scope_y					= 0
-silencer_x				= 0
-silencer_y				= 0
-grenade_launcher_x			= 0
-grenade_launcher_y			= 0
-scope_status				= 0
-silencer_status				= 0
-grenade_launcher_status			= 0
-scope_zoom_factor			= 90
-ironsight_zoom_factor			= 80
-jump_aim_hud_offset_pos			= 0.0, 0.015, 0.01
-jump_aim_hud_offset_rot			= 0.0, 1.25, -1.5
-fall_aim_hud_offset_pos			= 0.0, 0.015, -0.01
-fall_aim_hud_offset_rot			= 0.0, -1.25, 1.5
-jump_aim_transition_time		= 0.6
+default_to_ruck				                     = false
+zoom_enabled				                     = true
+strap_bone0				                         = bip01_spine2
+strap_bone1				                         = bip01_spine1
+scope_x					                         = 0
+scope_y					                         = 0
+silencer_x				                         = 0
+silencer_y				                         = 0
+grenade_launcher_x			                     = 0
+grenade_launcher_y			                     = 0
+scope_status				                     = 0
+silencer_status				                     = 0
+grenade_launcher_status			                 = 0
+scope_zoom_factor			                     = 90
+ironsight_zoom_factor			                 = 80
+jump_aim_hud_offset_pos			                 = 0.0, 0.015, 0.01
+jump_aim_hud_offset_rot			                 = 0.0, 1.25, -1.5
+fall_aim_hud_offset_pos			                 = 0.0, 0.015, -0.01
+fall_aim_hud_offset_rot			                 = 0.0, -1.25, 1.5
+jump_aim_transition_time		                 = 0.6
 
 [hud_base]
-item_position				= 0,0,0
-item_orientation			= 0,0,0
-aim_hud_offset_pos			= 0,0,0
-aim_hud_offset_pos_16x9			= 0,0,0
-aim_hud_offset_rot			= 0,0,0
-aim_hud_offset_rot_16x9			= 0,0,0
-gl_hud_offset_pos			= 0,0,0
-gl_hud_offset_pos_16x9			= 0,0,0
-gl_hud_offset_rot			= 0,0,0
-gl_hud_offset_rot_16x9			= 0,0,0
-zoom_hide_crosshair			= true
-lock_time_end_anm_headlamp_on		= 0.5
-lock_time_end_anm_headlamp_on_g		= 0.5
-lock_time_end_anm_headlamp_on_w_gl	= 0.5
-lock_time_end_anm_headlamp_on_empty	= 0.5
-lock_time_end_anm_headlamp_on_jammed	= 0.5
-lock_time_end_anm_headlamp_on_0		= 0.5
-lock_time_end_anm_headlamp_on_1		= 0.5
-lock_time_end_anm_headlamp_on_2		= 0.5
-inertion_origin_offset			= 0.03
-inertion_zoom_origin_offset		= 0.02
+item_position				                     = 0,0,0
+item_orientation			                     = 0,0,0
+aim_hud_offset_pos			                     = 0,0,0
+aim_hud_offset_pos_16x9			                 = 0,0,0
+aim_hud_offset_rot			                     = 0,0,0
+aim_hud_offset_rot_16x9			                 = 0,0,0
+gl_hud_offset_pos			                     = 0,0,0
+gl_hud_offset_pos_16x9			                 = 0,0,0
+gl_hud_offset_rot			                     = 0,0,0
+gl_hud_offset_rot_16x9			                 = 0,0,0
+zoom_hide_crosshair			                     = true
+lock_time_end_anm_headlamp_on		             = 0.5
+lock_time_end_anm_headlamp_on_g		             = 0.5
+lock_time_end_anm_headlamp_on_w_gl	             = 0.5
+lock_time_end_anm_headlamp_on_empty	             = 0.5
+lock_time_end_anm_headlamp_on_jammed	         = 0.5
+lock_time_end_anm_headlamp_on_0		             = 0.5
+lock_time_end_anm_headlamp_on_1		             = 0.5
+lock_time_end_anm_headlamp_on_2		             = 0.5
+inertion_origin_offset			                 = 0.03
+inertion_zoom_origin_offset		                 = 0.02
 
 ; IWP separated hands (default actor hands, no outfit)
 [actor_hud]
-visual					= dynamics\weapons\wpn_hand\wpn_hand_no_outfit
-position				= -0.044000,-0.156000,0.100000
-orientation				= -0.500000,1.000000,-2.000000
-ancor_0					= lead_gun
-ancor_1					= l_hand
+visual					                         = dynamics\weapons\wpn_hand\wpn_hand_no_outfit
+position				                         = -0.044000,-0.156000,0.100000
+orientation				                         = -0.500000,1.000000,-2.000000
+ancor_0					                         = lead_gun
+ancor_1					                         = l_hand
 
 [actor_hud_05]:actor_hud
-visual					= dynamics\weapons\wpn_hand\wpn_hand_no_outfit
+visual					                         = dynamics\weapons\wpn_hand\wpn_hand_no_outfit
 
 
 [weapon_probability]
@@ -65,7 +65,7 @@ hit_probability_gd_master                        = 0.50
 
 
 [default_weapon_params]:identity_immunities
-control_inertion_factor                          = 1.0
+control_inertion_factor               			 = 1.0f
 default_to_ruck                                  = false
 description                                      = no_description
 hit_impulse                                      = 10

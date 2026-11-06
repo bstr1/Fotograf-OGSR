@@ -43,7 +43,7 @@ inv_grid_x                            = 25
 inv_grid_y                            = 9
 
 fire_dispersion_base                  = 0.26
-control_inertion_factor               = 1.25f
+control_inertion_factor               = 1.0f
 cam_relax_speed                       = 4.0
 cam_relax_speed_ai                    = 360
 cam_dispersion                        = 0.5
@@ -116,7 +116,7 @@ snd_reload_empty                      = weapons\sks\sks_reload_empty
 snd_reload_jammed                     = weapons\sks\sks_misfire
 snd_empty                             = weapons\ak_empty, 0.5
 snd_draw                              = weapons\assault_draw
-snd_holster                           = weapons\hide_acgc
+snd_holster                           = weapons\assault_holster
 snd_close                             = weapons\draw_silent
 snd_shoot1                            = weapons\sks\sks_muzzle_mono1
 
@@ -202,9 +202,10 @@ scope_x                               = 90
 scope_y                               = 10
 
 [wpn_sks_ekp_hud]:wpn_sks_hud
-aim_hud_offset_pos                    = -0.078000,-0.003000,-0.07
+aim_hud_offset_pos                    = -0.072,-0.0045,-0.07
+aim_hud_offset_pos_16x9               = -0.072,-0.0045,-0.07
+
 aim_hud_offset_rot                    = -0.005500,0.000000,0.000000
-aim_hud_offset_pos_16x9               = -0.078000,-0.003000,-0.07
 aim_hud_offset_rot_16x9               = -0.005500,0.000000,0.000000
 
 item_visual                           = dynamics\weapons\wpn_sks\wpn_sks_ekp_hud.ogf
@@ -238,10 +239,11 @@ scope_x                               = 95
 scope_y                               = 4
 
 [wpn_sks_rakurs_hud]:wpn_sks_hud
-aim_hud_offset_pos                    = -0.074500,-0.001500,-0.07
-aim_hud_offset_rot                    = -0.005500,0.000000,0.000000
-aim_hud_offset_pos_16x9               = -0.074500,-0.001500,-0.07
-aim_hud_offset_rot_16x9               = -0.005500,0.000000,0.000000
+aim_hud_offset_pos                    = -0.0715,0.0035,-0.07
+aim_hud_offset_pos_16x9               = -0.0715,0.0035,-0.07
+
+aim_hud_offset_rot                    = -0.0055,0,0
+aim_hud_offset_rot_16x9               = -0.0055,0,0
 
 item_visual                           = dynamics\weapons\wpn_sks\wpn_sks_rakurs_hud.ogf
 

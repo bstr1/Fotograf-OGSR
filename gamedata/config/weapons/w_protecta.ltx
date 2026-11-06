@@ -43,7 +43,7 @@ inv_grid_x                            = 26
 inv_grid_y                            = 19
 
 fire_dispersion_base                  = 0.3
-control_inertion_factor               = 1.2f
+control_inertion_factor               = 1.0f
 cam_relax_speed                       = 14
 cam_relax_speed_ai                    = 360
 cam_dispersion                        = 4.2
@@ -102,18 +102,21 @@ strap_bone1                           = bip01_spine1
 strap_orientation                     = -15,-9,110
 strap_position                        = -0.26,-0.15,0.15
 
-snd_shoot                             = weapons\protecta\protecta_shoot_muzzle_stereo
-snd_shoot_duplet                      = weapons\protecta\muzzle_protecta_mono
+snd_shoot                             = weapons\protecta\protecta_shoot
+snd_shoot1                            = weapons\protecta\protecta_shoot
+snd_shoot_duplet                      = weapons\protecta\protecta_shoot
+
 snd_reload                            = weapons\protecta\protecta_load
 snd_reload_jammed                     = weapons\protecta\protecta_misfire
 snd_empty                             = weapons\protecta\protecta_empty, 0.5
+
 snd_draw                              = weapons\assault_draw
-snd_holster                           = weapons\hide_slmp
+snd_holster                           = weapons\assault_holster
 snd_open_weapon                       = weapons\protecta\protecta_open
 snd_close_weapon                      = weapons\protecta\protecta_close
 snd_add_cartridge                     = weapons\protecta\protecta_load
 snd_close                             = weapons\draw_silent
-snd_shoot1                            = weapons\protecta\protecta_shoot_muzzle_stereo1
+
 
 [wpn_protecta_hud]:hud_base
 aim_hud_offset_pos                    = -0.0710001,0.0091,0
@@ -239,7 +242,7 @@ inv_grid_x                            = 31
 inv_grid_y                            = 16
 
 fire_dispersion_base                  = 0.27
-control_inertion_factor               = 1.30f
+control_inertion_factor               = 1.0f
 cam_relax_speed                       = 7
 cam_relax_speed_ai                    = 360
 cam_dispersion                        = 0.75
@@ -268,6 +271,26 @@ ph_mass                               = 5
 scope_status                          = 0
 
 position                              = -0.026, -0.141, -0.02
+
+snd_shoot                             = weapons\aa12\aa12_muzzle_mono3
+snd_shoot1                            = weapons\aa12\aa12_muzzle_mono3
+snd_shoot_duplet                      = weapons\aa12\aa12_muzzle_mono3
+
+snd_reload                            = weapons\aa12\aa12_reload
+snd_reload_empty                      = weapons\aa12\aa12_reload_empty
+snd_reload_misfire                    = weapons\aa12\aa12_misfire
+
+snd_reload_jammed                     = weapons\aa12\aa12_reload_empty
+snd_empty                             = weapons\aa12\aa12_empty, 0.5
+
+snd_draw                              = weapons\aa12\aa12_draw
+snd_holster                           = weapons\assault_holster
+
+snd_open_weapon                       = weapons\protecta\protecta_open
+snd_close_weapon                      = weapons\protecta\protecta_close
+
+snd_add_cartridge                     = weapons\draw_silent
+snd_close                             = weapons\draw_silent
 
 [wpn_protecta_nimble_hud]:wpn_protecta_hud
 aim_hud_offset_pos                    = -0.0637,0.0067,0

@@ -43,7 +43,7 @@ inv_grid_x                            = 36
 inv_grid_y                            = 22
 
 fire_dispersion_base                  = 0.001
-control_inertion_factor               = 1.5f
+control_inertion_factor               = 1.0f
 cam_relax_speed                       = 4
 cam_relax_speed_ai                    = 360
 cam_dispersion                        = 0.9
@@ -105,16 +105,22 @@ strap_bone1                           = bip01_spine1
 strap_orientation                     = -25,-189,65
 strap_position                        = -0.15,-0.15,0.45
 
-snd_silncer_shot                      = weapons\awm\awm_muzzle_mono
-snd_shoot                             = weapons\awm\awm_muzzle_mono
+snd_shoot						      = weapons\awm\awm_muzzle_mono
+snd_silncer_shot				      = weapons\awm\awm_muzzle_mono
+
+snd_bore                              = weapons\generic_draw
+snd_empty                             = weapons\ak_empty, 0.5
+snd_draw                              = weapons\sniper_draw
+snd_holster                           = weapons\sniper_holster
+
 snd_reload                            = weapons\awm\awm_reload
 snd_reload_empty                      = weapons\awm\awm_reload_empty
-snd_reload_jammed                     = weapons\awm\awm_misfire
-snd_empty                             = weapons\ak_empty, 0.5
-snd_draw                              = weapons\assault_draw
-snd_holster                           = weapons\hide_bcv
-snd_close                             = weapons\draw_silent
-snd_shoot1                            = weapons\awm\awm_muzzle_mono1
+
+snd_reload_misfire                    = weapons\awm\awm_misfire
+snd_sprint_idle			              = weapons\sprint_assault
+
+snd_breechblock                       = weapons\awm\awm_bolt
+snd_breechblock_last                  = $no_sound
 
 silencer_light_color                  = 0.6,0.5,0.3
 silencer_light_range                  = 0.01
