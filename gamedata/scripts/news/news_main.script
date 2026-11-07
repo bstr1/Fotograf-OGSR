@@ -639,7 +639,6 @@ function get_weapon_type(weapon)
 			id == "wpn_ak74u" or
 			id == "wpn_fn2000" or  		
 			id == "wpn_abakan" or
-                        id == "wpn_minifake" or
 			id == "wpn_ak12" or
 			id == "wpn_abakan_m2" or
                         id == "wpn_abakan" or

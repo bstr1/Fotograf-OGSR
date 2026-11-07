@@ -223,7 +223,6 @@
             <action>fotograf.spawn_levsha_decoder</action>
             <action>fotograf.spawn_bar_diggers1</action>
             <action>fotograf.spawn_bar_diggers2</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -321,7 +320,6 @@
         <phrase id="6">
             <text>levsha_one_dialog_6</text>
             <give_info>levsha_one_dialog_start</give_info>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -1113,7 +1111,6 @@
         <phrase id="4">
             <text>sahar_tn_dialog_4</text>
             <give_info>sbor_recepts_tn_start</give_info>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -1174,7 +1171,6 @@
             <give_info>story_12</give_info>
             <action>val_test.zombie_ruk_spawn</action>
             <action>fotograf.saharov_detector_dal</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -3384,7 +3380,6 @@
             <give_info>osvedom_one_dialog_start</give_info>
             <give_info>hunters_spawn</give_info>
             <action>fotograf.osvedom_aver_dal</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
