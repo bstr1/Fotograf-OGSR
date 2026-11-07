@@ -724,6 +724,73 @@ end
 function check_usable_item(obj)
 end
 
+-- завершаем варку/мутации
+-- может быть много результатов
+function af_transform_universal_end(params)
+	-- get_console():execute("load ~#I#:"..string.format(" af_transform_universal_end "))
+	-- если есть результаты
+	local count = 0
+	for k, v in pairs(params.result) do
+		count = count + 1
+	end
+	if count > 0 then
+		local anom_pos = vector():set(params.pos.x, params.pos.y, params.pos.z)
+		if db.actor:position():distance_to(anom_pos) < 15 then
+			level.add_pp_effector("teleport.ppe", 1524, false)
+		end
+		-- формируем строку с названиями компонентов
+		local from_komp = ""
+		for k,v in pairs(params.komp) do
+			if k then
+				from_komp = from_komp..translate(g_inv_name(k))..", "
+			end
+		end
+		-- отсекаем ", " в хвосте
+		from_komp = string_sub(from_komp, 1, -2)
+
+		-- спавним результат(v)
+		for k,v in pairs(params.result) do
+			local obj
+			-- спавн поднят на 10 метров, чтоб победить проваливание под текстуры
+			-- op2ogsr: некоторые арты в некторых местах нельзя поднимать так высоко
+			-- op2ogsr: а вообще, лучше оставить, как есть, иначе, в некоторых местах арты будут спавниться на крышах
+			-- if ai_sections[k] then
+				-- obj = amk.spawn_item(k, vector():set(params.pos.x, params.pos.y + 1, params.pos.z), params.gv, params.lv)
+			-- else
+				-- obj = amk.spawn_item(k, vector():set(params.pos.x, params.pos.y + 10, params.pos.z), params.gv, params.lv)
+			-- end
+			obj = amk.spawn_item(k, vector():set(params.pos.x, params.pos.y+1, params.pos.z), params.gv, params.lv)
+			other_spawn(obj, from_komp)
+			if archievements and params.udacha and string.find(k, "^af_") then
+				archievements.acv_count_event("acv_art", 100, "Сварщик")
+			end
+		end
+
+		-- sms2(translate("trans_finished_title").." из %c[255,255,0,0]"..from_komp)
+	end
+
+	-- даїм инфопорциі, если есть
+	if params.info_portion and db.actor:dont_has_info(params.info_portion) then
+		--get_console():execute("load ~#I#: params.info_portion: "..params.info_portion)
+		give_info(params.info_portion)
+		--[[if has_info(params.info_portion) then
+			get_console():execute("load ~#I#: params.info_portion: "..params.info_portion.." і+TL++=")
+		end]]
+	end
+
+	-- удаляем аномалии, если нужно и она не в исклічениях
+	-- код взят из amk_anoms.turn_off_all()
+	if params.remove_anomaly then
+		local sobj = alife():object(params.remove_anomaly_id)
+		if sobj and game_graph():valid_vertex_id(sobj.m_game_vertex_id) then
+			local map = alife():level_name(game_graph():vertex(sobj.m_game_vertex_id):level_id())
+			if not amk_anoms.check_exclusion(sobj:name(), map) then
+			    release(sobj)
+			end
+		end
+	end
+end
+
 --'*******************************************************************************
 --'   **   **   **   **   **    **   **   **      OUTFIT_HUD        **   **   **   **   **    **   **   **   **  
 --'*******************************************************************************

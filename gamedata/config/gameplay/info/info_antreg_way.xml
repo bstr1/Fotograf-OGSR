@@ -2,6 +2,8 @@
 <info_portion id="esc_trader_hello_played"></info_portion>
 <info_portion id="esc_trader_bye_played"></info_portion>
 
+<info_portion id="informator_buy_pda"></info_portion>
+
 <info_portion id="esc_btr_killed">
     <action>fotograf.enemy_soldaty</action>
 </info_portion>
@@ -959,11 +961,6 @@
 </info_portion>
 <info_portion id="brown_razgovor"></info_portion>
 <info_portion id="brown_pogovoril"></info_portion>
-
-<!-- money -->
-<info_portion id="delete_2">
-    <action>fotograf.money_2</action>
-</info_portion>
 
 <!-- maroder -->
 <info_portion id="maroder_enemy">
