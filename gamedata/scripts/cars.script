@@ -5,20 +5,20 @@ function kanistra_used()
 end
 
 function kanistra_have()
-    return new_dialog.item_much("amk_kanistra", 1) ~= false
+    return new_dialog.count_item("amk_kanistra", 1)
 end
 
 function kanistra_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("amk_kanistra", 1)
+    dialogs.relocate_item_section(first_speaker, "amk_kanistra", "out", 1)
     dialogs.relocate_item_section(second_speaker, "key_car2", "in", 1)
 end
 
 function ballon_have()
-    return new_dialog.item_much("amk_ballon", 1) ~= false
+    return new_dialog.count_item("amk_ballon", 1)
 end
 
 function ballon_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("amk_ballon", 1)
+    dialogs.relocate_item_section(first_speaker, "amk_ballon", "out", 1)
     dialogs.relocate_item_section(second_speaker, "key_car3", "in", 1)
 end
 
@@ -47,11 +47,11 @@ function key_car3_used()
 end
 
 function instrument_case_have()
-    return new_dialog.item_much("instrument_case", 1) ~= false
+    return new_dialog.count_item("instrument_case", 1)
 end
 
 function instrument_case_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("instrument_case", 1)
+    dialogs.relocate_item_section(first_speaker, "instrument_case", "out", 1)
     dialogs.relocate_item_section(second_speaker, "key_car1", "in", 1)
 end
 
@@ -123,7 +123,9 @@ function del_dezertir_car()
         end
     end
 end
-
+function del_dezertir_car_delete()
+    dsh.timeout(5, del_dezertir_car)
+end
 ---------------------------------voronin_car-----------------------------------
 
 function voronin_car_spawn(position, total)

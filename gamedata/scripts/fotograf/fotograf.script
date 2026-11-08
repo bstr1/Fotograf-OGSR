@@ -1,108 +1,121 @@
+local function on_take(obj, sobj)
+    if obj:section() == "af_perdonit" and db.actor:has_info("perdonit_enable") and not db.actor:has_info("perdonit_taken") then
+
+        db.actor:give_info_portion("perdonit_taken")
+
+        alife():create("m_controller_senator", vector():set(340.53, -6.32, -14.55), 1474965, 790)
+        alife():create("m_controller_senator1", vector():set(335.71, -2.08, 10.23), 1467098, 790)
+        alife():create("m_controller_senator2", vector():set(291.31, -3.62, -36.31), 1385034, 790)
+        level.add_pp_effector("black.ppe", 2006, false)
+        local snd_obj = xr_sound.get_safe_sound_object([[zwuk\controller_evil]])
+        snd_obj:play(db.actor, 0, sound_object.s2d)
+    end
+end
+
 function start_fotograf()
-    local actor = db.actor
-    if actor then
+    if db.actor then
 
         if (has_alife_info("plichko_dead") or has_alife_info("drozdov_dead") or has_alife_info("dolg_mask6_dead")) and
             not has_alife_info("dolg_ataka_have") and not has_alife_info("dolg_ataka_proval") then
-            actor:give_info_portion("dolg_ataka_proval")
+            db.actor:give_info_portion("dolg_ataka_proval")
 
         elseif has_alife_info("dolg_ataka_finish") and has_alife_info("blowout_end") and
             not has_alife_info("blowout_end_dyshlo") then
-            actor:give_info_portion("blowout_end_dyshlo")
+            db.actor:give_info_portion("blowout_end_dyshlo")
 
         elseif has_alife_info("maroder_prom_01_dead") and has_alife_info("maroder_prom_02_dead") and
             has_alife_info("maroder_prom_03_dead") and not has_alife_info("actor_maroderubit") then
-            actor:give_info_portion("actor_maroderubit")
+            db.actor:give_info_portion("actor_maroderubit")
 
         elseif has_alife_info("brown_seven_dialog_done") and has_alife_info("voronin_dyshlo_dialog_done") and
             not has_alife_info("brown_dyshlo_timer") then
-            actor:give_info_portion("brown_dyshlo_timer")
+            db.actor:give_info_portion("brown_dyshlo_timer")
 
         elseif has_alife_info("naem_bar_01_dead") and has_alife_info("naem_bar_02_dead") and
             has_alife_info("naem_bar_03_dead") and not has_alife_info("actor_naemubit") then
-            actor:give_info_portion("actor_naemubit")
+            db.actor:give_info_portion("actor_naemubit")
 
         elseif has_alife_info("naem_mg_01_dead") and has_alife_info("naem_mg_02_dead") and
             has_alife_info("naem_mg_03_dead") and not has_alife_info("actor_namubit") then
-            actor:give_info_portion("actor_namubit")
+            db.actor:give_info_portion("actor_namubit")
 
         elseif has_alife_info("naem_les_01_dead") and has_alife_info("naem_les_02_dead") and
             has_alife_info("naem_les_03_dead") and has_alife_info("naem_les_04_dead") and
             not has_alife_info("actor_naemdead") then
-            actor:give_info_portion("actor_naemdead")
+            db.actor:give_info_portion("actor_naemdead")
 
         elseif has_alife_info("mark_dead") and has_alife_info("mdead") and not has_alife_info("actor_markubit") then
-            actor:give_info_portion("actor_markubit")
+            db.actor:give_info_portion("actor_markubit")
 
         elseif (has_alife_info("bar_ataka_01_dead") or has_alife_info("bar_ataka_02_dead") or
             has_alife_info("bar_ataka_03_dead") or has_alife_info("bar_ataka_04_dead") or
             has_alife_info("bar_ataka_05_dead")) and has_alife_info("levsha_start_dialog_start") and
             not has_alife_info("levsha_bar_proval") then
-            actor:give_info_portion("levsha_bar_proval")
+            db.actor:give_info_portion("levsha_bar_proval")
 
         elseif (has_alife_info("lukash_ubitt") or has_alife_info("max_ubitt") or has_alife_info("skryaga_ubitt") or
             has_alife_info("shurup_ubitt")) and has_alife_info("lukash_first_dialog_done") and
             not has_alife_info("prom_desant_proval") then
-            actor:give_info_portion("prom_desant_proval")
+            db.actor:give_info_portion("prom_desant_proval")
 
         elseif (has_alife_info("dezertir_oblom") or has_alife_info("edik_dead")) and has_alife_info("edik_need_help") and
             not has_alife_info("edik_proval") then
-            actor:give_info_portion("edik_proval")
+            db.actor:give_info_portion("edik_proval")
 
         elseif has_alife_info("foto1_sdelal") and has_alife_info("foto2_sdelal") and
             not has_alife_info("brown_two_dialog_have") then
-            actor:give_info_portion("brown_two_dialog_have")
+            db.actor:give_info_portion("brown_two_dialog_have")
 
         elseif has_alife_info("brown_two_dialog_start") and
             (has_alife_info("soldaty_enemy") or has_alife_info("brown_foto_proval")) and
             not has_alife_info("brown_total_proval") then
-            actor:give_info_portion("brown_total_proval")
+            db.actor:give_info_portion("brown_total_proval")
 
         elseif has_alife_info("uber_ataka_start") and
             (has_alife_info("soldaty_enemy") or has_alife_info("polischuk_dead")) and not has_alife_info("uber_proval") then
-            actor:give_info_portion("uber_proval")
+            db.actor:give_info_portion("uber_proval")
 
         elseif (has_alife_info("agent_prom_see") or has_alife_info("agent_prom_hit") or
             has_alife_info("agent_prom_ohr1_hit") or has_alife_info("agent_prom_ohr2_hit") or
             has_alife_info("agent_prom_ohr3_hit") or has_alife_info("agent_prom_dead")) and
             not has_alife_info("agent_prom_uhodit") and not has_alife_info("mousetrap_proval") then
-            actor:give_info_portion("mousetrap_proval")
+            db.actor:give_info_portion("mousetrap_proval")
 
         elseif (has_alife_info("agent_aver_see") or has_alife_info("agent_aver_hit") or
             has_alife_info("agent_aver_ohr1_hit") or has_alife_info("agent_aver_ohr2_hit") or
             has_alife_info("agent_aver_ohr3_hit") or has_alife_info("agent_aver_dead")) and
             not has_alife_info("agent_aver_uhodit") and not has_alife_info("mousetrap_proval") then
-            actor:give_info_portion("mousetrap_proval")
+            db.actor:give_info_portion("mousetrap_proval")
 
         elseif (has_alife_info("genrih_dead") or has_alife_info("yurgen_dead") or has_alife_info("jagger_dead") or
             has_alife_info("mamasha_dead") or has_alife_info("uchen_mg1_dead") or has_alife_info("uchen_mg2_dead") or
             has_alife_info("uchen_mg3_dead") or has_alife_info("usa_enemy")) and has_alife_info("mg_vyhod_start") and
             not has_alife_info("mg_vyhod_proval") then
-            actor:give_info_portion("mg_vyhod_proval")
+            db.actor:give_info_portion("mg_vyhod_proval")
 
         elseif has_alife_info("genrih_del") and has_alife_info("yurgen_del") and has_alife_info("jagger_del") and
             has_alife_info("mamasha_del") and has_alife_info("uchen_mg1_del") and has_alife_info("uchen_mg2_del") and
             has_alife_info("uchen_mg3_del") and has_alife_info("mg_vyhod_start") and
             not has_alife_info("german_spasenie_gotovo") then
-            actor:give_info_portion("german_spasenie_gotovo")
+            db.actor:give_info_portion("german_spasenie_gotovo")
 
         elseif has_alife_info("del_osvedom") and has_alife_info("smith_two_dialog_done") and
             not has_alife_info("osvedom_check_time") then
-            actor:give_info_portion("osvedom_check_time")
+            db.actor:give_info_portion("osvedom_check_time")
 
         elseif (has_alife_info("uchen_enemy") or has_alife_info("soldaty_enemy") or has_alife_info("ploymar_enemy")) and
             not has_alife_info("shema_proval") then
-            actor:give_info_portion("shema_proval")
+            db.actor:give_info_portion("shema_proval")
 
         elseif has_alife_info("laba_x16_have") and has_alife_info("laba_dyshlo_have") and
             has_alife_info("laba_x10_have") and has_alife_info("laba_x18_have") and has_alife_info("trup_x18_have") and
             has_alife_info("codedoor_x18_have") and not has_alife_info("brown_six_dialog_have") then
-            actor:give_info_portion("brown_six_dialog_have")
+            db.actor:give_info_portion("brown_six_dialog_have")
 
         elseif (has_alife_info("usa_enemy") or has_alife_info("brown_tri_dead") or has_alife_info("brown_bunker_dead") or
             has_alife_info("brown_four_dead") or has_alife_info("brown_five_dead")) and
             has_alife_info("brown_x10_dialog_start") and not has_alife_info("brown_accompaniment_proval") then
-            actor:give_info_portion("brown_accompaniment_proval")
+            db.actor:give_info_portion("brown_accompaniment_proval")
         end
 
         if has_alife_info("sbor_recepts_ks_start") and not has_alife_info("recept_one_est") then
@@ -116,7 +129,7 @@ function start_fotograf()
                         if has_alife_info("ex_transform_rec_ks_absolut_01") or
                             has_alife_info("ex_transform_rec_ks_absolut_02") or
                             has_alife_info("ex_transform_rec_ks_absolut_03") then
-                            actor:give_info_portion("recept_one_est")
+                            db.actor:give_info_portion("recept_one_est")
                         end
                     end
                 end
@@ -129,7 +142,7 @@ function start_fotograf()
                 if has_alife_info("ex_transform_rec_ks_talisman_04") or
                     has_alife_info("ex_transform_rec_ks_talisman_05") or
                     has_alife_info("ex_transform_rec_ks_talisman_06") then
-                    actor:give_info_portion("recept_two_est")
+                    db.actor:give_info_portion("recept_two_est")
                 end
             end
         end
@@ -139,7 +152,7 @@ function start_fotograf()
                 has_alife_info("ex_transform_rec_ks_obereg_03") then
                 if has_alife_info("ex_transform_rec_ks_obereg_04") or has_alife_info("ex_transform_rec_ks_obereg_05") or
                     has_alife_info("ex_transform_rec_ks_obereg_06") then
-                    actor:give_info_portion("recept_tri_est")
+                    db.actor:give_info_portion("recept_tri_est")
                 end
             end
         end
@@ -148,97 +161,95 @@ function start_fotograf()
 end
 
 function checking_fotograf_item(obj)
-    local actor = db.actor
-    local sect = obj:section()
-    if actor and sect then
-        if sect == "wpn_coltm45a1" and not has_alife_info("smith_razgovor_start") then
-            actor:give_info_portion("smith_razgovor_start")
-        elseif level.name() == "predbannik" and sect == "wpn_foto" and not has_alife_info("fotik_nashel") then
-            actor:give_info_portion("fotik_nashel")
-        elseif sect == "maloy_pda" and not has_alife_info("maloy_pda_est") then
-            actor:give_info_portion("maloy_pda_est")
-        elseif sect == "money2" then
-            actor:give_info_portion("delete_2")
-            amk.drop_item(actor, obj)
+    if db.actor and obj:section() then
+        if obj:section() == "wpn_coltm45a1" and not has_alife_info("smith_razgovor_start") then
+            db.actor:give_info_portion("smith_razgovor_start")
+        elseif level.name() == "predbannik" and obj:section() == "wpn_foto" and not has_alife_info("fotik_nashel") then
+            db.actor:give_info_portion("fotik_nashel")
+        elseif obj:section() == "maloy_pda" and not has_alife_info("maloy_pda_est") then
+            db.actor:give_info_portion("maloy_pda_est")
+        elseif obj:section() == "money2" then
+            db.actor:give_info_portion("delete_2")
+            amk.drop_item(db.actor, obj)
             amk.remove_item(obj)
-        elseif sect == "coder_x18" then
-            actor:give_info_portion("trup_x18_have")
-            amk.drop_item(actor, obj)
+        elseif obj:section() == "coder_x18" then
+            db.actor:give_info_portion("trup_x18_have")
+            amk.drop_item(db.actor, obj)
             amk.remove_item(obj)
-        elseif sect == "wpn_minifake" then
-            amk.drop_item(actor, obj)
+        elseif obj:section() == "wpn_minifake" then
+            amk.drop_item(db.actor, obj)
             amk.remove_item(obj)
 
-        elseif (sect == "wpn_vintorez" or sect == "wpn_vintorez_nimble") and not has_alife_info("about_vintorez") then
-            actor:give_info_portion("about_vintorez")
+        elseif (obj:section() == "wpn_vintorez" or obj:section() == "wpn_vintorez_nimble") and not has_alife_info("about_vintorez") then
+            db.actor:give_info_portion("about_vintorez")
 
-        elseif sect == "razuvaev_pda" and not has_alife_info("razuvaev_pda_est") then
-            actor:give_info_portion("razuvaev_pda_est")
-        elseif sect == "codes_pda" and not has_alife_info("codes_pda_est") then
-            actor:give_info_portion("codes_pda_est")
-        elseif sect == "karta_peschery" and not has_alife_info("karta_peschery") then
-            actor:give_info_portion("karta_peschery")
+        elseif obj:section() == "razuvaev_pda" and not has_alife_info("razuvaev_pda_est") then
+            db.actor:give_info_portion("razuvaev_pda_est")
+        elseif obj:section() == "codes_pda" and not has_alife_info("codes_pda_est") then
+            db.actor:give_info_portion("codes_pda_est")
+        elseif obj:section() == "karta_peschery" and not has_alife_info("karta_peschery") then
+            db.actor:give_info_portion("karta_peschery")
 
-        elseif sect == "manuscript" and not has_alife_info("start_manuscript") then
-            actor:give_info_portion("start_manuscript")
+        elseif obj:section() == "manuscript" and not has_alife_info("start_manuscript") then
+            db.actor:give_info_portion("start_manuscript")
 
-        elseif sect == "pda_pmc_aver" and not has_alife_info("pda_pmc_aver_est") then
-            actor:give_info_portion("pda_pmc_aver_est")
+        elseif obj:section() == "pda_pmc_aver" and not has_alife_info("pda_pmc_aver_est") then
+            db.actor:give_info_portion("pda_pmc_aver_est")
 
-        elseif sect == "ks_absolut_11" and not has_alife_info("test_kat_est") then
-            actor:give_info_portion("test_kat_est")
-        elseif sect == "mutant_flesh_eye" and not has_alife_info("flesh_story") then
-            actor:give_info_portion("flesh_story")
-        elseif sect == "mutant_boar_leg" and not has_alife_info("boar_story") then
-            actor:give_info_portion("boar_story")
-        elseif sect == "mutant_dog_tail" and not has_alife_info("dog_story") then
-            actor:give_info_portion("dog_story")
-        elseif sect == "mutant_psevdodog_tail" and not has_alife_info("psevdodog_story") then
-            actor:give_info_portion("psevdodog_story")
-        elseif sect == "mutant_krovosos_jaw" and not has_alife_info("krovosos_story") then
-            actor:give_info_portion("krovosos_story")
-        elseif sect == "mutant_burer_hand" and not has_alife_info("burer_story") then
-            actor:give_info_portion("burer_story")
-        elseif sect == "mutant_zombie_hand" and not has_alife_info("zombie_story") then
-            actor:give_info_portion("zombie_story")
-        elseif sect == "mutant_snork_leg" and not has_alife_info("snork_story") then
-            actor:give_info_portion("snork_story")
-        elseif sect == "vypolzen_hrebet" and not has_alife_info("vypolzen_story") then
-            actor:give_info_portion("vypolzen_story")
-        elseif sect == "vypolzen_hribet" and not has_alife_info("vypolzin_story") then
-            actor:give_info_portion("vypolzin_story")
-        elseif sect == "izlom_hand" and not has_alife_info("izlom_story") then
-            actor:give_info_portion("izlom_story")
-        elseif sect == "spider_leg" and not has_alife_info("spider_story") then
-            actor:give_info_portion("spider_story")
-        elseif sect == "kostolom_hand" and not has_alife_info("kostolom_story") then
-            actor:give_info_portion("kostolom_story")
-        elseif sect == "tarakan_lich1" and not has_alife_info("tarakan1_story") then
-            actor:give_info_portion("tarakan1_story")
-        elseif sect == "tarakan_lich2" and not has_alife_info("tarakan2_story") then
-            actor:give_info_portion("tarakan2_story")
-        elseif sect == "deathclaw_rog" and not has_alife_info("deathclaw_story") then
-            actor:give_info_portion("deathclaw_story")
-        elseif sect == "mutant_face_tushkano" and not has_alife_info("tushkano_story") then
-            actor:give_info_portion("tushkano_story")
-        elseif sect == "mutant_hand_kontroler" and not has_alife_info("kontroler_story") then
-            actor:give_info_portion("kontroler_story")
-        elseif sect == "mutant_poltergeist_glas" and not has_alife_info("poltergeist_story") then
-            actor:give_info_portion("poltergeist_story")
-        elseif sect == "mutant_psevdogigant_hand" and not has_alife_info("psevdogigant_story") then
-            actor:give_info_portion("psevdogigant_story")
-        elseif sect == "mutant_tail_cat" and not has_alife_info("cat_story") then
-            actor:give_info_portion("cat_story")
-        elseif sect == "mutant_chimera_kogot" and not has_alife_info("chimera_story") then
-            actor:give_info_portion("chimera_story")
-        elseif sect == "el_chimera_kogot" and not has_alife_info("el_chimera_story") then
-            actor:give_info_portion("el_chimera_story")
-        elseif sect == "fire_chimera_kogot" and not has_alife_info("fire_chimera_story") then
-            actor:give_info_portion("fire_chimera_story")
-        elseif sect == "mutant_crow" and not has_alife_info("crow_story") then
-            actor:give_info_portion("crow_story")
-        elseif sect == "mutant_mouse" and not has_alife_info("mouse_story") then
-            actor:give_info_portion("mouse_story")
+        elseif obj:section() == "ks_absolut_11" and not has_alife_info("test_kat_est") then
+            db.actor:give_info_portion("test_kat_est")
+        elseif obj:section() == "mutant_flesh_eye" and not has_alife_info("flesh_story") then
+            db.actor:give_info_portion("flesh_story")
+        elseif obj:section() == "mutant_boar_leg" and not has_alife_info("boar_story") then
+            db.actor:give_info_portion("boar_story")
+        elseif obj:section() == "mutant_dog_tail" and not has_alife_info("dog_story") then
+            db.actor:give_info_portion("dog_story")
+        elseif obj:section() == "mutant_psevdodog_tail" and not has_alife_info("psevdodog_story") then
+            db.actor:give_info_portion("psevdodog_story")
+        elseif obj:section() == "mutant_krovosos_jaw" and not has_alife_info("krovosos_story") then
+            db.actor:give_info_portion("krovosos_story")
+        elseif obj:section() == "mutant_burer_hand" and not has_alife_info("burer_story") then
+            db.actor:give_info_portion("burer_story")
+        elseif obj:section() == "mutant_zombie_hand" and not has_alife_info("zombie_story") then
+            db.actor:give_info_portion("zombie_story")
+        elseif obj:section() == "mutant_snork_leg" and not has_alife_info("snork_story") then
+            db.actor:give_info_portion("snork_story")
+        elseif obj:section() == "vypolzen_hrebet" and not has_alife_info("vypolzen_story") then
+            db.actor:give_info_portion("vypolzen_story")
+        elseif obj:section() == "vypolzen_hribet" and not has_alife_info("vypolzin_story") then
+            db.actor:give_info_portion("vypolzin_story")
+        elseif obj:section() == "izlom_hand" and not has_alife_info("izlom_story") then
+            db.actor:give_info_portion("izlom_story")
+        elseif obj:section() == "spider_leg" and not has_alife_info("spider_story") then
+            db.actor:give_info_portion("spider_story")
+        elseif obj:section() == "kostolom_hand" and not has_alife_info("kostolom_story") then
+            db.actor:give_info_portion("kostolom_story")
+        elseif obj:section() == "tarakan_lich1" and not has_alife_info("tarakan1_story") then
+            db.actor:give_info_portion("tarakan1_story")
+        elseif obj:section() == "tarakan_lich2" and not has_alife_info("tarakan2_story") then
+            db.actor:give_info_portion("tarakan2_story")
+        elseif obj:section() == "deathclaw_rog" and not has_alife_info("deathclaw_story") then
+            db.actor:give_info_portion("deathclaw_story")
+        elseif obj:section() == "mutant_face_tushkano" and not has_alife_info("tushkano_story") then
+            db.actor:give_info_portion("tushkano_story")
+        elseif obj:section() == "mutant_hand_kontroler" and not has_alife_info("kontroler_story") then
+            db.actor:give_info_portion("kontroler_story")
+        elseif obj:section() == "mutant_poltergeist_glas" and not has_alife_info("poltergeist_story") then
+            db.actor:give_info_portion("poltergeist_story")
+        elseif obj:section() == "mutant_psevdogigant_hand" and not has_alife_info("psevdogigant_story") then
+            db.actor:give_info_portion("psevdogigant_story")
+        elseif obj:section() == "mutant_tail_cat" and not has_alife_info("cat_story") then
+            db.actor:give_info_portion("cat_story")
+        elseif obj:section() == "mutant_chimera_kogot" and not has_alife_info("chimera_story") then
+            db.actor:give_info_portion("chimera_story")
+        elseif obj:section() == "el_chimera_kogot" and not has_alife_info("el_chimera_story") then
+            db.actor:give_info_portion("el_chimera_story")
+        elseif obj:section() == "fire_chimera_kogot" and not has_alife_info("fire_chimera_story") then
+            db.actor:give_info_portion("fire_chimera_story")
+        elseif obj:section() == "mutant_crow" and not has_alife_info("crow_story") then
+            db.actor:give_info_portion("crow_story")
+        elseif obj:section() == "mutant_mouse" and not has_alife_info("mouse_story") then
+            db.actor:give_info_portion("mouse_story")
         end
     end
 end
@@ -328,49 +339,19 @@ function rewrite_restrictor(sobj, custom, radius)
     sobj:STATE_Read(packet, packet:w_tell() - packet:r_tell())
 end
 
----------------------------delete_spawn_object------------------------------
 
 -- Универсальная рабочая функция удаления предмета из инвентаря
 function delete_object(section, obj)
-    local sim = alife()
     if not obj then
         obj = db.actor
     end
     local item = obj:object(section)
     local id = item and (item:id() or item.id)
-    local sobj = id and sim:object(id)
+    local sobj = id and alife():object(id)
     if sobj then
-        sim:release(sobj, true)
+        alife():release(sobj, true)
     end
 end
-
--- Сама функция удаления конкретного предмета
-function delete_fotik1()
-    delete_object("wpn_foto")
-end
-
--- Функция спавна предмета в инвентарь
-function spawn_fotik1()
-    local actor = db.actor
-    alife():create("wpn_foto", actor:position(), actor:level_vertex_id(), actor:game_vertex_id(), actor:id())
-end
-
--- Удаление безхозного оружия
-function del_minifake()
-    local sim = alife()
-    local sobj, sect
-    for a = 1, 65534 do
-        sobj = sim:object(a)
-        sect = sobj and sobj:section_name()
-        if sect and sect == "wpn_minifake" then
-            if sobj.parent_id and sobj.parent_id == 65535 then
-                sim:release(sobj)
-            end
-        end
-    end
-end
-
--------------------------------------------------------------------------
 
 function manuscript_spawn()
     alife():create("manuscript", vector():set(-540.472, 5.777, -131.298), 118713, 626)
@@ -395,42 +376,41 @@ end
 -----------------------------wpn_trup_spawn----------------------------
 
 function wpn_trup_x16_spawn()
-    local sobj = alife():create("wpn_trup_x16", vector():set(52.587, 5.584, 9.906), 5569, 317)
-    if sobj then
-        local tbl = amk.read_stalker_params(sobj)
-        tbl.sid = 9709
-        tbl.health = 0
-        tbl.updhealth = 0
-        amk.write_stalker_params(tbl, sobj)
-    end
+    local obj = alife():create("wpn_trup_x16", vector():set(52.587, 5.584, 9.906), 5569, 317)
+    alife():assign_story_id(obj.id, story_ids.wpn_trup_x16)
+    obj:set_health(0)
 end
 
 function wpn_trup_x10_spawn()
-    local sobj = alife():create("wpn_trup_x10", vector():set(-55.946, -23.592, -3.479), 538, 379)
-    if sobj then
-        local tbl = amk.read_stalker_params(sobj)
-        tbl.sid = 9710
-        tbl.health = 0
-        tbl.updhealth = 0
-        amk.write_stalker_params(tbl, sobj)
-    end
+    local obj = alife():create("wpn_trup_x10", vector():set(-55.946, -23.592, -3.479), 538, 379)
+    alife():assign_story_id(obj.id, story_ids.wpn_trup_x10)
+    obj:set_health(0)
 end
 
 -----------------------------x18_uber_spawn----------------------------
 
 function x18_uber_spawn()
-    local sim = alife()
-    sim:create("tank1", vector():set(16.321, -10.820, -25.123), 5314, 140)
-    sim:create("tank2", vector():set(19.937, -10.821, -27.344), 5749, 140)
-    sim:create("tank3", vector():set(23.838, -10.817, -27.959), 6277, 140)
-    sim:create("tank4", vector():set(29.547, -10.823, -24.572), 6869, 139)
-    sim:create("tank5", vector():set(31.391, -10.823, -21.274), 7046, 139)
-    sim:create("tank6", vector():set(31.358, -10.814, -12.184), 7059, 139)
-    sim:create("uchen_06", vector():set(28.224, -6.619, -14.617), 6746, 141)
-    sim:create("uchen-x18_01", vector():set(28.433, -6.619, -18.404), 6807, 141)
-    sim:create("uchen-x18_02", vector():set(20.060, -6.618, -17.336), 5845, 141)
-    sim:create("uchen-x18_03", vector():set(22.896, -6.618, -17.007), 6194, 141)
-    sim:create("uchen-x18_04", vector():set(36.287, -6.360, -33.469), 7231, 143)
+    alife():create("tank1", vector():set(16.321, -10.820, -25.123), 5314, 140)
+    alife():create("tank2", vector():set(19.937, -10.821, -27.344), 5749, 140)
+    alife():create("tank3", vector():set(23.838, -10.817, -27.959), 6277, 140)
+    alife():create("tank4", vector():set(29.547, -10.823, -24.572), 6869, 139)
+    alife():create("tank5", vector():set(31.391, -10.823, -21.274), 7046, 139)
+    alife():create("tank6", vector():set(31.358, -10.814, -12.184), 7059, 139)
+
+    alife():create("uchen_06", vector():set(28.224, -6.619, -14.617), 6746, 141)
+    alife():assign_story_id(obj.id, story_ids.uchen_06)
+
+    local obj = alife():create("uchen-x18_01", vector():set(28.433, -6.619, -18.404), 6807, 141)
+    alife():assign_story_id(obj.id, story_ids.uchen-x18_01)
+
+    local obj = alife():create("uchen-x18_02", vector():set(20.060, -6.618, -17.336), 5845, 141)
+    alife():assign_story_id(obj.id, story_ids.uchen-x18_02)
+
+    local obj = alife():create("uchen-x18_03", vector():set(22.896, -6.618, -17.007), 6194, 141)
+    alife():assign_story_id(obj.id, story_ids.uchen-x18_03)
+
+    local obj = alife():create("uchen-x18_04", vector():set(36.287, -6.360, -33.469), 7231, 143)
+    alife():assign_story_id(obj.id, story_ids.uchen-x18_04)
 end
 
 function x18_elektro_spawn()
@@ -576,255 +556,6 @@ function about_pauk()
     snd_obj:play(db.actor, 0, sound_object.s2d)
 end
 
----------------------------random_tasks_spawn----------------------------
-
-local tbl_microscope = {{
-    position = {
-        x = 28.071,
-        y = -6.619,
-        z = -17.254
-    },
-    lv = 6738,
-    gv = 141
-}, {
-    position = {
-        x = 11.716064453125,
-        y = -14.119616508484,
-        z = 48.324775695801
-    },
-    lv = 4592,
-    gv = 161
-}, {
-    position = {
-        x = -15.017105102539,
-        y = 5.3005018234253,
-        z = 3.7324914932251
-    },
-    lv = 1334,
-    gv = 127
-}, {
-    position = {
-        x = 6.6777944564819,
-        y = -12.42924118042,
-        z = 19.245599746704
-    },
-    lv = 3771,
-    gv = 156
-}, {
-    position = {
-        x = -28.90012550354,
-        y = -10.812760353088,
-        z = -25.526180267334
-    },
-    lv = 517,
-    gv = 153
-}}
-function nebo_microscope_spawn()
-    local a = tbl_microscope[math.random(table.getn(tbl_microscope))]
-    alife():create("microscope", vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv)
-end
-
-local tbl_raciya = {{
-    position = {
-        x = 209.255,
-        y = 13.018,
-        z = 21.151
-    },
-    lv = 804554,
-    gv = 1654
-}, {
-    position = {
-        x = 211.64093017578,
-        y = 1.9080609083176,
-        z = 4.052951335907
-    },
-    lv = 806856,
-    gv = 1702
-}, {
-    position = {
-        x = 249.34016418457,
-        y = 1.1932575702667,
-        z = 29.179317474365
-    },
-    lv = 864898,
-    gv = 1661
-}, {
-    position = {
-        x = 239.98350524902,
-        y = 1.1828653812408,
-        z = 14.894157409668
-    },
-    lv = 849529,
-    gv = 1661
-}, {
-    position = {
-        x = 221.55725097656,
-        y = 0.84219872951508,
-        z = -19.498575210571
-    },
-    lv = 824100,
-    gv = 1657
-}, {
-    position = {
-        x = 233.53581237793,
-        y = 0.83678436279297,
-        z = 23.136318206787
-    },
-    lv = 840558,
-    gv = 1661
-}, {
-    position = {
-        x = 271.64895629883,
-        y = 18.24404335022,
-        z = 15.009711265564
-    },
-    lv = 898227,
-    gv = 1676
-}}
-function nebo_raciya_new_spawn()
-    local a = tbl_raciya[math.random(table.getn(tbl_raciya))]
-    alife():create("raciya_new", vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv)
-end
-
-local tbl_tiski = {{
-    position = {
-        x = 56.981,
-        y = 1.584,
-        z = -253.155
-    },
-    lv = 554772,
-    gv = 1613
-}, {
-    position = {
-        x = 34.795639038086,
-        y = 3.3562762737274,
-        z = -247.61192321777
-    },
-    lv = 519481,
-    gv = 1610
-}, {
-    position = {
-        x = 78.021255493164,
-        y = 0.59740834832191,
-        z = -280.7922668457
-    },
-    lv = 593943,
-    gv = 1615
-}, {
-    position = {
-        x = 93.547660827637,
-        y = 4.6543102264404,
-        z = -265.33538818359
-    },
-    lv = 619641,
-    gv = 1615
-}, {
-    position = {
-        x = 121.79563903809,
-        y = 0.095362484455109,
-        z = -259.61181640625
-    },
-    lv = 667134,
-    gv = 1631
-}, {
-    position = {
-        x = 112.10130310059,
-        y = 4.0116916656494,
-        z = -284.5749206543
-    },
-    lv = 649932,
-    gv = 1624
-}, {
-    position = {
-        x = 87.172775268555,
-        y = 0.14089101552963,
-        z = -236.35902404785
-    },
-    lv = 606780,
-    gv = 1620
-}}
-function nebo_tiski_spawn()
-    local a = tbl_tiski[math.random(table.getn(tbl_tiski))]
-    alife():create("tiski", vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv)
-end
-
-local tbl_plata = {{
-    position = {
-        x = -95.348373413086,
-        y = 23.668304443359,
-        z = -20.618936538696
-    },
-    lv = 579,
-    gv = 309
-}, {
-    position = {
-        x = -60.983909606934,
-        y = 21.005990982056,
-        z = -17.278919219971
-    },
-    lv = 1604,
-    gv = 310
-}, {
-    position = {
-        x = -65.256736755371,
-        y = 11.867607116699,
-        z = -18.802093505859
-    },
-    lv = 1124,
-    gv = 310
-}, {
-    position = {
-        x = -23.183698654175,
-        y = 3.4668443202972,
-        z = -14.305163383484
-    },
-    lv = 3638,
-    gv = 312
-}, {
-    position = {
-        x = -46.903770446777,
-        y = -4.888427734375,
-        z = -11.298999786377
-    },
-    lv = 1755,
-    gv = 311
-}, {
-    position = {
-        x = 31.531106948853,
-        y = 5.8838987350464,
-        z = -4.7994341850281
-    },
-    lv = 4695,
-    gv = 318
-}, {
-    position = {
-        x = 109.11238098145,
-        y = 11.380527496338,
-        z = -12.64363193512
-    },
-    lv = 6999,
-    gv = 324
-}, {
-    position = {
-        x = 76.250846862793,
-        y = 7.4770432472229,
-        z = -22.971681594849
-    },
-    lv = 6482,
-    gv = 319
-}, {
-    position = {
-        x = -99.583,
-        y = 21.564,
-        z = -40.367
-    },
-    lv = 493,
-    gv = 309
-}}
-function nebo_plata_spawn()
-    local a = tbl_plata[math.random(table.getn(tbl_plata))]
-    alife():create("plata", vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv)
-end
 
 local tbl_mashinka = {{
     position = {
@@ -1148,68 +879,73 @@ function add_actor_habar()
 end
 
 function actor_fotik_have(first_speaker, second_speaker)
-    return new_dialog.item_much("wpn_foto", 1) ~= false
+    return new_dialog.count_item("wpn_foto", 1)
 end
 
 function actor_fotik_not(first_speaker, second_speaker)
-    local actor = db.actor
-    return actor and not actor:object("wpn_foto")
+    return db.actor and not db.actor:object("wpn_foto")
 end
 
 function actor_fotik1_have(first_speaker, second_speaker)
-    return new_dialog.item_much("wpn_foto1", 1) ~= false
+    return new_dialog.count_item("wpn_foto1", 1)
 end
 
 function actor_fotik1_not(first_speaker, second_speaker)
-    local actor = db.actor
-    return actor and not actor:object("wpn_foto1")
+    return db.actor and not db.actor:object("wpn_foto1")
 end
 
 -----------------------------------baza_road_spawn---------------------------------------
 
 function road_baza_spawn()
-    local sim = alife()
-    sim:create("road_bandana", vector():set(287.292, 0.001, -41.518), 921997, 1678)
-    sim:create("road_bandana1", vector():set(261.680, 0.001, -40.765), 881600, 1678)
-    sim:create("road_bandana4", vector():set(287.380, 0.557, -36.486), 922943, 1678)
-    sim:create("road_bandana5", vector():set(257.357, 0.663, -42.100), 875292, 1666)
-    sim:create("road_soldat", vector():set(256.957, 0.001, -26.165), 874271, 1666)
-    sim:create("road_patrul1", vector():set(215.484, 0.001, -50.926), 813804, 1653)
-    sim:create("road_patrul2", vector():set(212.122, 0.005, -50.870), 807845, 1653)
-    sim:create("road_patrul3", vector():set(274.345, 0.005, -35.183), 902840, 1678)
-    sim:create("road_patrul4", vector():set(229.625, 0.005, 36.174), 834569, 1661)
-    sim:create("road_antigas1", vector():set(248.764, -0.001, 35.937), 861800, 1661)
-    sim:create("road_antigas2", vector():set(220.450, 0.150, 36.601), 821167, 1661)
-    sim:create("road_sniper", vector():set(215.002, 19.700, -5.175), 812785, 1654)
-    sim:create("road_vyshka1", vector():set(272.921, 18.247, 11.847), 900564, 1676)
-    sim:create("road_vyshka2", vector():set(271.615, 10.568, 10.899), 898217, 1676)
-    sim:create("road_patrul5", vector():set(205.461, 5.551, 28.271), 797477, 1654)
-    sim:create("road_vnutri1", vector():set(213.077, 5.550, -13.528), 809144, 1654)
-    sim:create("road_vnutri2", vector():set(210.947, 5.551, 2.177), 805654, 1654)
-    sim:create("road_vnutri3", vector():set(210.580, 5.550, 16.087), 805707, 1654)
-    sim:create("road_vnutri4", vector():set(216.187, 5.550, 30.691), 815323, 1654)
-    sim:create("road_vnutri5", vector():set(213.683, 5.550, -5.932), 810395, 1654)
-    sim:create("road_vnutri6", vector():set(215.588, 5.551, 23.289), 814099, 1654)
-    sim:create("road_vnutri7", vector():set(209.696, 7.795, -25.807), 804309, 1654)
-    sim:create("road_vnutri8", vector():set(210.076, 5.550, -8.612), 804447, 1654)
-    sim:create("road_vnutri9", vector():set(208.758, 1.105, -11.823), 802142, 1654)
-    sim:create("uchen_01", vector():set(-50.268, 4.124, 291.767), 383404, 1585)
-    sim:create("uchen_02", vector():set(-48.969, 4.124, 299.029), 385589, 1585)
-    sim:create("uchen_03", vector():set(-57.777, 4.125, 304.327), 371718, 1585)
-    sim:create("uchen_04", vector():set(-57.549, 4.124, 297.729), 372740, 1585)
-    sim:create("uchen_05", vector():set(-57.696, 4.124, 292.996), 372735, 1585)
-    sim:create("baza_patrul1", vector():set(-5.956, 3.002, 305.586), 452766, 1585)
-    sim:create("baza_patrul2", vector():set(45.134, 2.299, 276.917), 537824, 1596)
-    sim:create("baza_patrul3", vector():set(45.313, 3.000, 333.382), 539086, 1602)
-    sim:create("baza_ugarazhey", vector():set(-81.392, 3.002, 315.798), 335941, 1565)
-    sim:create("baza_uvhoda", vector():set(-32.676, 4.135, 313.350), 410506, 1585)
-    sim:create("baza_vyshka1", vector():set(-46.968, 18.148, 363.720), 388888, 1584)
-    sim:create("baza_vyshka2", vector():set(7.094, 18.148, 250.290), 474420, 1579)
-    sim:create("baza_ohranauchen1", vector():set(-53.726, 4.125, 288.158), 378086, 1585)
-    sim:create("baza_ohranauchen2", vector():set(-37.874, 4.124, 296.386), 402849, 1585)
-    -- sim:create("elektro_chimera",vector():set(-112.289,0.5,-277.492),287535,1552)
-    -- sim:create("fire_chimera",vector():set(-112.289,2.0,-277.492),287535,1552)
-    -- sim:create("deathclaw_weak",vector():set(-53.756,0.405,-282.117),377331,1571)
+    alife():create("road_bandana", vector():set(287.292, 0.001, -41.518), 921997, 1678)
+    alife():create("road_bandana1", vector():set(261.680, 0.001, -40.765), 881600, 1678)
+    alife():create("road_bandana4", vector():set(287.380, 0.557, -36.486), 922943, 1678)
+    alife():create("road_bandana5", vector():set(257.357, 0.663, -42.100), 875292, 1666)
+    alife():create("road_soldat", vector():set(256.957, 0.001, -26.165), 874271, 1666)
+    alife():create("road_patrul1", vector():set(215.484, 0.001, -50.926), 813804, 1653)
+    alife():create("road_patrul2", vector():set(212.122, 0.005, -50.870), 807845, 1653)
+    alife():create("road_patrul3", vector():set(274.345, 0.005, -35.183), 902840, 1678)
+    alife():create("road_patrul4", vector():set(229.625, 0.005, 36.174), 834569, 1661)
+    alife():create("road_antigas1", vector():set(248.764, -0.001, 35.937), 861800, 1661)
+    alife():create("road_antigas2", vector():set(220.450, 0.150, 36.601), 821167, 1661)
+    alife():create("road_sniper", vector():set(215.002, 19.700, -5.175), 812785, 1654)
+    alife():create("road_vyshka1", vector():set(272.921, 18.247, 11.847), 900564, 1676)
+    alife():create("road_vyshka2", vector():set(271.615, 10.568, 10.899), 898217, 1676)
+    alife():create("road_patrul5", vector():set(205.461, 5.551, 28.271), 797477, 1654)
+    alife():create("road_vnutri1", vector():set(213.077, 5.550, -13.528), 809144, 1654)
+    alife():create("road_vnutri2", vector():set(210.947, 5.551, 2.177), 805654, 1654)
+    alife():create("road_vnutri3", vector():set(210.580, 5.550, 16.087), 805707, 1654)
+    alife():create("road_vnutri4", vector():set(216.187, 5.550, 30.691), 815323, 1654)
+    alife():create("road_vnutri5", vector():set(213.683, 5.550, -5.932), 810395, 1654)
+    alife():create("road_vnutri6", vector():set(215.588, 5.551, 23.289), 814099, 1654)
+    alife():create("road_vnutri7", vector():set(209.696, 7.795, -25.807), 804309, 1654)
+    alife():create("road_vnutri8", vector():set(210.076, 5.550, -8.612), 804447, 1654)
+    alife():create("road_vnutri9", vector():set(208.758, 1.105, -11.823), 802142, 1654)
+
+    local obj = alife():create("uchen_01", vector():set(-50.268, 4.124, 291.767), 383404, 1585)
+    alife():assign_story_id(obj.id, story_ids.uchen_01)
+
+    local obj = alife():create("uchen_02", vector():set(-48.969, 4.124, 299.029), 385589, 1585)
+    alife():assign_story_id(obj.id, story_ids.uchen_02)
+
+    local obj = alife():create("uchen_03", vector():set(-57.777, 4.125, 304.327), 371718, 1585)
+    alife():assign_story_id(obj.id, story_ids.uchen_03)
+
+    local obj = alife():create("uchen_04", vector():set(-57.549, 4.124, 297.729), 372740, 1585)
+    alife():assign_story_id(obj.id, story_ids.uchen_04)
+
+    local obj = alife():create("uchen_05", vector():set(-57.696, 4.124, 292.996), 372735, 1585)
+    alife():assign_story_id(obj.id, story_ids.uchen_05)
+
+    alife():create("baza_patrul1", vector():set(-5.956, 3.002, 305.586), 452766, 1585)
+    alife():create("baza_patrul2", vector():set(45.134, 2.299, 276.917), 537824, 1596)
+    alife():create("baza_patrul3", vector():set(45.313, 3.000, 333.382), 539086, 1602)
+    alife():create("baza_ugarazhey", vector():set(-81.392, 3.002, 315.798), 335941, 1565)
+    alife():create("baza_uvhoda", vector():set(-32.676, 4.135, 313.350), 410506, 1585)
+    alife():create("baza_vyshka1", vector():set(-46.968, 18.148, 363.720), 388888, 1584)
+    alife():create("baza_vyshka2", vector():set(7.094, 18.148, 250.290), 474420, 1579)
+    alife():create("baza_ohranauchen1", vector():set(-53.726, 4.125, 288.158), 378086, 1585)
+    alife():create("baza_ohranauchen2", vector():set(-37.874, 4.124, 296.386), 402849, 1585)
 end
 
 function enemy_soldaty(community1, community2)
@@ -1242,94 +978,68 @@ function enemy_dolg(community1, community2)
 end
 
 function enemy_borovikov()
-    -- для объекта из аллспавна лучше так:
-    --    local sobj = alife()::object("borovikov")
-    --    local id = sobj and sobj.id
-    --    local npc = level.object_by_id(id)
-    --    if npc and npc:alive() then
-    --        npc:set_relation(game_object.enemy, db.actor)
-    --    end
-
-    local npc
-    for i = 1, 65534 do
-        npc = level.object_by_id(i)
-        if npc and npc:alive() and npc:name() == "borovikov" then
-            npc:set_relation(game_object.enemy, db.actor)
-            break
-        end
+    local obj = level_object_by_sid(story_ids.borovikov)
+    if obj then
+        obj:set_relation(game_object.enemy, db.actor)
     end
 end
 
 function spawn_usa_baza()
-    local sim = alife()
-    sim:create("nato_antigas1", vector():set(-526.428, 1.157, -142.743), 138247, 628)
-    sim:create("nato_antigas2", vector():set(-526.618, 1.440, -134.169), 138259, 628)
-    sim:create("nato_antigas3", vector():set(-529.746, 1.798, -126.307), 133217, 628)
-    sim:create("nato_antigas4", vector():set(-442.420, 1.766, -127.919), 265204, 643)
-    sim:create("nato_antigas5", vector():set(-442.833, -5.741, -141.927), 264077, 648)
-    sim:create("nato_antigas6", vector():set(-442.950, -5.742, -154.653), 264041, 648)
-    sim:create("nato_specnaz1", vector():set(-540.474, 5.775, -133.561), 118709, 626)
-    sim:create("nato_specnaz2", vector():set(-540.751, 9.743, -128.392), 117730, 626)
-    sim:create("nato_specnaz3", vector():set(-537.540, 9.744, -121.607), 122524, 626)
-    sim:create("nato_specnaz4", vector():set(-447.774, 1.823, -115.363), 256385, 643)
-    sim:create("nato_specnaz5", vector():set(-436.639, -5.740, -149.618), 273796, 648)
-    sim:create("nato_specnaz6", vector():set(-450.122, -0.902, -177.725), 252976, 647)
-    sim:create("nato_mask1", vector():set(-446.750, -5.741, -140.846), 258558, 644)
-    sim:create("nato_mask2", vector():set(-452.612, -5.741, -140.779), 248701, 644)
-    sim:create("nato_mask3", vector():set(-500.846, 1.519, -127.733), 177203, 628)
-    sim:create("nato_mask4", vector():set(-476.735, -0.779, -183.730), 214118, 647)
-    sim:create("nato_mask5", vector():set(-514.465, -0.683, -187.996), 155785, 629)
-    sim:create("nato_mask6", vector():set(-448.689, 1.366, -134.572), 255268, 643)
+    alife():create("nato_antigas1", vector():set(-526.428, 1.157, -142.743), 138247, 628)
+    alife():create("nato_antigas2", vector():set(-526.618, 1.440, -134.169), 138259, 628)
+    alife():create("nato_antigas3", vector():set(-529.746, 1.798, -126.307), 133217, 628)
+    alife():create("nato_antigas4", vector():set(-442.420, 1.766, -127.919), 265204, 643)
+    alife():create("nato_antigas5", vector():set(-442.833, -5.741, -141.927), 264077, 648)
+    alife():create("nato_antigas6", vector():set(-442.950, -5.742, -154.653), 264041, 648)
+    alife():create("nato_specnaz1", vector():set(-540.474, 5.775, -133.561), 118709, 626)
+    alife():create("nato_specnaz2", vector():set(-540.751, 9.743, -128.392), 117730, 626)
+    alife():create("nato_specnaz3", vector():set(-537.540, 9.744, -121.607), 122524, 626)
+    alife():create("nato_specnaz4", vector():set(-447.774, 1.823, -115.363), 256385, 643)
+    alife():create("nato_specnaz5", vector():set(-436.639, -5.740, -149.618), 273796, 648)
+    alife():create("nato_specnaz6", vector():set(-450.122, -0.902, -177.725), 252976, 647)
+    alife():create("nato_mask1", vector():set(-446.750, -5.741, -140.846), 258558, 644)
+    alife():create("nato_mask2", vector():set(-452.612, -5.741, -140.779), 248701, 644)
+    alife():create("nato_mask3", vector():set(-500.846, 1.519, -127.733), 177203, 628)
+    alife():create("nato_mask4", vector():set(-476.735, -0.779, -183.730), 214118, 647)
+    alife():create("nato_mask5", vector():set(-514.465, -0.683, -187.996), 155785, 629)
+    alife():create("nato_mask6", vector():set(-448.689, 1.366, -134.572), 255268, 643)
 end
 
 function spawn_usa_blokpost()
-    local sim = alife()
-    sim:create("usa_antigas1", vector():set(-553.561, 14.585, 275.467), 99665, 623)
-    sim:create("usa_antigas2", vector():set(-550.822, 14.568, 276.877), 103950, 623)
-    sim:create("usa_antigas3", vector():set(-560.208, 14.498, 293.099), 90385, 623)
-    sim:create("usa_mask1", vector():set(-553.178, 14.463, 289.640), 100757, 623)
-    sim:create("usa_mask2", vector():set(-538.075, 28.132, 283.652), 122064, 623)
-    sim:create("usa_mask3", vector():set(-499.283, 51.047, 354.921), 179974, 633)
-    sim:create("usa_specnaz1", vector():set(-562.797, 15.654, 266.985), 86321, 622)
-    sim:create("usa_specnaz2", vector():set(-563.491, 14.964, 289.301), 85304, 623)
+    alife():create("usa_antigas1", vector():set(-553.561, 14.585, 275.467), 99665, 623)
+    alife():create("usa_antigas2", vector():set(-550.822, 14.568, 276.877), 103950, 623)
+    alife():create("usa_antigas3", vector():set(-560.208, 14.498, 293.099), 90385, 623)
+    alife():create("usa_mask1", vector():set(-553.178, 14.463, 289.640), 100757, 623)
+    alife():create("usa_mask2", vector():set(-538.075, 28.132, 283.652), 122064, 623)
+    alife():create("usa_mask3", vector():set(-499.283, 51.047, 354.921), 179974, 633)
+    alife():create("usa_specnaz1", vector():set(-562.797, 15.654, 266.985), 86321, 622)
+    alife():create("usa_specnaz2", vector():set(-563.491, 14.964, 289.301), 85304, 623)
 end
 
 function spawn_stalkers_pred1()
-    local sim = alife()
-    sim:create("stalker_pred6", vector():set(-65.493, 1.566, 330.514), 841711, 718)
-    sim:create("stalker_pred8", vector():set(-65.929, 1.669, 349.060), 841733, 718)
+    alife():create("stalker_pred6", vector():set(-65.493, 1.566, 330.514), 841711, 718)
+    alife():create("stalker_pred8", vector():set(-65.929, 1.669, 349.060), 841733, 718)
 end
 
 function spawn_stalkers_pred2()
-    local sobj = alife():create("maroder_trup", vector():set(-334.908, -6.098, 346.625), 427058, 663)
-    if sobj then
-        local tbl = amk.read_stalker_params(sobj)
-        -- tbl.sid = 30332
-        tbl.sid = 9704
-        tbl.health = 0
-        tbl.updhealth = 0
-        amk.write_stalker_params(tbl, sobj)
-    end
+    local obj = alife():create("maroder_trup", vector():set(-334.908, -6.098, 346.625), 427058, 663)
+    alife():assign_story_id(obj.id, story_ids.maroder_trup)
+    obj:set_health(0)
 end
 
 function spawn_peschera_monstry()
-    local sim = alife()
-    -- sim:create("bloodsucker_normal",vector():set(-233.394,16.934,239.157),581817,688)
-    -- sim:create("psy_dog",vector():set(-233.394,16.934,239.157),581817,688)
-    -- sim:create("pseudodog_normal",vector():set(-233.394,16.934,239.157),581817,688)
-    -- sim:create("mk_senator",vector():set(-254.114,19.975,259.491),548775,680)
-    sim:create("zombi_stalk1", vector():set(-268.193, 10.185, 239.227), 526701, 672)
-    sim:create("zombi_stalk1", vector():set(-268.193, 10.185, 239.227), 526701, 672)
-    sim:create("zombi_stalk2", vector():set(-268.193, 10.185, 239.227), 526701, 672)
-    sim:create("zombi_stalk2", vector():set(-268.193, 10.185, 239.227), 526701, 672)
-    sim:create("zombi_stalk3", vector():set(-268.193, 10.185, 239.227), 526701, 672)
-    sim:create("zombi_stalk3", vector():set(-268.193, 10.185, 239.227), 526701, 672)
-    sim:create("zombi_stalk4", vector():set(-268.193, 10.185, 239.227), 526701, 672)
-    sim:create("zombi_stalk4", vector():set(-268.193, 10.185, 239.227), 526701, 672)
-    sim:create("zombi_stalk5", vector():set(-268.193, 10.185, 239.227), 526701, 672)
-    sim:create("zombi_stalk6", vector():set(-268.193, 10.185, 239.227), 526701, 672)
-    sim:create("zombi_stalk7", vector():set(-268.193, 10.185, 239.227), 526701, 672)
-    sim:create("zombi_stalk8", vector():set(-268.193, 10.185, 239.227), 526701, 672)
+    alife():create("zombi_stalk1", vector():set(-268.193, 10.185, 239.227), 526701, 672)
+    alife():create("zombi_stalk1", vector():set(-268.193, 10.185, 239.227), 526701, 672)
+    alife():create("zombi_stalk2", vector():set(-268.193, 10.185, 239.227), 526701, 672)
+    alife():create("zombi_stalk2", vector():set(-268.193, 10.185, 239.227), 526701, 672)
+    alife():create("zombi_stalk3", vector():set(-268.193, 10.185, 239.227), 526701, 672)
+    alife():create("zombi_stalk3", vector():set(-268.193, 10.185, 239.227), 526701, 672)
+    alife():create("zombi_stalk4", vector():set(-268.193, 10.185, 239.227), 526701, 672)
+    alife():create("zombi_stalk4", vector():set(-268.193, 10.185, 239.227), 526701, 672)
+    alife():create("zombi_stalk5", vector():set(-268.193, 10.185, 239.227), 526701, 672)
+    alife():create("zombi_stalk6", vector():set(-268.193, 10.185, 239.227), 526701, 672)
+    alife():create("zombi_stalk7", vector():set(-268.193, 10.185, 239.227), 526701, 672)
+    alife():create("zombi_stalk8", vector():set(-268.193, 10.185, 239.227), 526701, 672)
 end
 
 ----------------------------------Фотографирование----------------------------
@@ -1337,18 +1047,17 @@ end
 local last_load = 0
 
 function camera_update()
-    local actor = db.actor
-    local foto = actor:object("wpn_foto")
+    local foto = db.actor:object("wpn_foto")
     if foto and not has_alife_info("fotik_take_first") then
         foto:unload_magazine()
-        actor:give_info_portion("fotik_take_first")
+        db.actor:give_info_portion("fotik_take_first")
     end
-    local wpn = actor:item_in_slot(actor:active_slot())
+    local wpn = db.actor:item_in_slot(db.actor:active_slot())
     if wpn and wpn:section() == "wpn_foto" then
         local load = wpn:get_ammo_in_magazine()
         if load < last_load then
-            if actor:has_info("mozhno_delat_foto") then
-                actor:give_info_portion("foto_sdelal")
+            if db.actor:has_info("mozhno_delat_foto") then
+                db.actor:give_info_portion("foto_sdelal")
             end
         end
         last_load = load
@@ -1356,17 +1065,16 @@ function camera_update()
 end
 
 function camera1_update()
-    local actor = db.actor
-    local foto = actor:object("wpn_foto1")
+    local foto = db.actor:object("wpn_foto1")
     if foto and not has_alife_info("fotik1_take_first") then
         foto:unload_magazine()
-        actor:give_info_portion("fotik1_take_first")
+        db.actor:give_info_portion("fotik1_take_first")
     end
-    local wpn = actor:item_in_slot(actor:active_slot())
+    local wpn = db.actor:item_in_slot(db.actor:active_slot())
     if wpn and wpn:section() == "wpn_foto1" then
         local load = wpn:get_ammo_in_magazine()
         if load < last_load then
-            if actor:has_info("mozhno_delat_foto") then
+            if db.actor:has_info("mozhno_delat_foto") then
                 db.actor:give_info_portion("foto_sdelal")
             end
         end
@@ -1399,91 +1107,79 @@ function sms_nevzone()
 end
 
 function spawn_foto_01()
-    local actor = db.actor
-    alife():create("foto_01", actor:position(), actor:level_vertex_id(), actor:game_vertex_id(), actor:id())
-    actor:give_info_portion("foto1_sdelal")
+    alife():create("foto_01", db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(), db.actor:id())
+    db.actor:give_info_portion("foto1_sdelal")
     del_metka_foto("metka_foto1", "crlc_foto")
 end
 
 function spawn_foto_02()
-    local actor = db.actor
-    alife():create("foto_01", actor:position(), actor:level_vertex_id(), actor:game_vertex_id(), actor:id())
-    actor:give_info_portion("foto2_sdelal")
+    alife():create("foto_01", db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(), db.actor:id())
+    db.actor:give_info_portion("foto2_sdelal")
     del_metka_foto("metka_foto2", "crlc_foto")
 end
 
 function spawn_foto_03()
-    local actor = db.actor
-    alife():create("foto_02", actor:position(), actor:level_vertex_id(), actor:game_vertex_id(), actor:id())
-    actor:give_info_portion("foto3_sdelal")
+    alife():create("foto_02", db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(), db.actor:id())
+    db.actor:give_info_portion("foto3_sdelal")
     del_metka_foto("metka_foto3", "crlc_foto")
 end
 
 function spawn_foto_04()
-    local actor = db.actor
-    alife():create("foto_02", actor:position(), actor:level_vertex_id(), actor:game_vertex_id(), actor:id())
-    actor:give_info_portion("foto4_sdelal")
+    alife():create("foto_02", db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(), db.actor:id())
+    db.actor:give_info_portion("foto4_sdelal")
     del_metka_foto("metka_foto4", "crlc_foto")
 end
 
 function spawn_foto_05()
-    local actor = db.actor
-    alife():create("foto_02", actor:position(), actor:level_vertex_id(), actor:game_vertex_id(), actor:id())
-    actor:give_info_portion("foto5_sdelal")
+    alife():create("foto_02", db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(), db.actor:id())
+    db.actor:give_info_portion("foto5_sdelal")
     del_metka_foto("metka_foto5", "crlc_foto")
 end
 
 function spawn_foto_06()
-    local actor = db.actor
-    alife():create("foto_02", actor:position(), actor:level_vertex_id(), actor:game_vertex_id(), actor:id())
-    actor:give_info_portion("foto6_sdelal")
+    alife():create("foto_02", db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(), db.actor:id())
+    db.actor:give_info_portion("foto6_sdelal")
     del_metka_foto("metka_foto6", "crlc_foto")
 end
 
 function spawn_foto_07()
-    local actor = db.actor
-    alife():create("foto_02", actor:position(), actor:level_vertex_id(), actor:game_vertex_id(), actor:id())
-    actor:give_info_portion("foto7_sdelal")
+    alife():create("foto_02", db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(), db.actor:id())
+    db.actor:give_info_portion("foto7_sdelal")
     del_metka_foto("metka_foto7", "crlc_foto")
 end
 
 function spawn_foto_08()
-    local actor = db.actor
-    alife():create("foto_02", actor:position(), actor:level_vertex_id(), actor:game_vertex_id(), actor:id())
-    actor:give_info_portion("foto8_sdelal")
+    alife():create("foto_02", db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(), db.actor:id())
+    db.actor:give_info_portion("foto8_sdelal")
     del_metka_foto("metka_foto8", "crlc_foto")
 end
 
 function spawn_foto_09()
-    local actor = db.actor
-    alife():create("foto_02", actor:position(), actor:level_vertex_id(), actor:game_vertex_id(), actor:id())
-    actor:give_info_portion("foto9_sdelal")
+    alife():create("foto_02", db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(), db.actor:id())
+    db.actor:give_info_portion("foto9_sdelal")
     del_metka_foto("metka_foto9", "crlc_foto")
 end
 
 function spawn_foto_10()
-    local actor = db.actor
-    alife():create("foto_02", actor:position(), actor:level_vertex_id(), actor:game_vertex_id(), actor:id())
-    actor:give_info_portion("foto10_sdelal")
+    alife():create("foto_02", db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(), db.actor:id())
+    db.actor:give_info_portion("foto10_sdelal")
     del_metka_foto("metka_foto10", "crlc_foto")
 end
 
 function spawn_metki_foto()
-    local sim = alife()
-    sim:create("metka_foto1", vector():set(198.944, 3.918, -103.722), 786795, 1647)
-    sim:create("metka_foto2", vector():set(266.745, 0.354, 108.374), 890237, 1677)
+    alife():create("metka_foto1", vector():set(198.944, 3.918, -103.722), 786795, 1647)
+    alife():create("metka_foto2", vector():set(266.745, 0.354, 108.374), 890237, 1677)
 end
 
 function spawn_metki_foto2()
-    local sim = alife()
-    sim:create("metka_foto3", vector():set(30.458, 3.920, 250.032), 257507, 986) -- promzone
-    sim:create("metka_foto4", vector():set(84.288, 17.870, -62.349), 364047, 1042) -- promzone
-    sim:create("metka_foto5", vector():set(148.996, 15.500, 107.705), 39960, 206) -- bar
-    sim:create("metka_foto6", vector():set(157.816, 15.500, 115.207), 41517, 210) -- bar
-    sim:create("metka_foto7", vector():set(-88.990, 3.388, 207.633), 951989, 797) -- swamp
-    sim:create("metka_foto8", vector():set(-85.408, 13.701, -49.620), 224994, 1269) -- mg
-    sim:create("metka_foto9", vector():set(38.275, 29.987, -92.616), 330027, 0) -- dyshlo
-    sim:create("metka_foto10", vector():set(69.357, 8.459, 279.171), 181068, 602) -- pripyat
+    alife():create("metka_foto3", vector():set(30.458, 3.920, 250.032), 257507, 986) -- promzone
+    alife():create("metka_foto4", vector():set(84.288, 17.870, -62.349), 364047, 1042) -- promzone
+    alife():create("metka_foto5", vector():set(148.996, 15.500, 107.705), 39960, 206) -- bar
+    alife():create("metka_foto6", vector():set(157.816, 15.500, 115.207), 41517, 210) -- bar
+    alife():create("metka_foto7", vector():set(-88.990, 3.388, 207.633), 951989, 797) -- swamp
+    alife():create("metka_foto8", vector():set(-85.408, 13.701, -49.620), 224994, 1269) -- mg
+    alife():create("metka_foto9", vector():set(38.275, 29.987, -92.616), 330027, 0) -- dyshlo
+    alife():create("metka_foto10", vector():set(69.357, 8.459, 279.171), 181068, 602) -- pripyat
 end
 
 function metka_foto_01()
@@ -1528,7 +1224,7 @@ end
 
 function metka_foto(sect, type, text)
     local id, sobj
-    for a = 1, 65534 do
+    for a = 1, 65535 do
         sobj = alife():object(a)
         id = sobj and sobj:section_name() == sect and sobj.id
         if id then
@@ -1540,7 +1236,7 @@ end
 
 function del_metka_foto(sect, type)
     local id, sobj
-    for a = 1, 65534 do
+    for a = 1, 65535 do
         sobj = alife():object(a)
         id = sobj and sobj:section_name() == sect and sobj.id
         if id then
@@ -1553,196 +1249,176 @@ end
 ----------------------------end_fotografirovanie--------------------------
 
 function spawn_lager_uchen()
-    local sim = alife()
-    sim:create("kletka_cat", vector():set(-312.086, 2.326, 62.528), 473489, 797)
-    sim:create("swamp_soldat1", vector():set(-287.077, 3.456, 78.259), 528518, 799)
-    sim:create("swamp_soldat2", vector():set(-299.397, 2.404, 61.833), 501174, 799)
-    sim:create("swamp_soldat3", vector():set(-300.435, 2.485, 67.626), 499660, 799)
-    sim:create("swamp_soldat4", vector():set(-307.158, 2.426, 62.021), 484402, 799)
-    sim:create("swamp_soldat5", vector():set(-211.949, 2.676, 67.251), 692474, 799)
-    sim:create("swamp_soldat6", vector():set(-212.776, 2.833, 72.240), 690943, 799)
-    sim:create("swamp_soldat7", vector():set(-323.282, 2.254, 63.664), 448756, 799)
-    sim:create("swamp_soldat8", vector():set(-323.469, 2.291, 72.433), 448780, 799)
+    alife():create("kletka_cat", vector():set(-312.086, 2.326, 62.528), 473489, 797)
+    alife():create("swamp_soldat1", vector():set(-287.077, 3.456, 78.259), 528518, 799)
+    alife():create("swamp_soldat2", vector():set(-299.397, 2.404, 61.833), 501174, 799)
+    alife():create("swamp_soldat3", vector():set(-300.435, 2.485, 67.626), 499660, 799)
+    alife():create("swamp_soldat4", vector():set(-307.158, 2.426, 62.021), 484402, 799)
+    alife():create("swamp_soldat5", vector():set(-211.949, 2.676, 67.251), 692474, 799)
+    alife():create("swamp_soldat6", vector():set(-212.776, 2.833, 72.240), 690943, 799)
+    alife():create("swamp_soldat7", vector():set(-323.282, 2.254, 63.664), 448756, 799)
+    alife():create("swamp_soldat8", vector():set(-323.469, 2.291, 72.433), 448780, 799)
 end
 
 function spawn_doktor_monstry()
-    local sim = alife()
-    sim:create("doktor_dog", vector():set(194.563, 2.801, -40.246), 1571917, 799)
-    sim:create("doktor_izlom", vector():set(188.591, 2.801, -36.130), 1558273, 799)
-    sim:create("doktor_flesh", vector():set(184.964, 2.716, -20.105), 1550743, 799)
-    sim:create("doktor_cat", vector():set(190.041, 3.500, -41.372), 1561267, 799)
-    sim:create("doktor_zombie1", vector():set(191.838, 2.815, -39.280), 1565820, 799)
-    sim:create("doktor_zombie2", vector():set(198.464, 2.800, -38.992), 1579494, 799)
-    sim:create("doktor_zombie3", vector():set(198.447, 2.800, -37.182), 1579502, 799)
-    sim:create("doktor_zombie4", vector():set(196.817, 2.801, -39.648), 1576460, 799)
+    alife():create("doktor_dog", vector():set(194.563, 2.801, -40.246), 1571917, 799)
+    alife():create("doktor_izlom", vector():set(188.591, 2.801, -36.130), 1558273, 799)
+    alife():create("doktor_flesh", vector():set(184.964, 2.716, -20.105), 1550743, 799)
+    alife():create("doktor_cat", vector():set(190.041, 3.500, -41.372), 1561267, 799)
+    alife():create("doktor_zombie1", vector():set(191.838, 2.815, -39.280), 1565820, 799)
+    alife():create("doktor_zombie2", vector():set(198.464, 2.800, -38.992), 1579494, 799)
+    alife():create("doktor_zombie3", vector():set(198.447, 2.800, -37.182), 1579502, 799)
+    alife():create("doktor_zombie4", vector():set(196.817, 2.801, -39.648), 1576460, 799)
 end
 
 function spawn_cat_trup1()
-    local sobj = alife():create("cat_trup1", vector():set(-314.709, 2.820, 68.353), 467378, 797)
-    if sobj then
-        sobj:on_death()
-    end
+    local obj = alife():create("cat_trup1", vector():set(-314.709, 2.820, 68.353), 467378, 797)
+    obj:set_health(0)
 end
 
 function spawn_cat_trup2()
-    local sobj = alife():create("cat_trup2", vector():set(-312.318, 2.349, 67.808), 473501, 797)
-    if sobj then
-        sobj:on_death()
-    end
+    local obj = alife():create("cat_trup2", vector():set(-312.318, 2.349, 67.808), 473501, 797)
+    obj:set_health(0)
 end
 
 function spawn_cat_trup3()
-    local sobj = alife():create("cat_trup3", vector():set(-312.353, 2.337, 65.785), 473498, 797)
-    if sobj then
-        sobj:on_death()
-    end
+    local obj = alife():create("cat_trup3", vector():set(-312.353, 2.337, 65.785), 473498, 797)
+    obj:set_health(0)
 end
 
 function spawn_mk_bratki()
-    local sim = alife()
-    sim:create("krysolov", vector():set(29.561, -3.169, 2.127), 989276, 744)
-    sim:create("koster_gorit", vector():set(90.281, 4.113, -30.083), 1085323, 761)
-    sim:create("bratok_kamp_01", vector():set(90.281, 4.185, -30.083), 1085323, 761)
-    sim:create("bratok_kamp_02", vector():set(90.281, 4.185, -30.083), 1085323, 761)
-    sim:create("bratok_kamp_03", vector():set(90.281, 4.185, -30.083), 1085323, 761)
-    sim:create("bratok_kamp_04", vector():set(90.281, 4.185, -30.083), 1085323, 761)
-    sim:create("bratok_kamp_05", vector():set(90.281, 4.185, -30.083), 1085323, 761)
-    sim:create("bratok_06", vector():set(5.630, 7.985, -25.490), 951643, 737)
-    sim:create("bratok_07", vector():set(7.220, 2.764, 0.521), 953941, 737)
-    sim:create("bratok_08", vector():set(71.344, 10.096, 26.634), 1055300, 757)
-    sim:create("bratok_09", vector():set(48.137, 3.786, 70.602), 1018989, 746)
-    sim:create("bratok_veteranpatr", vector():set(74.569, 2.495, -7.741), 1060851, 750)
-    sim:create("bratok_veteranloh", vector():set(-41.644, 2.426, -5.078), 878229, 725)
-    sim:create("bratok_masterohr", vector():set(49.057, 3.934, 92.359), 1020192, 747)
-    sim:create("bratok_barohr", vector():set(52.427, 3.999, 90.237), 1025947, 747)
-    sim:create("bratok_bar_01", vector():set(78.793, -0.995, 99.629), 1066603, 747)
-    sim:create("bratok_bar_02", vector():set(76.047, -0.994, 99.927), 1062170, 747)
-    sim:create("bratok_bar_03", vector():set(72.566, -1.001, 94.746), 1056515, 747)
-    sim:create("bratok_bar_04", vector():set(69.144, -0.995, 94.212), 1052057, 747)
-    sim:create("bratok_bar_05", vector():set(69.949, -1.008, 92.918), 1053192, 747)
-    sim:create("bratok_bar_06", vector():set(75.141, -0.994, 87.444), 1060981, 747)
-    sim:create("bratok_bar_07", vector():set(78.864, -0.994, 97.436), 1066597, 747)
+    alife():create("krysolov", vector():set(29.561, -3.169, 2.127), 989276, 744)
+    alife():create("koster_gorit", vector():set(90.281, 4.113, -30.083), 1085323, 761)
+    alife():create("bratok_kamp_01", vector():set(90.281, 4.185, -30.083), 1085323, 761)
+    alife():create("bratok_kamp_02", vector():set(90.281, 4.185, -30.083), 1085323, 761)
+    alife():create("bratok_kamp_03", vector():set(90.281, 4.185, -30.083), 1085323, 761)
+    alife():create("bratok_kamp_04", vector():set(90.281, 4.185, -30.083), 1085323, 761)
+    alife():create("bratok_kamp_05", vector():set(90.281, 4.185, -30.083), 1085323, 761)
+    alife():create("bratok_06", vector():set(5.630, 7.985, -25.490), 951643, 737)
+    alife():create("bratok_07", vector():set(7.220, 2.764, 0.521), 953941, 737)
+    alife():create("bratok_08", vector():set(71.344, 10.096, 26.634), 1055300, 757)
+    alife():create("bratok_09", vector():set(48.137, 3.786, 70.602), 1018989, 746)
+    alife():create("bratok_veteranpatr", vector():set(74.569, 2.495, -7.741), 1060851, 750)
+    alife():create("bratok_veteranloh", vector():set(-41.644, 2.426, -5.078), 878229, 725)
+    alife():create("bratok_masterohr", vector():set(49.057, 3.934, 92.359), 1020192, 747)
+    alife():create("bratok_barohr", vector():set(52.427, 3.999, 90.237), 1025947, 747)
+    alife():create("bratok_bar_01", vector():set(78.793, -0.995, 99.629), 1066603, 747)
+    alife():create("bratok_bar_02", vector():set(76.047, -0.994, 99.927), 1062170, 747)
+    alife():create("bratok_bar_03", vector():set(72.566, -1.001, 94.746), 1056515, 747)
+    alife():create("bratok_bar_04", vector():set(69.144, -0.995, 94.212), 1052057, 747)
+    alife():create("bratok_bar_05", vector():set(69.949, -1.008, 92.918), 1053192, 747)
+    alife():create("bratok_bar_06", vector():set(75.141, -0.994, 87.444), 1060981, 747)
+    alife():create("bratok_bar_07", vector():set(78.864, -0.994, 97.436), 1066597, 747)
 end
 
 function spawn_mk_marodery()
-    local sim = alife()
-    sim:create("maroder_boss", vector():set(2.141, 13.304, 55.790), 946258, 738)
-    sim:create("maroder_stalk1", vector():set(17.532, 9.893, 32.586), 970455, 742)
-    sim:create("maroder_stalk2", vector():set(18.996, 9.703, 28.667), 972595, 742)
-    sim:create("maroder_stalk3", vector():set(8.579, 15.803, 59.236), 956201, 741)
-    sim:create("maroder_stalk4", vector():set(8.481, 15.778, 55.055), 956195, 741)
-    sim:create("maroder_stalk5", vector():set(11.177, 14.637, 36.860), 960535, 741)
-    sim:create("maroder_stalk6", vector():set(15.179, 14.198, 23.764), 967138, 742)
-    sim:create("maroder_stalk7", vector():set(22.006, 13.837, 34.452), 976937, 741)
+    alife():create("maroder_boss", vector():set(2.141, 13.304, 55.790), 946258, 738)
+    alife():create("maroder_stalk1", vector():set(17.532, 9.893, 32.586), 970455, 742)
+    alife():create("maroder_stalk2", vector():set(18.996, 9.703, 28.667), 972595, 742)
+    alife():create("maroder_stalk3", vector():set(8.579, 15.803, 59.236), 956201, 741)
+    alife():create("maroder_stalk4", vector():set(8.481, 15.778, 55.055), 956195, 741)
+    alife():create("maroder_stalk5", vector():set(11.177, 14.637, 36.860), 960535, 741)
+    alife():create("maroder_stalk6", vector():set(15.179, 14.198, 23.764), 967138, 742)
+    alife():create("maroder_stalk7", vector():set(22.006, 13.837, 34.452), 976937, 741)
 end
 
 function spawn_maroder_kamp()
-    local sim = alife()
-    sim:create("maroder_kamp_01", vector():set(-219.379, 31.390, 277.473), 603039, 693)
-    sim:create("maroder_kamp_01", vector():set(-219.379, 31.390, 277.473), 603039, 693)
-    sim:create("maroder_kamp_01", vector():set(-219.379, 31.390, 277.473), 603039, 693)
-    sim:create("maroder_kamp_01", vector():set(-219.379, 31.390, 277.473), 603039, 693)
-    sim:create("maroder_kamp_02", vector():set(-226.021, 30.686, 277.309), 592697, 693)
+    alife():create("maroder_kamp_01", vector():set(-219.379, 31.390, 277.473), 603039, 693)
+    alife():create("maroder_kamp_01", vector():set(-219.379, 31.390, 277.473), 603039, 693)
+    alife():create("maroder_kamp_01", vector():set(-219.379, 31.390, 277.473), 603039, 693)
+    alife():create("maroder_kamp_01", vector():set(-219.379, 31.390, 277.473), 603039, 693)
+    alife():create("maroder_kamp_02", vector():set(-226.021, 30.686, 277.309), 592697, 693)
 end
 
 function spawn_maroder_kamp1()
-    local sim = alife()
-    sim:create("maroder_kamp_03", vector():set(-234.272, 16.970, 239.207), 579703, 688)
-    sim:create("maroder_kamp_03", vector():set(-234.272, 16.975, 239.207), 579703, 688)
-    sim:create("maroder_kamp_03", vector():set(-234.272, 16.980, 239.207), 579703, 688)
+    alife():create("maroder_kamp_03", vector():set(-234.272, 16.970, 239.207), 579703, 688)
+    alife():create("maroder_kamp_03", vector():set(-234.272, 16.975, 239.207), 579703, 688)
+    alife():create("maroder_kamp_03", vector():set(-234.272, 16.980, 239.207), 579703, 688)
 end
 
 function spawn_bar_ataka()
-    local sim = alife()
-    sim:create("bar_ataka_kamp1", vector():set(340.149, 5.665, -160.555), 74608, 170)
-    sim:create("bar_ataka_kamp2", vector():set(340.149, 5.670, -160.555), 74608, 170)
-    sim:create("bar_ataka_kamp3", vector():set(350.282, 6.386, -159.099), 75995, 285)
-    sim:create("bar_ataka_kamp4", vector():set(340.149, 5.680, -160.555), 74608, 170)
-    sim:create("bar_ataka_kamp5", vector():set(347.409, 5.723, -161.311), 75518, 285)
+    alife():create("bar_ataka_kamp1", vector():set(340.149, 5.665, -160.555), 74608, 170)
+    alife():create("bar_ataka_kamp2", vector():set(340.149, 5.670, -160.555), 74608, 170)
+    alife():create("bar_ataka_kamp3", vector():set(350.282, 6.386, -159.099), 75995, 285)
+    alife():create("bar_ataka_kamp4", vector():set(340.149, 5.680, -160.555), 74608, 170)
+    alife():create("bar_ataka_kamp5", vector():set(347.409, 5.723, -161.311), 75518, 285)
 
-    sim:create("bar_pseudodog_00", vector():set(147.057, -0.002, 60.302), 39508, 229)
-    sim:create("bar_pseudodog_01", vector():set(147.057, -0.002, 60.302), 39508, 229)
-    sim:create("bar_pseudodog_02", vector():set(147.057, -0.002, 60.302), 39508, 229)
+    alife():create("bar_pseudodog_00", vector():set(147.057, -0.002, 60.302), 39508, 229)
+    alife():create("bar_pseudodog_01", vector():set(147.057, -0.002, 60.302), 39508, 229)
+    alife():create("bar_pseudodog_02", vector():set(147.057, -0.002, 60.302), 39508, 229)
 
-    sim:create("bar_boar_00", vector():set(116.854, -1.704, 110.345), 34147, 215)
-    sim:create("bar_boar_01", vector():set(116.854, -1.704, 110.345), 34147, 215)
+    alife():create("bar_boar_00", vector():set(116.854, -1.704, 110.345), 34147, 215)
+    alife():create("bar_boar_01", vector():set(116.854, -1.704, 110.345), 34147, 215)
 
-    sim:create("bar_flesh_00", vector():set(96.053, 0.001, 140.647), 31046, 221)
-    sim:create("bar_flesh_01", vector():set(96.053, 0.001, 140.647), 31046, 221)
+    alife():create("bar_flesh_00", vector():set(96.053, 0.001, 140.647), 31046, 221)
+    alife():create("bar_flesh_01", vector():set(96.053, 0.001, 140.647), 31046, 221)
 
-    sim:create("bar_snork_00", vector():set(173.559, 0.001, 106.600), 44047, 188)
-    sim:create("bar_snork_01", vector():set(173.559, 0.001, 106.600), 44047, 188)
-    sim:create("bar_snork_02", vector():set(173.559, 0.001, 106.600), 44047, 188)
+    alife():create("bar_snork_00", vector():set(173.559, 0.001, 106.600), 44047, 188)
+    alife():create("bar_snork_01", vector():set(173.559, 0.001, 106.600), 44047, 188)
+    alife():create("bar_snork_02", vector():set(173.559, 0.001, 106.600), 44047, 188)
 
-    sim:create("bar_izlom_00", vector():set(193.071, 0.105, 50.217), 46225, 178)
+    alife():create("bar_izlom_00", vector():set(193.071, 0.105, 50.217), 46225, 178)
 
-    sim:create("bar_burer_00", vector():set(136.267, -4.823, 22.333), 36899, 238)
+    alife():create("bar_burer_00", vector():set(136.267, -4.823, 22.333), 36899, 238)
 
-    sim:create("bar_dog_00", vector():set(56.935, 0.001, 157.422), 26467, 242)
-    sim:create("bar_dog_01", vector():set(56.935, 0.001, 157.422), 26467, 242)
-    sim:create("bar_dog_02", vector():set(56.935, 0.001, 157.422), 26467, 242)
-    sim:create("bar_dog_03", vector():set(56.935, 0.001, 157.422), 26467, 242)
+    alife():create("bar_dog_00", vector():set(56.935, 0.001, 157.422), 26467, 242)
+    alife():create("bar_dog_01", vector():set(56.935, 0.001, 157.422), 26467, 242)
+    alife():create("bar_dog_02", vector():set(56.935, 0.001, 157.422), 26467, 242)
+    alife():create("bar_dog_03", vector():set(56.935, 0.001, 157.422), 26467, 242)
 end
 
 function spawn_bar_ataka2()
-    local sim = alife()
-    sim:create("bar_pseudodog_03", vector():set(147.057, -0.002, 60.302), 39508, 229)
-    sim:create("bar_pseudodog_04", vector():set(147.057, -0.002, 60.302), 39508, 229)
+    alife():create("bar_pseudodog_03", vector():set(147.057, -0.002, 60.302), 39508, 229)
+    alife():create("bar_pseudodog_04", vector():set(147.057, -0.002, 60.302), 39508, 229)
 
-    sim:create("bar_boar_02", vector():set(116.854, -1.704, 110.345), 34147, 215)
-    sim:create("bar_boar_03", vector():set(116.854, -1.704, 110.345), 34147, 215)
+    alife():create("bar_boar_02", vector():set(116.854, -1.704, 110.345), 34147, 215)
+    alife():create("bar_boar_03", vector():set(116.854, -1.704, 110.345), 34147, 215)
 
-    sim:create("bar_flesh_02", vector():set(96.053, 0.001, 140.647), 31046, 221)
-    sim:create("bar_flesh_03", vector():set(96.053, 0.001, 140.647), 31046, 221)
-    sim:create("bar_chimera_01", vector():set(96.053, 0.025, 140.647), 31046, 221)
+    alife():create("bar_flesh_02", vector():set(96.053, 0.001, 140.647), 31046, 221)
+    alife():create("bar_flesh_03", vector():set(96.053, 0.001, 140.647), 31046, 221)
+    alife():create("bar_chimera_01", vector():set(96.053, 0.025, 140.647), 31046, 221)
 
-    sim:create("bar_snork_03", vector():set(173.559, 0.001, 106.600), 44047, 188)
-    sim:create("bar_snork_04", vector():set(173.559, 0.001, 106.600), 44047, 188)
-    sim:create("bar_snork_05", vector():set(173.559, 0.001, 106.600), 44047, 188)
+    alife():create("bar_snork_03", vector():set(173.559, 0.001, 106.600), 44047, 188)
+    alife():create("bar_snork_04", vector():set(173.559, 0.001, 106.600), 44047, 188)
+    alife():create("bar_snork_05", vector():set(173.559, 0.001, 106.600), 44047, 188)
 
-    sim:create("bar_izlom_01", vector():set(193.071, 0.105, 50.217), 46225, 178)
-    sim:create("bar_krovosos_01", vector():set(193.071, 0.125, 50.217), 46225, 178)
+    alife():create("bar_izlom_01", vector():set(193.071, 0.105, 50.217), 46225, 178)
+    alife():create("bar_krovosos_01", vector():set(193.071, 0.125, 50.217), 46225, 178)
 
-    sim:create("bar_dog_04", vector():set(56.935, 0.001, 157.422), 26467, 242)
-    sim:create("bar_dog_05", vector():set(56.935, 0.001, 157.422), 26467, 242)
-    sim:create("bar_dog_06", vector():set(56.935, 0.001, 157.422), 26467, 242)
-    sim:create("bar_dog_07", vector():set(56.935, 0.001, 157.422), 26467, 242)
+    alife():create("bar_dog_04", vector():set(56.935, 0.001, 157.422), 26467, 242)
+    alife():create("bar_dog_05", vector():set(56.935, 0.001, 157.422), 26467, 242)
+    alife():create("bar_dog_06", vector():set(56.935, 0.001, 157.422), 26467, 242)
+    alife():create("bar_dog_07", vector():set(56.935, 0.001, 157.422), 26467, 242)
 end
 
 function spawn_bar_ataka3()
-    local sim = alife()
-    sim:create("bar_kontra_01", vector():set(102.831, 0.001, 60.295), 32255, 225)
-    sim:create("bar_burer_01", vector():set(224.539, -5.449, 127.013), 56633, 199)
-    sim:create("bar_podmoga_01", vector():set(87.961, 0.001, 140.668), 30506, 221)
-    sim:create("bar_podmoga_02", vector():set(87.961, 0.015, 140.668), 30506, 221)
-    sim:create("bar_podmoga_03", vector():set(87.961, 0.025, 140.668), 30506, 221)
-    sim:create("bar_podmoga_04", vector():set(87.961, 0.035, 140.668), 30506, 221)
-    sim:create("bar_podmoga_05", vector():set(87.961, 0.045, 140.668), 30506, 221)
+    alife():create("bar_kontra_01", vector():set(102.831, 0.001, 60.295), 32255, 225)
+    alife():create("bar_burer_01", vector():set(224.539, -5.449, 127.013), 56633, 199)
+    alife():create("bar_podmoga_01", vector():set(87.961, 0.001, 140.668), 30506, 221)
+    alife():create("bar_podmoga_02", vector():set(87.961, 0.015, 140.668), 30506, 221)
+    alife():create("bar_podmoga_03", vector():set(87.961, 0.025, 140.668), 30506, 221)
+    alife():create("bar_podmoga_04", vector():set(87.961, 0.035, 140.668), 30506, 221)
+    alife():create("bar_podmoga_05", vector():set(87.961, 0.045, 140.668), 30506, 221)
 end
 
 function spawn_bar_leha()
     local obj = alife():create("bar_leha", vector():set(174.062, 0.100, 43.090), 44088, 259)
-    local params = amk.read_stalker_params(obj)
-    params.custom = "[logic]\ncfg = scripts\\foto\\bar\\leha.ltx"
-    params.sid = 30334
-    amk.write_stalker_params(params, obj)
+    obj.custom_data = "[logic]\ncfg = scripts\\foto\\bar\\leha.ltx"
+    alife():assign_story_id(obj.id, story_ids.bar_leha)
 end
 
 function spawn_bar_diggers1()
     local obj = alife():create("bar_digger_kamp5", vector():set(162.295, -21.000, 89.868), 42245, 183)
-    local params = amk.read_stalker_params(obj)
-    params.custom = "[logic]\ncfg = scripts\\foto\\bar\\bar_digger_kamp5.ltx"
-    params.sid = 30318
-    amk.write_stalker_params(params, obj)
+    obj.custom_data = "[logic]\ncfg = scripts\\foto\\bar\\bar_digger_kamp5.ltx"
+    alife():assign_story_id(obj.id, story_ids.brom)
 end
 
 function spawn_bar_diggers2()
-    local sim = alife()
-    sim:create("bar_digger_kamp1", vector():set(162.295, -21.000, 89.868), 42245, 183)
-    sim:create("bar_digger_kamp2", vector():set(162.295, -21.000, 89.868), 42245, 183)
-    sim:create("bar_digger_kamp3", vector():set(162.295, -21.000, 89.868), 42245, 183)
-    sim:create("bar_digger_kamp4", vector():set(162.295, -21.000, 89.868), 42245, 183)
-    sim:create("bar_digger_kamp6", vector():set(162.295, -21.000, 89.868), 42245, 183)
+    alife():create("bar_digger_kamp1", vector():set(162.295, -21.000, 89.868), 42245, 183)
+    alife():create("bar_digger_kamp2", vector():set(162.295, -21.000, 89.868), 42245, 183)
+    alife():create("bar_digger_kamp3", vector():set(162.295, -21.000, 89.868), 42245, 183)
+    alife():create("bar_digger_kamp4", vector():set(162.295, -21.000, 89.868), 42245, 183)
+    alife():create("bar_digger_kamp6", vector():set(162.295, -21.000, 89.868), 42245, 183)
 end
 
 function teleport_bar_arena()
@@ -1761,16 +1437,15 @@ function teleport_arena_bar2()
 end
 
 function levsha_bar_have(task, info)
-    local actor = db.actor
-    if not actor then
+    if not db.actor then
         return false
     end
-    if actor:has_info("bar_ataka_01_mesto") then
+    if db.actor:has_info("bar_ataka_01_mesto") then
 
-        local bpos = actor:position()
-        for a = 1, 65534 do
+        local bpos = db.actor:position()
+        for a = 1, 65535 do
             local obj = level.object_by_id(a)
-            if obj and obj:id() ~= actor:id() then
+            if obj and obj:id() ~= db.actor:id() then
                 if IsMonster(obj) then
                     local dist = obj:position():distance_to(bpos)
                     if dist < 150 then
@@ -1787,20 +1462,19 @@ function levsha_bar_have(task, info)
             end
         end
 
-        return actor:give_info_portion("levsha_start_dialog_have")
+        return db.actor:give_info_portion("levsha_start_dialog_have")
     end
     return false
 end
 
 function prom_desant_have(task, info)
-    local actor = db.actor
-    if actor and actor:has_info("prom_desant1_dead") and actor:has_info("prom_desant2_dead") and
-        actor:has_info("prom_desant3_dead") and actor:has_info("prom_desant4_dead") and
-        actor:has_info("prom_desant5_dead") and actor:has_info("prom_desant6_dead") and
-        actor:has_info("prom_desant7_dead") and actor:has_info("prom_desant8_dead") and
-        actor:has_info("prom_desant9_dead") and actor:has_info("prom_desant10_dead") and
-        actor:has_info("prom_desant11_dead") and actor:has_info("prom_desant12_dead") then
-        return actor:give_info_portion("prom_desant_have")
+    if db.actor and db.actor:has_info("prom_desant1_dead") and db.actor:has_info("prom_desant2_dead") and
+        db.actor:has_info("prom_desant3_dead") and db.actor:has_info("prom_desant4_dead") and
+        db.actor:has_info("prom_desant5_dead") and db.actor:has_info("prom_desant6_dead") and
+        db.actor:has_info("prom_desant7_dead") and db.actor:has_info("prom_desant8_dead") and
+        db.actor:has_info("prom_desant9_dead") and db.actor:has_info("prom_desant10_dead") and
+        db.actor:has_info("prom_desant11_dead") and db.actor:has_info("prom_desant12_dead") then
+        return db.actor:give_info_portion("prom_desant_have")
     end
     return false
 end
@@ -1861,9 +1535,8 @@ local tbl_decoder = {{
 }}
 function spawn_levsha_decoder()
     local a = tbl_decoder[math.random(table.getn(tbl_decoder))]
-    local sim = alife()
-    sim:create("levsha_decoder", vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv)
-    local sobj = sim:create("space_restrictor", vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv)
+    alife():create("levsha_decoder", vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv)
+    local sobj = alife():create("space_restrictor", vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv)
     if sobj then
         local custom = "[logic]\ncfg = scripts\\foto\\bar\\detector_restr.ltx"
         val_test.rewrite_restrictor(sobj, custom, 10.0)
@@ -1871,13 +1544,12 @@ function spawn_levsha_decoder()
 end
 
 function decoder_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("levsha_decoder", 1)
+    dialogs.relocate_item_section(first_speaker, "levsha_decoder", "out", 1)
 end
 
 function spawn_prom_bandity()
-    local sim = alife()
-    sim:create("bandit_zasada01", vector():set(15.515, 16.255, -414.688), 223693, 973)
-    sim:create("bandit_zasada02", vector():set(20.963, 17.075, -407.302), 235242, 973)
+    alife():create("bandit_zasada01", vector():set(15.515, 16.255, -414.688), 223693, 973)
+    alife():create("bandit_zasada02", vector():set(20.963, 17.075, -407.302), 235242, 973)
 end
 
 function pda_lukash_dal(first_speaker, second_speaker)
@@ -1885,51 +1557,45 @@ function pda_lukash_dal(first_speaker, second_speaker)
 end
 
 function pda_lukash_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("pda_lukash", 1)
+    dialogs.relocate_item_section(first_speaker, "pda_lukash", "out", 1)
 end
 
 function spawn_shurup_boyci()
-    local sim = alife()
-    sim:create("dezertir_ataka01", vector():set(114.286, 4.986, 171.928), 416291, 1080)
-    sim:create("dezertir_ataka02", vector():set(114.286, 4.987, 171.928), 416291, 1080)
-    sim:create("dezertir_ataka03", vector():set(114.286, 4.988, 171.928), 416291, 1080)
-    sim:create("dezertir_ataka04", vector():set(114.286, 4.989, 171.928), 416291, 1080)
-    sim:create("dezertir_ataka05", vector():set(114.286, 4.990, 171.928), 416291, 1080)
-    sim:create("dezertir_ataka06", vector():set(114.286, 4.991, 171.928), 416291, 1080)
+    alife():create("dezertir_ataka01", vector():set(114.286, 4.986, 171.928), 416291, 1080)
+    alife():create("dezertir_ataka02", vector():set(114.286, 4.987, 171.928), 416291, 1080)
+    alife():create("dezertir_ataka03", vector():set(114.286, 4.988, 171.928), 416291, 1080)
+    alife():create("dezertir_ataka04", vector():set(114.286, 4.989, 171.928), 416291, 1080)
+    alife():create("dezertir_ataka05", vector():set(114.286, 4.990, 171.928), 416291, 1080)
+    alife():create("dezertir_ataka06", vector():set(114.286, 4.991, 171.928), 416291, 1080)
 end
 
 function spawn_shurup_boyci2()
-    local sim = alife()
-    sim:create("dezertir_ataka07", vector():set(-18.392, 4.039, 297.944), 157791, 933)
-    sim:create("dezertir_ataka08", vector():set(5.230, 13.995, 267.742), 202113, 950)
+    alife():create("dezertir_ataka07", vector():set(-18.392, 4.039, 297.944), 157791, 933)
+    alife():create("dezertir_ataka08", vector():set(5.230, 13.995, 267.742), 202113, 950)
 end
 
 function spawn_prom_desant1()
-    local sim = alife()
-    sim:create("prom_desant1", vector():set(-3.572, 3.050, 298.506), 184177, 933)
-    sim:create("prom_desant2", vector():set(-3.572, 3.053, 298.506), 184177, 933)
-    sim:create("prom_desant3", vector():set(-3.572, 3.058, 298.506), 184177, 933)
-    sim:create("prom_desant4", vector():set(-3.572, 3.063, 298.506), 184177, 933)
-    sim:create("prom_desant5", vector():set(-22.691, 3.040, 244.191), 151150, 935)
-    sim:create("prom_desant6", vector():set(-22.691, 3.040, 244.191), 151150, 935)
+    alife():create("prom_desant1", vector():set(-3.572, 3.050, 298.506), 184177, 933)
+    alife():create("prom_desant2", vector():set(-3.572, 3.053, 298.506), 184177, 933)
+    alife():create("prom_desant3", vector():set(-3.572, 3.058, 298.506), 184177, 933)
+    alife():create("prom_desant4", vector():set(-3.572, 3.063, 298.506), 184177, 933)
+    alife():create("prom_desant5", vector():set(-22.691, 3.040, 244.191), 151150, 935)
+    alife():create("prom_desant6", vector():set(-22.691, 3.040, 244.191), 151150, 935)
 end
 
 function spawn_prom_desant2()
-    local sim = alife()
-    sim:create("prom_desant7", vector():set(5.297, 3.035, 257.191), 203604, 950)
-    sim:create("prom_desant8", vector():set(5.297, 3.038, 257.191), 203604, 950)
-    sim:create("prom_desant9", vector():set(5.297, 3.042, 257.191), 203604, 950)
-    sim:create("prom_desant10", vector():set(5.297, 3.045, 257.191), 203604, 950)
-    sim:create("prom_desant11", vector():set(-22.691, 3.040, 244.191), 151150, 935)
-    sim:create("prom_desant12", vector():set(-22.691, 3.040, 244.191), 151150, 935)
+    alife():create("prom_desant7", vector():set(5.297, 3.035, 257.191), 203604, 950)
+    alife():create("prom_desant8", vector():set(5.297, 3.038, 257.191), 203604, 950)
+    alife():create("prom_desant9", vector():set(5.297, 3.042, 257.191), 203604, 950)
+    alife():create("prom_desant10", vector():set(5.297, 3.045, 257.191), 203604, 950)
+    alife():create("prom_desant11", vector():set(-22.691, 3.040, 244.191), 151150, 935)
+    alife():create("prom_desant12", vector():set(-22.691, 3.040, 244.191), 151150, 935)
 end
 
 function sound_heli_prom()
     local snd_obj = xr_sound.get_safe_sound_object([[new\vertushka_prom]])
     snd_obj:play(db.actor, 0, sound_object.s2d)
-    news_manager.send_tip(db.actor,
-        "Всем внимание! Засёк вертушку. Чуть севернее фабрики", nil, nil,
-        10000)
+    news_manager.send_tip(db.actor, "Всем внимание! Засёк вертушку. Чуть севернее фабрики", nil, nil, 10000)
 end
 
 -----------------------------lukash_boom-----------------------------
@@ -1942,7 +1608,6 @@ function spawn_pda_boom()
 end
 
 function lukash_boom()
-    local sim = alife()
     local bpos, dist, obj
     local bomb = amk.load_variable("bomb")
     if bomb == nil then
@@ -1959,7 +1624,7 @@ function lukash_boom()
     if id == nil then
         return
     end
-    local sobj = sim:object(id)
+    local sobj = alife():object(id)
     local bobj = level.object_by_id(id)
     if bobj then
         bpos = bobj:position()
@@ -1970,7 +1635,7 @@ function lukash_boom()
         return
     end
     if sobj then
-        sim:release(sobj)
+        alife():release(sobj)
     end
     amk.del_variable("bomb")
     amk_particle.amk_particle({
@@ -1978,8 +1643,8 @@ function lukash_boom()
         pos = bpos,
         sound = [[weapons\t_rgd5_explosion]]
     })
-    -- for a=0,65534 do --вариант счастья и для ГГ
-    for a = 1, 65534 do
+
+    for a = 1, 65535 do
         obj = level.object_by_id(a)
         if obj then
             if IsMonster(obj) or IsStalker(obj) then
@@ -2005,10 +1670,9 @@ end
 ----------------------------------lukash_angar---------------------------------
 
 function lukash_angar_have(task, info)
-    local actor = db.actor
-    if actor and actor:has_info("lukash_mesto") and actor:has_info("max_mesto") and actor:has_info("skryaga_mesto") and
-        actor:has_info("shurup_mesto") then
-        return actor:give_info_portion("lukash_first_dialog_have")
+    if db.actor and db.actor:has_info("lukash_mesto") and db.actor:has_info("max_mesto") and db.actor:has_info("skryaga_mesto") and
+        db.actor:has_info("shurup_mesto") then
+        return db.actor:give_info_portion("lukash_first_dialog_have")
     end
     return false
 end
@@ -2036,7 +1700,7 @@ function brown_poslanie_dal(first_speaker, second_speaker)
 end
 
 function brown_poslanie_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("pismo_brown", 1)
+    dialogs.relocate_item_section(second_speaker, "pismo_brown", "out", 1)
 end
 
 function mario_snaryaga_dal(first_speaker, second_speaker)
@@ -2060,33 +1724,31 @@ end
 --------------------------------mk_propusk-------------------------------
 
 function propusk_vorota_have(first_speaker, second_speaker)
-    return new_dialog.item_much("propusk", 1) ~= false
+    return new_dialog.count_item("propusk", 1)
 end
 
 function propusk_vorota_net(first_speaker, second_speaker)
-    local actor = db.actor
-    return actor and not actor:object("propusk")
+    return db.actor and not db.actor:object("propusk")
 end
 
 function propusk_done(first_speaker, second_speaker)
-    new_dialog.out_item_much("propusk", 1)
+    dialogs.relocate_item_section(first_speaker, "propusk", "out", 1)
 end
 
 function propusk_baza_have(first_speaker, second_speaker)
-    return new_dialog.item_much("cognac", 1) ~= false
+    return new_dialog.count_item("cognac", 1)
 end
 
 function propusk_baza_net(first_speaker, second_speaker)
-    local actor = db.actor
-    return actor and not actor:object("cognac")
+    return db.actor and not db.actor:object("cognac")
 end
 
 function propusk1_have(first_speaker, second_speaker)
-    return new_dialog.item_much("propusk1", 1) ~= false
+    return new_dialog.count_item("propusk1", 1)
 end
 
 function propusk1_done(first_speaker, second_speaker)
-    new_dialog.out_item_much("propusk1", 1)
+    dialogs.relocate_item_section(first_speaker, "propusk1", "out", 1)
 end
 
 function ataka_nachalo()
@@ -2095,7 +1757,7 @@ function ataka_nachalo()
 end
 
 function maloy_pda_have(first_speaker, second_speaker)
-    return new_dialog.item_much("maloy_pda", 1) ~= false
+    return new_dialog.count_item("maloy_pda", 1)
 end
 
 function add_maloy_habar()
@@ -2108,7 +1770,7 @@ function brigadir_obrez_dal(first_speaker, second_speaker)
 end
 
 function maloy_pda_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("maloy_pda", 1)
+    dialogs.relocate_item_section(second_speaker, "maloy_pda", "out", 1)
     dialogs.relocate_item_section(second_speaker, "vodka", "in", 1)
     dialogs.relocate_item_section(second_speaker, "tush", "in", 1)
     dialogs.relocate_item_section(second_speaker, "kilka", "in", 1)
@@ -2121,11 +1783,11 @@ function sahar_crystalls_dal(first_speaker, second_speaker)
 end
 
 function sahar_absolut_have(first_speaker, second_speaker)
-    return new_dialog.item_much("ks_absolut_11", 1) ~= false
+    return new_dialog.count_item("ks_absolut_11", 1)
 end
 
 function sahar_absolut_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("ks_absolut_11", 1)
+    dialogs.relocate_item_section(second_speaker, "ks_absolut_11", "out", 1)
     dialogs.relocate_item_section(second_speaker, "medkit_scientic", "in", 1)
     dialogs.relocate_item_section(second_speaker, "antirad", "in", 1)
     dialogs.relocate_item_section(second_speaker, "bandage", "in", 2)
@@ -2133,19 +1795,13 @@ function sahar_absolut_otdal(first_speaker, second_speaker)
 end
 
 function lavrov_spawn()
-    local sobj = alife():create("lavrov_trup", vector():set(58.024, 1.686, -243.371), 1272861, 798)
-    if sobj then
-        local tbl = amk.read_stalker_params(sobj)
-        -- tbl.sid = 30333
-        tbl.sid = 9703
-        tbl.health = 0
-        tbl.updhealth = 0
-        amk.write_stalker_params(tbl, sobj)
-    end
+    local obj = alife():create("lavrov_trup", vector():set(58.024, 1.686, -243.371), 1272861, 798)
+    alife():assign_story_id(obj.id, story_ids.lavrov_trup)
+    obj:set_health(0)
 end
 
 function lavrov_pda_have(first_speaker, second_speaker)
-    return new_dialog.item_much("lavrov_pda", 1) ~= false
+    return new_dialog.count_item("lavrov_pda", 1)
 end
 
 function lavrov_pda()
@@ -2154,7 +1810,7 @@ function lavrov_pda()
 end
 
 function lavrov_pda_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("lavrov_pda", 1)
+    dialogs.relocate_item_section(first_speaker, "lavrov_pda", "out", 1)
     dialogs.relocate_item_section(second_speaker, "sard", "in", 1)
     dialogs.relocate_item_section(second_speaker, "bread", "in", 1)
     dialogs.relocate_item_section(second_speaker, "kolbasa", "in", 1)
@@ -2166,11 +1822,11 @@ function doctor_pismo_dal(first_speaker, second_speaker)
 end
 
 function doctor_pismo_have(first_speaker, second_speaker)
-    return new_dialog.item_much("doctor_pismo", 1) ~= false
+    return new_dialog.count_item("doctor_pismo", 1)
 end
 
 function doctor_pismo_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("doctor_pismo", 1)
+    dialogs.relocate_item_section(first_speaker, "doctor_pismo", "out", 1)
 end
 
 -- Таймер отложенного диалога
@@ -2190,50 +1846,49 @@ function sms_crystalls()
 end
 
 function antirad_10_have()
-    return new_dialog.item_much("antirad", 10) ~= false
+    return new_dialog.count_item("antirad", 10)
 end
 
 function antirad_10_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("antirad", 10)
+    dialogs.relocate_item_section(first_speaker, "antirad", "out", 10)
     dialogs.relocate_item_section(second_speaker, "flyer", "in", 1)
 end
 
 function flyer_have()
-    return new_dialog.item_much("flyer", 1) ~= false
+    return new_dialog.count_item("flyer", 1)
 end
 
 function flyer_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("flyer", 1)
+    dialogs.relocate_item_section(first_speaker, "flyer", "out", 1)
 end
 
 function devki_vodka_barter(first_speaker, second_speaker)
-    new_dialog.out_item_much("info_actor", 1)
+    dialogs.relocate_item_section(first_speaker, "info_actor", "out", 1)
     dialogs.relocate_item_section(second_speaker, "vodka", "in", 2)
 end
 
 function devki_money1_barter(first_speaker, second_speaker)
-    new_dialog.out_item_much("info_actor", 1)
+    dialogs.relocate_item_section(first_speaker, "info_actor", "out", 1)
     dialogs.relocate_money(first_speaker, 1000, "in")
 end
 
 function devki_eda_barter(first_speaker, second_speaker)
-    new_dialog.out_item_much("info_actor", 1)
+    dialogs.relocate_item_section(first_speaker, "info_actor", "out", 1)
     dialogs.relocate_item_section(second_speaker, "conserva", "in", 2)
     dialogs.relocate_item_section(second_speaker, "bread", "in", 1)
 end
 
 function devki_money2_barter(first_speaker, second_speaker)
-    new_dialog.out_item_much("info_actor", 1)
+    dialogs.relocate_item_section(first_speaker, "info_actor", "out", 1)
     dialogs.relocate_money(first_speaker, 500, "in")
 end
 
 function vodka_zhila_have(first_speaker, second_speaker)
-    return new_dialog.item_much("vodka", 1) ~= false
+    return new_dialog.count_item("vodka", 1)
 end
 
 function vodka_zhila_net(first_speaker, second_speaker)
-    local actor = db.actor
-    return actor and not actor:object("vodka")
+    return db.actor and not db.actor:object("vodka")
 end
 
 function drink_vodka()
@@ -2241,29 +1896,26 @@ function drink_vodka()
 end
 
 function pivo_zhorik_have(first_speaker, second_speaker)
-    local actor = db.actor
-    return actor and (actor:object("old_melnik") or actor:object("chernigov"))
+    return db.actor and (db.actor:object("old_melnik") or db.actor:object("chernigov"))
 end
 
 function pivo_zhorik_net(first_speaker, second_speaker)
-    local actor = db.actor
-    return actor and not actor:object("old_melnik") and not actor:object("chernigov")
+    return db.actor and not db.actor:object("old_melnik") and not db.actor:object("chernigov")
 end
 
 function drink_zhorik_pivo(first_speaker, second_speaker)
-    local actor = db.actor
     local buhnul = false
-    if actor then
+    if db.actor then
         -- проверяем наличие пива у актёра
         local has_melnik, has_chernigov = has_drink()
         -- old_melnik предпочтительней
         if has_melnik then
-            actor:eat(actor:object("old_melnik"))
+            db.actor:eat(db.actor:object("old_melnik"))
             return true
         end
         -- если old_melnik нет, то пьём chernigov
         if has_chernigov then
-            actor:eat(actor:object("chernigov"))
+            db.actor:eat(db.actor:object("chernigov"))
             buhnul = true
         end
     end
@@ -2271,11 +1923,10 @@ function drink_zhorik_pivo(first_speaker, second_speaker)
 end
 
 function has_drink()
-    local actor = db.actor
     local item, has_melnik, has_chernigov, sect
-    local count = actor:object_count()
+    local count = db.actor:object_count()
     for i = 1, count do
-        item = actor:object(i)
+        item = db.actor:object(i)
         sect = item and item:section()
         if sect then
             if sect == "old_melnik" then
@@ -2290,15 +1941,14 @@ function has_drink()
 end
 
 function havchik_have()
-    return new_dialog.item_much("vodka", 2) ~= false and new_dialog.item_much("sguschenka", 1) ~= false and
-               new_dialog.item_much("gribki", 1) ~= false and new_dialog.item_much("ogirki", 1) ~= false
+    return new_dialog.count_item("vodka", 2) and new_dialog.count_item("sguschenka", 1) and new_dialog.count_item("gribki", 1) and new_dialog.count_item("ogirki", 1)
 end
 
 function havchik_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("vodka", 2)
-    new_dialog.out_item_much("sguschenka", 1)
-    new_dialog.out_item_much("gribki", 1)
-    new_dialog.out_item_much("ogirki", 1)
+    dialogs.relocate_item_section(first_speaker, "vodka", "out", 2)
+    dialogs.relocate_item_section(first_speaker, "sguschenka", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "gribki", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "ogirki", "out", 1)
     dialogs.relocate_item_section(second_speaker, "antirad", "in", 10)
 end
 
@@ -2307,11 +1957,11 @@ function spawn_bratok_dusha()
 end
 
 function glushak_have()
-    return new_dialog.item_much("sil_9x19", 1) ~= false
+    return new_dialog.count_item("sil_9x19", 1)
 end
 
 function glushak_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("sil_9x19", 1)
+    dialogs.relocate_item_section(first_speaker, "sil_9x19", "out", 1)
     dialogs.relocate_item_section(second_speaker, "sguschenka", "in", 1)
     dialogs.relocate_money(first_speaker, 1000, "in")
 end
@@ -2321,31 +1971,31 @@ function brown_cognak_dal(first_speaker, second_speaker)
 end
 
 function brown_cognak_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("cognac", 1)
+    dialogs.relocate_item_section(first_speaker, "cognac", "out", 1)
 end
 
 function pda_agent_mk_have()
-    return new_dialog.item_much("pda_agent_mk", 1) ~= false
+    return new_dialog.count_item("pda_agent_mk", 1)
 end
 
 function pda_agent_mk_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("pda_agent_mk", 1)
+    dialogs.relocate_item_section(first_speaker, "pda_agent_mk", "out", 1)
 end
 
 function pda_agent_prom_have()
-    return new_dialog.item_much("pda_agent_prom", 1) ~= false
+    return new_dialog.count_item("pda_agent_prom", 1)
 end
 
 function pda_agent_prom_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("pda_agent_prom", 1)
+    dialogs.relocate_item_section(first_speaker, "pda_agent_prom", "out", 1)
 end
 
 function pda_agent_aver_have()
-    return new_dialog.item_much("pda_agent_aver", 1) ~= false
+    return new_dialog.count_item("pda_agent_aver", 1)
 end
 
 function pda_agent_aver_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("pda_agent_aver", 1)
+    dialogs.relocate_item_section(first_speaker, "pda_agent_aver", "out", 1)
 end
 
 -- Таймер отложенного диалога
@@ -2359,63 +2009,42 @@ function timer_brown_over(actor, npc)
 end
 
 function sms_brown()
-    news_manager.send_tip(db.actor,
-        "%c[255,255,75,75]Это Браун.\\nЗайди ко мне, Фотограф, мы расшифровали информацию.",
-        nil, nil, 15000)
-end
-
-local action = false
-
-function mk_distance_check()
-    if has_alife_info("zhorik_start_dialog_start") and not has_alife_info("brown_start_dialog_mesto") then
-        local mk_zhorik = level_object_by_sid(30342)
-        if mk_zhorik then
-            if distance_between(mk_zhorik, db.actor) < 30 and action == false then
-                db.actor:give_info_portion("agent_mk_proval")
-                action = true
-            elseif distance_between(mk_zhorik, db.actor) > 30 and action == true then
-                action = false
-            end
-        end
-    end
+    news_manager.send_tip(db.actor, "%c[255,255,75,75]Это Браун.\\nЗайди ко мне, Фотограф, мы расшифровали информацию.", nil, nil, 15000)
 end
 
 function del_agent_mk()
-    local sim = alife()
-    local sobj = sim:story_object(30343)
-    if sobj then
-        sim:release(sobj, true)
+    local obj = alife():story_object(story_ids.mk_agent)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 function del_agent_mk_ohr1()
-    local sim = alife()
-    local sobj = sim:story_object(30344)
-    if sobj then
-        sim:release(sobj, true)
+    local obj = alife():story_object(story_ids.mk_agent_ohr1)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 function del_agent_mk_ohr2()
-    local sim = alife()
-    local sobj = sim:story_object(30345)
-    if sobj then
-        sim:release(sobj, true)
+    local obj = alife():story_object(story_ids.mk_agent_ohr2)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 function recepts_ks_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("info_actor", 1)
+    dialogs.relocate_item_section(first_speaker, "info_actor", "out", 1)
     dialogs.relocate_money(first_speaker, 25000, "in")
 end
 
 function recepts_tn_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("info_actor", 1)
+    dialogs.relocate_item_section(first_speaker, "info_actor", "out", 1)
     dialogs.relocate_money(first_speaker, 50000, "in")
 end
 
 function recepts_og_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("info_actor", 1)
+    dialogs.relocate_item_section(first_speaker, "info_actor", "out", 1)
     dialogs.relocate_money(first_speaker, 75000, "in")
 end
 
@@ -2429,15 +2058,14 @@ function povar_havchik_dal(first_speaker, second_speaker)
 end
 
 function povar_havchik_have()
-    return new_dialog.item_much("shprots", 1) ~= false and new_dialog.item_much("gribki", 1) ~= false and
-               new_dialog.item_much("tush", 2) ~= false and new_dialog.item_much("meat", 1) ~= false
+    return new_dialog.count_item("shprots", 1) and new_dialog.count_item("gribki", 1) and new_dialog.count_item("tush", 2) and new_dialog.count_item("meat", 1)
 end
 
 function povar_havchik_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("shprots", 2)
-    new_dialog.out_item_much("gribki", 1)
-    new_dialog.out_item_much("tush", 2)
-    new_dialog.out_item_much("meat", 1)
+    dialogs.relocate_item_section(first_speaker, "shprots", "out", 2)
+    dialogs.relocate_item_section(first_speaker, "gribki", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "tush", "out", 2)
+    dialogs.relocate_item_section(first_speaker, "meat", "out", 1)
 end
 
 function sd_brown_dal(first_speaker, second_speaker)
@@ -2445,9 +2073,7 @@ function sd_brown_dal(first_speaker, second_speaker)
 end
 
 function sms_brown_proval()
-    news_manager.send_tip(db.actor,
-        "%c[255,255,75,75]Фотограф не успел сделать фотографии базы.", nil, nil,
-        15000)
+    news_manager.send_tip(db.actor, "%c[255,255,75,75]Фотограф не успел сделать фотографии базы.", nil, nil, 15000)
 end
 
 function check_time_road()
@@ -2456,36 +2082,32 @@ end
 
 function sms_road()
     db.actor:give_info_portion("edik_need_help")
-    news_manager.send_tip(db.actor,
-        "Всем, кто меня слышит!\\nНа нас напала стая диких кабанов.\\nПросим помощи.",
-        nil, nil, 15000)
+    news_manager.send_tip(db.actor, "Всем, кто меня слышит!\\nНа нас напала стая диких кабанов.\\nПросим помощи.", nil, nil, 15000)
 end
 
 function spawn_road_ataka()
-    local sim = alife()
-    sim:create("road_ataka01", vector():set(-174.745, -3.273, -58.291), 189012, 1530)
-    sim:create("road_ataka02", vector():set(-174.745, -3.273, -58.291), 189012, 1530)
-    sim:create("road_ataka03", vector():set(-174.745, -3.273, -58.291), 189012, 1530)
-    sim:create("road_ataka04", vector():set(-10.466, -3.022, -22.739), 445573, 1588)
-    sim:create("road_ataka05", vector():set(-10.466, -3.022, -22.739), 445573, 1588)
-    sim:create("road_ataka06", vector():set(-10.466, -3.022, -22.739), 445573, 1588)
-    sim:create("road_ataka07", vector():set(-74.790, -3.020, -41.815), 345474, 1566)
-    sim:create("road_ataka08", vector():set(-74.790, -3.020, -41.815), 345474, 1566)
-    sim:create("road_ataka09", vector():set(-74.790, -3.020, -41.815), 345474, 1566)
-    sim:create("road_ataka10", vector():set(-111.835, -3.011, 32.715), 287961, 1551)
-    sim:create("road_ataka11", vector():set(-111.835, -3.011, 32.715), 287961, 1551)
-    sim:create("road_ataka12", vector():set(-111.835, -3.011, 32.715), 287961, 1551)
+    alife():create("road_ataka01", vector():set(-174.745, -3.273, -58.291), 189012, 1530)
+    alife():create("road_ataka02", vector():set(-174.745, -3.273, -58.291), 189012, 1530)
+    alife():create("road_ataka03", vector():set(-174.745, -3.273, -58.291), 189012, 1530)
+    alife():create("road_ataka04", vector():set(-10.466, -3.022, -22.739), 445573, 1588)
+    alife():create("road_ataka05", vector():set(-10.466, -3.022, -22.739), 445573, 1588)
+    alife():create("road_ataka06", vector():set(-10.466, -3.022, -22.739), 445573, 1588)
+    alife():create("road_ataka07", vector():set(-74.790, -3.020, -41.815), 345474, 1566)
+    alife():create("road_ataka08", vector():set(-74.790, -3.020, -41.815), 345474, 1566)
+    alife():create("road_ataka09", vector():set(-74.790, -3.020, -41.815), 345474, 1566)
+    alife():create("road_ataka10", vector():set(-111.835, -3.011, 32.715), 287961, 1551)
+    alife():create("road_ataka11", vector():set(-111.835, -3.011, 32.715), 287961, 1551)
+    alife():create("road_ataka12", vector():set(-111.835, -3.011, 32.715), 287961, 1551)
 end
 
 function edik_need_have(task, info)
-    local actor = db.actor
-    if actor and actor:has_info("road_ataka01_dead") and actor:has_info("road_ataka02_dead") and
-        actor:has_info("road_ataka03_dead") and actor:has_info("road_ataka04_dead") and
-        actor:has_info("road_ataka05_dead") and actor:has_info("road_ataka06_dead") and
-        actor:has_info("road_ataka07_dead") and actor:has_info("road_ataka08_dead") and
-        actor:has_info("road_ataka09_dead") and actor:has_info("road_ataka10_dead") and
-        actor:has_info("road_ataka11_dead") and actor:has_info("road_ataka12_dead") then
-        return actor:give_info_portion("edik_need_have")
+    if db.actor and db.actor:has_info("road_ataka01_dead") and db.actor:has_info("road_ataka02_dead") and
+        db.actor:has_info("road_ataka03_dead") and db.actor:has_info("road_ataka04_dead") and
+        db.actor:has_info("road_ataka05_dead") and db.actor:has_info("road_ataka06_dead") and
+        db.actor:has_info("road_ataka07_dead") and db.actor:has_info("road_ataka08_dead") and
+        db.actor:has_info("road_ataka09_dead") and db.actor:has_info("road_ataka10_dead") and
+        db.actor:has_info("road_ataka11_dead") and db.actor:has_info("road_ataka12_dead") then
+        return db.actor:give_info_portion("edik_need_have")
     end
     return false
 end
@@ -2499,11 +2121,11 @@ function spawn_dez_mask()
 end
 
 function edik_aptechki_have()
-    return new_dialog.item_much("medkit_army", 3) ~= false
+    return new_dialog.count_item("medkit_army", 3)
 end
 
 function edik_aptechki_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("medkit_army", 3)
+    dialogs.relocate_item_section(first_speaker, "medkit_army", "out", 2)
 end
 
 function plan_baza_dal(first_speaker, second_speaker)
@@ -2511,17 +2133,17 @@ function plan_baza_dal(first_speaker, second_speaker)
 end
 
 function sd_brown_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("foto_01", 2)
-    new_dialog.out_item_much("ammo_sd", 1)
-    new_dialog.out_item_much("plan_baza", 1)
+    dialogs.relocate_item_section(first_speaker, "foto_01", "out", 2)
+    dialogs.relocate_item_section(first_speaker, "ammo_sd", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "plan_baza", "out", 1)
 end
 
 function dron_plasch_have()
-    return new_dialog.item_much("bandit_master_outfit", 1) ~= false
+    return new_dialog.count_item("bandit_master_outfit", 1)
 end
 
 function dron_plasch_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("bandit_master_outfit", 1)
+    dialogs.relocate_item_section(first_speaker, "bandit_master_outfit", "out", 1)
     dialogs.relocate_money(first_speaker, 3000, "in")
 end
 
@@ -2536,9 +2158,7 @@ function timer_brown2_over(actor, npc)
 end
 
 function sms_brown2()
-    news_manager.send_tip(db.actor,
-        "%c[255,255,75,75]Это генерал Смит.\\nЗайди ко мне, Фотограф, есть дело.",
-        nil, nil, 15000)
+    news_manager.send_tip(db.actor, "%c[255,255,75,75]Это генерал Смит.\\nЗайди ко мне, Фотограф, есть дело.", nil, nil, 15000)
 end
 
 function haron_case_dal(first_speaker, second_speaker)
@@ -2546,110 +2166,56 @@ function haron_case_dal(first_speaker, second_speaker)
 end
 
 function haron_case_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("haron_case", 1)
+    dialogs.relocate_item_section(first_speaker, "haron_case", "out", 1)
 end
 
 function spawn_prom_agent()
-    local sim = alife()
-    sim:create("agent_prom", vector():set(96.855, -0.175, 89.715), 387615, 1065)
-    sim:create("agent_prom_ohr1", vector():set(96.845, -0.175, 89.735), 387615, 1065)
-    sim:create("agent_prom_ohr2", vector():set(96.835, -0.175, 89.720), 387615, 1065)
-    sim:create("agent_prom_ohr3", vector():set(96.855, -0.175, 89.750), 387615, 1065)
-end
+    local obj = alife():create("agent_prom", vector():set(96.855, -0.175, 89.715), 387615, 1065)
+    alife():assign_story_id(obj.id, story_ids.agent_prom)
 
-function del_agents_prom()
-    local sim = alife()
-    local sobj
-    for a = 1, 65534 do
-        sobj = sim:object(a)
-        if sobj and string.find(sobj:name(), "agent_prom") then
-            sim:release(sobj, true)
-        end
-    end
+    local obj = alife():create("agent_prom_ohr1", vector():set(96.845, -0.175, 89.735), 387615, 1065)
+    alife():assign_story_id(obj.id, story_ids.agent_prom_ohr1)
+
+    local obj = alife():create("agent_prom_ohr2", vector():set(96.835, -0.175, 89.720), 387615, 1065)
+    alife():assign_story_id(obj.id, story_ids.agent_prom_ohr2)
+
+    local obj = alife():create("agent_prom_ohr3", vector():set(96.855, -0.175, 89.750), 387615, 1065)
+    alife():assign_story_id(obj.id, story_ids.agent_prom_ohr3)
 end
 
 function del_agent_prom()
-    --     если товарищ из аллспавна, то нужно так:
-    --    local sim = alife()
-    --    local sobj = sim:object("agent_prom")
-    --    if sobj then
-    --        sim:release(sobj,true)
-    --    end
-
-    local sim = alife()
-    local sobj
-    for a = 1, 65534 do
-        sobj = sim:object(a)
-        if sobj and sobj:section_name() == "agent_prom" then
-            sim:release(sobj, true)
-            break
-        end
+    local obj = alife():story_object(story_ids.agent_prom)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 function del_agent_prom_ohr1()
-    --     если товарищ из аллспавна, то нужно так:
-    --    local sim = alife()
-    --    local sobj = sim:object("agent_prom_ohr1")
-    --    if sobj then
-    --        sim:release(sobj,true)
-    --    end
-
-    local sim = alife()
-    local sobj
-    for a = 1, 65534 do
-        local sobj = sim:object(a)
-        if sobj and sobj:section_name() == "agent_prom_ohr1" then
-            sim:release(sobj, true)
-            break
-        end
+    local obj = alife():story_object(story_ids.agent_prom_ohr1)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 function del_agent_prom_ohr2()
-    --     если товарищ из аллспавна, то нужно так:
-    --    local sim = alife()
-    --    local sobj = sim:object("agent_prom_ohr2")
-    --    if sobj then
-    --        sim:release(sobj,true)
-    --    end
-
-    local sim = alife()
-    local sobj
-    for a = 1, 65534 do
-        local sobj = sim:object(a)
-        if sobj and sobj:section_name() == "agent_prom_ohr2" then
-            sim:release(sobj, true)
-            break
-        end
+    local obj = alife():story_object(story_ids.agent_prom_ohr2)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 function del_agent_prom_ohr3()
-    --     если товарищ из аллспавна, то нужно так:
-    --    local sim = alife()
-    --    local sobj = sim:object("agent_prom_ohr3")
-    --    if sobj then
-    --        sim:release(sobj,true)
-    --    end
-
-    local sim = alife()
-    local sobj
-    for a = 1, 65534 do
-        local sobj = sim:object(a)
-        if sobj and sobj:section_name() == "agent_prom_ohr3" then
-            sim:release(sobj, true)
-            break
-        end
+    local obj = alife():story_object(story_ids.agent_prom_ohr3)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 function spawn_aver_agent()
-    local sim = alife()
-    sim:create("agent_aver", vector():set(-252.594, -4.440, -299.363), 436636, 780)
-    sim:create("agent_aver_ohr1", vector():set(-252.580, -4.440, -299.363), 436636, 780)
-    sim:create("agent_aver_ohr2", vector():set(-252.594, -4.440, -299.323), 436636, 780)
-    sim:create("agent_aver_ohr3", vector():set(-252.550, -4.440, -299.393), 436636, 780)
+    alife():create("agent_aver", vector():set(-252.594, -4.440, -299.363), 436636, 780)
+    alife():create("agent_aver_ohr1", vector():set(-252.580, -4.440, -299.363), 436636, 780)
+    alife():create("agent_aver_ohr2", vector():set(-252.594, -4.440, -299.323), 436636, 780)
+    alife():create("agent_aver_ohr3", vector():set(-252.550, -4.440, -299.393), 436636, 780)
 end
 
 function spawn_metka_lch_prom()
@@ -2689,13 +2255,13 @@ function del_metka_strelka_aver()
 end
 
 function levsha_crystalls_have()
-    return new_dialog.item_much("ks_reagent_06", 1) ~= false and new_dialog.item_much("ks_active_09", 1) ~= false
+    return new_dialog.count_item("ks_reagent_06", 1) and new_dialog.count_item("ks_active_09", 1)
 end
 
 function levsha_crystalls_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("ks_reagent_06", 1)
-    new_dialog.out_item_much("ks_active_09", 1)
-    new_dialog.out_item_much("wpn_foto", 1)
+    dialogs.relocate_item_section(first_speaker, "ks_reagent_06", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "ks_active_09", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "wpn_foto", "out", 1)
 end
 
 -- Таймер отложенного диалога
@@ -2709,9 +2275,7 @@ function timer_levsha_over(actor, npc)
 end
 
 function sms_levsha()
-    news_manager.send_tip(db.actor,
-        "%c[255,255,75,75]Это Левша.\\nФотограф, у меня всё готово.\\nЗаходи за своей фотокамерой.",
-        nil, nil, 30000)
+    news_manager.send_tip(db.actor, "%c[255,255,75,75]Это Левша.\\nФотограф, у меня всё готово.\\nЗаходи за своей фотокамерой.", nil, nil, 30000)
 end
 
 function levsha_fotik_dal(first_speaker, second_speaker)
@@ -2839,20 +2403,18 @@ local tbl_pashalky = {{
     item = "mg_2_ruk"
 }}
 function pashalky_spawn()
-    local sim = alife()
     for k, v in ipairs(tbl_pashalky) do
-        sim:create(v.item, vector():set(v.position.x, v.position.y, v.position.z), v.lv, v.gv)
+        alife():create(v.item, vector():set(v.position.x, v.position.y, v.position.z), v.lv, v.gv)
     end
 end
 
 -- Процедура детектирования новых аномалий
 function ZondDrop(obj)
     local section = obj:section()
-    local actor = db.actor
     -- если это наш зонд
-    if actor and section and section == "anom_zond" then
+    if db.actor and section and section == "anom_zond" then
         -- ищем ближайшую аномалию
-        local id, pos, radius, dist = amk_anoms.get_nearest_anomaly(actor)
+        local id, pos, radius, dist = amk_anoms.get_nearest_anomaly(db.actor)
         -- если есть аномалия
         if id then
             local sect = level.object_by_id(id):section()
@@ -2878,7 +2440,7 @@ function ZondDrop(obj)
                     -- удаляем зонд
                     remove_obj(obj, "new\\zond")
                     if not has_alife_info(info) and has_anom_pribor("anom_pribor") then
-                        actor:give_info_portion(info)
+                        db.actor:give_info_portion(info)
                         sms_new_anom()
                     end
                     -- Сразу проверим на исследование всех видов аномалий и выдадим поршень
@@ -2887,7 +2449,7 @@ function ZondDrop(obj)
                         has_alife_info("mincer_first_research") and has_alife_info("mosquit_first_research") and
                         has_alife_info("ice_first_research") and has_alife_info("gravi_first_research") then
                         -- все виды аномалий исследованы
-                        actor:give_info_portion("all_anom_research")
+                        db.actor:give_info_portion("all_anom_research")
                     end
                 end
             end
@@ -2914,46 +2476,40 @@ function kruglov_pribory_dal(first_speaker, second_speaker)
 end
 
 function kruglov_pribor_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("anom_pribor", 1)
+    dialogs.relocate_item_section(first_speaker, "anom_pribor", "out", 1)
 end
 
 -- проверка на наличие прибора
 function has_anom_pribor()
-    local actor = db.actor
-    return actor and actor:object("anom_pribor")
+    return db.actor and not db.actor:object("anom_pribor")
 end
 
 -- проверка на отсутствие прибора
 function not_anom_pribor()
-    local actor = db.actor
-    return actor and not actor:object("anom_pribor")
+    return db.actor and not db.actor:object("anom_pribor")
 end
 
 -- проверка на наличие зондов
 function has_zond()
-    local actor = db.actor
-    return actor and actor:object("anom_zond") and actor:object("anom_pribor")
+    return db.actor and not db.actor:object("anom_zond") and db.actor:object("anom_pribor")
 end
 
 -- проверка на отсутствие зондов
 function not_zond()
-    local actor = db.actor
-    return actor and not actor:object("anom_zond") and actor:object("anom_pribor")
+    return db.actor and not db.actor:object("anom_zond") and db.actor:object("anom_pribor")
 end
 
 function dell_GG_zond()
-    local actor = db.actor
-    local sim = alife()
     local id, item, sect, sobj
-    local count = actor:object_count()
+    local count = db.actor:object_count()
     for i = 0, count - 1 do
-        item = actor:object(i)
+        item = db.actor:object(i)
         sect = item and item:section()
         if sect and sect == 'anom_zond' then
             id = (item:id() or item.id)
-            sobj = id and sim:object(id)
+            sobj = id and alife():object(id)
             if sobj then
-                sim:release(sobj, true)
+                alife():release(sobj, true)
             end
         end
     end
@@ -2974,47 +2530,35 @@ function timer_kruglov_over(actor, npc)
 end
 
 function sms_kruglov_detector()
-    news_manager.send_tip(db.actor,
-        "%c[255,255,75,75]Это Круглов.\\nФотограф, твой Детектор Аномалий готов.\\nЗаходи в гости за подарком.",
-        nil, nil, 20000)
+    news_manager.send_tip(db.actor, "%c[255,255,75,75]Это Круглов.\\nФотограф, твой Детектор Аномалий готов.\\nЗаходи в гости за подарком.", nil, nil, 20000)
 end
 
 -- Вывод сообщения о новой аномалии
 function sms_new_anom()
-    news_manager.send_tip(db.actor,
-        "%c[255,255,140,30]Исследован новый тип аномалий.\\n%c[default]Информация доступна для просмотра в ПДА, в разделе 'Аномалии'.",
-        nil, nil, 12000)
+    news_manager.send_tip(db.actor, "%c[255,255,140,30]Исследован новый тип аномалий.\\n%c[default]Информация доступна для просмотра в ПДА, в разделе 'Аномалии'.", nil, nil, 12000)
 end
 -- вывод сообщения о новом мутанте
 function sms_new_mutant()
-    news_manager.send_tip(db.actor,
-        "%c[255,255,140,30]Исследован новый мутант.\\n%c[default]Информация доступна для просмотра в ПДА, в разделе 'Мутанты'.",
-        nil, nil, 12000)
+    news_manager.send_tip(db.actor, "%c[255,255,140,30]Исследован новый мутант.\\n%c[default]Информация доступна для просмотра в ПДА, в разделе 'Мутанты'.", nil, nil, 12000)
 end
 
 function del_haron_new()
-    local sim = alife()
-    local sobj = sim:story_object(30255)
-    if sobj then
-        sim:release(sobj, true)
+    local obj = alife():story_object(story_ids.haron_new)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 function spawn_haron_dva()
-    local sobj = alife():create("haron_dva", vector():set(9.693, 56.273, 48.022), 5205, 2417)
-    if sobj then
-        local params = amk.read_stalker_params(sobj)
-        params.custom = "[logic]\ncfg = scripts\\foto\\haron_dva.ltx"
-        params.sid = 30242
-        amk.write_stalker_params(params, sobj)
-    end
+    local obj = alife():create("haron_dva", vector():set(9.693, 56.273, 48.022), 5205, 2417)
+    obj.custom_data = "[logic]\ncfg = scripts\\foto\\haron_dva.ltx"
+    alife():assign_story_id(obj.id, story_ids.haron_dva)
 end
 
 function del_brown()
-    local sim = alife()
-    local sobj = sim:story_object(30184)
-    if sobj then
-        sim:release(sobj, true)
+    local obj = alife():story_object(story_ids.brown)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
@@ -3029,28 +2573,21 @@ function timer_osvedom_over(actor, npc)
 end
 
 function sms_osvedom()
-    news_manager.send_tip(db.actor,
-        "%c[255,255,75,75]Это Связной.\\nФотограф, есть важная информация для тебя.\\nНайдёшь меня в Аномальном Лесу, в хижине Лесника.",
-        nil, nil, 20000)
+    news_manager.send_tip(db.actor, "%c[255,255,75,75]Это Связной.\\nФотограф, есть важная информация для тебя.\\nНайдёшь меня в Аномальном Лесу, в хижине Лесника.", nil, nil, 20000)
     db.actor:give_info_portion("osvedom_vyzov1")
 end
 
 function del_osvedom()
-    local sim = alife()
-    local sobj = sim:story_object(30300)
-    if sobj then
-        sim:release(sobj, true)
+    local obj = alife():story_object(story_ids.osvedom)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 function spawn_osvedom_new()
-    local sobj = alife():create("osvedom_new", vector():set(-311.602, 1.118, -28.234), 335440, 777)
-    if sobj then
-        local params = amk.read_stalker_params(sobj)
-        params.custom = "[logic]\ncfg = scripts\\foto\\osvedom_new.ltx"
-        params.sid = 30222
-        amk.write_stalker_params(params, sobj)
-    end
+    local obj = alife():create("osvedom_new", vector():set(-311.602, 1.118, -28.234), 335440, 777)
+    obj.custom_data = "[logic]\ncfg = scripts\\foto\\osvedom_new.ltx"
+    alife():assign_story_id(obj.id, story_ids.osvedom_new)
 end
 
 function spawn_lesnik_mafon()
@@ -3058,27 +2595,24 @@ function spawn_lesnik_mafon()
 end
 
 function spawn_les_hunters()
-    local sim = alife()
-    sim:create("hunter_mafon", vector():set(140.506, -3.445, -309.708), 1114372, 788)
-    sim:create("hunter1", vector():set(142.003, -4.094, -302.350), 1116793, 788)
-    sim:create("hunter2", vector():set(141.915, -4.200, -298.922), 1116798, 788)
-    sim:create("hunter_patrul", vector():set(130.743, -5.208, -284.496), 1097236, 788)
-    -- sim:create("sutuly",vector():set(147.818,-2.872,-309.515),1126422,788)
-    -- sim:create("mazay",vector():set(139.077,-4.003,-309.409),1111936,788)
-    -- sim:create("grek",vector():set(133.612,-4.454,-298.870),1101975,788)
-    -- sim:create("zahar",vector():set(133.612,-4.454,-298.870),1109484,788)
+    alife():create("hunter_mafon", vector():set(140.506, -3.445, -309.708), 1114372, 788)
+    alife():create("hunter1", vector():set(142.003, -4.094, -302.350), 1116793, 788)
+    alife():create("hunter2", vector():set(141.915, -4.200, -298.922), 1116798, 788)
+    alife():create("hunter_patrul", vector():set(130.743, -5.208, -284.496), 1097236, 788)
+    -- alife():create("sutuly",vector():set(147.818,-2.872,-309.515),1126422,788)
+    -- alife():create("mazay",vector():set(139.077,-4.003,-309.409),1111936,788)
+    -- alife():create("grek",vector():set(133.612,-4.454,-298.870),1101975,788)
+    -- alife():create("zahar",vector():set(133.612,-4.454,-298.870),1109484,788)
 end
 
 function x16_uchen_spawn()
-    local sim = alife()
-    sim:create("zombik_stalk10", vector():set(15.855, 5.585, 13.628), 4500, 317)
-    sim:create("zombik_stalk12", vector():set(15.855, 5.585, 13.628), 4500, 317)
-    sim:create("zombik_stalk11", vector():set(-6.552, 1.119, -14.854), 4181, 316)
-    sim:create("zombik_stalk12", vector():set(-6.552, 1.119, -14.854), 4181, 316)
+    alife():create("zombik_stalk10", vector():set(15.855, 5.585, 13.628), 4500, 317)
+    alife():create("zombik_stalk12", vector():set(15.855, 5.585, 13.628), 4500, 317)
+    alife():create("zombik_stalk11", vector():set(-6.552, 1.119, -14.854), 4181, 316)
+    alife():create("zombik_stalk12", vector():set(-6.552, 1.119, -14.854), 4181, 316)
 end
 
 function x16_claw_spawn()
-    -- alife():create("x16_claw",vector():set(-91.620,21.577,-20.946),710,310)
     alife():create("x16_claw", vector():set(-68.608, 19.395, -10.728), 1084, 310)
 end
 
@@ -3087,10 +2621,9 @@ function x16_burer_spawn()
 end
 
 function x10_uchen_spawn()
-    local sim = alife()
-    sim:create("zombik_stalk10", vector():set(-5.623, -8.989, -6.587), 4680, 447)
-    sim:create("zombik_stalk12", vector():set(-5.623, -8.989, -6.587), 4680, 447)
-    sim:create("zombik_stalk10", vector():set(-1.357, -9.013, -20.782), 5510, 357)
+    alife():create("zombik_stalk10", vector():set(-5.623, -8.989, -6.587), 4680, 447)
+    alife():create("zombik_stalk12", vector():set(-5.623, -8.989, -6.587), 4680, 447)
+    alife():create("zombik_stalk10", vector():set(-1.357, -9.013, -20.782), 5510, 357)
 end
 
 function x10_fire_spawn()
@@ -3098,9 +2631,8 @@ function x10_fire_spawn()
 end
 
 function x10_krovososy_spawn()
-    local sim = alife()
-    sim:create("bloodsucker_normal", vector():set(0.243, -9.974, 25.858), 5988, 376)
-    sim:create("bloodsucker_strong", vector():set(0.243, -9.974, 25.858), 5988, 376)
+    alife():create("bloodsucker_normal", vector():set(0.243, -9.974, 25.858), 5988, 376)
+    alife():create("bloodsucker_strong", vector():set(0.243, -9.974, 25.858), 5988, 376)
 end
 
 function prip_podzemka_spawn()
@@ -3108,10 +2640,9 @@ function prip_podzemka_spawn()
 end
 
 function aver_peschera_spawn()
-    local sim = alife()
-    sim:create("aver_polter01", vector():set(26.716, -23.028, -178.879), 913199, 785)
-    sim:create("aver_polter02", vector():set(26.716, -23.028, -178.879), 913199, 785)
-    sim:create("aver_polter03", vector():set(17.954, -23.148, -177.681), 897965, 785)
+    alife():create("aver_polter01", vector():set(26.716, -23.028, -178.879), 913199, 785)
+    alife():create("aver_polter02", vector():set(26.716, -23.028, -178.879), 913199, 785)
+    alife():create("aver_polter03", vector():set(17.954, -23.148, -177.681), 897965, 785)
 end
 
 local tbl_seaman_ruk = {{
@@ -3153,17 +2684,13 @@ function seaman_ruk_spawn()
 end
 
 function pruha_spawn()
-    local sobj = alife():create("pruha", vector():set(-54.098, -3.205, -283.581), 858711, 726)
-    if sobj then
-        local params = amk.read_stalker_params(sobj)
-        params.custom = "[logic]\ncfg = scripts\\foto\\pruha.ltx"
-        params.sid = 30349
-        amk.write_stalker_params(params, sobj)
-    end
+    local obj = alife():create("pruha", vector():set(-54.098, -3.205, -283.581), 858711, 726)
+    obj.custom_data = "[logic]\ncfg = scripts\\foto\\pruha.ltx"
+    alife():assign_story_id(obj.id, story_ids.pruha)
 end
 
 function photos_10_have()
-    return new_dialog.item_much("foto_news", 10) ~= false
+    return new_dialog.count_item("foto_news", 10)
 end
 
 function pruha_trade(first_speaker, second_speaker)
@@ -3223,11 +2750,10 @@ function smith_dal_main(first_speaker, second_speaker)
 end
 
 function fotki_have(task, info)
-    local actor = db.actor
-    if actor and actor:has_info("foto3_sdelal") and actor:has_info("foto4_sdelal") and actor:has_info("foto5_sdelal") and
-        actor:has_info("foto6_sdelal") and actor:has_info("foto7_sdelal") and actor:has_info("foto8_sdelal") and
-        actor:has_info("foto9_sdelal") and actor:has_info("foto10_sdelal") then
-        return actor:give_info_portion("vse_foto_sdelal")
+    if db.actor and db.actor:has_info("foto3_sdelal") and db.actor:has_info("foto4_sdelal") and db.actor:has_info("foto5_sdelal") and
+        db.actor:has_info("foto6_sdelal") and db.actor:has_info("foto7_sdelal") and db.actor:has_info("foto8_sdelal") and
+        db.actor:has_info("foto9_sdelal") and db.actor:has_info("foto10_sdelal") then
+        return db.actor:give_info_portion("vse_foto_sdelal")
     end
     return false
 end
@@ -3242,15 +2768,9 @@ function osvedom_aver_dal(first_speaker, second_speaker)
 end
 
 function hunter_trup_spawn()
-    local sobj = alife():create("hunter_trup", vector():set(15.409, -20.976, -159.711), 893038, 796)
-    if sobj then
-        local tbl = amk.read_stalker_params(sobj)
-        -- tbl.sid = 30236
-        tbl.sid = 9706
-        tbl.health = 0
-        tbl.updhealth = 0
-        amk.write_stalker_params(tbl, sobj)
-    end
+    local obj = alife():create("hunter_trup", vector():set(15.409, -20.976, -159.711), 893038, 796)
+    alife():assign_story_id(obj.id, story_ids.hunter_trup)
+    obj:set_health(0)
 end
 
 function create_katakomby_restr()
@@ -3260,33 +2780,31 @@ function create_katakomby_restr()
 end
 
 function aver_katakomby_spawn()
-    local sim = alife()
-    sim:create("aver_polter04", vector():set(19.966, -20.350, -160.411), 901765, 796)
-    sim:create("aver_polter05", vector():set(19.965, -20.355, -160.412), 901765, 796)
+    alife():create("aver_polter04", vector():set(19.966, -20.350, -160.411), 901765, 796)
+    alife():create("aver_polter05", vector():set(19.965, -20.355, -160.412), 901765, 796)
 end
 
 function hunter_case_have()
-    return new_dialog.item_much("hunter_case", 1) ~= false
+    return new_dialog.count_item("hunter_case", 1)
 end
 
 function hunter_case_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("hunter_case", 1)
+    dialogs.relocate_item_section(first_speaker, "hunter_case", "out", 1)
 end
 
 function tayniki_vino_spawn()
-    local sim = alife()
-    sim:create("taynik_vino1", vector():set(40.234, 1.488, -104.645), 1232646, 798)
-    sim:create("taynik_vino2", vector():set(53.097, 1.488, -130.390), 1262142, 798)
-    sim:create("taynik_vino3", vector():set(50.169, 1.488, -108.107), 1255947, 798)
+    alife():create("taynik_vino1", vector():set(40.234, 1.488, -104.645), 1232646, 798)
+    alife():create("taynik_vino2", vector():set(53.097, 1.488, -130.390), 1262142, 798)
+    alife():create("taynik_vino3", vector():set(50.169, 1.488, -108.107), 1255947, 798)
 end
 
 function filin_vino_have()
-    return new_dialog.item_much("kagor", 1) ~= false and new_dialog.item_much("beloe", 1) ~= false
+    return new_dialog.count_item("kagor", 1) and new_dialog.count_item("beloe", 1)
 end
 
 function filin_vino_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("kagor", 1)
-    new_dialog.out_item_much("beloe", 1)
+    dialogs.relocate_item_section(first_speaker, "kagor", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "beloe", "out", 1)
 end
 
 function create_filin_restr()
@@ -3297,9 +2815,8 @@ end
 
 function check_filin_pribor()
     if inventory.belt["filin_pribor"] and inventory.belt["filin_pribor"] > 0 then
-        local actor = db.actor
-        if actor and not actor:has_info("filin_pribor_est") then
-            actor:give_info_portion("filin_pribor_est")
+        if db.actor and not db.actor:has_info("filin_pribor_est") then
+            db.actor:give_info_portion("filin_pribor_est")
         end
     end
 end
@@ -3309,30 +2826,30 @@ function filin_priemnik_spawn()
 end
 
 function filin_pribor_have()
-    return new_dialog.item_much("filin_pribor", 1) ~= false
+    return new_dialog.count_item("filin_pribor", 1)
 end
 
 function filin_priemnik_have()
-    return new_dialog.item_much("filin_priemnik", 1) ~= false
+    return new_dialog.count_item("filin_priemnik", 1)
 end
 
 function filin_pribory_have()
-    return new_dialog.item_much("filin_pribor", 1) ~= false and new_dialog.item_much("filin_priemnik", 1) ~= false
+    return new_dialog.count_item("filin_pribor", 1) and new_dialog.count_item("filin_priemnik", 1)
 end
 
 function filin_pribory_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("filin_pribor", 1)
-    new_dialog.out_item_much("filin_priemnik", 1)
+    dialogs.relocate_item_section(first_speaker, "filin_pribor", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "filin_priemnik", "out", 1)
     dialogs.relocate_item_section(second_speaker, "wpn_saiga12", "in", 1)
     dialogs.relocate_item_section(second_speaker, "ammo_12x76_zhekan", "in", 2)
 end
 
 function brom_mg_dialog_have(first_speaker, second_speaker)
-    return new_dialog.item_much("anom_remover", 1) ~= false
+    return new_dialog.count_item("anom_remover", 1)
 end
 
 function brom_mg_dialog_done(first_speaker, second_speaker)
-    new_dialog.out_item_much("anom_remover", 1)
+    dialogs.relocate_item_section(first_speaker, "anom_remover", "out", 1)
     dialogs.relocate_item_section(second_speaker, "wpn_taurus", "in", 1)
     dialogs.relocate_item_section(second_speaker, "ammo_357_ap_mag", "in", 6)
 end
@@ -3378,24 +2895,17 @@ function genrih_dal(first_speaker, second_speaker)
 end
 
 function wulf_trup_spawn()
-    local sobj = alife():create("wulf_trup", vector():set(-250.064, -0.591, -244.744), 87324, 1200)
-    if sobj then
-        local tbl = amk.read_stalker_params(sobj)
-        -- tbl.sid = 30303
-        tbl.sid = 9705
-        tbl.health = 0
-        tbl.updhealth = 0
-        amk.write_stalker_params(tbl, sobj)
-    end
+    local obj = alife():create("wulf_trup", vector():set(-250.064, -0.591, -244.744), 87324, 1200)
+    alife():assign_story_id(obj.id, story_ids.wulf_trup)
+    obj:set_health(0)
 end
 
 function wulf_case_have()
-    return new_dialog.item_much("wulf_case", 1) ~= false and new_dialog.item_much("statya", 1) ~= false and
-               new_dialog.item_much("zapis_w", 1) ~= false and new_dialog.item_much("pribor_wu", 1) ~= false
+    return new_dialog.count_item("wulf_case", 1) and new_dialog.count_item("statya", 1) and new_dialog.count_item("zapis_w", 1) and new_dialog.count_item("pribor_wu", 1)
 end
 
 function wulf_case_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("wulf_case", 1)
+    dialogs.relocate_item_section(first_speaker, "wulf_case", "out", 2)
     dialogs.relocate_item_section(second_speaker, "filin_pribor", "in", 1)
 end
 
@@ -3405,10 +2915,9 @@ function check_time_mg_vyhod()
 end
 
 function metka_vzryv_spawn()
-    local sim = alife()
-    sim:create("metka_vzryv1", vector():set(-90.723, 1.725, 31.610), 219719, 1262)
-    sim:create("metka_vzryv2", vector():set(-86.609, 2.189, -69.922), 223598, 1269)
-    sim:create("metka_vzryv3", vector():set(-105.022, 2.188, -66.359), 205675, 1249)
+    alife():create("metka_vzryv1", vector():set(-90.723, 1.725, 31.610), 219719, 1262)
+    alife():create("metka_vzryv2", vector():set(-86.609, 2.189, -69.922), 223598, 1269)
+    alife():create("metka_vzryv3", vector():set(-105.022, 2.188, -66.359), 205675, 1249)
 end
 
 function sms_mg_vyhod()
@@ -3417,33 +2926,29 @@ function sms_mg_vyhod()
 end
 
 function del_mg_barokamera00()
-    local sim = alife()
-    local sobj = sim:object("mg_barokamera00")
-    if sobj then
-        sim:release(sobj, true)
+    local obj = alife():object("mg_barokamera00")
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 function del_mg_barokamera04()
-    local sim = alife()
-    local sobj = sim:object("mg_barokamera04")
-    if sobj then
-        sim:release(sobj, true)
+    local obj = alife():object("mg_barokamera04")
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 function del_mg_barokamera03()
-    local sim = alife()
-    local sobj = sim:object("mg_barokamera03")
-    if sobj then
-        sim:release(sobj, true)
+    local obj = alife():object("mg_barokamera03")
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 function mg_vzryv1()
-    local sim = alife()
     local obj, sobj
-    for a = 1, 65534 do
+    for a = 1, 65535 do
         -- ищем на текущем уровне
         obj = level.object_by_id(a)
         if obj and obj:section() == "metka_vzryv1" then
@@ -3452,9 +2957,9 @@ function mg_vzryv1()
                 pos = obj:position(),
                 sound = "weapons\\t_rgd5_explosion"
             })
-            sobj = sim:object(obj:id())
+            sobj = alife():object(obj:id())
             if sobj then
-                sim:release(sobj, true)
+                alife():release(sobj, true)
             end
             break
         end
@@ -3462,9 +2967,8 @@ function mg_vzryv1()
 end
 
 function mg_vzryv2()
-    local sim = alife()
     local obj, sobj
-    for a = 1, 65534 do
+    for a = 1, 65535 do
         -- ищем на текущем уровне
         obj = level.object_by_id(a)
         if obj and obj:section() == "metka_vzryv2" then
@@ -3473,9 +2977,9 @@ function mg_vzryv2()
                 pos = obj:position(),
                 sound = "weapons\\t_rgd5_explosion"
             })
-            sobj = sim:object(obj:id())
+            sobj = alife():object(obj:id())
             if sobj then
-                sim:release(sobj, true)
+                alife():release(sobj, true)
             end
             break
         end
@@ -3483,9 +2987,8 @@ function mg_vzryv2()
 end
 
 function mg_vzryv3()
-    local sim = alife()
     local obj, sobj
-    for a = 1, 65534 do
+    for a = 1, 65535 do
         -- ищем на текущем уровне
         obj = level.object_by_id(a)
         if obj and obj:section() == "metka_vzryv3" then
@@ -3494,9 +2997,9 @@ function mg_vzryv3()
                 pos = obj:position(),
                 sound = "weapons\\t_rgd5_explosion"
             })
-            sobj = sim:object(obj:id())
+            sobj = alife():object(obj:id())
             if sobj then
-                sim:release(sobj, true)
+                alife():release(sobj, true)
             end
             break
         end
@@ -3511,144 +3014,123 @@ end
 ---------------------del_german------------------------
 
 function del_genrih()
-    local sim = alife()
-    local sobj = sim:story_object(30198)
-    if sobj then
-        sim:release(sobj, true)
+    local obj = alife():story_object(story_ids.genrih)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 function del_yurgen()
-    local sim = alife()
-    local sobj = sim:story_object(30199)
-    if sobj then
-        sim:release(sobj, true)
+    local obj = alife():story_object(story_ids.yurgen)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 function del_jagger()
-    local sim = alife()
-    local sobj = sim:story_object(30223)
-    if sobj then
-        sim:release(sobj, true)
+    local obj = alife():story_object(story_ids.jagger)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 function del_mamasha()
-    local sim = alife()
-    local sobj = sim:story_object(30224)
-    if sobj then
-        sim:release(sobj, true)
+    local obj = alife():story_object(story_ids.missis_uchen)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 function del_uchen_mg1()
-    local sim = alife()
-    local sobj = sim:story_object(30231)
-    if sobj then
-        sim:release(sobj, true)
+    local obj = alife():story_object(story_ids.uchen_mg1)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 function del_uchen_mg2()
-    local sim = alife()
-    local sobj = sim:story_object(30232)
-    if sobj then
-        sim:release(sobj, true)
+    local obj = alife():story_object(story_ids.uchen_mg2)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 function del_uchen_mg3()
-    local sim = alife()
-    local sobj = sim:story_object(30235)
-    if sobj then
-        sim:release(sobj, true)
+    local obj = alife():story_object(story_ids.uchen_mg3)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 function del_koop_patrul()
-    local sim = alife()
-    local sobj = sim:story_object(20056)
-    if sobj then
-        sim:release(sobj, true)
+    local obj = alife():story_object(story_ids.koop_patrul)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 function del_koop_ohran1()
-    local sim = alife()
-    local sobj = sim:story_object(20055)
-    if sobj then
-        sim:release(sobj, true)
+    local obj = alife():story_object(story_ids.koop_ohran1)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 function del_koop_ohran2()
-    local sim = alife()
-    local sobj = sim:story_object(20054)
-    if sobj then
-        sim:release(sobj, true)
+    local obj = alife():story_object(story_ids.koop_ohran2)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 function del_gorkom_ohran()
-    local sim = alife()
-    local sobj = sim:story_object(20053)
-    if sobj then
-        sim:release(sobj, true)
+    local obj = alife():story_object(story_ids.gorkom_ohran)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 function del_gorkom_kamp1()
-    local sim = alife()
-    local sobj = sim:story_object(20052)
-    if sobj then
-        sim:release(sobj, true)
+    local obj = alife():story_object(story_ids.gorkom_kamp1)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 function del_gorkom_kamp2()
-    local sim = alife()
-    local sobj = sim:story_object(20051)
-    if sobj then
-        sim:release(sobj, true)
+    local obj = alife():story_object(story_ids.gorkom_kamp2)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 function del_gorkom_kamp3()
-    local sim = alife()
-    local sobj = sim:story_object(20050)
-    if sobj then
-        sim:release(sobj, true)
+    local obj = alife():story_object(story_ids.gorkom_kamp3)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 function del_gorkom_kamp4()
-    local sim = alife()
-    local sobj = sim:story_object(20049)
-    if sobj then
-        sim:release(sobj, true)
+    local obj = alife():story_object(story_ids.gorkom_kamp4)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 function del_koop_ohran_vhod()
-    local sim = alife()
-    local sobj = sim:story_object(20048)
-    if sobj then
-        sim:release(sobj, true)
+    local obj = alife():story_object(story_ids.koop_ohran_vhod)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 -------------------del_german_end----------------------
 
 function del_osvedom_new()
-    local sim = alife()
-    local sobj
-    for a = 1, 65534 do
-        sobj = sim:object(a)
-        if sobj and sobj:section_name() == "osvedom_new" then
-            sim:release(sobj, true)
-            break
-        end
+    local obj = alife():story_object(story_ids.osvedom_new)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
@@ -3659,7 +3141,7 @@ function osvedom_dva_dal(first_speaker, second_speaker)
 end
 
 function shema_labs_have(first_speaker, second_speaker)
-    return new_dialog.item_much("shema_labs", 1) ~= false
+    return new_dialog.count_item("shema_labs", 1)
 end
 
 -------------------ubers_ataka------------------
@@ -3675,13 +3157,12 @@ function create_uber_restr()
 end
 
 function tank_ataka_spawn()
-    local sim = alife()
-    sim:create("tank_ataka1", vector():set(263.496, -10.682, 44.330), 884057, 1672)
-    sim:create("tank_ataka2", vector():set(266.903, -10.712, 44.774), 890056, 1672)
-    sim:create("tank_ataka3", vector():set(270.500, -10.745, 45.239), 895985, 1672)
-    sim:create("tank_ataka4", vector():set(274.025, -10.877, 47.219), 901839, 1672)
-    sim:create("tank_ataka5", vector():set(277.387, -10.861, 46.924), 907650, 1672)
-    sim:create("tank_ataka6", vector():set(279.994, -10.484, 41.780), 912188, 1675)
+    alife():create("tank_ataka1", vector():set(263.496, -10.682, 44.330), 884057, 1672)
+    alife():create("tank_ataka2", vector():set(266.903, -10.712, 44.774), 890056, 1672)
+    alife():create("tank_ataka3", vector():set(270.500, -10.745, 45.239), 895985, 1672)
+    alife():create("tank_ataka4", vector():set(274.025, -10.877, 47.219), 901839, 1672)
+    alife():create("tank_ataka5", vector():set(277.387, -10.861, 46.924), 907650, 1672)
+    alife():create("tank_ataka6", vector():set(279.994, -10.484, 41.780), 912188, 1675)
 end
 
 function uber_trevoga()
@@ -3699,13 +3180,9 @@ function uber_ataka_have(task, info)
 end
 
 function spawn_brown_dva()
-    local sobj = alife():create("brown_dva", vector():set(215.311, 5.551, 3.580), 814019, 1654)
-    if sobj then
-        local params = amk.read_stalker_params(sobj)
-        params.custom = "[logic]\ncfg = scripts\\foto\\brown_dva.ltx"
-        params.sid = 30221
-        amk.write_stalker_params(params, sobj)
-    end
+    local obj = alife():create("brown_dva", vector():set(215.311, 5.551, 3.580), 814019, 1654)
+    obj.custom_data = "[logic]\ncfg = scripts\\foto\\brown_dva.ltx"
+    alife():assign_story_id(obj.id, story_ids.brown_dva)
 end
 
 function brown_shoot()
@@ -3714,7 +3191,6 @@ function brown_shoot()
 end
 
 ------------Убивание солдат на базе на Полигоне------------
-
 -- таблица объектов для киляния
 local baza_tbl = {
     ["road_bandana"] = true,
@@ -3753,7 +3229,7 @@ end
 -- Собственно убийство группы
 function kill_group(tbl)
     local obj, sect
-    for a = 1, 65534 do
+    for a = 1, 65535 do
         obj = level.object_by_id(a)
         sect = obj and obj:section()
         -- cовпадение с таблицей по секции
@@ -3783,33 +3259,32 @@ end
 --------------------------------------------------------------------
 
 function road_mir_spawn()
-    local sim = alife()
-    sim:create("road_bandana_mir", vector():set(287.292, 0.001, -41.518), 921997, 1678)
-    -- sim:create("road_bandana1_mir",vector():set(261.680,0.001,-40.765),881600,1678)
-    -- sim:create("road_bandana4_mir",vector():set(287.380,0.557,-36.486),922943,1678)
-    sim:create("road_bandana5_mir", vector():set(257.357, 0.663, -42.100), 875292, 1666)
-    sim:create("road_soldat_mir", vector():set(256.957, 0.001, -26.165), 874271, 1666)
+    alife():create("road_bandana_mir", vector():set(287.292, 0.001, -41.518), 921997, 1678)
+    -- alife():create("road_bandana1_mir",vector():set(261.680,0.001,-40.765),881600,1678)
+    -- alife():create("road_bandana4_mir",vector():set(287.380,0.557,-36.486),922943,1678)
+    alife():create("road_bandana5_mir", vector():set(257.357, 0.663, -42.100), 875292, 1666)
+    alife():create("road_soldat_mir", vector():set(256.957, 0.001, -26.165), 874271, 1666)
 
-    -- sim:create("road_patrul1_mir",vector():set(215.484,0.001,-50.926),813804,1653)
-    sim:create("road_patrul2_mir", vector():set(212.122, 0.005, -50.870), 807845, 1653)
-    sim:create("road_patrul3_mir", vector():set(274.345, 0.005, -35.183), 902840, 1678)
-    sim:create("road_patrul4_mir", vector():set(229.625, 0.005, 36.174), 834569, 1661)
-    sim:create("road_patrul5_mir", vector():set(205.461, 5.551, 28.271), 797477, 1654)
-    -- sim:create("road_antigas1_mir",vector():set(248.764,-0.001,35.937),861800,1661)
-    -- sim:create("road_antigas2_mir",vector():set(220.450,0.150,36.601),821167,1661)
-    -- sim:create("road_sniper_mir",vector():set(215.002,19.700,-5.175),812785,1654)
-    -- sim:create("road_vyshka1_mir",vector():set(272.921,18.247,11.847),900564,1676)
-    -- sim:create("road_vyshka2_mir",vector():set(271.615,10.568,10.899),898217,1676)
+    -- alife():create("road_patrul1_mir",vector():set(215.484,0.001,-50.926),813804,1653)
+    alife():create("road_patrul2_mir", vector():set(212.122, 0.005, -50.870), 807845, 1653)
+    alife():create("road_patrul3_mir", vector():set(274.345, 0.005, -35.183), 902840, 1678)
+    alife():create("road_patrul4_mir", vector():set(229.625, 0.005, 36.174), 834569, 1661)
+    alife():create("road_patrul5_mir", vector():set(205.461, 5.551, 28.271), 797477, 1654)
+    -- alife():create("road_antigas1_mir",vector():set(248.764,-0.001,35.937),861800,1661)
+    -- alife():create("road_antigas2_mir",vector():set(220.450,0.150,36.601),821167,1661)
+    -- alife():create("road_sniper_mir",vector():set(215.002,19.700,-5.175),812785,1654)
+    -- alife():create("road_vyshka1_mir",vector():set(272.921,18.247,11.847),900564,1676)
+    -- alife():create("road_vyshka2_mir",vector():set(271.615,10.568,10.899),898217,1676)
 
-    -- sim:create("road_vnutri1_mir",vector():set(213.077,5.550,-13.528),809144,1654)
-    sim:create("road_vnutri2_mir", vector():set(210.947, 5.551, 2.177), 805654, 1654)
-    -- sim:create("road_vnutri3_mir",vector():set(210.580,5.550,16.087),805707,1654)
-    -- sim:create("road_vnutri4_mir",vector():set(216.187,5.550,30.691),815323,1654)
-    -- sim:create("road_vnutri5_mir",vector():set(213.683,5.550,-5.932),810395,1654)
-    -- sim:create("road_vnutri6_mir",vector():set(215.588,5.551,23.289),814099,1654)
-    -- sim:create("road_vnutri7_mir",vector():set(209.696,7.795,-25.807),804309,1654)
-    sim:create("road_vnutri8_mir", vector():set(210.076, 5.550, -8.612), 804447, 1654)
-    sim:create("road_vnutri9_mir", vector():set(208.758, 1.105, -11.823), 802142, 1654)
+    -- alife():create("road_vnutri1_mir",vector():set(213.077,5.550,-13.528),809144,1654)
+    alife():create("road_vnutri2_mir", vector():set(210.947, 5.551, 2.177), 805654, 1654)
+    -- alife():create("road_vnutri3_mir",vector():set(210.580,5.550,16.087),805707,1654)
+    -- alife():create("road_vnutri4_mir",vector():set(216.187,5.550,30.691),815323,1654)
+    -- alife():create("road_vnutri5_mir",vector():set(213.683,5.550,-5.932),810395,1654)
+    -- alife():create("road_vnutri6_mir",vector():set(215.588,5.551,23.289),814099,1654)
+    -- alife():create("road_vnutri7_mir",vector():set(209.696,7.795,-25.807),804309,1654)
+    alife():create("road_vnutri8_mir", vector():set(210.076, 5.550, -8.612), 804447, 1654)
+    alife():create("road_vnutri9_mir", vector():set(208.758, 1.105, -11.823), 802142, 1654)
 end
 
 function create_tunnel_restr()
@@ -3827,28 +3302,24 @@ function brown_outfit_dal(first_speaker, second_speaker)
 end
 
 function brown_outfit_have(first_speaker, second_speaker)
-    return new_dialog.item_much("super_outfit", 1) ~= false
+    return new_dialog.count_item("super_outfit", 1)
 end
 
 function brown_outfit_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("super_outfit", 1)
+    dialogs.relocate_item_section(first_speaker, "super_outfit", "out", 1)
 end
 
 function del_ploymar()
-    local sim = alife()
-    local sobj
-    for a = 1, 65534 do
-        sobj = sim:object(a)
-        if sobj and sobj:section_name() == "uchen_06" then
-            sim:release(sobj, true)
-            db.actor:give_info_portion("ploymar_del")
-            break
-        end
+    local obj = alife():story_object(story_ids.uchen_06)
+    if obj then
+        alife():release(obj, true)
+        db.actor:give_info_portion("ploymar_del")
     end
 end
 
 function ploymar_dva_spawn()
-    alife():create("uchen_061", vector():set(263.490, -12.661, 123.003), 884278, 1671)
+    local obj = alife():create("uchen_061", vector():set(263.490, -12.661, 123.003), 884278, 1671)
+    alife():assign_story_id(obj.id, story_ids.uchen_061)
 end
 
 -- Таймер отложенного диалога
@@ -3862,54 +3333,36 @@ function check_ploymar_over(actor, npc)
 end
 
 function sms_ploymar()
-    news_manager.send_tip(db.actor,
-        "%c[255,255,75,75]Это Браун.\\nЗайди ко мне, есть новые сведения.", nil, nil,
-        20000)
+    news_manager.send_tip(db.actor, "%c[255,255,75,75]Это Браун.\\nЗайди ко мне, есть новые сведения.", nil, nil, 20000)
     db.actor:give_info_portion("ploymar_finish")
 end
 
-function enemy_ploymar() -- справочная функция
-    local npc
-    for i = 1, 65534 do
-        npc = level.object_by_id(i)
-        if npc and npc:alive() and npc:section() == "uchen_061" then
-            npc:set_relation(game_object.enemy, db.actor)
-            break
-        end
-    end
-end
-
 function del_stihoplet()
-    local sim = alife()
-    local sobj
-    for a = 1, 65534 do
-        sobj = sim:object(a)
-        if sobj and sobj:section_name() == "poet" then
-            sim:release(sobj, true)
-            break
-        end
+    local obj = alife():story_object(story_ids.poet)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 function del_shpak()
-    local sim = alife()
-    local sobj = sim:story_object(30254)
-    if sobj then
-        sim:release(sobj, true)
+    local obj = alife():story_object(story_ids.shpak)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 function spawn_shpak()
-    alife():create("shpak", vector():set(-313.980, 11.198, 69.462), 468917, 797)
+    local obj = alife():create("shpak", vector():set(-313.980, 11.198, 69.462), 468917, 797)
+    -- bstr: он есть уже в оллспавне, зачем ему ещё спавн из скрипта?
 end
 
 function zadan_aground_have(first_speaker, second_speaker)
-    return new_dialog.item_much("shema_labs", 1) ~= false and new_dialog.item_much("vacsina_aks", 1) ~= false
+    return new_dialog.count_item("shema_labs", 1) and new_dialog.count_item("vacsina_aks", 1)
 end
 
 function shema_labs_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("shema_labs", 1)
-    new_dialog.out_item_much("vacsina_aks", 1)
+    dialogs.relocate_item_section(first_speaker, "shema_labs", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "vacsina_aks", "out", 1)
     dialogs.relocate_money(first_speaker, 20000, "in")
     dialogs.relocate_item_section(second_speaker, "wpn_vityaz", "in", 1)
     dialogs.relocate_item_section(second_speaker, "ammo_7.62x51_ap", "in", 2)
@@ -3921,11 +3374,11 @@ function about_vintorez()
 end
 
 function shpak_one_dialog_have(first_speaker, second_speaker)
-    return new_dialog.item_much("old_melnik", 3) ~= false
+    return new_dialog.count_item("old_melnik", 3)
 end
 
 function shpak_one_dialog_done(first_speaker, second_speaker)
-    new_dialog.out_item_much("old_melnik", 3)
+    dialogs.relocate_item_section(first_speaker, "old_melnik", "out", 3)
 end
 
 function teleport_antivyhod1()
@@ -3962,25 +3415,23 @@ function create_ograb_restr()
 end
 
 function ograblenie_aground()
-    local actor = db.actor
     level.add_cam_effector("camera_effects\\prison_1.anm", 25, false, "")
     level.add_pp_effector("yantar_underground_psi.ppe", 2007, false)
     level.add_pp_effector("total_recall.ppe", 2008, false)
-    actor:set_actor_position(vector():set(-70.685, -6.874, -71.567)) -- на пол в тайнике
-    actor:set_actor_direction(vector():set(0, 0, 0))
+    db.actor:set_actor_position(vector():set(-70.685, -6.874, -71.567)) -- на пол в тайнике
+    db.actor:set_actor_direction(vector():set(0, 0, 0))
     local snd_obj = xr_sound.get_safe_sound_object([[characters_voice\human_01\stalker\states\breath\breath_2]])
     snd_obj:play(db.actor, 0, sound_object.s2d)
     level.add_cam_effector("camera_effects\\hit_back_left.anm", 26, false, "")
-    actor:give_info_portion("actor_v_taynike")
+    db.actor:give_info_portion("actor_v_taynike")
 end
 
 function del_mihas_und()
-    local sim = alife()
     local sobj
-    for a = 1, 65534 do
-        sobj = sim:object(a)
+    for a = 1, 65535 do
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "mihas_und" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             level.add_pp_effector("yantar_underground_psi.ppe", 2007, false)
             level.add_pp_effector("teleport.ppe", 65015, false)
             local snd_obj = xr_sound.get_safe_sound_object([[forest\new\mandra]])
@@ -4013,21 +3464,19 @@ function spawn_genetik_und()
 end
 
 function spawn_aground_marodery()
-    local sim = alife()
-    sim:create("mihas1_und", vector():set(-45.515, -4.235, 12.963), 4422, 26)
-    sim:create("aksenov_und", vector():set(-58.247, -6.499, 4.260), 3961, 76)
-    sim:create("maroder1_und", vector():set(-59.471, -6.497, 12.856), 3906, 77)
-    sim:create("maroder2_und", vector():set(-51.532, -6.514, 21.657), 4179, 25)
-    sim:create("maroder3_und", vector():set(-64.922, -6.499, 4.136), 3733, 75)
+    alife():create("mihas1_und", vector():set(-45.515, -4.235, 12.963), 4422, 26)
+    alife():create("aksenov_und", vector():set(-58.247, -6.499, 4.260), 3961, 76)
+    alife():create("maroder1_und", vector():set(-59.471, -6.497, 12.856), 3906, 77)
+    alife():create("maroder2_und", vector():set(-51.532, -6.514, 21.657), 4179, 25)
+    alife():create("maroder3_und", vector():set(-64.922, -6.499, 4.136), 3733, 75)
 end
 
 function del_mihas_zapiski()
-    local sim = alife()
     local sobj
-    for a = 1, 65534 do
-        sobj = sim:object(a)
+    for a = 1, 65535 do
+        sobj = alife():object(a)
         if sobj and string.find(sobj:name(), "c_doc") then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
         end
     end
 end
@@ -4043,9 +3492,7 @@ function check_brown_dva_over(actor, npc)
 end
 
 function sms_brown_dva()
-    news_manager.send_tip(db.actor,
-        "%c[255,255,75,75]Фотограф, Это Браун.\\nЗайди ко мне, информация с ноутбука расшифрована.",
-        nil, nil, 20000)
+    news_manager.send_tip(db.actor, "%c[255,255,75,75]Фотограф, Это Браун.\\nЗайди ко мне, информация с ноутбука расшифрована.", nil, nil, 20000)
 end
 
 function brown_six_dialog_dal(first_speaker, second_speaker)
@@ -4054,14 +3501,9 @@ function brown_six_dialog_dal(first_speaker, second_speaker)
 end
 
 function spawn_trup_x18()
-    local sobj = alife():create("trup_x18", vector():set(-28.913, -10.812, -25.596), 517, 153)
-    if sobj then
-        local tbl = amk.read_stalker_params(sobj)
-        tbl.sid = 9700
-        tbl.health = 0
-        tbl.updhealth = 0
-        amk.write_stalker_params(tbl, sobj)
-    end
+    local obj = alife():create("trup_x18", vector():set(-28.913, -10.812, -25.596), 517, 153)
+    alife():assign_story_id(obj.id, story_ids.trup_x18)
+    obj:set_health(0)
 end
 
 function sms_codedoor_x18()
@@ -4069,28 +3511,27 @@ function sms_codedoor_x18()
 end
 
 function brown_six_dialog_nagrada(first_speaker, second_speaker)
-    new_dialog.out_item_much("info_actor", 1)
+    dialogs.relocate_item_section(first_speaker, "info_actor", "out", 1)
     dialogs.relocate_money(first_speaker, 20000, "in")
     dialogs.relocate_item_section(second_speaker, "wpn_addon_grenade_launcher_m203", "in", 1)
     dialogs.relocate_item_section(second_speaker, "ammo_m209", "in", 5)
 end
 
 function glaza_ploti_have(first_speaker, second_speaker)
-    return new_dialog.item_much("mutant_flesh_eye", 5) ~= false
+    return new_dialog.count_item("mutant_flesh_eye", 5)
 end
 
 function glaza_ploti_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("mutant_flesh_eye", 5)
+    dialogs.relocate_item_section(first_speaker, "mutant_flesh_eye", "out", 5)
     dialogs.relocate_item_section(second_speaker, "vacsina", "in", 1)
 end
 
 function spawn_dyshlo_zasada()
-    local sim = alife()
-    sim:create("dyshlo_zasada1", vector():set(-262.770, 20.224, -17.889), 10149, 0)
-    sim:create("dyshlo_zasada2", vector():set(-266.498, 20.624, -15.010), 7334, 0)
-    sim:create("dyshlo_zasada3", vector():set(-263.711, 20.955, -9.056), 9132, 0)
-    sim:create("dyshlo_zasada4", vector():set(-262.090, 20.606, -12.612), 10722, 0)
-    sim:create("dyshlo_zasada5", vector():set(-298.483, 21.648, -28.695), 1113, 0)
+    alife():create("dyshlo_zasada1", vector():set(-262.770, 20.224, -17.889), 10149, 0)
+    alife():create("dyshlo_zasada2", vector():set(-266.498, 20.624, -15.010), 7334, 0)
+    alife():create("dyshlo_zasada3", vector():set(-263.711, 20.955, -9.056), 9132, 0)
+    alife():create("dyshlo_zasada4", vector():set(-262.090, 20.606, -12.612), 10722, 0)
+    alife():create("dyshlo_zasada5", vector():set(-298.483, 21.648, -28.695), 1113, 0)
 end
 
 function create_aground_kontra_restr()
@@ -4125,105 +3566,76 @@ function x18_claw_spawn()
 end
 
 function del_uchen_x18_01()
-    local sim = alife()
-    local sobj
-    for a = 1, 65534 do
-        sobj = sim:object(a)
-        if sobj and sobj:section_name() == "uchen-x18_01" then
-            sim:release(sobj, true)
-            break
-        end
+    local obj = alife():story_object(story_ids.uchen-x18_01)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 function del_uchen_x18_02()
-    local sim = alife()
-    local sobj
-    for a = 1, 65534 do
-        sobj = sim:object(a)
-        if sobj and sobj:section_name() == "uchen-x18_02" then
-            sim:release(sobj, true)
-            break
-        end
+    local obj = alife():story_object(story_ids.uchen-x18_02)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 function del_uchen_x18_03()
-    local sim = alife()
-    local sobj
-    for a = 1, 65534 do
-        sobj = sim:object(a)
-        if sobj and sobj:section_name() == "uchen-x18_03" then
-            sim:release(sobj, true)
-            break
-        end
+    local obj = alife():story_object(story_ids.uchen-x18_03)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 function del_uchen_x18_04()
-    local sim = alife()
-    local sobj
-    for a = 1, 65534 do
-        sobj = sim:object(a)
-        if sobj and sobj:section_name() == "uchen-x18_04" then
-            sim:release(sobj, true)
-            break
-        end
+    local obj = alife():story_object(story_ids.uchen-x18_04)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 function set_metka_povodyr()
-    for a = 1, 65534 do
-        local obj = alife():object(a)
-        if obj then
-            if obj:section_name() == "pseudodog_povodyr" then
-                amk.add_spot_on_map(obj.id, "blue_location", "Поводырь")
-                return
-            end
-        end
+    local obj = alife():story_object(story_ids.aver_pseudodog_povodyr)
+    if obj then
+        level_tasks.add_location_by_id(obj.id, "blue_location", "Поводырь")
     end
 end
 
 function del_metka_povodyr()
-    for a = 1, 65534 do
-        local obj = alife():object(a)
-        if obj then
-            if obj:section_name() == "pseudodog_povodyr" then
-                level.map_remove_object_spot(obj.id, "blue_location")
-                break
-            end
-        end
+    local obj = alife():story_object(story_ids.aver_pseudodog_povodyr)
+    if obj then
+        level_tasks.remove_location_by_id(obj.id, "blue_location")
+        alife():release(obj, true)
     end
 end
 
 -----------------------povodyr------------------------
 
 function valuta_net(first_speaker, second_speaker)
-    return new_dialog.item_much("euro", 1) == false and new_dialog.item_much("dollar", 1) == false
+    return new_dialog.count_item("euro", 1) == false and new_dialog.count_item("dollar", 1) == false
 end
 
 function valuta_have(first_speaker, second_speaker)
-    return new_dialog.item_much("euro", 1) ~= false and new_dialog.item_much("dollar", 1) ~= false
+    return new_dialog.count_item("euro", 1) and new_dialog.count_item("dollar", 1)
 end
 
 function euro_have(first_speaker, second_speaker)
-    return new_dialog.item_much("euro", 1) ~= false
+    return new_dialog.count_item("euro", 1)
 end
 
 function dollar_have(first_speaker, second_speaker)
-    return new_dialog.item_much("dollar", 1) ~= false
+    return new_dialog.count_item("dollar", 1)
 end
 
 function euro_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("euro", 1)
-end
+    dialogs.relocate_item_section(first_speaker, "euro", "out", 1)
+ end
 
 function dollar_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("dollar", 1)
+    dialogs.relocate_item_section(first_speaker, "dollar", "out", 1)
 end
 
 function pda_pmc_aver_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("pda_pmc_aver", 1)
+    dialogs.relocate_item_section(first_speaker, "pda_pmc_aver", "out", 1)
 end
 
 ---------------------povodyr_end----------------------
@@ -4253,28 +3665,22 @@ end
 ------------Убивание наёмников на фабрике в Червоне Дышло------------
 
 function kill_dyshlo_killers(first_speaker, second_speaker)
-    local sim = alife()
-    if not sim then
+    if not alife() then
         return
     end
     local sobj
-    for a = 1, 65534 do
-        sobj = sim:object(a)
+    for a = 1, 65535 do
+        sobj = alife():object(a)
         if sobj and string.find(sobj:name(), "naemnik_") then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
         end
     end
 end
 
 function del_drozdov()
-    local sim = alife()
-    local sobj
-    for a = 1, 65534 do
-        sobj = sim:object(a)
-        if sobj and sobj:section_name() == "uchen_05" then
-            sim:release(sobj, true)
-            break
-        end
+    local obj = alife():story_object(story_ids.kaymanov_dyshlo)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
@@ -4314,19 +3720,18 @@ function killers5_dyshlo_spawn()
 end
 
 function dolg_ataka_have(task, info)
-    local actor = db.actor
-    if actor and actor:has_info("naem_dyshlo_01_dead") and actor:has_info("naem_dyshlo_02_dead") and
-        actor:has_info("naem_dyshlo_03_dead") and actor:has_info("naem_dyshlo_04_dead") and
-        actor:has_info("naem_dyshlo_05_dead") and actor:has_info("naem_dyshlo_06_dead") and
-        actor:has_info("naem_dyshlo_07_dead") and actor:has_info("naem_dyshlo_08_dead") and
-        actor:has_info("naem_dyshlo_09_dead") and actor:has_info("naem_dyshlo_10_dead") and
-        actor:has_info("naem_dyshlo_11_dead") and actor:has_info("naem_dyshlo_12_dead") and
-        actor:has_info("naem_dyshlo_13_dead") and actor:has_info("naem_dyshlo_14_dead") and
-        actor:has_info("naem_dyshlo_15_dead") and actor:has_info("naem_dyshlo_16_dead") and
-        actor:has_info("naem_dyshlo_17_dead") and actor:has_info("naem_dyshlo_18_dead") and
-        actor:has_info("naem_dyshlo_19_dead") and actor:has_info("naem_dyshlo_20_dead") and
-        actor:has_info("dolg_mask6_mesto") and actor:has_info("drozdov_mesto") and actor:has_info("plichko_mesto") then
-        return actor:give_info_portion("dolg_ataka_have")
+    if db.actor and db.actor:has_info("naem_dyshlo_01_dead") and db.actor:has_info("naem_dyshlo_02_dead") and
+        db.actor:has_info("naem_dyshlo_03_dead") and db.actor:has_info("naem_dyshlo_04_dead") and
+        db.actor:has_info("naem_dyshlo_05_dead") and db.actor:has_info("naem_dyshlo_06_dead") and
+        db.actor:has_info("naem_dyshlo_07_dead") and db.actor:has_info("naem_dyshlo_08_dead") and
+        db.actor:has_info("naem_dyshlo_09_dead") and db.actor:has_info("naem_dyshlo_10_dead") and
+        db.actor:has_info("naem_dyshlo_11_dead") and db.actor:has_info("naem_dyshlo_12_dead") and
+        db.actor:has_info("naem_dyshlo_13_dead") and db.actor:has_info("naem_dyshlo_14_dead") and
+        db.actor:has_info("naem_dyshlo_15_dead") and db.actor:has_info("naem_dyshlo_16_dead") and
+        db.actor:has_info("naem_dyshlo_17_dead") and db.actor:has_info("naem_dyshlo_18_dead") and
+        db.actor:has_info("naem_dyshlo_19_dead") and db.actor:has_info("naem_dyshlo_20_dead") and
+        db.actor:has_info("dolg_mask6_mesto") and db.actor:has_info("drozdov_mesto") and db.actor:has_info("plichko_mesto") then
+        return db.actor:give_info_portion("dolg_ataka_have")
     end
     return false
 end
@@ -4343,38 +3748,31 @@ end
 ------------------------------PART_2------------------------------------
 
 function del_petrenko()
-    local sim = alife()
-    local sobj = sim:story_object(30248)
+    local sobj = alife():story_object(30248)
     if sobj then
-        sim:release(sobj, true)
+        alife():release(sobj, true)
     end
 end
 
 function del_voronin()
-    local sim = alife()
-    local sobj = sim:story_object(30249)
+    local sobj = alife():story_object(30249)
     if sobj then
-        sim:release(sobj, true)
+        alife():release(sobj, true)
     end
 end
 
 function prom_flesh_winch()
-    local sobj = alife():create("prom_flesh_winch", vector():set(-119.128, 37.219, -183.866), 13336, 818)
-    if sobj then
-        local tbl = amk.read_monster_params(sobj)
-        tbl.sid = 9708
-        tbl.health = 0
-        tbl.updhealth = 0
-        amk.write_monster_params(tbl, sobj)
-    end
+    local obj = alife():create("prom_flesh_winch", vector():set(-119.128, 37.219, -183.866), 13336, 818)
+    alife():assign_story_id(obj.id, story_ids.flesh_winch)
+    obj:set_health(0)
 end
 
 function check_dezertir_winch()
-    return new_dialog.item_much("mutant_flesh_winch", 1) ~= false
+    return new_dialog.count_item("mutant_flesh_winch", 1)
 end
 
 function shurup_nagrada_winch(first_speaker, second_speaker)
-    new_dialog.out_item_much("mutant_flesh_winch", 1)
+    dialogs.relocate_item_section(second_speaker, "mutant_flesh_winch", "out", 1)
     dialogs.relocate_item_section(second_speaker, "ammo_flame", "in", 1)
 end
 
@@ -4385,32 +3783,22 @@ function create_spynet_restr()
 end
 
 function del_brown_dva()
-    local sim = alife()
-    local sobj
-    for a = 1, 65534 do
-        sobj = sim:object(a)
-        if sobj and sobj:section_name() == "brown_dva" then
-            sim:release(sobj, true)
-            db.actor:give_info_portion("del_brown_dva")
-            break
-        end
+    local obj = alife():story_object(story_ids.brown_dva)
+    if obj then
+        alife():release(obj, true)
+        db.actor:give_info_portion("del_brown_dva")
     end
 end
 
 function brown_x10_spawn_bak()
-    local sobj = alife():create("brown_tri", vector():set(16.719, -8.989, 25.268), 8421, 351)
-    if sobj then
-        local tbl = amk.read_stalker_params(sobj)
-        if tbl then
-            tbl.health = 0.089
-            tbl.updhealth = 0.089
-            amk.write_stalker_params(tbl, sobj)
-        end
-    end
+    local obj = alife():create("brown_tri", vector():set(16.719, -8.989, 25.268), 8421, 351)
+    alife():assign_story_id(obj.id, story_ids.brown_tri)
+    obj:set_health(0.089)
 end
 
 function brown_x10_spawn()
-    alife():create("brown_tri", vector():set(16.719, -8.989, 25.268), 8421, 351)
+    local obj = alife():create("brown_tri", vector():set(16.719, -8.989, 25.268), 8421, 351)
+    alife():assign_story_id(obj.id, story_ids.brown_tri)
 end
 
 -- спавн Шубина в X10
@@ -4455,69 +3843,39 @@ function del_shubin_x10(actor, obj)
 end
 
 function trup1_x10_spawn()
-    local sobj = alife():create("nato_x10_01", vector():set(17.301, -8.991, 20.317), 8457, 350)
-    if sobj then
-        local tbl = amk.read_stalker_params(sobj)
-        tbl.sid = 9711
-        tbl.health = 0
-        tbl.updhealth = 0
-        amk.write_stalker_params(tbl, sobj)
-    end
+    local obj = alife():create("nato_x10_01", vector():set(17.301, -8.991, 20.317), 8457, 350)
+    alife():assign_story_id(obj.id, story_ids.nato_x10_01)
+    obj:set_health(0)
 end
 
 function trup2_x10_spawn()
-    local sobj = alife():create("nato_x10_02", vector():set(20.132, -8.991, 23.920), 8669, 351)
-    if sobj then
-        local tbl = amk.read_stalker_params(sobj)
-        tbl.sid = 9712
-        tbl.health = 0
-        tbl.updhealth = 0
-        amk.write_stalker_params(tbl, sobj)
-    end
+    local obj = alife():create("nato_x10_02", vector():set(20.132, -8.991, 23.920), 8669, 351)
+    alife():assign_story_id(obj.id, story_ids.nato_x10_02)
+    obj:set_health(0)
 end
 
 function trup3_x10_spawn()
-    local sobj = alife():create("nato_x10_03", vector():set(20.941, -8.992, 15.619), 8704, 350)
-    if sobj then
-        local tbl = amk.read_stalker_params(sobj)
-        tbl.sid = 9713
-        tbl.health = 0
-        tbl.updhealth = 0
-        amk.write_stalker_params(tbl, sobj)
-    end
+    local obj = alife():create("nato_x10_03", vector():set(20.941, -8.992, 15.619), 8704, 350)
+    alife():assign_story_id(obj.id, story_ids.nato_x10_03)
+    obj:set_health(0)
 end
 
 function trup_blood1_x10_spawn()
-    local sobj = alife():create("bloodsucker_weak", vector():set(20.086, -8.902, 21.440), 8663, 351)
-    if sobj then
-        local tbl = amk.read_monster_params(sobj)
-        tbl.sid = 9714
-        tbl.health = 0
-        tbl.updhealth = 0
-        amk.write_monster_params(tbl, sobj)
-    end
+    local obj = alife():create("bloodsucker_weak", vector():set(20.086, -8.902, 21.440), 8663, 351)
+    alife():assign_story_id(obj.id, story_ids.trup_blood1_x10)
+    obj:set_health(0)
 end
 
 function trup_blood2_x10_spawn()
-    local sobj = alife():create("bloodsucker_normal", vector():set(20.086, -9.850, 21.440), 8663, 351)
-    if sobj then
-        local tbl = amk.read_monster_params(sobj)
-        tbl.sid = 9715
-        tbl.health = 0
-        tbl.updhealth = 0
-        amk.write_monster_params(tbl, sobj)
-    end
+    local obj = alife():create("bloodsucker_normal", vector():set(20.086, -9.850, 21.440), 8663, 351)
+    alife():assign_story_id(obj.id, story_ids.trup_blood2_x10)
+    obj:set_health(0)
 end
 
 function trup_blood3_x10_spawn()
-    local sobj = alife():create("bloodsucker_strong", vector():set(20.086, -10.850, 21.440), 8663, 351)
-    if sobj then
-        local tbl = amk.read_monster_params(sobj)
-        tbl.sid = 9716
-        tbl.health = 0
-        tbl.updhealth = 0
-        amk.write_monster_params(tbl, sobj)
-    end
+    local obj = alife():create("bloodsucker_strong", vector():set(20.086, -10.850, 21.440), 8663, 351)
+    alife():assign_story_id(obj.id, story_ids.trup_blood3_x10)
+    obj:set_health(0)
 end
 
 function actor_kill_shubin()
@@ -4549,48 +3907,41 @@ end
 
 function plichko_tri_dialog_have(first_speaker, second_speaker)
     db.actor:give_info_portion("voronin_dyshlo_spawn")
-    return new_dialog.item_much("pda_pmc_dyshlo", 1) ~= false
+    return new_dialog.count_item("pda_pmc_dyshlo", 1)
 end
 
 function plichko_tri_dialog_done(first_speaker, second_speaker)
-    new_dialog.out_item_much("pda_pmc_dyshlo", 1)
+    dialogs.relocate_item_section(first_speaker, "pda_pmc_dyshlo", "out", 1)
     dialogs.relocate_item_section(second_speaker, "wpn_vintorez_nimble", "in", 1)
     dialogs.relocate_item_section(second_speaker, "ammo_9x39_sp5", "in", 3)
 end
 
 function shubin_tushki_have2()
-    return new_dialog.item_much("mutant_crow", 1) ~= false and new_dialog.item_much("mutant_mouse", 1) ~= false
+    return new_dialog.count_item("mutant_crow", 1) and new_dialog.count_item("mutant_mouse", 1)
 end
 
 function shubin_tushki_have(first_speaker, second_speaker)
-    local actor = db.actor
-    return actor and actor:object("mutant_crow") and actor:object("mutant_mouse")
+    return db.actor and not db.actor:object("mutant_crow") and db.actor:object("mutant_mouse")
 end
 
 function shubin_tushki_net2()
-    return new_dialog.item_much("mutant_crow", 1) == false and new_dialog.item_much("mutant_mouse", 1) == false
+    return new_dialog.count_item("mutant_crow", 1) == false and new_dialog.count_item("mutant_mouse", 1) == false
 end
 
 function shubin_tushki_net(first_speaker, second_speaker)
-    local actor = db.actor
-    return actor and not actor:object("mutant_crow") or not actor:object("mutant_mouse")
+    return db.actor and not db.actor:object("mutant_crow") or not db.actor:object("mutant_mouse")
 end
 
 function shubin_tushki_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("mutant_crow", 1)
-    new_dialog.out_item_much("mutant_mouse", 1)
+    dialogs.relocate_item_section(first_speaker, "mutant_crow", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "mutant_mouse", "out", 1)
     dialogs.relocate_item_section(second_speaker, "wpn_rpk16", "in", 1)
 end
 
 function del_shubin2()
-    local sim = alife()
-    local sobj
-    for a = 1, 65534 do
-        sobj = sim:object(a)
-        if sobj and sobj:section_name() == "shubin2" then
-            sim:release(sobj, true)
-            break
-        end
+    local obj = alife():story_object(story_ids.shubin2)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
@@ -4600,55 +3951,43 @@ function del_shubin2_effect()
 end
 
 function del_brown_x10()
-    local sim = alife()
-    local sobj
-    for a = 1, 65534 do
-        sobj = sim:object(a)
-        if sobj and sobj:section_name() == "brown_tri" then
-            sim:release(sobj, true)
-            break
-        end
+    local obj = alife():story_object(story_ids.brown_tri)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 function brown_bunker_spawn()
     local obj = alife():create("brown_x10", vector():set(21.117, -8.991, 7.522), 8694, 352)
+    alife():assign_story_id(obj.id, story_ids.brown_x10)
 end
 
 function del_brown_bunker()
-    local sim = alife()
-    local sobj
-    for a = 1, 65534 do
-        sobj = sim:object(a)
-        if sobj and sobj:section_name() == "brown_x10" then
-            sim:release(sobj, true)
-            db.actor:give_info_portion("del_brown_x10")
-            level.add_pp_effector("teleport.ppe", 25008, false)
-            break
-        end
+    local obj = alife():story_object(story_ids.brown_x10)
+    if obj then
+        alife():release(obj, true)
+        level.add_pp_effector("teleport.ppe", 25008, false)
+        db.actor:give_info_portion("del_brown_x10")
     end
 end
 
 function brown_x18_spawn()
     local obj = alife():create("brown_four", vector():set(-8.081, 9.172, -0.069), 1790, 111)
+    alife():assign_story_id(obj.id, story_ids.brown_four)
 end
 
 function del_brown_x18()
-    local sim = alife()
-    local sobj
-    for a = 1, 65534 do
-        sobj = sim:object(a)
-        if sobj and sobj:section_name() == "brown_four" then
-            sim:release(sobj, true)
-            db.actor:give_info_portion("del_brown_x18")
-            level.add_pp_effector("teleport.ppe", 25008, false)
-            break
-        end
+    local obj = alife():story_object(story_ids.brown_four)
+    if obj then
+        alife():release(obj, true)
+        level.add_pp_effector("teleport.ppe", 25008, false)
+        db.actor:give_info_portion("del_brown_x18")
     end
 end
 
 function brown_five_spawn()
     local obj = alife():create("brown_five", vector():set(261.723, -12.656, 120.976), 881904, 1671)
+    alife():assign_story_id(obj.id, story_ids.brown_five)
 end
 
 function create_escape_restr()
@@ -4670,23 +4009,21 @@ function create_escape_restr()
 end
 
 function spawn_x10_monstry_01()
-    local sim = alife()
-    sim:create("zombik_stalk10", vector():set(7.776, -23.696, -1.594), 7667, 354)
-    sim:create("zombik_stalk11", vector():set(7.776, -23.696, -1.594), 7667, 354)
-    sim:create("zombik_stalk12", vector():set(7.776, -23.696, -1.594), 7667, 354)
-    sim:create("zombik_stalk15", vector():set(7.776, -23.696, -1.594), 7667, 354)
-    sim:create("zombik_stalk17", vector():set(7.776, -23.696, -1.594), 7667, 354)
-    sim:create("zombik_stalk13", vector():set(-49.018, -23.589, -4.662), 946, 377)
-    sim:create("zombik_stalk14", vector():set(-49.018, -23.589, -4.662), 946, 377)
-    sim:create("zombik_stalk16", vector():set(-49.018, -23.589, -4.662), 946, 377)
-    sim:create("zombik_stalk18", vector():set(-49.018, -23.589, -4.662), 946, 377)
-    sim:create("zombik_stalk19", vector():set(-49.018, -23.589, -4.662), 946, 377)
+    alife():create("zombik_stalk10", vector():set(7.776, -23.696, -1.594), 7667, 354)
+    alife():create("zombik_stalk11", vector():set(7.776, -23.696, -1.594), 7667, 354)
+    alife():create("zombik_stalk12", vector():set(7.776, -23.696, -1.594), 7667, 354)
+    alife():create("zombik_stalk15", vector():set(7.776, -23.696, -1.594), 7667, 354)
+    alife():create("zombik_stalk17", vector():set(7.776, -23.696, -1.594), 7667, 354)
+    alife():create("zombik_stalk13", vector():set(-49.018, -23.589, -4.662), 946, 377)
+    alife():create("zombik_stalk14", vector():set(-49.018, -23.589, -4.662), 946, 377)
+    alife():create("zombik_stalk16", vector():set(-49.018, -23.589, -4.662), 946, 377)
+    alife():create("zombik_stalk18", vector():set(-49.018, -23.589, -4.662), 946, 377)
+    alife():create("zombik_stalk19", vector():set(-49.018, -23.589, -4.662), 946, 377)
 end
 
 function spawn_x10_monstry_02()
-    local sim = alife()
-    sim:create("bloodsucker_normal", vector():set(-28.862, -21.838, 41.365), 2426, 411)
-    sim:create("bloodsucker_strong", vector():set(-28.862, -21.838, 41.365), 2426, 411)
+    alife():create("bloodsucker_normal", vector():set(-28.862, -21.838, 41.365), 2426, 411)
+    alife():create("bloodsucker_strong", vector():set(-28.862, -21.838, 41.365), 2426, 411)
 end
 
 function spawn_x10_monstry_03()
@@ -4694,13 +4031,12 @@ function spawn_x10_monstry_03()
 end
 
 function spawn_x18_monstry_01()
-    local sim = alife()
-    sim:create("zombik_stalk4", vector():set(0.777, 4.186, -6.877), 2871, 114)
-    sim:create("zombik_stalk5", vector():set(0.777, 4.186, -6.877), 2871, 114)
-    sim:create("zombik_stalk6", vector():set(0.777, 4.186, -6.877), 2871, 114)
-    sim:create("zombik_stalk7", vector():set(0.777, 4.186, -6.877), 2871, 114)
-    sim:create("zombik_stalk8", vector():set(0.777, 4.186, -6.877), 2871, 114)
-    sim:create("zombik_stalk9", vector():set(0.777, 4.186, -6.877), 2871, 114)
+    alife():create("zombik_stalk4", vector():set(0.777, 4.186, -6.877), 2871, 114)
+    alife():create("zombik_stalk5", vector():set(0.777, 4.186, -6.877), 2871, 114)
+    alife():create("zombik_stalk6", vector():set(0.777, 4.186, -6.877), 2871, 114)
+    alife():create("zombik_stalk7", vector():set(0.777, 4.186, -6.877), 2871, 114)
+    alife():create("zombik_stalk8", vector():set(0.777, 4.186, -6.877), 2871, 114)
+    alife():create("zombik_stalk9", vector():set(0.777, 4.186, -6.877), 2871, 114)
 end
 
 function spawn_x18_monstry_02()
@@ -4712,12 +4048,11 @@ function spawn_x18_monstry_03()
 end
 
 function del_ubers_x18()
-    local sim = alife()
     local sobj
-    for a = 1, 65534 do
-        sobj = sim:object(a)
+    for a = 1, 65535 do
+        sobj = alife():object(a)
         if sobj and string.find(sobj:name(), "tank") then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
         end
     end
 end
@@ -4738,9 +4073,9 @@ function info_prip_zadan()
 end
 
 function set_polischuk_friend()
-    npc = level_object_by_sid(30244)
-    if npc and npc:alive() then
-        npc:set_relation(game_object.friend, db.actor)
+    local obj = level_object_by_sid(story_ids.polischuk)
+    if obj then
+        obj:set_relation(game_object.friend, db.actor)
     end
 end
 
@@ -4749,22 +4084,17 @@ function set_usa_enemy(community1, community2)
 end
 
 function set_smith_enemy()
-    local npc, obj
-    for i = 1, 65534 do
-        npc = level.object_by_id(i)
-        if npc and npc:name() == "smith_sar" then
-            obj = alife():object(npc:id())
-            npc:set_relation(game_object.enemy, db.actor)
-        end
+    local obj = level_object_by_sid(story_ids.smith_sar)
+    if obj then
+        obj:set_relation(game_object.enemy, db.actor)
     end
 end
 
-function set_smith_enemy_bak(sid)
-    local npc = level_object_by_sid(30185)
-    if npc == nil or npc:alive() == false then
-        return
+function set_smith_enemy_bak()
+    local obj = level_object_by_sid(story_ids.smith)
+    if obj then
+        obj:set_relation(game_object.enemy, db.actor)
     end
-    npc:set_relation(game_object.enemy, db.actor)
 end
 
 -- Таймер отложенного диалога
@@ -4784,34 +4114,31 @@ function sms_foto_smith()
 end
 
 function del_shubin3()
-    local sim = alife()
     local sobj
-    for a = 1, 65534 do
-        sobj = sim:object(a)
+    for a = 1, 65535 do
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "shubin3" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
 end
 
 function del_brown_five()
-    local sim = alife()
     local sobj
-    for a = 1, 65534 do
-        sobj = sim:object(a)
+    for a = 1, 65535 do
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "brown_five" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
 end
 
 function del_smith()
-    local sim = alife()
-    local sobj = sim:story_object(30185)
+    local sobj = alife():story_object(30185)
     if sobj then
-        sim:release(sobj, true)
+        alife():release(sobj, true)
     end
 end
 
@@ -4858,9 +4185,8 @@ function pashka_spawn()
 end
 
 function spawn_peschera_tayniki()
-    local sim = alife()
-    sim:create("taynik_peschera1", vector():set(-259.261, 61.655, 197.622), 78377, 1458)
-    sim:create("taynik_peschera2", vector():set(-322.784, 62.235, 196.341), 32813, 1506)
+    alife():create("taynik_peschera1", vector():set(-259.261, 61.655, 197.622), 78377, 1458)
+    alife():create("taynik_peschera2", vector():set(-322.784, 62.235, 196.341), 32813, 1506)
 end
 
 function create_spynet2_restr()
@@ -4870,17 +4196,17 @@ function create_spynet2_restr()
 end
 
 function smith_marodery_dialog_dal(first_speaker, second_speaker)
-    new_dialog.out_item_much("info_actor", 1)
+    dialogs.relocate_item_section(first_speaker, "info_actor", "out", 1)
     dialogs.relocate_item_section(second_speaker, "wpn_rg6", "in", 1)
     dialogs.relocate_item_section(second_speaker, "ammo_vog-25", "in", 12)
 end
 
 function pashka_sguschenka_have()
-    return new_dialog.item_much("sguschenka", 6) ~= false
+    return new_dialog.count_item("sguschenka", 6)
 end
 
 function pashka_sguschenka_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("sguschenka", 6)
+    dialogs.relocate_item_section(first_speaker, "sguschenka", "out", 6)
 end
 
 function actor_in_hell()
@@ -4901,12 +4227,11 @@ local pos = vector():set(-304.116, 60.579, 202.459)
 local particle = particles_object([[static\zharka_static]])
 
 function del_haron_peschera()
-    local sim = alife()
     local sobj
-    for a = 1, 65534 do
-        sobj = sim:object(a)
+    for a = 1, 65535 do
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "haron_peschera" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             level.add_pp_effector("blink.ppe", 9115, false)
             particle:play_at_pos(pos)
             local snd_obj = xr_sound.get_safe_sound_object([[anomaly\zharka]])
@@ -4917,21 +4242,17 @@ function del_haron_peschera()
 end
 
 function spawn_usa_sar()
-    local sim = alife()
-    sim:create("smith_sar", vector():set(52.968, 16.852, 28.488), 9064, 1423)
-    sim:create("brown_sar", vector():set(49.600, 16.874, 29.251), 8680, 1423)
+    local obj = alife():create("smith_sar", vector():set(52.968, 16.852, 28.488), 9064, 1423)
+    alife():assign_story_id(obj.id, story_ids.smith_sar)
+
+    local obj = alife():create("brown_sar", vector():set(49.600, 16.874, 29.251), 8680, 1423)
+    alife():assign_story_id(obj.id, story_ids.brown_sar)
 end
 
 function del_brown_sar()
-    local sim = alife()
-    local sobj
-    for a = 1, 65534 do
-        sobj = sim:object(a)
-        if sobj and sobj:section_name() == "brown_sar" then
-            sim:release(sobj, true)
-            -- level.add_pp_effector ("blink.ppe", 9115, false)
-            break
-        end
+    local obj = alife():story_object(story_ids.brown_sar)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
@@ -4974,11 +4295,10 @@ end
 ------------------------Телепортация от SPY.NET к кодовой двери------------------------
 
 function trans_actor_sar()
-    local actor = db.actor
     local snd_obj = xr_sound.get_safe_sound_object([[forest\new\mandra]])
     snd_obj:play(db.actor, 0, sound_object.s2d)
-    actor:set_actor_position(vector():set(53.026, 16.858, 26.547))
-    actor:set_actor_direction(vector():set(0.500, 0.000, 0.000))
+    db.actor:set_actor_position(vector():set(53.026, 16.858, 26.547))
+    db.actor:set_actor_direction(vector():set(0.500, 0.000, 0.000))
     level.add_pp_effector("dark.ppe", 1779, true)
     level.add_pp_effector("dark.ppe", 1780, true)
     level.add_pp_effector("dark.ppe", 1781, true)
@@ -5016,7 +4336,7 @@ end
 -- забьем до смерти всех монолитовцев в округе
 function kill_monolith()
     local obj
-    for a = 1, 65534 do
+    for a = 1, 65535 do
         obj = level.object_by_id(a)
         if obj and IsStalker(obj) and obj:character_community() == "monolith" then
             obj:kill(obj)
@@ -5072,16 +4392,13 @@ end
 ------------------------------------------------------------
 
 function set_lch_bluetree()
-    local actor = db.actor
-    y_level.create_level_changer(30350, actor:position(), actor:level_vertex_id(), actor:game_vertex_id(), 12377, 247,
-        vector():set(-174.480, 0.870, 414.655), vector():set(0.0, 2.5, 0.0), "l05_bar", 1)
+    y_level.create_level_changer(30350, db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(), 12377, 247, vector():set(-174.480, 0.870, 414.655), vector():set(0.0, 2.5, 0.0), "l05_bar", 1)
 end
 
 function del_lch_bluetree()
-    local sim = alife()
-    local sobj = sim:story_object(30350)
+    local sobj = alife():story_object(30350)
     if sobj then
-        sim:release(sobj, true)
+        alife():release(sobj, true)
     end
 end
 
@@ -5112,40 +4429,37 @@ end
 ---------------------------Призраки----------------------------
 
 function spawn_inv_bluetree()
-    local sim = alife()
-    sim:create("shubin_tree", vector():set(-176.500, 0.838, 411.924), 12377, 247)
-    sim:create("bandit_tree", vector():set(-177.285, 1.206, 403.000), 12377, 247)
-    sim:create("zombi_tree", vector():set(-180.115, 0.943, 405.529), 12377, 247)
-    sim:create("barnie_tree", vector():set(-187.356, 0.557, 405.747), 12377, 247)
-    sim:create("kepka_tree", vector():set(-189.465, 0.570, 403.063), 12377, 247)
-    sim:create("shmel_tree", vector():set(-189.781, 0.893, 395.634), 12377, 247)
-    sim:create("stalker_tree", vector():set(-187.058, 1.151, 393.092), 12377, 247)
-    sim:create("matilda_tree", vector():set(-178.684, 1.651, 391.686), 12377, 247)
-    sim:create("snork_tree", vector():set(-176.192, 1.607, 395.472), 12377, 247)
-    sim:create("kontra_tree", vector():set(-180.356, 1.122, 401.332), 12377, 247)
+    alife():create("shubin_tree", vector():set(-176.500, 0.838, 411.924), 12377, 247)
+    alife():create("bandit_tree", vector():set(-177.285, 1.206, 403.000), 12377, 247)
+    alife():create("zombi_tree", vector():set(-180.115, 0.943, 405.529), 12377, 247)
+    alife():create("barnie_tree", vector():set(-187.356, 0.557, 405.747), 12377, 247)
+    alife():create("kepka_tree", vector():set(-189.465, 0.570, 403.063), 12377, 247)
+    alife():create("shmel_tree", vector():set(-189.781, 0.893, 395.634), 12377, 247)
+    alife():create("stalker_tree", vector():set(-187.058, 1.151, 393.092), 12377, 247)
+    alife():create("matilda_tree", vector():set(-178.684, 1.651, 391.686), 12377, 247)
+    alife():create("snork_tree", vector():set(-176.192, 1.607, 395.472), 12377, 247)
+    alife():create("kontra_tree", vector():set(-180.356, 1.122, 401.332), 12377, 247)
 end
 
 function del_inv_bluetree(first_speaker, second_speaker)
-    local sim = alife()
-    if not sim then
+    if not alife() then
         return
     end
     local sobj
-    for a = 1, 65534 do
-        sobj = sim:object(a)
+    for a = 1, 65535 do
+        sobj = alife():object(a)
         if sobj and string.find(sobj:name(), "_tree") then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
         end
     end
 end
 
 function del_bluetree()
-    local sim = alife()
     local sobj
-    for a = 1, 65534 do
-        sobj = sim:object(a)
+    for a = 1, 65535 do
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "bluetree" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             level.add_pp_effector("blink.ppe", 9115, false)
             break
         end
@@ -5153,12 +4467,11 @@ function del_bluetree()
 end
 
 function del_blue_tree()
-    local sim = alife()
     local sobj
-    for a = 1, 65534 do
-        sobj = sim:object(a)
+    for a = 1, 65535 do
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "blue_tree" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
@@ -5201,21 +4514,20 @@ function kill_strelok()
     db.actor:kill(db.actor)
 end
 
--- 4etkiu
 function havchik_vodka_have()
-    return new_dialog.item_much("vodka",2) ~= false
+    return new_dialog.count_item("vodka", 2)
 end
 
 function havchik_sguschenka_have()
-    return new_dialog.item_much("sguschenka",1) ~= false
+    return new_dialog.count_item("sguschenka", 1)
 end
 
 function havchik_gribki_have()
-    return new_dialog.item_much("gribki",1) ~= false
+    return new_dialog.count_item("gribki", 1)
 end
 
 function havchik_ogirki_have()
-    return new_dialog.item_much("ogirki",1) ~= false
+    return new_dialog.count_item("ogirki", 1)
 end
 
 local function distance_check()
@@ -5228,5 +4540,5 @@ end
 
 function attach(sm)
     sm:subscribe({signal = "on_update",         fun = distance_check})
-    -- sm:subscribe({signal = "on_first_update",   fun = on_first_update})
+    sm:subscribe({signal = "on_take",          fun = on_take})
 end

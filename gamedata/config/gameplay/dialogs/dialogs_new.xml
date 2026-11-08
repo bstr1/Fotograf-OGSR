@@ -2,33 +2,32 @@
     <dont_has_info>informator_buy_pda</dont_has_info>
     <phrase_list>
         <phrase id="0">
-            <text>informator_buy_pda_0</text>
+            <text>informator_buy_0</text>
             <next>1</next>
         </phrase>
         <phrase id="1">
-            <text>informator_buy_pda_1</text>
+            <text>informator_buy_1</text>
             <next>2</next>
         </phrase>
         <phrase id="2">
-            <text>informator_buy_pda_2</text>
+            <text>informator_buy_2</text>
             <next>3</next>
         </phrase>
         <phrase id="3">
-            <text>informator_buy_pda_3</text>
+            <text>informator_buy_3</text>
             <next>4</next>
         </phrase>
         <phrase id="4">
-            <text>informator_buy_pda_4</text>
+            <text>informator_buy_4</text>
             <next>5</next>
         </phrase>
         <phrase id="5">
-            <text>informator_buy_pda_5</text>
+            <text>informator_buy_5</text>
             <next>6</next>
         </phrase>
         <phrase id="6">
-            <text>informator_buy_pda_6</text>
+            <text>informator_buy_6</text>
             <give_info>informator_buy_pda</give_info>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -37,41 +36,63 @@
     <has_info>informator_buy_pda</has_info>
     <phrase_list>
         <phrase id="0">
-            <text>informator_beret_pda_0</text>
+            <text>informator_beret_0</text>
             <next>1</next>
         </phrase>
         <phrase id="1">
-            <text>informator_beret_pda_1</text>
+            <text>informator_beret_1</text>
             <next>2</next>
             <next>3</next>
             <next>4</next>
-        </phrase>
-        <phrase id="2">
-            <precondition>new_dialog.inform_20_pda_have</precondition>
-            <text>informator_beret_pda_2</text>
             <next>5</next>
-        </phrase>
-        <phrase id="3">
-            <precondition>new_dialog.inform_40_pda_have</precondition>
-            <text>informator_beret_pda_3</text>
             <next>6</next>
         </phrase>
-        <phrase id="4">
-            <text>informator_beret_pda_4</text>
+        <phrase id="2">
+            <precondition>new_dialog.inform_10_zheton_have</precondition>
+            <text>informator_beret_2</text>
             <next>7</next>
         </phrase>
+        <phrase id="3">
+            <precondition>new_dialog.inform_20_zheton_have</precondition>
+            <text>informator_beret_3</text>
+            <next>8</next>
+        </phrase>
+        <phrase id="4">
+            <precondition>new_dialog.inform_10_pda_have</precondition>
+            <text>informator_beret_4</text>
+            <next>9</next>
+        </phrase>
         <phrase id="5">
-            <text>informator_beret_pda_5</text>
-            <action>new_dialog.inform_20_pda</action>
+            <precondition>new_dialog.inform_20_pda_have</precondition>
+            <text>informator_beret_5</text>
+            <next>10</next>
         </phrase>
+
         <phrase id="6">
-            <text>informator_beret_pda_6</text>
-            <action>table_treasure_l.treasure</action>
-            <action>new_dialog.inform_40_pda</action>
+            <text>informator_beret_6</text>
+            <next>11</next>
         </phrase>
+
         <phrase id="7">
-            <text>informator_beret_pda_7</text>
-            <action>dialogs.break_dialog</action>
+            <text>informator_beret_7</text>
+            <action>new_dialog.inform_10_zheton</action>
+        </phrase>
+        <phrase id="8">
+            <text>informator_beret_8</text>
+            <action>table_treasure_l.treasure</action>
+            <action>new_dialog.inform_20_zheton</action>
+        </phrase>
+        <phrase id="9">
+            <text>informator_beret_9</text>
+            <action>new_dialog.inform_10_pda_dal</action>
+        </phrase>
+        <phrase id="10">
+            <text>informator_beret_10</text>
+            <action>new_dialog.inform_20_pda_dal</action>
+        </phrase>
+
+        <phrase id="11">
+            <text>informator_beret_11</text>
         </phrase>
     </phrase_list>
 </dialog>
@@ -761,6 +782,109 @@
         </phrase>
         <phrase id="6">
             <text>freeman_change_6</text>
+        </phrase>
+    </phrase_list>
+</dialog>
+
+<dialog id="svoboda_change">
+    <has_info>lukash_first_dialog_done</has_info>
+    <phrase_list>
+        <phrase id="0">
+            <text>svoboda_change_0</text>
+            <next>1</next>
+        </phrase>
+        <phrase id="1">
+            <text>svoboda_change_1</text>
+            <next>2</next>
+            <next>3</next>
+            <next>4</next>
+        </phrase>
+        <phrase id="2">
+            <text>svoboda_change_2</text>
+            <next>21</next>
+        </phrase>
+        <phrase id="3">
+            <text>svoboda_change_3</text>
+            <next>31</next>
+        </phrase>
+        <phrase id="4">
+            <text>svoboda_change_4</text>
+            <next>41</next>
+        </phrase>
+        <phrase id="21">
+            <text>svoboda_change_21</text>
+            <next>211</next>
+            <next>212</next>
+            <next>213</next>
+            <next>214</next>
+            <next>215</next>
+            <next>216</next>
+            <next>217</next>
+        </phrase>
+        <phrase id="211">
+            <precondition>new_dialog.svoboda_af_buliz_have</precondition>
+            <text>svoboda_change_211</text>
+            <action>new_dialog.svoboda_af_buliz_dal</action>
+        </phrase>
+        <phrase id="212">
+            <precondition>new_dialog.svoboda_af_cry_2_have</precondition>
+            <text>svoboda_change_212</text>
+            <action>new_dialog.svoboda_af_cry_2_dal</action>
+        </phrase>
+        <phrase id="213">
+            <precondition>new_dialog.svoboda_af_simbion_have</precondition>
+            <text>svoboda_change_213</text>
+            <action>new_dialog.svoboda_af_simbion_dal</action>
+        </phrase>
+        <phrase id="214">
+            <precondition>new_dialog.svoboda_gold_art_have</precondition>
+            <text>svoboda_change_214</text>
+            <action>new_dialog.svoboda_gold_art_dal</action>
+        </phrase>
+        <phrase id="215">
+            <precondition>new_dialog.svoboda_gold_art_famas_have</precondition>
+            <text>svoboda_change_215</text>
+            <action>new_dialog.svoboda_gold_art_famas_dal</action>
+        </phrase>
+        <phrase id="216">
+            <precondition>new_dialog.svoboda_af_spirit_1_have</precondition>
+            <text>svoboda_change_216</text>
+            <action>new_dialog.svoboda_af_spirit_1_dal</action>
+        </phrase>
+        <phrase id="217">
+            <text>svoboda_change_217</text>
+        </phrase>
+        <phrase id="31">
+            <text>svoboda_change_31</text>
+            <next>311</next>
+            <next>312</next>
+            <next>313</next>
+            <next>217</next>
+        </phrase>
+        <phrase id="311">
+            <precondition>new_dialog.svoboda_two_af_drops_have</precondition>
+            <text>svoboda_change_311</text>
+            <action>new_dialog.svoboda_two_af_drops_dal</action>
+        </phrase>
+        <phrase id="312">
+            <precondition>new_dialog.svoboda_two_af_blood_have</precondition>
+            <text>svoboda_change_312</text>
+            <action>new_dialog.svoboda_two_af_blood_dal</action>
+        </phrase>
+        <phrase id="313">
+            <precondition>new_dialog.svoboda_two_af_electra_sparkler_have</precondition>
+            <text>svoboda_change_313</text>
+            <action>new_dialog.svoboda_two_af_electra_sparkler_dal</action>
+        </phrase>
+        <phrase id="41">
+            <text>svoboda_change_41</text>
+            <next>411</next>
+            <next>217</next>
+        </phrase>
+        <phrase id="411">
+            <precondition>new_dialog.svoboda_tri_af_ameba_slime_have</precondition>
+            <text>svoboda_change_411</text>
+            <action>new_dialog.svoboda_tri_af_ameba_slime_dal</action>
         </phrase>
     </phrase_list>
 </dialog>

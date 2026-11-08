@@ -1,23 +1,70 @@
 local nagrad = {
-
-    level_1 = {"ammo_9x39_sp5", "ammo_7.62x39_ap", "ammo_7.62x39_fmj", "ammo_5.45x39_ap", "ammo_5.45x39_fmj",
-               "ammo_5.56x45_ap", "ammo_7.62x25", "ammo_7.62x25", "ammo_5.56x45_ss190"},
-    level_2 = {"af_electra_flash", "af_electra_moonlight", "af_ameba_mica", "af_dummy_spring", "af_dummy_dummy",
-               "af_dummy_battery", "af_cristall", "gold_art", "af_soul", "af_dummy_pellicle", "af_rusty_kristall",
-               "af_night_star", "af_gold_fish", "af_fuzz_kolobok", "af_rusty_sea-urchin", "af_dummy_glassbeads"},
-    level_3 = {"wpn_sig550_luckygun", "wpn_scarh", "wpn_abakan_m2", "wpn_desert_eagle_nimble", "wpn_wincheaster1300_trapper", "wpn_spas12_nimble",
-               "wpn_groza_nimble", "wpn_mp9", "wpn_sig550", "wpn_bizon", "wpn_vector", "wpn_tt33", "wpn_mosin",
-               "wpn_vector"},
-    level_4 = {"wpn_g28", "wpn_sig550_luckygun", "wpn_lr300", "wpn_vpo101", "wpn_svu_nimble", "wpn_gauss"},
-    level_5 = {"ammo_9x39_ap", "ammo_7.62x51_fmj", "ammo_7.62x51_ap", "ammo_7.62x54_7h14", "ammo_7.62x54_7h1",
-               "ammo_7.62x54_7h1", "ammo_gauss", "ammo_9x39_pab9"},
-    level_6 = {"ammo_9x39_ap", "ammo_7.62x51_fmj", "ammo_7.62x51_ap", "ammo_7.62x54_7h14", "ammo_7.62x54_7h1",
-               "ammo_7.62x54_7h1", "ammo_7.62x39_ap", "ammo_7.62x39_fmj", "ammo_9x39_pab9", "ammo_7.62x25",
-               "ammo_7.62x25", "antirad", "medkit", "medkit_army", "medkit_scientic", "ammo_9x19_pbp", "ammo_9x19_fmj",
-               "ammo_5.45x39_ap", "ammo_5.45x39_fmj", "ammo_5.56x45_ap", "ammo_5.56x45_ss190", "ammo_11.43x23_fmj",
-               "ammo_11.43x23_hydro", "wpn_addon_silencer", "grenade_f1", "grenade_rgd5", "ammo_og-7b", "ammo_vog-25p",
-               "ammo_vog-25", "ammo_m209"}
+    level_1 = {
+        "ammo_11.43x23_fmj",
+        "ammo_11.43x23_hydro",
+        "ammo_5.45x39_ap",
+        "ammo_5.45x39_fmj",
+        "ammo_5.56x45_ap",
+        "ammo_5.56x45_ss190",
+        "ammo_7.62x25",
+        "ammo_7.62x25",
+        "ammo_7.62x39_ap",
+        "ammo_7.62x39_fmj",
+        "ammo_7.62x51_ap",
+        "ammo_7.62x51_fmj",
+        "ammo_7.62x54_7h1",
+        "ammo_7.62x54_7h1",
+        "ammo_7.62x54_7h14",
+        "ammo_9x19_fmj",
+        "ammo_9x19_pbp",
+        "ammo_9x39_ap",
+        "ammo_9x39_pab9",
+        "ammo_m209",
+        "ammo_og-7b",
+        "ammo_vog-25",
+        "ammo_vog-25p",
+        "antirad",
+        "grenade_f1",
+        "grenade_rgd5",
+        "medkit_army",
+        "medkit_scientic",
+        "medkit",
+        "wpn_addon_silencer"
+    },
+    level_2 = {
+        "ks_absolut_01",
+        "ks_absolut_02",
+        "ks_absolut_03",
+        "ks_absolut_04",
+        "ks_absolut_05",
+        "ks_absolut_06",
+        "ks_absolut_07",
+        "ks_absolut_08",
+        "ks_absolut_09",
+        "ks_absolut_10",
+        "ks_absolut_11",
+        "ks_absolut_12"
+    },
+    level_3 = {
+        "ks_talisman_01",
+        "ks_talisman_02",
+        "ks_talisman_03",
+        "ks_talisman_04",
+        "ks_talisman_05",
+        "ks_talisman_06"
+    }
 }
+
+-- Получение количества предметов в инвентаре ГГ
+function count_item(section, number)
+    local count = 0
+    db.actor:iterate_inventory(function(dummy, item)
+        if item:section() == section then
+            count = count + 1
+        end
+    end)
+    return count >= number
+end
 
 local items_count = 0
 local itemin = nil
@@ -87,387 +134,258 @@ function out_items_count(actor, item)
     end
 end
 
+function inform_10_zheton_have()
+    return count_item("zheton", 10)
+end
+
+function inform_10_zheton(first_speaker, second_speaker)
+    dialogs.relocate_item_section(first_speaker, "zheton", "out", 10)
+    item = nagrad.level_1[math.random(table.getn(nagrad.level_1))]
+    dialogs.relocate_item_section(second_speaker, item, "in", 3)
+end
+
+function inform_10_pda_have()
+    return count_item("device_pda_npc", 10)
+end
+
+function inform_10_pda_dal(first_speaker, second_speaker)
+    dialogs.relocate_item_section(first_speaker, "device_pda_npc", "out", 10)
+    item = nagrad.level_2[math.random(table.getn(nagrad.level_2))]
+    dialogs.relocate_item_section(second_speaker, item, "in", 1)
+    item1 = nagrad.level_2[math.random(table.getn(nagrad.level_2))]
+    dialogs.relocate_item_section(second_speaker, item1, "in", 1)
+end
+
+function inform_20_zheton_have()
+    return count_item("zheton", 20)
+end
+
+function inform_20_zheton(first_speaker, second_speaker)
+    dialogs.relocate_item_section(first_speaker, "zheton", "out", 20)
+end
+
 function inform_20_pda_have()
-    return new_dialog.item_much("zheton", 10) ~= false
+    return count_item("device_pda_npc", 20)
 end
 
-function inform_40_pda_have()
-    return new_dialog.item_much("zheton", 20) ~= false
+function inform_20_pda_dal(first_speaker, second_speaker)
+    dialogs.relocate_item_section(first_speaker, "device_pda_npc", "out", 20)
+    item = nagrad.level_3[math.random(table.getn(nagrad.level_3))]
+    dialogs.relocate_item_section(second_speaker, item, "in", 1)
+    item1 = nagrad.level_3[math.random(table.getn(nagrad.level_3))]
+    dialogs.relocate_item_section(second_speaker, item1, "in", 1)
 end
 
-function inform_20_pda(first_speaker, second_speaker)
-    local item = ""
-    local count = math.random(2, 3)
-    local actor, trader
-    if db.actor and db.actor:id() == first_speaker:id() then
-        actor = first_speaker
-        trader = second_speaker
-    else
-        actor = second_speaker
-        trader = first_speaker
-    end
-    item = nagrad.level_6[math.random(table.getn(nagrad.level_6))]
-    new_dialog.out_item_much("zheton", 10)
-    dialogs.relocate_item_section(actor, item, "in", count)
-end
-
-function inform_40_pda()
-    new_dialog.out_item_much("zheton", 20)
-end
 
 function trader_bratok_saiga(first_speaker, second_speaker)
-    local item = ""
-    local actor, trader
-    if db.actor and db.actor:id() == first_speaker:id() then
-        actor = first_speaker
-        trader = second_speaker
-    else
-        actor = second_speaker
-        trader = first_speaker
-    end
-    dialogs.relocate_item_section(trader, "amk_kanistra", "out", 2)
-    dialogs.relocate_item_section(actor, "wpn_saiga12", "in", 1)
+    dialogs.relocate_item_section(first_speaker, "amk_kanistra", "out", 2)
+    dialogs.relocate_item_section(second_speaker, "wpn_saiga12", "in", 1)
 end
 
 function trader_bratok_ak_47(first_speaker, second_speaker)
-    local item = ""
-    local actor, trader
-    if db.actor and db.actor:id() == first_speaker:id() then
-        actor = first_speaker
-        trader = second_speaker
-    else
-        actor = second_speaker
-        trader = first_speaker
-    end
-    dialogs.relocate_item_section(trader, "amk_ballon", "out", 2)
-    dialogs.relocate_item_section(actor, "wpn_ak74", "in", 1)
+    dialogs.relocate_item_section(first_speaker, "amk_ballon", "out", 2)
+    dialogs.relocate_item_section(second_speaker, "wpn_ak74", "in", 1)
 end
 
 function trader_bratok_762x39_fmj(first_speaker, second_speaker)
-    local item = ""
-    local actor, trader
-    if db.actor and db.actor:id() == first_speaker:id() then
-        actor = first_speaker
-        trader = second_speaker
-    else
-        actor = second_speaker
-        trader = first_speaker
-    end
-    dialogs.relocate_item_section(trader, "conserva", "out", 5)
-    dialogs.relocate_item_section(actor, "ammo_7.62x39_fmj", "in", 3)
+    dialogs.relocate_item_section(first_speaker, "conserva", "out", 5)
+    dialogs.relocate_item_section(second_speaker, "ammo_7.62x39_fmj", "in", 3)
 end
 
 function trader_bratok_762x39_ap(first_speaker, second_speaker)
-    local item = ""
-    local actor, trader
-    if db.actor and db.actor:id() == first_speaker:id() then
-        actor = first_speaker
-        trader = second_speaker
-    else
-        actor = second_speaker
-        trader = first_speaker
-    end
-    dialogs.relocate_item_section(trader, "vodka", "out", 4)
-    dialogs.relocate_item_section(actor, "ammo_7.62x39_ap", "in", 3)
+    dialogs.relocate_item_section(first_speaker, "vodka", "out", 4)
+    dialogs.relocate_item_section(second_speaker, "ammo_7.62x39_ap", "in", 3)
 end
 
 function trader_bratok_545x39_fmj(first_speaker, second_speaker)
-    local item = ""
-    local actor, trader
-    if db.actor and db.actor:id() == first_speaker:id() then
-        actor = first_speaker
-        trader = second_speaker
-    else
-        actor = second_speaker
-        trader = first_speaker
-    end
-    dialogs.relocate_item_section(trader, "bread", "out", 5)
-    dialogs.relocate_item_section(actor, "ammo_5.45x39_fmj", "in", 3)
+    dialogs.relocate_item_section(first_speaker, "bread", "out", 5)
+    dialogs.relocate_item_section(second_speaker, "ammo_5.45x39_fmj", "in", 3)
 end
 
 function trader_bratok_545x39_ap(first_speaker, second_speaker)
-    local item = ""
-    local actor, trader
-    if db.actor and db.actor:id() == first_speaker:id() then
-        actor = first_speaker
-        trader = second_speaker
-    else
-        actor = second_speaker
-        trader = first_speaker
-    end
-    dialogs.relocate_item_section(trader, "mineral", "out", 3)
-    dialogs.relocate_item_section(actor, "ammo_5.45x39_ap", "in", 3)
+    dialogs.relocate_item_section(first_speaker, "mineral", "out", 3)
+    dialogs.relocate_item_section(second_speaker, "ammo_5.45x39_ap", "in", 3)
 end
 
 function trader_bratok_556x45_ss190(first_speaker, second_speaker)
-    local item = ""
-    local actor, trader
-    if db.actor and db.actor:id() == first_speaker:id() then
-        actor = first_speaker
-        trader = second_speaker
-    else
-        actor = second_speaker
-        trader = first_speaker
-    end
-    dialogs.relocate_item_section(trader, "kolbasa", "out", 5)
-    dialogs.relocate_item_section(actor, "ammo_5.56x45_ss190", "in", 3)
+    dialogs.relocate_item_section(first_speaker, "kolbasa", "out", 5)
+    dialogs.relocate_item_section(second_speaker, "ammo_5.56x45_ss190", "in", 3)
 end
 
 function trader_bratok_556x45_ap(first_speaker, second_speaker)
-    local item = ""
-    local actor, trader
-    if db.actor and db.actor:id() == first_speaker:id() then
-        actor = first_speaker
-        trader = second_speaker
-    else
-        actor = second_speaker
-        trader = first_speaker
-    end
-    dialogs.relocate_item_section(trader, "vodka", "out", 4)
-    dialogs.relocate_item_section(actor, "ammo_5.56x45_ap", "in", 3)
+    dialogs.relocate_item_section(first_speaker, "vodka", "out", 4)
+    dialogs.relocate_item_section(second_speaker, "ammo_5.56x45_ap", "in", 3)
 end
 
 function trader_bratok_762x54_7h1(first_speaker, second_speaker)
-    local item = ""
-    local actor, trader
-    if db.actor and db.actor:id() == first_speaker:id() then
-        actor = first_speaker
-        trader = second_speaker
-    else
-        actor = second_speaker
-        trader = first_speaker
-    end
-    dialogs.relocate_item_section(trader, "sguschenka", "out", 2)
-    dialogs.relocate_item_section(actor, "ammo_7.62x54_7h1", "in", 3)
+    dialogs.relocate_item_section(first_speaker, "sguschenka", "out", 2)
+    dialogs.relocate_item_section(second_speaker, "ammo_7.62x54_7h1", "in", 3)
 end
 
 function trader_bratok_9x39_pab9(first_speaker, second_speaker)
-    local item = ""
-    local actor, trader
-    if db.actor and db.actor:id() == first_speaker:id() then
-        actor = first_speaker
-        trader = second_speaker
-    else
-        actor = second_speaker
-        trader = first_speaker
-    end
-    dialogs.relocate_item_section(trader, "shprots", "out", 2)
-    dialogs.relocate_item_section(actor, "ammo_9x39_pab9", "in", 3)
+    dialogs.relocate_item_section(first_speaker, "shprots", "out", 2)
+    dialogs.relocate_item_section(second_speaker, "ammo_9x39_pab9", "in", 3)
 end
 
 function five_vodka_have()
-    return new_dialog.item_much("vodka", 5) ~= false
+    return count_item("vodka", 5)
 end
 
 function four_vodka_have()
-    return new_dialog.item_much("vodka", 4) ~= false
+    return count_item("vodka", 4)
 end
 
 function tri_mineral_have()
-    return new_dialog.item_much("mineral", 3) ~= false
+    return count_item("mineral", 3)
 end
 
 function tri_vodka_have()
-    return new_dialog.item_much("vodka", 3) ~= false
+    return count_item("vodka", 3)
 end
 
 function five_bread_have()
-    return new_dialog.item_much("bread", 5) ~= false
+    return count_item("bread", 5)
 end
 
 function five_kolbasa_have()
-    return new_dialog.item_much("kolbasa", 5) ~= false
+    return count_item("kolbasa", 5)
 end
 
 function five_conserva_have()
-    return new_dialog.item_much("conserva", 5) ~= false
+    return count_item("conserva", 5)
 end
 
 function one_af_cristall_flower_have()
-    return new_dialog.item_much("sguschenka", 2) ~= false
+    return count_item("sguschenka", 2)
 end
 
 function one_af_ameba_slug_have()
-    return new_dialog.item_much("shprots", 2) ~= false
+    return count_item("shprots", 2)
 end
 
 function two_af_mincer_meat_have()
-    return new_dialog.item_much("amk_kanistra", 2) ~= false
+    return count_item("amk_kanistra", 2)
 end
 
 function two_af_ameba_mica_have()
-    return new_dialog.item_much("amk_ballon", 2) ~= false
+    return count_item("amk_ballon", 2)
 end
-
-function mil_osvedomitel_have()
-    return new_dialog.item_much("informator_doc", 1) ~= false
-end
-
-function mil_osvedomitel_done()
-    new_dialog.out_item_much("informator_doc", 1)
-end
-
-
-
 
 function sahar_tri_af_drops_have()
-    return new_dialog.item_much("paek1", 1) ~= false
+    return count_item("paek1", 1)
+
 end
 
 function sahar_tri_af_drops_dal(first_speaker, second_speaker)
-    local item = ""
-    local actor, trader
-    if db.actor and db.actor:id() == first_speaker:id() then
-        actor = first_speaker
-        trader = second_speaker
-    else
-        actor = second_speaker
-        trader = first_speaker
-    end
-    dialogs.relocate_item_section(actor, "ammo_7.62x51_fmj", "in", 2)
-    new_dialog.out_item_much("paek1", 1)
+    dialogs.relocate_item_section(second_speaker, "paek1", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "ammo_7.62x51_fmj", "in", 2)
 end
 
 function sahar_two_af_fireball_have()
-    return new_dialog.item_much("mineral", 2) ~= false
+    return count_item("mineral", 2)
 end
 
 function sahar_two_af_fireball_dal(first_speaker, second_speaker)
-    local item = ""
-    local actor, trader
-    if db.actor and db.actor:id() == first_speaker:id() then
-        actor = first_speaker
-        trader = second_speaker
-    else
-        actor = second_speaker
-        trader = first_speaker
-    end
-    dialogs.relocate_item_section(actor, "ammo_7.62x51_ap", "in", 2)
-    new_dialog.out_item_much("mineral", 2)
+    dialogs.relocate_item_section(second_speaker, "mineral", "out", 2)
+    dialogs.relocate_item_section(first_speaker, "ammo_7.62x51_ap", "in", 2)
 end
 
 function sahar_af_dummy_pellicle_have()
-    return new_dialog.item_much("paek2", 1) ~= false
+    return count_item("paek2", 1)
 end
 
 function sahar_af_dummy_pellicle_dal(first_speaker, second_speaker)
-    local item = ""
-    local actor, trader
-    if db.actor and db.actor:id() == first_speaker:id() then
-        actor = first_speaker
-        trader = second_speaker
-    else
-        actor = second_speaker
-        trader = first_speaker
-    end
-    dialogs.relocate_item_section(actor, "ammo_7.62x54_7h1", "in", 2)
-    new_dialog.out_item_much("paek2", 1)
+    dialogs.relocate_item_section(second_speaker, "paek2", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "ammo_7.62x54_7h14", "in", 2)
 end
 
 function sahar_tri_af_soul_have()
-    return new_dialog.item_much("tarakan_lich2", 20) ~= false
+    return count_item("tarakan_lich2", 20)
 end
 
 function sahar_tri_af_soul_dal(first_speaker, second_speaker)
-    local item = ""
-    local actor, trader
-    if db.actor and db.actor:id() == first_speaker:id() then
-        actor = first_speaker
-        trader = second_speaker
-    else
-        actor = second_speaker
-        trader = first_speaker
-    end
-    dialogs.relocate_item_section(actor, "wpn_g28", "in", 1)
-    new_dialog.out_item_much("tarakan_lich2", 20)
+    dialogs.relocate_item_section(second_speaker, "tarakan_lich2", "out", 20)
+    dialogs.relocate_item_section(first_speaker, "wpn_g28", "in", 1)
 end
 
 function sahar_tri_af_cristall_have()
-    return new_dialog.item_much("vypolzen_hrebet", 10) ~= false
+    return count_item("vypolzen_hrebet", 10)
 end
 
 function sahar_tri_af_cristall_dal(first_speaker, second_speaker)
-    local item = ""
-    local actor, trader
-    if db.actor and db.actor:id() == first_speaker:id() then
-        actor = first_speaker
-        trader = second_speaker
-    else
-        actor = second_speaker
-        trader = first_speaker
-    end
-    dialogs.relocate_item_section(actor, "wpn_vpo101", "in", 1)
-    new_dialog.out_item_much("vypolzen_hrebet", 10)
+    dialogs.relocate_item_section(second_speaker, "vypolzen_hrebet", "out", 10)
+    dialogs.relocate_item_section(first_speaker, "wpn_vpo101", "in", 1)
 end
 
 function sahar_two_af_electra_moonlight_have()
-    return new_dialog.item_much("mutant_krovosos_jaw", 10) ~= false
+    return count_item("mutant_krovosos_jaw", 10)
 end
 
 function sahar_two_af_electra_moonlight_dal(first_speaker, second_speaker)
-    local item = ""
-    local actor, trader
-    if db.actor and db.actor:id() == first_speaker:id() then
-        actor = first_speaker
-        trader = second_speaker
-    else
-        actor = second_speaker
-        trader = first_speaker
-    end
-    dialogs.relocate_item_section(actor, "wpn_vpo101", "in", 1)
-    new_dialog.out_item_much("mutant_krovosos_jaw", 10)
+    dialogs.relocate_item_section(second_speaker, "mutant_krovosos_jaw", "out", 10)
+    dialogs.relocate_item_section(first_speaker, "wpn_vpo101", "in", 1)
 end
 
 function sahar_sorok_mutant_poltergeist_glas_have()
-    return new_dialog.item_much("mutant_poltergeist_glas", 5) ~= false
+    return count_item("mutant_poltergeist_glas", 5)
 end
 
 function sahar_sorok_mutant_poltergeist_glas_dal(first_speaker, second_speaker)
-    local item = ""
-    local actor, trader
-    if db.actor and db.actor:id() == first_speaker:id() then
-        actor = first_speaker
-        trader = second_speaker
-    else
-        actor = second_speaker
-        trader = first_speaker
-    end
-    dialogs.relocate_item_section(actor, "wpn_w2000", "in", 1)
-    new_dialog.out_item_much("mutant_poltergeist_glas", 5)
+    dialogs.relocate_item_section(second_speaker, "mutant_poltergeist_glas", "out", 5)
+    dialogs.relocate_item_section(first_speaker, "wpn_w2000", "in", 1)
 end
 
 function sahar_ten_mutant_tail_cat_have()
-    return new_dialog.item_much("mutant_tail_cat", 10) ~= false
+    return count_item("mutant_tail_cat", 10)
 end
 
 function sahar_ten_mutant_tail_cat_dal(first_speaker, second_speaker)
-    local item = ""
-    local actor, trader
-    if db.actor and db.actor:id() == first_speaker:id() then
-        actor = first_speaker
-        trader = second_speaker
-    else
-        actor = second_speaker
-        trader = first_speaker
-    end
-    dialogs.relocate_item_section(actor, "medkit_scientic", "in", 3)
-    new_dialog.out_item_much("mutant_tail_cat", 10)
+    dialogs.relocate_item_section(second_speaker, "mutant_tail_cat", "out", 10)
+    dialogs.relocate_item_section(first_speaker, "medkit_scientic", "in", 3)
 end
 
 function sahar_ten_mutant_burer_hand_have()
-    return new_dialog.item_much("izlom_hand", 5) ~= false
+    return count_item("izlom_hand", 5)
 end
 
 function sahar_ten_mutant_burer_hand_dal(first_speaker, second_speaker)
-    local item = ""
-    local actor, trader
-    if db.actor and db.actor:id() == first_speaker:id() then
-        actor = first_speaker
-        trader = second_speaker
-    else
-        actor = second_speaker
-        trader = first_speaker
-    end
-    dialogs.relocate_item_section(actor, "antirad", "in", 3)
-    new_dialog.out_item_much("izlom_hand", 5)
+    dialogs.relocate_item_section(second_speaker, "izlom_hand", "out", 5)
+    dialogs.relocate_item_section(first_speaker, "antirad", "in", 3)
+end
+
+function freeman_ten_mutant_face_tushkano_have()
+    return count_item("mutant_face_tushkano", 10)
+end
+
+function freeman_ten_mutant_face_tushkano_dal(first_speaker, second_speaker)
+    dialogs.relocate_item_section(first_speaker, "mutant_face_tushkano", "out", 10)
+    dialogs.relocate_item_section(second_speaker, "ammo_5.56x45_ss190", "in", 3)
+end
+
+function freeman_ten_mutant_zombie_hand_have()
+    return count_item("mutant_zombie_hand", 10)
+end
+
+function freeman_ten_mutant_zombie_hand_dal(first_speaker, second_speaker)
+    dialogs.relocate_item_section(first_speaker, "mutant_zombie_hand", "out", 10)
+    dialogs.relocate_item_section(second_speaker, "ammo_5.56x45_ap", "in", 3)
+end
+
+function freeman_ten_mutant_psevdogigant_hand_have()
+    return count_item("mutant_psevdogigant_hand", 5)
+end
+
+function freeman_ten_mutant_psevdogigant_hand_dal(first_speaker, second_speaker)
+    dialogs.relocate_item_section(first_speaker, "mutant_psevdogigant_hand", "out", 5)
+    dialogs.relocate_item_section(second_speaker, "ammo_7.62x54_7h14", "in", 3)
+end
+
+function freeman_ten_mutant_hand_kontroler_have()
+    return count_item("mutant_hand_kontroler", 5)
+end
+
+function freeman_ten_mutant_hand_kontroler_dal(first_speaker, second_speaker)
+    dialogs.relocate_item_section(first_speaker, "mutant_hand_kontroler", "out", 5)
+    dialogs.relocate_item_section(second_speaker, "medkit_army", "in", 5)
+    dialogs.relocate_item_section(second_speaker, "antirad", "in", 5)
 end

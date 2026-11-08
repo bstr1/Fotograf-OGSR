@@ -103,7 +103,7 @@ function GlukUpdate()
     coeff_diff = 4 - game_diff
     if OldSec == NowSec then
         if OverEnable then
-            Analise()
+            -- Analise()
             CheckItems()
             OverEnable = false
         end
@@ -1210,82 +1210,6 @@ function Get_ammo_weight(section, count)
     end
 end
 
-local tbl_armor = {{
-    sect = "exo_outfit",
-    add_w = 50
-}, {
-    sect = "killer_blue_exoskeleton",
-    add_w = 15
-}, {
-    sect = "dolg_black_exoskeleton",
-    add_w = 35
-}, {
-    sect = "monolit_exoskeleton",
-    add_w = 30
-}, {
-    sect = "broken_exoskeleton",
-    add_w = 5
-}, {
-    sect = "neytral_exo_antigas_outfit",
-    add_w = 5
-}, {
-    sect = "soldier_outfit",
-    add_w = 50
-}, {
-    sect = "pekar_outfit",
-    add_w = 55
-}, {
-    sect = "exo_bandit_outfit",
-    add_w = 50
-}, {
-    sect = "nano_outfit_addw",
-    add_w = 250
-}, {
-    sect = "nebo_exo_outfit",
-    add_w = 60
-}, {
-    sect = "outfit_stalker_m2",
-    add_w = 10
-}, {
-    sect = "svoboda_exoskeleton",
-    add_w = 25
-}}
-function Analise()
-    local TotalWeight = GetInvWeight()
-    local armor = db.actor:item_in_slot(6)
-    local temp
-    local MaxWeight = 95
-    if armor then
-        for i = 1, table.getn(tbl_armor) do
-            temp = tbl_armor[i]
-            if armor:section() == temp.sect then
-                MaxWeight = MaxWeight + temp.add_w
-            end
-        end
-        if TotalWeight > MaxWeight then
-            if GG_Move > 1 then
-                temp = db.actor.power
-                db.actor.power = -temp + 0.1
-                if not has_alife_info("boryan_gluki_1") then
-                    db.actor:give_info_portion("boryan_gluki_1")
-                    local snd_obj = xr_sound.get_safe_sound_object([[ambient\gluki\actor_habar]])
-                    snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
-                end
-            end
-        else
-            if has_alife_info("boryan_gluki_1") then
-                db.actor:disable_info_portion("boryan_gluki_1")
-            end
-        end
-    end
-    -- Перезапуск скан-таймера
-    if not amk.has_g_timer("scan_timer") then
-        set_scan_timer()
-    end
-
-end
------------------------------------------------------------------------------------------------------------------------------------------------
-
 -- сообщения об удачном ограблении нычки
 local tbl_good =
     {"Вау, как мне повезло сегодня! Такой хабар с нычки чей-то снял - просто Клондайк! Низкий поклон за труды, продолжай в том же духе!",
@@ -2193,7 +2117,7 @@ end
 --------------------------------------------------------------------
 -- проверка наличия ящика водки
 function actor_vodka_have(first_speaker, second_speaker)
-    return new_dialog.item_much("vodka", 20) ~= false
+    return new_dialog.count_item("vodka", 20)
 end
 
 -- первый обмен
@@ -2205,7 +2129,7 @@ end
 
 -- проверка наличия Винтореза
 function actor_vss_have(first_speaker, second_speaker)
-    return new_dialog.item_much("wpn_vintorez", 1) ~= false
+    return new_dialog.count_item("wpn_vintorez", 1)
 end
 
 -- второй обмен
@@ -2225,8 +2149,7 @@ end
 
 -- проверка наличия подарков для Дуни
 function actor_present_have(first_speaker, second_speaker)
-    return new_dialog.item_much("beloe", 1) ~= false and new_dialog.item_much("kagor", 1) ~= false and
-               new_dialog.item_much("konfeta", 1) ~= false
+    return new_dialog.count_item("beloe", 1) and new_dialog.count_item("kagor", 1) and new_dialog.count_item("konfeta", 1)
 end
 
 -- передача подарков Дуне
@@ -2237,8 +2160,8 @@ function transfer_present(first_speaker, second_speaker)
 end
 
 -- проверка наличия литра водки
-function actor_litra_have(first_speaker, second_speaker)
-    return new_dialog.item_much("vodka", 2) ~= false
+function actor_litra_have()
+    return count_item("vodka", 2)
 end
 
 -- получение суточного довольствия
@@ -2356,8 +2279,8 @@ function check_mutant(...)
     return true
 end
 -- проверка монпансье
-function check_monpansie(...)
-    return new_dialog.item_much("sweets", 2) ~= false
+function check_monpansie()
+    return new_dialog.count_item("sweets", 1)
 end
 -- обмен частей монстров на деньги
 function dunya_transfer_1(first_speaker, second_speaker)

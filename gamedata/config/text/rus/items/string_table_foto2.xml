@@ -44,9 +44,9 @@
 </string>
 
 <string id="af_perdonit">
-    <text>"Пердонит".</text>
+    <text>Пердонит</text>
 </string>
-<string id="af_perdonit-desc">
+<string id="af_perdonit_desc">
     <text>Со слов Петрографа этот минерал обладает неиссякаемой энергией.</text>
 </string>
 
@@ -61,6 +61,10 @@
 <string id="catcher">
     <text>Ловец</text>
 </string>
-    
-    
 
+<string id="af_perdonit_stable">
+    <text>Активированный Пердонит</text>
+</string>
+<string id="af_perdonit_stable_desc">
+    <text>Минерал потерял почти всю энергию, но взамен получил ряд защитных свойств.</text>
+</string>

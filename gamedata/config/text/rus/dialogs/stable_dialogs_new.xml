@@ -23,55 +23,69 @@
   <text>Вот, сразу видно, деловой человек. Когда обратно, на выход пойдёшь, или снова к нам зайти захочешь, ко мне подойти не забудь! А я уж скажу, надо тебе ещё платить или нет. Тут Князь главный. Как он cкажет, так и будет. А пока, без баблосов даже и не суйся!</text>
 </string>
 
-<string id="informator_buy_pda_0">
+<string id="informator_buy_0">
   <text>Привет.</text>
 </string>
-<string id="informator_buy_pda_1">
+<string id="informator_buy_1">
   <text>Здорово, деловое предложение к тебе есть.</text>
 </string>
-<string id="informator_buy_pda_2">
+<string id="informator_buy_2">
   <text>Что за предложение?</text>
 </string>
-<string id="informator_buy_pda_3">
-  <text>Я скупаю армейские жетоны, снятые с мертвецов.</text>
+<string id="informator_buy_3">
+  <text>Я скупаю ПДА и армейские жетоны, снятые с мертвецов.</text>
 </string>
-<string id="informator_buy_pda_4">
+<string id="informator_buy_4">
   <text>Зачем тебе?</text>
 </string>
-<string id="informator_buy_pda_5">
-  <text>Ну это тебе незачем знать. Послушай лучше: за 10 жетонов я дам тебе мелочёвки разной, смотря что будет: патроны, медикаменты, может ещё что. Ну, а если 20 жетонов принесёшь, то я с тобой информацией о тайнике поделюсь. Правда, тут уж как повезет: если тайник мастера какого, то и хабар соответствующий. Ну, а если новичка... сам понимаешь, что там тебя ждёт.</text>
+<string id="informator_buy_5">
+  <text>Ну это тебе незачем знать. Послушай лучше: за 10 жетонов я дам тебе мелочёвки разной, смотря что будет: патроны, медикаменты, может ещё что. Ну, а если 20 жетонов принесёшь, то получишь координаты тайника.\nЗа 10 ПДА я дам тебе 2 абсолюта, а вот за 20 ПДА получишь 2 талисмана.
+  </text>
 </string>
-<string id="informator_buy_pda_6">
-  <text>Ладно, если будут жетоны - принесу.</text>
+<string id="informator_buy_6">
+  <text>Ладно, если будут что - принесу.</text>
 </string>
-<string id="informator_beret_pda_0">
-  <text>Привет, как жизнь, скупщик жетонов?</text>
+
+<string id="informator_beret_0">
+  <text>Привет, как жизнь, скупщик жетонов? %c[orange][Бартер]</text>
 </string>
-<string id="informator_beret_pda_1">
+<string id="informator_beret_1">
   <text>Ну, не только жетонов. Давай к делу, что принёс?</text>
 </string>
-<string id="informator_beret_pda_2">
+<string id="informator_beret_2">
   <text>Вот, собрал для тебя 10 жетонов.</text>
 </string>
-<string id="informator_beret_pda_3">
+<string id="informator_beret_3">
   <text>У меня сегодня богатый улов. Держи 20 жетонов.</text>
 </string>
-<string id="informator_beret_pda_4">
+<string id="informator_beret_4">
+  <text>Принёс тебе 10 ПДА.</text>
+</string>
+<string id="informator_beret_5">
+  <text>Нашёл для тебя 20 ПДА.</text>
+</string>
+<string id="informator_beret_6">
   <text>Дел по горло, некогда жетоны собирать, в следующий раз принесу.</text>
 </string>
-<string id="informator_beret_pda_5">
+<string id="informator_beret_7">
   <text>Ну раз 10 жетонов принёс, то вот, держи, как и обещал.</text>
 </string>
-<string id="informator_beret_pda_6">
+<string id="informator_beret_8">
   <text>20 жетонов - это же скольких мертвецов ты обшарил! Давай свой ПДА, скину тебе информацию о тайнике.</text>
 </string>
-<string id="informator_beret_pda_7">
+<string id="informator_beret_9">
+  <text>Давай сюда наладонники и получай абсолюты.</text>
+</string>
+<string id="informator_beret_10">
+  <text>Не хочу даже спрашивать где ты их "нашёл". Держи талисманы.</text>
+</string>
+<string id="informator_beret_11">
   <text>Ну что, тогда до следующего раза.</text>
 </string>
 
 
 <string id="trader_bratok_dialog_0">
-  <text>Грек, есть что на продажу?</text>
+  <text>Грек, есть что на продажу? %c[orange][Бартер]</text>
 </string>
 <string id="trader_bratok_dialog_2">
   <text>Есть патроны и оружие. Но не на продажу, а по бартеру.</text>
@@ -86,61 +100,61 @@
   <text>Какие патроны?</text>
 </string>
 <string id="trader_bratok_dialog_6">
-  <text>Есть Сайга и Ак-47.</text>
+  <text>Есть Сайга и АКС-74.</text>
 </string>
 <string id="trader_bratok_dialog_5111">
-  <text>Для Ак-47, обычные.</text>
+  <text>Нужны обычные 7.62x39мм.</text>
 </string>
 <string id="trader_bratok_dialog_51">
-  <text>7.62x39мм, 3 пачки за 5 банок консервов.</text>
+  <text>Даю 90 патронов за 5 банок консервов.</text>
 </string>
 <string id="trader_bratok_dialog_5211">
-  <text>Для Ак-47, бронебойные.</text>
+  <text>Нужны бронебойные 7.62x39мм.</text>
 </string>
 <string id="trader_bratok_dialog_52">
-  <text>7.62x39мм бронебойные, 3 пачки за 4 бутылки водки.</text>
+  <text>Меняю 90 патронов за 4 бутылки водки.</text>
 </string>
 <string id="trader_bratok_dialog_5311">
-  <text>Для калаша, обычные.</text>
+  <text>Нужны обычные 5.45x39мм.</text>
 </string>
 <string id="trader_bratok_dialog_53">
-  <text>5.45x39мм 3 пачки, за 5 буханок хлеба.</text>
+  <text>Отдам 90 патронов за 5 буханок хлеба.</text>
 </string>
 <string id="trader_bratok_dialog_5411">
-  <text>Для калаша, улучшенные.</text>
+  <text>Нужны бронебойные 5.45x39мм.</text>
 </string>
 <string id="trader_bratok_dialog_54">
-  <text>5.45x39мм БП, 3 пачки за 3 бутылки минералки.</text>
+  <text>Отдам 90 патронов за 3 бутылки минералки.</text>
 </string>
 <string id="trader_bratok_dialog_5511">
-  <text>Для LR-300, обычные.</text>
+  <text>Натовские обычные.</text>
 </string>
 <string id="trader_bratok_dialog_55">
-  <text>5.56х45мм SS109, 3 пачки за 5 палок колбасы.</text>
+  <text>Поменяю 90 патронов за 5 палок колбасы.</text>
 </string>
 <string id="trader_bratok_dialog_5611">
-  <text>Для LR-300, улучшенные.</text>
+  <text>Натовские улучшенные.</text>
 </string>
 <string id="trader_bratok_dialog_56">
-  <text>5.56х45мм AP, 3 пачки за 4 бутылки водки.</text>
+  <text>Поменяю 90 патронов за 4 бутылки водки.</text>
 </string>
 <string id="trader_bratok_dialog_5711">
-  <text>Для СВД, обычные.</text>
+  <text>Имеются 7.62x54 7Н1 для СВД?</text>
 </string>
 <string id="trader_bratok_dialog_57">
-  <text>7,62x54R 7Н1, три пачки за 2 банки сгущёнки.</text>
+  <text>Есть, отдам 30 патронов за 2 банки сгущёнки.</text>
 </string>
 <string id="trader_bratok_dialog_5811">
   <text>Для винтореза, вала или грозы, обычные.</text>
 </string>
 <string id="trader_bratok_dialog_58">
-  <text>9х39 ПАБ-9, три пачки за две банки шпрот.</text>
+  <text>Получишь 90 патронов за две банки шпрот.</text>
 </string>
 <string id="trader_bratok_dialog_6111">
-  <text>Ак-47.</text>
+  <text>АКС-74.</text>
 </string>
 <string id="trader_bratok_dialog_61">
-  <text>Ак-47 - за 2 баллона с газом.</text>
+  <text>АКС-74 - за 2 баллона с газом.</text>
 </string>
 <string id="trader_bratok_dialog_6211">
   <text>Сайга.</text>
@@ -149,7 +163,7 @@
   <text>Сайга - за две канистры бензина.</text>
 </string>
 <string id="trader_bratok_dialog_611">
-  <text>Ак-47 - моё любимое оружие, давай его сюда. Вот твои два баллона с газом.</text>
+  <text>АКС-74 - моё любимое оружие, давай его сюда. Вот твои два баллона с газом.</text>
 </string>
 <string id="trader_bratok_dialog_612">
   <text>Дороговато.</text>
@@ -167,7 +181,7 @@
   <text>Съел я консервы, голодный был.</text>
 </string>
 <string id="trader_bratok_dialog_521">
-  <text>Для Ак-47 - бронебойные? Давай.</text>
+  <text>Давай бронебойные.</text>
 </string>
 <string id="trader_bratok_dialog_522">
   <text>Нету у меня водки, погуляли мы вчера с диггерами малость.</text>
@@ -185,7 +199,7 @@
   <text>Нету у меня сейчас с собой минералки.</text>
 </string>
 <string id="trader_bratok_dialog_551">
-  <text>Для LR-300 нужны.</text>
+  <text>Давай обычные.</text>
 </string>
 <string id="trader_bratok_dialog_552">
   <text>Кончилась.</text>
@@ -439,22 +453,22 @@
   <text>Какие именно?</text>
 </string>
 <string id="freeman_change_predlag_5">
-  <text>Голова тушкана - 10 штук за 3 пачки натовских патронов. 
-Рука зомби - 10 штук за 3 пачки натовских бронебойных патронов. 
-Лапа псевдогиганта - 5 штук за 3 пачки патронов к СВД, снайперских. 
+  <text>Голова тушкана - 10 штук за 3 пачки натовских патронов.\n
+Рука зомби - 10 штук за 3 пачки натовских бронебойных патронов.\n
+Лапа псевдогиганта - 5 штук за 3 пачки патронов к СВД, снайперских.\n
 Рука контролёра - 5 штук за 5 аптечек армейских, плюс пять антирадов.</text>
 </string>
 <string id="freeman_change_predlag_6">
   <text>Ладно, будет - принесу.</text>
 </string>
 <string id="freeman_change_0">
-  <text>Привет, Мазай. Вот, принёс кое-что.</text>
+  <text>Привет, Мазай. Вот, принёс кое-что. %c[orange][Бартер]</text>
 </string>
 <string id="freeman_change_1">
-  <text>Что есть? Учти, принимаем по фиксированной таксе:
-Голову тушкана - 10 штук за 3 пачки натовских патронов, 
-Рука зомби - 10 штук за 3 пачки натовских бронебойных патронов, 
-Лапа псевдогиганта - 5 штук за 3 пачки патронов к СВД, снайперских, 
+  <text>Что есть? Учти, принимаем по фиксированной таксе:\n
+Голову тушкана - 10 штук за 3 пачки натовских патронов.\n
+Рука зомби - 10 штук за 3 пачки натовских бронебойных патронов.\n
+Лапа псевдогиганта - 5 штук за 3 пачки патронов к СВД, снайперских.\n 
 Рука контролёра - 5 штук за 5 аптечек армейских плюс 5 антирадов.</text>
 </string>
 <string id="freeman_change_2">
@@ -490,12 +504,12 @@
 </string>
 <string id="svoboda_change_21">
   <text>У меня вот что есть на обмен:\n
-1)SIG SG552 Commando за 7 банок печёночного паштета.\n
-2)SIG SG551 за 6 бутылок водки.\n
-3)Винтовка M16A1 за 5 пачек копчёного бифштекса.\n
-4)Colt M4A1 за 5 суточных армейских сухпайков.\n
-5)FA MAS Prototype3 за 10 антирадов.\n
-6)SIG 550 снайперский за 3 двухсуточных армейских сухпайка.\n</text>
+SIG SG552 Commando за 7 банок печёночного паштета.\n
+SIG SG551 за 6 бутылок водки.\n
+Винтовка M16A1 за 5 пачек копчёного бифштекса.\n
+Colt M4A1 за 5 суточных армейских сухпайков.\n
+FA MAS Prototype3 за 10 антирадов.\n
+SIG 550 снайперский за 3 двухсуточных армейских сухпайка.\n</text>
 </string>
 <string id="svoboda_change_211">
   <text>Давай SIG SG552 Commando</text>
@@ -519,7 +533,10 @@
   <text>Не-е, по таким ценам - ну его... Я лучше с калашом похожу.</text>
 </string>
 <string id="svoboda_change_31">
-  <text>Есть вот что:\n1)"5.56x45мм AP" - 3 пачки за 2 банки оливок,\n2)"5.56х45мм SS109" - 3 пачки за 2 банки маринованных орехов,\n3) "Граната Ф-1" - 3 штуки за 2 коробки шоколадных галет.</text>
+  <text>Есть вот что:\n
+5.56x45мм AP - 3 пачки за 2 банки оливок,\n
+5.56х45мм SS109 - 3 пачки за 2 банки маринованных орехов,\n
+Граната Ф-1 - 3 штуки за 2 коробки шоколадных галет.</text>
 </string>
 <string id="svoboda_change_311">
   <text>Давай патроны 5.56x45мм бронебойные.</text>
