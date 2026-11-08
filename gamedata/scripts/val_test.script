@@ -1,54 +1,3 @@
-function start_val()
-    if level.name() == "predbannik" and not has_alife_info("amb_pred") then
-        db.actor:give_info_portion("amb_pred")
-
-    elseif level.name() == "hiding_road" and not has_alife_info("amb_road") then
-        db.actor:give_info_portion("amb_road")
-
-    elseif level.name() == "l11_pripyat" and not has_alife_info("amb_prip") then
-        db.actor:give_info_portion("amb_prip")
-
-    elseif level.name() == "av_peshera" and not has_alife_info("amb_pesh") then
-        db.actor:give_info_portion("amb_pesh")
-
-    elseif level.name() == "swamp" and not has_alife_info("amb_swamp") then
-        db.actor:give_info_portion("amb_swamp")
-
-    elseif level.name() == "promzone" and not has_alife_info("amb_prom") then
-        db.actor:give_info_portion("amb_prom")
-
-    elseif level.name() == "l03u_agr_underground" and not has_alife_info("amb_agro") then
-        db.actor:give_info_portion("amb_agro")
-
-    elseif level.name() == "l05_bar" and not has_alife_info("amb_bar") then
-        db.actor:give_info_portion("amb_bar")
-
-    elseif level.name() == "aver" and not has_alife_info("amb_aver") then
-        db.actor:give_info_portion("amb_aver")
-
-    elseif level.name() == "aver" and not has_alife_info("intro_aver") then
-        db.actor:give_info_portion("intro_aver")
-
-    elseif level.name() == "l08u_brainlab" and not has_alife_info("amb_brain") then
-        db.actor:give_info_portion("amb_brain")
-
-    elseif level.name() == "l10u_bunker" and not has_alife_info("amb_bunk") then
-        db.actor:give_info_portion("amb_bunk")
-
-    elseif level.name() == "l04u_labx18" and not has_alife_info("amb_labx") then
-        db.actor:give_info_portion("amb_labx")
-
-    elseif level.name() == "dyshlo" and not has_alife_info("amb_dysh") then
-        db.actor:give_info_portion("amb_dysh")
-
-    elseif level.name() == "deadcity" and not has_alife_info("amb_dead") then
-        db.actor:give_info_portion("amb_dead")
-
-    elseif level.name() == "l12u_sarcofag" and not has_alife_info("amb_sarc") then
-        db.actor:give_info_portion("amb_sarc")
-    end
-end
-
 ----------
 -- чтение формы из нет-пакета
 ----------
@@ -3560,8 +3509,7 @@ local tbl_hlam_ruk = {{
 }}
 function hlam_ruk_spawn()
     local a = tbl_hlam_ruk[math.random(table.getn(tbl_hlam_ruk))]
-    local sim = alife()
-    sim:create("hlam_ruk", vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv)
+    alife():create("hlam_ruk", vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv)
 end
 
 local tbl_saiga_b = {{
@@ -3592,8 +3540,7 @@ local tbl_saiga_b = {{
 
 function haron_saiga_spawn()
     local a = tbl_saiga_b[math.random(table.getn(tbl_saiga_b))]
-    local sim = alife()
-    sim:create("wpn_saiga12", vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv)
+    alife():create("wpn_saiga12", vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv)
 end
 
 local kombeztrup = {{
@@ -3657,8 +3604,7 @@ local tbl_zombie_ruk = {{
 
 function zombie_ruk_spawn()
     local a = tbl_zombie_ruk[math.random(table.getn(tbl_zombie_ruk))]
-    local sim = alife()
-    sim:create("zombie_ruk", vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv)
+    alife():create("zombie_ruk", vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv)
 end
 
 local tbl_novis_ruk = {{
@@ -3689,7 +3635,5 @@ local tbl_novis_ruk = {{
 
 function novis_ruk_spawn()
     local a = tbl_novis_ruk[math.random(table.getn(tbl_novis_ruk))]
-    local sim = alife()
-    sim:create("novis_ruk", vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv)
+    alife():create("novis_ruk", vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv)
 end
-

@@ -1,6 +1,5 @@
 local function on_take(obj, sobj)
     if obj:section() == "af_perdonit" and db.actor:has_info("perdonit_enable") and not db.actor:has_info("perdonit_taken") then
-
         db.actor:give_info_portion("perdonit_taken")
 
         alife():create("m_controller_senator", vector():set(340.53, -6.32, -14.55), 1474965, 790)
@@ -92,6 +91,57 @@ local function on_take(obj, sobj)
         db.actor:give_info_portion("crow_story")
     elseif obj:section() == "mutant_mouse" and db.actor:dont_has_info("mouse_story") then
         db.actor:give_info_portion("mouse_story")
+    end
+end
+
+local function on_first_update()
+    if level.name() == "predbannik" and db.actor:dont_has_info("amb_pred") then
+        db.actor:give_info_portion("amb_pred")
+
+    elseif level.name() == "hiding_road" and db.actor:dont_has_info("amb_road") then
+        db.actor:give_info_portion("amb_road")
+
+    elseif level.name() == "l11_pripyat" and db.actor:dont_has_info("amb_prip") then
+        db.actor:give_info_portion("amb_prip")
+
+    elseif level.name() == "av_peshera" and db.actor:dont_has_info("amb_pesh") then
+        db.actor:give_info_portion("amb_pesh")
+
+    elseif level.name() == "swamp" and db.actor:dont_has_info("amb_swamp") then
+        db.actor:give_info_portion("amb_swamp")
+
+    elseif level.name() == "promzone" and db.actor:dont_has_info("amb_prom") then
+        db.actor:give_info_portion("amb_prom")
+
+    elseif level.name() == "l03u_agr_underground" and db.actor:dont_has_info("amb_agro") then
+        db.actor:give_info_portion("amb_agro")
+
+    elseif level.name() == "l05_bar" and db.actor:dont_has_info("amb_bar") then
+        db.actor:give_info_portion("amb_bar")
+
+    elseif level.name() == "aver" and db.actor:dont_has_info("amb_aver") then
+        db.actor:give_info_portion("amb_aver")
+
+    elseif level.name() == "aver" and db.actor:dont_has_info("intro_aver") then
+        db.actor:give_info_portion("intro_aver")
+
+    elseif level.name() == "l08u_brainlab" and db.actor:dont_has_info("amb_brain") then
+        db.actor:give_info_portion("amb_brain")
+
+    elseif level.name() == "l10u_bunker" and db.actor:dont_has_info("amb_bunk") then
+        db.actor:give_info_portion("amb_bunk")
+
+    elseif level.name() == "l04u_labx18" and db.actor:dont_has_info("amb_labx") then
+        db.actor:give_info_portion("amb_labx")
+
+    elseif level.name() == "dyshlo" and db.actor:dont_has_info("amb_dysh") then
+        db.actor:give_info_portion("amb_dysh")
+
+    elseif level.name() == "deadcity" and db.actor:dont_has_info("amb_dead") then
+        db.actor:give_info_portion("amb_dead")
+
+    elseif level.name() == "l12u_sarcofag" and db.actor:dont_has_info("amb_sarc") then
+        db.actor:give_info_portion("amb_sarc")
     end
 end
 
@@ -4514,6 +4564,7 @@ local function distance_check()
 end
 
 function attach(sm)
-    sm:subscribe({signal = "on_update",         fun = distance_check})
+    sm:subscribe({signal = "on_first_update",  fun = on_first_update})
+    sm:subscribe({signal = "on_update",        fun = distance_check})
     sm:subscribe({signal = "on_take",          fun = on_take})
 end

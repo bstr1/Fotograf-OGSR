@@ -387,7 +387,6 @@ function actor_binder:update(delta)
 
     if corspoff then
         sak_off_corpses.off_corpses()
-        val_test.start_val()
         crystall_spawn.check_locations()
         observer.on_start()
         corspoff = false
