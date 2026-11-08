@@ -312,9 +312,9 @@ function actor_binder:on_item_take(obj)
     inventory.on_item_take(item)
     fotograf.checking_fotograf_item(obj)
     foto2.checking_use_item(obj)
-    petrograf.take_item(obj)
     foto.take_item(obj)
     -- AMK UTILS--
+    self.am:call("on_take", obj, sobj)
 end
 ----------------------------------------------------------------------------------------------------------------------
 function actor_binder:on_item_drop(obj)
@@ -380,12 +380,12 @@ function actor_binder:map_location_added_callback(spot_type_str, object_id)
 end
 ----------------------------------------------------------------------------------------------------------------------
 local corspoff = true
-
+local update_was_never_called = true
 function actor_binder:update(delta)
     if update_was_never_called then
-        self.am:call("on_before_first_update")
+        self.am:call("on_first_update")
+        update_was_never_called = false
     end
-    self.am:call("on_before_update", delta)
 
     if corspoff then
         sak_off_corpses.off_corpses()
@@ -574,7 +574,6 @@ function actor_binder:update(delta)
     end
 
     -- end of addition
-    -- fotograf.mk_distance_check()
     if biodetector then
         biodetector.update()
     end

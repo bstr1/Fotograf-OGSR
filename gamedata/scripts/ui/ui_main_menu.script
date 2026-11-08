@@ -170,7 +170,7 @@ function main_menu:OnKeyboard(dik, keyboard_action)
 			end
 		-- elseif dik == DIK_keys.DIK_N then --personal_test
 			-- xpcall(function() dofile(getFS():update_path("$game_scripts$", "personal_test.lua")) end, log1)
-		elseif dik == DIK_keys.DIK_P then -- _sdata: отладочный HUD (вкл/выкл повторным нажатием)
+		elseif dik == DIK_keys.DIK_P then -- _sdata: пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ HUD (пїЅпїЅпїЅ/пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ)
 			if level.present() and db.actor and db.actor:alive() and device().precache_frame < 1 then
 				if not _sdata.GlobalEnable then
 					_sdata.subscribe()

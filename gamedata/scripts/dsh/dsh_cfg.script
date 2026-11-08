@@ -1,0 +1,205 @@
+-- -*- mode: lua; coding: windows-1251-dos -*-
+
+local cfg_fname  = "dsh_cfg.ltx"
+local watch_keys = {
+  {
+    [ "name" ] = "active_jobs",
+    [ "bind" ] = key_bindings.kACTIVE_JOBS,
+  },
+  {
+    [ "name" ] = "buy_menu",
+    [ "bind" ] = key_bindings.kBUY,
+  },
+  {
+    [ "name" ] = "cam_2",
+    [ "bind" ] = key_bindings.kCAM_2,
+  },
+  {
+    [ "name" ] = "cam_3",
+    [ "bind" ] = key_bindings.kCAM_3,
+  },
+  {
+    [ "name" ] = "cam_4",
+    [ "bind" ] = key_bindings.kCAM_4,
+  },
+  {
+    [ "name" ] = "chat",
+    [ "bind" ] = key_bindings.kCHAT,
+  },
+  {
+    [ "name" ] = "chat_team",
+    [ "bind" ] = key_bindings.kCHAT_TEAM,
+  },
+  {
+    [ "name" ] = "console",
+    [ "bind" ] = key_bindings.kCONSOLE,
+  },
+  {
+    [ "name" ] = "contacts",
+    [ "bind" ] = key_bindings.kCONTACTS,
+  },
+  {
+    [ "name" ] = "drop",
+    [ "bind" ] = key_bindings.kDROP,
+  },
+  {
+    [ "name" ] = "inventory",
+    [ "bind" ] = key_bindings.kINVENTORY,
+  },
+  {
+    [ "name" ] = "map",
+    [ "bind" ] = key_bindings.kMAP,
+  },
+  {
+    [ "name" ] = "night_vision",
+    [ "bind" ] = key_bindings.kNIGHT_VISION,
+  },
+  {
+    [ "name" ] = "quick_load",
+    [ "bind" ] = key_bindings.kQUICK_LOAD,
+  },
+  {
+    [ "name" ] = "quick_save",
+    [ "bind" ] = key_bindings.kQUICK_SAVE,
+  },
+  {
+    [ "name" ] = "scores",
+    [ "bind" ] = key_bindings.kSCORES,
+  },
+  {
+    [ "name" ] = "torch",
+    [ "bind" ] = key_bindings.kTORCH,
+  },
+  {
+    [ "name" ] = "use_bandage",
+    [ "bind" ] = key_bindings.kUSE_BANDAGE,
+  },
+  {
+    [ "name" ] = "use_medkit",
+    [ "bind" ] = key_bindings.kUSE_MEDKIT,
+  },
+}
+local watch_float_opts = {
+  "cam_inert",
+  "r2_sun_lumscale_amb",
+}
+local watch_str_opts = {
+  -- "r2_dof_quality",
+  -- "r2_dof_zoom",
+}
+
+
+function attach( sm )
+  sm:subscribe({ signal = "on_before_spawn", fun = this.on_before_spawn })
+end
+
+
+local data, initialized = {}, false
+
+function on_game_start()
+  local cfg_path = getFS():update_path( "$game_saves$", cfg_fname )
+  local f = io.open( cfg_path, "r" )
+  if f then
+    local lines = {}
+    for l in f:lines() do
+      table.insert( lines, l )
+    end
+    f:close()
+    local cd = m_netpk.custom_data( table.concat( lines, "\n" ) )
+    local t  = cd:getTable()
+    if t.cfg then data = t.cfg end
+  else
+    on_after_main_menu()
+  end
+  data.debug_mode = string.find( command_line(), "-dbg" )
+  initialized = true
+end
+
+
+function on_before_main_menu()
+  if not initialized then on_game_start() end
+  for _, o in ipairs( watch_float_opts ) do
+    if data[ o ] then
+      cmd2( o, tostring( data[ o ] ) )
+    end
+  end
+  for _, o in ipairs( watch_str_opts ) do
+    if data[ o ] then
+      cmd2( o, tostring( data[ o ] ) )
+    end
+  end
+  for _, o in ipairs( watch_keys ) do
+    rebind_watch_key( o.name )
+  end
+end
+
+
+function rebind_watch_key( name )
+  if data[ name ] then
+    local knames = parse_names( data[ name ] )
+    if knames[ 1 ] then
+      cmd2( "bind", name .. " " .. knames[ 1 ] )
+      if knames[ 2 ] then
+        cmd2( "bind_sec", name .. " " .. knames[ 2 ] )
+      end
+    end
+  end
+end
+
+
+function on_after_main_menu()
+    update_cfg()
+    save()
+end
+
+
+function update_cfg_data( o, v )
+  data[ o ] = v
+end
+
+function update_cfg()
+  for _, o in ipairs( watch_float_opts ) do
+    update_cfg_data( o, get_con_float( o ) )
+  end
+  for _, o in ipairs( watch_str_opts ) do
+    update_cfg_data( o, get_con_string( o ) )
+  end
+  for _, o in ipairs( watch_keys ) do
+    update_cfg_data( o.name, dik_to_keyname( bind_to_dik( o.bind ) ) )
+  end
+end
+
+
+function save()
+  local cfg_path = getFS():update_path( "$game_saves$", cfg_fname )
+  local f, err = io.open( cfg_path, "w+b" )
+  if f then
+    local cfg = {
+      [ "cfg" ] = data,
+    }
+    local cd = m_netpk.custom_data( cfg )
+    f:write( cd:getString() )
+    f:close()
+  else
+    log2( "[%s]: can't save %s: %s", script_name(), cfg_fname, err )
+  end
+end
+
+
+function get_data()
+  return data
+end
+
+
+function on_before_spawn()
+  if not getFS():exist( "$game_saves$", cfg_fname ) then
+    on_after_main_menu()
+  end
+end
+
+
+function switch( k, onoff )
+  local changed = ( data[ k ] and not onoff ) or ( not data[ k ] and onoff )
+  data[ k ] = onoff and "true" or nil
+  return changed
+end

@@ -269,7 +269,6 @@
 <string id="descr_pg">
     <text>Подствольный гранатомет</text>
 </string>
-
 <string id="descr_time">
     <text>Время действия</text>
 </string>
@@ -287,3 +286,5 @@
 <string id="st_move_on_quick_slot">
     <text>В быстрый слот</text>
 </string>
+<string id="ui_inv_power_loss"><text>Потеря выносливости</text></string>
+<string id="descr_resource"><text>Ресурс</text></string>

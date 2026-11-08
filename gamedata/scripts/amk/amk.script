@@ -425,9 +425,6 @@ local a
   if select_string=="shpak_timer" then
     boryan67.shpak_timer_done()
   end
-  if select_string=="perdonit_timer" then
-    petrograf.relocate_perdonit()
-  end
   if select_string=="scan_timer" then
     boryan67.scan_habar()
   end

@@ -4500,6 +4500,8 @@
     <crouch_type>0</crouch_type>
     <supplies>
             [spawn] \n
+            wpn_minifake \n
+            ammo_minigun = 1 \n
             device_torch \n
     </supplies>
 

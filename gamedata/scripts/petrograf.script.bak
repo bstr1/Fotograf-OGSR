@@ -1,0 +1,185 @@
+-- Петрограф с заданиями на поиск Пердонита и сбор коллекции минералов
+
+-- создание Петрографа
+function create_petrograf()
+    local sobj = alife():create("petrograf", vector():set(154.014, 0.001, 38.760), 40775, 231)
+    if sobj then
+        amk.save_variable("petrograft_id", sobj.id) -- сохраняем ИД Петрографа
+    end
+end
+
+-- активация Пердонита стадия 0
+function activate_0()
+    -- Читаем заклинания активации
+    local petrograft_id = amk.load_variable("petrograft_id") -- читаем ИД Петрографа
+    if petrograft_id then
+        local obj = level.object_by_id(petrograft_id) -- получаем клиентский объект
+        if obj then
+            local snd_obj = xr_sound.get_safe_sound_object([[new\petrograf_cheetky]])
+            snd_obj:play_at_pos(db.actor, obj:bone_position("bip01_head"))
+        end
+    end
+end
+
+local sound1, sound2, particle1, particle2
+-- активация Пердонита стадия 1
+function activate_1()
+    local petrograft_id = amk.load_variable("petrograft_id") -- читаем ИД Петрографа
+    if petrograft_id then
+        local obj = level.object_by_id(petrograft_id) -- получаем клиентский объект
+        if obj then
+            -- играем слабый разряд в позиции спины
+            sound1 = sound_object("anomaly\\amk_electra")
+            if sound1 then
+                sound1:play_at_pos(db.actor, obj:bone_position("bip01_spine2"))
+            end
+            particle1 = particles_object("mauvais\\end\\perdonit_00")
+            if particle1 then
+                particle1:play_at_pos(obj:bone_position("bip01_spine2"))
+            end
+            -- выдаем реплику
+            local snd_obj = xr_sound.get_safe_sound_object([[new\petrograf_active]])
+            snd_obj:play_at_pos(db.actor, obj:bone_position("bip01_head"))
+        end
+    end
+end
+
+-- активация Пердонита стадия 2
+function activate_2()
+    local petrograft_id = amk.load_variable("petrograft_id") -- читаем ИД Петрографа
+    if petrograft_id then
+        local obj = level.object_by_id(petrograft_id) -- получаем клиентский объект
+        if obj then
+            -- играем партиклы
+            sound1 = sound_object("anomaly\\gravi_blowoutdist")
+            if sound1 then
+                sound1:play_at_pos(db.actor, obj:bone_position("bip01_head"))
+            end
+            particle1 = particles_object("anomaly2\\gravity_blast_final00_00")
+            if particle1 then
+                particle1:play_at_pos(obj:bone_position("bip01_head"))
+            end
+            ------------------
+            sound2 = sound_object("anomaly\\pux_blast")
+            if sound2 then
+                sound2:play_at_pos(db.actor, obj:bone_position("bip01_head"))
+            end
+            particle2 = particles_object("mauvais\\end\\perdonit_00")
+            if particle2 then
+                particle2:play_at_pos(obj:bone_position("bip01_head"))
+            end
+        end
+    end
+end
+
+-- активация Пердонита стадия 3
+function activate_3()
+    local petrograft_id = amk.load_variable("petrograft_id") -- читаем ИД Петрографа
+    if petrograft_id then
+        local obj = level.object_by_id(petrograft_id) -- получаем клиентский объект
+        if obj then
+            -- играем сильный разряд в позиции головы
+            sound1 = sound_object("anomaly\\electra_blast1")
+            if sound1 then
+                sound1:play_at_pos(db.actor, obj:bone_position("bip01_head"))
+            end
+            particle1 = particles_object("anomaly2\\electra2_blast_p")
+            if particle1 then
+                particle1:play_at_pos(obj:bone_position("bip01_head"))
+            end
+            -- играем сильный разряд в позиции Петрографа
+            sound2 = sound_object("anomaly\\electra_blast1")
+            if sound2 then
+                sound2:play_at_pos(db.actor, obj:position())
+            end
+            particle2 = particles_object("anomaly2\\electra2_blast_p")
+            if particle2 then
+                particle2:play_at_pos(obj:position())
+            end
+        end
+    end
+end
+
+-- удаление Петрографа
+function remove_petrograf()
+    local petrograft_id = amk.load_variable("petrograft_id") -- читаем ИД Петрографа
+    if petrograft_id then
+        local sobj = alife():object(petrograft_id) -- получаем серверный объект
+        if sobj then
+            alife():create("af_perdonit_stable", sobj.position, sobj.m_level_vertex_id, sobj.m_game_vertex_id)
+            alife():release(sobj, true) -- удаляем Петрографа
+            amk.del_variable("petrograft_id") -- чистим переменную
+        end
+    end
+    local snd_obj = xr_sound.get_safe_sound_object([[new\petrograf_resume]])
+    snd_obj:play_at_pos(db.actor, db.actor:position())
+end
+
+-- создание Пердонита
+function create_perdonit()
+	alife():create("af_perdonit", vector():set(324.49, -6.40, -15.24), 1446408, 790)
+    -- local obj = alife_create("aes_case1", "l12_stancia_2", vector():set(376.254, 0.005, 383.164))
+    -- level_tasks.add_location_by_id(obj.id, "crlc_big", "case1")
+end
+
+-- прекондишен наличия Пердонита
+function has_perdonit(first_speaker, second_speaker)
+    return db.actor ~= nil and db.actor:object("af_perdonit") ~= nil
+end
+
+-- передача Пердонита
+function transfer_perdonit(first_speaker, second_speaker)
+    local cnt = db.actor:object_count()
+    local obj, sect
+    for i = 0, cnt do
+        obj = db.actor:object(i)
+        sect = obj and obj:section()
+        if sect == "af_perdonit" then
+            first_speaker:transfer_item(obj, second_speaker) -- Передаем Пердонит Петрографу
+        end
+    end
+end
+
+-- Коллекция минералов
+-- прекондишен наличия коллекции минералов
+function collect_minerals(first_speaker, second_speaker)
+    local actor = db.actor
+    if not actor then
+        return false
+    end
+    for a = 1, 12, 1 do
+        if a < 10 then
+            if not actor:object("ks_reagent_0" .. tostring(a)) or not actor:object("ks_active_0" .. tostring(a)) then
+                return false
+            end
+        else
+            if not actor:object("ks_reagent_" .. tostring(a)) or not actor:object("ks_active_" .. tostring(a)) then
+                return false
+            end
+        end
+    end
+    return true
+end
+
+-- передача коллекции
+function transfer_minerals(first_speaker, second_speaker)
+    local actor = db.actor
+    if not actor then
+        return false
+    end
+    for a = 1, 12, 1 do
+        if a < 10 then
+            new_dialog.out_item_much("ks_reagent_0" .. tostring(a), 1)
+            new_dialog.out_item_much("ks_active_0" .. tostring(a), 1)
+        else
+            new_dialog.out_item_much("ks_reagent_" .. tostring(a), 1)
+            new_dialog.out_item_much("ks_active_" .. tostring(a), 1)
+        end
+    end
+    dialogs.relocate_money(first_speaker, 30000, "in") -- получаем деньги в награду
+end
+
+-- получение аванса
+function collect_priz(first_speaker, second_speaker)
+    dialogs.relocate_money(first_speaker, 30000, "in") -- получаем деньги в награду
+end

@@ -1117,9 +1117,6 @@
             [spawn] \n
             wpn_vector \n
             ammo_11.43x23_hydro = 2 \n
-            wpn_wa2000 = 1 \n
-            ammo_5.56x45_ap = 2 \n
-            ammo_300_win = 3 \n
             device_torch \n
 #include "gameplay\character_food.xml" \n
 #include "gameplay\character_drugs.xml"

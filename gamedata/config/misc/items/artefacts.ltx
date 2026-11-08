@@ -2216,7 +2216,7 @@ cform                                            = skeleton
 class                                            = ARTEFACT
 
 visual                                           = physics\anomaly\caterpillar.ogf  
-description                                      = af_perdonit-desc
+description                                      = af_perdonit_desc
 inv_name                                         = af_perdonit
 inv_name_short                                   = af_perdonit
 inv_weight                                       = 0.5
@@ -2236,7 +2236,7 @@ jump_height                                      = 0.8
 
 particles                                        = anomaly2\artefact\artefact_electra
 
-lights_enabled                                   = true ;true   ;???? ?????? 
+lights_enabled                                   = true
 trail_light_color                                = 1.0,0.0,0.5
 trail_light_range                                = 0.9
 
@@ -2257,6 +2257,35 @@ shock_immunity                                   = 1.0
 wound_immunity                                   = 1.0 
 radiation_immunity                               = 1.0
 telepatic_immunity                               = 1.0
+chemical_burn_immunity                           = 1.0
+explosion_immunity                               = 1.0
+fire_wound_immunity                              = 1.0
+
+
+[af_perdonit_stable]:af_perdonit
+cost                                             = 5000
+quest_item                                       = false
+
+description                                      = af_perdonit_stable_desc
+inv_name                                         = af_perdonit_stable
+inv_name_short                                   = af_perdonit_stable
+
+health_restore_speed                             = 0.0   
+radiation_restore_speed                          = -0.0003
+satiety_restore_speed                            = 0.0001
+power_restore_speed                              = 0.0008
+bleeding_restore_speed                           = 0.0
+psy_health_restore_speed						 = 0.0008
+
+hit_absorbation_sect                             = af_perdonit_stable_absorbation
+
+[af_perdonit_stable_absorbation]
+burn_immunity                                    = 1.0 
+strike_immunity                                  = 1.0
+shock_immunity                                   = 1.0
+wound_immunity                                   = 1.0 
+radiation_immunity                               = 1.0
+telepatic_immunity                               = 0.9
 chemical_burn_immunity                           = 1.0
 explosion_immunity                               = 1.0
 fire_wound_immunity                              = 1.0

@@ -99,7 +99,9 @@
 </info_portion>
 <info_portion id="dezertir_car_mesto"></info_portion>
 <info_portion id="dezertir_car_not_place"></info_portion>
-<info_portion id="dezertir_car_dialog_done"></info_portion>
+<info_portion id="dezertir_car_dialog_done">
+<action>cars.del_dezertir_car_delete</action>
+</info_portion>
 
 <info_portion id="dezertir_flesh_dialog_start">
     <task>flesh_winch</task>
@@ -695,10 +697,6 @@
 </info_portion>
 <info_portion id="pda_agent_aver_have">
     <action>mauvais.music_aver01</action>
-</info_portion>
-
-<info_portion id="del_agents_prom">
-    <action>fotograf.del_agents_prom</action>
 </info_portion>
 
 <info_portion id="mousetrap_proval"></info_portion>

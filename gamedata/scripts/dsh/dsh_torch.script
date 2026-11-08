@@ -1,0 +1,184 @@
+﻿function attach(sm)
+    sm:subscribe({ signal = "on_first_update",   fun = this.on_first_update   })
+    sm:subscribe({ signal = "on_key_down",       fun = this.on_key_down       })
+    sm:subscribe({ signal = "on_key_holding",    fun = this.on_key_hold       })
+    sm:subscribe({ signal = "on_key_up",         fun = this.on_key_up         })
+    sm:subscribe({ signal = "on_mm_return_game", fun = this.on_mm_return_game })
+    sm:subscribe({ signal = "on_spawn",          fun = this.on_spawn          })
+end
+
+local dik_use_torch = {}
+local last_rebind_time = 0
+function rebind_use_torch(force)
+    if not bind_to_dik or not key_bindings or not key_bindings.kTORCH then
+        return
+    end
+    local now = time_global()
+    if not force and now < last_rebind_time + 1000 then
+        return
+    end
+    last_rebind_time = now
+    local engine_dik = bind_to_dik(key_bindings.kTORCH)
+    local dik = engine_dik
+    if not dik or dik == 0 then
+        if ogse and ogse.load_var then
+            dik = tonumber(ogse.load_var("dsh_torch.torch_dik", 0)) or 0
+        else
+            dik = 0
+        end
+    end
+    if dik and dik ~= 0 then
+        dik_use_torch = { [dik] = true }
+        if ogse and ogse.save_var then
+            ogse.save_var("dsh_torch.torch_dik", dik)
+        end
+        if engine_dik and engine_dik ~= 0 then
+            cmd2("unbind", "torch")
+            cmd2("unbind_sec", "torch")
+        end
+    end
+end
+
+function on_spawn()
+    rebind_use_torch(true)
+end
+
+function on_mm_return_game()
+    rebind_use_torch(true)
+end
+
+function on_first_update()
+    if math.randomseed then
+        math.randomseed(time_global())
+    end
+    rebind_use_torch(true)
+    local sm = ogsr_signals.get_mgr()
+    restore_torch_state()
+end
+
+local torch_mode = "off"
+function restore_torch_state()
+    local torch = db.actor and db.actor:alive() and db.actor:item_in_slot(9)
+    if not (torch and torch:is_torch()) then
+        return
+    end
+    torch = get_torch_obj(torch)
+    local saved = ogse.load_var("dsh_torch.torch_mode", "off")
+    if saved == "off" then
+        torch_mode = "off"
+        if torch.on then
+            torch:enable(false)
+        end
+    else
+        if saved == "far" then
+            set_far_mode(torch)
+        else
+            set_near_mode(torch)
+        end
+        if not torch.on then
+            torch:enable(true)
+        end
+    end
+    ogse.save_var("dsh_torch.torch_mode", torch_mode)
+end
+
+local key_holded = false
+function on_key_down(key, bind, press_time)
+    if level.main_input_receiver() then
+        return
+    end
+    if dik_use_torch[key] then
+        key_holded = false
+    end
+end
+
+function on_key_hold(key, bind, press_time)
+    local torch = get_torch_key(key)
+    if not torch then
+        return
+    end
+    if not torch.on then
+        return
+    end
+    if key_holded == press_time then
+        return
+    end
+    key_holded = press_time
+    on_key_up(key, bind)
+end
+
+function get_torch_key(key)
+    if (not dik_use_torch[key]) or level.main_input_receiver() then
+        return
+    end
+    if not db.actor or not db.actor:alive() then
+        return
+    end
+    local torch = db.actor:item_in_slot(9)
+    if torch and torch:is_torch() then
+        return get_torch_obj(torch)
+    end
+end
+
+local snd = sound_object([[device\nlc6\pda\dairy_click_1]])
+function on_key_up(key, bind)
+    if key_holded == true and dik_use_torch[key] then
+        key_holded = false
+        return
+    end
+    if dik_use_torch[key] then
+        local car = db.actor and db.actor:get_holder()
+        if car and car:is_car() then
+            car:get_car():SwitchLights()
+            return
+        end
+    end
+    local torch = get_torch_key(key)
+    if not torch then
+        return
+    end
+    snd:play(db.actor, 0, sound_object.s2d)
+    if torch.on then
+        if key_holded then
+            set_off_mode(torch)
+            key_holded = true
+        elseif torch_mode == "near" then
+            set_far_mode(torch)
+        else
+            set_off_mode(torch)
+        end
+    else
+        set_near_mode(torch, nil, true)
+    end
+    ogse.save_var("dsh_torch.torch_mode", torch_mode)
+end
+
+function set_brightness(torch, r)
+    torch:set_brightness(1)
+end
+
+function set_near_mode(torch, r, switch_on)
+    torch_mode = "near"
+    torch:set_range(30)
+    torch:set_angle(math.rad(90))
+    set_brightness(torch, r)
+    if switch_on and not torch.on then
+        torch:enable(true)
+    end
+end
+
+function set_far_mode(torch, r, switch_on)
+    torch_mode = "far"
+    torch:set_range(70)
+    torch:set_angle(math.rad(55))
+    set_brightness(torch, r)
+    if switch_on and not torch.on then
+        torch:enable(true)
+    end
+end
+
+function set_off_mode(torch)
+    torch_mode = "off"
+    torch:enable(false)
+    ogse.save_var("dsh_torch.torch_mode", "off")
+end

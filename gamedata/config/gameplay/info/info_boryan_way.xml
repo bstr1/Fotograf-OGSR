@@ -20,6 +20,7 @@
 <info_portion id="perdonit_enable">
     <action>petrograf.create_perdonit</action>
 </info_portion>
+<info_portion id="perdonit_taken"></info_portion>
 <info_portion id="petrograf_dialog_1_done"></info_portion>
 <info_portion id="petrograf_collect"></info_portion>
 <info_portion id="petrograf_dialog_2_done"></info_portion>

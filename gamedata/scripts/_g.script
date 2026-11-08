@@ -1584,6 +1584,16 @@ quest_section["dynamite"]     = true
 quest_section["quest_case_01"]    = true
 quest_section["bar_ecolog_flash"] = true
 
+-- Выдаём предмет с выводом новости (без новости используем got_item)
+function got(s, n)
+	if not n then n = 1 end
+	if not sys_ini:section_exist(s) then log1("[_G.got] Can't find section: "..tostring(s)) return end
+	for i = 1, n do
+	    create(s, vector(), 0, 0, db.actor:id())
+	end
+	news_manager.relocate_item(db.actor, "in", s, n)
+end
+
 -- Спавн секции в инвентарь актора без вывода сообщения
 function got_item(s, c)
 	local obj
@@ -1712,4 +1722,12 @@ end
 function alife_create(section, level_name, pos)
     local lv, gv = get_lv_gv(level_name, pos)
     return alife():create(section, pos, lv, gv)
+end
+
+local con = get_console()
+function get_con_float(param)
+	return con:get_float(param)
+end
+function get_con_string(param)
+	return con:get_string(param)
 end

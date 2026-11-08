@@ -1,4 +1,4 @@
-;;;;;;;;;;;;;;;;;;;;;;;; wpn_vintorez ;;;;;;;;;;;;;;;;;;;;;;;;
+﻿;;;;;;;;;;;;;;;;;;;;;;;; wpn_vintorez ;;;;;;;;;;;;;;;;;;;;;;;;
 [wpn_vintorez]:weapon_immunities,weapon_probability,default_weapon_params
 GroupControlSection                   = spawn_group
 cform                                 = skeleton
@@ -114,16 +114,19 @@ strap_bone1                           = bip01_spine1
 strap_orientation                     = -15,-9,110
 strap_position                        = -0.26,-0.11,0.25
 
-snd_silncer_shot                      = weapons\vintorez\vss_silencer_stereo
-snd_shoot                             = weapons\vintorez\vss_silencer_stereo
+snd_silncer_shot                      = weapons\vintorez\vintorez_shoot
+snd_shoot                             = weapons\vintorez\vintorez_shoot
+snd_shoot1                            = weapons\vintorez\vintorez_shoot
+
 snd_reload                            = weapons\vintorez\vintorez_reload
 snd_reload_empty                      = weapons\vintorez\vintorez_reload_empty
+
 snd_reload_jammed                     = weapons\vintorez\vintorez_misfire
 snd_empty                             = weapons\vintorez\vintorez_empty, 0.8
+
 snd_draw                              = weapons\assault_draw
 snd_holster                           = weapons\assault_holster
 snd_close                             = weapons\draw_silent
-snd_shoot1                            = weapons\vintorez\vss_silencer_stereo1
 
 silencer_light_color                  = 0.6,0.5,0.3
 silencer_light_range                  = 0.01
@@ -156,7 +159,7 @@ anm_reload                            = vss_reload, reload
 anm_reload_empty                      = vss_reload_full, reload_empty
 anm_reload_jammed                     = vss_revival, misfire
 anm_firemode                          = vss_firemode
-anm_headlamp_on                       = vss_flash
+; anm_headlamp_on                       = vss_flash
 anm_gasmask                           = vss_clear
 
 attach_place_idx                      = 0

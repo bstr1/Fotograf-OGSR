@@ -39,7 +39,9 @@ local conditions = {
 	health_restore_speed	= get_float("actor_condition", "satiety_health_v"),
 	power_restore_speed		= get_float("actor_condition", "satiety_power_v") * 100,
 	satiety_restore_speed	= get_float("actor_condition", "satiety_v"),
-	radiation_restore_speed	= get_float("actor_condition", "radiation_v") * 100
+	radiation_restore_speed	= get_float("actor_condition", "radiation_v") * 100,
+	thirst_restore_speed	= get_float("actor_condition", "thirst_v"),
+	psy_health_restore_speed	= get_float("actor_condition", "psy_health_v")
 }
 
 -- параметры костюмов и артов
@@ -48,8 +50,10 @@ local conditions_params =
 	{ prop = "health_restore_speed",		text = string.format("%s", game.translate_string("ui_inv_health")),				tex = "health"		},
 	{ prop = "bleeding_restore_speed",		text = string.format("%s", game.translate_string("ui_inv_bleeding")),	    	tex = "bleeding"	},
 	{ prop = "satiety_restore_speed",		text = string.format("%s", game.translate_string("ui_inv_satiety")),			tex = "satiety"		},
+	{ prop = "thirst_restore_speed",		text = string.format("%s", game.translate_string("ui_inv_thirst")),			tex = "thirst"		},
 	{ prop = "power_restore_speed",			text = string.format("%s", game.translate_string("ui_inv_power")),	    		tex = "power"		},
 	{ prop = "radiation_restore_speed",		text = string.format("%s", game.translate_string("ui_inv_radiation")),			tex = "radiation"	},
+	{ prop = "psy_health_restore_speed",	text = string.format("%s", game.translate_string("ui_inv_psy_health")),		tex = "telepatic"	},
 }
 
 -- Типы хитов и соответствующие им текстуры и названия

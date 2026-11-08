@@ -14,6 +14,8 @@ local function on_info(npc, info_id)
 		spawn_ai_location("memory_module", vector():set(215.420, 12.814, 18.598), "hiding_road")
 		spawn_ai_location("kolba", vector():set(202.608, -2.217, -271.155), "hiding_road")
 		spawn_ai_location("fonarik", vector():set(86.20, 5.85, -267.23), "hiding_road")
+		spawn_ai_location("raciya_new", vector():set(211.64093017578, 1.9080609083176, 4.052951335907), "hiding_road")
+		spawn_ai_location("tiski", vector():set(57.165, 1.167, -259.001), "hiding_road")
 
 		spawn_ai_location("samopisec", vector():set(-85.16, 8.47, 210.73), "promzone")
 		spawn_ai_location("koloda", vector():set(55.014, 22.949, -141.729), "promzone")
@@ -25,6 +27,8 @@ local function on_info(npc, info_id)
 		spawn_ai_location("wpn_sig550_luckygun", vector():set(121.92624664307, 34.218044281006, -117.80423736572), "dyshlo")
 
 		spawn_ai_location("outfit_stalker_m2", vector():set(-9.3343095779419, -17.171783447266, 58.502548217773), "l10u_bunker")
+		spawn_ai_location("microscope", vector():set(-15.017105102539, 5.3005018234253, 3.7324914932251), "l04u_labx18")
+		spawn_ai_location("plata", vector():set(9.043, 5.880, 8.178), "l04u_labx18")
     end
 end
 
