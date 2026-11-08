@@ -341,18 +341,18 @@ function info_cal(info_id)
     end
 end
 
-function poet_docs_otdal(info_id)
-    new_dialog.out_item_much("c_doc1", 1)
-    new_dialog.out_item_much("c_doc2", 1)
-    new_dialog.out_item_much("c_doc3", 1)
-    new_dialog.out_item_much("c_doc4", 1)
-    new_dialog.out_item_much("c_doc5", 1)
-    new_dialog.out_item_much("c_doc6", 1)
-    new_dialog.out_item_much("c_doc7", 1)
-    new_dialog.out_item_much("c_doc8", 1)
-    new_dialog.out_item_much("c_doc9", 1)
-    new_dialog.out_item_much("c_doc10", 1)
-    new_dialog.out_item_much("c_doc11", 1)
+function poet_docs_otdal(first_speaker, second_speaker)
+    dialogs.relocate_item_section(first_speaker, "c_doc1", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "c_doc2", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "c_doc3", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "c_doc4", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "c_doc5", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "c_doc6", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "c_doc7", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "c_doc8", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "c_doc9", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "c_doc10", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "c_doc11", "out", 1)
 end
 
 function create_level_changer(p_story_id, -- STORY_ID нового level_changer (понадобится нам позже)
@@ -789,7 +789,7 @@ function otdal_tarakanov(first_speaker, second_speaker)
 end
 
 function radio_otdal(first_speaker, second_speaker)
-    new_dialog.out_item_much("usilok", 1)
+    dialogs.relocate_item_section(first_speaker, "usilok", "out", 1)
 end
 
 function zhurnal_shema(first_speaker, second_speaker)
@@ -960,7 +960,7 @@ end
 
 function explose_gg()
     db.actor:kill(db.actor)
-    --	amk_particle.amk_particle:stop()
+    -- amk_particle.amk_particle:stop()
 end
 
 -- pre_restrict_bar
@@ -2272,9 +2272,9 @@ function marksman_rnd()
     amk.save_variable("marksman", y) -- сохраняем значение
     local a = tbl_marksman[y] -- получаем данные из таблицы
     local sim = alife()
-    local sobj = sim:create(a.sect, vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv) -- создаем стрелка	
+    local sobj = sim:create(a.sect, vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv) -- создаем стрелка
     if sobj then
-        amk.save_variable("marksman_id", sobj.id) -- запоминаем ID	
+        amk.save_variable("marksman_id", sobj.id) -- запоминаем ID
     end
 end
 -- удаляем стрелка если он смотался
@@ -2306,7 +2306,7 @@ function flesh_academ_have(task, objective)
 end
 
 function flesh_peredal(first_speaker, second_speaker)
-    new_dialog.out_item_much("academ_flash", 1)
+    dialogs.relocate_item_section(first_speaker, "academ_flash", "out", 1)
 end
 
 function orm_for_del()

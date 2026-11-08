@@ -1,4 +1,4 @@
--- ========================================== Считывание данных с вертолетов ==========================================
+-- Считывание данных с вертолетов
 -- Таблица координат аппаратуры упавших вертушек - 10 штук
 local tbl_heli = { -- deadcity
 {
@@ -104,16 +104,25 @@ local tbl_heli = { -- deadcity
 
 function set_heli_restr()
     local sobj, a
-    local sim = alife()
     for x = 1, table.getn(tbl_heli) do
         a = tbl_heli[x]
-        sobj = sim:create("space_restrictor", vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv)
+        sobj = alife():create("space_restrictor", vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv)
         val_test.rewrite_restrictor(sobj, a.custom, 3.2)
     end
 end
 
-local tbl_heli_loc = {"deadcity", "aver", "bar", "promzone", "swamp", "dyshlo", "pripyat", "pripyat", "predbannik",
-                      "predbannik"}
+local tbl_heli_loc = {
+    "deadcity",
+    "aver",
+    "bar",
+    "promzone",
+    "swamp",
+    "dyshlo",
+    "pripyat",
+    "pripyat",
+    "predbannik",
+    "predbannik"
+}
 -- счетчик исследованных вертушек
 function count(actor, npc)
     local i, loc, idx
@@ -173,39 +182,36 @@ function priborchik_poluchil(first_speaker, second_speaker)
 end
 
 function priborchik_have(first_speaker, second_speaker)
-	return new_dialog.count_item("load_detector", 1)
+    return new_dialog.count_item("load_detector", 1)
 end
 
 function priborchik_otdal(first_speaker, second_speaker)
-	dialogs.relocate_item_section(first_speaker, "load_detector", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "load_detector", "out", 1)
     dialogs.relocate_item_section(second_speaker, "pekar_outfit", "in", 1)
     dialogs.relocate_money(first_speaker, 20000, "in")
 end
 
 function vertoblom_spawn()
-    local sim = alife()
-    sim:create("prom_pseudodog_00", vector():set(-78.843254, 7.212838, 194.976746), 63993, 872)
-    sim:create("prom_pseudodog_01", vector():set(-70.959831, 8.467693, 210.011673), 77106, 872)
-    sim:create("prom_pseudodog_02", vector():set(-107.666443, 8.472002, 218.840607), 25447, 833)
-    sim:create("prom_ruk", vector():set(-94.250694, 8.472929, 211.650116), 41485, 849)
-    sim:create("bar_ruk", vector():set(21.977196, -12.148690, -199.955109), 45850, 282)
-    sim:create("naem_mg_01", vector():set(-42.604530, -4.680447, -190.107422), 262413, 1276)
-    sim:create("naem_mg_02", vector():set(-42.457127, -4.270785, -165.482162), 262448, 1289)
-    sim:create("naem_mg_03", vector():set(-35.777439, -4.452134, -158.533981), 26769, 1289)
+    alife():create("prom_pseudodog_00", vector():set(-78.843254, 7.212838, 194.976746), 63993, 872)
+    alife():create("prom_pseudodog_01", vector():set(-70.959831, 8.467693, 210.011673), 77106, 872)
+    alife():create("prom_pseudodog_02", vector():set(-107.666443, 8.472002, 218.840607), 25447, 833)
+    alife():create("prom_ruk", vector():set(-94.250694, 8.472929, 211.650116), 41485, 849)
+    alife():create("bar_ruk", vector():set(21.977196, -12.148690, -199.955109), 45850, 282)
+    alife():create("naem_mg_01", vector():set(-42.604530, -4.680447, -190.107422), 262413, 1276)
+    alife():create("naem_mg_02", vector():set(-42.457127, -4.270785, -165.482162), 262448, 1289)
+    alife():create("naem_mg_03", vector():set(-35.777439, -4.452134, -158.533981), 26769, 1289)
 end
 
 function promzasada_spawn()
-    local sim = alife()
-    sim:create("maroder_prom_01", vector():set(-27.686277, 19.867495, -253.540115), 141744, 924)
-    sim:create("maroder_prom_02", vector():set(-28.160500, 20.560978, -259.505493), 141735, 924)
-    sim:create("maroder_prom_03", vector():set(-28.420261, 21.012035, -265.993988), 140640, 924)
+    alife():create("maroder_prom_01", vector():set(-27.686277, 19.867495, -253.540115), 141744, 924)
+    alife():create("maroder_prom_02", vector():set(-28.160500, 20.560978, -259.505493), 141735, 924)
+    alife():create("maroder_prom_03", vector():set(-28.420261, 21.012035, -265.993988), 140640, 924)
 end
 
 function barzasada_spawn()
-    local sim = alife()
-    sim:create("naem_bar_01", vector():set(42.062580, -0.001864, 66.125145), 29236, 241)
-    sim:create("naem_bar_02", vector():set(43.196465, -0.000896, 52.055515), 29236, 241)
-    sim:create("naem_bar_03", vector():set(51.128185, -0.001461, 42.140671), 29236, 241)
+    alife():create("naem_bar_01", vector():set(42.062580, -0.001864, 66.125145), 29236, 241)
+    alife():create("naem_bar_02", vector():set(43.196465, -0.000896, 52.055515), 29236, 241)
+    alife():create("naem_bar_03", vector():set(51.128185, -0.001461, 42.140671), 29236, 241)
 end
 -- ================================================= Крысолов ==============================================
 -- реплика ГГ при виде мышиного кубла
@@ -224,14 +230,13 @@ function mouse_speech_hit(actor, obj)
 end
 -- создание мышиного кубла
 function mouse_create()
-    local sim = alife()
     local pos, lv, gv = vector():set(25.892, -3.172, -3.292), 983575, 744
     local custom = "[logic]\ncfg = scripts\\foto\\restr\\mouse_restr.ltx"
     an_spawn("zone_mouse", 3, pos, lv, gv, 0.1) -- создаем зону
-    local sobj = sim:create("space_restrictor", pos, lv, gv) -- создаем рестриктор
+    local sobj = alife():create("space_restrictor", pos, lv, gv) -- создаем рестриктор
     val_test.rewrite_restrictor(sobj, custom, 4.5)
     custom = "[logic]\ncfg = scripts\\foto\\restr\\mouse_restr1.ltx"
-    sobj = sim:create("space_restrictor", pos, lv, gv) -- создаем рестриктор
+    sobj = alife():create("space_restrictor", pos, lv, gv) -- создаем рестриктор
     val_test.rewrite_restrictor(sobj, custom, 2.9)
 end
 -- получение дудки
@@ -242,11 +247,11 @@ function krisalov_dudka(first_speaker, second_speaker)
 end
 -- прекондишен наличия мышей
 function mouse_have(first_speaker, second_speaker)
-	return new_dialog.count_item("mutant_mouse", 13)
+    return new_dialog.count_item("mutant_mouse", 13)
 end
 -- прекондишен отсутствия мышей
 function mouse_not(first_speaker, second_speaker)
-    return new_dialog.item_much("mutant_mouse", 13) == false
+    return new_dialog.count_item("mutant_mouse", 13) == false
 end
 -- прекондишен пользования дудкой
 function dudka_used(first_speaker, second_speaker)
@@ -258,7 +263,7 @@ function dudka_not_used(first_speaker, second_speaker)
 end
 -- отдаем мышей 
 function krisalov_mouse(first_speaker, second_speaker)
-	dialogs.relocate_item_section(first_speaker, "mutant_mouse", "out", 13)
+    dialogs.relocate_item_section(first_speaker, "mutant_mouse", "out", 13)
 end
 -- получаем коньяк
 function krisalov_cognac(first_speaker, second_speaker)
@@ -303,12 +308,11 @@ function check_kublo()
 end
 -- удаление кубла
 function mouse_release()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "zone_mouse" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
@@ -434,12 +438,11 @@ function spawn_art(actor, obj, p)
 end
 -- удаление финальной зоны по таймеру
 function del_krest_zone(actor, obj, p)
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and (sobj:section_name() == "krest_good" or sobj:section_name() == "krest_bad") then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
@@ -492,10 +495,9 @@ local tbl_exchange = {
 function take_item(obj)
     local sect = obj:section()
     if sect and tbl_exchange[sect] ~= nil then -- если подняли фейк
-        local sim = alife()
-        local sobj = sim:object(obj:id())
+        local sobj = alife():object(obj:id())
         if sobj then
-            sim:release(sobj, true) -- удаляем фейк
+            alife():release(sobj, true) -- удаляем фейк
             sobj = alife():create(tbl_exchange[sect], db.actor:position(), db.actor:level_vertex_id(),
                 db.actor:game_vertex_id(), db.actor:id())
             if sect == 'statya_false' then
@@ -508,7 +510,7 @@ function take_item(obj)
             end
         end
     elseif obj:section() == "mutant_mouse" then
-        if new_dialog.item_much("mutant_mouse", 13) ~= false and not has_alife_info("actor_has_mouse") then
+        if new_dialog.count_item("mutant_mouse", 13) and not has_alife_info("actor_has_mouse") then
             db.actor:give_info_portion("actor_has_mouse")
         end
     elseif sect == "af_evergy_true" then
@@ -635,11 +637,10 @@ end
 
 -- удаление Варвары
 function varvara_release(actor, obj, p)
-    local sim = alife()
     local id = amk.load_variable("VarvaraID", nil)
-    local sobj = id and sim:object(id)
+    local sobj = id and alife():object(id)
     if sobj then
-        sim:release(sobj, true)
+        alife():release(sobj, true)
     end
     amk.del_variable("VarvaraID")
 end
@@ -650,7 +651,7 @@ function break_mg_lc(actor, obj, p)
     local pos = vector():set(131.0353, 8.3637, -74.7372) -- координаты точки телепортации
     if actor and actor:alive() then -- если актер еще живой
         level.add_pp_effector("blink.ppe", 9112, false)
-        actor:set_actor_position(pos) -- отбрасываем от перехода	
+        actor:set_actor_position(pos) -- отбрасываем от перехода
         -- выдаем реплику
         local sound
         if not has_alife_info("mg_1_jump") then
@@ -671,22 +672,22 @@ end
 
 -- условие для диалога - наличие артефакта у ГГ
 function check_art(first_speaker, second_speaker)
-	return new_dialog.count_item("af_evergy_true", 1)
+    return new_dialog.count_item("af_evergy_true", 1)
 end
 
 -- условие для диалога - отсутствие артефакта у ГГ
 function no_check_art(first_speaker, second_speaker)
-    return new_dialog.item_much("af_evergy_true", 1) == false
+    return new_dialog.count_item("af_evergy_true", 1) == false
 end
 
 -- передача арта Петровичу
 function transfer_art(first_speaker, second_speaker)
-	dialogs.relocate_item_section(first_speaker, "af_evergy_true", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "af_evergy_true", "out", 1)
 end
 
 -- передача прибора Варваре
 function transfer_pribor(first_speaker, second_speaker)
-	dialogs.relocate_item_section(first_speaker, "pribor_wu", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "pribor_wu", "out", 1)
 end
 
 -- активация прибора
@@ -856,7 +857,7 @@ function parallel_spawn(first_speaker, second_speaker)
     store_id(sobj)
     -- Аномалия прятки
     pos, lv, gv = vector():set(-5.647, 2.015, -75.146), 293162, 1310 -- координаты точки 
-    sobj = an_spawn("darkness_00", 5.0, pos, lv, gv, 0.0001) -- создаем зону pryatky	
+    sobj = an_spawn("darkness_00", 5.0, pos, lv, gv, 0.0001) -- создаем зону pryatky
     store_id(sobj)
     -- "Источник"
     pos, lv, gv = vector():set(-303.673, 9.999, -209.073), 313788, 1330 -- координаты точки 
@@ -864,14 +865,14 @@ function parallel_spawn(first_speaker, second_speaker)
     store_id(sobj)
     -- "Туман на болоте"
     pos, lv, gv = vector():set(-266.515, -8.019, 181.690), 73050, 1187 -- координаты точки 
-    sobj = an_spawn("fog_elm_00", 0.0, pos, lv, gv, 0.02) -- создаем зону FOG_00	
+    sobj = an_spawn("fog_elm_00", 0.0, pos, lv, gv, 0.02) -- создаем зону FOG_00
     store_id(sobj)
     -- "Низины_1" (рядом со школой)
     pos, lv, gv = vector():set(94.717, -7.756, -151.779), 363759, 1354 -- координаты точки 
     sobj = an_spawn("gravy_elm_00", 0.0, pos, lv, gv, 0.02) -- создаем зону gravy_elm_00
     store_id(sobj)
     pos, lv, gv = vector():set(94.717, -7.656, -151.779), 363759, 1354 -- координаты точки 
-    sobj = an_spawn("mg_gravy", 20.0, pos, lv, gv, 0.0001) -- создаем зону mg_gravy	
+    sobj = an_spawn("mg_gravy", 20.0, pos, lv, gv, 0.0001) -- создаем зону mg_gravy
     store_id(sobj)
     pos, lv, gv = vector():set(94.717, -7.556, -151.779), 363759, 1354 -- координаты точки 
     sobj = an_spawn("gravy_elm_01", 1.5, pos, lv, gv, 0.0001) -- создаем зону gravy_elm_01
@@ -891,7 +892,7 @@ function parallel_spawn(first_speaker, second_speaker)
     sobj = an_spawn("gravy_elm_00", 0.0, pos, lv, gv, 0.02) -- создаем зону gravy_elm_00
     store_id(sobj)
     pos, lv, gv = vector():set(-80.956, -9.902, 208.696), 229128, 1283 -- координаты точки 
-    sobj = an_spawn("mg_gravy", 20.0, pos, lv, gv, 0.0001) -- создаем зону mg_gravy	
+    sobj = an_spawn("mg_gravy", 20.0, pos, lv, gv, 0.0001) -- создаем зону mg_gravy
     store_id(sobj)
     pos, lv, gv = vector():set(-80.956, -9.802, 208.696), 229128, 1283 -- координаты точки 
     sobj = an_spawn("gravy_elm_01", 1.5, pos, lv, gv, 0.0001) -- создаем зону gravy_elm_01
@@ -911,18 +912,18 @@ function parallel_spawn(first_speaker, second_speaker)
     sobj = an_spawn("gravy_elm_00", 0.0, pos, lv, gv, 0.02) -- создаем зону gravy_elm_00
     store_id(sobj)
     pos, lv, gv = vector():set(-364.182, -11.196, 239.094), 56142, 1191 -- координаты точки 
-    sobj = an_spawn("mg_gravy", 20.0, pos, lv, gv, 0.0001) -- создаем зону mg_gravy	
+    sobj = an_spawn("mg_gravy", 20.0, pos, lv, gv, 0.0001) -- создаем зону mg_gravy
     store_id(sobj)
     pos, lv, gv = vector():set(-364.182, -11.096, 239.094), 56142, 1191 -- координаты точки 
     sobj = an_spawn("gravy_elm_01", 1.5, pos, lv, gv, 0.0001) -- создаем зону gravy_elm_01
     store_id(sobj)
     -- Летающие шары
     pos, lv, gv = vector():set(-97.602, 2.790, -11.600), 213375, 1268 -- координаты точки 
-    sobj = an_spawn("fly_balls", 0.0, pos, lv, gv, 0.0001) -- создаем зону fly_balls	
+    sobj = an_spawn("fly_balls", 0.0, pos, lv, gv, 0.0001) -- создаем зону fly_balls
     store_id(sobj)
     -- "Приборчик"
     pos, lv, gv = vector():set(7.770, 15.624, 36.174), 297216, 1324 -- координаты точки 
-    sobj = an_spawn("pr_activ", 0.0, pos, lv, gv, 0.0001) -- создаем зону прибора	
+    sobj = an_spawn("pr_activ", 0.0, pos, lv, gv, 0.0001) -- создаем зону прибора
     store_id(sobj)
 
     -- спавн артефактов
@@ -969,9 +970,9 @@ function parallel_spawn(first_speaker, second_speaker)
     pos, lv, gv = vector():set(-262.572, -7.711, 171.618), 76704, 1195 -- координаты точки 
     sobj = alife():create("af_evergy6_false", pos, lv, gv) -- зона тумана!
     pos, lv, gv = vector():set(113.238, -9.698, 165.567), 360858, 1348 -- координаты точки 
-    sobj = alife():create("af_evergy8_false", pos, lv, gv) -- "Низины_4" (за колючкой)!	
+    sobj = alife():create("af_evergy8_false", pos, lv, gv) -- "Низины_4" (за колючкой)!
     pos, lv, gv = vector():set(97.144, -9.717, 169.547), 360858, 1348 -- координаты точки 
-    sobj = alife():create("af_evergy16_false", pos, lv, gv) -- "Низины_4" (за колючкой)!	
+    sobj = alife():create("af_evergy16_false", pos, lv, gv) -- "Низины_4" (за колючкой)!
     pos, lv, gv = vector():set(-94.339, -9.803, 208.407), 216512, 1245 -- координаты точки 
     sobj = alife():create("af_evergy5_false", pos, lv, gv) -- "Низины_3" (между туманом и холодильником)!
     pos, lv, gv = vector():set(-101.352, -7.149, 207.834), 208884, 1245 -- координаты точки 
@@ -1017,36 +1018,35 @@ function parallel_release(first_speaker, second_speaker)
     level.add_pp_effector("deadcity_wake_old.ppe", 4001, false)
 
     local sobj, sect
-    local sim = alife()
     -- возвращаем погоду
     db.actor:disable_info_portion("parallel_mg")
     level_weathers.get_weather_manager():reset()
     -- удаляем аномалии
     for a = 1, table.getn(tbl_mg) do
-        sobj = sim:object(tbl_mg[a])
+        sobj = alife():object(tbl_mg[a])
         if sobj then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
         end
     end
     tbl_mg = {}
     amk.del_variable("mg_tbl")
     -- удаляем предметы параллельного мира
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj then
             sect = sobj:section_name()
             if (sect and string.find(sect, 'af_evergy') and string.find(sect, '_false')) or sect == "pribor_zh" or sect ==
                 "young_d" or sect == "evergy2_true" or sect == "evergy1_true" or sect == "evergy3_true" or sect ==
                 "evergy4_true" or sect == "zapis_w" or sect == "statya" then
-                sim:release(sobj, true)
+                alife():release(sobj, true)
             end
         end
     end
     -- удаляем прибор
     local id = amk.load_variable("pribor_mg1", nil)
-    local sobj = id and sim:object(id)
+    local sobj = id and alife():object(id)
     if sobj then
-        sim:release(sobj, true)
+        alife():release(sobj, true)
     end
     amk.del_variable("pribor_mg1")
 end
@@ -1130,11 +1130,11 @@ end
 -- ----------------------------------- Лесник ----------------------------
 -- проверка на наличие настойки
 function nastoyka_have(first_speaker, second_speaker)
-	return new_dialog.count_item("nastoyka", 2)
+    return new_dialog.count_item("nastoyka", 2)
 end
 -- получение вознаграждения
 function ded_evro(first_speaker, second_speaker)
-	dialogs.relocate_item_section(first_speaker, "nastoyka", "out", 2)
+    dialogs.relocate_item_section(first_speaker, "nastoyka", "out", 2)
     dialogs.relocate_item_section(first_speaker, "euro", "in", 1)
 end
 
@@ -1249,11 +1249,10 @@ function max_teleport(actor, obj, params)
             step = step + 1 -- следующий шаг
             if step > 5 then -- все, лабиринт пройден
                 -- чистим зоны-индикаторы
-                local sim = alife()
                 for a = 1, table.getn(tbl_zone_id) do
-                    local sobj = sim:object(tbl_zone_id[a])
+                    local sobj = alife():object(tbl_zone_id[a])
                     if sobj then
-                        sim:release(sobj, true)
+                        alife():release(sobj, true)
                     end
                 end
                 -- удаляем переменные
@@ -1264,22 +1263,21 @@ function max_teleport(actor, obj, params)
                 actor:disable_info_portion("max_no_exit")
                 actor:give_info_portion("max_block_end")
             else -- еще не все, сохраним параметры
-                amk.save_variable("MaxStep", step) -- сохраним шаг	
+                amk.save_variable("MaxStep", step) -- сохраним шаг
                 local pos = tbl_out[p] -- получаем координаты точки
-                actor:set_actor_position(pos) -- отправляем туда актера				
+                actor:set_actor_position(pos) -- отправляем туда актера
             end
 
             -- неправильный выход
         else
             local pos = tbl_out[p] -- получаем координаты точки
-            actor:set_actor_position(pos) -- отправляем туда актера			
-            amk.save_variable("MaxStep", 1) -- сбросим и сохраним шаг	
+            actor:set_actor_position(pos) -- отправляем туда актера
+            amk.save_variable("MaxStep", 1) -- сбросим и сохраним шаг
             -- чистим зоны-индикаторы
-            local sim = alife()
             for a = 1, table.getn(tbl_zone_id) do
-                local sobj = sim:object(tbl_zone_id[a])
+                local sobj = alife():object(tbl_zone_id[a])
                 if sobj then
-                    sim:release(sobj, true)
+                    alife():release(sobj, true)
                 end
             end
             amk.del_variable("MaxZoneID")
@@ -1299,12 +1297,12 @@ function max_antirad(first_speaker, second_speaker)
 end
 -- проверка наличия рюкзака
 function max_ruk_have(first_speaker, second_speaker)
-	return new_dialog.count_item("max_ruk", 1)
+    return new_dialog.count_item("max_ruk", 1)
 end
 
 -- обмен с Максом
 function max_transfer(first_speaker, second_speaker)
-	dialogs.relocate_item_section(first_speaker, "max_ruk", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "max_ruk", "out", 1)
     dialogs.relocate_item_section(second_speaker, "treasure_item", "in", 1)
     dialogs.relocate_item_section(second_speaker, "treasure_item", "in", 1)
     dialogs.relocate_item_section(second_speaker, "amk_metka", "in", 1)

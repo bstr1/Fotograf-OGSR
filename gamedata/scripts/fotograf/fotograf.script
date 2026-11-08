@@ -9,6 +9,89 @@ local function on_take(obj, sobj)
         level.add_pp_effector("black.ppe", 2006, false)
         local snd_obj = xr_sound.get_safe_sound_object([[zwuk\controller_evil]])
         snd_obj:play(db.actor, 0, sound_object.s2d)
+
+    elseif obj:section() == "wpn_coltm45a1" and db.actor:dont_has_info("smith_razgovor_start") then
+        db.actor:give_info_portion("smith_razgovor_start")
+    elseif obj:section() == "wpn_foto" and db.actor:dont_has_info("fotik_nashel") then
+        db.actor:give_info_portion("fotik_nashel")
+    elseif obj:section() == "wpn_vintorez" or obj:section() == "wpn_vintorez_nimble" and db.actor:dont_has_info("about_vintorez") then
+        db.actor:give_info_portion("about_vintorez")
+
+    elseif obj:section() == "maloy_pda" and db.actor:dont_has_info("maloy_pda_est") then
+        db.actor:give_info_portion("maloy_pda_est")
+    elseif obj:section() == "money2" then
+        db.actor:give_info_portion("delete_2")
+        alife():release(sobj)
+
+    elseif obj:section() == "coder_x18" then
+        db.actor:give_info_portion("trup_x18_have")
+        alife():release(sobj)
+
+    elseif obj:section() == "razuvaev_pda" and db.actor:dont_has_info("razuvaev_pda_est") then
+        db.actor:give_info_portion("razuvaev_pda_est")
+    elseif obj:section() == "codes_pda" and db.actor:dont_has_info("codes_pda_est") then
+        db.actor:give_info_portion("codes_pda_est")
+    elseif obj:section() == "karta_peschery" and db.actor:dont_has_info("karta_peschery") then
+        db.actor:give_info_portion("karta_peschery")
+    elseif obj:section() == "manuscript" and db.actor:dont_has_info("start_manuscript") then
+        db.actor:give_info_portion("start_manuscript")
+    elseif obj:section() == "pda_pmc_aver" and db.actor:dont_has_info("pda_pmc_aver_est") then
+        db.actor:give_info_portion("pda_pmc_aver_est")
+    elseif obj:section() == "ks_absolut_11" and db.actor:dont_has_info("test_kat_est") then
+        db.actor:give_info_portion("test_kat_est")
+
+    elseif obj:section() == "mutant_flesh_eye" and db.actor:dont_has_info("flesh_story") then
+        db.actor:give_info_portion("flesh_story")
+    elseif obj:section() == "mutant_boar_leg" and db.actor:dont_has_info("boar_story") then
+        db.actor:give_info_portion("boar_story")
+    elseif obj:section() == "mutant_dog_tail" and db.actor:dont_has_info("dog_story") then
+        db.actor:give_info_portion("dog_story")
+    elseif obj:section() == "mutant_psevdodog_tail" and db.actor:dont_has_info("psevdodog_story") then
+        db.actor:give_info_portion("psevdodog_story")
+    elseif obj:section() == "mutant_krovosos_jaw" and db.actor:dont_has_info("krovosos_story") then
+        db.actor:give_info_portion("krovosos_story")
+    elseif obj:section() == "mutant_burer_hand" and db.actor:dont_has_info("burer_story") then
+        db.actor:give_info_portion("burer_story")
+    elseif obj:section() == "mutant_zombie_hand" and db.actor:dont_has_info("zombie_story") then
+        db.actor:give_info_portion("zombie_story")
+    elseif obj:section() == "mutant_snork_leg" and db.actor:dont_has_info("snork_story") then
+        db.actor:give_info_portion("snork_story")
+    elseif obj:section() == "vypolzen_hrebet" and db.actor:dont_has_info("vypolzen_story") then
+        db.actor:give_info_portion("vypolzen_story")
+    elseif obj:section() == "vypolzen_hribet" and db.actor:dont_has_info("vypolzin_story") then
+        db.actor:give_info_portion("vypolzin_story")
+    elseif obj:section() == "izlom_hand" and db.actor:dont_has_info("izlom_story") then
+        db.actor:give_info_portion("izlom_story")
+    elseif obj:section() == "spider_leg" and db.actor:dont_has_info("spider_story") then
+        db.actor:give_info_portion("spider_story")
+    elseif obj:section() == "kostolom_hand" and db.actor:dont_has_info("kostolom_story") then
+        db.actor:give_info_portion("kostolom_story")
+    elseif obj:section() == "tarakan_lich1" and db.actor:dont_has_info("tarakan1_story") then
+        db.actor:give_info_portion("tarakan1_story")
+    elseif obj:section() == "tarakan_lich2" and db.actor:dont_has_info("tarakan2_story") then
+        db.actor:give_info_portion("tarakan2_story")
+    elseif obj:section() == "deathclaw_rog" and db.actor:dont_has_info("deathclaw_story") then
+        db.actor:give_info_portion("deathclaw_story")
+    elseif obj:section() == "mutant_face_tushkano" and db.actor:dont_has_info("tushkano_story") then
+        db.actor:give_info_portion("tushkano_story")
+    elseif obj:section() == "mutant_hand_kontroler" and db.actor:dont_has_info("kontroler_story") then
+        db.actor:give_info_portion("kontroler_story")
+    elseif obj:section() == "mutant_poltergeist_glas" and db.actor:dont_has_info("poltergeist_story") then
+        db.actor:give_info_portion("poltergeist_story")
+    elseif obj:section() == "mutant_psevdogigant_hand" and db.actor:dont_has_info("psevdogigant_story") then
+        db.actor:give_info_portion("psevdogigant_story")
+    elseif obj:section() == "mutant_tail_cat" and db.actor:dont_has_info("cat_story") then
+        db.actor:give_info_portion("cat_story")
+    elseif obj:section() == "mutant_chimera_kogot" and db.actor:dont_has_info("chimera_story") then
+        db.actor:give_info_portion("chimera_story")
+    elseif obj:section() == "el_chimera_kogot" and db.actor:dont_has_info("el_chimera_story") then
+        db.actor:give_info_portion("el_chimera_story")
+    elseif obj:section() == "fire_chimera_kogot" and db.actor:dont_has_info("fire_chimera_story") then
+        db.actor:give_info_portion("fire_chimera_story")
+    elseif obj:section() == "mutant_crow" and db.actor:dont_has_info("crow_story") then
+        db.actor:give_info_portion("crow_story")
+    elseif obj:section() == "mutant_mouse" and db.actor:dont_has_info("mouse_story") then
+        db.actor:give_info_portion("mouse_story")
     end
 end
 
@@ -160,100 +243,6 @@ function start_fotograf()
     end
 end
 
-function checking_fotograf_item(obj)
-    if db.actor and obj:section() then
-        if obj:section() == "wpn_coltm45a1" and not has_alife_info("smith_razgovor_start") then
-            db.actor:give_info_portion("smith_razgovor_start")
-        elseif level.name() == "predbannik" and obj:section() == "wpn_foto" and not has_alife_info("fotik_nashel") then
-            db.actor:give_info_portion("fotik_nashel")
-        elseif obj:section() == "maloy_pda" and not has_alife_info("maloy_pda_est") then
-            db.actor:give_info_portion("maloy_pda_est")
-        elseif obj:section() == "money2" then
-            db.actor:give_info_portion("delete_2")
-            amk.drop_item(db.actor, obj)
-            amk.remove_item(obj)
-        elseif obj:section() == "coder_x18" then
-            db.actor:give_info_portion("trup_x18_have")
-            amk.drop_item(db.actor, obj)
-            amk.remove_item(obj)
-        elseif obj:section() == "wpn_minifake" then
-            amk.drop_item(db.actor, obj)
-            amk.remove_item(obj)
-
-        elseif (obj:section() == "wpn_vintorez" or obj:section() == "wpn_vintorez_nimble") and not has_alife_info("about_vintorez") then
-            db.actor:give_info_portion("about_vintorez")
-
-        elseif obj:section() == "razuvaev_pda" and not has_alife_info("razuvaev_pda_est") then
-            db.actor:give_info_portion("razuvaev_pda_est")
-        elseif obj:section() == "codes_pda" and not has_alife_info("codes_pda_est") then
-            db.actor:give_info_portion("codes_pda_est")
-        elseif obj:section() == "karta_peschery" and not has_alife_info("karta_peschery") then
-            db.actor:give_info_portion("karta_peschery")
-
-        elseif obj:section() == "manuscript" and not has_alife_info("start_manuscript") then
-            db.actor:give_info_portion("start_manuscript")
-
-        elseif obj:section() == "pda_pmc_aver" and not has_alife_info("pda_pmc_aver_est") then
-            db.actor:give_info_portion("pda_pmc_aver_est")
-
-        elseif obj:section() == "ks_absolut_11" and not has_alife_info("test_kat_est") then
-            db.actor:give_info_portion("test_kat_est")
-        elseif obj:section() == "mutant_flesh_eye" and not has_alife_info("flesh_story") then
-            db.actor:give_info_portion("flesh_story")
-        elseif obj:section() == "mutant_boar_leg" and not has_alife_info("boar_story") then
-            db.actor:give_info_portion("boar_story")
-        elseif obj:section() == "mutant_dog_tail" and not has_alife_info("dog_story") then
-            db.actor:give_info_portion("dog_story")
-        elseif obj:section() == "mutant_psevdodog_tail" and not has_alife_info("psevdodog_story") then
-            db.actor:give_info_portion("psevdodog_story")
-        elseif obj:section() == "mutant_krovosos_jaw" and not has_alife_info("krovosos_story") then
-            db.actor:give_info_portion("krovosos_story")
-        elseif obj:section() == "mutant_burer_hand" and not has_alife_info("burer_story") then
-            db.actor:give_info_portion("burer_story")
-        elseif obj:section() == "mutant_zombie_hand" and not has_alife_info("zombie_story") then
-            db.actor:give_info_portion("zombie_story")
-        elseif obj:section() == "mutant_snork_leg" and not has_alife_info("snork_story") then
-            db.actor:give_info_portion("snork_story")
-        elseif obj:section() == "vypolzen_hrebet" and not has_alife_info("vypolzen_story") then
-            db.actor:give_info_portion("vypolzen_story")
-        elseif obj:section() == "vypolzen_hribet" and not has_alife_info("vypolzin_story") then
-            db.actor:give_info_portion("vypolzin_story")
-        elseif obj:section() == "izlom_hand" and not has_alife_info("izlom_story") then
-            db.actor:give_info_portion("izlom_story")
-        elseif obj:section() == "spider_leg" and not has_alife_info("spider_story") then
-            db.actor:give_info_portion("spider_story")
-        elseif obj:section() == "kostolom_hand" and not has_alife_info("kostolom_story") then
-            db.actor:give_info_portion("kostolom_story")
-        elseif obj:section() == "tarakan_lich1" and not has_alife_info("tarakan1_story") then
-            db.actor:give_info_portion("tarakan1_story")
-        elseif obj:section() == "tarakan_lich2" and not has_alife_info("tarakan2_story") then
-            db.actor:give_info_portion("tarakan2_story")
-        elseif obj:section() == "deathclaw_rog" and not has_alife_info("deathclaw_story") then
-            db.actor:give_info_portion("deathclaw_story")
-        elseif obj:section() == "mutant_face_tushkano" and not has_alife_info("tushkano_story") then
-            db.actor:give_info_portion("tushkano_story")
-        elseif obj:section() == "mutant_hand_kontroler" and not has_alife_info("kontroler_story") then
-            db.actor:give_info_portion("kontroler_story")
-        elseif obj:section() == "mutant_poltergeist_glas" and not has_alife_info("poltergeist_story") then
-            db.actor:give_info_portion("poltergeist_story")
-        elseif obj:section() == "mutant_psevdogigant_hand" and not has_alife_info("psevdogigant_story") then
-            db.actor:give_info_portion("psevdogigant_story")
-        elseif obj:section() == "mutant_tail_cat" and not has_alife_info("cat_story") then
-            db.actor:give_info_portion("cat_story")
-        elseif obj:section() == "mutant_chimera_kogot" and not has_alife_info("chimera_story") then
-            db.actor:give_info_portion("chimera_story")
-        elseif obj:section() == "el_chimera_kogot" and not has_alife_info("el_chimera_story") then
-            db.actor:give_info_portion("el_chimera_story")
-        elseif obj:section() == "fire_chimera_kogot" and not has_alife_info("fire_chimera_story") then
-            db.actor:give_info_portion("fire_chimera_story")
-        elseif obj:section() == "mutant_crow" and not has_alife_info("crow_story") then
-            db.actor:give_info_portion("crow_story")
-        elseif obj:section() == "mutant_mouse" and not has_alife_info("mouse_story") then
-            db.actor:give_info_portion("mouse_story")
-        end
-    end
-end
-
 ----------
 -- чтение формы из нет-пакета
 ----------
@@ -339,20 +328,6 @@ function rewrite_restrictor(sobj, custom, radius)
     sobj:STATE_Read(packet, packet:w_tell() - packet:r_tell())
 end
 
-
--- Универсальная рабочая функция удаления предмета из инвентаря
-function delete_object(section, obj)
-    if not obj then
-        obj = db.actor
-    end
-    local item = obj:object(section)
-    local id = item and (item:id() or item.id)
-    local sobj = id and alife():object(id)
-    if sobj then
-        alife():release(sobj, true)
-    end
-end
-
 function manuscript_spawn()
     alife():create("manuscript", vector():set(-540.472, 5.777, -131.298), 118713, 626)
     foto.mouse_create()
@@ -369,8 +344,8 @@ function check_time_manuscript()
     snd_obj:play(db.actor, 0, sound_object.s2d)
 end
 
-function del_manuscript(first_speaker, second_speaker)
-    new_dialog.out_item_much("manuscript", 1)
+function del_manuscript()
+    ogse.remove_inv_items_by_section("manuscript", 1)
 end
 
 -----------------------------wpn_trup_spawn----------------------------
@@ -2288,9 +2263,9 @@ function brown_mousetrap_dal(first_speaker, second_speaker)
     dialogs.relocate_item_section(second_speaker, "medkit_army", "in", 2)
     dialogs.relocate_item_section(second_speaker, "bandage", "in", 3)
     dialogs.relocate_item_section(second_speaker, "ammo_5.56x45_ss190", "in", 4)
-	dialogs.relocate_item_section(second_speaker, "sil_nato", "in", 1)
-	dialogs.relocate_item_section(second_speaker, "eot", "in", 1)
-	dialogs.relocate_item_section(second_speaker, "wpn_sig550_luckygun", "in", 1)
+    dialogs.relocate_item_section(second_speaker, "sil_nato", "in", 1)
+    dialogs.relocate_item_section(second_speaker, "eot", "in", 1)
+    dialogs.relocate_item_section(second_speaker, "wpn_sig550_luckygun", "in", 1)
 end
 
 function voronin_perehod_nagrada(first_speaker, second_speaker)

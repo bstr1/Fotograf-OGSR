@@ -4448,39 +4448,7 @@
 #include "gameplay\character_dialogs.xml"
 </specific_character>
 
-<!--tank-->
-
-<specific_character id="tank" team_default="1">
-    <name>Уберсолдат</name>
-    <icon>ui_npc_tank</icon>
-    <map_icon x="1" y="2"></map_icon>
-    <bio>val_soldier_regular_bio</bio>
-
-    <class>tank</class>
-    <community>stranger</community>
-    <terrain_sect>stalker_terrain</terrain_sect>
-    <money min="10" max="50" infinitive="0"></money>
-
-    <rank>750</rank>
-    <reputation>0</reputation>
-
-    <visual>actors\aaz_tank_minifake</visual>
-    <snd_config>characters_voice\human_01\military\</snd_config>
-    <crouch_type>0</crouch_type>
-    <supplies>
-            [spawn] \n
-            wpn_minifake \n
-            ammo_minigun = 1 \n
-            device_torch \n
-    </supplies>
-
-    <start_dialog>hello_dialog</start_dialog>
-    <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-
-</specific_character>
-
 <!--uchen_x18-->
-
 <specific_character id="uchen_x18" team_default = "1">
     <name>Лаборант</name>
     <icon>ui_npc_uchen_white</icon>
@@ -4993,7 +4961,6 @@
 </specific_character>
 
 <!--wpn_trup_x10-->
-
 <specific_character id="wpn_trup_x10" team_default = "1">
     <name>Неизвестный учёный</name>
     <icon>ui_npc_u_stalker_ecolog_military</icon>
@@ -5022,6 +4989,88 @@
 
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-</specific_character>         
+</specific_character>
+
+<!--tank-->
+<specific_character id="tank" team_default="1">
+    <name>Уберсолдат</name>
+    <icon>ui_npc_tank</icon>
+    <map_icon x="1" y="2"></map_icon>
+    <bio>val_soldier_regular_bio</bio>
+
+    <class>tank</class>
+    <community>stranger</community>
+    <terrain_sect>stalker_terrain</terrain_sect>
+    <money min="10" max="50" infinitive="0"></money>
+
+    <rank>750</rank>
+    <reputation>0</reputation>
+
+    <visual>actors\aaz_tank_minifake</visual>
+    <snd_config>characters_voice\human_01\military\</snd_config>
+    <crouch_type>0</crouch_type>
+    <supplies>
+            [spawn] \n
+            wpn_pkm \n
+            ammo_7.62x54r = 1 \n
+            device_torch \n
+    </supplies>
+
+    <start_dialog>hello_dialog</start_dialog>
+    <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
+
+</specific_character>
+
+<!-- tank -->
+<specific_character id="tank_zombi" team_default="1">
+    <name>Уберсолдат</name>
+    <icon>ui_npc_tank</icon>
+    <map_icon x="1" y="2"></map_icon>
+    <bio>val_soldier_regular_bio</bio>
+
+    <class>cit_doctor</class>
+    <community>zombied</community> <panic_threshold>0.0</panic_threshold>
+    <money min="10" max="50" infinitive="0"></money>
     
+    <rank>150</rank>
+    <reputation>0</reputation>
+
+    <visual>actors\aaz_tank_minifake</visual>
+    <snd_config>characters_voice\human_01\military\</snd_config>
+    <crouch_type>0</crouch_type>
+    <supplies>
+        [spawn] \n
+        wpn_pkm \n
+        ammo_7.62x54r = 1 \n
+        device_torch \n
+    </supplies>
+
+#include "gameplay\character_dialogs.xml"
+</specific_character>
+
+<!-- tank_zomb -->
+<specific_character id="tank_zomb" team_default="1">
+    <name>Уберсолдат</name>
+    <icon>ui_npc_tank</icon>
+    <map_icon x="1" y="2"></map_icon>
+    <bio>val_soldier_regular_bio</bio>
+
+    <class>tank_zomb</class>
+    <community>zombied</community> <panic_threshold>0.0</panic_threshold>
+    <money min="10" max="50" infinitive="0"></money>
     
+    <rank>150</rank>
+    <reputation>0</reputation>
+
+    <visual>actors\aaz_tank_minifake</visual>
+    <snd_config>characters_voice\human_01\military\</snd_config>
+    <crouch_type>0</crouch_type>
+    <supplies>
+        [spawn] \n
+        wpn_pkm \n
+        ammo_7.62x54r = 1 \n
+        device_torch \n
+    </supplies>
+        
+#include "gameplay\character_dialogs.xml"
+</specific_character>	
