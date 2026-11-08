@@ -551,12 +551,11 @@ function archiv_spawn()
 end
 
 function del_noise()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "sound_object01" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
@@ -570,24 +569,22 @@ function radio_nagrada(first_speaker, second_speaker)
 end
 
 function del_zov1()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "sound_object_zov1" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
 end
 
 function del_zov2()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "sound_object_zov2" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
@@ -666,9 +663,8 @@ function poet_spawn()
 end
 
 function greta_inv_spawn()
-    local sim = alife()
-    sim:create("greta_invis", vector():set(-406.152, 1.067, 58.440), 170031, 777)
-    sim:create("korona", vector():set(-408.995, 2.587, 58.440), 165032, 777)
+    alife():create("greta_invis", vector():set(-406.152, 1.067, 58.440), 170031, 777)
+    alife():create("korona", vector():set(-408.995, 2.587, 58.440), 165032, 777)
 end
 
 function greta_vis_spawn()
@@ -676,12 +672,11 @@ function greta_vis_spawn()
 end
 
 function gretainv_del()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "greta_invis" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             db.actor:give_info_portion("greta_vis_spawn_info")
             break
         end
@@ -689,12 +684,11 @@ function gretainv_del()
 end
 
 function gretavis_del()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "greta_vis" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             db.actor:give_info_portion("skazal_opoet")
             break
         end
@@ -761,12 +755,11 @@ function korona_out(task, objective)
 end
 
 function del_korona()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "korona" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
@@ -815,56 +808,51 @@ function shepel_spawn()
 end
 
 function sheps_spawn()
-    local sim = alife()
-    sim:create("shep1", vector():set(216.624023, 16.550220, -13.721671), 815132, 1654)
-    sim:create("shep2", vector():set(212.803925, 16.549610, -11.881807), 809157, 1654)
-    sim:create("shep3", vector():set(211.650543, 16.550213, -8.980402), 806800, 1654)
+    alife():create("shep1", vector():set(216.624023, 16.550220, -13.721671), 815132, 1654)
+    alife():create("shep2", vector():set(212.803925, 16.549610, -11.881807), 809157, 1654)
+    alife():create("shep3", vector():set(211.650543, 16.550213, -8.980402), 806800, 1654)
     db.actor:give_info_portion("skazal_prizrak")
 end
 
 function shep_del()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "shepel" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
 end
 
 function shep1_del()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "shep1" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
 end
 
 function shep2_del()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "shep2" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
 end
 
 function shep3_del()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "shep3" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
@@ -872,12 +860,11 @@ function shep3_del()
 end
 
 function kill_del()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "strange_killer" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
@@ -973,28 +960,26 @@ function restr_tp1_spawn()
 end
 
 function tp1_spawn() -- в конце бара
-    local sim = alife()
     local custom
-    local sobj = sim:create("space_restrictor", vector():set(421.006, 14.576, -431.737), 98890, 290)
+    local sobj = alife():create("space_restrictor", vector():set(421.006, 14.576, -431.737), 98890, 290)
     if sobj then
         custom = "[logic]\ncfg = scripts\\ambient\\bar\\amb25_restr.ltx"
         rewrite_restrictor(sobj, custom, 4.6)
     end
-    sobj = sim:create("space_restrictor", vector():set(5.084, 16.037, -376.794), 201328, 946)
+    sobj = alife():create("space_restrictor", vector():set(5.084, 16.037, -376.794), 201328, 946)
     if sobj then
         custom = "[logic]\ncfg = scripts\\ambient\\promzone\\amb108_restr.ltx"
         rewrite_restrictor(sobj, custom, 28)
     end
-    sim:create("c_tp1", vector():set(421.098, 14.816, -438.331), 98933, 290)
+    alife():create("c_tp1", vector():set(421.098, 14.816, -438.331), 98933, 290)
 end
 
 function tp1_del()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "c_tp1" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
@@ -1005,12 +990,11 @@ function tp1b_spawn()
 end
 
 function tp1b_del()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "c_tp1b" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
@@ -1039,13 +1023,12 @@ end
 
 -- pre_restrict_promzone
 function restr_tp2_spawn()
-    local sim = alife()
-    local sobj = sim:create("space_restrictor", vector():set(5.039, 16.038, -385.236), 201316, 946)
+    local sobj = alife():create("space_restrictor", vector():set(5.039, 16.038, -385.236), 201316, 946)
     if sobj then
         local custom = "[logic]\ncfg = scripts\\new\\restr\\restr_tp2.ltx"
         rewrite_restrictor(sobj, custom, 3)
     end
-    sim:create("m_gigant_e", vector():set(-104.210, 1.051, 508.209), 29640, 835)
+    alife():create("m_gigant_e", vector():set(-104.210, 1.051, 508.209), 29640, 835)
     local snd_obj = xr_sound.get_safe_sound_object([[ambient\new\actor_53]])
     snd_obj:play(db.actor, 0, sound_object.s2d)
 end
@@ -1056,12 +1039,11 @@ function tp2_spawn()
 end
 
 function tp2_del()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "c_tp2" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
@@ -1072,12 +1054,11 @@ function tp2b_spawn()
 end
 
 function tp2b_del()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "c_tp2b" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
@@ -1106,13 +1087,12 @@ end
 
 -- pre_restrict_swamp
 function restr_tp3_spawn()
-    local sim = alife()
-    local sobj = sim:create("space_restrictor", vector():set(174.896, 1.765, -296.808), 1528786, 798)
+    local sobj = alife():create("space_restrictor", vector():set(174.896, 1.765, -296.808), 1528786, 798)
     if sobj then
         local custom = "[logic]\ncfg = scripts\\new\\restr\\restr_tp3.ltx"
         rewrite_restrictor(sobj, custom, 3)
     end
-    sobj = sim:create("space_restrictor", vector():set(278.340, 1.487, 261.110), 1754181, 799)
+    sobj = alife():create("space_restrictor", vector():set(278.340, 1.487, 261.110), 1754181, 799)
     if sobj then
         custom = "[logic]\ncfg = scripts\\ambient\\swamp\\amb82_restr.ltx"
         rewrite_restrictor(sobj, custom, 7)
@@ -1125,12 +1105,11 @@ function tp3_spawn()
 end
 
 function tp3_del()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "c_tp3" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
@@ -1141,12 +1120,11 @@ function tp3b_spawn()
 end
 
 function tp3b_del()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "c_tp3b" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
@@ -1175,13 +1153,12 @@ end
 
 -- pre_restrict_mk
 function restr_tp4_spawn()
-    local sim = alife()
-    local sobj = sim:create("space_restrictor", vector():set(18.719, -5.092, 403.741), 973073, 734)
+    local sobj = alife():create("space_restrictor", vector():set(18.719, -5.092, 403.741), 973073, 734)
     if sobj then
         local custom = "[logic]\ncfg = scripts\\new\\restr\\restr_tp4.ltx"
         rewrite_restrictor(sobj, custom, 3)
     end
-    sobj = sim:create("space_restrictor", vector():set(20.594, -5.108, 406.527), 975246, 734)
+    sobj = alife():create("space_restrictor", vector():set(20.594, -5.108, 406.527), 975246, 734)
     if sobj then
         custom = "[logic]\ncfg = scripts\\ambient\\pred\\amb86_restr.ltx"
         rewrite_restrictor(sobj, custom, 15)
@@ -1196,12 +1173,11 @@ function tp4_spawn()
 end
 
 function tp4_del()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "c_tp4" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
@@ -1212,12 +1188,11 @@ function tp4b_spawn()
 end
 
 function tp4b_del()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "c_tp4b" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
@@ -1233,13 +1208,12 @@ function grav_restr_spawn()
 end
 
 function restr_tele4b_spawn()
-    local sim = alife()
-    local sobj = sim:create("space_restrictor", vector():set(-303.241, 0.109, -366.774), 42075, 1513)
+    local sobj = alife():create("space_restrictor", vector():set(-303.241, 0.109, -366.774), 42075, 1513)
     if sobj then
         local custom = "[logic]\ncfg = scripts\\new\\restr\\restr_tele4b.ltx"
         rewrite_restrictor(sobj, custom, 2)
     end
-    sobj = sim:create("space_restrictor", vector():set(-300.227, 0.285, -367.026), 43928, 1513)
+    sobj = alife():create("space_restrictor", vector():set(-300.227, 0.285, -367.026), 43928, 1513)
     if sobj then
         custom = "[logic]\ncfg = scripts\\ambient\\hiding_road\\amb102_restr.ltx"
         rewrite_restrictor(sobj, custom, 5)
@@ -1251,23 +1225,21 @@ function ruk4_spawn()
 end
 
 function bloo6_spawn()
-    local sim = alife()
-    sim:create("bloodsucker_weak", vector():set(-259.719, 19.873, 262.617), 540027, 680)
-    sim:create("bloodsucker_normal", vector():set(-259.173, 20.082, 265.407), 541146, 680)
-    sim:create("doberman", vector():set(-256.287, 20.233, 265.998), 545471, 680)
-    sim:create("dog_green", vector():set(-254.360, 19.987, 263.046), 548785, 680)
-    sim:create("dog_green", vector():set(-256.055, 19.962, 260.609), 545458, 680)
+    alife():create("bloodsucker_weak", vector():set(-259.719, 19.873, 262.617), 540027, 680)
+    alife():create("bloodsucker_normal", vector():set(-259.173, 20.082, 265.407), 541146, 680)
+    alife():create("doberman", vector():set(-256.287, 20.233, 265.998), 545471, 680)
+    alife():create("dog_green", vector():set(-254.360, 19.987, 263.046), 548785, 680)
+    alife():create("dog_green", vector():set(-256.055, 19.962, 260.609), 545458, 680)
 end
 
 -- pre_restrict_hr
 function restr_tp5_spawn()
-    local sim = alife()
-    local sobj = sim:create("space_restrictor", vector():set(464.174, -0.077, 125.207), 1064903, 1701)
+    local sobj = alife():create("space_restrictor", vector():set(464.174, -0.077, 125.207), 1064903, 1701)
     if sobj then
         local custom = "[logic]\ncfg = scripts\\new\\restr\\restr_tp5.ltx"
         rewrite_restrictor(sobj, custom, 3)
     end
-    sobj = sim:create("space_restrictor", vector():set(388.962, -0.079, 90.821), 1029808, 1698)
+    sobj = alife():create("space_restrictor", vector():set(388.962, -0.079, 90.821), 1029808, 1698)
     if sobj then
         custom = "[logic]\ncfg = scripts\\new\\restr\\restr_komb.ltx"
         rewrite_restrictor(sobj, custom, 150)
@@ -1280,12 +1252,11 @@ function tp5_spawn()
 end
 
 function tp5_del()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "c_tp5" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
@@ -1296,12 +1267,11 @@ function tp5b_spawn()
 end
 
 function tp5b_del()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "c_tp5b" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
@@ -1345,12 +1315,11 @@ function tp6_spawn()
 end
 
 function tp6_del()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "c_tp6" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
@@ -1361,12 +1330,11 @@ function tp6b_spawn()
 end
 
 function tp6b_del()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "c_tp6b" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
@@ -1395,13 +1363,12 @@ end
 
 -- pre_restrict_МГ
 function restr_tp7_spawn()
-    local sim = alife()
-    local sobj = sim:create("space_restrictor", vector():set(11.667, -9.688, 211.098), 305794, 1246)
+    local sobj = alife():create("space_restrictor", vector():set(11.667, -9.688, 211.098), 305794, 1246)
     if sobj then
         local custom = "[logic]\ncfg = scripts\\new\\restr\\restr_tp7.ltx"
         rewrite_restrictor(sobj, custom, 3)
     end
-    sobj = sim:create("space_restrictor", vector():set(-100.964, 2.789, -11.237), 209906, 1239)
+    sobj = alife():create("space_restrictor", vector():set(-100.964, 2.789, -11.237), 209906, 1239)
     if sobj then
         custom = "[logic]\ncfg = scripts\\ambient\\deadcity\\amb76_restr.ltx"
         ---мертвый город---
@@ -1415,12 +1382,11 @@ function tp7_spawn()
 end
 
 function tp7_del()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "c_tp7" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
@@ -1431,12 +1397,11 @@ function tp7b_spawn()
 end
 
 function tp7b_del()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "c_tp7b" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
@@ -1478,12 +1443,11 @@ function tp8_spawn()
 end
 
 function tp8_del()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "c_tp8" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
@@ -1494,12 +1458,11 @@ function tp8b_spawn()
 end
 
 function tp8b_del()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "c_tp8b" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
@@ -1528,13 +1491,12 @@ end
 
 -- pre_restrict_prip
 function restr_tp9_spawn()
-    local sim = alife()
-    local sobj = sim:create("space_restrictor", vector():set(124.808, -1.054, -65.782), 232676, 580)
+    local sobj = alife():create("space_restrictor", vector():set(124.808, -1.054, -65.782), 232676, 580)
     if sobj then
         local custom = "[logic]\ncfg = scripts\\new\\restr\\restr_tp9.ltx"
         rewrite_restrictor(sobj, custom, 3)
     end
-    sobj = sim:create("space_restrictor", vector():set(177.227, -2.218, 99.123), 255738, 560)
+    sobj = alife():create("space_restrictor", vector():set(177.227, -2.218, 99.123), 255738, 560)
     if sobj then
         custom = "[logic]\ncfg = scripts\\ambient\\pripyat\\amb79_restr.ltx"
         ---после взятия подсказки_8---
@@ -1548,12 +1510,11 @@ function tp9_spawn()
 end
 
 function tp9_del()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "c_tp9" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
@@ -1564,12 +1525,11 @@ function tp9b_spawn()
 end
 
 function tp9b_del()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "c_tp9b" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
@@ -1585,13 +1545,12 @@ function restr_tele9_spawn()
 end
 
 function restr_tele9b_spawn()
-    local sim = alife()
-    local sobj = sim:create("space_restrictor", vector():set(-22.330, -8.989, 15.783), 3073, 337)
+    local sobj = alife():create("space_restrictor", vector():set(-22.330, -8.989, 15.783), 3073, 337)
     if sobj then
         local custom = "[logic]\ncfg = scripts\\new\\restr\\restr_tele9b.ltx"
         rewrite_restrictor(sobj, custom, 2)
     end
-    sobj = sim:create("space_restrictor", vector():set(-22.735, -8.990, 19.207), 3077, 336)
+    sobj = alife():create("space_restrictor", vector():set(-22.735, -8.990, 19.207), 3077, 336)
     if sobj then
         custom = "[logic]\ncfg = scripts\\ambient\\bunker\\amb38_restr.ltx"
         ---появление в х10---
@@ -1605,13 +1564,12 @@ end
 
 -- pre_restrict_x10
 function restr_tp10_spawn()
-    local sim = alife()
-    local sobj = sim:create("space_restrictor", vector():set(-21.150, -23.519, -15.455), 3432, 448)
+    local sobj = alife():create("space_restrictor", vector():set(-21.150, -23.519, -15.455), 3432, 448)
     if sobj then
         local custom = "[logic]\ncfg = scripts\\new\\restr\\restr_code.ltx"
         rewrite_restrictor(sobj, custom, 5)
     end
-    sobj = sim:create("space_restrictor", vector():set(-30.939, -23.517, -20.360), 2185, 371)
+    sobj = alife():create("space_restrictor", vector():set(-30.939, -23.517, -20.360), 2185, 371)
     if sobj then
         custom = "[logic]\ncfg = scripts\\new\\restr\\restr_tp10.ltx"
         rewrite_restrictor(sobj, custom, 3)
@@ -1624,12 +1582,11 @@ function tp10_spawn()
 end
 
 function tp10_del()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "c_tp10" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
@@ -1640,12 +1597,11 @@ function tp10b_spawn()
 end
 
 function tp10b_del()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "c_tp10b" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
@@ -1687,12 +1643,11 @@ function tp11_spawn()
 end
 
 function tp11_del()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "c_tp11" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
@@ -1703,12 +1658,11 @@ function tp11b_spawn()
 end
 
 function tp11b_del()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "c_tp11b" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
@@ -1744,29 +1698,27 @@ function restr_tp12_spawn() -- excavat
 end
 
 function tp12_spawn()
-    local sim = alife()
     local custom
-    local sobj = sim:create("space_restrictor", vector():set(-407.158, 0.919, 59.520), 167528, 777)
+    local sobj = alife():create("space_restrictor", vector():set(-407.158, 0.919, 59.520), 167528, 777)
     if sobj then
         custom = "[logic]\ncfg = scripts\\ambient\\aver\\amb40_restr.ltx"
         ---грета---
         rewrite_restrictor(sobj, custom, 7.0)
     end
-    sobj = sim:create("space_restrictor", vector():set(-370.873, 3.945, 59.765), 230680, 777)
+    sobj = alife():create("space_restrictor", vector():set(-370.873, 3.945, 59.765), 230680, 777)
     if sobj then
         custom = "[logic]\ncfg = scripts\\ambient\\aver\\amb41_restr.ltx"
         rewrite_restrictor(sobj, custom, 2.0)
     end
-    sim:create("c_tp12", vector():set(325.998, -5.852, -251.662), 1448617, 791)
+    alife():create("c_tp12", vector():set(325.998, -5.852, -251.662), 1448617, 791)
 end
 
 function tp12_del()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "c_tp12" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
@@ -1885,14 +1837,13 @@ end
 
 -- засада в МК
 function mk_zasada_del()
-    local sim = alife()
     local obj, sobj
     for i = 1, 65534 do
         obj = level.object_by_id(i)
         if obj and obj:section() == "mk_zasada" then
-            sobj = sim:object(i)
+            sobj = alife():object(i)
             if sobj then
-                sim:release(sobj, true)
+                alife():release(sobj, true)
                 break
             end
         end
@@ -1900,37 +1851,35 @@ function mk_zasada_del()
 end
 
 function mk_zasada_change()
-    local sim = alife()
-    sim:create("m_controller_senator", vector():set(-27.519, 8.952, -236.388), 900229, 728)
-    sim:create("m_controller_senator1", vector():set(-27.876, 8.951, -234.617), 899121, 728)
-    sim:create("m_controller_senator2", vector():set(-19.818, 8.953, -235.628), 912514, 728)
+    alife():create("m_controller_senator", vector():set(-27.519, 8.952, -236.388), 900229, 728)
+    alife():create("m_controller_senator1", vector():set(-27.876, 8.951, -234.617), 899121, 728)
+    alife():create("m_controller_senator2", vector():set(-19.818, 8.953, -235.628), 912514, 728)
     power_off()
 end
 
 -- постановка засады в МК
 function set_mk_zasada()
-    local sim = alife()
-    local sobj = sim:create("space_restrictor", vector():set(-22.961, 10.252, -235.437), 907014, 728)
+    local sobj = alife():create("space_restrictor", vector():set(-22.961, 10.252, -235.437), 907014, 728)
     if sobj then
         local custom = "[logic]\ncfg = scripts\\foto\\restr\\mk_zasada_restr.ltx"
         rewrite_restrictor(sobj, custom, 3)
     end
-    sobj = sim:create("space_restrictor", vector():set(-22.961, 10.252, -235.437), 907014, 728)
+    sobj = alife():create("space_restrictor", vector():set(-22.961, 10.252, -235.437), 907014, 728)
     if sobj then
         custom = "[logic]\ncfg = scripts\\foto\\restr\\mk_zasada_restr_1.ltx"
         rewrite_restrictor(sobj, custom, 5)
     end
-    sobj = sim:create("space_restrictor", vector():set(-22.961, 10.252, -235.437), 907014, 728)
+    sobj = alife():create("space_restrictor", vector():set(-22.961, 10.252, -235.437), 907014, 728)
     if sobj then
         custom = "[logic]\ncfg = scripts\\foto\\restr\\mk_zasada_restr_2.ltx"
         rewrite_restrictor(sobj, custom, 7)
     end
-    sobj = sim:create("space_restrictor", vector():set(-22.961, 10.252, -235.437), 907014, 728)
+    sobj = alife():create("space_restrictor", vector():set(-22.961, 10.252, -235.437), 907014, 728)
     if sobj then
         custom = "[logic]\ncfg = scripts\\foto\\restr\\mk_zasada_restr_3.ltx"
         rewrite_restrictor(sobj, custom, 30)
     end
-    sim:create("mk_zasada", vector():set(-22.961, 8.952, -235.437), 907014, 728)
+    alife():create("mk_zasada", vector():set(-22.961, 8.952, -235.437), 907014, 728)
 end
 
 function mk_essential()
@@ -1941,10 +1890,9 @@ end
 -- Засада в Промзоне
 
 function prom_zasada_change()
-    local sim = alife()
-    sim:create("m_controller_senator", vector():set(68.538, 20.038, -133.196), 328079, 1018)
-    sim:create("m_controller_senator1", vector():set(65.404, 20.039, -130.085), 328079, 1018)
-    sim:create("m_controller_senator2", vector():set(69.989, 20.186, -125.728), 328079, 1018)
+    alife():create("m_controller_senator", vector():set(68.538, 20.038, -133.196), 328079, 1018)
+    alife():create("m_controller_senator1", vector():set(65.404, 20.039, -130.085), 328079, 1018)
+    alife():create("m_controller_senator2", vector():set(69.989, 20.186, -125.728), 328079, 1018)
     power_off()
 end
 
@@ -1963,14 +1911,13 @@ end
 
 -- Засада в МГ
 function mg_zasada_del()
-    local sim = alife()
     local obj, sobj
     for i = 1, 65534 do
         obj = level.object_by_id(i)
         if obj and obj:section() == "mg_zasada" then
-            local sobj = sim:object(i)
+            local sobj = alife():object(i)
             if sobj then
-                sim:release(sobj, true)
+                alife():release(sobj, true)
                 break
             end
         end
@@ -1978,36 +1925,34 @@ function mg_zasada_del()
 end
 
 function mg_zasada_change()
-    local sim = alife()
-    sim:create("m_controller_senator", vector():set(1.748, 15.624, 83.211), 298718, 1362)
-    sim:create("m_controller_senator1", vector():set(4.255, 15.626, 80.718), 300134, 1362)
-    sim:create("m_controller_senator2", vector():set(2.255, 15.626, 81.105), 298712, 1362)
+    alife():create("m_controller_senator", vector():set(1.748, 15.624, 83.211), 298718, 1362)
+    alife():create("m_controller_senator1", vector():set(4.255, 15.626, 80.718), 300134, 1362)
+    alife():create("m_controller_senator2", vector():set(2.255, 15.626, 81.105), 298712, 1362)
     power_off()
 end
 
 function set_mg_zasada()
-    local sim = alife()
-    local sobj = sim:create("space_restrictor", vector():set(4.361, 15.624, 83.131), 299196, 1362)
+    local sobj = alife():create("space_restrictor", vector():set(4.361, 15.624, 83.131), 299196, 1362)
     if sobj then
         local custom = "[logic]\ncfg = scripts\\foto\\restr\\mg_zasada_restr.ltx"
         rewrite_restrictor(sobj, custom, 3)
     end
-    sobj = sim:create("space_restrictor", vector():set(4.361, 15.624, 83.131), 299196, 1362)
+    sobj = alife():create("space_restrictor", vector():set(4.361, 15.624, 83.131), 299196, 1362)
     if sobj then
         custom = "[logic]\ncfg = scripts\\foto\\restr\\mg_zasada_restr_1.ltx"
         rewrite_restrictor(sobj, custom, 5)
     end
-    sobj = sim:create("space_restrictor", vector():set(4.361, 15.624, 83.131), 299196, 1362)
+    sobj = alife():create("space_restrictor", vector():set(4.361, 15.624, 83.131), 299196, 1362)
     if sobj then
         custom = "[logic]\ncfg = scripts\\foto\\restr\\mg_zasada_restr_2.ltx"
         rewrite_restrictor(sobj, custom, 7)
     end
-    sobj = sim:create("space_restrictor", vector():set(4.361, 15.624, 83.131), 299196, 1362)
+    sobj = alife():create("space_restrictor", vector():set(4.361, 15.624, 83.131), 299196, 1362)
     if sobj then
         custom = "[logic]\ncfg = scripts\\foto\\restr\\mg_zasada_restr_3.ltx"
         rewrite_restrictor(sobj, custom, 60)
     end
-    sim:create("mg_zasada", vector():set(4.361, 15.624, 83.131), 299196, 1362)
+    alife():create("mg_zasada", vector():set(4.361, 15.624, 83.131), 299196, 1362)
 end
 
 function mg_essential()
@@ -2051,12 +1996,11 @@ function combic()
 end
 
 function irokez_del()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "irokez_kombez" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
@@ -2065,12 +2009,11 @@ end
 ------------------------Irokez_end--------------------------
 
 function del_c_lcs()
-    local sim = alife()
     local sobj
     for i = 65001, 65011 do
-        sobj = sim:story_object(i)
+        sobj = alife():story_object(i)
         if sobj then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
         end
     end
 end
@@ -2086,19 +2029,18 @@ function dysh_sms()
 end
 
 function spawn_restrov()
-    local sim = alife()
     local custom
-    local sobj = sim:create("space_restrictor", vector():set(-152.571, 12.971, 186.588), 126603, 1)
+    local sobj = alife():create("space_restrictor", vector():set(-152.571, 12.971, 186.588), 126603, 1)
     if sobj then
         custom = "[logic]\ncfg = scripts\\new\\restr\\und_island.ltx"
         rewrite_restrictor(sobj, custom, 3)
     end
-    sobj = sim:create("space_restrictor", vector():set(-152.571, 12.971, 186.588), 126603, 1)
+    sobj = alife():create("space_restrictor", vector():set(-152.571, 12.971, 186.588), 126603, 1)
     if sobj then
         custom = "[logic]\ncfg = scripts\\new\\restr\\und_island_sound.ltx"
         rewrite_restrictor(sobj, custom, 15)
     end
-    sobj = sim:create("space_restrictor", vector():set(-159.810, 14.799, 182.142), 118993, 1)
+    sobj = alife():create("space_restrictor", vector():set(-159.810, 14.799, 182.142), 118993, 1)
     if sobj then
         custom = "[logic]\ncfg = scripts\\new\\restr\\act_island.ltx"
         rewrite_restrictor(sobj, custom, 25)
@@ -2168,36 +2110,19 @@ function skala()
 end
 
 function orm_spawn()
-    local sobj = alife():create("ormont", vector():set(-217.914, 10.653, -244.415), 55284, 0)
-    if sobj then
-        local tbl = amk.read_stalker_params(sobj)
-        if tbl then
-            tbl.health = 0.0899999961256981
-            tbl.updhealth = 0.0899999961256981
-            amk.write_stalker_params(tbl, sobj)
-        end
-    end
+    local obj = alife():create("ormont", vector():set(-217.914, 10.653, -244.415), 55284, 0)
+    obj:set_health(0.089)
 end
 
 function iof_spawn()
-    -- local sobj = alife():create("ioffe",vector():set(-149.217,20.850,182.786),130410,1)
-    local sobj = alife():create("ioffe", vector():set(-141.086, 19.578, 181.332), 138853, 1)
-    if sobj then
-        local tbl = amk.read_stalker_params(sobj)
-        if tbl then
-            tbl.sid = 9707
-            tbl.health = 0
-            tbl.updhealth = 0
-            amk.write_stalker_params(tbl, sobj)
-        end
-    end
+    local obj = alife():create("ioffe", vector():set(-141.086, 19.578, 181.332), 138853, 1)
+    alife():assign_story_id(obj.id, story_ids.ioffe)
+    obj:set_health(0)
 end
 
 function island_skala()
-    local sim = alife()
     local custom
-    local sobj = sim:create("space_restrictor", vector():set(-149.25805664063, 22.168643951416, 179.26412963867),
-        130405, 1)
+    local sobj = alife():create("space_restrictor", vector():set(-149.25805664063, 22.168643951416, 179.26412963867), 130405, 1)
     if sobj then
         custom = "[logic]\ncfg = scripts\\new\\restr\\port_island.ltx"
         rewrite_restrictor(sobj, custom, 1)
@@ -2271,8 +2196,7 @@ function marksman_rnd()
     until x ~= y -- повторяем если совпало
     amk.save_variable("marksman", y) -- сохраняем значение
     local a = tbl_marksman[y] -- получаем данные из таблицы
-    local sim = alife()
-    local sobj = sim:create(a.sect, vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv) -- создаем стрелка
+    local sobj = alife():create(a.sect, vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv) -- создаем стрелка
     if sobj then
         amk.save_variable("marksman_id", sobj.id) -- запоминаем ID
     end
@@ -2282,10 +2206,9 @@ function marksman_del()
     amk.del_variable("marksman") -- удаляем переменную
     local sobj_id = amk.load_variable("marksman_id", nil) -- читаем ид
     if sobj_id then
-        local sim = alife()
-        local sobj = sim:object(sobj_id) -- получаем серверный объект
+        local sobj = alife():object(sobj_id) -- получаем серверный объект
         if sobj then
-            sim:release(sobj, true) -- удаляем серверный объект
+            alife():release(sobj, true) -- удаляем серверный объект
         end
         amk.del_variable("marksman_id") -- удаляем переменную
     end
@@ -2310,12 +2233,11 @@ function flesh_peredal(first_speaker, second_speaker)
 end
 
 function orm_for_del()
-    local sim = alife()
     local sobj
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj and sobj:section_name() == "ormont" then
-            sim:release(sobj, true)
+            alife():release(sobj, true)
             break
         end
     end
@@ -2331,17 +2253,16 @@ function saharov_island_nagrada(first_speaker, second_speaker)
 end
 
 function bazar()
-    local sim = alife()
     local custom
-    local sobj = sim:create("space_restrictor", vector():set(-25.673098, 29.998055, -122.653603), 263638, 0)
+    local sobj = alife():create("space_restrictor", vector():set(-25.673098, 29.998055, -122.653603), 263638, 0)
     if sobj then
         custom = "[logic]\ncfg = scripts\\new\\restr\\bazar_restr.ltx"
         rewrite_restrictor(sobj, custom, 3)
     end
-    sim:create("mercd1", vector():set(-23.251287, 29.998600, -119.980339), 266729, 0)
-    sim:create("mercd2", vector():set(-22.379089, 29.998783, -116.485924), 267497, 0)
-    sim:create("mercd3", vector():set(-18.449453, 29.998989, -117.670677), 272135, 0)
-    sim:create("mercd4", vector():set(-13.852438, 29.998989, -116.463684), 276767, 0)
+    alife():create("mercd1", vector():set(-23.251287, 29.998600, -119.980339), 266729, 0)
+    alife():create("mercd2", vector():set(-22.379089, 29.998783, -116.485924), 267497, 0)
+    alife():create("mercd3", vector():set(-18.449453, 29.998989, -117.670677), 272135, 0)
+    alife():create("mercd4", vector():set(-13.852438, 29.998989, -116.463684), 276767, 0)
 end
 
 function skin_restr_vhod_spawn()
@@ -2353,46 +2274,44 @@ function skin_restr_vhod_spawn()
 end
 
 function kont_vhod_spawn()
-    local sim = alife()
-    sim:create("catcher_vhod1", vector():set(-234.362, 17.035, 235.317), 579691, 688)
-    sim:create("catcher_vhod2", vector():set(-235.836, 17.125, 235.639), 577517, 688)
-    sim:create("catcher_vhod3", vector():set(-239.776, 17.208, 240.599), 570966, 688)
-    sim:create("catcher_prison1", vector():set(-273.556, 10.371, 228.585), 518006, 672)
-    sim:create("catcher_prison2", vector():set(-269.538, 11.323, 228.961), 524455, 672)
-    sim:create("catcher_main", vector():set(-274.856, 10.827, 222.699), 515833, 672)
-    sim:create("utyug", vector():set(-270.240, 10.711, 219.745), 523335, 672)
-    sim:create("irokez_skin", vector():set(455.900, -0.077, 130.629), 1063352, 1701)
+    alife():create("catcher_vhod1", vector():set(-234.362, 17.035, 235.317), 579691, 688)
+    alife():create("catcher_vhod2", vector():set(-235.836, 17.125, 235.639), 577517, 688)
+    alife():create("catcher_vhod3", vector():set(-239.776, 17.208, 240.599), 570966, 688)
+    alife():create("catcher_prison1", vector():set(-273.556, 10.371, 228.585), 518006, 672)
+    alife():create("catcher_prison2", vector():set(-269.538, 11.323, 228.961), 524455, 672)
+    alife():create("catcher_main", vector():set(-274.856, 10.827, 222.699), 515833, 672)
+    alife():create("utyug", vector():set(-270.240, 10.711, 219.745), 523335, 672)
+    alife():create("irokez_skin", vector():set(455.900, -0.077, 130.629), 1063352, 1701)
 end
 
 function prokol_restr_spawn()
-    local sim = alife()
     local custom
-    local sobj = sim:create("space_restrictor", vector():set(-227.671, 16.879, 239.396), 590465, 688)
+    local sobj = alife():create("space_restrictor", vector():set(-227.671, 16.879, 239.396), 590465, 688)
     if sobj then
         custom = "[logic]\ncfg = scripts\\new\\restr\\prokol_restr.ltx"
         rewrite_restrictor(sobj, custom, 10)
     end
-    sobj = sim:create("space_restrictor", vector():set(-227.671, 16.879, 239.396), 590465, 688)
+    sobj = alife():create("space_restrictor", vector():set(-227.671, 16.879, 239.396), 590465, 688)
     if sobj then
         custom = "[logic]\ncfg = scripts\\new\\restr\\prokol_restr1.ltx"
         rewrite_restrictor(sobj, custom, 9)
     end
-    sobj = sim:create("space_restrictor", vector():set(-266.249, 10.406, 240.908), 530000, 682)
+    sobj = alife():create("space_restrictor", vector():set(-266.249, 10.406, 240.908), 530000, 682)
     if sobj then
         custom = "[logic]\ncfg = scripts\\new\\restr\\prokol_middle_restr.ltx"
         rewrite_restrictor(sobj, custom, 16)
     end
-    sobj = sim:create("space_restrictor", vector():set(-266.249, 10.406, 240.908), 530000, 682)
+    sobj = alife():create("space_restrictor", vector():set(-266.249, 10.406, 240.908), 530000, 682)
     if sobj then
         custom = "[logic]\ncfg = scripts\\new\\restr\\prokol_middle_restr1.ltx"
         rewrite_restrictor(sobj, custom, 16)
     end
-    sobj = sim:create("space_restrictor", vector():set(-272.273, 10.641, 221.939), 520114, 672)
+    sobj = alife():create("space_restrictor", vector():set(-272.273, 10.641, 221.939), 520114, 672)
     if sobj then
         custom = "[logic]\ncfg = scripts\\new\\restr\\prokol_prison_restr.ltx"
         rewrite_restrictor(sobj, custom, 6)
     end
-    sobj = sim:create("space_restrictor", vector():set(-272.273, 10.641, 221.939), 520114, 672)
+    sobj = alife():create("space_restrictor", vector():set(-272.273, 10.641, 221.939), 520114, 672)
     if sobj then
         custom = "[logic]\ncfg = scripts\\new\\restr\\prokol_prison_restr1.ltx"
         rewrite_restrictor(sobj, custom, 6)
@@ -2464,26 +2383,24 @@ local tbl_sect = {
 
 function clear_kont(...)
     local sobj, sect
-    local sim = alife()
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj then
             sect = sobj:section_name()
             if sect and tbl_sect[sect] ~= nil then
-                sim:release(sobj, true)
+                alife():release(sobj, true)
             end
         end
     end
 end
 
 function kont_reorg()
-    local sim = alife()
-    sim:create("m_controller_normal", vector():set(-234.362, 17.035, 235.317), 579691, 688)
-    sim:create("m_controller_normal", vector():set(-235.836, 17.125, 235.639), 577517, 688)
-    sim:create("m_controller_normal", vector():set(-239.776, 17.208, 240.599), 570966, 688)
-    sim:create("m_controller_normal", vector():set(-273.556, 10.371, 228.585), 518006, 672)
-    sim:create("m_controller_normal", vector():set(-269.538, 11.323, 228.961), 524455, 672)
-    sim:create("m_controller_normal_skin", vector():set(-274.856, 10.827, 222.699), 515833, 672)
+    alife():create("m_controller_normal", vector():set(-234.362, 17.035, 235.317), 579691, 688)
+    alife():create("m_controller_normal", vector():set(-235.836, 17.125, 235.639), 577517, 688)
+    alife():create("m_controller_normal", vector():set(-239.776, 17.208, 240.599), 570966, 688)
+    alife():create("m_controller_normal", vector():set(-273.556, 10.371, 228.585), 518006, 672)
+    alife():create("m_controller_normal", vector():set(-269.538, 11.323, 228.961), 524455, 672)
+    alife():create("m_controller_normal_skin", vector():set(-274.856, 10.827, 222.699), 515833, 672)
 end
 
 local tbl_sectl = {
@@ -2496,25 +2413,23 @@ local tbl_sectl = {
 
 function clear_kont_less(...)
     local sobj, sect
-    local sim = alife()
     for a = 1, 65534 do
-        sobj = sim:object(a)
+        sobj = alife():object(a)
         if sobj then
             sect = sobj:section_name()
             if sect and tbl_sectl[sect] ~= nil then
-                sim:release(sobj, true)
+                alife():release(sobj, true)
             end
         end
     end
 end
 
 function kont_reorg_less()
-    local sim = alife()
-    sim:create("m_controller_normal", vector():set(-234.362, 17.035, 235.317), 579691, 688)
-    sim:create("m_controller_normal", vector():set(-235.836, 17.125, 235.639), 577517, 688)
-    sim:create("m_controller_normal", vector():set(-239.776, 17.208, 240.599), 570966, 688)
-    sim:create("m_controller_normal", vector():set(-273.556, 10.371, 228.585), 518006, 672)
-    sim:create("m_controller_normal", vector():set(-269.538, 11.323, 228.961), 524455, 672)
+    alife():create("m_controller_normal", vector():set(-234.362, 17.035, 235.317), 579691, 688)
+    alife():create("m_controller_normal", vector():set(-235.836, 17.125, 235.639), 577517, 688)
+    alife():create("m_controller_normal", vector():set(-239.776, 17.208, 240.599), 570966, 688)
+    alife():create("m_controller_normal", vector():set(-273.556, 10.371, 228.585), 518006, 672)
+    alife():create("m_controller_normal", vector():set(-269.538, 11.323, 228.961), 524455, 672)
 end
 
 local tbl_exo = {{

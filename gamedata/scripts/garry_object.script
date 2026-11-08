@@ -61,13 +61,8 @@ function FixObject(arg, id, obj)
 end
 
 function palatka_trup_spawn()
-    local sobj = alife():create("palatka_trup", vector():set(156.043, -9.396, -196.847), 342766, 1330)
-    if sobj then
-        local tbl = amk.read_stalker_params(sobj)
-        tbl.sid = 9701
-        tbl.health = 0
-        tbl.updhealth = 0
-        amk.write_stalker_params(tbl, sobj)
-    end
+    local obj = alife():create("palatka_trup", vector():set(156.043, -9.396, -196.847), 342766, 1330)
+    alife():assign_story_id(obj.id, story_ids.palatka_trup)
+    obj:set_health(0)
 end
 

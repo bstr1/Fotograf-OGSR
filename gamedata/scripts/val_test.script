@@ -3625,12 +3625,8 @@ local kombeztrup = {{
 function kombez_trup_spawn()
     local a = kombeztrup[math.random(table.getn(kombeztrup))]
     local obj = alife():create("ivanov_trup", vector():set(a.position.x, a.position.y, a.position.z), a.lv, a.gv)
-    local tbl = amk.read_stalker_params(obj)
-    -- tbl.sid = 30350
-    tbl.sid = 9702
-    tbl.health = 0
-    tbl.updhealth = 0
-    amk.write_stalker_params(tbl, obj)
+    alife():assign_story_id(obj.id, story_ids.ivanov_trup)
+    obj:set_health(0)
 end
 
 local tbl_zombie_ruk = {{
