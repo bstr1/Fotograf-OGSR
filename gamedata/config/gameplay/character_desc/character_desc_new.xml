@@ -913,7 +913,6 @@
 #include "gameplay\character_food.xml"
     </supplies>
 
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>        
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 
@@ -949,7 +948,6 @@
 #include "gameplay\character_food.xml"
     </supplies>
 
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>        
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 
@@ -1053,7 +1051,6 @@
 #include "gameplay\character_drugs.xml"
     </supplies>
 
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>        
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"    
 </specific_character>
@@ -1086,7 +1083,6 @@
 #include "gameplay\character_drugs.xml"
     </supplies>
 
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>        
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"    
 </specific_character>
@@ -1119,7 +1115,6 @@
 #include "gameplay\character_drugs.xml"
     </supplies>
 
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>        
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"    
 </specific_character>
@@ -1217,7 +1212,6 @@
 #include "gameplay\character_food.xml"
     </supplies>
 
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>        
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 </specific_character>
@@ -1606,7 +1600,6 @@
 #include "gameplay\character_food.xml"
     </supplies>
 
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>        
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 
@@ -1642,7 +1635,6 @@
 #include "gameplay\character_drugs.xml"
     </supplies>
 
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>        
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"    
 </specific_character>
@@ -1676,7 +1668,6 @@
 #include "gameplay\character_food.xml"
     </supplies>
 
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>        
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 
@@ -1789,7 +1780,6 @@
 #include "gameplay\character_drugs.xml"
     </supplies>
 
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>        
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"    
 </specific_character>
@@ -1821,7 +1811,6 @@
 #include "gameplay\character_drugs.xml"
     </supplies>
 
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>        
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"    
 </specific_character>
@@ -1886,7 +1875,6 @@
 #include "gameplay\character_drugs.xml"
     </supplies>
 
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>        
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"    
 </specific_character>
@@ -2303,7 +2291,6 @@
 #include "gameplay\character_drugs.xml"
     </supplies>
 
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>        
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"    
 </specific_character>
@@ -2335,7 +2322,6 @@
 #include "gameplay\character_drugs.xml"
     </supplies>
 
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>        
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"    
 </specific_character>
@@ -2942,7 +2928,6 @@
         
 #include "gameplay\character_criticals.xml"
 
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>
     <start_dialog>hello_dialog</start_dialog>
 #include "gameplay\character_dialogs.xml"
 </specific_character>
@@ -3394,7 +3379,6 @@
 #include "gameplay\character_items.xml"
     </supplies>
 
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>        
 #include "gameplay\character_criticals.xml"       
 #include "gameplay\character_dialogs.xml"   
 </specific_character>
@@ -4359,7 +4343,6 @@
 #include "gameplay\character_food.xml"
     </supplies>
 
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>
     <actor_dialog>kogot_about_kogot</actor_dialog>        
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
@@ -4584,7 +4567,6 @@
 #include "gameplay\character_drugs.xml"
     </supplies>
 
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>        
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"    
 </specific_character>
@@ -4615,7 +4597,6 @@
 #include "gameplay\character_drugs.xml"
     </supplies>
 
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>         
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"    
 </specific_character>
@@ -4757,7 +4738,6 @@
     </supplies>
                     
 #include "gameplay\character_criticals.xml"
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>
     <start_dialog>hello_dialog</start_dialog>
 #include "gameplay\character_dialogs.xml"        
 </specific_character>
@@ -4789,7 +4769,6 @@
     </supplies>
         
 #include "gameplay\character_criticals.xml"
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>
     <start_dialog>hello_dialog</start_dialog>
 #include "gameplay\character_dialogs.xml"
 </specific_character>
@@ -4824,7 +4803,6 @@
 #include "gameplay\character_items.xml"
     </supplies>
 
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>    
 #include "gameplay\character_criticals.xml"       
 #include "gameplay\character_dialogs.xml"
 </specific_character>
@@ -4858,7 +4836,6 @@
 #include "gameplay\character_items.xml"
     </supplies>
 
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>    
 #include "gameplay\character_criticals.xml"       
 #include "gameplay\character_dialogs.xml"
 </specific_character>
@@ -4892,7 +4869,6 @@
 #include "gameplay\character_food.xml"    
     </supplies>
 
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>        
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"            
 </specific_character>
@@ -4924,7 +4900,6 @@
 #include "gameplay\character_food.xml"    
     </supplies>
 
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>        
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"            
 </specific_character>
@@ -5182,42 +5157,6 @@
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"    
 </specific_character>
-
-
-<!--david-->
-<specific_character id="david" team_default = "1">
-    <name>Иуда</name>
-    <icon>ui_npc_iuda</icon>
-    <map_icon x="3" y="0"></map_icon>
-    <bio>rad_monolith_general_bio</bio>
-
-    <class>david</class>
-    <community>monolith</community>
-
-    <rank>618</rank>
-    <reputation>-385</reputation>
-    <money min="30" max="50" infinitive="0"/>
-
-    <visual>actors\iuda</visual>
-    <snd_config>characters_voice\human_02\monolith\</snd_config>
-    <crouch_type>-1</crouch_type>
-    <supplies>
-            [spawn] \n
-            wpn_walther \n
-            ammo_9x19_fmj \n
-            wpn_abakan \n
-            ammo_5.45x39_ap = 2 \n
-            grenade_f1 = 1 \n
-#include "gameplay\character_drugs.xml"
-    </supplies>
-        
-#include "gameplay\character_criticals.xml"
-
-    <actor_dialog>mini_games_dialog</actor_dialog>
-    <start_dialog>hello_dialog</start_dialog>
-#include "gameplay\character_dialogs.xml"
-</specific_character>
-
 
 
 <!--mil_stalker1-->
@@ -5533,7 +5472,6 @@
 #include "gameplay\character_food.xml"    
     </supplies>
 
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>    
 #include "gameplay\character_criticals.xml"    
 #include "gameplay\character_dialogs.xml"
 </specific_character>
@@ -5608,7 +5546,6 @@
 #include "gameplay\character_food.xml"            
     </supplies>
 
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>        
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"        
 </specific_character>
@@ -5642,7 +5579,6 @@
 #include "gameplay\character_food.xml"                
     </supplies>
 
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>        
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"        
 
@@ -5712,7 +5648,6 @@
 #include "gameplay\character_food.xml"            
     </supplies>
 
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>        
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 
@@ -5890,7 +5825,6 @@
 #include "gameplay\character_drugs.xml"
     </supplies>
 
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>        
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"    
 </specific_character>
@@ -5923,7 +5857,6 @@
     </supplies>
                     
 #include "gameplay\character_criticals.xml"
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>                    
 #include "gameplay\character_dialogs.xml"
 </specific_character>
 <!--bar_nad3-->
@@ -5956,7 +5889,6 @@
 #include "gameplay\character_drugs.xml"
     </supplies>
 
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>        
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"    
 </specific_character>
@@ -6067,7 +5999,6 @@
     
 #include "gameplay\character_criticals.xml"
 
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>
     <actor_dialog>agr_krot_story</actor_dialog>
 #include "gameplay\character_dialogs.xml"   
 </specific_character>

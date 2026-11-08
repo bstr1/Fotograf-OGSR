@@ -1838,7 +1838,6 @@
 
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>    
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 
@@ -1913,7 +1912,6 @@
 
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>        
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 
@@ -1987,7 +1985,6 @@
 
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>        
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 
@@ -2062,7 +2059,6 @@
 
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>    
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 
@@ -2137,7 +2133,6 @@
 
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 
@@ -2210,7 +2205,6 @@
 
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>    
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 
@@ -2284,7 +2278,6 @@
 
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>    
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 
@@ -2323,7 +2316,6 @@
 
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>    
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 
@@ -2362,7 +2354,6 @@
 
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>        
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 
@@ -2441,7 +2432,6 @@
 
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>    
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 
@@ -2482,7 +2472,6 @@
 
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>        
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 
@@ -2601,7 +2590,6 @@
 
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>                    
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 </specific_character>
@@ -2671,7 +2659,6 @@
 
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>                    
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
         
@@ -2741,7 +2728,6 @@
 
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>                
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
         
@@ -2812,7 +2798,6 @@
 
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>                    
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
         
@@ -2885,7 +2870,6 @@
 
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>                    
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
         
@@ -2924,7 +2908,6 @@
     <actor_dialog>filin_poisk_dialog</actor_dialog>
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>                    
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 </specific_character>
@@ -2993,7 +2976,6 @@
 
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>                    
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 </specific_character>
@@ -3066,7 +3048,6 @@
 
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>                    
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 </specific_character>
@@ -3133,7 +3114,6 @@
 
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>                    
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 </specific_character>
@@ -3201,7 +3181,6 @@
     <actor_dialog>filin_poisk_dialog</actor_dialog>
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>                    
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 </specific_character>
@@ -3239,7 +3218,6 @@
     <actor_dialog>filin_poisk_dialog</actor_dialog>
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>                    
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 </specific_character>
@@ -3309,7 +3287,6 @@
 
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>                    
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 </specific_character>
@@ -3346,7 +3323,6 @@
     <actor_dialog>filin_poisk_dialog</actor_dialog>
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>                    
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 </specific_character>
@@ -3419,7 +3395,6 @@
     <actor_dialog>filin_poisk_dialog</actor_dialog>
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>                    
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 </specific_character>
@@ -3454,7 +3429,6 @@
     <actor_dialog>filin_poisk_dialog</actor_dialog>
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>                    
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 </specific_character>
@@ -3523,7 +3497,6 @@
 
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>                    
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 </specific_character>
@@ -3592,7 +3565,6 @@
 
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>                    
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 </specific_character>
@@ -3631,7 +3603,6 @@
 
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>                    
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 </specific_character>
@@ -3708,7 +3679,6 @@
 
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>                    
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 </specific_character>
@@ -3785,7 +3755,6 @@
 
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>                    
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
 </specific_character>
@@ -4749,7 +4718,6 @@
 
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>    
 #include "gameplay\character_criticals.xml"                
 #include "gameplay\character_dialogs.xml"
 </specific_character>

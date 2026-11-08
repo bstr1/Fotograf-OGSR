@@ -293,7 +293,6 @@
 #include "gameplay\character_drugs.xml"      
     </supplies>
 
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>
     <start_dialog>hello_dialog</start_dialog>
 
 </specific_character>
@@ -327,7 +326,6 @@
 #include "gameplay\character_drugs.xml"      
     </supplies>
 
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>
     <start_dialog>hello_dialog</start_dialog>
 
 </specific_character>
@@ -541,7 +539,6 @@
 #include "gameplay\character_drugs.xml"      
     </supplies>
 
-    <actor_dialog>dm_dialog_exchanging_items</actor_dialog>
     <start_dialog>hello_dialog</start_dialog>    
 #include "gameplay\character_dialogs.xml"
 </specific_character>
