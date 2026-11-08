@@ -310,7 +310,6 @@ function actor_binder:on_item_take(obj)
     amk.on_item_take(obj)
     amk_utils.actor_item_take(obj)
     inventory.on_item_take(item)
-    fotograf.checking_fotograf_item(obj)
     foto2.checking_use_item(obj)
     foto.take_item(obj)
     -- AMK UTILS--
@@ -319,7 +318,6 @@ end
 ----------------------------------------------------------------------------------------------------------------------
 function actor_binder:on_item_drop(obj)
     anom_remover.on_item_drop(obj)
-    -- bomba_test.drop_pult(obj)
     repair.use_repair(obj)
     level_tasks.proceed(self.object)
     -- xr_effects.func_test()
@@ -435,8 +433,6 @@ function actor_binder:update(delta)
 
     -- апдейт наших функций использования пульта и ремнабора 
     repair.use_repkit()
-    -- bomba_test.use_pult()
-    -- bomba_test.bada_boom()
 
     -- Проверка потери жизни
     --[[
@@ -573,7 +569,6 @@ function actor_binder:update(delta)
         xrs_ai.actor_update(delta)
     end
 
-    -- end of addition
     if biodetector then
         biodetector.update()
     end
@@ -629,7 +624,6 @@ function actor_binder:save_old(packet)
     self.weather_manager:save(packet)
 
     sr_psy_antenna.save(packet)
-    -- bomba_test.save_variable(packet)
 
     if save_treasure_manager == true then
         treasure_manager.save(packet)
@@ -669,7 +663,6 @@ function actor_binder:load(reader)
     self.weather_manager:load(reader)
 
     sr_psy_antenna.load(reader)
-    -- bomba_test.load_variable(reader)
 
     if load_treasure_manager == true then
         treasure_manager.load(reader)
