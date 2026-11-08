@@ -407,3 +407,21 @@ function lch_peschera_sar_peschera()
     end
 end
 
+function lch_swamp_prom_swamp()
+    -- Болото - Промзона
+    if (not has_alife_info("lch_swamp_prom")) then
+        level_new.create_level_changer(30501,
+            vector():set(276.89, 3.68, 288.91), 1749645, 799,
+            10361, 815,
+            vector():set(-122.21, 21.03, -3.66), vector():set(0, -1.41, 0), "promzone", 0)
+        db.actor:give_info_portion("lch_swamp_prom")
+    end
+    -- Промзона - Болото
+    if (not has_alife_info("lch_prom_swamp")) then
+        level_new.create_level_changer(30500,
+            vector():set(-126.41, 21.04, -3.52), 70122, 815,
+            1740506, 799,
+            vector():set(272.46, 2.61, 285.18), vector():set(0, 2.47, 0), "swamp", 0)
+        db.actor:give_info_portion("lch_prom_swamp")
+    end
+end

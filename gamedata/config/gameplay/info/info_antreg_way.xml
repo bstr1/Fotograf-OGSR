@@ -74,9 +74,7 @@
 
 <info_portion id="dezertir_car_est"></info_portion>
 <info_portion id="dead_dezertir_car"></info_portion>
-<info_portion id="del_dezertir_car">
-    <action>cars.del_dezertir_car</action>
-</info_portion>
+<info_portion id="del_dezertir_car"></info_portion>
 
 <info_portion id="mario_key_dialog_start">
     <task>mario_case</task>
@@ -490,6 +488,8 @@
 
 <info_portion id="freedom_find_artefact_3_info"></info_portion>
 <!-- level_changers -->
+<info_portion id="lch_swamp_prom"></info_portion>
+<info_portion id="lch_prom_swamp"></info_portion>
 <info_portion id="lch_mk_road"></info_portion>
 <info_portion id="lch_road_mk"></info_portion>
 <info_portion id="lch_mk_prom"></info_portion>

@@ -2646,6 +2646,7 @@
             <action>fotograf.metka_foto_08</action>
             <action>fotograf.metka_foto_09</action>
             <action>fotograf.metka_foto_10</action>
+			<action>y_level.lch_swamp_prom_swamp</action>
             <action>dialogs.break_dialog</action>
             <action>xyz_teleportation.swamp</action>
         </phrase>

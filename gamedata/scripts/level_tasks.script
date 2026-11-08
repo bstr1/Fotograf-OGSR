@@ -315,6 +315,17 @@ function add_lchanger_location()
         if obj then
             level.map_add_object_spot(obj.id, "level_changer", "В Миротворческий Корпус")
         end
+
+		obj = sim:story_object(30501)
+		if obj then
+			level.map_add_object_spot(obj.id, "level_changer", "В Промзону")
+		end
+
+		obj = sim:story_object(30500)
+		if obj then
+			level.map_add_object_spot(obj.id, "level_changer", "На Болота")
+		end
+
     end
 end
 

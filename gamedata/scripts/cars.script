@@ -124,7 +124,7 @@ function del_dezertir_car()
     end
 end
 function del_dezertir_car_delete()
-    dsh.timeout(5, del_dezertir_car)
+    dsh.timeout(15, del_dezertir_car)
 end
 ---------------------------------voronin_car-----------------------------------
 
