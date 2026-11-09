@@ -1312,7 +1312,9 @@ function spawn_cat_trup3()
 end
 
 function spawn_mk_bratki()
-    alife():create("krysolov", vector():set(29.561, -3.169, 2.127), 989276, 744)
+    local obj = alife():create("krysolov", vector():set(29.561, -3.169, 2.127), 989276, 744)
+    alife():assign_story_id(obj.id, story_ids.krysolov)
+
     alife():create("koster_gorit", vector():set(90.281, 4.113, -30.083), 1085323, 761)
     alife():create("bratok_kamp_01", vector():set(90.281, 4.185, -30.083), 1085323, 761)
     alife():create("bratok_kamp_02", vector():set(90.281, 4.185, -30.083), 1085323, 761)
@@ -4553,6 +4555,10 @@ end
 
 function havchik_ogirki_have()
     return new_dialog.count_item("ogirki", 1)
+end
+
+function lesnik_nastoyka_have()
+    return new_dialog.count_item("nastoyka", 2)
 end
 
 local function distance_check()

@@ -1477,7 +1477,7 @@
 
 <dialog id="shpak_dialog_3">
     <dont_has_info>shpak_dialog_3_done</dont_has_info>
-    <has_info>shpak_timer1</has_info>
+    <has_info>shpak_dialog_2_done</has_info>
     <phrase_list>
         <phrase id="0">
             <text>shpak_3_0</text>
@@ -1545,13 +1545,14 @@
             <text>shpak_4_3</text>
             <give_info>shpak_dialog_4_done</give_info>
             <action>boryan67.shpak_transfer_2</action>
+            <action>boryan67.create_dunya</action>
         </phrase>
     </phrase_list>
 </dialog>
 
 <dialog id="shpak_dialog_5">
     <dont_has_info>shpak_dialog_5_done</dont_has_info>
-    <has_info>shpak_timer2</has_info>
+    <has_info>shpak_dialog_4_done</has_info>
     <phrase_list>
         <phrase id="0">
             <text>shpak_5_0</text>
@@ -1631,32 +1632,7 @@
         </phrase>
         <phrase id="2">
             <text>shpak_6_02</text>
-            <next>3</next>
-        </phrase>
-        <phrase id="3">
-            <text>shpak_6_1</text>
-            <next>4</next>
-        </phrase>
-        <phrase id="4">
-            <text>shpak_6_2</text>
-            <next>5</next>
-        </phrase>
-        <phrase id="5">
-            <text>shpak_6_3</text>
-            <next>6</next>
-        </phrase>
-        <phrase id="6">
-            <text>shpak_6_4</text>
-            <next>7</next>
-        </phrase>
-        <phrase id="7">
-            <text>shpak_6_5</text>
-            <next>8</next>
-        </phrase>
-        <phrase id="8">
-            <text>shpak_6_6</text>
             <give_info>shpak_dialog_6_done</give_info>
-            <action>boryan67.transfer_ration</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -1672,47 +1648,8 @@
         </phrase>
         <phrase id="1">
             <text>shpak_6_1</text>
-            <next>2</next>
-        </phrase>
-        <phrase id="2">
-            <text>shpak_6_2</text>
-            <next>3</next>
-        </phrase>
-        <phrase id="3">
-            <text>shpak_6_3</text>
-            <next>4</next>
-        </phrase>
-        <phrase id="4">
-            <text>shpak_6_4</text>
-            <next>5</next>
-        </phrase>
-        <phrase id="5">
-            <text>shpak_6_5</text>
-            <next>6</next>
-        </phrase>
-        <phrase id="6">
-            <text>shpak_6_6</text>
             <give_info>shpak_dialog_7_done</give_info>
-            <action>boryan67.transfer_ration</action>
-        </phrase>
-    </phrase_list>
-</dialog>
-
-<dialog id="shpak_dialog_8">
-    <has_info>shpak_timer3</has_info>
-    <precondition>boryan67.actor_litra_have</precondition>
-    <phrase_list>
-        <phrase id="0">
-            <text>shpak_7_0</text>
-            <next>1</next>
-        </phrase>
-        <phrase id="1">
-            <text>shpak_7_1</text>
-            <next>2</next>
-        </phrase>
-        <phrase id="2">
-            <text>shpak_7_2</text>
-            <disable_info>shpak_timer3</disable_info>
+            <give_info>dunya_collect_enable</give_info>
             <action>boryan67.transfer_ration</action>
         </phrase>
     </phrase_list>
@@ -1834,6 +1771,92 @@
         <phrase id="7">
             <text>dunya_2_4_1</text>
             <give_info>dunya_dialog_2_done</give_info>
+        </phrase>
+    </phrase_list>
+</dialog>
+
+<dialog id="dunya_dialog_3">
+    <dont_has_info>dunya_dialog_3_done</dont_has_info>
+    <has_info>dunya_collect_enable</has_info>
+    <phrase_list>
+        <phrase id="0">
+            <text>dunya_3_0</text>
+            <next>1</next>
+        </phrase>
+        <phrase id="1">
+            <text>dunya_3_1</text>
+            <next>2</next>
+        </phrase>
+        <phrase id="2">
+            <text>dunya_3_2</text>
+            <next>3</next>
+        </phrase>
+        <phrase id="3">
+            <text>dunya_3_3</text>
+            <next>4</next>
+            <next>5</next>
+        </phrase>
+        <phrase id="4">
+            <text>dunya_3_4</text>
+            <give_info>dunya_dialog_3_done</give_info>
+            <give_info>dunya_collect</give_info>
+        </phrase>
+        <phrase id="5">
+            <text>dunya_3_5</text>
+            <give_info>dunya_dialog_3_done</give_info>
+        </phrase>
+    </phrase_list>
+</dialog>
+
+<dialog id="dunya_dialog_4">
+    <dont_has_info>dunya_collect_otdal</dont_has_info>
+    <has_info>dunya_dialog_3_done</has_info>
+    <precondition>boryan67.check_mutant</precondition>
+    <phrase_list>
+        <phrase id="0">
+            <text>dunya_4_0</text>
+            <next>1</next>
+        </phrase>
+        <phrase id="1">
+            <text>dunya_4_1</text>
+            <next>2</next>
+        </phrase>
+        <phrase id="2">
+            <text>dunya_4_2</text>
+            <next>3</next>
+        </phrase>
+        <phrase id="3">
+            <text>dunya_4_3</text>
+            <next>4</next>
+        </phrase>
+        <phrase id="4">
+            <text>dunya_4_4</text>
+            <give_info>dunya_collect_otdal</give_info>
+            <give_info>dunya_monpansie</give_info>
+            <action>boryan67.dunya_transfer_1</action>
+            <action>boryan67.dunya_transfer_1_sound</action>
+        </phrase>
+    </phrase_list>
+</dialog>
+
+<dialog id="dunya_dialog_5">
+    <dont_has_info>dunya_monpansie_otdal</dont_has_info>
+    <has_info>dunya_monpansie</has_info>
+    <precondition>boryan67.check_monpansie</precondition>
+    <phrase_list>
+        <phrase id="0">
+            <text>dunya_5_0</text>
+            <next>1</next>
+        </phrase>
+        <phrase id="1">
+            <text>dunya_5_1</text>
+            <next>2</next>
+        </phrase>
+        <phrase id="2">
+            <text>dunya_5_2</text>
+            <give_info>dunya_monpansie_otdal</give_info>
+            <action>boryan67.dunya_transfer_2</action>
+            <action>boryan67.dunya_transfer_2_sound</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -2566,90 +2589,6 @@
             <text>max_2_2</text>
             <give_info>max_ruk_otdal</give_info>
             <action>foto.max_transfer</action>
-        </phrase>
-    </phrase_list>
-</dialog>
-
-<dialog id="dunya_dialog_3">
-    <dont_has_info>dunya_dialog_3_done</dont_has_info>
-    <has_info>dunya_collect_enable</has_info>
-    <phrase_list>
-        <phrase id="0">
-            <text>dunya_3_0</text>
-            <next>1</next>
-        </phrase>
-        <phrase id="1">
-            <text>dunya_3_1</text>
-            <next>2</next>
-        </phrase>
-        <phrase id="2">
-            <text>dunya_3_2</text>
-            <next>3</next>
-        </phrase>
-        <phrase id="3">
-            <text>dunya_3_3</text>
-            <next>4</next>
-            <next>5</next>
-        </phrase>
-        <phrase id="4">
-            <text>dunya_3_4</text>
-            <give_info>dunya_dialog_3_done</give_info>
-            <give_info>dunya_collect</give_info>
-        </phrase>
-        <phrase id="5">
-            <text>dunya_3_5</text>
-            <give_info>dunya_dialog_3_done</give_info>
-        </phrase>
-    </phrase_list>
-</dialog>
-
-<dialog id="dunya_dialog_4">
-    <dont_has_info>dunya_collect_otdal</dont_has_info>
-    <has_info>dunya_collect_done</has_info>
-    <precondition>boryan67.check_mutant</precondition>
-    <phrase_list>
-        <phrase id="0">
-            <text>dunya_4_0</text>
-            <next>1</next>
-        </phrase>
-        <phrase id="1">
-            <text>dunya_4_1</text>
-            <next>2</next>
-        </phrase>
-        <phrase id="2">
-            <text>dunya_4_2</text>
-            <next>3</next>
-        </phrase>
-        <phrase id="3">
-            <text>dunya_4_3</text>
-            <next>4</next>
-        </phrase>
-        <phrase id="4">
-            <text>dunya_4_4</text>
-            <give_info>dunya_collect_otdal</give_info>
-            <give_info>dunya_monpansie</give_info>
-            <action>boryan67.dunya_transfer_1</action>
-        </phrase>
-    </phrase_list>
-</dialog>
-
-<dialog id="dunya_dialog_5">
-    <dont_has_info>dunya_monpansie_otdal</dont_has_info>
-    <has_info>dunya_monpansie_done</has_info>
-    <precondition>boryan67.check_monpansie</precondition>
-    <phrase_list>
-        <phrase id="0">
-            <text>dunya_5_0</text>
-            <next>1</next>
-        </phrase>
-        <phrase id="1">
-            <text>dunya_5_1</text>
-            <next>2</next>
-        </phrase>
-        <phrase id="2">
-            <text>dunya_5_2</text>
-            <give_info>dunya_monpansie_otdal</give_info>
-            <action>boryan67.dunya_transfer_2</action>
         </phrase>
     </phrase_list>
 </dialog>

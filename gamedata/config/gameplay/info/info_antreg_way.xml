@@ -2002,15 +2002,10 @@
 <info_portion id="shpak_dialog_4_done"></info_portion>
 <info_portion id="shpak_dialog_5_done"></info_portion>
 <info_portion id="shpak_dialog_6_done"></info_portion>
-<info_portion id="shpak_dialog_7_done">
-    <action>boryan67.relocate_dunya</action>
-</info_portion>
+<info_portion id="shpak_dialog_7_done"></info_portion>
 <info_portion id="shpak_vodka">
     <task>shpak_vodka20</task>
 </info_portion>
-<info_portion id="shpak_timer1"></info_portion>
-<info_portion id="shpak_timer2"></info_portion>
-<info_portion id="shpak_timer3"></info_portion>
 <info_portion id="shpak_vintorez">
     <task>shpak_vss</task>
 </info_portion>
@@ -2030,9 +2025,7 @@
     <task>dunya_sweets</task>
 </info_portion>
 <info_portion id="dunya_doshla"></info_portion>
-<info_portion id="dunya_dead">
-    <action>boryan67.clear_dunya</action>
-</info_portion>
+<info_portion id="dunya_dead"></info_portion>
 <info_portion id="dunya_enemy"></info_portion>
 <!-- поршни Крысолов -->
 <info_portion id="krisalov_dialog_1_done"></info_portion>

@@ -359,9 +359,6 @@ local a
   if select_string=="smith_foto_wait" then
     fotograf.sms_foto_smith()
   end
-  if select_string=="dunya_timer" then
-    db.actor:give_info_portion("dunya_collect_enable")
-  end
   if select_string=="krisa_timer1" then
     db.actor:give_info_portion("krisalov_timer1")
   end
@@ -421,9 +418,6 @@ local a
   end
   if select_string=="music_peschera_contra2" then
     mauvais.music_peschera_contra2()
-  end
-  if select_string=="shpak_timer" then
-    boryan67.shpak_timer_done()
   end
   if select_string=="scan_timer" then
     boryan67.scan_habar()

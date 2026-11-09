@@ -103,8 +103,6 @@ function GlukUpdate()
     coeff_diff = 4 - game_diff
     if OldSec == NowSec then
         if OverEnable then
-            -- Analise()
-            CheckItems()
             OverEnable = false
         end
         return
@@ -2112,11 +2110,9 @@ function x16_teleport()
     end
 end
 
---------------------------------------------------------------------
 -- майор Шпак и Дульсинея
---------------------------------------------------------------------
 -- проверка наличия ящика водки
-function actor_vodka_have(first_speaker, second_speaker)
+function actor_vodka_have(task, objective)
     return new_dialog.count_item("vodka", 20)
 end
 
@@ -2124,7 +2120,6 @@ end
 function shpak_transfer_1(first_speaker, second_speaker)
     dialogs.relocate_item_section(second_speaker, "vodka", "out", 20)
     dialogs.relocate_item_section(second_speaker, "ammo_5.45x39_ap", "in", 20)
-    amk.g_start_timer("shpak_timer", 0, math.random(8, 12), 0) -- заводим таймер до второго диалога на 8 - 12 часов
 end
 
 -- проверка наличия Винтореза
@@ -2137,7 +2132,6 @@ function shpak_transfer_2(first_speaker, second_speaker)
     dialogs.relocate_item_section(second_speaker, "wpn_vintorez", "out", 1)
     dialogs.relocate_item_section(second_speaker, "wpn_rpg7", "in")
     dialogs.relocate_item_section(second_speaker, "ammo_og-7b", "in", 5)
-    amk.g_start_timer("shpak_timer", 0, math.random(8, 12), 0) -- заводим таймер до третьего диалога на 8 - 12 часов
 end
 
 -- получаем подарочки для Дуни
@@ -2159,15 +2153,9 @@ function transfer_present(first_speaker, second_speaker)
     dialogs.relocate_item_section(second_speaker, "konfeta", "out", 1)
 end
 
--- проверка наличия литра водки
-function actor_litra_have()
-    return count_item("vodka", 2)
-end
-
--- получение суточного довольствия
+-- получение единоразовой награды за сопровождение Дуни
 function transfer_ration(first_speaker, second_speaker)
-    -- содержимое суточного пайка
-    local tbl_ration = {
+    local nagrad = {
         "paek1",
         "mineral",
         "mineral",
@@ -2180,138 +2168,71 @@ function transfer_ration(first_speaker, second_speaker)
         "ammo_vog-25",
         "ammo_vog-25",
         "grenade_rgd5",
-        "grenade_f1"
+        "grenade_f1",
+        "mirotvor_outfit1"
     }
 
-    local sobj
-    -- получаем паек
-    for a = 1, table.getn(tbl_ration) do
-        dialogs.relocate_item_section(second_speaker, tbl_ration[a], "in")
-    end
-    if new_dialog.count_item("vodka", 2) then
-        dialogs.relocate_item_section(second_speaker, "vodka", "out", 2)
-    end
-    amk.g_start_timer("shpak_timer", 1, 0, 0) -- заводим таймер на сутки
-end
-
--- проверка наличия Шпака в онлайне
-function shpak_online()
-    local npc = level_object_by_sid(30254)
-    if npc then
-        return true
-    end
-    return false
-end
-
--- обработчик таймеров Шпака
-function shpak_timer_done()
-    -- это первый вызов таймера?
-    if not has_alife_info("shpak_timer1") then
-        db.actor:give_info_portion("shpak_timer1")
-        -- это второй вызов таймера?
-    elseif not has_alife_info("shpak_timer2") then
-        if shpak_online() then -- если Шпак в онлайне, то отложим событие на час
-            amk.g_start_timer("shpak_timer", 0, 1, 0)
-        else -- иначе, начинаются у Шпака проблемы        
-            db.actor:give_info_portion("shpak_timer2")
-            local txt =
-                "Фотограф, у меня большие проблемы.\\nСрочно нужна твоя помощь!\\nС уважением, майор Шпак."
-            news_manager.send_tip(db.actor, txt, nil, nil, 20000) -- отправляем сообщение для ГГ
-            local sobj = alife():create("dunya", vector():set(-317.342, 11.413, 60.872), 462787, 797) -- создаем Дульсинею
-            if sobj then
-                amk.save_variable("DunyaID", sobj.id) -- сохраняем ИД
-            end
-        end
-    else -- это регулярный вызов таймера получения суточного пайка
-        db.actor:give_info_portion("shpak_timer3") -- разрешаем получение пайка
+    for a = 1, table.getn(nagrad) do
+        dialogs.relocate_item_section(second_speaker, nagrad[a], "in")
     end
 end
 
--- перемещаем Дуню в домик
-function relocate_dunya()
-    local id = amk.load_variable("DunyaID", nil) -- читаем ИД Дуни
-    if id then
-        local sobj = alife():object(id)
-        if sobj then
-            alife():release(sobj, true) -- удаляем Дуню
-        end
-        amk.del_variable("DunyaID") -- чистим переменную
-        sobj = alife():create("dunya", vector():set(196.530, 2.798, -38.109), 1576466, 799) -- создаем Дульсинею2
-        -- запускаем таймер ожидания до следующего диалога
-        amk.g_start_timer("dunya_timer", 0, 5, 0) -- заводим таймер на 5 часов
-    end
+function create_dunya()
+    local obj = alife():create("dunya", vector():set(-317.342, 11.413, 60.872), 462787, 797) -- создаем Дульсинею
+    alife():assign_story_id(obj.id, story_ids.dunya)
 end
 
--- зачистка Дуни
-function clear_dunya()
-    amk.del_variable("DunyaID")
-end
-
--- проверки на предметы
-function CheckItems()
-    local actor = db.actor
-    if not actor then
-        return
-    end
-    if has_alife_info("dunya_collect") and check_mutant() then
-        actor:give_info_portion("dunya_collect_done")
-        actor:disable_info_portion("dunya_collect")
-    elseif has_alife_info("dunya_monpansie") and check_monpansie() then
-        actor:give_info_portion("dunya_monpansie_done")
-        actor:disable_info_portion("dunya_monpansie")
-    end
-end
 -- проверка сбора коллекции образцов мутантов
-local tbl_mutant = {
-    ['mutant_boar_leg'] = true, -- кабан
-    ['mutant_dog_tail'] = true, -- слепая собака
-    ['mutant_psevdodog_tail'] = true, -- псевдособака
-    ['mutant_tail_cat'] = true, -- псевдокот
-    ['mutant_psevdogigant_hand'] = true, -- псевдогигант
-    ['mutant_chimera_kogot'] = true, -- химера
-    ['mutant_flesh_eye'] = true, -- плоть
-    ['vypolzen_hrebet'] = true, -- болотный выползень
-    ['tarakan_lich1'] = true, -- таракан
-    ['mutant_krovosos_jaw'] = true, -- кровосос
-    ['mutant_snork_leg'] = true, -- снорк 
-    ['mutant_face_tushkano'] = true, -- тушкан
-    ['mutant_hand_kontroler'] = true, -- контролер 
-    ['mutant_burer_hand'] = true, -- бюрер
-    ['izlom_hand'] = true -- излом
-}
-function check_mutant(...)
-    local actor = db.actor
-    if not actor then
-        return false
-    end
-    for k, v in pairs(tbl_mutant) do
-        if not actor:object(k) then
-            return false
-        end
-    end
-    return true
+function check_mutant()
+    return new_dialog.count_item("mutant_boar_leg", 1) and new_dialog.count_item("mutant_dog_tail", 1) and
+    new_dialog.count_item("mutant_psevdodog_tail", 1) and new_dialog.count_item("mutant_tail_cat", 1) and
+    new_dialog.count_item("mutant_psevdogigant_hand", 1) and new_dialog.count_item("mutant_chimera_kogot", 1) and
+    new_dialog.count_item("mutant_flesh_eye", 1) and new_dialog.count_item("vypolzen_hrebet", 1) and
+    new_dialog.count_item("tarakan_lich1", 1) and new_dialog.count_item("mutant_krovosos_jaw", 1) and
+    new_dialog.count_item("mutant_snork_leg", 1) and new_dialog.count_item("mutant_face_tushkano", 1) and
+    new_dialog.count_item("mutant_hand_kontroler", 1) and new_dialog.count_item("mutant_burer_hand", 1) and
+    new_dialog.count_item("izlom_hand", 1)
 end
+
 -- проверка монпансье
 function check_monpansie()
     return new_dialog.count_item("sweets", 1)
 end
+
 -- обмен частей монстров на деньги
 function dunya_transfer_1(first_speaker, second_speaker)
-    for k, v in pairs(tbl_mutant) do
-        if db.actor:object(k) then
-            new_dialog.out_item_much(k, 1)
-        end
-    end
-    dialogs.relocate_money(db.actor, 10000, "in")
+    dialogs.relocate_item_section(first_speaker, "mutant_boar_leg", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "mutant_dog_tail", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "mutant_psevdodog_tail", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "mutant_tail_cat", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "mutant_psevdogigant_hand", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "mutant_chimera_kogot", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "mutant_flesh_eye", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "vypolzen_hrebet", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "tarakan_lich1", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "mutant_krovosos_jaw", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "mutant_snork_leg", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "mutant_face_tushkano", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "mutant_hand_kontroler", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "mutant_burer_hand", "out", 1)
+    dialogs.relocate_item_section(first_speaker, "izlom_hand", "out", 1)
+    dialogs.relocate_money(db.actor, 10000, "out")
+end
+
+function dunya_transfer_1_sound()
     local sound = sound_object("ambient\\new\\actor_dunya_1")
     if sound then
         sound:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
     end
 end
+
 -- получение биорадара
 function dunya_transfer_2(first_speaker, second_speaker)
     dialogs.relocate_item_section(second_speaker, "sweets", "out", 2)
     dialogs.relocate_item_section(second_speaker, "bioradar", "in", 1)
+end
+
+function dunya_transfer_2_sound()
     local sound = sound_object("ambient\\new\\actor_dunya_2")
     if sound then
         sound:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)

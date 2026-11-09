@@ -3318,7 +3318,6 @@
             <text>ded_start_dialog_8</text>
             <give_info>ded_start_dialog_start</give_info>
             <action>fotograf.spawn_osvedom_new</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -3444,7 +3443,6 @@
             <action>fotograf.hunter_trup_spawn</action>
             <action>fotograf.create_katakomby_restr</action>
             <action>mauvais.timer_music_aver05</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -3482,7 +3480,6 @@
             <text>sut_start_dialog_est_6</text>
             <give_info>sut_start_dialog_done</give_info>
             <action>fotograf.hunter_case_otdal</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
