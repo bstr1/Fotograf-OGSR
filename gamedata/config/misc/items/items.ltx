@@ -554,40 +554,6 @@ chemical_burn_immunity          = 1.0
 explosion_immunity              = 1.0
 fire_wound_immunity             = 1.0 
 
-; bstr: del musor iz tt2
-[aes_case33]:identity_immunities
-class                           = II_ANTIR
-cform                           = skeleton
-
-visual                          = equipments\item_antirad.ogf
-description                     = enc_equipment_medi_antirad1
-
-inv_name                        = Antirad
-inv_name_short                  = Antirad
-inv_weight                      = 0.1
-
-inv_grid_width                  = 1
-inv_grid_height                 = 1
-inv_grid_x                      = 18
-inv_grid_y                      = 12
-
-cost                            = 100
-
-; eatable item
-eat_health                      = -0.2
-eat_satiety                     = -0.25
-eat_power                       = 0
-eat_radiation                   = -1.0
-
-wounds_heal_perc                = 0
-eat_portions_num                = 1
-
-; food item
-animation_slot                  = 4
-
-;hud item
-hud                             = wpn_vodka_hud
-
 
 [repair_kit]:identity_immunities
 class                           = II_ANTIR
@@ -1152,26 +1118,6 @@ quest_item                      = true
 cost                            = 15000
 
 description                     = "Пачка денег. Пятнадцать тысяч рублей."
-inv_name                        = Деньги
-inv_name_short                  = Деньги
-inv_weight                      = 0.1
-
-inv_grid_width                  = 1
-inv_grid_height                 = 1
-inv_grid_x                      = 23
-inv_grid_y                      = 8
-
-
-[leila_money]:identity_immunities
-class                           = II_ATTCH
-cform                           = skeleton
-
-visual                          = equipments\money.ogf
-radius                          = 1
-quest_item                      = true
-cost                            = 20000
-
-description                     = "Пачка денег. Двадцать тысяч рублей."
 inv_name                        = Деньги
 inv_name_short                  = Деньги
 inv_weight                      = 0.1

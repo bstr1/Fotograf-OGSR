@@ -2,32 +2,12 @@
     <class>swamp_trader</class>
 </character>
 
-<character id="swamp_grig">
-    <class>swamp_grig</class>
-</character>
-
 <character id="swamp_doctor">
     <class>swamp_doctor</class>
 </character>
 
-<character id="skit_trader">
-    <class>skit_trader</class>
-</character>
-
-<character id="skit_postovoy">
-    <class>skit_postovoy</class>
-</character>
-
 <character id="skit_demon">
     <class>skit_demon</class>
-</character>
-
-<character id="leila">
-    <class>leila</class>
-</character>
-
-<character id="karina">
-    <class>karina</class>
 </character>
 
 <character id="skit_nauch">
@@ -44,14 +24,6 @@
 
 <character id="skit_rukzak">
     <class>skit_rukzak</class>
-</character>
-
-<character id="skit_exo">
-    <class>skit_exo</class>
-</character>
-
-<character id="grig">
-    <class>grig</class>
 </character>
 
 <character id="lesnik">
@@ -94,76 +66,22 @@
     <class>dolg_sobolev</class>
 </character>
 
-<character id="tankist">
-    <class>tankist</class>
-</character>
-
-<character id="sidor_old">
-    <class>sidor_old</class>
-</character>
-
-<character id="barman_old">
-    <class>barman_old</class>
-</character>
-
-<character id="sidor_stalker">
-    <class>sidor_stalker</class>
-</character>
-
 <character id="barman_stalker">
     <class>barman_stalker</class>
-</character>
-
-<character id="barman_dolg">
-    <class>barman_dolg</class>
-</character>
-
-<character id="bookmaker">
-    <class>bookmaker</class>
 </character>
 
 <character id="zahar">
     <class>zahar</class>
 </character>
 
-<character id="zahar2">
-    <class>zahar2</class>
-</character>
-
-<character id="lesnik3">
-    <class>lesnik3</class>
-</character>
-
-<character id="lesnik4">
-    <class>lesnik4</class>
-</character>
-
-<character id="uchen_zombak">
-    <class>uchen_zombak</class>
-</character>
-
-<character id="uchen_zombik">
-    <class>uchen_zombik</class>
-</character>
 
 <character id="exo_flame">
     <class>exo_flame</class>
 </character>
 
-<character id="magomet">
-    <class>magomet</class>
-</character>
-
-<character id="nebo_provodnik">
-    <class>nebo_provodnik</class>
-</character>
 
 <character id="oso_mono">
     <class>oso_mono</class>
-</character>
-
-<character id="esc_fantom1">
-    <class>esc_fantom1</class>
 </character>
 
 <character id="exo_gun">
@@ -172,14 +90,6 @@
 
 <character id="klyk_new">
     <class>klyk_new</class>
-</character>
-
-<character id="vano_new">
-    <class>vano_new</class>
-</character>
-
-<character id="koldun">
-    <class>koldun</class>
 </character>
 
 <character id="contra_var">
@@ -202,24 +112,12 @@
     <class>maroder_exo</class>
 </character>
 
-<character id="maroder_gena">
-    <class>maroder_gena</class>
-</character>
-
 <character id="maroderka_stalk">
     <class>maroderka_stalk</class>
 </character>
 
 <character id="maroderka_exo">
     <class>maroderka_exo</class>
-</character>
-
-<character id="david">
-    <class>david</class>
-</character>
-
-<character id="iuda">
-    <class>iuda</class>
 </character>
 
 <character id="mil_rpg">

@@ -1217,9 +1217,6 @@ end
 
 -- проверка на видимость производится раз в секунду
 function enemy_see_actor(obj,typ)
-  if string.find(obj:name(),"fedya_razboinik") then
-       db.actor:give_info_portion("fedya_razboinik_see")
-  end 
   if string.find(obj:name(),"ucen_ohr1") then
        db.actor:give_info_portion("ucen_ohr1_see")
   end
@@ -1228,21 +1225,6 @@ function enemy_see_actor(obj,typ)
   end
   if string.find(obj:name(),"ucen_ohr3") then
        db.actor:give_info_portion("ucen_ohr3_see")
-  end
-  if string.find(obj:name(),"razbor_ban1") then
-       db.actor:give_info_portion("razbor_ban1_see")
-  end
-  if string.find(obj:name(),"razbor_ban2") then
-       db.actor:give_info_portion("razbor_ban2_see")
-  end
-  if string.find(obj:name(),"razbor_ban3") then
-       db.actor:give_info_portion("razbor_ban3_see")
-  end
-  if string.find(obj:name(),"razbor_ban4") then
-       db.actor:give_info_portion("razbor_ban4_see")
-  end
-  if string.find(obj:name(),"razbor_ban5") then
-       db.actor:give_info_portion("razbor_ban5_see")
   end
   if string.find(obj:name(),"agent_prom") then
        db.actor:give_info_portion("agent_prom_see")

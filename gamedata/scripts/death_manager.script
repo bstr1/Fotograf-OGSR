@@ -363,9 +363,6 @@ end
 if string.find(self.npc:name(),"mil_soldat_five") then
   db.actor:give_info_portion("mil_voen_five")  
 end
-if string.find(self.npc:name(),"dark_komandir_belchuk") then
-  db.actor:give_info_portion("mil_voen_six")  
-end
 if string.find(self.npc:name(),"mil_barier_one") then
   db.actor:give_info_portion("mil_barier_one")  
 end
@@ -396,20 +393,8 @@ end
 if self.npc:name() == "bes" then
   db.actor:give_info_portion("bes_dead")  
 end
-if string.find(self.npc:name(),"garbage_stalker_wound") then
-  db.actor:give_info_portion("garbage_stalker_wound_dead")  
-end
 if string.find(self.npc:name(),"mil_osvedomitel") then
   db.actor:give_info_portion("mil_osvedomitel_dead")  
-end
-if string.find(self.npc:name(),"clear_scy_leader") then
-  db.actor:give_info_portion("sviblov_dead")  
-end
-if string.find(self.npc:name(),"esc_krest_bratok") then
-  db.actor:give_info_portion("krest_dead")  
-end
-if string.find(self.npc:name(),"atp_barman") then
-  db.actor:give_info_portion("band_kill_have")  
 end
 end
 --' Функция вызывается для каждого предмета, если вернет false то предмет удалится.

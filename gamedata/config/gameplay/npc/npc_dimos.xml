@@ -66,10 +66,6 @@
     <class>nato_specnaz1</class>
 </character>
 
-<character id="fab_trup">
-    <class>fab_trup</class>
-</character>
-
 <character id="nato_antigas">
     <class>nato_antigas</class>
 </character>
@@ -104,22 +100,6 @@
 
 <character id="hunter2">
     <class>hunter2</class>
-</character>
-
-<character id="esc_podmoga1">
-    <class>esc_podmoga1</class>
-</character>
-
-<character id="esc_podmoga2">
-    <class>esc_podmoga2</class>
-</character>
-
-<character id="esc_podmoga3">
-    <class>esc_podmoga3</class>
-</character>
-
-<character id="nevidimka">
-    <class>nevidimka</class>
 </character>
 
 <character id="kapitan">

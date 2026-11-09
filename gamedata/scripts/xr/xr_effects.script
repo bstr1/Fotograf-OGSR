@@ -395,14 +395,6 @@ function inc_counter(actor, npc, p)
   end
 end
 
-function dec_counter(actor, npc, p)
-  if p[1] then
-    printf( "dec_counter '%s'", p[1] )
-    xr_logic.pstor_store(actor, p[1], xr_logic.pstor_retrieve(actor, p[1], 0) - 1)
-  end
-end
-
-
 -- переключает камеру на монстра или на актёра
 function alien_control( actor, npc, p )
   printf( "alien_control(%s)", p[1] )
@@ -1367,69 +1359,6 @@ function kill(actor, npc)
 end
 
 
--------------------------------------------------------------------------------------
--- Функции для Агропрома
--------------------------------------------------------------------------------------
-
-function agr_krot_sos( actor, npc )
-  news_manager.send_tip( actor, "tips_agr_krot_sos", 0, "krot", 10000 )
-end
-
-function agr_krot_sos_1_2( actor, npc )
-  if not has_alife_info( "agr_help_krot_start" ) and
-     not has_alife_info( "agr_help_krot_done" ) and
-     not has_alife_info( "agr_krot_skirmish_start" ) and
-     not has_alife_info( "agr_krot_dead" ) and not(agroprom_tasks.agr_actor_enemy())
-  then
-    actor:give_info_portion( "agr_help_krot_start" )
-    news_manager.send_tip( actor, "tips_agr_krot_sos1", 0, "krot", 10000 )
-
-    if has_alife_info( "agr_help_stalkers_defence_dead" ) then
-      news_manager.send_tip( actor, "tips_agr_krot_sos2", 0, "krot", 10000 )
-    end
-  end
-end
-
-function agr_knockdown ()
-  local snd_obj = xr_sound.get_safe_sound_object([[affects\tinnitus3a]])
-  snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
-  level.add_cam_effector("camera_effects\\earthquake.anm", 1974, false, "")
-end
-
-function agr_contuz (actor, npc)
-    local sound_obj_l   = xr_sound.get_safe_sound_object( [[affects\psy_blackout_l]] )
-        local sound_obj_r   = xr_sound.get_safe_sound_object( [[affects\psy_blackout_r]] )
-        
-    sound_obj_l:play_no_feedback(actor, sound_object.s2d, 0, vector():set(-1, 0, 1), 1.0)
-    sound_obj_r:play_no_feedback(actor, sound_object.s2d, 0, vector():set( 1, 0, 1), 1.0)
-end
-
-function agr_cam_effect ()
-  level.add_cam_effector2("camera_effects\\agroprom_doctor_cam.anm", 123, false, "")
-
-end
-
-function agr_weapon(actor, npc)
-  local actor = db.actor  
-  if  actor ~= nil then actor:activate_slot(2)
-  end
-end
-function agr_hold_enemy(actor, npc)
-  local gulag = xr_gulag.get_gulag_by_name("agr_factory_hold")
-  
-  local h  = hit()
-  h.power     = 0.01
-  h.direction = vector():set( 1, 0, 0 )
-  h.draftsman = actor
-  h.impulse   = 1
-  h.type      = hit.wound
-  
-  for k, v in pairs(gulag.Object) do
-    if v ~= true and level.object_by_id( k ) ~= nil then
-      v:hit( h )
-    end
-  end 
-end
 --------------------------------------------------------- 
 -- PRIPYAT
 --------------------------------------------------------- 

@@ -140,31 +140,6 @@
 
 </specific_character>
 
-<specific_character id="yan_ghost" team_default = "1">
-    <name>yan_ghost_name</name>
-    <icon>ui_npc_u_stalker_prizrak</icon>
-    <map_icon x="0" y="6"></map_icon>
-    <bio>sim_stalker_veteran_bio</bio>
-
-    <class>yan_ghost</class>
-    <community>stalker</community>
-    <terrain_sect>stalker_terrain</terrain_sect>
-
-
-    <rank>721</rank>
-    <reputation>50</reputation>
-
-    <visual>actors\neytral\stalker_prizrak</visual>
-    <snd_config>characters_voice\human_01\stalker\</snd_config>
-    <crouch_type>1</crouch_type>
-    <supplies>
-            [spawn] \n
-            wpn_walther \n
-            ammo_9x19_fmj \n
-            lab_x16_documents \n
-            outfit_stalker_m1 \n
-    </supplies>
-</specific_character>
 
 <!--ECOLOG-->
 <specific_character id="yan_ecolog_default1" team_default = "1">

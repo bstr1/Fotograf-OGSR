@@ -70,24 +70,7 @@
 <string id="plan_labx16_document_name">
   <text>План комуникаций лаборатории х-16.</text>
 </string>
-<string id="shram_document1_desc">
-  <text>Записка от Шрама №1.</text>
-</string>
-<string id="shram_document1_name">
-  <text>Записка от Шрама №1.</text>
-</string>
-<string id="shram_document2_desc">
-  <text>Записка от Шрама №2.</text>
-</string>
-<string id="shram_document2_name">
-  <text>Записка от Шрама №2.</text>
-</string>
-<string id="shram_document3_desc">
-  <text>Записка от Шрама №3.</text>
-</string>
-<string id="shram_document3_name">
-  <text>Записка от Шрама №3.</text>
-</string>
+
 <string id="photo_alboum_name">
   <text>Альбом с фотографиями .</text>
 </string>
@@ -118,18 +101,7 @@
 <string id="book_nebo3_name">
   <text>Книга третья из лаборатории х-16.</text>
 </string>
-<string id="first_flash_desc">
-  <text>флешка наемника без имени. Только кличка"Первый" и странный код.</text>
-</string>
-<string id="first_flash_name">
-  <text>флешка "Первого".</text>
-</string>
-<string id="second_flash_desc">
-  <text>флешка наемника без имени. Только кличка"Второй" и странный код.</text>
-</string>
-<string id="second_flash_name">
-  <text>флешка "Второго".</text>
-</string>
+
 <string id="levsha_decoder_desc">
   <text>Нечто вроде мощной электронной отмычки. Похоже, что она создавалась с целью взломать какой-то специфический электронный замок.</text>
 </string>

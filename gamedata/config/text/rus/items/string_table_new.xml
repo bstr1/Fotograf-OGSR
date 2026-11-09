@@ -1,21 +1,3 @@
-<string id="aes_case1_desc">
-  <text>Обычный металлический несгораемый кейс №1. По видимому, в нём ценные документы.</text>
-</string>
-<string id="aes_case1_name">
-  <text>Обычный металлический кейс.</text>
-</string>
-<string id="aes_case2_desc">
-  <text>Обычный металлический несгораемый кейс №2. По видимому, в нём ценные документы.</text>
-</string>
-<string id="aes_case2_name">
-  <text>Обычный металлический кейс.</text>
-</string>
-<string id="aes_case3_desc">
-  <text>Обычный металлический несгораемый кейс №3. По видимому, в нём ценные документы.</text>
-</string>
-<string id="aes_case3_name">
-  <text>Обычный металлический кейс.</text>
-</string>
 <string id="stranger">
   <text>Одиночка</text>
 </string>

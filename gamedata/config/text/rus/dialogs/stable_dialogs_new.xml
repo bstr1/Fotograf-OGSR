@@ -1,28 +1,3 @@
-<string id="esc_koha_prohod_0">
-  <text>Стоять.</text>
-</string>
-<string id="esc_koha_prohod_1">
-  <text>Здорово.</text>
-</string>
-<string id="esc_koha_prohod_2">
-  <text>Слышь, мужик, эта территория наша и пройти бесплатно не удастся.</text>
-</string>
-<string id="esc_koha_prohod_3">
-  <text>Сколько?</text>
-</string>
-<string id="esc_koha_prohod_4">
-  <text>2000 за разовый проход через нашу территорию.</text>
-</string>
-<string id="esc_koha_prohod_5">
-  <text>Чёрт, чековую книжку дома забыл.</text>
-</string>
-<string id="esc_koha_prohod_6">
-  <text>Держи.</text>
-</string>
-<string id="esc_koha_prohod_7">
-  <text>Вот, сразу видно, деловой человек. Когда обратно, на выход пойдёшь, или снова к нам зайти захочешь, ко мне подойти не забудь! А я уж скажу, надо тебе ещё платить или нет. Тут Князь главный. Как он cкажет, так и будет. А пока, без баблосов даже и не суйся!</text>
-</string>
-
 <string id="informator_buy_0">
   <text>Привет.</text>
 </string>

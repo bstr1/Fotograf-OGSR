@@ -223,10 +223,7 @@
     <specific_character>val_escort_captive</specific_character>
 </character>
 
-<!-- Monolit -->
-<character id="val_monolith_regular">
-    <class>val_monolith_regular</class>
-</character>
+
 
 <!-- Soldier  -->
 <character id="val_soldier_regular">
@@ -668,9 +665,7 @@
 <character id="bar_dolg_leader">
     <class>bar_dolg_leader</class>
 </character>
-<character id="bar_dolg_petrenko">
-    <class>bar_dolg_petrenko</class>
-</character>
+
 <character id="bar_dolg_ivancov">
     <class>bar_dolg_ivancov</class>
 </character>
@@ -783,10 +778,6 @@
     <specific_character>yan_ecolog_vasilyev</specific_character>
 </character>
 
-<character id="yan_ghost">
-    <class>yan_ghost</class>
-    <specific_character>yan_ghost</specific_character>
-</character>
 <!-- Military -->
 <character id="mil_Svoboda_specnaz">
     <class>mil_Svoboda_specnaz</class>
@@ -1809,7 +1800,3 @@ STALKERS-->
     <class>sim_test_114</class>
 </character>
 
-<character id="gar_stalker_flame_quest">
-    <class>gar_stalker_flame_quest</class>
-    <specific_character>gar_stalker_flame_quest</specific_character>
-</character>
