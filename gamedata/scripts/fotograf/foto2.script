@@ -1929,6 +1929,8 @@ function mg_zasada_change()
     alife():create("m_controller_senator1", vector():set(4.255, 15.626, 80.718), 300134, 1362)
     alife():create("m_controller_senator2", vector():set(2.255, 15.626, 81.105), 298712, 1362)
     power_off()
+	alife():create("wpn_pkm_zulus", vector():set(4.26, 15.62, 83.04), 300140, 1362)
+	
 end
 
 function set_mg_zasada()

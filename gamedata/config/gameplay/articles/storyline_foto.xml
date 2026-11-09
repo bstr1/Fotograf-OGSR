@@ -63,42 +63,42 @@
 </article>
 
 <article article_type="journal" group="Фотографии" id="foto_03" name="Фотография №3">
-    <texture x="0" y="0" width="450" height="350">ui\ui_foto_03</texture>
+    <texture x="0" y="0" width="800" height="600">ui\foto\ui_foto_03</texture>
     <text>Фотоснимок заброшенного АТП на территории Промзоны.</text>
 </article>
 
 <article article_type="journal" group="Фотографии" id="foto_04" name="Фотография №4">
-    <texture x="0" y="0" width="450" height="350">ui\ui_foto_04</texture>
+    <texture x="0" y="0" width="800" height="600">ui\foto\ui_foto_04</texture>
     <text>Фотоснимок ж/д тоннеля на территории Промзоны.</text>
 </article>
 
 <article article_type="journal" group="Фотографии" id="foto_05" name="Фотография №5">
-    <texture x="0" y="0" width="450" height="350">ui\ui_foto_05</texture>
+    <texture x="0" y="0" width="800" height="600">ui\foto\ui_foto_05</texture>
     <text>Фотоснимок северной части территории Бара с видом на завод "Росток".</text>
 </article>
 
 <article article_type="journal" group="Фотографии" id="foto_06" name="Фотография №6">
-    <texture x="0" y="0" width="450" height="350">ui\ui_foto_06</texture>
+    <texture x="0" y="0" width="450" height="600">ui\foto\ui_foto_06</texture>
     <text>Фотоснимок центральной части территории Бара.</text>
 </article>
 
 <article article_type="journal" group="Фотографии" id="foto_07" name="Фотография №7">
-    <texture x="0" y="0" width="450" height="350">ui\ui_foto_07</texture>
+    <texture x="0" y="0" width="800" height="600">ui\foto\ui_foto_07</texture>
     <text>Фотоснимок заброшенного хутора на территории Болот. Хутор находится в непосредственной близости от высоковольтной ЛЭП.</text>
 </article>
 
 <article article_type="journal" group="Фотографии" id="foto_08" name="Фотография №8">
-    <texture x="0" y="0" width="450" height="350">ui\ui_foto_08</texture>
+    <texture x="0" y="0" width="800" height="600">ui\foto\ui_foto_08</texture>
     <text>Фотоснимок центральной площади Мёртвого Города, с видом на здание бывшего КООПторга.</text>
 </article>
 
 <article article_type="journal" group="Фотографии" id="foto_09" name="Фотография №9">
-    <texture x="0" y="0" width="450" height="350">ui\ui_foto_09</texture>
+    <texture x="0" y="0" width="800" height="600">ui\foto\ui_foto_09</texture>
     <text>Фотоснимок заброшенной фабрики на территории колхоза "Червоне Дышло".</text>
 </article>
 
 <article article_type="journal" group="Фотографии" id="foto_10" name="Фотография №10">
-    <texture x="0" y="0" width="450" height="350">ui\ui_foto_10</texture>
+    <texture x="0" y="0" width="800" height="600">ui\foto\ui_foto_10</texture>
     <text>Фотоснимок северной трибуны заброшенного стадиона в Припяти.</text>
 </article>
 
