@@ -4,10 +4,10 @@ class                           = II_ATTCH
 
 visual                          = Equipments\item_guitar.ogf
 cost                            = 500
-description                     = "Старая шестиструнная гитара."
+description                     = guitar_a_description
 
-inv_name                        = Гитара
-inv_name_short                  = Гитара
+inv_name                        = guitar_a_inv_name
+inv_name_short                  = guitar_a_inv_name
 inv_weight                      = 1.5
 
 inv_grid_width                  = 2
@@ -26,10 +26,10 @@ class                           = II_ATTCH
 
 visual                          = Equipments\item_harmonica.ogf
 cost                            = 350
-description                     = "Старая губная гармошка."
+description                     = harmonica_a_description
 
-inv_name                        = "Губная гармошка"
-inv_name_short                  = "Губная гармошка"
+inv_name                        = harmonica_a_inv_name
+inv_name_short                  = harmonica_a_inv_name
 inv_weight                      = 0.35
 
 inv_grid_width                  = 1
@@ -70,13 +70,13 @@ class                           = D_PDA
 cform                           = skeleton
 
 visual                          = equipments\item_pda.ogf
-description                     = enc_equipment_devic_device-pda1
+description                     = device_pda_description
 radius                          = 50
 slot                            = 7
 cost                            = 20
 
-inv_name                        = PDA
-inv_name_short                  = PDA
+inv_name                        = device_pda_inv_name
+inv_name_short                  = device_pda_inv_name
 inv_weight                      = 0.3
 
 inv_grid_width                  = 2
@@ -401,7 +401,7 @@ auto_attach                     = false
 class                           = D_SIMDET
 
 visual                          = equipments\item_datchik3.ogf
-description                     = "Детектор, распознающий особые аномальные пси-зоны. Будучи размещённым на поясе и при наличии в инвентаре или на поясе одного или нескольких Талисманов-активаторов, он позволяет распознать особые пси-зоны и 'включить' их аномальную активность, для проведения в них реакции синтеза Талисманов и частей мутантов, с целью получения защитных Оберегов."
+description                     = psy_detector_description
 radius                          = 10
 buzzer_radius                   = 1.5
 noise                           = zone_mosquito_bald       ;detectors\geiger_noise_loop
@@ -411,8 +411,8 @@ ef_detector_type                = 1
 
 quest_item                      = false
 
-inv_name                        = Пси-Детектор
-inv_name_short                  = Пси-Детектор
+inv_name                        = psy_detector_inv_name
+inv_name_short                  = psy_detector_inv_name
 inv_weight                      = 0.5
 
 inv_grid_width                  = 1
@@ -432,7 +432,7 @@ $prefetch                       = 32
 class                           = D_SIMDET
 cform                           = skeleton
 visual                          = equipments\item_datchik3.ogf
-description                     = "Передатчик системы 'HELPER'. Работает в комплексе с приёмником."
+description                     = filin_pribor_description
 radius                          = 10    ;15
 buzzer_radius                   = 1.5
 noise                           = zone_mosquito_bald       ;detectors\geiger_noise_loop
@@ -442,8 +442,8 @@ ef_detector_type                = 1
 
 quest_item                      = false
 
-inv_name                        = Передатчик
-inv_name_short                  = Передатчик
+inv_name                        = filin_pribor_inv_name
+inv_name_short                  = filin_pribor_inv_name
 inv_weight                      = 0.25
 
 inv_grid_width                  = 1
@@ -461,7 +461,7 @@ $prefetch                       = 32
 class                           = D_SIMDET
 cform                           = skeleton
 visual                          = equipments\item_datchik3.ogf
-description                     = "Прибор-кодировщик для электронных кодовых замков."
+description                     = coder_x18_description
 radius                          = 10    ;15
 buzzer_radius                   = 1.5
 noise                           = zone_mosquito_bald       ;detectors\geiger_noise_loop
@@ -471,8 +471,8 @@ ef_detector_type                = 1
 
 quest_item                      = false
 
-inv_name                        = Кодировщик
-inv_name_short                  = Кодировщик
+inv_name                        = coder_x18_inv_name
+inv_name_short                  = coder_x18_inv_name
 inv_weight                      = 0.32
 
 inv_grid_width                  = 1
@@ -561,9 +561,9 @@ cform                           = skeleton
 
 visual                          = equipments\box_remont.ogf
 radius                          = 1
-description                     = "Универсальный ремонтный набор с био-электронным сканированием уровня повреждений. Предназначен для ремонта любого вида стрелкового оружия. Восстанавливает 100% повреждений. Создан в секретной военной лаборатории Миротворцев. Принцип работы построен на аномальных свойствах одного вида кристаллов. Для активации ремкомплекта необходимо наличие в инвентаре одного такого кристалла. После каждой процедуры ремонта оружия, кристалл испаряется, передав все свои аномальные свойства для активации био-электронного сканера."
-inv_name                        = "Ремкомплект"
-inv_name_short                  = "Ремкомплект"
+description                     = repair_kit_description
+inv_name                        = repair_kit_inv_name
+inv_name_short                  = repair_kit_inv_name
 inv_weight                      = 10
 
 inv_grid_width                  = 2   
@@ -587,9 +587,9 @@ class                           = II_EXPLO
 cform                           = skeleton
 
 visual                          = weapons\grenade\wpn_mines_1.ogf
-inv_name                        = "Бомба"
-inv_name_short                  = "Бомба"
-description                     = "Бомба с часовым механизмом. Таймер работает 10 секунд. Бомба мощная - берегитесь осколков."
+inv_name                        = bomba_inv_name
+inv_name_short                  = bomba_inv_name
+description                     = bomba_description
 
 inv_weight                      = 10.0
 
@@ -657,10 +657,10 @@ cform                           = skeleton
 
 visual                          = equipments\item_datchik4.ogf
 radius                          = 1
-description                     = "Пульт дистационного управления бомбой. Установка таймера производится через меню."
+description                     = dist_pult_description
 
-inv_name                        = "дистанционный пульт"
-inv_name_short                  = "дистанционный пульт"
+inv_name                        = dist_pult_inv_name
+inv_name_short                  = dist_pult_inv_name
 inv_weight                      = 0.2
 
 inv_grid_width                  = 1   
@@ -682,10 +682,10 @@ animation_slot                  = 4
 [dolg_mafon]:identity_immunities
 class                           = O_PHYS_S
 visual                          = equipments\mafon
-description                     = "Магнитофон"
+description                     = dolg_mafon_description
 
-inv_name                        = Магнитофон
-inv_name_short                  = Магнитофон
+inv_name                        = dolg_mafon_inv_name
+inv_name_short                  = dolg_mafon_inv_name
 inv_weight                      = 1
 
 inv_grid_width                  = 0 
@@ -702,9 +702,9 @@ custom_data                     = scripts\dolg_music.ltx
 class                           = O_PHYS_S
 visual                          = equipments\mafon
 
-description                     = "Магнитофон"
-inv_name                        = Магнитофон
-inv_name_short                  = Магнитофон
+description                     = osvedom_mafon_description
+inv_name                        = osvedom_mafon_inv_name
+inv_name_short                  = osvedom_mafon_inv_name
 inv_weight                      = 1
 
 inv_grid_width                  = 0 
@@ -721,9 +721,9 @@ custom_data                     = scripts\osvedom_music.ltx
 class                           = O_PHYS_S
 visual                          = equipments\mafon
 
-description                     = "Магнитофон"
-inv_name                        = Магнитофон
-inv_name_short                  = Магнитофон
+description                     = brown_mafon_description
+inv_name                        = brown_mafon_inv_name
+inv_name_short                  = brown_mafon_inv_name
 inv_weight                      = 1
 
 inv_grid_width                  = 0 
@@ -740,9 +740,9 @@ custom_data                     = scripts\brown_music.ltx
 class                           = O_PHYS_S
 visual                          = equipments\mafon
 
-description                     = "Магнитофон"
-inv_name                        = Магнитофон
-inv_name_short                  = Магнитофон
+description                     = maloy_mafon_description
+inv_name                        = maloy_mafon_inv_name
+inv_name_short                  = maloy_mafon_inv_name
 inv_weight                      = 1
 
 inv_grid_width                  = 0 
@@ -759,9 +759,9 @@ custom_data                     = scripts\maloy_music.ltx
 class                           = O_PHYS_S
 visual                          = items\kassetnik
 
-description                     = "Магнитофон"
-inv_name                        = Магнитофон
-inv_name_short                  = Магнитофон
+description                     = hunter_mafon_description
+inv_name                        = hunter_mafon_inv_name
+inv_name_short                  = hunter_mafon_inv_name
 inv_weight                      = 1
 
 inv_grid_width                  = 0 
@@ -778,9 +778,9 @@ custom_data                     = scripts\hunter_music.ltx
 class                           = O_PHYS_S
 visual                          = items\kassetnik
 
-description                     = "Магнитофон"
-inv_name                        = Магнитофон
-inv_name_short                  = Магнитофон
+description                     = lesnik_mafon_description
+inv_name                        = lesnik_mafon_inv_name
+inv_name_short                  = lesnik_mafon_inv_name
 inv_weight                      = 1
 
 inv_grid_width                  = 0 
@@ -797,9 +797,9 @@ custom_data                     = scripts\lesnik_music.ltx
 class                           = O_PHYS_S
 visual                          = equipments\mafon
 
-description                     = "Магнитофон"
-inv_name                        = Магнитофон
-inv_name_short                  = Магнитофон
+description                     = koldun_mafon_description
+inv_name                        = koldun_mafon_inv_name
+inv_name_short                  = koldun_mafon_inv_name
 inv_weight                      = 1
 
 inv_grid_width                  = 0 
@@ -816,9 +816,9 @@ custom_data                     = scripts\koldun_music.ltx
 class                           = O_PHYS_S
 visual                          = equipments\mafon
 
-description                     = "Магнитофон"
-inv_name                        = Магнитофон
-inv_name_short                  = Магнитофон
+description                     = tankist_mafon_description
+inv_name                        = tankist_mafon_inv_name
+inv_name_short                  = tankist_mafon_inv_name
 inv_weight                      = 1
 
 inv_grid_width                  = 0 
@@ -835,9 +835,9 @@ custom_data                     = scripts\tankist_music.ltx
 class                           = O_PHYS_S
 visual                          = equipments\mafon
 
-description                     = "Магнитофон"
-inv_name                        = Магнитофон
-inv_name_short                  = Магнитофон
+description                     = edik_mafon_description
+inv_name                        = edik_mafon_inv_name
+inv_name_short                  = edik_mafon_inv_name
 inv_weight                      = 1
 
 inv_grid_width                  = 0 
@@ -854,9 +854,9 @@ custom_data                     = scripts\edik_music.ltx
 class                           = O_PHYS_S
 visual                          = equipments\mafon
 
-description                     = "Магнитофон"
-inv_name                        = Магнитофон
-inv_name_short                  = Магнитофон
+description                     = german_mafon_description
+inv_name                        = german_mafon_inv_name
+inv_name_short                  = german_mafon_inv_name
 inv_weight                      = 1
 
 inv_grid_width                  = 0 
@@ -873,9 +873,9 @@ custom_data                     = scripts\nebo_music.ltx
 class                           = O_PHYS_S
 visual                          = equipments\mafon
 
-description                     = "Магнитофон"
-inv_name                        = Магнитофон
-inv_name_short                  = Магнитофон
+description                     = x18_mafon_description
+inv_name                        = x18_mafon_inv_name
+inv_name_short                  = x18_mafon_inv_name
 inv_weight                      = 1
 
 inv_grid_width                  = 0 
@@ -897,9 +897,9 @@ radius                          = 1
 quest_item                      = true
 cost                            = 1000
 
-description                     = "Деньги, отобранные у Стрелка при ограблении."
-inv_name                        = Деньги
-inv_name_short                  = Деньги
+description                     = money_gg_description
+inv_name                        = money_gg_inv_name
+inv_name_short                  = money_gg_inv_name
 inv_weight                      = 0.1
 
 inv_grid_width                  = 1
@@ -917,9 +917,9 @@ radius                          = 1
 quest_item                      = true
 cost                            = 1000
 
-description                     = "Деньги, отобранные у Стрелка при ограблении."
-inv_name                        = Деньги
-inv_name_short                  = Деньги
+description                     = money_ggg_description
+inv_name                        = money_ggg_inv_name
+inv_name_short                  = money_ggg_inv_name
 inv_weight                      = 0.1
 
 inv_grid_width                  = 1
@@ -937,9 +937,9 @@ radius                          = 1
 quest_item                      = true
 cost                            = 1000
 
-description                     = "Деньги, отобранные у Стрелка при ограблении."
-inv_name                        = Деньги
-inv_name_short                  = Деньги
+description                     = money_gggg_description
+inv_name                        = money_gggg_inv_name
+inv_name_short                  = money_gggg_inv_name
 inv_weight                      = 0.1
 
 inv_grid_width                  = 1
@@ -957,9 +957,9 @@ radius                          = 1
 quest_item                      = true
 cost                            = 1000
 
-description                     = "Деньги, отобранные у Стрелка при ограблении."
-inv_name                        = Деньги
-inv_name_short                  = Деньги
+description                     = money_ggggg_description
+inv_name                        = money_ggggg_inv_name
+inv_name_short                  = money_ggggg_inv_name
 inv_weight                      = 0.1
 
 inv_grid_width                  = 1
@@ -977,9 +977,9 @@ radius                          = 1
 quest_item                      = true
 cost                            = 2000
 
-description                     = "Небольшая пачка денег мелкими купюрами. Около двух тысяч рублей."
-inv_name                        = Деньги
-inv_name_short                  = Деньги
+description                     = money2_description
+inv_name                        = money2_inv_name
+inv_name_short                  = money2_inv_name
 inv_weight                      = 0.1
 
 inv_grid_width                  = 1
@@ -997,9 +997,9 @@ radius                          = 1
 quest_item                      = true
 cost                            = 5000
 
-description                     = "Пачка денег. Пять тысяч рублей."
-inv_name                        = Деньги
-inv_name_short                  = Деньги
+description                     = money5_description
+inv_name                        = money5_inv_name
+inv_name_short                  = money5_inv_name
 inv_weight                      = 0.1
 
 inv_grid_width                  = 1
@@ -1017,9 +1017,9 @@ radius                          = 1
 quest_item                      = true
 cost                            = 10000
 
-description                     = "Пачка денег. Десять тысяч рублей."
-inv_name                        = Деньги
-inv_name_short                  = Деньги
+description                     = money10_description
+inv_name                        = money10_inv_name
+inv_name_short                  = money10_inv_name
 inv_weight                      = 0.1
 
 inv_grid_width                  = 1
@@ -1037,9 +1037,9 @@ radius                          = 1
 quest_item                      = true
 cost                            = 25000
 
-description                     = "Пачка денег. Двадцать пять тысяч рублей."
-inv_name                        = Деньги
-inv_name_short                  = Деньги
+description                     = money25_description
+inv_name                        = money25_inv_name
+inv_name_short                  = money25_inv_name
 inv_weight                      = 0.1
 
 inv_grid_width                  = 1
@@ -1057,9 +1057,9 @@ radius                          = 1
 quest_item                      = true
 cost                            = 20000
 
-description                     = "Пачка денег. Двадцать тысяч рублей."
-inv_name                        = Деньги
-inv_name_short                  = Деньги
+description                     = money20_description
+inv_name                        = money20_inv_name
+inv_name_short                  = money20_inv_name
 inv_weight                      = 0.1
 
 inv_grid_width                  = 1
@@ -1077,9 +1077,9 @@ radius                          = 1
 quest_item                      = true
 cost                            = 50000
 
-description                     = "Пачка денег. Пятьдесят тысяч рублей."
-inv_name                        = Деньги
-inv_name_short                  = Деньги
+description                     = money50_description
+inv_name                        = money50_inv_name
+inv_name_short                  = money50_inv_name
 inv_weight                      = 0.1
 
 inv_grid_width                  = 1
@@ -1097,9 +1097,9 @@ radius                          = 1
 quest_item                      = true
 cost                            = 30000
 
-description                     = "Пачка денег. Тридцать тысяч рублей."
-inv_name                        = Деньги
-inv_name_short                  = Деньги
+description                     = money30_description
+inv_name                        = money30_inv_name
+inv_name_short                  = money30_inv_name
 inv_weight                      = 0.1
 
 inv_grid_width                  = 1
@@ -1117,9 +1117,9 @@ radius                          = 1
 quest_item                      = true
 cost                            = 15000
 
-description                     = "Пачка денег. Пятнадцать тысяч рублей."
-inv_name                        = Деньги
-inv_name_short                  = Деньги
+description                     = money15_description
+inv_name                        = money15_inv_name
+inv_name_short                  = money15_inv_name
 inv_weight                      = 0.1
 
 inv_grid_width                  = 1
@@ -1137,9 +1137,9 @@ radius                          = 1
 quest_item                      = false
 cost                            = 40300
 
-description                     = "Пачка 1000 Евро."
-inv_name                        = "Пачка Евро"
-inv_name_short                  = "Пачка Евро"
+description                     = euro_description
+inv_name                        = euro_inv_name
+inv_name_short                  = euro_inv_name
 inv_weight                      = 0.1
 
 inv_grid_width                  = 1
@@ -1157,9 +1157,9 @@ radius                          = 1
 quest_item                      = false
 cost                            = 31200
 
-description                     = "Пачка 1500 долларов."
-inv_name                        = "Пачка долларов"
-inv_name_short                  = "Пачка долларов"
+description                     = dollar_description
+inv_name                        = dollar_inv_name
+inv_name_short                  = dollar_inv_name
 inv_weight                      = 0.1
 
 inv_grid_width                  = 1

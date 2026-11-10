@@ -1,0 +1,1936 @@
+<string id="anom_research_task">
+    <text>Исследовать аномалии</text>
+</string>
+
+<string id="anom_research_obj_01">
+    <text>Исследовать аномалии</text>
+</string>
+
+<string id="anom_research_obj_02">
+    <text>Исследовать аномалию «Жарка»</text>
+</string>
+
+<string id="anom_research_obj_03">
+    <text>Исследовать аномалию «Ведьмин студень»</text>
+</string>
+
+<string id="anom_research_obj_04">
+    <text>Исследовать аномалию «Студень»</text>
+</string>
+
+<string id="anom_research_obj_05">
+    <text>Исследовать аномалию «Карусель»</text>
+</string>
+
+<string id="anom_research_obj_06">
+    <text>Исследовать аномалию «Трамплин»</text>
+</string>
+
+<string id="anom_research_obj_07">
+    <text>Исследовать аномалию «Снежка»</text>
+</string>
+
+<string id="anom_research_obj_08">
+    <text>Исследовать аномалию «Воронка»</text>
+</string>
+
+<string id="anom_research_obj_09">
+    <text>Вернуться к Круглову</text>
+</string>
+
+
+<string id="agent_mk_task">
+    <text>Найти и обезвредить агента</text>
+</string>
+
+<string id="agent_mk_obj_01">
+    <text>Найти и обезвредить агента</text>
+</string>
+
+<string id="agent_mk_obj_02">
+    <text>Выяснить время и место прохода в Зону группы наёмников</text>
+</string>
+
+<string id="agent_mk_obj_03">
+    <text>Обнаружить тайную тропу, по которой наёмникам удаётся обходить все посты и кордоны</text>
+</string>
+
+<string id="agent_mk_obj_04">
+    <text>Обезвредить агента и забрать его ПДА</text>
+</string>
+
+<string id="agent_mk_obj_05">
+    <text>Вернуться к полковнику Брауну</text>
+</string>
+
+
+<string id="agro_und_zadan_task">
+    <text>Выполнить задание в подземельях НИИ Агропром</text>
+</string>
+
+<string id="agro_und_zadan_obj_01">
+    <text>Выполнить задание в подземельях НИИ Агропром</text>
+</string>
+
+<string id="agro_und_zadan_obj_02">
+    <text>Узнать у майора Шпака на Болотах где находится вход в подземелья НИИ</text>
+</string>
+
+<string id="agro_und_zadan_obj_03">
+    <text>Проникнуть в подземелья НИИ Агропром</text>
+</string>
+
+<string id="agro_und_zadan_obj_04">
+    <text>Найти и забрать у мародёров цифровой носитель информации и вакцину</text>
+</string>
+
+<string id="agro_und_zadan_obj_05">
+    <text>Вернуться к полковнику Брауну</text>
+</string>
+
+
+<string id="archiv_pismo_task">
+    <text>Найти пропавшие письма Минчукова</text>
+</string>
+
+<string id="archiv_pismo_obj_01">
+    <text>Принести Минчукову его переписку с Гретой</text>
+</string>
+
+<string id="archiv_pismo_obj_02">
+    <text>Найти человека, который последним видел письма</text>
+</string>
+
+<string id="archiv_pismo_obj_03">
+    <text>Разыскать потерявшиеся письма</text>
+</string>
+
+<string id="archiv_pismo_obj_04">
+    <text>Вернуться в архив</text>
+</string>
+
+
+<string id="artefact_task">
+    <text>title</text>
+</string>
+
+<string id="artefact_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="artefact_barman_task">
+    <text>title</text>
+</string>
+
+<string id="artefact_barman_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="artefact_dolg_task">
+    <text>title</text>
+</string>
+
+<string id="artefact_dolg_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="artefact_ecolog_task">
+    <text>title</text>
+</string>
+
+<string id="artefact_ecolog_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="artefact_freedom_task">
+    <text>title</text>
+</string>
+
+<string id="artefact_freedom_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="artefact_nebo_task">
+    <text>title</text>
+</string>
+
+<string id="artefact_nebo_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="artefact_trader_task">
+    <text>title</text>
+</string>
+
+<string id="artefact_trader_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="borya_antirad_task">
+    <text>Раздобыть 10 антирадов</text>
+</string>
+
+<string id="borya_antirad_obj_01">
+    <text>Раздобыть 10 антирадов</text>
+</string>
+
+<string id="borya_antirad_obj_02">
+    <text>Раздобыть десять антирадов для Бори Серова</text>
+</string>
+
+<string id="borya_antirad_obj_03">
+    <text>Принести антирады Боре</text>
+</string>
+
+
+<string id="brityi_sidor_task">
+    <text>Встретиться с Сидоровичем</text>
+</string>
+
+<string id="brityi_sidor_obj_01">
+    <text>Встретиться с Сидоровичем</text>
+</string>
+
+<string id="brityi_sidor_obj_02">
+    <text>Встретиться с Сидоровичем</text>
+</string>
+
+
+<string id="brom_likvidator_task">
+    <text>Найти артефакт Ликвидатор</text>
+</string>
+
+<string id="brom_likvidator_obj_01">
+    <text>Найти артефакт Ликвидатор</text>
+</string>
+
+<string id="brom_likvidator_obj_02">
+    <text>Отыскать в Мёртвом Городе красную палатку и обыскать её</text>
+</string>
+
+<string id="brom_likvidator_obj_03">
+    <text>Принести Ликвидатор Аномалий Брому</text>
+</string>
+
+
+<string id="brown_accompaniment_task">
+    <text>Помочь Брауну выбраться из подземелий</text>
+</string>
+
+<string id="brown_accompaniment_obj_01">
+    <text>Помочь Брауну выбраться из подземелий</text>
+</string>
+
+<string id="brown_accompaniment_obj_02">
+    <text>Сопроводить Брауна из Х-10 на Испытательный Полигон</text>
+</string>
+
+<string id="brown_accompaniment_obj_03">
+    <text>Поговорить с Брауном</text>
+</string>
+
+
+<string id="brown_x10_task">
+    <text>Выяснить, что случилось с группой Брауна</text>
+</string>
+
+<string id="brown_x10_obj_01">
+    <text>Выяснить, что случилось с группой Брауна</text>
+</string>
+
+<string id="brown_x10_obj_02">
+    <text>Выяснить, что случилось с группой Брауна в подземельях</text>
+</string>
+
+
+<string id="check_podzemka_task">
+    <text>Исследовать переходы между подземными лабораториями</text>
+</string>
+
+<string id="check_podzemka_obj_01">
+    <text>Исследовать переходы между подземными лабораториями</text>
+</string>
+
+<string id="check_podzemka_obj_02">
+    <text>Найти переход из подземелий НИИ в лабораторию Х-16</text>
+</string>
+
+<string id="check_podzemka_obj_03">
+    <text>Найти переход в колхоз Червоне Дышло</text>
+</string>
+
+<string id="check_podzemka_obj_04">
+    <text>Найти переход в лабораторию Х-10</text>
+</string>
+
+<string id="check_podzemka_obj_05">
+    <text>Найти переход в лабораторию Х-18</text>
+</string>
+
+<string id="check_podzemka_obj_06">
+    <text>Найти цифровой код к закодированной двери</text>
+</string>
+
+<string id="check_podzemka_obj_07">
+    <text>Раскодировать дверь</text>
+</string>
+
+<string id="check_podzemka_obj_08">
+    <text>Вернуться к полковнику Брауну</text>
+</string>
+
+
+<string id="codes_taynik_task">
+    <text>Найти тайник с кодами</text>
+</string>
+
+<string id="codes_taynik_obj_01">
+    <text>Найти тайник с кодами</text>
+</string>
+
+<string id="codes_taynik_obj_02">
+    <text>Найти в Припяти тайник с кодами к дверям в Пещере</text>
+</string>
+
+
+<string id="defend_lager_task">
+    <text>title</text>
+</string>
+
+<string id="defend_lager_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="defend_lager_barman_task">
+    <text>title</text>
+</string>
+
+<string id="defend_lager_barman_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="defend_lager_dolg_task">
+    <text>title</text>
+</string>
+
+<string id="defend_lager_dolg_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="defend_lager_ecolog_task">
+    <text>title</text>
+</string>
+
+<string id="defend_lager_ecolog_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="defend_lager_freedom_task">
+    <text>title</text>
+</string>
+
+<string id="defend_lager_freedom_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="defend_lager_nebo_task">
+    <text>title</text>
+</string>
+
+<string id="defend_lager_nebo_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="defend_lager_trader_task">
+    <text>title</text>
+</string>
+
+<string id="defend_lager_trader_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="dezertir_car_task">
+    <text>Пригнать вездеход дезертиров</text>
+</string>
+
+<string id="dezertir_car_obj_01">
+    <text>Пригнать вездеход дезертиров</text>
+</string>
+
+<string id="dezertir_car_obj_02">
+    <text>Пригнать вездеход дезертиров на территорию ангара</text>
+</string>
+
+<string id="dezertir_car_obj_03">
+    <text>Доложить Шурупу о выполнении</text>
+</string>
+
+
+<string id="doctor_govorit_task">
+    <text>Встретиться с Доктором</text>
+</string>
+
+<string id="doctor_govorit_obj_01">
+    <text>Встретиться с Доктором</text>
+</string>
+
+<string id="doctor_govorit_obj_02">
+    <text>Встретиться с Доктором</text>
+</string>
+
+
+<string id="doctor_zapiska_task">
+    <text>Передать Сахарову записку от Доктора</text>
+</string>
+
+<string id="doctor_zapiska_obj_01">
+    <text>Передать Сахарову записку от Доктора</text>
+</string>
+
+<string id="doctor_zapiska_obj_02">
+    <text>Передать Сахарову записку от Доктора</text>
+</string>
+
+
+<string id="dron_plasch_task">
+    <text>Раздобыть для Дрона кожаный плащ</text>
+</string>
+
+<string id="dron_plasch_obj_01">
+    <text>Раздобыть для Дрона кожаный плащ</text>
+</string>
+
+<string id="dron_plasch_obj_02">
+    <text>Раздобыть для Дрона в деревне братков кожаный плащ</text>
+</string>
+
+<string id="dron_plasch_obj_03">
+    <text>Принести плащ Дрону</text>
+</string>
+
+
+<string id="drozdov_vstrecha_task">
+    <text>Провести усовершенствование фотокамеры</text>
+</string>
+
+<string id="drozdov_vstrecha_obj_01">
+    <text>Провести усовершенствование фотокамеры</text>
+</string>
+
+<string id="drozdov_vstrecha_obj_02">
+    <text>Поговорить с учёным Дроздовым</text>
+</string>
+
+<string id="drozdov_vstrecha_obj_03">
+    <text>Модернизировать фотокамеру</text>
+</string>
+
+<string id="drozdov_vstrecha_obj_04">
+    <text>Вернуться к генералу Смиту</text>
+</string>
+
+
+<string id="dunya_mutant_task">
+    <text>Биологические образцы</text>
+</string>
+
+<string id="dunya_mutant_obj_01">
+    <text>Собрать части мутантов</text>
+</string>
+
+<string id="dunya_mutant_obj_02">
+    <text>Собрать части мутантов</text>
+</string>
+
+<string id="dunya_mutant_obj_03">
+    <text>Вернуться к Дульсинее</text>
+</string>
+
+
+<string id="dunya_sweets_task">
+    <text>Леденцы для дамы</text>
+</string>
+
+<string id="dunya_sweets_obj_01">
+    <text>Раздобыть монпансье</text>
+</string>
+
+<string id="dunya_sweets_obj_02">
+    <text>Раздобыть монпансье</text>
+</string>
+
+<string id="dunya_sweets_obj_03">
+    <text>Принести конфеты даме</text>
+</string>
+
+
+<string id="dyshlo_attak_task">
+    <text>Занять фабрику в "Червоне Дышло"</text>
+</string>
+
+<string id="dyshlo_attak_obj_01">
+    <text>Занять фабрику в "Червоне Дышло"</text>
+</string>
+
+<string id="dyshlo_attak_obj_02">
+    <text>Встретиться с сержантом Пличко в колхозе "Червоне Дышло"</text>
+</string>
+
+<string id="dyshlo_attak_obj_03">
+    <text>Помочь захватить заброшенную фабрику</text>
+</string>
+
+<string id="dyshlo_attak_obj_04">
+    <text>Поговорить с сержантом Пличко</text>
+</string>
+
+
+<string id="dyshlo_glavar_task">
+    <text>Найти ПДА с информацией</text>
+</string>
+
+<string id="dyshlo_glavar_obj_01">
+    <text>Найти ПДА с информацией</text>
+</string>
+
+<string id="dyshlo_glavar_obj_02">
+    <text>Отыскать главаря наёмников и забрать его ПДА</text>
+</string>
+
+<string id="dyshlo_glavar_obj_03">
+    <text>Отдать ПДА главаря генералу Воронину</text>
+</string>
+
+
+<string id="edik_aptechki_task">
+    <text>Раздобыть три армейские аптечки</text>
+</string>
+
+<string id="edik_aptechki_obj_01">
+    <text>Раздобыть три армейские аптечки</text>
+</string>
+
+<string id="edik_aptechki_obj_02">
+    <text>Раздобыть три армейские аптечки для Эдика</text>
+</string>
+
+<string id="edik_aptechki_obj_03">
+    <text>Принести три армейские аптечки Эдику</text>
+</string>
+
+
+<string id="eliminate_lager_task">
+    <text>title</text>
+</string>
+
+<string id="eliminate_lager_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="eliminate_lager_barman_task">
+    <text>title</text>
+</string>
+
+<string id="eliminate_lager_barman_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="eliminate_lager_dolg_task">
+    <text>title</text>
+</string>
+
+<string id="eliminate_lager_dolg_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="eliminate_lager_ecolog_task">
+    <text>title</text>
+</string>
+
+<string id="eliminate_lager_ecolog_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="eliminate_lager_freedom_task">
+    <text>title</text>
+</string>
+
+<string id="eliminate_lager_freedom_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="eliminate_lager_nebo_task">
+    <text>title</text>
+</string>
+
+<string id="eliminate_lager_nebo_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="eliminate_lager_trader_task">
+    <text>title</text>
+</string>
+
+<string id="eliminate_lager_trader_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="filin_helper_task">
+    <text>Принести прибор-приёмник и передатчик Филину</text>
+</string>
+
+<string id="filin_helper_obj_01">
+    <text>Принести прибор-приёмник и передатчик Филину</text>
+</string>
+
+<string id="filin_helper_obj_02">
+    <text>Найти Джаггера и забрать у него передатчик</text>
+</string>
+
+<string id="filin_helper_obj_03">
+    <text>Отыскать в Лесу прибор-приёмник</text>
+</string>
+
+<string id="filin_helper_obj_04">
+    <text>Вернуться к Филину</text>
+</string>
+
+
+<string id="filin_vino_task">
+    <text>Раздобыть две бутылки вина для Филина</text>
+</string>
+
+<string id="filin_vino_obj_01">
+    <text>Раздобыть две бутылки вина для Филина</text>
+</string>
+
+<string id="filin_vino_obj_02">
+    <text>Отправиться на Болота и раздобыть у учёных вино</text>
+</string>
+
+<string id="filin_vino_obj_03">
+    <text>Принести две бутылки вина Филину</text>
+</string>
+
+
+<string id="find_item_task">
+    <text>title</text>
+</string>
+
+<string id="find_item_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="find_item_barman_task">
+    <text>title</text>
+</string>
+
+<string id="find_item_barman_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="find_item_dolg_task">
+    <text>title</text>
+</string>
+
+<string id="find_item_dolg_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="find_item_ecolog_task">
+    <text>title</text>
+</string>
+
+<string id="find_item_ecolog_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="find_item_freedom_task">
+    <text>title</text>
+</string>
+
+<string id="find_item_freedom_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="find_item_nebo_task">
+    <text>title</text>
+</string>
+
+<string id="find_item_nebo_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="find_item_trader_task">
+    <text>title</text>
+</string>
+
+<string id="find_item_trader_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="flesh_winch_task">
+    <text>Найти винчестер для Шурупа</text>
+</string>
+
+<string id="flesh_winch_obj_01">
+    <text>Найти винчестер для Шурупа</text>
+</string>
+
+<string id="flesh_winch_obj_02">
+    <text>Найти на юго-западе Промзоны мутировавшую свинью и вынуть из неё SPAS-12</text>
+</string>
+
+<string id="flesh_winch_obj_03">
+    <text>Принести дробовик Шурупу</text>
+</string>
+
+
+<string id="flight_island_task">
+    <text>Помочь Сахарову в изучении странной аномалии</text>
+</string>
+
+<string id="flight_island_obj_01">
+    <text>Помочь Сахарову в изучении странной аномалии</text>
+</string>
+
+<string id="flight_island_obj_02">
+    <text>Найти коллегу Сахарова</text>
+</string>
+
+<string id="flight_island_obj_03">
+    <text>Помочь изучить аномалию</text>
+</string>
+
+<string id="flight_island_obj_04">
+    <text>Вернуться к Сахарову за наградой</text>
+</string>
+
+
+<string id="fotik_est_task">
+    <text>Вернуться к генералу Смиту</text>
+</string>
+
+<string id="fotik_est_obj_01">
+    <text>Вернуться к генералу Смиту</text>
+</string>
+
+<string id="fotik_est_obj_02">
+    <text>Вернуться к генералу Смиту</text>
+</string>
+
+
+<string id="foto_poligon_task">
+    <text>Провести разведку на Испытательном Полигоне</text>
+</string>
+
+<string id="foto_poligon_obj_01">
+    <text>Провести разведку на Испытательном Полигоне</text>
+</string>
+
+<string id="foto_poligon_obj_02">
+    <text>Осуществить фотосъёмку украинской военной базы с ключевых точек</text>
+</string>
+
+<string id="foto_poligon_obj_03">
+    <text>Проникнуть на украинскую военную базу и узнать о подземной лаборатории</text>
+</string>
+
+<string id="foto_poligon_obj_04">
+    <text>Вернуться к Брауну</text>
+</string>
+
+
+<string id="german_spasenie_task">
+    <text>Помочь немецким учёным выбраться из Мёртвого Города</text>
+</string>
+
+<string id="german_spasenie_obj_01">
+    <text>Помочь немецким учёным выбраться из Мёртвого Города</text>
+</string>
+
+<string id="german_spasenie_obj_02">
+    <text>Узнать у Сутулого о проводнике</text>
+</string>
+
+<string id="german_spasenie_obj_03">
+    <text>Найти проводника</text>
+</string>
+
+<string id="german_spasenie_obj_04">
+    <text>Добраться до Мёртвого Города</text>
+</string>
+
+<string id="german_spasenie_obj_05">
+    <text>Найти в Мёртвом Городе немецких учёных и спецназ сопровождения</text>
+</string>
+
+<string id="german_spasenie_obj_06">
+    <text>Вывести немецких учёных из города</text>
+</string>
+
+<string id="german_spasenie_obj_07">
+    <text>Встретиться со Связным в Баре</text>
+</string>
+
+
+<string id="glaza_ploti_task">
+    <text>Принести Плоймару пять глаз Плоти</text>
+</string>
+
+<string id="glaza_ploti_obj_01">
+    <text>Принести Плоймару пять глаз Плоти</text>
+</string>
+
+<string id="glaza_ploti_obj_02">
+    <text>Раздобыть для Плоймара пять глаз Плоти</text>
+</string>
+
+<string id="glaza_ploti_obj_03">
+    <text>Вернуться к Плоймару</text>
+</string>
+
+
+<string id="glushak_nayti_task">
+    <text>Раздобыть глушитель для МП-5</text>
+</string>
+
+<string id="glushak_nayti_obj_01">
+    <text>Раздобыть глушитель для МП-5</text>
+</string>
+
+<string id="glushak_nayti_obj_02">
+    <text>Раздобыть глушитель для МП-5 по просьбе братка из магазина</text>
+</string>
+
+<string id="glushak_nayti_obj_03">
+    <text>Отдать глушитель заказчику</text>
+</string>
+
+
+<string id="haron_case_task">
+    <text>Отнести посылку Лукашу</text>
+</string>
+
+<string id="haron_case_obj_01">
+    <text>Отнести посылку лукашу</text>
+</string>
+
+<string id="haron_case_obj_02">
+    <text>Передать Лукашу контейнер от Харона</text>
+</string>
+
+
+<string id="havchik_klad_task">
+    <text>Раздобыть провизию для кладовщика</text>
+</string>
+
+<string id="havchik_klad_obj_01">
+    <text>Раздобыть провизию для кладовщика</text>
+</string>
+
+<string id="havchik_klad_obj_02">
+    <text>Добыть две бутылки водки</text>
+</string>
+
+<string id="havchik_klad_obj_03">
+    <text>Добыть баночку сгущёнки</text>
+</string>
+
+<string id="havchik_klad_obj_04">
+    <text>Добыть маринованные грибы</text>
+</string>
+
+<string id="havchik_klad_obj_05">
+    <text>Добыть банку солёных огурцов</text>
+</string>
+
+<string id="havchik_klad_obj_06">
+    <text>Принести провизию Кладовщику</text>
+</string>
+
+
+<string id="hunter_case_task">
+    <text>Найти контейнер охотника</text>
+</string>
+
+<string id="hunter_case_obj_01">
+    <text>Найти контейнер охотника</text>
+</string>
+
+<string id="hunter_case_obj_02">
+    <text>Найти труп охотника и забрать из его вещей контейнер</text>
+</string>
+
+<string id="hunter_case_obj_03">
+    <text>Принести контейнер охотника Сутулому</text>
+</string>
+
+
+<string id="jagger_vstrecha_task">
+    <text>Встретиться с Джаггером</text>
+</string>
+
+<string id="jagger_vstrecha_obj_01">
+    <text>Встретиться с Джаггером</text>
+</string>
+
+<string id="jagger_vstrecha_obj_02">
+    <text>Встретиться с Джаггером в здании Горкома</text>
+</string>
+
+
+<string id="kaymanovu_doki_task">
+    <text>Добыть Кайманову необходимые документы</text>
+</string>
+
+<string id="kaymanovu_doki_obj_01">
+    <text>Принести Кайманову документы из архива</text>
+</string>
+
+<string id="kaymanovu_doki_obj_02">
+    <text>Найти охранника архива и поговорить с ним</text>
+</string>
+
+<string id="kaymanovu_doki_obj_03">
+    <text>Получить от охранника архива документы для Кайманова</text>
+</string>
+
+<string id="kaymanovu_doki_obj_04">
+    <text>Вернуться к Кайманову с документами</text>
+</string>
+
+
+<string id="kill_stalker_task">
+    <text>title</text>
+</string>
+
+<string id="kill_stalker_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="kill_stalker_barman_task">
+    <text>title</text>
+</string>
+
+<string id="kill_stalker_barman_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="kill_stalker_dolg_task">
+    <text>title</text>
+</string>
+
+<string id="kill_stalker_dolg_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="kill_stalker_ecolog_task">
+    <text>title</text>
+</string>
+
+<string id="kill_stalker_ecolog_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="kill_stalker_freedom_task">
+    <text>title</text>
+</string>
+
+<string id="kill_stalker_freedom_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="kill_stalker_nebo_task">
+    <text>title</text>
+</string>
+
+<string id="kill_stalker_nebo_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="kill_stalker_trader_task">
+    <text>title</text>
+</string>
+
+<string id="kill_stalker_trader_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="lavrov_iskat_task">
+    <text>Разыскать доцента Лаврова</text>
+</string>
+
+<string id="lavrov_iskat_obj_01">
+    <text>Разыскать доцента Лаврова</text>
+</string>
+
+<string id="lavrov_iskat_obj_02">
+    <text>Найти доцента Лаврова или узнать что с ним случилось</text>
+</string>
+
+<string id="lavrov_iskat_obj_03">
+    <text>Зайти к Доктору</text>
+</string>
+
+<string id="lavrov_iskat_obj_04">
+    <text>Вернуться к Сахарову с информацией</text>
+</string>
+
+
+<string id="levsha_crystalls_task">
+    <text>Найти два кристалла № 6 и № 9</text>
+</string>
+
+<string id="levsha_crystalls_obj_01">
+    <text>Найти два кристалла</text>
+</string>
+
+<string id="levsha_crystalls_obj_02">
+    <text>Найти два кристалла № 6 и № 9 для модернизации фотокамеры</text>
+</string>
+
+<string id="levsha_crystalls_obj_03">
+    <text>Принести два кристалла Левше</text>
+</string>
+
+
+<string id="levsha_vstrecha_task">
+    <text>Поговорить с Левшой</text>
+</string>
+
+<string id="levsha_vstrecha_obj_01">
+    <text>Поговорить с Левшой</text>
+</string>
+
+<string id="levsha_vstrecha_obj_02">
+    <text>Поговорить с Левшой</text>
+</string>
+
+
+<string id="levsha_zahvat_bar_task">
+    <text>Захватить Бар</text>
+</string>
+
+<string id="levsha_zahvat_bar_obj_01">
+    <text>Захватить Бар</text>
+</string>
+
+<string id="levsha_zahvat_bar_obj_02">
+    <text>Помочь сталкерам зачистить территорию "Бара" от мутантов</text>
+</string>
+
+<string id="levsha_zahvat_bar_obj_03">
+    <text>Поговорить с Левшой</text>
+</string>
+
+<string id="levsha_zahvat_bar_obj_04">
+    <text>Освободить диггеров</text>
+</string>
+
+<string id="levsha_zahvat_bar_obj_05">
+    <text>Вернуться к Левше</text>
+</string>
+
+
+<string id="lukash_angar_task">
+    <text>Сопроводить дезертиров на фабрику</text>
+</string>
+
+<string id="lukash_angar_obj_01">
+    <text>Сопроводить дезертиров на фабрику</text>
+</string>
+
+<string id="lukash_angar_obj_02">
+    <text>Сопроводить Лукаша и его бойцов на заброшенную фабрику</text>
+</string>
+
+<string id="lukash_angar_obj_03">
+    <text>Поговорить с Лукашем</text>
+</string>
+
+
+<string id="lukash_bomba_task">
+    <text>Отнести ПДА Шершню</text>
+</string>
+
+<string id="lukash_bomba_obj_01">
+    <text>Отнести ПДА Шершню</text>
+</string>
+
+<string id="lukash_bomba_obj_02">
+    <text>Отнести Шершню ПДА от Лукаша</text>
+</string>
+
+<string id="lukash_bomba_obj_03">
+    <text>Вернуться к Лукашу</text>
+</string>
+
+
+<string id="lukash_vstrecha_task">
+    <text>Найти Лукаша</text>
+</string>
+
+<string id="lukash_vstrecha_obj_01">
+    <text>Найти Лукаша</text>
+</string>
+
+<string id="lukash_vstrecha_obj_02">
+    <text>Найти Лукаша</text>
+</string>
+
+
+<string id="main_foto_task">
+    <text>Провести фотосъёмку ключевых объектов</text>
+</string>
+
+<string id="main_foto_obj_01">
+    <text>Провести фотосъёмку ключевых объектов</text>
+</string>
+
+<string id="main_foto_obj_02">
+    <text>Сфотографировать несколько ключевых объектов по заданию генерала Смита</text>
+</string>
+
+
+<string id="main_task_task">
+    <text>Найти источник энергии или убедиться, что его не существует</text>
+</string>
+
+<string id="main_task_obj_01">
+    <text>Найти источник энергии или убедиться, что его не существует</text>
+</string>
+
+<string id="main_task_obj_02">
+    <text>Найти источник неиссякаемой энергии или убедиться, что его не существует</text>
+</string>
+
+<string id="main_task_obj_03">
+    <text>Вернуться к генералу Смиту</text>
+</string>
+
+
+<string id="mario_case_task">
+    <text>Принести механику Марио ящик с инструментами</text>
+</string>
+
+<string id="mario_case_obj_01">
+    <text>Принести механику Марио ящик с инструментами</text>
+</string>
+
+<string id="mario_case_obj_02">
+    <text>Найти ящик с инструментами на заброшенной фабрике</text>
+</string>
+
+<string id="mario_case_obj_03">
+    <text>Вернуться к механику Марио</text>
+</string>
+
+
+<string id="maroder_oblava_task">
+    <text>Найти мародёров</text>
+</string>
+
+<string id="maroder_oblava_obj_01">
+    <text>Найти мародёров</text>
+</string>
+
+<string id="maroder_oblava_obj_02">
+    <text>Разобраться с мародёрами и добыть ПДА главаря</text>
+</string>
+
+<string id="maroder_oblava_obj_03">
+    <text>Принести ПДА главаря Бригадиру</text>
+</string>
+
+
+<string id="max_labirint_task">
+    <text>Рюкзак Макса</text>
+</string>
+
+<string id="max_labirint_obj_01">
+    <text>Найти рюкзак для Макса</text>
+</string>
+
+<string id="max_labirint_obj_02">
+    <text>Найти рюкзак Макса</text>
+</string>
+
+<string id="max_labirint_obj_03">
+    <text>Отдать рюкзак Максу</text>
+</string>
+
+
+<string id="mg_vyhod_task">
+    <text>Найти выход из Мёртвого Города</text>
+</string>
+
+<string id="mg_vyhod_obj_01">
+    <text>Найти выход из Мёртвого Города</text>
+</string>
+
+<string id="mg_vyhod_obj_02">
+    <text>Найти место начала перехода из Мёртвого Города в Лес</text>
+</string>
+
+<string id="mg_vyhod_obj_03">
+    <text>Вернуться к Генриху</text>
+</string>
+
+
+<string id="monster_part_task">
+    <text>title</text>
+</string>
+
+<string id="monster_part_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="monster_part_barman_task">
+    <text>title</text>
+</string>
+
+<string id="monster_part_barman_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="monster_part_dolg_task">
+    <text>title</text>
+</string>
+
+<string id="monster_part_dolg_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="monster_part_ecolog_task">
+    <text>title</text>
+</string>
+
+<string id="monster_part_ecolog_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="monster_part_freedom_task">
+    <text>title</text>
+</string>
+
+<string id="monster_part_freedom_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="monster_part_nebo_task">
+    <text>title</text>
+</string>
+
+<string id="monster_part_nebo_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="monster_part_trader_task">
+    <text>title</text>
+</string>
+
+<string id="monster_part_trader_obj_01">
+    <text>objective</text>
+</string>
+
+
+<string id="mousetrap_task_task">
+    <text>Предотвратить начало операции "Мышеловка"</text>
+</string>
+
+<string id="mousetrap_task_obj_01">
+    <text>Предотвратить начало операции "Мышеловка"</text>
+</string>
+
+<string id="mousetrap_task_obj_02">
+    <text>Найти место перехода из Промзоны в Лес</text>
+</string>
+
+<string id="mousetrap_task_obj_03">
+    <text>Дождаться, когда наёмники придут к переходу в Лес</text>
+</string>
+
+<string id="mousetrap_task_obj_04">
+    <text>Добыть ПДА главаря первой группы наёмников и узнать координаты места встречи двух
+               групп</text>
+</string>
+
+<string id="mousetrap_task_obj_05">
+    <text>Найти место встречи двух групп наёмников</text>
+</string>
+
+<string id="mousetrap_task_obj_06">
+    <text>Дождаться, когда наёмники придут на место встречи</text>
+</string>
+
+<string id="mousetrap_task_obj_07">
+    <text>Добыть ПДА главаря второй группы наёмников</text>
+</string>
+
+<string id="mousetrap_task_obj_08">
+    <text>Передать полученную информацию связному Брауна</text>
+</string>
+
+
+<string id="nastoyka_task">
+    <text>Мышиная охота</text>
+</string>
+
+<string id="nastoyka_obj_01">
+    <text>Добыть тринадцать летучих мышей</text>
+</string>
+
+<string id="nastoyka_obj_02">
+    <text>Добыть тринадцать летучих мышей</text>
+</string>
+
+<string id="nastoyka_obj_03">
+    <text>Отдать мышей Крысолову</text>
+</string>
+
+<string id="nastoyka_obj_04">
+    <text>Получить награду</text>
+</string>
+
+
+<string id="nastoyka_les_task">
+    <text>Лечение души</text>
+</string>
+
+<string id="nastoyka_les_obj_01">
+    <text>Принести Леснику настойку</text>
+</string>
+
+<string id="nastoyka_les_obj_02">
+    <text>Найти две бутылки настойки</text>
+</string>
+
+<string id="nastoyka_les_obj_03">
+    <text>Принести Леснику настойку</text>
+</string>
+
+
+<string id="osvedom_vyzov_01_task">
+    <text>Встретиться со Связным</text>
+</string>
+
+<string id="osvedom_vyzov_01_obj_01">
+    <text>Встретиться со Связным</text>
+</string>
+
+<string id="osvedom_vyzov_01_obj_02">
+    <text>Встретиться со Связным в Аномальном лесу в домике Лесника</text>
+</string>
+
+
+<string id="pashka_sguschenka_task">
+    <text>Раздобыть для Пашки сгущёнку</text>
+</string>
+
+<string id="pashka_sguschenka_obj_01">
+    <text>Раздобыть для Пашки сгущёнку</text>
+</string>
+
+<string id="pashka_sguschenka_obj_02">
+    <text>Раздобыть для Пашки шесть банок сгущёнки</text>
+</string>
+
+<string id="pashka_sguschenka_obj_03">
+    <text>Принести сгущёнку Пашке</text>
+</string>
+
+
+<string id="pentagramm_task">
+    <text>Найти "мерцающие знаки" в подземельях</text>
+</string>
+
+<string id="pentagramm_obj_01">
+    <text>Найти "мерцающие знаки" в подземельях</text>
+</string>
+
+<string id="pentagramm_obj_02">
+    <text>Найти и исследовать "мерцающие знаки" в подземельях</text>
+</string>
+
+<string id="pentagramm_obj_03">
+    <text>Поговорить с Шубиным</text>
+</string>
+
+
+<string id="perehod_dyshlo_task">
+    <text>Найти безопасный путь в "Червоне Дышло"</text>
+</string>
+
+<string id="perehod_dyshlo_obj_01">
+    <text>Найти безопасный путь в "Червоне Дышло"</text>
+</string>
+
+<string id="perehod_dyshlo_obj_02">
+    <text>Найти переход из Леса в колхоз "Червоне Дышло"</text>
+</string>
+
+<string id="perehod_dyshlo_obj_03">
+    <text>Найти переход из колхоза "Червоне Дышло" в Лес</text>
+</string>
+
+<string id="perehod_dyshlo_obj_04">
+    <text>Вернуться к полковнику Брауну</text>
+</string>
+
+
+<string id="petrenko_poisk_task">
+    <text>Снять данные с разбитых вертолетов</text>
+</string>
+
+<string id="petrenko_poisk_obj_01">
+    <text>Снять данные с разбитых вертолетов</text>
+</string>
+
+<string id="petrenko_poisk_obj_02">
+    <text>Найти упавшие вертолеты и снять с аппаратуры данные</text>
+</string>
+
+<string id="petrenko_poisk_obj_03">
+    <text>Снять данные с Миротворческого Корпуса</text>
+</string>
+
+<string id="petrenko_poisk_obj_04">
+    <text>Снять данные с Болот</text>
+</string>
+
+<string id="petrenko_poisk_obj_05">
+    <text>Снять данные с Промзоны</text>
+</string>
+
+<string id="petrenko_poisk_obj_06">
+    <text>Снять данные с Аномального Леса</text>
+</string>
+
+<string id="petrenko_poisk_obj_07">
+    <text>Снять данные с Мёртвого Города</text>
+</string>
+
+<string id="petrenko_poisk_obj_08">
+    <text>Снять данные с Бара</text>
+</string>
+
+<string id="petrenko_poisk_obj_09">
+    <text>Снять данные с Червоного Дышла</text>
+</string>
+
+<string id="petrenko_poisk_obj_10">
+    <text>Снять данные с Припяти</text>
+</string>
+
+<string id="petrenko_poisk_obj_11">
+    <text>Принести данные полковнику Петренко</text>
+</string>
+
+
+<string id="ploymar_zadan_task">
+    <text>Отключить защитный барьер</text>
+</string>
+
+<string id="ploymar_zadan_obj_01">
+    <text>Отключить защитный барьер</text>
+</string>
+
+<string id="ploymar_zadan_obj_02">
+    <text>Найти в Х-18 профессора Плоймара и поговорить с ним</text>
+</string>
+
+<string id="ploymar_zadan_obj_03">
+    <text>Уговорить профессора отключить защитный барьер</text>
+</string>
+
+<string id="ploymar_zadan_obj_04">
+    <text>Вернуться к полковнику Брауну</text>
+</string>
+
+
+<string id="polischuk_key_task">
+    <text>Принести Полищуку баллон с коллоидным газом</text>
+</string>
+
+<string id="polischuk_key_obj_01">
+    <text>Принести Полищуку баллон с коллоидным газом</text>
+</string>
+
+<string id="polischuk_key_obj_02">
+    <text>Раздобыть баллон с коллоидным газом</text>
+</string>
+
+<string id="polischuk_key_obj_03">
+    <text>Вернуться к лейтенанту Полищуку</text>
+</string>
+
+
+<string id="povar_havchik_task">
+    <text>Отнести посылку Полищуку</text>
+</string>
+
+<string id="povar_havchik_obj_01">
+    <text>Отнести посылку Полищуку</text>
+</string>
+
+<string id="povar_havchik_obj_02">
+    <text>Отнести лейтенанту Полищуку провизию от Повара</text>
+</string>
+
+
+<string id="prom_desant_task">
+    <text>Помочь защитить фабрику</text>
+</string>
+
+<string id="prom_desant_obj_01">
+    <text>Помочь защитить фабрику</text>
+</string>
+
+<string id="prom_desant_obj_02">
+    <text>Помочь дезертирам отбить атаку на фабрику</text>
+</string>
+
+<string id="prom_desant_obj_03">
+    <text>Поговорить с Максом</text>
+</string>
+
+
+<string id="radio_task">
+    <text>Помочь отремонтировать радиоузел в Баре</text>
+</string>
+
+<string id="radio_obj_01">
+    <text>Помочь отремонтировать радиоузел в Баре</text>
+</string>
+
+<string id="radio_obj_02">
+    <text>Раздобыть у профессора Кайманова радиоусилитель</text>
+</string>
+
+<string id="radio_obj_03">
+    <text>Принести усилитель дяде Мише в Бар</text>
+</string>
+
+
+<string id="recepts_01_task">
+    <text>Провести преобразования в четырёх пси-зонах первого порядка</text>
+</string>
+
+<string id="recepts_01_obj_01">
+    <text>Провести преобразования в четырёх пси-зонах первого порядка</text>
+</string>
+
+<string id="recepts_01_obj_02">
+    <text>Провести процессы преобразования кристаллов в четырёх видах пси-зон первого порядка</text>
+</string>
+
+<string id="recepts_01_obj_03">
+    <text>Вернуться к Сахарову</text>
+</string>
+
+
+<string id="recepts_02_task">
+    <text>Провести преобразования в двух пси-зонах второго порядка</text>
+</string>
+
+<string id="recepts_02_obj_01">
+    <text>Провести преобразования в двух пси-зонах второго порядка</text>
+</string>
+
+<string id="recepts_02_obj_02">
+    <text>Провести процессы преобразования кристаллов в двух видах пси-зон второго порядка</text>
+</string>
+
+<string id="recepts_02_obj_03">
+    <text>Вернуться к Сахарову</text>
+</string>
+
+
+<string id="recepts_03_task">
+    <text>Провести преобразования в двух пси-зонах третьего порядка</text>
+</string>
+
+<string id="recepts_03_obj_01">
+    <text>Провести преобразования в двух пси-зонах третьего порядка</text>
+</string>
+
+<string id="recepts_03_obj_02">
+    <text>Провести процессы преобразования кристаллов в двух видах пси-зон третьего порядка</text>
+</string>
+
+<string id="recepts_03_obj_03">
+    <text>Вернуться к Сахарову</text>
+</string>
+
+
+<string id="road_ataka_task">
+    <text>Помочь Диггерам отбиться от кабанов</text>
+</string>
+
+<string id="road_ataka_obj_01">
+    <text>Помочь Диггерам отбиться от кабанов</text>
+</string>
+
+<string id="road_ataka_obj_02">
+    <text>Отбить атаку кабанов на деревню Диггеров</text>
+</string>
+
+<string id="road_ataka_obj_03">
+    <text>Поговорить с Эдиком</text>
+</string>
+
+
+<string id="shema_perehodov_task">
+    <text>Найти схему подземных переходов</text>
+</string>
+
+<string id="shema_perehodov_obj_01">
+    <text>Найти схему подземных переходов</text>
+</string>
+
+<string id="shema_perehodov_obj_02">
+    <text>Проникнуть в секретную часть лабораторного комплекса Х-18</text>
+</string>
+
+<string id="shema_perehodov_obj_03">
+    <text>Раздобыть схему переходов между подземными лабораториями</text>
+</string>
+
+<string id="shema_perehodov_obj_04">
+    <text>Принести схему переходов заказчику</text>
+</string>
+
+
+<string id="shpak_vodka_task">
+    <text>Принести майору Шпаку три бутылки "Старого Мельника"</text>
+</string>
+
+<string id="shpak_vodka_obj_01">
+    <text>Принести майору Шпаку три бутылки "Старого Мельника"</text>
+</string>
+
+<string id="shpak_vodka_obj_02">
+    <text>Раздобыть для майора Шпака три бутылки "Старого Мельника"</text>
+</string>
+
+<string id="shpak_vodka_obj_03">
+    <text>Вернуться к Шпаку</text>
+</string>
+
+
+<string id="shpak_vodka20_task">
+    <text>Ящик водки для майора</text>
+</string>
+
+<string id="shpak_vodka20_obj_01">
+    <text>Принести Шпаку ящик водки</text>
+</string>
+
+<string id="shpak_vodka20_obj_02">
+    <text>Найти ящик водки</text>
+</string>
+
+<string id="shpak_vodka20_obj_03">
+    <text>Принести Шпаку ящик водки</text>
+</string>
+
+
+<string id="shpak_vss_task">
+    <text>Винторез для охоты</text>
+</string>
+
+<string id="shpak_vss_obj_01">
+    <text>Принести Шпаку Винторез для охоты на мутантов</text>
+</string>
+
+<string id="shpak_vss_obj_02">
+    <text>Найти Винторез</text>
+</string>
+
+<string id="shpak_vss_obj_03">
+    <text>Принести Шпаку Винторез для охоты на мутантов</text>
+</string>
+
+
+<string id="shubin_soul_task">
+    <text>Искупление</text>
+</string>
+
+<string id="shubin_soul_obj_01">
+    <text>Освободить души погибших сталкеров</text>
+</string>
+
+<string id="shubin_soul_obj_02">
+    <text>Освободить души погибших сталкеров</text>
+</string>
+
+<string id="shubin_soul_obj_03">
+    <text>Вернуться к Шубину</text>
+</string>
+
+
+<string id="sidor_brigadir_task">
+    <text>Встретиться с Бригадиром</text>
+</string>
+
+<string id="sidor_brigadir_obj_01">
+    <text>Встретиться с Бригадиром</text>
+</string>
+
+<string id="sidor_brigadir_obj_02">
+    <text>Встретиться с Бригадиром</text>
+</string>
+
+
+<string id="smith_brityi_task">
+    <text>Найти Бритого</text>
+</string>
+
+<string id="smith_brityi_obj_01">
+    <text>Найти Бритого</text>
+</string>
+
+<string id="smith_brityi_obj_02">
+    <text>Найти Бритого</text>
+</string>
+
+
+<string id="smith_brown_task">
+    <text>Найти полковника Брауна</text>
+</string>
+
+<string id="smith_brown_obj_01">
+    <text>Найти полковника Брауна</text>
+</string>
+
+<string id="smith_brown_obj_02">
+    <text>Найти полковника Брауна</text>
+</string>
+
+
+<string id="smith_start_task">
+    <text>Поговорить с генералом Смитом</text>
+</string>
+
+<string id="smith_start_obj_01">
+    <text>Поговорить с генералом Смитом</text>
+</string>
+
+<string id="smith_start_obj_02">
+    <text>Поговорить с генералом Смитом</text>
+</string>
+
+
+<string id="teleport_start_task">
+    <text>Найти начало тайной тропинки</text>
+</string>
+
+<string id="teleport_start_obj_01">
+    <text>Найти начало тайной тропинки</text>
+</string>
+
+<string id="teleport_start_obj_02">
+    <text>Найти начало тайной тропинки за территорией Бара</text>
+</string>
+
+
+<string id="uber_ataka_task">
+    <text>Помочь защитить военную базу от нападения</text>
+</string>
+
+<string id="uber_ataka_obj_01">
+    <text>Помочь защитить военную базу от нападения</text>
+</string>
+
+<string id="uber_ataka_obj_02">
+    <text>Помочь украинским солдатам отбить атаку из тоннеля</text>
+</string>
+
+<string id="uber_ataka_obj_03">
+    <text>Поговорить с лейтенантом Полищуком</text>
+</string>
+
+
+<string id="vasil_govorit_task">
+    <text>Найти Васильева</text>
+</string>
+
+<string id="vasil_govorit_obj_01">
+    <text>Найти Васильева</text>
+</string>
+
+<string id="vasil_govorit_obj_02">
+    <text>Найти Васильева</text>
+</string>
+
+
+<string id="vertushka_mesto_task">
+    <text>Обследовать место падения вертолёта</text>
+</string>
+
+<string id="vertushka_mesto_obj_01">
+    <text>Обследовать место падения вертолёта</text>
+</string>
+
+<string id="vertushka_mesto_obj_02">
+    <text>Добраться с "Бритым" до места падения</text>
+</string>
+
+<string id="vertushka_mesto_obj_03">
+    <text>Обследовать местность</text>
+</string>
+
+<string id="vertushka_mesto_obj_04">
+    <text>Поговорить с "Бритым"</text>
+</string>
+
+
+<string id="voronin_aver_task">
+    <text>Поговорить с генералом Ворониным</text>
+</string>
+
+<string id="voronin_aver_obj_01">
+    <text>Поговорить с генералом Ворониным</text>
+</string>
+
+<string id="voronin_aver_obj_02">
+    <text>Поговорить с генералом Ворониным о переходе в Лес</text>
+</string>
+
+<string id="voronin_aver_obj_03">
+    <text>Вернуться к полковнику Брауну</text>
+</string>
+
+
+<string id="voronin_car_task">
+    <text>Пригнать Ниву Воронина</text>
+</string>
+
+<string id="voronin_car_obj_01">
+    <text>Пригнать Ниву Воронина</text>
+</string>
+
+<string id="voronin_car_obj_02">
+    <text>Пригнать Ниву Воронина к воротам базы на Полигоне</text>
+</string>
+
+<string id="voronin_car_obj_03">
+    <text>Доложить Воронину о выполнении</text>
+</string>
+
+
+<string id="voronin_key_task">
+    <text>Принести генералу Воронину канистру с бензином</text>
+</string>
+
+<string id="voronin_key_obj_01">
+    <text>Принести генералу Воронину канистру с бензином</text>
+</string>
+
+<string id="voronin_key_obj_02">
+    <text>Раздобыть канистру с бензином</text>
+</string>
+
+<string id="voronin_key_obj_03">
+    <text>Вернуться к генералу Воронину</text>
+</string>
+
+
+<string id="voronin_perehod_task">
+    <text>Поговорить с генералом Ворониным</text>
+</string>
+
+<string id="voronin_perehod_obj_01">
+    <text>Поговорить с генералом Ворониным</text>
+</string>
+
+<string id="voronin_perehod_obj_02">
+    <text>Поговорить с генералом Ворониным</text>
+</string>
+
+
+<string id="voronin_poligon_task">
+    <text>Встретиться с генералом Ворониным</text>
+</string>
+
+<string id="voronin_poligon_obj_01">
+    <text>Встретиться с генералом Ворониным</text>
+</string>
+
+<string id="voronin_poligon_obj_02">
+    <text>Поговорить с генералом Ворониным</text>
+</string>
+
+
+<string id="vybratsya_izpeschery_task">
+    <text>Найти переход из Пещеры в Саркофаг</text>
+</string>
+
+<string id="vybratsya_izpeschery_obj_01">
+    <text>Найти переход из Пещеры в Саркофаг</text>
+</string>
+
+<string id="vybratsya_izpeschery_obj_02">
+    <text>Найти переход из Пещеры в Саркофаг</text>
+</string>
+
+
+<string id="wulf_poisk_task">
+    <text>Найти материалы исследований</text>
+</string>
+
+<string id="wulf_poisk_obj_01">
+    <text>Найти материалы исследований</text>
+</string>
+
+<string id="wulf_poisk_obj_02">
+    <text>Найти труп учёного и забрать у него материалы исследований</text>
+</string>
+
+<string id="wulf_poisk_obj_03">
+    <text>Принести материалы исследований Гертруде</text>
+</string>
+
+

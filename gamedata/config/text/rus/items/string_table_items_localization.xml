@@ -1,0 +1,1890 @@
+<!-- Сгенерировано items_localization_gen.linq 2026-11-10 19:39:45 -->
+
+<string id="lekarstvo_inv_name">
+    <text>Лекарство</text>
+</string>
+
+<string id="lekarstvo_description">
+    <text>Лекарство для Лесника.</text>
+</string>
+
+<string id="proviziya_inv_name">
+    <text>Ящик с провизией</text>
+</string>
+
+<string id="proviziya_description">
+    <text>Ящик с провизией из схрона Лесника. Эти запасы Лесник держал на самый крайний случай.</text>
+</string>
+
+<string id="doc_krol_inv_name">
+    <text>Дневник Крола</text>
+</string>
+
+<string id="doc_krol_description">
+    <text>Дневник покойника, судя по записям внутри, это был дневник сталкера-проводника по прозвищу "Крол", закончившего свой путь в катакомбах Мёртвого Города. Среди прочих записей есть упоминание об уникальном секретном приборе под названием "Биорадар", несколько опытных образцов которого были похищены у учёных. Если "Биорадар" повесить на пояс рядом с частями мутантов, то он будет отображать на своём экране местоположение тех мутантов, чьи части висят в данный момент на поясе. Как раздобыть этот прибор, должен знать один опытный сталкер по прозвищу Танкист. По всей видимости, он был причастен к делу об ограблении научного лагеря. Вот бы найти этого Танкиста.</text>
+</string>
+
+<string id="propusk_inv_name">
+    <text>Пропуск</text>
+</string>
+
+<string id="propusk_description">
+    <text>Электронный пропуск с паролем для прохода через блокпост Миротворцев.</text>
+</string>
+
+<string id="propusk1_inv_name">
+    <text>Пропуск</text>
+</string>
+
+<string id="propusk1_description">
+    <text>Электронный пропуск с паролем для прохода на украинскую военную базу.</text>
+</string>
+
+<string id="flyer_inv_name">
+    <text>Флаер</text>
+</string>
+
+<string id="flyer_description">
+    <text>Флаер для прохода в Бар братков.</text>
+</string>
+
+<string id="barman_pismo_inv_name">
+    <text>Письмо Сидору</text>
+</string>
+
+<string id="barman_pismo_description">
+    <text>Зашифрованное письмо для Сидоровича от Бармена.</text>
+</string>
+
+<string id="doctor_pismo_inv_name">
+    <text>Письмо Доктора</text>
+</string>
+
+<string id="doctor_pismo_description">
+    <text>Зашифрованное письмо для профессора Сахарова от Доктора.</text>
+</string>
+
+<string id="sidor_pismo_inv_name">
+    <text>Письмо Бармену</text>
+</string>
+
+<string id="sidor_pismo_description">
+    <text>Зашифрованное письмо для Бармена от Сидоровича.</text>
+</string>
+
+<string id="voronin_pismo_inv_name">
+    <text>Письмо Воронину</text>
+</string>
+
+<string id="voronin_pismo_description">
+    <text>Зашифрованное письмо для Воронина от Бармена.</text>
+</string>
+
+<string id="pismo_brown_inv_name">
+    <text>Письмо Брауна</text>
+</string>
+
+<string id="pismo_brown_description">
+    <text>Зашифрованное письмо от полковника Брауна для Сидоровича.</text>
+</string>
+
+<string id="voronin_pismo2_inv_name">
+    <text>Письмо Сидору</text>
+</string>
+
+<string id="voronin_pismo2_description">
+    <text>Зашифрованное письмо с ответом Воронина для Сидоровича.</text>
+</string>
+
+<string id="pda_mir_inv_name">
+    <text>ПДА разведчика</text>
+</string>
+
+<string id="pda_mir_description">
+    <text>ПДА разведчика-миротворца, труп которого был найден на старой фабрике.</text>
+</string>
+
+<string id="pda_nebo_inv_name">
+    <text>ПДА проводника</text>
+</string>
+
+<string id="pda_nebo_description">
+    <text>ПДА проводника из группировки 'Чистое Небо'. В этом ПДА содержатся зашифрованные данные о Тайных Тропах.</text>
+</string>
+
+<string id="karta_bar_inv_name">
+    <text>Карта Бара</text>
+</string>
+
+<string id="karta_bar_description">
+    <text>Подробная карта Бара и прилегающих территорий.</text>
+</string>
+
+<string id="doktor_flashka_inv_name">
+    <text>Флэшка Доктора</text>
+</string>
+
+<string id="doktor_flashka_description">
+    <text>Флэшка Доктора, которую надо передать Следопыту. В обмен на это, он покажет тайную тропу с Армейских Складов, через Мёртвый Город, на Болота.</text>
+</string>
+
+<string id="doc_tele_inv_name">
+    <text>Одноразовый_Телепортатор</text>
+</string>
+
+<string id="doc_tele_description">
+    <text>Одноразовый телепортатор. Может понадобиться в самый ответственный момент. Телепортирует одного человека, один раз, на Болота из любой точки Зоны.</text>
+</string>
+
+<string id="foto_news_inv_name">
+    <text>Фотоснимок</text>
+</string>
+
+<string id="foto_news_description">
+    <text>Фотоснимок для газеты.</text>
+</string>
+
+<string id="foto_01_inv_name">
+    <text>Фотоснимок</text>
+</string>
+
+<string id="foto_01_description">
+    <text>Фотоснимок, сделанный на цифровую фотокамеру. Крупное Изображение можно посмотреть в ПДА в разделе Журнал. На снимке присутствует сильный 'шум'. Видимо из-за высокой аномальной активности.</text>
+</string>
+
+<string id="foto_02_inv_name">
+    <text>Фотоснимок</text>
+</string>
+
+<string id="foto_02_description">
+    <text>Фотоснимок, сделанный на цифровую модернизированную фотокамеру. Крупное Изображение можно посмотреть в ПДА в разделе Журнал.</text>
+</string>
+
+<string id="levsha_decoder_inv_name">
+    <text>Декодер Левши</text>
+</string>
+
+<string id="levsha_decoder_description">
+    <text>Декодер Левши. С его помощью можно разблокировать электронную систему запирания дверей а Баре.</text>
+</string>
+
+<string id="anom_zond_inv_name">
+    <text>Зонд</text>
+</string>
+
+<string id="anom_zond_description">
+    <text>Специальный Зонд, предназначенный для активации аномалий и сбора физико-химических параметров зон аномальной активности.</text>
+</string>
+
+<string id="anom_pribor_inv_name">
+    <text>Детектор зонда</text>
+</string>
+
+<string id="anom_pribor_description">
+    <text>Детектор для распознавания и обработки сигнала, поступающего со специального зонда, забрасываемого в аномалию.</text>
+</string>
+
+<string id="pda_lukash_inv_name">
+    <text>ПДА Лукаша</text>
+</string>
+
+<string id="pda_lukash_description">
+    <text>ПДА Лукаша, который нужно передать Шершню.</text>
+</string>
+
+<string id="pda_boom_inv_name">
+    <text>Бомба</text>
+</string>
+
+<string id="pda_boom_description">
+    <text>Заминированный ПДА.</text>
+</string>
+
+<string id="objectiv_inv_name">
+    <text>Объектив</text>
+</string>
+
+<string id="objectiv_description">
+    <text>Объектив для цифровой фотокамеры со специальными встроенными фильтрами, которые позволяют получать боле-менее качественное фотоизображение в условиях съёмки в зонах высокой радиоактивной и аномальной активности.</text>
+</string>
+
+<string id="maloy_pda_inv_name">
+    <text>ПДА мародёра</text>
+</string>
+
+<string id="maloy_pda_description">
+    <text>ПДА мародёра, на котором указаны места, где спрятаны тайники с награбленным.</text>
+</string>
+
+<string id="lavrov_pda_inv_name">
+    <text>ПДА Лаврова</text>
+</string>
+
+<string id="lavrov_pda_description">
+    <text>ПДА Доцента Лаврова. В нём хранится бесценная для науки информация по наблюдению и изучению аномальных пси-зон и возможности проведения в них процессов синтеза кристаллов.</text>
+</string>
+
+<string id="bloknot_foto_inv_name">
+    <text>Записная книжка</text>
+</string>
+
+<string id="bloknot_foto_description">
+    <text>Электронная записная книжка Фотографа. В ней огромное количество различных наблюдений и ценной информации, собранной за последние годы, а также большое количество различного фотоматериала.</text>
+</string>
+
+<string id="info_actor_inv_name">
+    <text>Информация</text>
+</string>
+
+<string id="info_actor_description">
+    <text>Информация с флеш-карты Фотографа.</text>
+</string>
+
+<string id="pda_agent_mk_inv_name">
+    <text>ПДА Агента</text>
+</string>
+
+<string id="pda_agent_mk_description">
+    <text>ПДА агента-наёмника, проникшего на территорию Миротворческого Корпуса. В нём хранится зашифрованная информация о цели его задания и контакты заказчика.</text>
+</string>
+
+<string id="pda_agent_prom_inv_name">
+    <text>ПДА наёмника</text>
+</string>
+
+<string id="pda_agent_prom_description">
+    <text>ПДА наёмника, проникшего на территорию Промзоны. В нём хранится информация о маршруте перехода в аномальный Лес и координаты места встречи со второй группой наёмников.</text>
+</string>
+
+<string id="pda_agent_aver_inv_name">
+    <text>ПДА наёмника</text>
+</string>
+
+<string id="pda_agent_aver_description">
+    <text>ПДА наёмника, проникшего на территорию Аномального Леса. В этом ПДА хранится зашифрованная информация об операции 'Мышеловка'.</text>
+</string>
+
+<string id="plan_baza_inv_name">
+    <text>План базы</text>
+</string>
+
+<string id="plan_baza_description">
+    <text>План украинской военной базы, полученный от дезертира. На плане обозначен вход в подземную лабораторию.</text>
+</string>
+
+<string id="haron_case_inv_name">
+    <text>Посылка Харона</text>
+</string>
+
+<string id="haron_case_description">
+    <text>Запаянный металлический кейс. Посылка от Харона для Лукаша.</text>
+</string>
+
+<string id="hunter_case_inv_name">
+    <text>Кейс охотника</text>
+</string>
+
+<string id="hunter_case_description">
+    <text>Металлический кейс-холодильник. Принадлежал одному охотнику. Внутри различные части тел мутантов.</text>
+</string>
+
+<string id="koran_inv_name">
+    <text>Коран</text>
+</string>
+
+<string id="koran_description">
+    <text>Древнее издание Корана. Видимо очень дорогая вещь.</text>
+</string>
+
+<string id="microscope_inv_name">
+    <text>Микроскоп</text>
+</string>
+
+<string id="microscope_description">
+    <text>Микроскоп лабораторный. Не новый, но вполне рабочий. Вся оптика цела и функционирует нормально.</text>
+</string>
+
+<string id="pechat_mashinka_inv_name">
+    <text>Печатная машинка</text>
+</string>
+
+<string id="pechat_mashinka_description">
+    <text>Печатная машинка. Очень старая, но в довольно хорошем состоянии.</text>
+</string>
+
+<string id="raciya_new_inv_name">
+    <text>Рация</text>
+</string>
+
+<string id="raciya_new_description">
+    <text>Рация улучшенной конструкции. Адаптирована для работы в условиях Зоны.</text>
+</string>
+
+<string id="chess_inv_name">
+    <text>Шахматы</text>
+</string>
+
+<string id="chess_description">
+    <text>Шахматы в деревянной коробке. Производство времён СССР. Раритетная вещь.</text>
+</string>
+
+<string id="planshetka_inv_name">
+    <text>Планшетка</text>
+</string>
+
+<string id="planshetka_description">
+    <text>Кожаная планшетка. Довольно истрёпанная. В ней хранятся важные бумаги.</text>
+</string>
+
+<string id="memory_module_inv_name">
+    <text>Модуль памяти</text>
+</string>
+
+<string id="memory_module_description">
+    <text>Модуль памяти для лабораторных приборов времён СССР.</text>
+</string>
+
+<string id="kolba_inv_name">
+    <text>Колба</text>
+</string>
+
+<string id="kolba_description">
+    <text>Герметичная колба-контейнер для длительного хранения и переноса различных веществ.</text>
+</string>
+
+<string id="tiski_inv_name">
+    <text>Тиски</text>
+</string>
+
+<string id="tiski_description">
+    <text>Тиски. Произведены ещё во времена СССР.</text>
+</string>
+
+<string id="plata_inv_name">
+    <text>Плата</text>
+</string>
+
+<string id="plata_description">
+    <text>Плата электронная для усилителя или телевизора.</text>
+</string>
+
+<string id="vidik_inv_name">
+    <text>Видеомагнитофон</text>
+</string>
+
+<string id="vidik_description">
+    <text>Видеомагнитофон. Произведён в далёком 1986 году. Вполне рабочий.</text>
+</string>
+
+<string id="icona_inv_name">
+    <text>Икона</text>
+</string>
+
+<string id="icona_description">
+    <text>Древняя икона. Находка для антиквара.</text>
+</string>
+
+<string id="koloda_inv_name">
+    <text>Колода карт</text>
+</string>
+
+<string id="koloda_description">
+    <text>Колода атласных карт.</text>
+</string>
+
+<string id="samopisec_inv_name">
+    <text>Самописец</text>
+</string>
+
+<string id="samopisec_description">
+    <text>Самописец. Устройство автоматической регистрации основных параметров работы систем. Переделан из авиационного бортового регистратора под нужды учёных лаборантами-умельцами.</text>
+</string>
+
+<string id="table_lampa_inv_name">
+    <text>Лампа</text>
+</string>
+
+<string id="table_lampa_description">
+    <text>Лампа настольная.</text>
+</string>
+
+<string id="fonarik_inv_name">
+    <text>Фонарик</text>
+</string>
+
+<string id="fonarik_description">
+    <text>Портативный фонарик.</text>
+</string>
+
+<string id="filin_priemnik_inv_name">
+    <text>Приёмник</text>
+</string>
+
+<string id="filin_priemnik_description">
+    <text>Приёмник системы 'HELPER'. Работает в комплексе с передатчиком.</text>
+</string>
+
+<string id="wulf_case_inv_name">
+    <text>Кейс Вульфа</text>
+</string>
+
+<string id="wulf_case_description">
+    <text>Специальный несгораемый и влагостойкий кейс, в котором доктор Вульф переносил образцы и прочие материалы. Это важные материалы с результатами исследований немецких учёных в Припяти.</text>
+</string>
+
+<string id="shema_labs_inv_name">
+    <text>Ноутбук мародёра</text>
+</string>
+
+<string id="shema_labs_description">
+    <text>Ноутбук мародёра, который был украден у учёных около года назад. В ноутбуке масса важной научной информации, а также схема переходов между подземными лабораториями.</text>
+</string>
+
+<string id="instrument_case_inv_name">
+    <text>Ящик с инструментами</text>
+</string>
+
+<string id="instrument_case_description">
+    <text>Ящик с инструментами.</text>
+</string>
+
+<string id="pda_pmc_aver_inv_name">
+    <text>ПДА главаря</text>
+</string>
+
+<string id="pda_pmc_aver_description">
+    <text>ПДА главаря группы наёмников. В этом ПДА есть подробная схема перехода из Леса в колхоз 'Червоне Дышло' и обратно.</text>
+</string>
+
+<string id="manuscript_inv_name">
+    <text>Манускрипт</text>
+</string>
+
+<string id="manuscript_description">
+    <text>Манускрипт для игрока. Обязателен к прочтению.</text>
+</string>
+
+<string id="kastrula_inv_name">
+    <text>Кастрюля</text>
+</string>
+
+<string id="kastrula_description">
+    <text>Кастрюля.</text>
+</string>
+
+<string id="pda_pmc_dyshlo_inv_name">
+    <text>ПДА главаря</text>
+</string>
+
+<string id="pda_pmc_dyshlo_description">
+    <text>ПДА второго главаря группы наёмников. В этом ПДА есть зашифрованная информация о планах и целях наёмников на территории колхоза 'Червоне Дышло'.</text>
+</string>
+
+<string id="razuvaev_pda_inv_name">
+    <text>ПДА Разуваева</text>
+</string>
+
+<string id="razuvaev_pda_description">
+    <text>ПДА главаря мародёров Разуваева, на котором указан переход в Припять из колхоза 'Червоне Дышло' и обратно.</text>
+</string>
+
+<string id="codes_pda_inv_name">
+    <text>ПДА с кодами</text>
+</string>
+
+<string id="codes_pda_description">
+    <text>ПДА с кодами от дверей в Пещере.\nКод от двери, за которой находится тайник с оружием и амуницией:\n99613\nКоды от дверей многоярусного бункера, в котором находится тайник с картой Пещеры:\n24873\n24479\n86317\n</text>
+</string>
+
+<string id="karta_peschery_inv_name">
+    <text>Карта пещеры</text>
+</string>
+
+<string id="karta_peschery_description">
+    <text>Карта пещеры, на которой указаны все лабиринты и место выхода в Саркофаг ЧАЭС.</text>
+</string>
+
+<string id="gold_art_inv_name">
+    <text>gold_art_name</text>
+</string>
+
+<string id="gold_art_description">
+    <text>gold_art_desc</text>
+</string>
+
+<string id="af_rostok_inv_name">
+    <text>Проводник (Росток)</text>
+</string>
+
+<string id="af_rostok_description">
+    <text>Один из самых редчайших артефактов Зоны. Производное аномалии "Электра" и сильного антигравитационного поля. Был назван "Проводником", за свою способность на некоторое время смещать пространство и, тем самым, создавать пространственные коридоры, так называемые "Тайные_Тропы", с помощью которых можно перемещаться по ранее недоступным маршрутам. "Открывать" новые маршруты, посредством этого артефакта, могут только очень опытные сталкеры-проводники.</text>
+</string>
+
+<string id="sverhprovodnik_inv_name">
+    <text>Сверхпроводник</text>
+</string>
+
+<string id="sverhprovodnik_description">
+    <text>Один из самых редчайших артефактов Зоны. Производное аномалии "Электра" и сильного антигравитационного поля. Был назван "Сверхпроводником", за свою способность на долгое время смещать пространство и, тем самым, создавать пространственные коридоры, так называемые "Тайные_Тропы", с помощью которых можно перемещаться по ранее недоступным маршрутам. Отличается от своих "младших_братьев", проводников низшего порядка, тем, что моментально активирует переходы сразу по нескольким маршрутам. Для активации надо просто подобрать этот артефакт. Одно но: найти этот артефакт крайне сложно. Появляется он в короткий промежуток времени, примерно в течении одного часа, где-то между часом и двумя часами ночи. Если за это время его не найти, то артефакт исчезает. И ещё время на его поиски ограничено тремя днями. "Открывать" новые маршруты, посредством этого артефакта, могут только очень опытные сталкеры-проводники.</text>
+</string>
+
+<string id="af_sklady_inv_name">
+    <text>Проводник (Склады)</text>
+</string>
+
+<string id="af_sklady_description">
+    <text>Один из самых редчайших артефактов Зоны. Производное аномалии "Электра" и сильного антигравитационного поля. Был назван "Проводником", за свою способность на некоторое время смещать пространство и, тем самым, создавать пространственные коридоры, так называемые "Тайные_Тропы", с помощью которых можно перемещаться по ранее недоступным маршрутам. "Открывать" новые маршруты, посредством этого артефакта, могут только очень опытные сталкеры-проводники.</text>
+</string>
+
+<string id="af_kordon_inv_name">
+    <text>Проводник (Кордон)</text>
+</string>
+
+<string id="af_kordon_description">
+    <text>Один из самых редчайших артефактов Зоны. Производное аномалии "Электра" и сильного антигравитационного поля. Был назван "Проводником", за свою способность на некоторое время смещать пространство и, тем самым, создавать пространственные коридоры, так называемые "Тайные_Тропы", с помощью которых можно перемещаться по ранее недоступным маршрутам. "Открывать" новые маршруты, посредством этого артефакта, могут только очень опытные сталкеры-проводники.</text>
+</string>
+
+<string id="af_agro_inv_name">
+    <text>Проводник (Агропром)</text>
+</string>
+
+<string id="af_agro_description">
+    <text>Один из самых редчайших артефактов Зоны. Производное аномалии "Электра" и сильного антигравитационного поля. Был назван "Проводником", за свою способность на некоторое время смещать пространство и, тем самым, создавать пространственные коридоры, так называемые "Тайные_Тропы", с помощью которых можно перемещаться по ранее недоступным маршрутам. "Открывать" новые маршруты, посредством этого артефакта, могут только очень опытные сталкеры-проводники.</text>
+</string>
+
+<string id="anom_remover_inv_name">
+    <text>Ликвидатор</text>
+</string>
+
+<string id="anom_remover_description">
+    <text>Очень редкий артефакт, который при выкладывании из инвентаря на землю, уничтожает все известные аномалии в радиусе 15 метров. За это его действие он был назван "Ликвидатором". Кроме этого, никами другими свойствами не обладает. Многоразовый.</text>
+</string>
+
+<string id="af_dummy_spring_red_inv_name">
+    <text>Рубиновая пружина</text>
+</string>
+
+<string id="af_dummy_spring_red_description">
+    <text>Уникальный артефакт, по виду напоминает обычную "Пружину", но красного цвета. Слабо радиоактивная, излучает свет. Обладает эффектом защиты от ударных воздействий и повышает пулестойкость.</text>
+</string>
+
+<string id="af_dummy_battery_red_inv_name">
+    <text>Рубиновая батарейка</text>
+</string>
+
+<string id="af_dummy_battery_red_description">
+    <text>Уникальный артефакт, по виду напоминает обычную "Батарейку", но красного цвета. Слабо радиоактивная, излучает свет. Обладает эффектом востановления сил и защищает от ударных воздействий, а также повышает пулестойкость и защиту от электрошока.</text>
+</string>
+
+<string id="af_snake_eye_inv_name">
+    <text>Змеиный Глаз</text>
+</string>
+
+<string id="af_snake_eye_description">
+    <text>Уникальный артефакт, позволяющий его владельцу видеть то, что скрыто от других.</text>
+</string>
+
+<string id="amulet_1_inv_name">
+    <text>Химерон</text>
+</string>
+
+<string id="amulet_1_description">
+    <text>Загадочный Амулет первого порядка. Если его повесить на пояс, то владелец получит 10% защиты от электрошока и 10% защиты от разрывов. Немного радиоактивен.</text>
+</string>
+
+<string id="amulet_2_inv_name">
+    <text>Дракон</text>
+</string>
+
+<string id="amulet_2_description">
+    <text>Загадочный Амулет второго порядка. Если его повесить на пояс, то владелец получит 10% защиты от ожогов, в том числе и химических. Немного радиоактивен.</text>
+</string>
+
+<string id="amulet_3_inv_name">
+    <text>Авалон</text>
+</string>
+
+<string id="amulet_3_description">
+    <text>Загадочный Амулет третьего порядка. Если его повесить на пояс, то владелец получит 10% защиты от взрывов и 10% пулестойкости. Немного радиоактивен.</text>
+</string>
+
+<string id="amulet_4_inv_name">
+    <text>Саркон</text>
+</string>
+
+<string id="amulet_4_description">
+    <text>Загадочный Амулет четвёртого порядка. Если его повесить на пояс, то владелец получит 10% защиты от радиации. Правда, вместе с этим, несколько снижается сопротивляемость электрошоку.</text>
+</string>
+
+<string id="amulet_5_inv_name">
+    <text>Гарганон</text>
+</string>
+
+<string id="amulet_5_description">
+    <text>Загадочный Амулет пятого порядка. Если его повесить на пояс, то владелец получит 15% защиты от телепатического воздействия. Немного радиоактивен.</text>
+</string>
+
+<string id="amulet_6_inv_name">
+    <text>Каталон</text>
+</string>
+
+<string id="amulet_6_description">
+    <text>Загадочный Амулет-катализатор. Немного радиоактивен. Если поместить его вместе с собранными амулетами всех пяти предыдущих порядков, то произойдёт процесс магической катализации и вместо шести амулетов появится один Амулет-абсолют, обладающий удвоенными защитными свойствами всех пяти порядковых амулетов, и при всём при этом, совершенно не радиоактивен.</text>
+</string>
+
+<string id="almaz_inv_name">
+    <text>Оберег</text>
+</string>
+
+<string id="almaz_description">
+    <text>Амулет-Оберег, полученный в результате магической катализации Амулетов пяти порядковых уровней, при помощи Амулета-катализатора. Обладает удвоенными защитными свойствами всех пяти своих "прародителей", но, в отличии от них, совершенно не радиоактивен и вообще лишён отрицательных качеств. А кроме того, ещё прибавляет 40% защиты от ударов и заметно увеличивает выносливость.</text>
+</string>
+
+<string id="roza_inv_name">
+    <text>Роза Ветров</text>
+</string>
+
+<string id="roza_description">
+    <text>Один из самых редчайших артефактов Зоны. Производное аномалии "Жарка" и сильного воздействия радиации. Зарождается всего пару раз в год в зонах с сильным радиационным фоном. Людям находить не удавалось, поэтому ничего доподлинно об этом артефакте неизвестно.</text>
+</string>
+
+<string id="af_shubin_artgood_inv_name">
+    <text>Душа сталкера</text>
+</string>
+
+<string id="af_shubin_artgood_description">
+    <text>Аномальное образование, в котором заключена душа погибшего в Зоне сталкера.</text>
+</string>
+
+<string id="af_shubin_artbad_inv_name">
+    <text>Душа мародёра</text>
+</string>
+
+<string id="af_shubin_artbad_description">
+    <text>Аномальное образование, в котором заключена душа погибшего в Зоне мародёра.</text>
+</string>
+
+<string id="af_evergy1_false_inv_name">
+    <text>Аномальное образование</text>
+</string>
+
+<string id="af_evergy1_false_description">
+    <text>Аномальное образование.</text>
+</string>
+
+<string id="af_evergy2_false_inv_name">
+    <text>Аномальное образование</text>
+</string>
+
+<string id="af_evergy2_false_description">
+    <text>Аномальное образование.</text>
+</string>
+
+<string id="af_evergy_true_inv_name">
+    <text>Аномальное образование</text>
+</string>
+
+<string id="af_evergy_true_description">
+    <text>Аномальное образование.</text>
+</string>
+
+<string id="medalka_inv_name">
+    <text>Китайский орден Фотограф-Герой III степени</text>
+</string>
+
+<string id="medalka_description">
+    <text>Китайский орден Фотограф-Герой III степени. Материал - чистый бамбук. Если повесить на пояс, то сможешь говорить свободно на китайском.</text>
+</string>
+
+<string id="dudka_inv_name">
+    <text>Дудочка Крысолова</text>
+</string>
+
+<string id="dudka_description">
+    <text>Дудочка Крысолова. Магический духовой инструмент. Должна приманивать летучих мышей.</text>
+</string>
+
+<string id="nastoyka_inv_name">
+    <text>Настойка Крысолова</text>
+</string>
+
+<string id="nastoyka_description">
+    <text>Настойка Крысолова. Не самое приятное пойло. Интересно, что он туда ещё набодяжил кроме летучих мышей. Но голод после неё пропадает, да и сил прибавляется.</text>
+</string>
+
+<string id="dudka_shu_inv_name">
+    <text>Дудочка Шубина</text>
+</string>
+
+<string id="dudka_shu_description">
+    <text>Дудочка Шубина. Магический духовой инструмент</text>
+</string>
+
+<string id="dushelov_inv_name">
+    <text>Душелов</text>
+</string>
+
+<string id="dushelov_description">
+    <text>Аномальное образование, полученное от Шубина. Если его повесить на пояс и подойти к нужной могиле - души отзовутся.</text>
+</string>
+
+<string id="evergy1_true_inv_name">
+    <text>Красный горошек</text>
+</string>
+
+<string id="evergy1_true_description">
+    <text>Произведён по уникальной технологии на предприятии общественного питания корпорации "Йог-Сотот". Содержит натуральные эритроциты. Помогает контролировать ход естественной мутации. Противостоит воздействию радиации. Предотвращает рост псевдоподий.</text>
+</string>
+
+<string id="evergy2_true_inv_name">
+    <text>Книга Мёртвых</text>
+</string>
+
+<string id="evergy2_true_description">
+    <text>Данное справочное издание (исправленное и переработанное) послужит незаменимым источником информации для всех новоумерших. Не предназначено для живых. Издательство "Yog-Sothoth Industry Press" регулярно заботится о Вас и о Вашей смерти.</text>
+</string>
+
+<string id="evergy3_true_inv_name">
+    <text>Глазное яблоко</text>
+</string>
+
+<string id="evergy3_true_description">
+    <text>Глазное яблоко человека, очищенное. 1 сорт. Вес нетто 89 г. Длительному хранению не подлежит. Произведено на предприятии по переработке биологических видов корпорации "Йог-Сотот".</text>
+</string>
+
+<string id="evergy4_true_inv_name">
+    <text>Глазное яблоко</text>
+</string>
+
+<string id="evergy4_true_description">
+    <text>Глазное яблоко человека, очищенное. 2 сорт. Вес нетто 79 г. Длительному хранению не подлежит. Произведено на предприятии по переработке биологических видов корпорации "Йог-Сотот".</text>
+</string>
+
+<string id="statya_inv_name">
+    <text>Обрывок газетной статьи</text>
+</string>
+
+<string id="statya_inv_name_short">
+    <text>Обрывок газеты</text>
+</string>
+
+<string id="statya_description">
+    <text>Обрывок газетной статьи, найденной у мёртвого доктора Вульфа.</text>
+</string>
+
+<string id="zapis_w_inv_name">
+    <text>Записка доктора Вульфа</text>
+</string>
+
+<string id="zapis_w_inv_name_short">
+    <text>Записка</text>
+</string>
+
+<string id="zapis_w_description">
+    <text>Боже мой... Этот сумасшедший получеловек оказался прав! Это величайшее открытие! Если бы только Гертруда прислушалась к моим словам... Какой странный мир вокруг... Жаль только, что я не увижу, как всё изменится. Проклятые мертвецы!.. А ведь я был так близок... Я уверен, что он где-то неподалёку... Я почти нашёл...</text>
+</string>
+
+<string id="pribor_zh_inv_name">
+    <text>Детектор "Живец-1"</text>
+</string>
+
+<string id="pribor_zh_inv_name_short">
+    <text>Детектор живых</text>
+</string>
+
+<string id="pribor_zh_description">
+    <text>Детектор "Живец-1" призван улучшить идентификацию и поиск живых организмов. Передовая разработка корпорации "Йог-Сотот" прекрасно позволяет выявлять людей для последующей поимки и переработки.</text>
+</string>
+
+<string id="pribor_wu_inv_name">
+    <text>Маршрутизатор</text>
+</string>
+
+<string id="pribor_wu_description">
+    <text>Прибор для облегчения перемещения в границах Мёртвого Города. Произведено корпорацией "Йог-Сотот".</text>
+</string>
+
+<string id="young_d_inv_name">
+    <text>Походный набор молодого мертвеца</text>
+</string>
+
+<string id="young_d_description">
+    <text>Походный набор молодого мертвеца, который является новейшей разработкой медицинского отдела корпорации "Йог-Сотот", содержит комплексный набор лекарственных препаратов, полностью нормализующих процесс разложения кожного покрова и мышечных тканей.</text>
+</string>
+
+<string id="pribor_mg1_inv_name">
+    <text>Приборчик</text>
+</string>
+
+<string id="pribor_mg1_description">
+    <text>Приборчик</text>
+</string>
+
+<string id="statya_false_inv_name">
+    <text>Газетная cтатья</text>
+</string>
+
+<string id="statya_false_inv_name_short">
+    <text>Газетная статья</text>
+</string>
+
+<string id="statya_false_description">
+    <text>Газетная статья.</text>
+</string>
+
+<string id="max_ruk_inv_name">
+    <text>Рюкзак Макса</text>
+</string>
+
+<string id="max_ruk_inv_name_short">
+    <text>Рюкзак</text>
+</string>
+
+<string id="max_ruk_description">
+    <text>Рюкзак Макса</text>
+</string>
+
+<string id="device_atifact_merger_inv_name">
+    <text>ArtefactMerger</text>
+</string>
+
+<string id="device_atifact_merger_inv_name_short">
+    <text>AfMerger</text>
+</string>
+
+<string id="mandra_inv_name">
+    <text>Корень Мандрагоры</text>
+</string>
+
+<string id="mandra_description">
+    <text>Корень Мандрагоры, которому многие приписывают прямо таки магические свойства. По виду напоминает фигуру человека.</text>
+</string>
+
+<string id="bread_a_inv_name">
+    <text>Радиоактивный хлеб</text>
+</string>
+
+<string id="bread_a_description">
+    <text>Радиоактивный хлеб</text>
+</string>
+
+<string id="antizombin_inv_name">
+    <text>Антизомбин</text>
+</string>
+
+<string id="antizombin_description">
+    <text>Комплекс из биологических элементов, который на длительное время замедляет мутацию клеток организма человека, вызванную последствиями мощного пси воздействия.</text>
+</string>
+
+<string id="vacsina_inv_name">
+    <text>Вакцина</text>
+</string>
+
+<string id="vacsina_description">
+    <text>Вакцина. Мощное биохимическое средство, помогающее вырабатывать иммунитет к необычному и очень стойкому штамму вируса Грипп-А. Также, блокирует дальнейший рост и распространение вируса в организме человека после заражения. В большинстве случаев после принятия одной таблетки происходит полное излечение. В одной банке содержится 50 капсул препарата. Действие вакцины в условиях постоянного нахождения в очаге заражения ограгичено примерно 15-ю минутами. При повторном появлении симптомов заражения, необходимо принять следующую таблетку. Каждую таблетку необходимо обязательно запивать чистой водой, дозой не менее 0,5 литра.</text>
+</string>
+
+<string id="vacsina_aks_description">
+    <text>Вакцина. Мощное биохимическое средство, помогающее вырабатывать иммунитет к необычному и очень стойкому штамму вируса Грипп-А. Также, блокирует дальнейший рост и распространение вируса в организме человека после заражения. В большинстве случаев после принятия одной таблетки происходит полное излечение. В банке осталась только одна капсула препарата. Действие вакцины в условиях постоянного нахождения в очаге заражения довольно длительное, но тем не менее ограгичено. При повторном появлении симптомов заражения, необходимо принять следующую таблетку, запив её водой.</text>
+</string>
+
+<string id="vodka_new_inv_name">
+    <text>Столичная</text>
+</string>
+
+<string id="vodka_new_description">
+    <text>Водка Столичная. В Зоне встречается редко, поэтому и стоимость соответствующая.</text>
+</string>
+
+<string id="cognac_inv_name">
+    <text>Коньяк</text>
+</string>
+
+<string id="cognac_description">
+    <text>Коньяк двенадцатилетней выдержки. В Зоне это большая редкость.</text>
+</string>
+
+<string id="oreh_inv_name">
+    <text>Орехи</text>
+</string>
+
+<string id="oreh_description">
+    <text>Маринованные орехи в банке. Очень сытно и питательно. В закрытом состоянии банка может храниться не один год.</text>
+</string>
+
+<string id="oliv_inv_name">
+    <text>Оливки</text>
+</string>
+
+<string id="oliv_description">
+    <text>Оливки. Большая банка. Настоящий деликатес в Зоне. Тот факт, что оливки как-то попадают в Зону опровергает представление о том, что диггеры и всякие сталкеры-одиночки грубые и чрезвычайно практичные люди, которым кроме колбасы, хлеба и водки ничего не надо. Кроме всего прочего, оливки весьма благотворно влияют на здоровье человека и даже слегка способствуют выводу радиации из организма.</text>
+</string>
+
+<string id="sard_inv_name">
+    <text>Сардина в масле</text>
+</string>
+
+<string id="sard_description">
+    <text>Сардина в масле. Обычная консервированная сардина. В Зоне этих консервов не мало, так как за пределами Зоны их почти никто не ест.</text>
+</string>
+
+<string id="tush_inv_name">
+    <text>Тушёнка свиная</text>
+</string>
+
+<string id="tush_description">
+    <text>Обычная свиная тушёнка, срок годности вроде бы не истёк.</text>
+</string>
+
+<string id="paek1_inv_name">
+    <text>Сухпаёк-1</text>
+</string>
+
+<string id="paek1_description">
+    <text>Суточный двухпорционный армейский сухпаёк. Срок годности в порядке.</text>
+</string>
+
+<string id="paek11_inv_name">
+    <text>Сухпаёк-1</text>
+</string>
+
+<string id="paek11_description">
+    <text>Суточный двухпорционный армейский сухпаёк, в котором осталась одна порция. Срок годности в порядке.</text>
+</string>
+
+<string id="paek2_inv_name">
+    <text>Сухпаёк-2</text>
+</string>
+
+<string id="paek2_description">
+    <text>Двухсуточный четырёхпорционный армейский сухпаёк. Срок годности в порядке.</text>
+</string>
+
+<string id="paek21_inv_name">
+    <text>Сухпаёк-2</text>
+</string>
+
+<string id="paek21_description">
+    <text>Двухсуточный четырёхпорционный армейский сухпаёк, в котором осталось 3 порции. Срок годности в порядке.</text>
+</string>
+
+<string id="paek22_inv_name">
+    <text>Сухпаёк-2</text>
+</string>
+
+<string id="paek22_description">
+    <text>Двухсуточный четырёхпорционный армейский сухпаёк, в котором осталось 2 порции. Срок годности в порядке.</text>
+</string>
+
+<string id="paek23_inv_name">
+    <text>Сухпаёк-2</text>
+</string>
+
+<string id="paek23_description">
+    <text>Двухсуточный четырёхпорционный армейский сухпаёк, в котором осталась 1 порция. Срок годности в порядке.</text>
+</string>
+
+<string id="zheton_inv_name">
+    <text>Армейский жетон</text>
+</string>
+
+<string id="zheton_description">
+    <text>Армейский жетон на цепочке.</text>
+</string>
+
+<string id="mineral_inv_name">
+    <text>Минеральная вода</text>
+</string>
+
+<string id="mineral_description">
+    <text>Минеральная вода из чистых горных родников.</text>
+</string>
+
+<string id="galet_inv_name">
+    <text>Армейские галеты</text>
+</string>
+
+<string id="galet_description">
+    <text>Обычно такие галеты идут в наборе сухого пайка. В упаковке две галеты.</text>
+</string>
+
+<string id="galet_s_inv_name">
+    <text>Коробка шоколадных галет</text>
+</string>
+
+<string id="galet_s_description">
+    <text>Коробка шоколадных галет. Большая редкость для Зоны. Очень вкусно и питательно.</text>
+</string>
+
+<string id="ogirki_inv_name">
+    <text>Маринованные огурцы</text>
+</string>
+
+<string id="ogirki_description">
+    <text>Маринованные огурцы в Зоне редкость, потому и цена соответствующая. Помогают в похмельное утро. Хранятся по году и больше.</text>
+</string>
+
+<string id="meat_inv_name">
+    <text>Копчёный бифштекс</text>
+</string>
+
+<string id="meat_description">
+    <text>Копчёный бифштекс с длительным сроком хранения. Очень вкусно и питательно, не каждому бродяге выпадает счастье найти такое в Зоне. Большая цена неизбежна. В пачке четыре бифштекса.</text>
+</string>
+
+<string id="chernigov_inv_name">
+    <text>Пиво Черниговское</text>
+</string>
+
+<string id="chernigov_description">
+    <text>Пиво 'Черниговское'. Любимое пиво диггеров.</text>
+</string>
+
+<string id="old_melnik_inv_name">
+    <text>Пиво Старый Мельник</text>
+</string>
+
+<string id="old_melnik_description">
+    <text>Пиво крепкое 'Старый Мельник'. Слегка кислое.</text>
+</string>
+
+<string id="kagor_inv_name">
+    <text>Кагор</text>
+</string>
+
+<string id="kagor_description">
+    <text>Бутылка Кагора. Креплёное красное вино. Крепость - 16 градусов. В Зоне вещь крайне редкая, так как мало найдётся гурманов среди бродяг, мародёров и военных. Поэтому цена соответствующая.</text>
+</string>
+
+<string id="beloe_inv_name">
+    <text>Масандра</text>
+</string>
+
+<string id="beloe_description">
+    <text>Бутылка Масандры. Креплёное белое вино. Крепость - 16 градусов. В Зоне вещь крайне редкая, так как мало найдётся гурманов среди бродяг, мародёров и военных. Поэтому цена соответствующая.</text>
+</string>
+
+<string id="shprots_inv_name">
+    <text>Большие шпроты</text>
+</string>
+
+<string id="shprots_description">
+    <text>Несмотря на небольшую цену, шпроты очень вкусные и питательные.</text>
+</string>
+
+<string id="pashtet_inv_name">
+    <text>Паштет печёночный</text>
+</string>
+
+<string id="pashtet_description">
+    <text>Паштет из гусиной печени с черносливом.</text>
+</string>
+
+<string id="pringles_inv_name">
+    <text>Чипсы Pringles</text>
+</string>
+
+<string id="pringles_description">
+    <text>Большая банка чипсов. Не очень питательно, но зато очень вкусно. И срок годности внушительный, что в условиях Зоны очень немаловажно.</text>
+</string>
+
+<string id="zel_goroshek_inv_name">
+    <text>Зелёный горошек</text>
+</string>
+
+<string id="zel_goroshek_description">
+    <text>Отечественный консервированный продукт с длительным сроком годности. Дорого, но вкусно.</text>
+</string>
+
+<string id="gribki_inv_name">
+    <text>Грибы Чернобльские</text>
+</string>
+
+<string id="gribki_description">
+    <text>Грибы с окраин Чернобыля, фонят очень слабо. Очень питательно, но не слишком вкусно. Зато, в закрытом состоянии, продукт может храниться годами.</text>
+</string>
+
+<string id="kilka_inv_name">
+    <text>Килька в томате</text>
+</string>
+
+<string id="kilka_description">
+    <text>В Зоне этого продукта немало, цена небольшая, но зато вкусно.</text>
+</string>
+
+<string id="sguschenka_inv_name">
+    <text>Сгущёное молоко</text>
+</string>
+
+<string id="sguschenka_description">
+    <text>Сгущёное молоко - очень редкий в Зоне продукт. Да ещё в придачу к этому, срок годности составляет несколько лет, поэтому и цена у этого продукта соответствующая.</text>
+</string>
+
+<string id="konfeta_inv_name">
+    <text>Конфета</text>
+</string>
+
+<string id="konfeta_description">
+    <text>Конфета шоколадная. Срок годности не истёк.</text>
+</string>
+
+<string id="sound_object01_inv_name">
+    <text>Матюгальник</text>
+</string>
+
+<string id="sound_object01_description">
+    <text>Громкоговоритель</text>
+</string>
+
+<string id="academ_flash_inv_name">
+    <text>Флешка академика</text>
+</string>
+
+<string id="letter_greta_inv_name">
+    <text>Письмо</text>
+</string>
+
+<string id="letter_greta_description">
+    <text>Письмо</text>
+</string>
+
+<string id="device_meter_inv_name">
+    <text>Волновой детектор</text>
+</string>
+
+<string id="zhurnal_inv_name">
+    <text>Журнал</text>
+</string>
+
+<string id="zhurnal_description">
+    <text>Журнал наблюдений за изменениями погоды после выбросов</text>
+</string>
+
+<string id="shema_radio_inv_name">
+    <text>Схема</text>
+</string>
+
+<string id="shema_radio_description">
+    <text>Схема радиоусилителя электрическая принципиальная</text>
+</string>
+
+<string id="c_doc_inv_name">
+    <text>doc2_name</text>
+</string>
+
+<string id="c_doc_description">
+    <text>doc2_desc</text>
+</string>
+
+<string id="c_doc1_inv_name">
+    <text>Памятка №1</text>
+</string>
+
+<string id="c_doc2_inv_name">
+    <text>Памятка №2</text>
+</string>
+
+<string id="c_doc3_inv_name">
+    <text>Памятка №3</text>
+</string>
+
+<string id="c_doc4_inv_name">
+    <text>Памятка №4</text>
+</string>
+
+<string id="c_doc5_inv_name">
+    <text>Памятка №5</text>
+</string>
+
+<string id="c_doc6_inv_name">
+    <text>Памятка №6</text>
+</string>
+
+<string id="c_doc7_inv_name">
+    <text>Памятка №7</text>
+</string>
+
+<string id="c_doc8_inv_name">
+    <text>Памятка №8</text>
+</string>
+
+<string id="c_doc9_inv_name">
+    <text>Памятка №9</text>
+</string>
+
+<string id="c_doc10_inv_name">
+    <text>Памятка №10</text>
+</string>
+
+<string id="c_doc11_inv_name">
+    <text>Памятка №11</text>
+</string>
+
+<string id="detector_advances_rukzak_inv_name">
+    <text>st_detector2_r</text>
+</string>
+
+<string id="detector_elite_rukzak_inv_name">
+    <text>st_detector3_r</text>
+</string>
+
+<string id="detector_elite_sak_rukzak_inv_name">
+    <text>st_detector_sak_r</text>
+</string>
+
+<string id="korona_inv_name">
+    <text>Корона</text>
+</string>
+
+<string id="korona_description">
+    <text>Странное образование непонятного происхождения</text>
+</string>
+
+<string id="load_detector_inv_name">
+    <text>Автозагрузчик</text>
+</string>
+
+<string id="load_detector_description">
+    <text>Прибор, который дистанционно активирует научную аппаратуру на вертолете и автоматически записывает имеющиеся там данные на встроенную карту памяти.</text>
+</string>
+
+<string id="kont_skin_inv_name">
+    <text>Шкура контролёра</text>
+</string>
+
+<string id="kont_skin_description">
+    <text>Шкура контролёра, снятая с его трупа.</text>
+</string>
+
+<string id="guitar_a_inv_name">
+    <text>Гитара</text>
+</string>
+
+<string id="guitar_a_description">
+    <text>Старая шестиструнная гитара.</text>
+</string>
+
+<string id="harmonica_a_inv_name">
+    <text>Губная гармошка</text>
+</string>
+
+<string id="harmonica_a_description">
+    <text>Старая губная гармошка.</text>
+</string>
+
+<string id="device_pda_inv_name">
+    <text>PDA</text>
+</string>
+
+<string id="device_pda_description">
+    <text>enc_equipment_devic_device-pda1</text>
+</string>
+
+<string id="psy_detector_inv_name">
+    <text>Пси-Детектор</text>
+</string>
+
+<string id="psy_detector_description">
+    <text>Детектор, распознающий особые аномальные пси-зоны. Будучи размещённым на поясе и при наличии в инвентаре или на поясе одного или нескольких Талисманов-активаторов, он позволяет распознать особые пси-зоны и 'включить' их аномальную активность, для проведения в них реакции синтеза Талисманов и частей мутантов, с целью получения защитных Оберегов.</text>
+</string>
+
+<string id="filin_pribor_inv_name">
+    <text>Передатчик</text>
+</string>
+
+<string id="filin_pribor_description">
+    <text>Передатчик системы 'HELPER'. Работает в комплексе с приёмником.</text>
+</string>
+
+<string id="coder_x18_inv_name">
+    <text>Кодировщик</text>
+</string>
+
+<string id="coder_x18_description">
+    <text>Прибор-кодировщик для электронных кодовых замков.</text>
+</string>
+
+<string id="repair_kit_inv_name">
+    <text>Ремкомплект</text>
+</string>
+
+<string id="repair_kit_description">
+    <text>Универсальный ремонтный набор с био-электронным сканированием уровня повреждений. Предназначен для ремонта любого вида стрелкового оружия. Восстанавливает 100% повреждений. Создан в секретной военной лаборатории Миротворцев. Принцип работы построен на аномальных свойствах одного вида кристаллов. Для активации ремкомплекта необходимо наличие в инвентаре одного такого кристалла. После каждой процедуры ремонта оружия, кристалл испаряется, передав все свои аномальные свойства для активации био-электронного сканера.</text>
+</string>
+
+<string id="bomba_inv_name">
+    <text>Бомба</text>
+</string>
+
+<string id="bomba_description">
+    <text>Бомба с часовым механизмом. Таймер работает 10 секунд. Бомба мощная - берегитесь осколков.</text>
+</string>
+
+<string id="dist_pult_inv_name">
+    <text>дистанционный пульт</text>
+</string>
+
+<string id="dist_pult_description">
+    <text>Пульт дистационного управления бомбой. Установка таймера производится через меню.</text>
+</string>
+
+<string id="dolg_mafon_inv_name">
+    <text>Магнитофон</text>
+</string>
+
+<string id="dolg_mafon_description">
+    <text>Магнитофон</text>
+</string>
+
+<string id="osvedom_mafon_inv_name">
+    <text>Магнитофон</text>
+</string>
+
+<string id="osvedom_mafon_description">
+    <text>Магнитофон</text>
+</string>
+
+<string id="brown_mafon_inv_name">
+    <text>Магнитофон</text>
+</string>
+
+<string id="brown_mafon_description">
+    <text>Магнитофон</text>
+</string>
+
+<string id="maloy_mafon_inv_name">
+    <text>Магнитофон</text>
+</string>
+
+<string id="maloy_mafon_description">
+    <text>Магнитофон</text>
+</string>
+
+<string id="hunter_mafon_inv_name">
+    <text>Магнитофон</text>
+</string>
+
+<string id="hunter_mafon_description">
+    <text>Магнитофон</text>
+</string>
+
+<string id="lesnik_mafon_inv_name">
+    <text>Магнитофон</text>
+</string>
+
+<string id="lesnik_mafon_description">
+    <text>Магнитофон</text>
+</string>
+
+<string id="koldun_mafon_inv_name">
+    <text>Магнитофон</text>
+</string>
+
+<string id="koldun_mafon_description">
+    <text>Магнитофон</text>
+</string>
+
+<string id="tankist_mafon_inv_name">
+    <text>Магнитофон</text>
+</string>
+
+<string id="tankist_mafon_description">
+    <text>Магнитофон</text>
+</string>
+
+<string id="edik_mafon_inv_name">
+    <text>Магнитофон</text>
+</string>
+
+<string id="edik_mafon_description">
+    <text>Магнитофон</text>
+</string>
+
+<string id="german_mafon_inv_name">
+    <text>Магнитофон</text>
+</string>
+
+<string id="german_mafon_description">
+    <text>Магнитофон</text>
+</string>
+
+<string id="x18_mafon_inv_name">
+    <text>Магнитофон</text>
+</string>
+
+<string id="x18_mafon_description">
+    <text>Магнитофон</text>
+</string>
+
+<string id="money_gg_inv_name">
+    <text>Деньги</text>
+</string>
+
+<string id="money_gg_description">
+    <text>Деньги, отобранные у Стрелка при ограблении.</text>
+</string>
+
+<string id="money_ggg_inv_name">
+    <text>Деньги</text>
+</string>
+
+<string id="money_ggg_description">
+    <text>Деньги, отобранные у Стрелка при ограблении.</text>
+</string>
+
+<string id="money_gggg_inv_name">
+    <text>Деньги</text>
+</string>
+
+<string id="money_gggg_description">
+    <text>Деньги, отобранные у Стрелка при ограблении.</text>
+</string>
+
+<string id="money_ggggg_inv_name">
+    <text>Деньги</text>
+</string>
+
+<string id="money_ggggg_description">
+    <text>Деньги, отобранные у Стрелка при ограблении.</text>
+</string>
+
+<string id="money2_inv_name">
+    <text>Деньги</text>
+</string>
+
+<string id="money2_description">
+    <text>Небольшая пачка денег мелкими купюрами. Около двух тысяч рублей.</text>
+</string>
+
+<string id="money5_inv_name">
+    <text>Деньги</text>
+</string>
+
+<string id="money5_description">
+    <text>Пачка денег. Пять тысяч рублей.</text>
+</string>
+
+<string id="money10_inv_name">
+    <text>Деньги</text>
+</string>
+
+<string id="money10_description">
+    <text>Пачка денег. Десять тысяч рублей.</text>
+</string>
+
+<string id="money25_inv_name">
+    <text>Деньги</text>
+</string>
+
+<string id="money25_description">
+    <text>Пачка денег. Двадцать пять тысяч рублей.</text>
+</string>
+
+<string id="money20_inv_name">
+    <text>Деньги</text>
+</string>
+
+<string id="money20_description">
+    <text>Пачка денег. Двадцать тысяч рублей.</text>
+</string>
+
+<string id="money50_inv_name">
+    <text>Деньги</text>
+</string>
+
+<string id="money50_description">
+    <text>Пачка денег. Пятьдесят тысяч рублей.</text>
+</string>
+
+<string id="money30_inv_name">
+    <text>Деньги</text>
+</string>
+
+<string id="money30_description">
+    <text>Пачка денег. Тридцать тысяч рублей.</text>
+</string>
+
+<string id="money15_inv_name">
+    <text>Деньги</text>
+</string>
+
+<string id="money15_description">
+    <text>Пачка денег. Пятнадцать тысяч рублей.</text>
+</string>
+
+<string id="euro_inv_name">
+    <text>Пачка Евро</text>
+</string>
+
+<string id="euro_description">
+    <text>Пачка 1000 Евро.</text>
+</string>
+
+<string id="dollar_inv_name">
+    <text>Пачка долларов</text>
+</string>
+
+<string id="dollar_description">
+    <text>Пачка 1500 долларов.</text>
+</string>
+
+<string id="key_car1_inv_name">
+    <text>Ключи от машины</text>
+</string>
+
+<string id="key_car1_description">
+    <text>Ключи от 'Лэнд Ровера'.</text>
+</string>
+
+<string id="key_car2_inv_name">
+    <text>Ключи от машины</text>
+</string>
+
+<string id="key_car2_description">
+    <text>Ключи от 'Нивы' генерала Воронина.</text>
+</string>
+
+<string id="key_car3_inv_name">
+    <text>Ключи от машины</text>
+</string>
+
+<string id="key_car3_description">
+    <text>Ключи от 'Нивы' лейтенанта Полищука.</text>
+</string>
+
+<string id="mutant_crow_inv_name">
+    <text>Ворона</text>
+</string>
+
+<string id="mutant_crow_description">
+    <text>Тушка мёртвой вороны.</text>
+</string>
+
+<string id="mutant_mouse_inv_name">
+    <text>Летучая мышь</text>
+</string>
+
+<string id="mutant_mouse_description">
+    <text>Тушка мёртвой летучей мыши.</text>
+</string>
+
+<string id="mutant_flesh_winch_inv_name">
+    <text>Аномальный SPAS-12</text>
+</string>
+
+<string id="mutant_flesh_winch_description">
+    <text>SPAS-12, проглоченный мутировавшей свиньёй. В её аномальной утробе оружие приобрело удивительные свойства в плане повышенной износостойкости, скорострельности и точности стрельбы. Для функционирования требуется небольшая доработка опытным механиком.</text>
+</string>
+
+<string id="mutant_snork_leg_description">
+    <text>Стопа снорка, в отличие от человеческой содержит большее количество сухожилий, обладающих потрясающей эластичностью. Этим объясняется способность снорков совершать невероятные прыжки.</text>
+</string>
+
+<string id="superkaban_leg_inv_name">
+    <text>Копыто суперкабана</text>
+</string>
+
+<string id="superkaban_leg_description">
+    <text>Копыто суперкабана, которое необходимо передать Зверобою, как доказательство выполненной работы.</text>
+</string>
+
+<string id="vypolzen_hrebet_inv_name">
+    <text>Хребет Выползня</text>
+</string>
+
+<string id="vypolzen_hrebet_description">
+    <text>Хребет Выползня, являющийся рудиментом его позвоночника, имеет потрясающие свойства, связанные с эластичностью костной ткани. Удивительные способности этого мутанта заключены именно в этом "отростке" - сгустке мелких костей, сухожилий и нервных окончаний, которые позволяют ему двигаться достаточно импульсивно, но и в тоже время, обладать потрясающей гибкостью и способностью кратковременно изменять привычное полжение суставов на 180 градусов, что даёт колоссальное преимущество при прямом контакте с проитвников. Эти приобретённые аномальные свойства мало неизучены, поэтому Хребет Выползня очень ценится учёными.</text>
+</string>
+
+<string id="vypolzen_hribet_inv_name">
+    <text>Хребет пещерного Выползня</text>
+</string>
+
+<string id="vypolzen_hribet_description">
+    <text>Хребет пещерного Выползня, являющийся рудиментом его позвоночника, имеет потрясающие свойства, связанные с эластичностью костной ткани. Удивительные способности этого мутанта заключены именно в этом его "отростке" - сгустке мелких костей, сухожилий и нервных окончаний, которые позволяют ему двигаться достаточно импульсивно, но и в тоже время, обладать потрясающей гибкостью и способностью кратковременно изменять привычное полжение суставов на 180 градусов, что даёт колоссальное преимущество при прямом контакте с проитвников. Эти приобретённые аномальные свойства мало неизучены, поэтому Хребет Пещерного Выползня очень ценится учёными. Пещерный Выползень является мутировавшей формой простого болотного Выползня и отличается от него ещё большей эластичностью тканей и суставов.</text>
+</string>
+
+<string id="izlom_hand_inv_name">
+    <text>Рука Излома</text>
+</string>
+
+<string id="izlom_hand_description">
+    <text>Кистевая часть руки Излома очень ценится учёными, так как до конца так и не изучена, в силу большой редкости. Мало кому удавалось добыть руку Излома в Зоне и принести её учёным.</text>
+</string>
+
+<string id="spider_leg_inv_name">
+    <text>Конечность Паука</text>
+</string>
+
+<string id="spider_leg_description">
+    <text>Нижняя фаланга конечности Земляного Паука, одного из самых загадочных мутантов Зоны. Земляные Пауки встречаются крайне редко, поэтому учёные, да и не только они, готовы отвалить огромные деньги за какую-нибудь часть этого монстра, так как ранее не удавалось изучить этих мутировавших насекомых.</text>
+</string>
+
+<string id="kostolom_hand_inv_name">
+    <text>Рука Костолома</text>
+</string>
+
+<string id="kostolom_hand_inv_name_short">
+    <text>рука Костолома</text>
+</string>
+
+<string id="kostolom_hand_description">
+    <text>Рука Костолома - пожалуй, самого опасного создания Зоны. Особенности этого мутанта до сих пор остаются неизученными. Существуют только обрывочные сведения о нём. Бытует легенда, что трофей в виде руки Костолома даёт его обладателю оргромную выносливость и силу.</text>
+</string>
+
+<string id="tarakan_lich1_inv_name">
+    <text>Личинка</text>
+</string>
+
+<string id="tarakan_lich1_description">
+    <text>Личинка рыжего таракана-мутанта. Обладает свойством ускорять процесс залечивания колотых ран.</text>
+</string>
+
+<string id="tarakan_lich2_inv_name">
+    <text>Личинка</text>
+</string>
+
+<string id="tarakan_lich2_description">
+    <text>Личинка земляного таракана-мутанта. Обладает свойством не только ускорять процесс заживления колотых ран, но и эффективно останавливает кровотечение.</text>
+</string>
+
+<string id="deathclaw_rog_inv_name">
+    <text>Рог Стального Когтя</text>
+</string>
+
+<string id="deathclaw_rog_description">
+    <text>Рог Стального Когтя. Ввиду редкости, свойства не изучены.</text>
+</string>
+
+<string id="el_chimera_kogot_inv_name">
+    <text>Коготь Электрохимеры</text>
+</string>
+
+<string id="el_chimera_kogot_description">
+    <text>Коготь Электрохимеры. Свойства неизучены, ввиду крайне малой вероятности добыть этот уникальный биоматериал.</text>
+</string>
+
+<string id="fire_chimera_kogot_inv_name">
+    <text>Коготь Огненной Химеры</text>
+</string>
+
+<string id="fire_chimera_kogot_description">
+    <text>Коготь Огненной Химеры. Свойства неизучены, ввиду крайне малой вероятности добыть этот уникальный биоматериал.</text>
+</string>
+
+<string id="military_stalker_outfit_inv_name">
+    <text>SKAT-9</text>
+</string>
+
+<string id="military_stalker_outfit_description">
+    <text>outfit_military_stalker</text>
+</string>
+
+<string id="military_commander_outfit_inv_name">
+    <text>SKAT-9M</text>
+</string>
+
+<string id="military_commander_outfit_description">
+    <text>outfit_military_commander</text>
+</string>
+
+<string id="zahar_box_inv_name">
+    <text>Контейнер Захара</text>
+</string>
+
+<string id="zahar_box_description">
+    <text>Контейнер Захара, в котором находятся найденные им редкие артефакты.</text>
+</string>
+
+<string id="detector_kruglov_description">
+    <text>detector_kruglov_desc0</text>
+</string>
+
+<string id="flash_ban_inv_name">
+    <text>Флешка бандитов</text>
+</string>
+
+<string id="flash_ban_description">
+    <text>Простая флешка для хранения информации. Среди прочей информации, должны быть сведения о переходе из Тёмной Долины на Кордон.</text>
+</string>
+
+<string id="detector_elite_bad_description">
+    <text>detector_elite_bad_desc0</text>
+</string>
+
+<string id="af_electra_moonlight_new_inv_name">
+    <text>af_electra_moonlight_new</text>
+</string>
+
+<string id="af_electra_moonlight_new_description">
+    <text>af_electra_moonlight_new_desc</text>
+</string>
+
+<string id="nine_pda_inv_name">
+    <text>nine_pda_name</text>
+</string>
+
+<string id="nine_pda_description">
+    <text>nine_pda_desc</text>
+</string>
+
+<string id="doc_peredatchik_inv_name">
+    <text>Ресивер</text>
+</string>
+
+<string id="doc_peredatchik_description">
+    <text>Передатчик Болотного Доктора.</text>
+</string>
+
+<string id="box_vano_inv_name">
+    <text>Ящик с минами</text>
+</string>
+
+<string id="box_vano_description">
+    <text>Ящик с минами, который попросил найти и принести Вано.</text>
+</string>
+
+<string id="kruglov_flash_inv_name">
+    <text>Документы</text>
+</string>
+
+<string id="kruglov_flash_description">
+    <text>Документы с очень важной информацией.</text>
+</string>
+
+<string id="mil_svoboda_leader_pda_inv_name">
+    <text>Svoboda Leader PDA</text>
+</string>
+
+<string id="dar_pass_flash_inv_name">
+    <text>"Scientist" Flash card</text>
+</string>
+
+<string id="dar_pass_flash_inv_name_short">
+    <text>"Scientist" flash</text>
+</string>
+
+<string id="dar_pass_document_inv_name">
+    <text>CodeX-18</text>
+</string>
+
+<string id="flame_parts_inv_name">
+    <text>item_flame1_name</text>
+</string>
+
+<string id="flame_parts_description">
+    <text>flame_part_desc</text>
+</string>
+
+<string id="gorelka_inv_name">
+    <text>gorelka</text>
+</string>
+
+<string id="gorelka_description">
+    <text>gorelka_descr</text>
+</string>
+
+<string id="manometr_inv_name">
+    <text>manometr</text>
+</string>
+
+<string id="manometr_description">
+    <text>manometr_descr</text>
+</string>
+
+<string id="trubka_inv_name">
+    <text>trubka</text>
+</string>
+
+<string id="trubka_description">
+    <text>trubka_descr</text>
+</string>
+
+<string id="flamethrower_bad_inv_name">
+    <text>item_flamethrower_bad_name</text>
+</string>
+
+<string id="flamethrower_bad_description">
+    <text>flama_descr</text>
+</string>
+
+<string id="pribor_new_inv_name">
+    <text>Детектор выбросов</text>
+</string>
+
+<string id="pribor_new_description">
+    <text>Прибор, определяющий с незначительной погрешностью, дату и время следующего выброса. Разработан в секретной лаборатории на Янтаре.</text>
+</string>
+
+<string id="helmet_new_inv_name">
+    <text>Защитный шлем</text>
+</string>
+
+<string id="helmet_new_description">
+    <text>Специальный шлем, защищающий от разрушающего воздействия выбросов. Разработан в секретной лаборатории на Янтаре.</text>
+</string>
+
+<string id="mini_part_inv_name">
+    <text>Часть руководства</text>
+</string>
+
+<string id="mini_part_description">
+    <text>Одна из семи частей руководства по сборке Минигана М134.</text>
+</string>
+
+<string id="pribor_lazarev_inv_name">
+    <text>Прибор Лазарева</text>
+</string>
+
+<string id="pribor_lazarev_description">
+    <text>Прибор, определяющий уровень и динамику роста аномальной активности.</text>
+</string>
+
+<string id="rukzak_adulin_inv_name">
+    <text>Рюкзак с хабаром</text>
+</string>
+
+<string id="rukzak_adulin_description">
+    <text>Рюкзак с сильнодействующими медикаментами.</text>
+</string>
+
+<string id="cd_disk_inv_name">
+    <text>CD диск</text>
+</string>
+
+<string id="cd_disk_description">
+    <text>CD диск с результатами анализов и наблюдений за мутацией животных. Записан около пяти лет назад в самой первой научной экспедиции в Зону, организованной вскоре после второго взрыва на Чаэс.</text>
+</string>
+
+<string id="box_green_inv_name">
+    <text>Несгораемый кейс</text>
+</string>
+
+<string id="box_green_description">
+    <text>Несгораемый кейс с важной информацией внутри.</text>
+</string>
+
+<string id="box_remont_inv_name">
+    <text>Контейнер с медикаментами</text>
+</string>
+
+<string id="box_remont_description">
+    <text>Металлический контейнер с медикаментами внутри.</text>
+</string>
+
+<string id="pribor_haron_inv_name">
+    <text>Декодер Харона</text>
+</string>
+
+<string id="pribor_haron_description">
+    <text>Декодер Харона.</text>
+</string>
+
+<string id="val_sound_object_inv_name">
+    <text>Матюгальник</text>
+</string>
+
+<string id="val_sound_object_description">
+    <text>Громкоговоритель</text>
+</string>
+

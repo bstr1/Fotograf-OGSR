@@ -1,8 +1,8 @@
 <!-- Tasks for random quest generator -->
 <game_task id="eliminate_lager">
-	<title>title</title>
+    <title>eliminate_lager_task</title>
 	<objective>
-		<text>objective</text>
+		<text>eliminate_lager_obj_01</text>
 		<icon>ui_iconsTotal_eliminate_lager</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -10,9 +10,9 @@
 </game_task>
 
 <game_task id="defend_lager">
-	<title>title</title>
+    <title>defend_lager_task</title>
 	<objective>
-		<text>objective</text>
+		<text>defend_lager_obj_01</text>
 		<icon>ui_iconsTotal_defend_lager</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -20,9 +20,9 @@
 </game_task>
 
 <game_task id="artefact">
-	<title>title</title>
+    <title>artefact_task</title>
 	<objective>
-		<text>objective</text>
+		<text>artefact_obj_01</text>
 		<icon>ui_iconsTotal_artefact</icon>
 		<!--			<function_complete>task_manager.task_complete</function_complete>
 			<function_fail>task_manager.task_fail</function_fail>  -->
@@ -30,9 +30,9 @@
 </game_task>
 
 <game_task id="kill_stalker">
-	<title>title</title>
+    <title>kill_stalker_task</title>
 	<objective>
-		<text>objective</text>
+		<text>kill_stalker_obj_01</text>
 		<icon>ui_iconsTotal_kill_stalker</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -40,9 +40,9 @@
 </game_task>
 
 <game_task id="monster_part">
-	<title>title</title>
+    <title>monster_part_task</title>
 	<objective>
-		<text>objective</text>
+		<text>monster_part_obj_01</text>
 		<icon>ui_iconsTotal_monster_part</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -50,9 +50,9 @@
 </game_task>
 
 <game_task id="find_item">
-	<title>title</title>
+    <title>find_item_task</title>
 	<objective>
-		<text>objective</text>
+		<text>find_item_obj_01</text>
 		<icon>ui_iconsTotal_find_item</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -61,9 +61,9 @@
 
 <!-- trader -->
 <game_task id="eliminate_lager_trader">
-	<title>title</title>
+    <title>eliminate_lager_trader_task</title>
 	<objective>
-		<text>objective</text>
+		<text>eliminate_lager_trader_obj_01</text>
 		<icon>ui_iconsTotal_eliminate_lager</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -71,9 +71,9 @@
 </game_task>
 
 <game_task id="defend_lager_trader">
-	<title>title</title>
+    <title>defend_lager_trader_task</title>
 	<objective>
-		<text>objective</text>
+		<text>defend_lager_trader_obj_01</text>
 		<icon>ui_iconsTotal_defend_lager</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -81,9 +81,9 @@
 </game_task>
 
 <game_task id="artefact_trader">
-	<title>title</title>
+    <title>artefact_trader_task</title>
 	<objective>
-		<text>objective</text>
+		<text>artefact_trader_obj_01</text>
 		<icon>ui_npc_u_trader</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -91,9 +91,9 @@
 </game_task>
 
 <game_task id="kill_stalker_trader">
-	<title>title</title>
+    <title>kill_stalker_trader_task</title>
 	<objective>
-		<text>objective</text>
+		<text>kill_stalker_trader_obj_01</text>
 		<icon>ui_iconsTotal_kill_stalker</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -101,9 +101,9 @@
 </game_task>
 
 <game_task id="monster_part_trader">
-	<title>title</title>
+    <title>monster_part_trader_task</title>
 	<objective>
-		<text>objective</text>
+		<text>monster_part_trader_obj_01</text>
 		<icon>ui_npc_u_trader</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -111,9 +111,9 @@
 </game_task>
 
 <game_task id="find_item_trader">
-	<title>title</title>
+    <title>find_item_trader_task</title>
 	<objective>
-		<text>objective</text>
+		<text>find_item_trader_obj_01</text>
 		<icon>ui_npc_u_trader</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -122,9 +122,9 @@
 
 <!-- barman -->
 <game_task id="eliminate_lager_barman">
-	<title>title</title>
+    <title>eliminate_lager_barman_task</title>
 	<objective>
-		<text>objective</text>
+		<text>eliminate_lager_barman_obj_01</text>
 		<icon>ui_iconsTotal_eliminate_lager</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -132,9 +132,9 @@
 </game_task>
 
 <game_task id="defend_lager_barman">
-	<title>title</title>
+    <title>defend_lager_barman_task</title>
 	<objective>
-		<text>objective</text>
+		<text>defend_lager_barman_obj_01</text>
 		<icon>ui_iconsTotal_defend_lager</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -142,9 +142,9 @@
 </game_task>
 
 <game_task id="artefact_barman">
-	<title>title</title>
+    <title>artefact_barman_task</title>
 	<objective>
-		<text>objective</text>
+		<text>artefact_barman_obj_01</text>
 		<icon>ui_npc_u_stalker_magomet</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -152,9 +152,9 @@
 </game_task>
 
 <game_task id="kill_stalker_barman">
-	<title>title</title>
+    <title>kill_stalker_barman_task</title>
 	<objective>
-		<text>objective</text>
+		<text>kill_stalker_barman_obj_01</text>
 		<icon>ui_iconsTotal_kill_stalker</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -162,9 +162,9 @@
 </game_task>
 
 <game_task id="monster_part_barman">
-	<title>title</title>
+    <title>monster_part_barman_task</title>
 	<objective>
-		<text>objective</text>
+		<text>monster_part_barman_obj_01</text>
 		<icon>ui_npc_u_stalker_magomet</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -172,9 +172,9 @@
 </game_task>
 
 <game_task id="find_item_barman">
-	<title>title</title>
+    <title>find_item_barman_task</title>
 	<objective>
-		<text>objective</text>
+		<text>find_item_barman_obj_01</text>
 		<icon>ui_npc_u_stalker_magomet</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -183,9 +183,9 @@
 
 <!-- ecolog -->
 <game_task id="eliminate_lager_ecolog">
-	<title>title</title>
+    <title>eliminate_lager_ecolog_task</title>
 	<objective>
-		<text>objective</text>
+		<text>eliminate_lager_ecolog_obj_01</text>
 		<icon>ui_iconsTotal_eliminate_lager</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -193,9 +193,9 @@
 </game_task>
 
 <game_task id="defend_lager_ecolog">
-	<title>title</title>
+    <title>defend_lager_ecolog_task</title>
 	<objective>
-		<text>objective</text>
+		<text>defend_lager_ecolog_obj_01</text>
 		<icon>ui_iconsTotal_defend_lager</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -203,9 +203,9 @@
 </game_task>
 
 <game_task id="artefact_ecolog">
-	<title>title</title>
+    <title>artefact_ecolog_task</title>
 	<objective>
-		<text>objective</text>
+		<text>artefact_ecolog_obj_01</text>
 		<icon>ui_npc_u_ucheniy_2</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -213,9 +213,9 @@
 </game_task>
 
 <game_task id="kill_stalker_ecolog">
-	<title>title</title>
+    <title>kill_stalker_ecolog_task</title>
 	<objective>
-		<text>objective</text>
+		<text>kill_stalker_ecolog_obj_01</text>
 		<icon>ui_iconsTotal_kill_stalker</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -223,9 +223,9 @@
 </game_task>
 
 <game_task id="monster_part_ecolog">
-	<title>title</title>
+    <title>monster_part_ecolog_task</title>
 	<objective>
-		<text>objective</text>
+		<text>monster_part_ecolog_obj_01</text>
 		<icon>ui_npc_u_ucheniy_2</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -233,9 +233,9 @@
 </game_task>
 
 <game_task id="find_item_ecolog">
-	<title>title</title>
+    <title>find_item_ecolog_task</title>
 	<objective>
-		<text>objective</text>
+		<text>find_item_ecolog_obj_01</text>
 		<icon>ui_npc_u_ucheniy_2</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -244,9 +244,9 @@
 
 <!-- dolg -->
 <game_task id="eliminate_lager_dolg">
-	<title>title</title>
+    <title>eliminate_lager_dolg_task</title>
 	<objective>
-		<text>objective</text>
+		<text>eliminate_lager_dolg_obj_01</text>
 		<icon>ui_iconsTotal_eliminate_lager</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -254,9 +254,9 @@
 </game_task>
 
 <game_task id="defend_lager_dolg">
-	<title>title</title>
+    <title>defend_lager_dolg_task</title>
 	<objective>
-		<text>objective</text>
+		<text>defend_lager_dolg_obj_01</text>
 		<icon>ui_iconsTotal_defend_lager</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -264,9 +264,9 @@
 </game_task>
 
 <game_task id="artefact_dolg">
-	<title>title</title>
+    <title>artefact_dolg_task</title>
 	<objective>
-		<text>objective</text>
+		<text>artefact_dolg_obj_01</text>
 		<icon>ui_npc_rus_voronin</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -274,9 +274,9 @@
 </game_task>
 
 <game_task id="kill_stalker_dolg">
-	<title>title</title>
+    <title>kill_stalker_dolg_task</title>
 	<objective>
-		<text>objective</text>
+		<text>kill_stalker_dolg_obj_01</text>
 		<icon>ui_iconsTotal_kill_stalker</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -284,9 +284,9 @@
 </game_task>
 
 <game_task id="monster_part_dolg">
-	<title>title</title>
+    <title>monster_part_dolg_task</title>
 	<objective>
-		<text>objective</text>
+		<text>monster_part_dolg_obj_01</text>
 		<icon>ui_npc_rus_voronin</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -294,9 +294,9 @@
 </game_task>
 
 <game_task id="find_item_dolg">
-	<title>title</title>
+    <title>find_item_dolg_task</title>
 	<objective>
-		<text>objective</text>
+		<text>find_item_dolg_obj_01</text>
 		<icon>ui_npc_rus_voronin</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -305,9 +305,9 @@
 
 <!-- freedom -->
 <game_task id="eliminate_lager_freedom">
-	<title>title</title>
+    <title>eliminate_lager_freedom_task</title>
 	<objective>
-		<text>objective</text>
+		<text>eliminate_lager_freedom_obj_01</text>
 		<icon>ui_iconsTotal_eliminate_lager</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -315,9 +315,9 @@
 </game_task>
 
 <game_task id="defend_lager_freedom">
-	<title>title</title>
+    <title>defend_lager_freedom_task</title>
 	<objective>
-		<text>objective</text>
+		<text>defend_lager_freedom_obj_01</text>
 		<icon>ui_iconsTotal_defend_lager</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -325,9 +325,9 @@
 </game_task>
 
 <game_task id="artefact_freedom">
-	<title>title</title>
+    <title>artefact_freedom_task</title>
 	<objective>
-		<text>objective</text>
+		<text>artefact_freedom_obj_01</text>
 		<icon>ui_npc_u_stalker_sv_leader</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -335,9 +335,9 @@
 </game_task>
 
 <game_task id="kill_stalker_freedom">
-	<title>title</title>
+    <title>kill_stalker_freedom_task</title>
 	<objective>
-		<text>objective</text>
+		<text>kill_stalker_freedom_obj_01</text>
 		<icon>ui_iconsTotal_kill_stalker</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -345,9 +345,9 @@
 </game_task>
 
 <game_task id="monster_part_freedom">
-	<title>title</title>
+    <title>monster_part_freedom_task</title>
 	<objective>
-		<text>objective</text>
+		<text>monster_part_freedom_obj_01</text>
 		<icon>ui_npc_u_stalker_sv_leader</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -355,9 +355,9 @@
 </game_task>
 
 <game_task id="find_item_freedom">
-	<title>title</title>
+    <title>find_item_freedom_task</title>
 	<objective>
-		<text>objective</text>
+		<text>find_item_freedom_obj_01</text>
 		<icon>ui_npc_u_stalker_sv_leader</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -366,9 +366,9 @@
 
 <!-- Levsha -->
 <game_task id="eliminate_lager_nebo">
-	<title>title</title>
+    <title>eliminate_lager_nebo_task</title>
 	<objective>
-		<text>objective</text>
+		<text>eliminate_lager_nebo_obj_01</text>
 		<icon>ui_iconsTotal_eliminate_lager</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -376,9 +376,9 @@
 </game_task>
 
 <game_task id="defend_lager_nebo">
-	<title>title</title>
+    <title>defend_lager_nebo_task</title>
 	<objective>
-		<text>objective</text>
+		<text>defend_lager_nebo_obj_01</text>
 		<icon>ui_iconsTotal_defend_lager</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -386,9 +386,9 @@
 </game_task>
 
 <game_task id="artefact_nebo">
-	<title>title</title>
+    <title>artefact_nebo_task</title>
 	<objective>
-		<text>objective</text>
+		<text>artefact_nebo_obj_01</text>
 		<icon>ui_npc_u_stalker_hellcar</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -396,9 +396,9 @@
 </game_task>
 
 <game_task id="kill_stalker_nebo">
-	<title>title</title>
+    <title>kill_stalker_nebo_task</title>
 	<objective>
-		<text>objective</text>
+		<text>kill_stalker_nebo_obj_01</text>
 		<icon>ui_iconsTotal_kill_stalker</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -406,9 +406,9 @@
 </game_task>
 
 <game_task id="monster_part_nebo">
-	<title>title</title>
+    <title>monster_part_nebo_task</title>
 	<objective>
-		<text>objective</text>
+		<text>monster_part_nebo_obj_01</text>
 		<icon>ui_npc_u_stalker_hellcar</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>
@@ -416,9 +416,9 @@
 </game_task>
 
 <game_task id="find_item_nebo">
-	<title>title</title>
+    <title>find_item_nebo_task</title>
 	<objective>
-		<text>objective</text>
+		<text>find_item_nebo_obj_01</text>
 		<icon>ui_npc_u_stalker_hellcar</icon>
 		<function_complete>task_manager.task_complete</function_complete>
 		<function_fail>task_manager.task_fail</function_fail>

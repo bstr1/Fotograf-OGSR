@@ -91,9 +91,9 @@ inv_grid_y                               = 17
 visual                                   = equipments\box_green.ogf
 cost                                     = 5000
 
-description                              = "Контейнер Захара, в котором находятся найденные им редкие артефакты."
-inv_name                                 = "Контейнер Захара"
-inv_name_short                           = "Контейнер Захара"
+description                              = zahar_box_description
+inv_name                                 = zahar_box_inv_name
+inv_name_short                           = zahar_box_inv_name
 inv_weight                               = 5
 
 inv_grid_width                           = 2
@@ -139,7 +139,7 @@ class                                    = D_SIMDET
 cform                                    = skeleton
 
 visual                                   = equipments\item_datchik3.ogf
-description                              = detector_kruglov_desc0
+description                              = detector_kruglov_description
 buzzer_radius                            = 1.5
 noise                                    = zone_mosquito_bald       ;detectors\geiger_noise_loop
 buzzer                                   = zone_mosquito_bald       ;detectors\DA-2_alarm_loop
@@ -168,9 +168,9 @@ visual                                   = equipments\item_minipda.ogf
 quest_item                               = false
 cost                                     = 100
 
-description                              = "Простая флешка для хранения информации. Среди прочей информации, должны быть сведения о переходе из Тёмной Долины на Кордон."
-inv_name                                 = "Флешка бандитов"
-inv_name_short                           = "Флешка бандитов"
+description                              = flash_ban_description
+inv_name                                 = flash_ban_inv_name
+inv_name_short                           = flash_ban_inv_name
 inv_weight                               = 0
 
 inv_grid_width                           = 1
@@ -438,7 +438,7 @@ class                                    = D_SIMDET
 cform                                    = skeleton
 
 visual                                   = equipments\item_datchik3.ogf
-description                              = detector_elite_bad_desc0    ;15
+description                              = detector_elite_bad_description    ;15
 buzzer_radius                            = 1.5
 noise                                    = zone_mosquito_bald       ;detectors\geiger_noise_loop
 buzzer                                   = zone_mosquito_bald       ;detectors\DA-2_alarm_loop
@@ -479,9 +479,9 @@ cform                                    = skeleton
 class                                    = SCRPTART
 
 visual                                   = physics\anomaly\artefact_electra1.ogf 
-description                              = af_electra_moonlight_new_desc
-inv_name                                 = af_electra_moonlight_new
-inv_name_short                           = 
+description                              = af_electra_moonlight_new_description
+inv_name                                 = af_electra_moonlight_new_inv_name
+inv_name_short                           = af_electra_moonlight_new_inv_name
 inv_weight                               = 0.3
 
 inv_grid_x                               = 10
@@ -508,9 +508,9 @@ inv_grid_y                               = 18
 visual                                   = equipments\item_pda.ogf    
 cost                                     = 0
 
-description                              = nine_pda_desc
-inv_name                                 = nine_pda_name
-inv_name_short                           = nine_pda_name
+description                              = nine_pda_description
+inv_name                                 = nine_pda_inv_name
+inv_name_short                           = nine_pda_inv_name
 inv_weight                               = 0
 
 inv_grid_width                           = 2
@@ -539,9 +539,9 @@ inv_grid_y                               = 33
 visual                                   = equipments\item_transiver    
 cost                                     = 5000
 
-description                              = "Передатчик Болотного Доктора."
-inv_name                                 = Ресивер
-inv_name_short                           = Ресивер
+description                              = doc_peredatchik_description
+inv_name                                 = doc_peredatchik_inv_name
+inv_name_short                           = doc_peredatchik_inv_name
 inv_weight                               = 3
 
 inv_grid_width                           = 2
@@ -650,9 +650,9 @@ visual                                   = physics\box\box_1b
 quest_item                               = false
 cost                                     = 50000
 
-description                              = "Ящик с минами, который попросил найти и принести Вано."
-inv_name                                 = "Ящик с минами"
-inv_name_short                           = "Ящик с минами"
+description                              = box_vano_description
+inv_name                                 = box_vano_inv_name
+inv_name_short                           = box_vano_inv_name
 inv_weight                               = 12
 
 inv_grid_width                           = 2
@@ -892,10 +892,10 @@ zone_sound_4_                            = detectors\DA-2_beep1
 zone_min_freq_4                          = 0.5
 zone_max_freq_4                          = 30
 
-description                              = "Документы с очень важной информацией."
+description                              = kruglov_flash_description
 
-inv_name                                 = Документы
-inv_name_short                           = Документы
+inv_name                                 = kruglov_flash_inv_name
+inv_name_short                           = kruglov_flash_inv_name
 inv_weight                               = 0
 
 inv_grid_width                           = 2
@@ -916,8 +916,8 @@ auto_attach                              = false
 visual                                   = equipments\item_minipda.ogf    
 cost                                     = 0
 
-inv_name                                 = Svoboda Leader PDA
-inv_name_short                           = Svoboda Leader PDA
+inv_name                                 = mil_svoboda_leader_pda_inv_name
+inv_name_short                           = mil_svoboda_leader_pda_inv_name
 inv_weight                               = 0
 
 inv_grid_width                           = 1
@@ -930,8 +930,8 @@ inv_grid_y                               = 14
 visual                                   = equipments\item_flash_2.ogf
 cost                                     = 0
 
-inv_name                                 = "Scientist" Flash card
-inv_name_short                           = "Scientist" flash
+inv_name                                 = dar_pass_flash_inv_name
+inv_name_short                           = dar_pass_flash_inv_name_short
 inv_weight                               = 0
 
 inv_grid_width                           = 1
@@ -944,8 +944,8 @@ inv_grid_y                               = 19
 visual                                   = equipments\item_document_2.ogf
 cost                                     = 0
 
-inv_name                                 = CodeX-18
-inv_name_short                           = CodeX-18
+inv_name                                 = dar_pass_document_inv_name
+inv_name_short                           = dar_pass_document_inv_name
 inv_weight                               = 0
 
 inv_grid_width                           = 2
@@ -1068,9 +1068,9 @@ quest_item                               = true
 visual                                   = amk\flame_prt_gorelka.ogf    
 cost                                     = 50
 
-description                              = flame_part_desc
-inv_name                                 = item_flame1_name    
-inv_name_short                           = item_flame1_name
+description                              = flame_parts_description
+inv_name                                 = flame_parts_inv_name
+inv_name_short                           = flame_parts_inv_name
 inv_weight                               = 0
 
 inv_grid_width                           = 1
@@ -1081,9 +1081,9 @@ inv_grid_y                               = 3
 
 [gorelka]:flame_parts
 visual                                   = amk\flame_prt_gorelka.ogf
-description                              = gorelka_descr
-inv_name                                 = gorelka    
-inv_name_short                           = gorelka
+description                              = gorelka_description
+inv_name                                 = gorelka_inv_name
+inv_name_short                           = gorelka_inv_name
 inv_weight                               = 1
 
 inv_grid_width                           = 1
@@ -1094,9 +1094,9 @@ inv_grid_y                               = 40
 
 [manometr]:flame_parts
 visual                                   = amk\flame_prt_manometr.ogf
-description                              = manometr_descr
-inv_name                                 = manometr
-inv_name_short                           = manometr
+description                              = manometr_description
+inv_name                                 = manometr_inv_name
+inv_name_short                           = manometr_inv_name
 inv_weight                               = 1
 
 inv_grid_width                           = 1
@@ -1107,9 +1107,9 @@ inv_grid_y                               = 40
 
 [trubka]:flame_parts
 visual                                   = amk\flame_prt_trubka.ogf
-description                              = trubka_descr
-inv_name                                 = trubka
-inv_name_short                           = trubka
+description                              = trubka_description
+inv_name                                 = trubka_inv_name
+inv_name_short                           = trubka_inv_name
 inv_weight                               = 0.5
 
 inv_grid_width                           = 2
@@ -1120,9 +1120,9 @@ inv_grid_y                               = 40
 
 [flamethrower_bad]:flame_parts
 visual                                   = amk\wpn_flame_brk.ogf
-description                              = flama_descr
-inv_name                                 = item_flamethrower_bad_name    
-inv_name_short                           = item_flamethrower_bad_name
+description                              = flamethrower_bad_description
+inv_name                                 = flamethrower_bad_inv_name
+inv_name_short                           = flamethrower_bad_inv_name
 inv_weight                               = 5
 
 inv_grid_width                           = 4
@@ -1319,9 +1319,9 @@ inv_grid_y                               = 37
 visual                                   = equipments\item_decoder.ogf    
 cost                                     = 30000
 
-description                              = "Прибор, определяющий с незначительной погрешностью, дату и время следующего выброса. Разработан в секретной лаборатории на Янтаре." 
-inv_name                                 = "Детектор выбросов"    
-inv_name_short                           = "Детектор выбросов"
+description                              = pribor_new_description
+inv_name                                 = pribor_new_inv_name
+inv_name_short                           = pribor_new_inv_name
 inv_weight                               = 0.3
 
 inv_grid_width                           = 1
@@ -1334,9 +1334,9 @@ inv_grid_y                               = 3
 visual                                   = equipments\item_psi_helmet.ogf    
 cost                                     = 15000
 
-description                              = "Специальный шлем, защищающий от разрушающего воздействия выбросов. Разработан в секретной лаборатории на Янтаре."
-inv_name                                 = "Защитный шлем"
-inv_name_short                           = "Защитный шлем" 
+description                              = helmet_new_description
+inv_name                                 = helmet_new_inv_name
+inv_name_short                           = helmet_new_inv_name
 inv_weight                               = 0.5
 
 inv_grid_width                           = 1
@@ -1349,9 +1349,9 @@ inv_grid_y                               = 13
 visual                                   = equipments\minigun_part.ogf    
 cost                                     = 1000
 
-description                              = "Одна из семи частей руководства по сборке Минигана М134."
-inv_name                                 = "Часть руководства"
-inv_name_short                           = "Часть руководства"
+description                              = mini_part_description
+inv_name                                 = mini_part_inv_name
+inv_name_short                           = mini_part_inv_name
 inv_weight                               = 0
 
 inv_grid_width                           = 3
@@ -1364,9 +1364,9 @@ inv_grid_y                               = 32
 visual                                   = equipments\item_decoder.ogf    
 cost                                     = 50000
 
-description                              = "Прибор, определяющий уровень и динамику роста аномальной активности." 
-inv_name                                 = "Прибор Лазарева"    
-inv_name_short                           = "Прибор Лазарева"
+description                              = pribor_lazarev_description
+inv_name                                 = pribor_lazarev_inv_name
+inv_name_short                           = pribor_lazarev_inv_name
 inv_weight                               = 0.3
 
 inv_grid_width                           = 1
@@ -1379,9 +1379,9 @@ inv_grid_y                               = 34
 visual                                   = equipments\item_rukzag.ogf    
 cost                                     = 3000
 
-description                              = "Рюкзак с сильнодействующими медикаментами." 
-inv_name                                 = "Рюкзак с хабаром"    
-inv_name_short                           = "Рюкзак с хабаром"
+description                              = rukzak_adulin_description
+inv_name                                 = rukzak_adulin_inv_name
+inv_name_short                           = rukzak_adulin_inv_name
 inv_weight                               = 2.5
 
 inv_grid_width                           = 2
@@ -1409,9 +1409,9 @@ inv_grid_y                               = 18
 visual                                   = equipments\cd.ogf    
 cost                                     = 500
 
-description                              = "CD диск с результатами анализов и наблюдений за мутацией животных. Записан около пяти лет назад в самой первой научной экспедиции в Зону, организованной вскоре после второго взрыва на Чаэс." 
-inv_name                                 = "CD диск"    
-inv_name_short                           = "CD диск"
+description                              = cd_disk_description
+inv_name                                 = cd_disk_inv_name
+inv_name_short                           = cd_disk_inv_name
 inv_weight                               = 0.05
 
 inv_grid_width                           = 1
@@ -1424,9 +1424,9 @@ inv_grid_y                               = 5
 visual                                   = equipments\box_green.ogf    
 cost                                     = 5000
 
-description                              = "Несгораемый кейс с важной информацией внутри." 
-inv_name                                 = "Несгораемый кейс"    
-inv_name_short                           = "Несгораемый кейс"
+description                              = box_green_description
+inv_name                                 = box_green_inv_name
+inv_name_short                           = box_green_inv_name
 inv_weight                               = 1.5
 
 inv_grid_width                           = 2
@@ -1439,9 +1439,9 @@ inv_grid_y                               = 17
 visual                                   = equipments\box_green.ogf    
 cost                                     = 5000
 
-description                              = "Металлический контейнер с медикаментами внутри." 
-inv_name                                 = "Контейнер с медикаментами"    
-inv_name_short                           = "Контейнер с медикаментами"
+description                              = box_remont_description
+inv_name                                 = box_remont_inv_name
+inv_name_short                           = box_remont_inv_name
 inv_weight                               = 2.5
 
 inv_grid_width                           = 2
@@ -1454,9 +1454,9 @@ inv_grid_y                               = 9
 visual                                   = equipments\item_decoder.ogf    
 cost                                     = 50000
 
-description                              = "Декодер Харона." 
-inv_name                                 = "Декодер Харона"    
-inv_name_short                           = "Декодер Харона"
+description                              = pribor_haron_description
+inv_name                                 = pribor_haron_inv_name
+inv_name_short                           = pribor_haron_inv_name
 inv_weight                               = 0.3
 
 inv_grid_width                           = 1

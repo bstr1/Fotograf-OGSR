@@ -1,4 +1,4 @@
-﻿function attach(sm)
+function attach(sm)
     sm:subscribe({ signal = "on_first_update",   fun = this.on_first_update   })
     sm:subscribe({ signal = "on_key_down",       fun = this.on_key_down       })
     sm:subscribe({ signal = "on_key_holding",    fun = this.on_key_hold       })
