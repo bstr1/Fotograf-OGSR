@@ -1160,8 +1160,6 @@ function object_type(obj)
         otype == clsid.wpn_usp45 or
         otype == clsid.wpn_groza or
         otype == clsid.wpn_knife or
-        otype == clsid.wpn_scope or
-        otype == clsid.wpn_silencer or
         otype == clsid.wpn_grenade_launcher or
         otype == clsid.obj_physic or
         otype == clsid.obj_breakable or

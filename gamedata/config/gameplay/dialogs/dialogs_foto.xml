@@ -3046,34 +3046,6 @@
     </phrase_list>
 </dialog>
 
-<dialog id="saharov_glook_dialog">
-    <precondition>boryan67.GGHron</precondition>
-    <phrase_list>
-        <phrase id="0">
-            <text>saharov_glook_0</text>
-            <next>1</next>
-        </phrase>
-        <phrase id="1">
-            <text>saharov_glook_1</text>
-            <next>2</next>
-        </phrase>
-        <phrase id="2">
-            <text>saharov_glook_2</text>
-            <next>3</next>
-        </phrase>
-        <phrase id="3">
-            <text>saharov_glook_3</text>
-            <action>boryan67.Sahar_speech</action>
-            <next>4</next>
-        </phrase>
-        <phrase id="4">
-            <text>saharov_glook_4</text>
-            <action>boryan67.GGnoHron</action>
-            <action>dialogs.break_dialog</action>
-        </phrase>
-    </phrase_list>
-</dialog>
-
 <dialog id="kruglov_anoms_dialog">
     <dont_has_info>kruglov_anoms_dialog_start</dont_has_info>
     <phrase_list>

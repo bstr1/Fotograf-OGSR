@@ -376,7 +376,6 @@
   <supplies>
       [spawn] \n
       ammo_5.56x45_ss190 \n
-      wpn_addon_grenade_launcher \n
   </supplies>
   
 #include "gameplay\character_criticals.xml"
@@ -1932,4 +1931,3 @@
 #include "gameplay\character_dialogs.xml"   
     
 </specific_character>
-

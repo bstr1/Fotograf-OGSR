@@ -94,7 +94,6 @@ local valuable_clsid = {
     [clsid.wpn_rpg7_s] = true,
     [clsid.wpn_scope_s] = true,
     [clsid.wpn_shotgun_s] = true,
-    [clsid.wpn_silencer] = true,
     [clsid.wpn_svd_s] = true,
     [clsid.wpn_svu_s] = true,
     [clsid.wpn_usp45_s] = true,

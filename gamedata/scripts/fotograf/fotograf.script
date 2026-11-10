@@ -9,6 +9,13 @@ local function on_take(obj, sobj)
         local snd_obj = xr_sound.get_safe_sound_object([[zwuk\controller_evil]])
         snd_obj:play(db.actor, 0, sound_object.s2d)
 
+	-- Корона Грета
+    elseif level.name() == "aver" then
+        if obj:section() == "korona" and db.actor:has_info("obmen") then
+        local snd_obj = xr_sound.get_safe_sound_object([[zwuk\mandra]])
+        snd_obj:play(db.actor, 0, sound_object.s2d)
+    end
+		
     elseif obj:section() == "wpn_coltm45a1" and db.actor:dont_has_info("smith_razgovor_start") then
         db.actor:give_info_portion("smith_razgovor_start")
     elseif obj:section() == "wpn_foto" and db.actor:dont_has_info("fotik_nashel") then
@@ -422,20 +429,20 @@ function x18_uber_spawn()
     alife():create("tank5", vector():set(31.391, -10.823, -21.274), 7046, 139)
     alife():create("tank6", vector():set(31.358, -10.814, -12.184), 7059, 139)
 
-    alife():create("uchen_06", vector():set(28.224, -6.619, -14.617), 6746, 141)
+    local obj = alife():create("uchen_06", vector():set(28.224, -6.619, -14.617), 6746, 141)
     alife():assign_story_id(obj.id, story_ids.uchen_06)
 
-    local obj = alife():create("uchen-x18_01", vector():set(28.433, -6.619, -18.404), 6807, 141)
-    alife():assign_story_id(obj.id, story_ids.uchen-x18_01)
+    local obj = alife():create("uchen_x18_01", vector():set(28.433, -6.619, -18.404), 6807, 141)
+    alife():assign_story_id(obj.id, story_ids.uchen_x18_01)
 
-    local obj = alife():create("uchen-x18_02", vector():set(20.060, -6.618, -17.336), 5845, 141)
-    alife():assign_story_id(obj.id, story_ids.uchen-x18_02)
+    local obj = alife():create("uchen_x18_02", vector():set(20.060, -6.618, -17.336), 5845, 141)
+    alife():assign_story_id(obj.id, story_ids.uchen_x18_02)
 
-    local obj = alife():create("uchen-x18_03", vector():set(22.896, -6.618, -17.007), 6194, 141)
-    alife():assign_story_id(obj.id, story_ids.uchen-x18_03)
+    local obj = alife():create("uchen_x18_03", vector():set(22.896, -6.618, -17.007), 6194, 141)
+    alife():assign_story_id(obj.id, story_ids.uchen_x18_03)
 
-    local obj = alife():create("uchen-x18_04", vector():set(36.287, -6.360, -33.469), 7231, 143)
-    alife():assign_story_id(obj.id, story_ids.uchen-x18_04)
+    local obj = alife():create("uchen_x18_04", vector():set(36.287, -6.360, -33.469), 7231, 143)
+    alife():assign_story_id(obj.id, story_ids.uchen_x18_04)
 end
 
 function x18_elektro_spawn()
@@ -3593,28 +3600,28 @@ function x18_claw_spawn()
 end
 
 function del_uchen_x18_01()
-    local obj = alife():story_object(story_ids.uchen-x18_01)
+    local obj = alife():story_object(story_ids.uchen_x18_01)
     if obj then
         alife():release(obj, true)
     end
 end
 
 function del_uchen_x18_02()
-    local obj = alife():story_object(story_ids.uchen-x18_02)
+    local obj = alife():story_object(story_ids.uchen_x18_02)
     if obj then
         alife():release(obj, true)
     end
 end
 
 function del_uchen_x18_03()
-    local obj = alife():story_object(story_ids.uchen-x18_03)
+    local obj = alife():story_object(story_ids.uchen_x18_03)
     if obj then
         alife():release(obj, true)
     end
 end
 
 function del_uchen_x18_04()
-    local obj = alife():story_object(story_ids.uchen-x18_04)
+    local obj = alife():story_object(story_ids.uchen_x18_04)
     if obj then
         alife():release(obj, true)
     end

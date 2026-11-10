@@ -570,8 +570,8 @@
     <supplies>
       [spawn] \n
       zheton = 1 \n
-      wpn_g36 \n
-      ammo_11.43x23_hydro = 2 \n
+      wpn_desert_eagle_nimble \n
+      ammo_11.43x23_hydro = 1 \n
       medkit_army = 1 \n
       device_torch \n
 #include "gameplay\character_drugs.xml" \n
@@ -838,7 +838,6 @@
 
     <actor_dialog>saharov_island_dialog</actor_dialog>
     <actor_dialog>saharov_dyshlo_dialog</actor_dialog>
-    <actor_dialog>saharov_glook_dialog</actor_dialog>
     <actor_dialog>sahar_og_dialog_est</actor_dialog>
     <actor_dialog>sahar_og_dialog</actor_dialog>
     <actor_dialog>sahar_tn_dialog_est</actor_dialog>
@@ -4466,6 +4465,9 @@
     <supplies>
             [spawn] \n
             medkit_scientic = 1 \n
+			wpn_walther \n
+			ammo_9x19_pbp = 1 \n
+			device_torch \n
     </supplies>
 
     <start_dialog>hello_dialog</start_dialog>
@@ -5008,10 +5010,9 @@
     <snd_config>characters_voice\human_01\military\</snd_config>
     <crouch_type>0</crouch_type>
     <supplies>
-            [spawn] \n
-            wpn_pkm \n
-            ammo_7.62x54r = 1 \n
-            device_torch \n
+        [spawn] \n
+        wpn_minifake \n
+        device_torch \n
     </supplies>
 
     <start_dialog>hello_dialog</start_dialog>
@@ -5038,8 +5039,7 @@
     <crouch_type>0</crouch_type>
     <supplies>
         [spawn] \n
-        wpn_pkm \n
-        ammo_7.62x54r = 1 \n
+        wpn_minifake \n
         device_torch \n
     </supplies>
 
@@ -5065,8 +5065,7 @@
     <crouch_type>0</crouch_type>
     <supplies>
         [spawn] \n
-        wpn_pkm \n
-        ammo_7.62x54r = 1 \n
+        wpn_minifake \n
         device_torch \n
     </supplies>
         

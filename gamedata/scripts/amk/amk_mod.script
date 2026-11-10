@@ -1476,7 +1476,7 @@ function firebated(obj, amount, local_direction, who, bone_index)
 			{
 				obj=obj,
 				particle="amk\\flame",
-				bone="bip01_spine1"
+				bone="bip01_spine"
 			})
 		end
 	end

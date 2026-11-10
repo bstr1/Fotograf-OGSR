@@ -751,7 +751,6 @@ function torch_binder:update(delta)
     -- m_art.CheckTimeUpdate()
     time_back.kvest_failed_update()
     Update()
-    boryan67.GlukUpdate()
 end
 
 function torch_binder:net_spawn(data)

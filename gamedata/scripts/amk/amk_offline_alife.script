@@ -1654,7 +1654,7 @@ function process_trade(npc)
 					if cnt_detector > 1 then
 						table.insert(sell_list, v)
 					end
-				elseif sect == "wpn_addon_scope" or sect =="wpn_addon_scope_susat" or sect == "wpn_addon_silencer" or sect == "wpn_addon_grenade_launcher" or sect == "wpn_addon_grenade_launcher_m203" then
+				elseif sect == "wpn_addon_scope"  or sect == "wpn_addon_silencer" or sect == "wpn_addon_grenade_launcher" or sect == "wpn_addon_grenade_launcher_m203" then
 					cnt_addons = cnt_addons + 1
 					if cnt_addons > 2 then
 						table.insert(sell_list, v)
