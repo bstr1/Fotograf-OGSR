@@ -188,6 +188,8 @@ end
 
 function voronin_nagrada(first_speaker, second_speaker)
     dialogs.relocate_item_section(second_speaker, "wpn_groza_nimble", "in", 1)
+	dialogs.relocate_item_section(second_speaker, "wpn_addon_grenade_launcher_groza", "in", 1)
+	dialogs.relocate_item_section(second_speaker, "po4x34", "in", 1)
     dialogs.relocate_item_section(second_speaker, "ammo_5.45x39_ap", "in", 3)
     dialogs.relocate_item_section(second_speaker, "ammo_vog-25", "in", 3)
     dialogs.relocate_item_section(second_speaker, "ammo_vog-25p", "in", 3)

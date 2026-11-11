@@ -1726,7 +1726,9 @@
         <phrase id="16">
             <text>dunya_1_16</text>
             <give_info>dunya_dialog_1_done</give_info>
-            <action>mauvais.music_swamp04</action>
+            <!-- <action>mauvais.music_swamp04</action> -->
+			<action>dialogs.break_dialog</action>
+			<action>chetkiu.dunya_teleport</action>
         </phrase>
     </phrase_list>
 </dialog>

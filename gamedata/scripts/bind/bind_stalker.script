@@ -299,6 +299,16 @@ function actor_binder:article_callback(npc, group, name)
 end
 ----------------------------------------------------------------------------------------------------------------------
 function actor_binder:on_item_take(obj)
+    if not obj then return end
+
+    local sobj = alife():object(obj:id())
+    if not sobj then
+        if obj:section() ~= "bolt" then
+            self.object:drop_item(obj)
+        end
+        return
+    end
+
     level_tasks.proceed(self.object)
     -- game_stats.update_take_item (obj, self.object)
     local item = obj
@@ -313,6 +323,7 @@ function actor_binder:on_item_take(obj)
     foto2.checking_use_item(obj)
     foto.take_item(obj)
     -- AMK UTILS--
+
     self.am:call("on_take", obj, sobj)
 end
 ----------------------------------------------------------------------------------------------------------------------

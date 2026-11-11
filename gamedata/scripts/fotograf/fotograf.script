@@ -9,12 +9,9 @@ local function on_take(obj, sobj)
         local snd_obj = xr_sound.get_safe_sound_object([[zwuk\controller_evil]])
         snd_obj:play(db.actor, 0, sound_object.s2d)
 
-	-- Корона Грета
-    elseif level.name() == "aver" then
-        if obj:section() == "korona" and db.actor:has_info("obmen") then
-        local snd_obj = xr_sound.get_safe_sound_object([[zwuk\mandra]])
-        snd_obj:play(db.actor, 0, sound_object.s2d)
-    end
+	elseif obj:section() == "korona" and db.actor:has_info("obmen") then
+		local snd_obj = xr_sound.get_safe_sound_object([[zwuk\mandra]])
+		snd_obj:play(db.actor, 0, sound_object.s2d)
 		
     elseif obj:section() == "wpn_coltm45a1" and db.actor:dont_has_info("smith_razgovor_start") then
         db.actor:give_info_portion("smith_razgovor_start")
@@ -3549,6 +3546,7 @@ function brown_six_dialog_nagrada(first_speaker, second_speaker)
     dialogs.relocate_money(first_speaker, 20000, "in")
     dialogs.relocate_item_section(second_speaker, "wpn_addon_grenade_launcher_m203", "in", 1)
     dialogs.relocate_item_section(second_speaker, "ammo_m209", "in", 5)
+	dialogs.relocate_item_section(second_speaker, "wpn_sig550_sniper", "in", 1)
 end
 
 function glaza_ploti_have(first_speaker, second_speaker)
@@ -3638,7 +3636,6 @@ function del_metka_povodyr()
     local obj = alife():story_object(story_ids.aver_pseudodog_povodyr)
     if obj then
         level_tasks.remove_location_by_id(obj.id, "blue_location")
-        alife():release(obj, true)
     end
 end
 
