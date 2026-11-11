@@ -1,29 +1,5 @@
-<character id="swamp_trader">
-    <class>swamp_trader</class>
-</character>
-
 <character id="swamp_doctor">
     <class>swamp_doctor</class>
-</character>
-
-<character id="skit_demon">
-    <class>skit_demon</class>
-</character>
-
-<character id="skit_nauch">
-    <class>skit_nauch</class>
-</character>
-
-<character id="skit_balon">
-    <class>skit_balon</class>
-</character>
-
-<character id="skit_kent">
-    <class>skit_kent</class>
-</character>
-
-<character id="skit_rukzak">
-    <class>skit_rukzak</class>
 </character>
 
 <character id="lesnik">
@@ -46,20 +22,8 @@
     <class>dolg_specnaz</class>
 </character>
 
-<character id="dolg_exo">
-    <class>dolg_exo</class>
-</character>
-
 <character id="dolg_mask">
     <class>dolg_mask</class>
-</character>
-
-<character id="dolg_nauch">
-    <class>dolg_nauch</class>
-</character>
-
-<character id="voronin_bratok">
-    <class>voronin_bratok</class>
 </character>
 
 <character id="dolg_sobolev">
@@ -74,26 +38,8 @@
     <class>zahar</class>
 </character>
 
-
-<character id="exo_flame">
-    <class>exo_flame</class>
-</character>
-
-
-<character id="oso_mono">
-    <class>oso_mono</class>
-</character>
-
-<character id="exo_gun">
-    <class>exo_gun</class>
-</character>
-
 <character id="klyk_new">
     <class>klyk_new</class>
-</character>
-
-<character id="contra_var">
-    <class>contra_var</class>
 </character>
 
 <character id="sviblov">
@@ -108,26 +54,6 @@
     <class>maroder_boss</class>
 </character>
 
-<character id="maroder_exo">
-    <class>maroder_exo</class>
-</character>
-
-<character id="maroderka_stalk">
-    <class>maroderka_stalk</class>
-</character>
-
-<character id="maroderka_exo">
-    <class>maroderka_exo</class>
-</character>
-
-<character id="mil_rpg">
-    <class>mil_rpg</class>
-</character>
-
 <character id="maroder_yang">
     <class>maroder_yang</class>
-</character>
-
-<character id="monolit_grab">
-    <class>monolit_grab</class>
 </character>

@@ -3,29 +3,10 @@
 ----------------------------------
 local excluded_npcs = {
     bar_barman = true,
-    haron = true,
-    trade_mono = true,
-    solomon = true,
-    dyak = true,
     escape_trader = true,
-    mathon = true,
-    new_prizrak = true,
     yantar_ecolog_general = true,
-    aes_solomon = true,
-    mil_lucash = true,
-    prip_old_digger = true,
-    mil_master_max = true,
-    atp_zahar = true,
-    mil_blockpost_leader = true,
-    mil_osvedomitel = true,
-    dolg_leader = true,
     dolg_petrenko = true,
-    esc_dan_nebo = true,
-    pri_doctor = true,
-    esc_bratok_prisoner = true,
-    mil_trader = true,
-    mil_engineer = true,
-    pri_kliyk = true
+    mil_engineer = true
 }
 
 local convert_npc = {}

@@ -1496,9 +1496,6 @@ function process_trade(npc)
 		local m_comm = npc:community()
 		local b_stalker = false		
 		if (m_comm == "actor" or m_comm == "actor_dolg" or m_comm == "actor_freedom" or m_comm == "stalker" or m_comm == "dolg" or m_comm == "freedom") then
-			if (npc.name and npc:name() ~= "agr_ratcatcher") then
-				b_stalker = true
-			end
 		elseif m_comm == "zombied" then
 			return
 		end

@@ -135,7 +135,6 @@
     <actor_dialog>brown_start_dialog</actor_dialog>
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-
 </specific_character>
 
 <!--brown_dva-->
@@ -179,7 +178,6 @@
     <actor_dialog>osvedom_tri_dialog_est</actor_dialog>
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-
 </specific_character>
 
 <!--smith-->
@@ -220,7 +218,6 @@
     <actor_dialog>smith_start_dialog</actor_dialog>
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-
 </specific_character>
 
 <!--nato_mask-->
@@ -752,7 +749,6 @@
     <actor_dialog>mario_key_dialog</actor_dialog>
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-
 </specific_character>
 
 
@@ -793,7 +789,6 @@
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>        
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
-
 </specific_character>
 
 <!--tm_kill_02-->
@@ -939,7 +934,6 @@
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>        
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
-
 </specific_character>
 
 <!--barman_kill_03-->
@@ -1017,7 +1011,6 @@
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>        
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"
-
 </specific_character>
 
 <!--freedom_kill_01-->
@@ -1201,7 +1194,6 @@
     <actor_dialog>pruha_start_dialog</actor_dialog>
     <actor_dialog>pruha_trade_dialog</actor_dialog>
     <actor_dialog>pruha_priz_dialog</actor_dialog>
-
-</specific_character>        
+</specific_character>  
 
     
