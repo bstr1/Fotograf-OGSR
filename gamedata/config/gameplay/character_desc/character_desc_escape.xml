@@ -1,31 +1,3 @@
-<specific_character id="escape_trader" no_random = "1">
-    <name>bar_barmen_name</name>
-    <icon>ui_npc_u_barman</icon>
-    <bio>escape_trader_bio</bio>
-
-    <class>trader</class>
-    <community>trader</community>
-    <visual>actors\trader\trader</visual>
-
-    <rank>330</rank>
-    <reputation>23</reputation>
-    <money min="100000" max="100000" infinitive="1"/>
-    <supplies>
-            [spawn] \n
-            wpn_knife \n
-    </supplies>
-
-    <actor_dialog>voronin_zapiska_dialog</actor_dialog>
-    <actor_dialog>sidr_last_work_dialog</actor_dialog>
-    <actor_dialog>barman_pismo_dialog</actor_dialog>
-    <actor_dialog>barman_yarofeev_talk</actor_dialog>
-    <actor_dialog>sidor_about_lab</actor_dialog>
-    <actor_dialog>sidor_start_dialog</actor_dialog>
-    <actor_dialog>sidor_change</actor_dialog>
-    <actor_dialog>sidr_solomon_pismo</actor_dialog>
-    <actor_dialog>sidr_two_solomon_pismo</actor_dialog>
-    <actor_dialog>bar_trader_repair</actor_dialog>
-</specific_character>
 <!--esc_wolf-->
 <specific_character id="esc_wolf" team_default = "1">
     <name>esc_wolf_name</name>

@@ -1,92 +1,3 @@
-[lekarstvo]:identity_immunities
-class                           = II_BOTTL
-cform                           = skeleton
-
-visual                          = medic\item_yad
-description                     = lekarstvo_description
-
-ef_weapon_type                  = 0
-
-inv_name                        = lekarstvo_inv_name
-inv_name_short                  = lekarstvo_inv_name
-inv_weight                      = 0.5
-
-inv_grid_width                  = 1
-inv_grid_height                 = 1
-inv_grid_x                      = 9
-inv_grid_y                      = 35
-cost                            = 1000
-
-attach_angle_offset             = 0.000000, 0.000000, 0.000000
-attach_position_offset          = 0.087266, -0.078540, 0.052360
-attach_bone_name                = bip01_r_hand
-auto_attach                     = false
-
-// should be deleted after update
-bone_name                       = bip01_r_hand
-position_offset                 = 0.0,0.0,0.0
-angle_offset                    = 1.570790,1.570790,3.92699
-
-slot                            = 4
-
-; eatable item
-eat_health                      = 0
-eat_satiety                     = 0.01
-eat_power                       = 0
-eat_radiation                   = -0.3
-eat_alcohol                     = 0.1
-wounds_heal_perc                = 0
-eat_portions_num                = -1
-
-; food item
-slot                            = 4
-animation_slot                  = 4
-
-;hud item
-hud                             = wpn_vodka_hud
-
-
-[proviziya]:identity_immunities 
-class                           = II_ATTCH
-cform                           = skeleton
-
-visual                          = physics\box\box_1b
-radius                          = 1
-quest_item                      = false
-
-description                     = proviziya_description
-
-inv_name                        = proviziya_inv_name
-inv_name_short                  = proviziya_inv_name
-inv_weight                      = 8
-inv_grid_width                  = 2
-inv_grid_height                 = 2
-inv_grid_x                      = 10
-inv_grid_y                      = 25
-cost                            = 2000
-
-
-[doc_krol]:identity_immunities 
-class                           = II_ATTCH
-cform                           = skeleton
-
-visual                          = equipments\item_book_02.ogf
-radius                          = 1
-quest_item                      = true
-
-description                     = doc_krol_description
-
-inv_name                        = doc_krol_inv_name
-inv_name_short                  = doc_krol_inv_name
-inv_weight                      = 0
-
-inv_grid_width                  = 1
-inv_grid_height                 = 1
-inv_grid_x                      = 4
-inv_grid_y                      = 8
-cost                            = 1000
-
-
 [propusk]:identity_immunities 
 class                           = II_ATTCH
 cform                           = skeleton
@@ -150,27 +61,6 @@ inv_grid_y                      = 40
 cost                            = 2000
 
 
-[barman_pismo]:identity_immunities 
-class                           = II_ATTCH
-cform                           = skeleton
-
-visual                          = amk\item_zapiska.ogf
-radius                          = 1
-quest_item                      = true
-
-description                     = barman_pismo_description
-
-inv_name                        = barman_pismo_inv_name
-inv_name_short                  = barman_pismo_inv_name
-inv_weight                      = 0
-
-inv_grid_width                  = 1
-inv_grid_height                 = 1
-inv_grid_x                      = 11
-inv_grid_y                      = 40
-cost                            = 0
-
-
 [doctor_pismo]:identity_immunities 
 class                           = II_ATTCH
 cform                           = skeleton
@@ -183,114 +73,6 @@ description                     = doctor_pismo_description
 
 inv_name                        = doctor_pismo_inv_name
 inv_name_short                  = doctor_pismo_inv_name
-inv_weight                      = 0
-
-inv_grid_width                  = 1
-inv_grid_height                 = 1
-inv_grid_x                      = 11
-inv_grid_y                      = 40
-cost                            = 0
-
-
-[metka_fab]:identity_immunities
-class                           = II_ANTIR
-cform                           = skeleton
-
-visual                          = equipments\item_antirad.ogf
-description                     = enc_equipment_medi_antirad1
-
-inv_name                        = Antirad
-inv_name_short                  = Antirad
-inv_weight                      = 0.1
-
-inv_grid_width                  = 1
-inv_grid_height                 = 1
-inv_grid_x                      = 18
-inv_grid_y                      = 12
-cost                            = 100
-
-; eatable item
-eat_health                      = -0.2
-eat_satiety                     = -0.25
-eat_power                       = 0
-eat_radiation                   = -1.0
-
-wounds_heal_perc                = 0
-eat_portions_num                = 1
-
-; food item
-animation_slot                  = 4
-
-;hud item
-hud                             = wpn_vodka_hud
-
-
-[metka_pekar]:identity_immunities
-class                           = II_ANTIR
-cform                           = skeleton
-
-visual                          = equipments\item_antirad.ogf
-description                     = enc_equipment_medi_antirad1
-
-inv_name                        = Antirad
-inv_name_short                  = Antirad
-inv_weight                      = 0.1
-
-inv_grid_width                  = 1
-inv_grid_height                 = 1
-inv_grid_x                      = 18
-inv_grid_y                      = 12
-cost                            = 100
-
-; eatable item
-eat_health                      = -0.2
-eat_satiety                     = -0.25
-eat_power                       = 0
-eat_radiation                   = -1.0
-
-wounds_heal_perc                = 0
-eat_portions_num                = 1
-
-; food item
-animation_slot                  = 4
-
-;hud item
-hud                             = wpn_vodka_hud
-
-
-[sidor_pismo]:identity_immunities 
-class                           = II_ATTCH
-cform                           = skeleton
-
-visual                          = amk\item_zapiska.ogf
-radius                          = 1
-quest_item                      = true
-
-description                     = sidor_pismo_description
-
-inv_name                        = sidor_pismo_inv_name
-inv_name_short                  = sidor_pismo_inv_name
-inv_weight                      = 0
-
-inv_grid_width                  = 1
-inv_grid_height                 = 1
-inv_grid_x                      = 11
-inv_grid_y                      = 40
-cost                            = 0
-
-
-[voronin_pismo]:identity_immunities 
-class                           = II_ATTCH
-cform                           = skeleton
-
-visual                          = amk\item_zapiska.ogf
-radius                          = 1
-quest_item                      = true
-
-description                     = voronin_pismo_description
-
-inv_name                        = voronin_pismo_inv_name
-inv_name_short                  = voronin_pismo_inv_name
 inv_weight                      = 0
 
 inv_grid_width                  = 1
@@ -319,132 +101,6 @@ inv_grid_height                 = 1
 inv_grid_x                      = 11
 inv_grid_y                      = 40
 cost                            = 0
-
-
-[voronin_pismo2]:identity_immunities 
-class                           = II_ATTCH
-cform                           = skeleton
-
-visual                          = amk\item_zapiska.ogf
-radius                          = 1
-quest_item                      = true
-
-description                     = voronin_pismo2_description
-
-inv_name                        = voronin_pismo2_inv_name
-inv_name_short                  = voronin_pismo2_inv_name
-inv_weight                      = 0
-
-inv_grid_width                  = 1
-inv_grid_height                 = 1
-inv_grid_x                      = 11
-inv_grid_y                      = 40
-cost                            = 0
-
-
-[pda_mir]:identity_immunities 
-class                           = II_ATTCH
-cform                           = skeleton
-
-visual                          = equipments\item_pda.ogf
-radius                          = 1
-quest_item                      = true
-
-description                     = pda_mir_description
-
-inv_name                        = pda_mir_inv_name
-inv_name_short                  = pda_mir_inv_name
-inv_weight                      = 0.1
-
-inv_grid_width                  = 1
-inv_grid_height                 = 1
-inv_grid_x                      = 23
-inv_grid_y                      = 7
-cost                            = 1000
-
-
-[pda_nebo]:identity_immunities 
-class                           = II_ATTCH
-cform                           = skeleton
-
-visual                          = equipments\item_pda.ogf
-radius                          = 1
-quest_item                      = true
-
-description                     = pda_nebo_description
-
-inv_name                        = pda_nebo_inv_name
-inv_name_short                  = pda_nebo_inv_name
-inv_weight                      = 0.1
-
-inv_grid_width                  = 1
-inv_grid_height                 = 1
-inv_grid_x                      = 23
-inv_grid_y                      = 7
-cost                            = 1000
-
-
-[karta_bar]:identity_immunities 
-class                           = II_ATTCH
-cform                           = skeleton
-
-visual                          = equipments\item_document_1.ogf
-radius                          = 1
-quest_item                      = true
-
-description                     = karta_bar_description
-
-inv_name                        = karta_bar_inv_name
-inv_name_short                  = karta_bar_inv_name
-inv_weight                      = 0
-
-inv_grid_width                  = 2
-inv_grid_height                 = 1
-inv_grid_x                      = 32
-inv_grid_y                      = 37
-cost                            = 1000
-
-
-[doktor_flashka]:identity_immunities 
-class                           = II_ATTCH
-cform                           = skeleton
-
-visual                          = equipments\item_flash_2.ogf
-radius                          = 1
-quest_item                      = false
-
-description                     = doktor_flashka_description
-
-inv_name                        = doktor_flashka_inv_name
-inv_name_short                  = doktor_flashka_inv_name
-inv_weight                      = 0
-
-inv_grid_width                  = 1
-inv_grid_height                 = 1
-inv_grid_x                      = 3
-inv_grid_y                      = 19
-cost                            = 0
-
-
-[doc_tele]:identity_immunities 
-class                           = II_ATTCH
-cform                           = skeleton
-
-visual                          = equipments\item_pda.ogf
-radius                          = 1
-quest_item                      = true
-
-description                     = doc_tele_description
-
-inv_name                        = doc_tele_inv_name
-inv_name_short                  = doc_tele_inv_name
-inv_weight                      = 0.1
-
-inv_grid_width                  = 1
-inv_grid_height                 = 1
-inv_grid_x                      = 13
-inv_grid_y                      = 40
-cost                            = 10000
 
 
 [foto_news]:identity_immunities 
@@ -510,62 +166,62 @@ cost                            = 0
 
 
 [metka_foto1]
-cform                           = skeleton 
-class                           = O_PHYS_S;
+cform                           = skeleton
+class                           = O_PHYS_S
 remove_time                     = 9998
 visual                          = physics\large_trash\prt\prt_none.ogf
 
 [metka_foto2]
-cform                           = skeleton 
-class                           = O_PHYS_S;
+cform                           = skeleton
+class                           = O_PHYS_S
 remove_time                     = 9998
 visual                          = physics\large_trash\prt\prt_none.ogf
 
 [metka_foto3]
-cform                           = skeleton 
-class                           = O_PHYS_S;
+cform                           = skeleton
+class                           = O_PHYS_S
 remove_time                     = 9998
 visual                          = physics\large_trash\prt\prt_none.ogf
 
 [metka_foto4]
-cform                           = skeleton 
-class                           = O_PHYS_S;
+cform                           = skeleton
+class                           = O_PHYS_S
 remove_time                     = 9998
 visual                          = physics\large_trash\prt\prt_none.ogf
 
 [metka_foto5]
-cform                           = skeleton 
-class                           = O_PHYS_S;
+cform                           = skeleton
+class                           = O_PHYS_S
 remove_time                     = 9998
 visual                          = physics\large_trash\prt\prt_none.ogf
 
 [metka_foto6]
-cform                           = skeleton 
-class                           = O_PHYS_S;
+cform                           = skeleton
+class                           = O_PHYS_S
 remove_time                     = 9998
 visual                          = physics\large_trash\prt\prt_none.ogf
 
 [metka_foto7]
-cform                           = skeleton 
-class                           = O_PHYS_S;
+cform                           = skeleton
+class                           = O_PHYS_S
 remove_time                     = 9998
 visual                          = physics\large_trash\prt\prt_none.ogf
 
 [metka_foto8]
-cform                           = skeleton 
-class                           = O_PHYS_S;
+cform                           = skeleton
+class                           = O_PHYS_S
 remove_time                     = 9998
 visual                          = physics\large_trash\prt\prt_none.ogf
 
 [metka_foto9]
-cform                           = skeleton 
-class                           = O_PHYS_S;
+cform                           = skeleton
+class                           = O_PHYS_S
 remove_time                     = 9998
 visual                          = physics\large_trash\prt\prt_none.ogf
 
 [metka_foto10]
-cform                           = skeleton 
-class                           = O_PHYS_S;
+cform                           = skeleton
+class                           = O_PHYS_S
 remove_time                     = 9998
 visual                          = physics\large_trash\prt\prt_none.ogf
 
@@ -583,6 +239,7 @@ description                     = levsha_decoder_description
 inv_name                        = levsha_decoder_inv_name
 inv_name_short                  = levsha_decoder_inv_name
 inv_weight                      = 0.3
+
 inv_grid_width                  = 1
 inv_grid_height                 = 1
 inv_grid_x                      = 11
@@ -603,21 +260,24 @@ description                     = anom_zond_description
 inv_name                        = anom_zond_inv_name
 inv_name_short                  = anom_zond_inv_name
 inv_weight                      = 0.1
+
 inv_grid_width                  = 1
 inv_grid_height                 = 1
 inv_grid_x                      = 9
 inv_grid_y                      = 14
 cost                            = 500
 
+
 [anom_pribor]:identity_immunities 
 class                           = D_SIMDET
 cform                           = skeleton
+
 visual                          = equipments\item_decoder.ogf
 radius                          = 10
+
 buzzer_radius                   = 1.5
 noise                           = zone_mosquito_bald       ;detectors\geiger_noise_loop
 buzzer                          = zone_mosquito_bald       ;detectors\DA-2_alarm_loop
-;slot                           = 3
 quest_item                      = true
 
 description                     = anom_pribor_description
@@ -627,12 +287,14 @@ ef_detector_type                = 1
 inv_name                        = anom_pribor_inv_name
 inv_name_short                  = anom_pribor_inv_name
 inv_weight                      = 0.3
+
 inv_grid_width                  = 1
 inv_grid_height                 = 1
 inv_grid_x                      = 2
 inv_grid_y                      = 19
 cost                            = 5000
 belt                            = false
+
 
 [pda_lukash]:identity_immunities 
 class                           = II_ATTCH
@@ -654,25 +316,6 @@ inv_grid_x                      = 23
 inv_grid_y                      = 7
 cost                            = 1000
 
-[pda_boom]:identity_immunities 
-class                           = II_ATTCH
-cform                           = skeleton
-
-visual                          = physics\equipment_cache\equipment_rucksack_01_case.ogf
-radius                          = 1
-quest_item                      = false
-
-description                     = pda_boom_description
-
-inv_name                        = pda_boom_inv_name
-inv_name_short                  = pda_boom_inv_name
-inv_weight                      = 0.1
-
-inv_grid_width                  = 1
-inv_grid_height                 = 1
-inv_grid_x                      = 23
-inv_grid_y                      = 7
-cost                            = 1000
 
 [objectiv]:identity_immunities 
 class                           = II_ATTCH
@@ -694,6 +337,7 @@ inv_grid_x                      = 34
 inv_grid_y                      = 23
 cost                            = 10000
 
+
 [maloy_pda]:identity_immunities 
 class                           = II_ATTCH
 cform                           = skeleton
@@ -714,6 +358,7 @@ inv_grid_x                      = 23
 inv_grid_y                      = 7
 cost                            = 1000
 
+
 [lavrov_pda]:identity_immunities 
 class                           = II_ATTCH
 cform                           = skeleton
@@ -733,6 +378,7 @@ inv_grid_height                 = 1
 inv_grid_x                      = 20
 inv_grid_y                      = 8
 cost                            = 100000
+
 
 [bloknot_foto]:identity_immunities 
 class                           = II_ATTCH
@@ -873,6 +519,7 @@ description                     = haron_case_description
 inv_name                        = haron_case_inv_name
 inv_name_short                  = haron_case_inv_name
 inv_weight                      = 2.3
+
 inv_grid_width                  = 2
 inv_grid_height                 = 2
 inv_grid_x                      = 39
@@ -893,6 +540,7 @@ description                     = hunter_case_description
 inv_name                        = hunter_case_inv_name
 inv_name_short                  = hunter_case_inv_name
 inv_weight                      = 3.2
+
 inv_grid_width                  = 2
 inv_grid_height                 = 2
 inv_grid_x                      = 39
@@ -913,6 +561,7 @@ description                     = koran_description
 inv_name                        = koran_inv_name
 inv_name_short                  = koran_inv_name
 inv_weight                      = 0.5
+
 inv_grid_width                  = 1
 inv_grid_height                 = 1
 inv_grid_x                      = 38
@@ -921,20 +570,20 @@ cost                            = 5000
 
 
 [metka_lch_prom]
-cform                           = skeleton 
-class                           = O_PHYS_S;
+cform                           = skeleton
+class                           = O_PHYS_S
 remove_time                     = 9998
 visual                          = physics\large_trash\prt\prt_none.ogf
 
 [metka_lch_aver]
-cform                           = skeleton 
-class                           = O_PHYS_S;
+cform                           = skeleton
+class                           = O_PHYS_S
 remove_time                     = 9998
 visual                          = physics\large_trash\prt\prt_none.ogf
 
 [metka_strelka_aver]
-cform                           = skeleton 
-class                           = O_PHYS_S;
+cform                           = skeleton
+class                           = O_PHYS_S
 remove_time                     = 9998
 visual                          = physics\large_trash\prt\prt_none.ogf
 
@@ -953,6 +602,7 @@ description                     = microscope_description
 inv_name                        = microscope_inv_name
 inv_name_short                  = microscope_inv_name
 inv_weight                      = 5.3
+
 inv_grid_width                  = 2
 inv_grid_height                 = 2
 inv_grid_x                      = 37
@@ -974,6 +624,7 @@ description                     = pechat_mashinka_description
 inv_name                        = pechat_mashinka_inv_name
 inv_name_short                  = pechat_mashinka_inv_name
 inv_weight                      = 3.2
+
 inv_grid_width                  = 2
 inv_grid_height                 = 2
 inv_grid_x                      = 7
@@ -995,11 +646,13 @@ description                     = raciya_new_description
 inv_name                        = raciya_new_inv_name
 inv_name_short                  = raciya_new_inv_name
 inv_weight                      = 0.1
+
 inv_grid_width                  = 1
 inv_grid_height                 = 1
 inv_grid_x                      = 39
 inv_grid_y                      = 32
 cost                            = 1500
+
 
 [chess]:identity_immunities 
 class                           = II_ATTCH
@@ -1015,6 +668,7 @@ description                     = chess_description
 inv_name                        = chess_inv_name
 inv_name_short                  = chess_inv_name
 inv_weight                      = 0.3
+
 inv_grid_width                  = 2
 inv_grid_height                 = 1
 inv_grid_x                      = 39
@@ -1036,6 +690,7 @@ description                     = planshetka_description
 inv_name                        = planshetka_inv_name
 inv_name_short                  = planshetka_inv_name
 inv_weight                      = 0.3
+
 inv_grid_width                  = 2
 inv_grid_height                 = 1
 inv_grid_x                      = 39
@@ -1057,6 +712,7 @@ description                     = memory_module_description
 inv_name                        = memory_module_inv_name
 inv_name_short                  = memory_module_inv_name
 inv_weight                      = 1.5
+
 inv_grid_width                  = 2
 inv_grid_height                 = 1
 inv_grid_x                      = 35
@@ -1078,6 +734,7 @@ description                     = kolba_description
 inv_name                        = kolba_inv_name
 inv_name_short                  = kolba_inv_name
 inv_weight                      = 0.8
+
 inv_grid_width                  = 2
 inv_grid_height                 = 1
 inv_grid_x                      = 35
@@ -1099,6 +756,7 @@ description                     = tiski_description
 inv_name                        = tiski_inv_name
 inv_name_short                  = tiski_inv_name
 inv_weight                      = 3.8
+
 inv_grid_width                  = 2
 inv_grid_height                 = 2
 inv_grid_x                      = 37
@@ -1120,6 +778,7 @@ description                     = plata_description
 inv_name                        = plata_inv_name
 inv_name_short                  = plata_inv_name
 inv_weight                      = 0.25
+
 inv_grid_width                  = 2
 inv_grid_height                 = 1
 inv_grid_x                      = 39
@@ -1141,6 +800,7 @@ description                     = vidik_description
 inv_name                        = vidik_inv_name
 inv_name_short                  = vidik_inv_name
 inv_weight                      = 3.2
+
 inv_grid_width                  = 2
 inv_grid_height                 = 1
 inv_grid_x                      = 39
@@ -1162,6 +822,7 @@ description                     = icona_description
 inv_name                        = icona_inv_name
 inv_name_short                  = icona_inv_name
 inv_weight                      = 0.1
+
 inv_grid_width                  = 1
 inv_grid_height                 = 1
 inv_grid_x                      = 40
@@ -1183,6 +844,7 @@ description                     = koloda_description
 inv_name                        = koloda_inv_name
 inv_name_short                  = koloda_inv_name
 inv_weight                      = 0.05
+
 inv_grid_width                  = 1
 inv_grid_height                 = 1
 inv_grid_x                      = 40
@@ -1204,6 +866,7 @@ description                     = samopisec_description
 inv_name                        = samopisec_inv_name
 inv_name_short                  = samopisec_inv_name
 inv_weight                      = 2.8
+
 inv_grid_width                  = 2
 inv_grid_height                 = 2
 inv_grid_x                      = 30
@@ -1225,6 +888,7 @@ description                     = table_lampa_description
 inv_name                        = table_lampa_inv_name
 inv_name_short                  = table_lampa_inv_name
 inv_weight                      = 0.35
+
 inv_grid_width                  = 1
 inv_grid_height                 = 2
 inv_grid_x                      = 40
@@ -1246,6 +910,7 @@ description                     = fonarik_description
 inv_name                        = fonarik_inv_name
 inv_name_short                  = fonarik_inv_name
 inv_weight                      = 0.15
+
 inv_grid_width                  = 1
 inv_grid_height                 = 1
 inv_grid_x                      = 8
@@ -1273,45 +938,6 @@ inv_grid_height                 = 2
 inv_grid_x                      = 4
 inv_grid_y                      = 18
 cost                            = 5000
-
-
-[taynik] 
-class                           = O_INVBOX
-cform                           = skeleton
-radius                          = 1
-visual                          = physics\box\expl_dinamit.ogf
-script_binding                  = bind_physic_object.init
-
-[taynik_vino1]:taynik
-visual                          = physics\box\box_1a
-custom_data                     = scripts\foto\swamp\taynik_vino1.ltx
-
-[taynik_vino2]:taynik
-visual                          = physics\box\box_1b
-custom_data                     = scripts\foto\swamp\taynik_vino2.ltx
-
-[taynik_vino3]:taynik
-visual                          = physics\box\box_1c
-custom_data                     = scripts\foto\swamp\taynik_vino3.ltx
-
-[aground_box]:taynik
-visual                          = equipments\item_box_01
-
-[taynik_shubin]:taynik
-visual                          = physics\box\box_1a
-custom_data                     = scripts\foto\prip\taynik_shubin.ltx
-
-[taynik_peschera1]:taynik
-visual                          = equipments\item_box_01
-custom_data                     = scripts\foto\peschera\peschera1.ltx
-
-[taynik_peschera2]:taynik
-visual                          = physics\box\box_1c
-custom_data                     = scripts\foto\peschera\peschera2.ltx
-
-[taynik_zapadlo]:taynik
-visual                          = equipments\item_rukzag.ogf
-custom_data                     = scripts\foto\dyshlo\taynik_zapadlo.ltx
 
 
 [filin_priemnik]:identity_immunities 
@@ -1355,23 +981,25 @@ inv_grid_x                      = 18
 inv_grid_y                      = 35
 cost                            = 25000; 0
 
+
 [metka_vzryv1]
-cform                           = skeleton 
-class                           = O_PHYS_S;
+cform                           = skeleton
+class                           = O_PHYS_S
 remove_time                     = 9998
 visual                          = physics\large_trash\prt\prt_none.ogf
 
 [metka_vzryv2]
-cform                           = skeleton 
-class                           = O_PHYS_S;
+cform                           = skeleton
+class                           = O_PHYS_S
 remove_time                     = 9998
 visual                          = physics\large_trash\prt\prt_none.ogf
 
 [metka_vzryv3]
-cform                           = skeleton 
-class                           = O_PHYS_S;
+cform                           = skeleton
+class                           = O_PHYS_S
 remove_time                     = 9998
 visual                          = physics\large_trash\prt\prt_none.ogf
+
 
 [shema_labs]:identity_immunities 
 class                           = II_ATTCH
@@ -1501,7 +1129,6 @@ inv_grid_height                 = 1
 inv_grid_x                      = 6
 inv_grid_y                      = 19
 cost                            = 100
-;belt                           = true;
 default_to_ruck                 = false
 
 attach_angle_offset             = -0.160570,-1.425061,-0.361283
@@ -1592,6 +1219,3 @@ inv_grid_height                 = 1
 inv_grid_x                      = 6
 inv_grid_y                      = 14
 cost                            = 0
-
-
-

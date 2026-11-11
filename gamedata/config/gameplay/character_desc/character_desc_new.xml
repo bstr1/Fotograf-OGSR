@@ -842,49 +842,6 @@
 #include "gameplay\character_dialogs.xml"   
 </specific_character>
 
-<!--DOLG LEADER-->
-<specific_character id="dolg_leader" team_default = "1">
-    <name>bar_voronin_name</name>
-    <icon>ui_npc_u_stalker_do_komandir</icon>
-    <map_icon x="0" y="0"></map_icon>
-    <bio>bar_voronin_bio</bio>
-
-    <class>dolg_leader</class>
-    <community>dolg</community>
-    <terrain_sect>stalker_dolg_terrain</terrain_sect>
-    <money min="5000" max="10000" infinitive="0"></money>
-
-    <rank>918</rank>
-    <reputation>0</reputation>
-
-    <visual>actors\dolg\stalker_do_komandir</visual>
-    <snd_config>characters_voice\human_01\dolg\</snd_config>
-    <crouch_type>0</crouch_type>
-
-    <supplies>
-      [spawn] \n
-      wpn_sig220 \n
-      ammo_11.43x23_hydro \n  
-      wpn_val \n
-      ammo_9x39_pab9 = 1 \n
-#include "gameplay\character_food.xml" \n
-#include "gameplay\character_drugs.xml"
-    </supplies>
-
-    <actor_dialog>voronin_pismo2_dialog</actor_dialog>
-    <actor_dialog>voronin_pismo_dialog</actor_dialog>
-    <actor_dialog>voronin_about_sobolev</actor_dialog>
-    <actor_dialog>voronin_about_kogot</actor_dialog>
-    <actor_dialog>voronin_about_lab</actor_dialog>
-    <actor_dialog>voronin_nychka_est</actor_dialog>
-    <actor_dialog>voronin_after_jila_nychka_need</actor_dialog>
-    <actor_dialog>vorornin_nychka_need</actor_dialog>
-    <actor_dialog>vorornin_snork_est</actor_dialog>
-    <actor_dialog>vorornin_snork_need</actor_dialog>
-    <actor_dialog>dolg_voronin_help_est</actor_dialog>
-#include "gameplay\character_criticals.xml"
-#include "gameplay\character_dialogs.xml"
-</specific_character>
 
 <!--val_gila-->
 <specific_character id="val_gila" team_default="1">

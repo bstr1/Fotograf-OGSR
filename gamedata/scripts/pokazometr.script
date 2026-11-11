@@ -84,11 +84,10 @@ function reinit() -- делаем все красиво и "идеологиче
 
         level_id = sim:level_id()
 
-        for _, v in ipairs({"lekarstvo", "proviziya", "doc_krol", "propusk", "propusk1", "flyer", "barman_pismo",
-                            "doctor_pismo", "metka_fab", "metka_pekar", "sidor_pismo", "voronin_pismo", "pismo_brown",
-                            "voronin_pismo2", "pda_mir", "pda_nebo", "karta_bar", "doktor_flashka", "doc_tele",
+        for _, v in ipairs({"propusk", "propusk1", "flyer",
+                            "doctor_pismo", "pismo_brown",
                             "foto_news", "foto_01", "foto_02", "levsha_decoder", "anom_zond", "anom_pribor",
-                            "pda_lukash", "pda_boom", "objectiv", "maloy_pda", "lavrov_pda", "bloknot_foto",
+                            "pda_lukash", "objectiv", "maloy_pda", "lavrov_pda", "bloknot_foto",
                             "info_actor", "pda_agent_mk", "pda_agent_prom", "pda_agent_aver", "plan_baza", "haron_case",
                             "hunter_case", "koran", "microscope", "pechat_mashinka", "raciya_new", "chess",
                             "planshetka", "memory_module", "kolba", "tiski", "plata", "vidik", "icona", "koloda",
