@@ -183,11 +183,6 @@ inv_grid_x                       = 34
 inv_grid_y                       = 39
 cost                             = 15300
 
-; bstr: амк костыль для ремонта, на удаление
-[space_restrictor_skunk]
-class                            = SPC_RS_S
-script_binding                   = bind_restrictor.bind
-
 
 [treasure_item]:matras
 visual                           = equipments\item_rukzak.ogf
@@ -214,9 +209,6 @@ inv_grid_y                       = 35
 
 
 [inventory_seif]
-GroupControlSection              = spawn_group
-discovery_dependency             = 
-$spawn                           = "amk_mod_matras\inventory seif"
 class                            = O_INVBOX
 cform                            = skeleton
 visual                           = physics\box\seif_01
@@ -227,25 +219,8 @@ script_binding                   = bind_physic_object.init
 visual                           = physics\box\seif_01
 radius                           = 1
 
-
-[m_sak_resiver_yantar]:inventory_seif
-visual                           = equipments\item_transiver
-radius                           = 0
-
-
+; bstr: на удаление, насрано в inventory.script
 [separator]:bread
-inv_grid_width                   = 0
-inv_grid_height                  = 0
-inv_weight                       = 0
-
-
-[way1]:bread
-inv_grid_width                   = 0
-inv_grid_height                  = 0
-inv_weight                       = 0
-
-
-[way2]:bread
 inv_grid_width                   = 0
 inv_grid_height                  = 0
 inv_weight                       = 0
@@ -389,28 +364,6 @@ inv_grid_width                   = 2
 inv_grid_height                  = 1
 inv_grid_x                       = 6
 inv_grid_y                       = 19
-
-
-[oceanic815]:vodka
-inv_name                         = energy_drink_name_dbeer
-inv_name_short                   = energy_drink_name_dbeer_short
-visual                           = amk\item_zapiska2.ogf
-description                      = enc_equipment_energydrinka
-cost                             = 750
-
-inv_grid_width                   = 1
-inv_grid_height                  = 1
-inv_grid_x                       = 40
-inv_grid_y                       = 35
-inv_weight                       = 0.3
-
-eat_health                       = 0
-eat_satiety                      = 0.01
-eat_power                        = 0
-eat_radiation                    = -0.3
-eat_alcohol                      = 0.3
-wounds_heal_perc                 = 0
-eat_portions_num                 = -1
 
 
 [amk_transmutator]:identity_immunities
