@@ -59,7 +59,6 @@
 </specific_character>
 
 <!-- soldat_bandana -->
-
 <specific_character id="soldat_bandana" team_default = "1">
     <name>GENERATE_NAME_private</name>
     <icon>ui_npc_u_soldier_bandana</icon>
@@ -97,7 +96,6 @@
 </specific_character>
 
 <!-- soldat_bandana1 -->
-
 <specific_character id="soldat_bandana1" team_default = "1">
     <name>GENERATE_NAME_private</name>
     <icon>ui_npc_u_soldier_bandana_6</icon>
@@ -136,7 +134,6 @@
 
 
 <!-- soldat_bandana4 -->
-
 <specific_character id="soldat_bandana4" team_default = "1">
     <name>GENERATE_NAME_private</name>
     <icon>ui_npc_u_soldier_bandana_5</icon>
@@ -174,7 +171,6 @@
 </specific_character>
 
 <!-- soldat_bandana5 -->
-
 <specific_character id="soldat_bandana5" team_default = "1">
     <name>GENERATE_NAME_private</name>
     <icon>ui_npc_u_soldier_bandana_5</icon>
@@ -212,7 +208,6 @@
 </specific_character>
 
 <!--soldat_spetsnaz-->
-
 <specific_character id="soldat_spetsnaz" team_default = "1">
     <name>GENERATE_NAME_sergeant</name>
     <icon>ui_npc_u_soldier_spetsnaz</icon>
@@ -251,7 +246,6 @@
 </specific_character>
 
 <!--soldat_antigas-->
-
 <specific_character id="soldat_antigas" team_default = "1">
     <name>GENERATE_NAME_sergeant</name>
     <icon>ui_npc_u_soldier_antigas</icon>
@@ -290,7 +284,6 @@
 </specific_character>
 
 <!--soldat_mask-->
-
 <specific_character id="soldat_mask" team_default="1">
     <name>GENERATE_NAME_sergeant</name>
     <icon>ui_npc_u_soldier_mask</icon>
@@ -325,7 +318,6 @@
 </specific_character>
 
 <!--soldat_sniper-->
-
 <specific_character id="soldat_sniper" team_default="1">
     <name>GENERATE_NAME_sergeant</name>
     <icon>ui_npc_u_soldier_mask</icon>
@@ -361,7 +353,6 @@
 </specific_character>
 
 <!--soldat_prostoy-->
-
 <specific_character id="soldat_prostoy" team_default = "1">
     <name>GENERATE_NAME_private</name>
     <icon>ui_npc_u_soldier_obichniy</icon>
@@ -397,7 +388,6 @@
 
 
 <!--military_green-->
-
 <specific_character id="military_green" team_default = "1">
     <name>GENERATE_NAME_lieutenant</name>
     <icon>ui_npc_u_stalker_militari_1</icon>
@@ -432,7 +422,6 @@
 </specific_character>
 
 <!--military_black-->
-
 <specific_character id="military_black" team_default = "1">
     <name>GENERATE_NAME_lieutenant</name>
     <icon>ui_npc_u_stalker_militari_2</icon>
@@ -468,7 +457,6 @@
 </specific_character>
 
 <!--soldat_spets-->
-
 <specific_character id="soldat_spets" team_default = "1">
     <name>GENERATE_NAME_sergeant</name>
     <icon>ui_npc_spets</icon>
@@ -505,7 +493,6 @@
 </specific_character>
 
 <!--soldat_spets1-->
-
 <specific_character id="soldat_spets1" team_default = "1">
     <name>GENERATE_NAME_sergeant</name>
     <icon>ui_npc_spets</icon>
@@ -543,7 +530,6 @@
 </specific_character>
 
 <!-- komandir_polischuk -->
-
 <specific_character id="komandir_polischuk" team_default = "1">
     <name>Лейтенант Полищук</name>
     <icon>ui_npc_u_soldier_beret</icon>
@@ -582,7 +568,6 @@
 </specific_character>
 
 <!-- komandir_petrenko -->
-
 <specific_character id="komandir_petrenko" team_default = "1">
     <name>Полковник Петренко</name>
     <icon>ui_npc_rus_petrenko</icon>
@@ -622,7 +607,6 @@
 </specific_character>
 
 <!-- komandir_krasavskiy -->
-
 <specific_character id="komandir_krasavskiy" team_default = "1">
     <name>Капитан Красавский</name>
     <icon>ui_npc_u_soldier_beret_2</icon>
@@ -661,7 +645,6 @@
 </specific_character>
 
 <!-- komandir_shpak -->
-
 <specific_character id="komandir_shpak" team_default = "1">
     <name>Майор Шпак</name>
     <icon>ui_npc_u_soldier_beret_2</icon>
@@ -707,54 +690,8 @@
 #include "gameplay\character_dialogs.xml"
 </specific_character>
 
-<!-- shpak -->
-
-<specific_character id="shpak" team_default = "1">
-    <name>Майор Шпак</name>
-    <icon>ui_npc_u_soldier_beret_2</icon>
-    <map_icon x="2" y="0"></map_icon>
-    <bio>sim_soldier_commander_bio</bio>
-
-    <class>shpak</class>
-    <community>military</community>
-    <terrain_sect>stalker_military_terrain</terrain_sect>
-    <money min="4000" max="5000" infinitive="0"></money>
-
-    <rank>545</rank>
-    <reputation>-30</reputation>
-
-    <visual>actors\soldier\soldier_beret_4</visual>
-    <snd_config>characters_voice\human_01\military\</snd_config>
-    <crouch_type>0</crouch_type>
-
-    <supplies>
-      [spawn] \n
-      vodka \n
-      zheton \n
-      wpn_ak74 \n
-      ammo_5.45x39_fmj = 2 \n
-      medkit_army \n
-      device_torch \n
-#include "gameplay\character_drugs.xml"
-    </supplies>
-
-    <actor_dialog>shpak_one_dialog_est</actor_dialog>
-    <actor_dialog>shpak_one_dialog</actor_dialog>
-    <start_dialog>hello_dialog</start_dialog>
-    <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-    <actor_dialog>shpak_dialog_1</actor_dialog>
-    <actor_dialog>shpak_dialog_2</actor_dialog>
-    <actor_dialog>shpak_dialog_3</actor_dialog>
-    <actor_dialog>shpak_dialog_4</actor_dialog>
-    <actor_dialog>shpak_dialog_5</actor_dialog>
-    <actor_dialog>shpak_dialog_6</actor_dialog>
-    <actor_dialog>shpak_dialog_7</actor_dialog>
-#include "gameplay\character_criticals.xml"
-#include "gameplay\character_dialogs.xml"
-</specific_character>
 
 <!-- komandir_voronin -->
-
 <specific_character id="komandir_voronin" team_default = "1">
     <name>Генерал Воронин</name>
     <icon>ui_npc_rus_voronin</icon>
@@ -1103,7 +1040,6 @@
 </specific_character>
 
 <!--lavrov_trup-->
-
 <specific_character id="lavrov_trup" team_default = "1">
     <name>Доцент Лавров</name>
     <icon>ui_npc_uchen_white</icon>
@@ -1204,7 +1140,6 @@
 </specific_character>
 
 <!--bandit_01-->
-
 <specific_character id="bandit_01" team_default = "1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_npc_u_stalker_bandit_5</icon>
@@ -1239,7 +1174,6 @@
 </specific_character>
 
 <!--bandit_02-->
-
 <specific_character id="bandit_02" team_default = "1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_npc_u_stalker_bandit_4</icon>
@@ -1275,7 +1209,6 @@
 </specific_character>
 
 <!--bandit_03-->
-
 <specific_character id="bandit_03" team_default = "1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_npc_u_stalker_bandit_3</icon>
@@ -1310,7 +1243,6 @@
 </specific_character>
 
 <!--bandit_04-->
-
 <specific_character id="bandit_04" team_default = "1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_npc_u_stalker_bandit_4</icon>
@@ -1346,7 +1278,6 @@
 </specific_character>
 
 <!--bandit_05-->
-
 <specific_character id="bandit_05" team_default = "1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_npc_u_stalker_bandit_5</icon>
@@ -1381,7 +1312,6 @@
 </specific_character>
 
 <!--bandit_06-->
-
 <specific_character id="bandit_06" team_default = "1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_npc_u_stalker_bandit_4</icon>
@@ -1417,7 +1347,6 @@
 </specific_character>
 
 <!--bandit_07-->
-
 <specific_character id="bandit_07" team_default = "1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_npc_u_stalker_bandit_4</icon>
@@ -1452,7 +1381,6 @@
 </specific_character>
 
 <!--bandit_08-->
-
 <specific_character id="bandit_08" team_default = "1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_npc_u_stalker_bandit_8</icon>
@@ -1488,7 +1416,6 @@
 </specific_character>
 
 <!--bandit_09-->
-
 <specific_character id="bandit_09" team_default = "1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_npc_u_stalker_bandit_4</icon>
@@ -1523,7 +1450,6 @@
 </specific_character>
 
 <!--bandit_10-->
-
 <specific_character id="bandit_10" team_default = "1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_npc_u_stalker_bandit_10</icon>
@@ -1558,7 +1484,6 @@
 </specific_character>
 
 <!--bandit_11-->
-
 <specific_character id="bandit_11" team_default = "1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_npc_u_green_stalker_13</icon>
@@ -1593,7 +1518,6 @@
 </specific_character>
 
 <!--bandit_12-->
-
 <specific_character id="bandit_12" team_default = "1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_npc_u_green_stalker_14</icon>
@@ -1628,7 +1552,6 @@
 </specific_character>
 
 <!--bandit_regular-->
-
 <specific_character id="bandit_regular" team_default = "1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_npc_u_stalker_bandit_veteran</icon>
@@ -1664,7 +1587,6 @@
 </specific_character>
 
 <!--bandit_camo-->
-
 <specific_character id="bandit_camo" team_default = "1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_npc_u_stalker_bandit_camo</icon>
@@ -1701,7 +1623,6 @@
 </specific_character>
 
 <!--bandit_veteran-->
-
 <specific_character id="bandit_veteran" team_default = "1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_npc_u_stalker_bandit_veteran</icon>
@@ -1738,7 +1659,6 @@
 </specific_character>
 
 <!--bandit_master-->
-
 <specific_character id="bandit_master" team_default = "1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_npc_u_stalker_bandit_master</icon>
@@ -1775,7 +1695,6 @@
 </specific_character>
 
 <!--bratok_01-->
-
 <specific_character id="bratok_01" team_default = "1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_npc_u_stalker_bandit_5</icon>
@@ -1811,7 +1730,6 @@
 </specific_character>
 
 <!--bratok_02-->
-
 <specific_character id="bratok_02" team_default = "1">
     <name>Жила</name>
     <icon>ui_npc_u_stalker_bandit_2</icon>
@@ -1848,7 +1766,6 @@
 </specific_character>
 
 <!--bratok_03-->
-
 <specific_character id="bratok_03" team_default = "1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_npc_u_stalker_bandit_3</icon>
@@ -1883,7 +1800,6 @@
 </specific_character>
 
 <!--bratok_04-->
-
 <specific_character id="bratok_04" team_default = "1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_npc_u_stalker_bandit_4</icon>
@@ -1919,7 +1835,6 @@
 </specific_character>
 
 <!--bratok_05-->
-
 <specific_character id="bratok_05" team_default = "1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_npc_u_stalker_bandit_5</icon>
@@ -1954,7 +1869,6 @@
 </specific_character>
 
 <!--bratok_06-->
-
 <specific_character id="bratok_06" team_default = "1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_npc_u_stalker_bandit_4</icon>
@@ -1991,7 +1905,6 @@
 </specific_character>
 
 <!--bratok_07-->
-
 <specific_character id="bratok_07" team_default = "1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_npc_u_stalker_bandit_4</icon>
@@ -2026,7 +1939,6 @@
 </specific_character>
 
 <!--bratok_08-->
-
 <specific_character id="bratok_08" team_default = "1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_npc_u_stalker_bandit_8</icon>
@@ -2061,7 +1973,6 @@
 </specific_character>
 
 <!--bratok_09-->
-
 <specific_character id="bratok_09" team_default = "1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_npc_u_stalker_bandit_4</icon>
@@ -2098,7 +2009,6 @@
 </specific_character>
 
 <!--bratok_10-->
-
 <specific_character id="bratok_10" team_default = "1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_npc_u_stalker_bandit_10</icon>
@@ -2133,7 +2043,6 @@
 </specific_character>
 
 <!--bratok_11-->
-
 <specific_character id="bratok_11" team_default = "1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_npc_u_green_stalker_13</icon>
@@ -2168,7 +2077,6 @@
 </specific_character>
 
 <!--bratok_12-->
-
 <specific_character id="bratok_12" team_default = "1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_npc_u_green_stalker_14</icon>
@@ -2203,7 +2111,6 @@
 </specific_character>
 
 <!--bratok_regular-->
-
 <specific_character id="bratok_regular" team_default = "1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_npc_u_stalker_bandit_veteran</icon>
@@ -2239,7 +2146,6 @@
 </specific_character>
 
 <!--bratok_camo-->
-
 <specific_character id="bratok_camo" team_default = "1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_npc_u_stalker_bandit_camo</icon>
@@ -2276,7 +2182,6 @@
 </specific_character>
 
 <!--bratok_veteran-->
-
 <specific_character id="bratok_veteran" team_default = "1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_npc_u_stalker_bandit_veteran</icon>
@@ -2313,7 +2218,6 @@
 </specific_character>
 
 <!--bratok_master-->
-
 <specific_character id="bratok_master" team_default = "1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_npc_u_stalker_bandit_master</icon>
@@ -2350,7 +2254,6 @@
 </specific_character>
 
 <!--bratok_rukzak-->
-
 <specific_character id="bratok_rukzak" team_default = "1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_npc_u_stalker_bandit_master</icon>
@@ -2389,7 +2292,6 @@
 </specific_character>
 
 <!--bratok_gas-->
-
 <specific_character id="bratok_gas" team_default = "1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_npc_krysolov</icon>
@@ -2428,7 +2330,6 @@
 </specific_character>
 
 <!--krysolov-->
-
 <specific_character id="krysolov" team_default = "1">
     <name>Крысолов</name>
     <icon>ui_npc_krysolov</icon>
@@ -2471,7 +2372,6 @@
 </specific_character>
 
 <!--borovikov-->
-
 <specific_character id="borovikov" team_default = "1">
     <name>Боря Серов</name>
     <icon>ui_npc_u_stalker_bandit_borov</icon>
@@ -3810,7 +3710,6 @@
 </specific_character>
 
 <!-- soldat_dez1 -->
-
 <specific_character id="soldat_dez1" team_default = "1">
     <name>GENERATE_NAME_private</name>
     <icon>ui_npc_u_soldier_bandana</icon>
@@ -3843,7 +3742,6 @@
 </specific_character>
 
 <!--soldat_dez2-->
-
 <specific_character id="soldat_dez2" team_default = "1">
     <name>GENERATE_NAME_private</name>
     <icon>ui_npc_u_soldier_obichniy</icon>
@@ -3876,7 +3774,6 @@
 </specific_character>
 
 <!--dez_mask-->
-
 <specific_character id="dez_mask" team_default="1">
     <name>GENERATE_NAME_sergeant</name>
     <icon>ui_npc_u_soldier_mask</icon>
@@ -3915,7 +3812,6 @@
 </specific_character>
 
 <!--dez_mask1-->
-
 <specific_character id="dez_mask1" team_default="1">
     <name>GENERATE_NAME_sergeant</name>
     <icon>ui_npc_u_soldier_mask</icon>
@@ -3951,7 +3847,6 @@
 </specific_character>
 
 <!--killer_spetsnaz-->
-
 <specific_character id="killer_spetsnaz" team_default = "1">
     <name>Киллер</name>
     <icon>ui_npc_u_soldier_spetsnaz</icon>
@@ -3986,7 +3881,6 @@
 </specific_character>
 
 <!--killer_spetsnaz1-->
-
 <specific_character id="killer_spetsnaz1" team_default = "1">
     <name>Киллер</name>
     <icon>ui_npc_u_soldier_spetsnaz</icon>
@@ -4022,7 +3916,6 @@
 </specific_character>
 
 <!--killer_spetsnaz2-->
-
 <specific_character id="killer_spetsnaz2" team_default = "1">
     <name>Киллер</name>
     <icon>ui_npc_u_soldier_spetsnaz</icon>
@@ -4058,7 +3951,6 @@
 </specific_character>
 
 <!--rus_sniper-->
-
 <specific_character id="rus_sniper" team_default="1">
     <name>GENERATE_NAME_private</name>
     <icon>ui_npc_rus_mask</icon>
@@ -4094,7 +3986,6 @@
 </specific_character>
 
 <!--rus_sergant-->
-
 <specific_character id="rus_sergant" team_default="1">
     <name>GENERATE_NAME_sergeant</name>
     <icon>ui_npc_rus_sergant</icon>
@@ -4132,7 +4023,6 @@
 </specific_character>
 
 <!--rus_prapor-->
-
 <specific_character id="rus_prapor" team_default="1">
     <name>GENERATE_NAME_sergeant</name>
     <icon>ui_npc_rus_prapor</icon>
@@ -4170,7 +4060,6 @@
 </specific_character>
 
 <!--rus_mask-->
-
 <specific_character id="rus_mask" team_default="1">
     <name>GENERATE_NAME_private</name>
     <icon>ui_npc_rus_mask</icon>
@@ -4206,7 +4095,6 @@
 </specific_character>
 
 <!--rus_soldat1-->
-
 <specific_character id="rus_soldat1" team_default="1">
     <name>GENERATE_NAME_private</name>
     <icon>ui_npc_rus_bandana</icon>
@@ -4242,7 +4130,6 @@
 </specific_character>
 
 <!--rus_soldat2-->
-
 <specific_character id="rus_soldat2" team_default="1">
     <name>GENERATE_NAME_private</name>
     <icon>ui_npc_rus_bandana_1</icon>
@@ -4278,7 +4165,6 @@
 </specific_character>
 
 <!--rus_soldat3-->
-
 <specific_character id="rus_soldat3" team_default="1">
     <name>GENERATE_NAME_private</name>
     <icon>ui_npc_rus_bandana_2</icon>
@@ -4314,7 +4200,6 @@
 </specific_character>
 
 <!--rus_soldat4-->
-
 <specific_character id="rus_soldat4" team_default="1">
     <name>GENERATE_NAME_private</name>
     <icon>ui_npc_rus_bandana_1</icon>
@@ -4350,7 +4235,6 @@
 </specific_character>
 
 <!--rus_soldat5-->
-
 <specific_character id="rus_soldat5" team_default="1">
     <name>GENERATE_NAME_private</name>
     <icon>ui_npc_rus_bandana_1</icon>
@@ -4417,7 +4301,6 @@
 </specific_character>
 
 <!--iskatel-->
-
 <specific_character id="iskatel" team_default="1">
     <name>Варвар</name>
     <icon>ui_npc_iskatel</icon>
@@ -4452,7 +4335,6 @@
 </specific_character>
 
 <!--barnie-->
-
 <specific_character id="barnie" team_default="1">
     <name>Цыган</name>
     <icon>ui_npc_barnie</icon>
@@ -4488,7 +4370,6 @@
 
 <!--mg_baza-->
 <!--genrih-->
-
 <specific_character id="genrih" team_default = "1">
     <name>Генрих</name>
     <icon>ui_npc_solomon</icon>
@@ -4524,7 +4405,6 @@
 </specific_character>
 
 <!--yurgen-->
-
 <specific_character id="yurgen" team_default="1">
     <name>Юрген</name>
     <icon>ui_npc_iuda</icon>
@@ -4559,7 +4439,6 @@
 </specific_character>
 
 <!--jagger-->
-
 <specific_character id="jagger" team_default="1">
     <name>Джаггер</name>
     <icon>ui_npc_jagger</icon>
@@ -4595,7 +4474,6 @@
 </specific_character>
 
 <!--nemec_maska-->
-
 <specific_character id="nemec_maska" team_default="1">
     <name>Спецназовец</name>
     <icon>ui_npc_u_stalker_mo_elite</icon>
@@ -4630,7 +4508,6 @@
 </specific_character>
 
 <!--missis_uchen-->
-
 <specific_character id="missis_uchen" team_default = "1">
     <name>Гертруда</name>
     <icon>ui_npc_mamasha</icon>
@@ -4665,7 +4542,6 @@
 </specific_character>
 
 <!--uchen_mg-->
-
 <specific_character id="uchen_mg" team_default = "1">
     <name>Немецкий учёный</name>
     <icon>ui_npc_uchen_yellow</icon>
@@ -4700,7 +4576,6 @@
 </specific_character>
 
 <!--ivanov_trup-->
-
 <specific_character id="ivanov_trup" team_default = "1">
     <name>Доцент Иванов</name>
     <icon>ui_npc_uchen_white</icon>
@@ -4733,7 +4608,6 @@
 </specific_character>
 
 <!--wulf_trup-->
-
 <specific_character id="wulf_trup" team_default = "1">
     <name>Доктор Вульф</name>
     <icon>ui_npc_uchen_yellow</icon>
@@ -4768,7 +4642,6 @@
 </specific_character>
 
 <!--trup_x18-->
-
 <specific_character id="trup_x18" team_default = "1">
     <name>Лаборант Данилов</name>
     <icon>ui_npc_uchen_white</icon>
@@ -4802,7 +4675,6 @@
 </specific_character>
 
 <!--palatka_trup-->
-
 <specific_character id="palatka_trup" team_default = "1">
     <name>Гладиатор</name>
     <icon>ui_npc_u_zombie_fresh_2</icon>
@@ -4834,7 +4706,6 @@
 </specific_character>
 
 <!--petrograf-->
-
 <specific_character id="petrograf" team_default = "1">
     <name>Петрограф</name>
     <icon>ui_npc_uchen_10</icon>
@@ -4868,7 +4739,6 @@
 </specific_character>
 
 <!--wpn_trup_x16-->
-
 <specific_character id="wpn_trup_x16" team_default = "1">
     <name>Неизвестный учёный</name>
     <icon>ui_npc_u_stalker_ecolog</icon>
@@ -5011,7 +4881,6 @@
 </specific_character>
 
 <!--archivarius-->
-
 <specific_character id="archivarius" team_default = "1">
     <name>Лейтенант Минчуков</name>
     <icon>ui_npc_smith</icon>
@@ -5054,7 +4923,6 @@
 
 
 <!--zubarev-->
-
 <specific_character id="zubarev" team_default = "1">
     <name>Сержант Зубарев</name>
     <icon>ui_npc_spets</icon>
@@ -5220,7 +5088,6 @@
 </specific_character>
 
 <!--shep1-->
-
 <specific_character id="shep1" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_npc_u_stalker_neytral_rukzak_2</icon>
@@ -5252,7 +5119,6 @@
 
 
 <!--shep2-->
-
 <specific_character id="shep2" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_npc_u_stalker_neytral_rukzak_2</icon>
@@ -5284,7 +5150,6 @@
 
 
 <!--shep3-->
-
 <specific_character id="shep3" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_npc_u_stalker_neytral_rukzak_2</icon>
@@ -5315,7 +5180,6 @@
 </specific_character>
 
 <!--shepel-->
-
 <specific_character id="shepel" team_default = "1">
     <name>Прапорщик Шепельман</name>
     <icon>ui_npc_shep</icon>
@@ -5348,7 +5212,6 @@
 </specific_character>
 
 <!--mk_zasada-->
-
 <specific_character id="mk_zasada" team_default = "1">
     <name>Неизвестный сталкер</name>
     <icon>ui_npc_u_stalker_2_rozh1</icon>
@@ -5370,7 +5233,6 @@
 </specific_character>
 
 <!--mg_zasada-->
-
 <specific_character id="mg_zasada" team_default = "1">
     <name>Сержант Зубарев</name>
     <icon>ui_npc_spets</icon>
@@ -5396,7 +5258,6 @@
 </specific_character>
 
 <!--irokez_kombez-->
-
 <specific_character id="irokez_kombez" team_default = "1">
     <name>Ирокез</name>
     <icon>ui_npc_u_irokez</icon>
@@ -5438,7 +5299,6 @@
 
 
 <!--irokez_shkura-->
-
 <specific_character id="irokez_skin" team_default = "1">
     <name>Ирокез</name>
     <icon>ui_npc_u_irokez</icon>
@@ -5480,7 +5340,6 @@
 </specific_character>
 
 <!--Утюг-->
-
 <specific_character id="utyug" team_default = "1">
     <name>Генка Утюг</name>
     <icon>ui_npc_u_stalker_ki_head_1</icon>
@@ -5765,7 +5624,6 @@
 
 </specific_character>
 <!--Ormont-->
-
 <specific_character id="ormont" team_default = "1">
     <name>Профессор Ормонт</name>
     <icon>ui_npc_uchen_yellow</icon>
@@ -5801,7 +5659,6 @@
 </specific_character>
 
 <!--Ioffe-->
-
 <specific_character id="ioffe" team_default = "1">
     <name>Академик Иоффе</name>
     <icon>ui_npc_u_stalker_ecolog_military</icon>
@@ -5835,7 +5692,6 @@
 </specific_character>
 
 <!--Dyshlo_mercs-->
-
 <specific_character id="marksman1" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_npc_u_stalker_ki_head_1</icon>
@@ -6093,7 +5949,6 @@
 </specific_character>
 
 <!--dead city family-->
-
 <specific_character id="petrovige"team_default = "1">
     <name>Сергей Андреевич</name>
     <icon>ui_npc_uchen_11</icon>

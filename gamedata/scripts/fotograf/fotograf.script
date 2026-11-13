@@ -3377,18 +3377,6 @@ function del_stihoplet()
     end
 end
 
-function del_shpak()
-    local obj = alife():story_object(story_ids.shpak)
-    if obj then
-        alife():release(obj, true)
-    end
-end
-
-function spawn_shpak()
-    local obj = alife():create("shpak", vector():set(-313.980, 11.198, 69.462), 468917, 797)
-    -- bstr: он есть уже в оллспавне, зачем ему ещё спавн из скрипта?
-end
-
 function zadan_aground_have(first_speaker, second_speaker)
     return new_dialog.count_item("shema_labs", 1) and new_dialog.count_item("vacsina_aks", 1)
 end
@@ -3772,13 +3760,6 @@ end
 function mamasha_spawn()
     alife():create("mamasha", vector():set(83.162, -0.995, 85.644), 1074414, 747)
 end
-
-function zapadlo_spawn() -- Для теста
-    alife():create("zapadlo", vector():set(107.596, 30.039, -145.233), 407868, 0)
-    alife():create("taynik_zapadlo", vector():set(107.618, 30.039, -144.480), 407868, 0)
-end
-
-------------------------------PART_2------------------------------------
 
 function del_petrenko()
     local sobj = alife():story_object(30248)

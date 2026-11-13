@@ -1571,10 +1571,6 @@
     <task>agro_und_zadan</task>
 </info_portion>
 
-<info_portion id="shpak_spawn">
-    <action>fotograf.spawn_shpak</action>
-</info_portion>
-
 <info_portion id="shpak_one_dialog_start">
     <task>shpak_vodka</task>
 </info_portion>

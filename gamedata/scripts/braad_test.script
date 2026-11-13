@@ -30,12 +30,12 @@ local function on_info(npc, info_id)
 		spawn_ai_location("plata", vector():set(9.043, 5.880, 8.178), "l04u_labx18")
     end
 
-    if has_info("haron_start_dialog_start") and not ogse.var_exists("zapadlo_promzone_spawn") then
-        local sobj = spawn_ai_location("zapadlo", vector():set(46.44, 21.98, -149.42), "promzone")
-        if sobj then
-            sobj.custom_data = "[logic]\ncfg = scripts\\foto\\zapadlo.ltx"
-            alife():assign_story_id(sobj.id, story_ids.zapadlo)
-            ogse.save_var("zapadlo_promzone_spawn", true)
+    if has_info("haron_start_dialog_start") and db.actor:dont_has_info("zapadlo_spawn") then
+        local obj = spawn_ai_location("zapadlo", vector():set(46.44, 21.98, -149.42), "promzone")
+        if obj then
+            obj.custom_data = "[logic]\ncfg = scripts\\foto\\zapadlo.ltx"
+            alife():assign_story_id(obj.id, story_ids.zapadlo)
+            db.actor:give_info_portion("zapadlo_spawn")
         end
     end
 end

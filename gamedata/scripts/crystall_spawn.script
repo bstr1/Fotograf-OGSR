@@ -18,9 +18,6 @@ function check_locations()
         if not has_alife_info("items_random_spawn") then
             db.actor:give_info_portion("items_random_spawn")
         end
-        if not has_alife_info("zapadlo_spawn") then
-            db.actor:give_info_portion("zapadlo_spawn")
-        end
         if not has_alife_info("encyclopedy") then
             db.actor:give_info_portion("encyclopedy")
         end
@@ -72,9 +69,6 @@ function check_locations()
         end
         if not has_alife_info("lager_uchen_spawn") then
             db.actor:give_info_portion("lager_uchen_spawn")
-        end
-        if has_alife_info("brown_five_dialog_start") and not has_alife_info("shpak_spawn") then
-            db.actor:give_info_portion("shpak_spawn")
         end
         if has_alife_info("lch_bar_swamp") and not has_alife_info("swamp_second_enter") then
             db.actor:give_info_portion("swamp_second_enter")

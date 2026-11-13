@@ -4258,7 +4258,6 @@
             <give_info>brown_four_dialog_start</give_info>
             <action>fotograf.brown_outfit_dal</action>
             <action>fotograf.create_tunnel_restr</action>
-            <action>dialogs.break_dialog</action>
             <action>val_test.brawn_podarok</action>
         </phrase>
     </phrase_list>
@@ -4336,7 +4335,6 @@
             <give_info>x18_vernulsya</give_info>
             <action>fotograf.brown_outfit_otdal</action>
             <action>val_test.create_brounploym_restr</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -4408,8 +4406,6 @@
             <give_info>brown_five_dialog_start</give_info>
             <action>fotograf.brown_outfit_dal</action>
             <action>fotograf.del_stihoplet</action>
-            <action>fotograf.del_shpak</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -4454,7 +4450,6 @@
             <text>ploymar_two_dialog_8</text>
             <give_info>ploymar_two_dialog_start</give_info>
             <give_info>shpak_buharik</give_info>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -4499,7 +4494,6 @@
         <phrase id="8">
             <text>shpak_one_dialog_8</text>
             <give_info>shpak_one_dialog_start</give_info>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -4532,7 +4526,6 @@
             <action>fotograf.shpak_one_dialog_done</action>
             <action>transfer.create_box</action>
             <action>y_level.lch_swamp_aground_swamp</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -6132,7 +6125,6 @@
             <give_info>kayman_docs_est</give_info>
             <give_info>persona_22</give_info>
             <action>foto2.usilok_poluchil</action>
-            <action>dialogs.break_dialog</action>
             <action>val_test.kayman_usilok</action>
         </phrase>
     </phrase_list>

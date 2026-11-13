@@ -1,9 +1,10 @@
 <game_task id="zapadlo_case">
 	<title>Помочь внучке Деда Западло</title>
 	<objective>
-		<text>Вывести из зоны внучку Деда Западло</text>
+		<text>Помочь внучке Деда Западло</text>
 		<icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
 		<infoportion_complete>zapadlo_dialog_4_done</infoportion_complete>
+          <article>zapadlo_help_verka</article>
 	</objective>
 	<objective>
 		<text>Найти Харона в Мёртвом городе</text>
@@ -29,6 +30,7 @@
 	</objective>
 	<objective>
 		<text>Встретиться с Дедом Западло</text>
+		<map_location_type hint="Дед Западло">blue_location</map_location_type>
 		<object_story_id>zapadlo</object_story_id>
 		<infoportion_complete>zapadlo_dialog_4_done</infoportion_complete>
 	</objective>
@@ -1263,6 +1265,8 @@
      <objective>
           <text>ploymar_zadan_obj_03</text>
           <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
+          <map_location_type hint="Браун">blue_location</map_location_type>
+          <object_story_id>brown_dva</object_story_id>
           <infoportion_complete>ploymar_start_dialog_done</infoportion_complete>
      </objective>
      <objective>
@@ -1319,6 +1323,8 @@
      </objective>
      <objective>
           <text>shpak_vodka_obj_03</text>
+          <map_location_type hint="Шпак">blue_location</map_location_type>
+          <object_story_id>shpak</object_story_id>
           <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
           <infoportion_complete>shpak_one_dialog_done</infoportion_complete>
      </objective>
