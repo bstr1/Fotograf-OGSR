@@ -5,7 +5,11 @@ local min_coef = 0.05
 
 -- Ножи, которыми можно отрезать
 local knives = {
-	["wpn_knife"] = true
+	["wpn_knife"] = true,
+	["wpn_knife_m9"] = true,
+	["wpn_knife_ots04"] = true,
+	["wpn_knife_extreme"] = true,
+	["wpn_knife_km2000"] = true
 }
 
 local wpn_flags = {

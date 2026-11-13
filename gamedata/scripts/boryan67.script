@@ -1040,7 +1040,7 @@ function kill_actor()
     local actor = db.actor
     actor:give_info_portion("zapadlo_enemy") -- дед разозлился
     -- проигрываем выстрел из ППШ
-    local snd_obj = xr_sound.get_safe_sound_object([[weapons\92fs_fire_1p_outdoor]])
+    local snd_obj = xr_sound.get_safe_sound_object([[weapons\toz34\toz34_shoot]])
     snd_obj:play_at_pos(db.actor, db.actor:position())
     -- создадим рядом деда
     local offset = vector():set(math.random() * 6 - 3, 0, math.random() * 6 - 3) -- создадим случайный вектор направления
@@ -1063,25 +1063,24 @@ function kill_actor()
 end
 -- Создание Харона в МГ
 function haron_spawn()
-    local sobj = alife():create("haronchik", vector():set(-296.28750610352, 9.6740570068359, -172.44869995117), 49266,
+    local obj = alife():create("haronchik", vector():set(-296.28750610352, 9.6740570068359, -172.44869995117), 49266,
         1199)
-    if sobj then
-        amk.save_variable("HaronID", sobj.id) -- сохраняем ИД
-    end
+    alife():assign_story_id(obj.id, story_ids.haronchik)
 end
+
 -- Создание Верки в МГ
 function verka_spawn()
-    local sobj = alife():create("verka", vector():set(-71.179534912109, 1.2130371332169, -242.8204498291), 236993, 1259)
-    if sobj then
-        amk.save_variable("VerkaID", sobj.id) -- сохраняем ИД
-    end
+    local obj = alife():create("verka", vector():set(-71.179534912109, 1.2130371332169, -242.8204498291), 236993, 1259)
+    alife():assign_story_id(obj.id, story_ids.verka)
 end
+
 -- прекондишн наличия ремкомплектов у ГГ
 function has_repboxes(first_speaker, second_speaker)
     return
         db.actor:object("repbox_s1") ~= nil and db.actor:object("repbox_s2") ~= nil and db.actor:object("repbox_s6") ~=
             nil
 end
+
 -- передача ремкомплектов Харону
 function transfer_repboxes(first_speaker, second_speaker)
     local obj
@@ -1098,42 +1097,32 @@ function transfer_repboxes(first_speaker, second_speaker)
         first_speaker:transfer_item(obj, second_speaker)
     end
 end
+
 -- Удаление Харона
 function del_haronchik()
-    local haron_id = amk.load_variable("HaronID", nil)
-    if haron_id then
-        local sobj = alife():object(haron_id)
-        local obj = level.object_by_id(haron_id)
-        if obj then
-            play_particle({
-                particle = "anomaly2\\teleport_idle",
-                pos = obj:position(),
-                sound = "anomaly\\teleport_idle"
-            })
-        end
-        if sobj then
-            alife():release(sobj, true) -- удаляем Харона
-        end
-        amk.del_variable("HaronID") -- удаляем ИД Харона
+    local obj = alife():story_object(story_ids.haronchik)
+    if obj then
+        local pos = obj.position
+        alife():release(obj, true)
+        play_particle({
+            particle = "anomaly2\\teleport_idle",
+            pos = pos,
+            sound = "anomaly\\teleport_idle"
+        })
     end
 end
+
 -- Удаление Верки
 function del_verka()
-    local verka_id = amk.load_variable("VerkaID", nil)
-    if verka_id then
-        local sobj = alife():object(verka_id)
-        local obj = level.object_by_id(verka_id)
-        if obj then
-            play_particle({
-                particle = "anomaly2\\teleport_idle",
-                pos = obj:position(),
-                sound = "anomaly\\teleport_idle"
-            })
-        end
-        if sobj then
-            alife():release(sobj, true) -- удаляем Верку
-        end
-        amk.del_variable("VerkaID") -- удаляем ИД Верки
+    local obj = alife():story_object(story_ids.verka)
+    if obj then
+        local pos = obj.position
+        alife():release(obj, true)
+        play_particle({
+            particle = "anomaly2\\teleport_idle",
+            pos = pos,
+            sound = "anomaly\\teleport_idle"
+        })
     end
 end
 

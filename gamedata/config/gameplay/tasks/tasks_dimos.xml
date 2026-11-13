@@ -1,5 +1,41 @@
+<game_task id="zapadlo_case">
+	<title>Помочь внучке Деда Западло</title>
+	<objective>
+		<text>Вывести из зоны внучку Деда Западло</text>
+		<icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
+		<infoportion_complete>zapadlo_dialog_4_done</infoportion_complete>
+	</objective>
+	<objective>
+		<text>Найти Харона в Мёртвом городе</text>
+		<map_location_type hint="Харон">blue_location</map_location_type>
+		<object_story_id>haronchik</object_story_id>
+		<infoportion_complete>haron_dialog_2_done</infoportion_complete>
+	</objective>
+	<objective>
+		<text>Встретить внучку у перехода</text>
+		<map_location_type hint="Верка Заподлянка">blue_location</map_location_type>
+		<object_story_id>verka</object_story_id>
+		<infoportion_complete>verka_dialog_1_done</infoportion_complete>
+	</objective>
+	<objective>
+		<text>Поговорить с Хароном</text>
+		<map_location_type hint="Харон">blue_location</map_location_type>
+		<object_story_id>haronchik</object_story_id>
+		<infoportion_complete>haron_dialog_3_done</infoportion_complete>
+	</objective>
+	<objective>
+		<text>Вывести внучку из Мёртвого города</text>
+		<infoportion_complete>verka_out</infoportion_complete>
+	</objective>
+	<objective>
+		<text>Встретиться с Дедом Западло</text>
+		<object_story_id>zapadlo</object_story_id>
+		<infoportion_complete>zapadlo_dialog_4_done</infoportion_complete>
+	</objective>
+</game_task>
+
 <game_task id="anom_research">
-    <title>anom_research_task</title>
+     <title>anom_research_task</title>
      <objective>
           <text>anom_research_obj_01</text>
           <icon>ui_iconsTotal_bar_resque_information</icon>
@@ -51,7 +87,7 @@
 
 
 <game_task id="smith_start">
-    <title>smith_start_task</title>
+     <title>smith_start_task</title>
      <objective>
           <text>smith_start_obj_01</text>
           <icon>ui_usa_smith</icon>
@@ -68,7 +104,7 @@
 
 
 <game_task id="smith_brityi">
-    <title>smith_brityi_task</title>
+     <title>smith_brityi_task</title>
      <objective>
           <text>smith_brityi_obj_01</text>
           <icon>ui_npc_u_stalker_petruha</icon>
@@ -85,7 +121,7 @@
 
 
 <game_task id="vertushka_mesto">
-    <title>vertushka_mesto_task</title>
+     <title>vertushka_mesto_task</title>
      <objective>
           <text>vertushka_mesto_obj_01</text>
           <icon>ui_iconsTotal_krest</icon>
@@ -114,7 +150,7 @@
 
 
 <game_task id="brityi_sidor">
-    <title>brityi_sidor_task</title>
+     <title>brityi_sidor_task</title>
      <objective>
           <text>brityi_sidor_obj_01</text>
           <icon>ui_iconsTotal_esc_trader_job</icon>
@@ -131,7 +167,7 @@
 
 
 <game_task id="sidor_brigadir">
-    <title>sidor_brigadir_task</title>
+     <title>sidor_brigadir_task</title>
      <objective>
           <text>sidor_brigadir_obj_01</text>
           <icon>ui_npc_brigadir</icon>
@@ -148,7 +184,7 @@
 
 
 <game_task id="maroder_oblava">
-    <title>maroder_oblava_task</title>
+     <title>maroder_oblava_task</title>
      <objective>
           <text>maroder_oblava_obj_01</text>
           <icon>ui_npc_maroder_mask</icon>
@@ -169,7 +205,7 @@
 
 
 <game_task id="fotik_est">
-    <title>fotik_est_task</title>
+     <title>fotik_est_task</title>
      <objective>
           <text>fotik_est_obj_01</text>
           <icon>ui_usa_smith</icon>
@@ -186,7 +222,7 @@
 
 
 <game_task id="smith_brown">
-    <title>smith_brown_task</title>
+     <title>smith_brown_task</title>
      <objective>
           <text>smith_brown_obj_01</text>
           <icon>ui_usa_brown</icon>
@@ -203,7 +239,7 @@
 
 
 <game_task id="vybratsya_izpeschery">
-    <title>vybratsya_izpeschery_task</title>
+     <title>vybratsya_izpeschery_task</title>
      <objective>
           <text>vybratsya_izpeschery_obj_01</text>
           <icon>ui_iconsTotal_locations</icon>
@@ -219,7 +255,7 @@
 
 
 <game_task id="dron_plasch">
-    <title>dron_plasch_task</title>
+     <title>dron_plasch_task</title>
      <objective>
           <text>dron_plasch_obj_01</text>
           <icon>ui_iconsTotal_found_thing</icon>
@@ -242,7 +278,7 @@
 
 
 <game_task id="levsha_vstrecha">
-    <title>levsha_vstrecha_task</title>
+     <title>levsha_vstrecha_task</title>
      <objective>
           <text>levsha_vstrecha_obj_01</text>
           <icon>ui_npc_u_stalker_hellcar</icon>
@@ -259,7 +295,7 @@
 
 
 <game_task id="levsha_zahvat_bar">
-    <title>levsha_zahvat_bar_task</title>
+     <title>levsha_zahvat_bar_task</title>
      <objective>
           <text>levsha_zahvat_bar_obj_01</text>
           <icon>ui_iconsTotal_eliminate_lager</icon>
@@ -293,7 +329,7 @@
 
 
 <game_task id="levsha_crystalls">
-    <title>levsha_crystalls_task</title>
+     <title>levsha_crystalls_task</title>
      <objective>
           <text>levsha_crystalls_obj_01</text>
           <icon>ui_iconsTotal_artefact</icon>
@@ -316,7 +352,7 @@
 
 
 <game_task id="lukash_vstrecha">
-    <title>lukash_vstrecha_task</title>
+     <title>lukash_vstrecha_task</title>
      <objective>
           <text>lukash_vstrecha_obj_01</text>
           <icon>ui_npc_u_stalker_sv_leader</icon>
@@ -333,7 +369,7 @@
 
 
 <game_task id="lukash_bomba">
-    <title>lukash_bomba_task</title>
+     <title>lukash_bomba_task</title>
      <objective>
           <text>lukash_bomba_obj_01</text>
           <icon>ui_iconsTotal_found_thing</icon>
@@ -356,7 +392,7 @@
 
 
 <game_task id="lukash_angar">
-    <title>lukash_angar_task</title>
+     <title>lukash_angar_task</title>
      <objective>
           <text>lukash_angar_obj_01</text>
           <icon>ui_iconsTotal_eliminate_lager</icon>
@@ -378,7 +414,7 @@
 </game_task>
 
 <game_task id="prom_desant">
-    <title>prom_desant_task</title>
+     <title>prom_desant_task</title>
      <objective>
           <text>prom_desant_obj_01</text>
           <icon>ui_iconsTotal_eliminate_lager</icon>
@@ -400,7 +436,7 @@
 </game_task>
 
 <game_task id="vasil_govorit">
-    <title>vasil_govorit_task</title>
+     <title>vasil_govorit_task</title>
      <objective>
           <text>vasil_govorit_obj_01</text>
           <icon>ui_npc_vasil</icon>
@@ -417,7 +453,7 @@
 
 
 <game_task id="doctor_govorit">
-    <title>doctor_govorit_task</title>
+     <title>doctor_govorit_task</title>
      <objective>
           <text>doctor_govorit_obj_01</text>
           <icon>ui_npc_u_doktor</icon>
@@ -434,7 +470,7 @@
 
 
 <game_task id="lavrov_iskat">
-    <title>lavrov_iskat_task</title>
+     <title>lavrov_iskat_task</title>
      <objective>
           <text>lavrov_iskat_obj_01</text>
           <icon>ui_iconsTotal_yan_find_scientist_semenov</icon>
@@ -464,7 +500,7 @@
 
 
 <game_task id="doctor_zapiska">
-    <title>doctor_zapiska_task</title>
+     <title>doctor_zapiska_task</title>
      <objective>
           <text>doctor_zapiska_obj_01</text>
           <icon>ui_iconsTotal_bar_darklab_documents</icon>
@@ -481,7 +517,7 @@
 
 
 <game_task id="agent_mk">
-    <title>agent_mk_task</title>
+     <title>agent_mk_task</title>
      <objective>
           <text>agent_mk_obj_01</text>
           <icon>ui_iconsTotal_esc_dinamit_to_volk</icon>
@@ -514,7 +550,7 @@
 </game_task>
 
 <game_task id="borya_antirad">
-    <title>borya_antirad_task</title>
+     <title>borya_antirad_task</title>
      <objective>
           <text>borya_antirad_obj_01</text>
           <icon>ui_iconsTotal_esc_blockpost_case_to_trader</icon>
@@ -538,7 +574,7 @@
 
 
 <game_task id="havchik_klad">
-    <title>havchik_klad_task</title>
+     <title>havchik_klad_task</title>
      <objective>
           <text>havchik_klad_obj_01</text>
           <icon>ui_iconsTotal_found_thing</icon>
@@ -579,7 +615,7 @@
 
 
 <game_task id="glushak_nayti">
-    <title>glushak_nayti_task</title>
+     <title>glushak_nayti_task</title>
      <objective>
           <text>glushak_nayti_obj_01</text>
           <icon>ui_iconsTotal_found_thing</icon>
@@ -601,7 +637,7 @@
 
 
 <game_task id="recepts_01">
-    <title>recepts_01_task</title>
+     <title>recepts_01_task</title>
      <objective>
           <text>recepts_01_obj_01</text>
           <icon>ui_iconsTotal_tutorial_find_artefact</icon>
@@ -623,7 +659,7 @@
 
 
 <game_task id="recepts_02">
-    <title>recepts_02_task</title>
+     <title>recepts_02_task</title>
      <objective>
           <text>recepts_02_obj_01</text>
           <icon>ui_iconsTotal_tutorial_find_artefact</icon>
@@ -645,7 +681,7 @@
 
 
 <game_task id="recepts_03">
-    <title>recepts_03_task</title>
+     <title>recepts_03_task</title>
      <objective>
           <text>recepts_03_obj_01</text>
           <icon>ui_iconsTotal_tutorial_find_artefact</icon>
@@ -667,7 +703,7 @@
 
 
 <game_task id="voronin_poligon">
-    <title>voronin_poligon_task</title>
+     <title>voronin_poligon_task</title>
      <objective>
           <text>voronin_poligon_obj_01</text>
           <icon>ui_npc_rus_voronin</icon>
@@ -684,7 +720,7 @@
 
 
 <game_task id="povar_havchik">
-    <title>povar_havchik_task</title>
+     <title>povar_havchik_task</title>
      <objective>
           <text>povar_havchik_obj_01</text>
           <icon>ui_iconsTotal_found_thing</icon>
@@ -701,7 +737,7 @@
 
 
 <game_task id="road_ataka">
-    <title>road_ataka_task</title>
+     <title>road_ataka_task</title>
      <objective>
           <text>road_ataka_obj_01</text>
           <icon>ui_npc_monster_mutant_boar</icon>
@@ -724,7 +760,7 @@
 
 
 <game_task id="edik_aptechki">
-    <title>edik_aptechki_task</title>
+     <title>edik_aptechki_task</title>
      <objective>
           <text>edik_aptechki_obj_01</text>
           <icon>ui_iconsTotal_esc_blockpost_case_to_trader</icon>
@@ -747,7 +783,7 @@
 
 
 <game_task id="foto_poligon">
-    <title>foto_poligon_task</title>
+     <title>foto_poligon_task</title>
      <objective>
           <text>foto_poligon_obj_01</text>
           <icon>ui_iconsTotal_eliminate_lager</icon>
@@ -774,7 +810,7 @@
 
 
 <game_task id="drozdov_vstrecha">
-    <title>drozdov_vstrecha_task</title>
+     <title>drozdov_vstrecha_task</title>
      <objective>
           <text>drozdov_vstrecha_obj_01</text>
           <icon>ui_fotokamera</icon>
@@ -801,7 +837,7 @@
 
 
 <game_task id="voronin_aver">
-    <title>voronin_aver_task</title>
+     <title>voronin_aver_task</title>
      <objective>
           <text>voronin_aver_obj_01</text>
           <icon>ui_npc_rus_voronin</icon>
@@ -825,7 +861,7 @@
 
 
 <game_task id="haron_case">
-    <title>haron_case_task</title>
+     <title>haron_case_task</title>
      <objective>
           <text>haron_case_obj_01</text>
           <icon>ui_iconsTotal_found_thing</icon>
@@ -840,7 +876,7 @@
 
 
 <game_task id="voronin_perehod">
-    <title>voronin_perehod_task</title>
+     <title>voronin_perehod_task</title>
      <objective>
           <text>voronin_perehod_obj_01</text>
           <icon>ui_npc_rus_voronin</icon>
@@ -857,7 +893,7 @@
 
 
 <game_task id="mousetrap_task">
-    <title>mousetrap_task_task</title>
+     <title>mousetrap_task_task</title>
      <objective>
           <text>mousetrap_task_obj_01</text>
           <icon>ui_iconsTotal_eliminate_lager</icon>
@@ -905,7 +941,7 @@
 </game_task>
 
 <game_task id="osvedom_vyzov_01">
-    <title>osvedom_vyzov_01_task</title>
+     <title>osvedom_vyzov_01_task</title>
      <objective>
           <text>osvedom_vyzov_01_obj_01</text>
           <icon>ui_npc_osvedom</icon>
@@ -919,7 +955,7 @@
 </game_task>
 
 <game_task id="main_task">
-    <title>main_task_task</title>
+     <title>main_task_task</title>
      <objective>
           <text>main_task_obj_01</text>
           <icon>ui_iconsTotal_bar_radar_deactivate</icon>
@@ -942,7 +978,7 @@
 </game_task>
 
 <game_task id="main_foto">
-    <title>main_foto_task</title>
+     <title>main_foto_task</title>
      <objective>
           <text>main_foto_obj_01</text>
           <icon>ui_fotokamera</icon>
@@ -958,7 +994,7 @@
 </game_task>
 
 <game_task id="german_spasenie">
-    <title>german_spasenie_task</title>
+     <title>german_spasenie_task</title>
      <objective>
           <text>german_spasenie_obj_01</text>
           <icon>ui_iconsTotal_bar_resque_information_2</icon>
@@ -969,6 +1005,8 @@
      <objective>
           <text>german_spasenie_obj_02</text>
           <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
+          <map_location_type hint="Сутулый">blue_location</map_location_type>
+          <object_story_id>sutuly</object_story_id>
           <infoportion_complete>sut_start_dialog_done</infoportion_complete>
      </objective>
      <objective>
@@ -996,12 +1034,14 @@
      <objective>
           <text>german_spasenie_obj_07</text>
           <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
+          <map_location_type hint="Связной">blue_location</map_location_type>
+          <object_story_id>osvedom_dva</object_story_id>
           <infoportion_complete>german_spasenie_finish</infoportion_complete>
      </objective>
 </game_task>
 
 <game_task id="hunter_case">
-    <title>hunter_case_task</title>
+     <title>hunter_case_task</title>
      <objective>
           <text>hunter_case_obj_01</text>
           <icon>ui_iconsTotal_esc_blockpost_case_to_trader</icon>
@@ -1024,7 +1064,7 @@
 </game_task>
 
 <game_task id="filin_vino">
-    <title>filin_vino_task</title>
+     <title>filin_vino_task</title>
      <objective>
           <text>filin_vino_obj_01</text>
           <icon>ui_iconsTotal_found_thing</icon>
@@ -1034,6 +1074,8 @@
      <objective>
           <text>filin_vino_obj_02</text>
           <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
+          <map_location_type hint="Лазарев">blue_location</map_location_type>
+          <object_story_id>uchen_kaymanov</object_story_id>
           <function_complete>fotograf.filin_vino_have</function_complete>
           <infoportion_set_complete>filin_vino_have</infoportion_set_complete>
      </objective>
@@ -1047,7 +1089,7 @@
 </game_task>
 
 <game_task id="filin_helper">
-    <title>filin_helper_task</title>
+     <title>filin_helper_task</title>
      <objective>
           <text>filin_helper_obj_01</text>
           <icon>ui_iconsTotal_yan_find_scientist</icon>
@@ -1076,7 +1118,7 @@
 </game_task>
 
 <game_task id="brom_likvidator">
-    <title>brom_likvidator_task</title>
+     <title>brom_likvidator_task</title>
      <objective>
           <text>brom_likvidator_obj_01</text>
           <icon>ui_iconsTotal_artefacts</icon>
@@ -1096,7 +1138,7 @@
 </game_task>
 
 <game_task id="wulf_poisk">
-    <title>wulf_poisk_task</title>
+     <title>wulf_poisk_task</title>
      <objective>
           <text>wulf_poisk_obj_01</text>
           <icon>ui_npc_mamasha</icon>
@@ -1118,7 +1160,7 @@
 </game_task>
 
 <game_task id="jagger_vstrecha">
-    <title>jagger_vstrecha_task</title>
+     <title>jagger_vstrecha_task</title>
      <objective>
           <text>jagger_vstrecha_obj_01</text>
           <icon>ui_npc_jagger</icon>
@@ -1134,7 +1176,7 @@
 </game_task>
 
 <game_task id="mg_vyhod">
-    <title>mg_vyhod_task</title>
+     <title>mg_vyhod_task</title>
      <objective>
           <text>mg_vyhod_obj_01</text>
           <icon>ui_iconsTotal_locations</icon>
@@ -1156,7 +1198,7 @@
 </game_task>
 
 <game_task id="shema_perehodov">
-    <title>shema_perehodov_task</title>
+     <title>shema_perehodov_task</title>
      <objective>
           <text>shema_perehodov_obj_01</text>
           <icon>ui_iconsTotal_bar_darklab_documents</icon>
@@ -1183,7 +1225,7 @@
 </game_task>
 
 <game_task id="uber_ataka">
-    <title>uber_ataka_task</title>
+     <title>uber_ataka_task</title>
      <objective>
           <text>uber_ataka_obj_01</text>
           <icon>ui_iconsTotal_eliminate_lager</icon>
@@ -1206,7 +1248,7 @@
 </game_task>
 
 <game_task id="ploymar_zadan">
-    <title>ploymar_zadan_task</title>
+     <title>ploymar_zadan_task</title>
      <objective>
           <text>ploymar_zadan_obj_01</text>
           <icon>ui_iconsTotal_dar_codedoor_1</icon>
@@ -1231,7 +1273,7 @@
 </game_task>
 
 <game_task id="agro_und_zadan">
-    <title>agro_und_zadan_task</title>
+     <title>agro_und_zadan_task</title>
      <objective>
           <text>agro_und_zadan_obj_01</text>
           <icon>ui_iconsTotal_yan_kill_brain_task_2</icon>
@@ -1262,7 +1304,7 @@
 </game_task>
 
 <game_task id="shpak_vodka">
-    <title>shpak_vodka_task</title>
+     <title>shpak_vodka_task</title>
      <objective>
           <text>shpak_vodka_obj_01</text>
           <icon>ui_iconsTotal_shpak</icon>
@@ -1283,7 +1325,7 @@
 </game_task>
 
 <game_task id="check_podzemka">
-    <title>check_podzemka_task</title>
+     <title>check_podzemka_task</title>
      <objective>
           <text>check_podzemka_obj_01</text>
           <icon>ui_iconsTotal_dar_codedoor_2</icon>
@@ -1329,7 +1371,7 @@
 </game_task>
 
 <game_task id="glaza_ploti">
-    <title>glaza_ploti_task</title>
+     <title>glaza_ploti_task</title>
      <objective>
           <text>glaza_ploti_obj_01</text>
           <icon>ui_iconsTotal_monster_part</icon>
@@ -1350,7 +1392,7 @@
 </game_task>
 
 <game_task id="mario_case">
-    <title>mario_case_task</title>
+     <title>mario_case_task</title>
      <objective>
           <text>mario_case_obj_01</text>
           <icon>ui_iconsTotal_esc_blockpost_case_to_trader</icon>
@@ -1373,7 +1415,7 @@
 </game_task>
 
 <game_task id="voronin_key">
-    <title>voronin_key_task</title>
+     <title>voronin_key_task</title>
      <objective>
           <text>voronin_key_obj_01</text>
           <icon>ui_iconsTotal_found_thing</icon>
@@ -1394,7 +1436,7 @@
 </game_task>
 
 <game_task id="polischuk_key">
-    <title>polischuk_key_task</title>
+     <title>polischuk_key_task</title>
      <objective>
           <text>polischuk_key_obj_01</text>
           <icon>ui_iconsTotal_found_thing</icon>
@@ -1415,7 +1457,7 @@
 </game_task>
 
 <game_task id="dezertir_car">
-    <title>dezertir_car_task</title>
+     <title>dezertir_car_task</title>
      <objective>
           <text>dezertir_car_obj_01</text>
           <icon>ui_iconsTotal_technique</icon>
@@ -1435,7 +1477,7 @@
 </game_task>
 
 <game_task id="flesh_winch">
-    <title>flesh_winch_task</title>
+     <title>flesh_winch_task</title>
      <objective>
           <text>flesh_winch_obj_01</text>
           <icon>ui_iconsTotal_monster_part</icon>
@@ -1456,7 +1498,7 @@
 </game_task>
 
 <game_task id="voronin_car">
-    <title>voronin_car_task</title>
+     <title>voronin_car_task</title>
      <objective>
           <text>voronin_car_obj_01</text>
           <icon>ui_iconsTotal_technique</icon>
@@ -1476,7 +1518,7 @@
 </game_task>
 
 <game_task id="perehod_dyshlo">
-    <title>perehod_dyshlo_task</title>
+     <title>perehod_dyshlo_task</title>
      <objective>
           <text>perehod_dyshlo_obj_01</text>
           <icon>ui_iconsTotal_locations</icon>
@@ -1503,7 +1545,7 @@
 </game_task>
 
 <game_task id="dyshlo_attak">
-    <title>dyshlo_attak_task</title>
+     <title>dyshlo_attak_task</title>
      <objective>
           <text>dyshlo_attak_obj_01</text>
           <icon>ui_iconsTotal_eliminate_lager</icon>
@@ -1531,7 +1573,7 @@
 </game_task>
 
 <game_task id="dyshlo_glavar">
-    <title>dyshlo_glavar_task</title>
+     <title>dyshlo_glavar_task</title>
      <objective>
           <text>dyshlo_glavar_obj_01</text>
           <icon>ui_iconsTotal_pda</icon>
@@ -1552,7 +1594,7 @@
 </game_task>
 
 <game_task id="brown_x10">
-    <title>brown_x10_task</title>
+     <title>brown_x10_task</title>
      <objective>
           <text>brown_x10_obj_01</text>
           <icon>ui_iconsTotal_door</icon>
@@ -1566,7 +1608,7 @@
 </game_task>
 
 <game_task id="pentagramm">
-    <title>pentagramm_task</title>
+     <title>pentagramm_task</title>
      <objective>
           <text>pentagramm_obj_01</text>
           <icon>ui_iconsTotal_glaz</icon>
@@ -1587,7 +1629,7 @@
 </game_task>
 
 <game_task id="brown_accompaniment">
-    <title>brown_accompaniment_task</title>
+     <title>brown_accompaniment_task</title>
      <objective>
           <text>brown_accompaniment_obj_01</text>
           <icon>ui_iconsTotal_yan_kill_brain_task_2</icon>
@@ -1607,7 +1649,7 @@
 </game_task>
 
 <game_task id="codes_taynik">
-    <title>codes_taynik_task</title>
+     <title>codes_taynik_task</title>
      <objective>
           <text>codes_taynik_obj_01</text>
           <icon>ui_iconsTotal_dar_codedoor_2</icon>
@@ -1622,7 +1664,7 @@
 </game_task>
 
 <game_task id="pashka_sguschenka">
-    <title>pashka_sguschenka_task</title>
+     <title>pashka_sguschenka_task</title>
      <objective>
           <text>pashka_sguschenka_obj_01</text>
           <icon>ui_iconsTotal_found_thing</icon>

@@ -11,7 +11,7 @@ function palatka_spawn()
 end
 
 function ostrov_spawn()
-    local obj = alife():create("ostrov", vector():set(-140.657, 14.587, 180.358), 139623, 1)
+    local obj = alife():create("ostrov", vector():set(-140.657, 20.587, 180.358), 139623, 1)
     xr_logic.pstor_store(db.actor, "iOstrovId", obj.id)
     level.client_spawn_manager():add(obj.id, 0, this.FixObject, 0)
     local snd_obj = xr_sound.get_safe_sound_object([[ambient\new\actor_ostrov]])

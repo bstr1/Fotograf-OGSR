@@ -2107,7 +2107,7 @@ function orm_spawn()
 end
 
 function iof_spawn()
-    local obj = alife():create("ioffe", vector():set(-141.086, 19.578, 181.332), 138853, 1)
+    local obj = alife():create("ioffe", vector():set(-141.086, 40.578, 181.332), 138853, 1)
     alife():assign_story_id(obj.id, story_ids.ioffe)
     obj:set_health(0)
 end

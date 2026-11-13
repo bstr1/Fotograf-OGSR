@@ -1,3 +1,17 @@
+local deal_phase = 0
+function sms_verka()
+    news_manager.send_tip(db.actor, "zapadlo_sms_" .. deal_phase)
+
+    if deal_phase >= 5 then
+        db.actor:give_info_portion("haron_dialog_sms")
+        boryan67.verka_spawn()
+    else
+        dsh.start_timer("haron_timer", 10, "chetkiu.sms_verka")
+    end
+
+    deal_phase = deal_phase + 1
+end
+
 function broken_exo()
 ogse.spawn_item_in_inv("broken_exoskeleton")
 end
@@ -40,6 +54,29 @@ dsh.wait_condition(function() return db.actor:dont_has_info("ui_talk") end,
             db.actor:set_actor_position(pos:point(last))
         end)
     end)
+end
+
+function verka_teleport(first_speaker, second_speaker)
+    dsh.wait_condition(function() return db.actor:dont_has_info("ui_talk") end,
+        function()
+            level.add_pp_effector("black.ppe", 2006, false)
+            dsh.timeout(1000, function()
+                local sim = alife()
+                local pos = patrol("verka1_walk")
+                local last = pos:count() - 1
+                for a = 1, 65534 do
+                    local sobj = sim:object(a)
+                    if sobj and sobj:section_name() == "verka" then
+                        sim:teleport_object(a, pos:point(last), pos:level_vertex_id(last), pos:game_vertex_id(last))
+                        break
+                    end
+                end
+                local actor_pos = vector():set(-294.42, 9.68, -171.28)
+                local look_dir  = vector():set(-0.98, -0.09, -0.14)
+                db.actor:set_actor_position(actor_pos)
+                db.actor:set_actor_direction(-look_dir:getH())
+            end)
+        end)
 end
 
 function mg_group_release()

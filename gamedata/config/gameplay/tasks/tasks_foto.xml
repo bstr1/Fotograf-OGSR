@@ -1,5 +1,5 @@
 <game_task id="radio">
-    <title>radio_task</title>
+     <title>radio_task</title>
      <objective>
           <text>radio_obj_01</text>
           <icon>ui_iconsTotal_radio_remont</icon>
@@ -10,17 +10,21 @@
      <objective>
           <text>radio_obj_02</text>
           <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
+          <map_location_type hint="Профессор Кайманов">blue_location</map_location_type>
+          <object_story_id>bar_Barman</object_story_id>
           <infoportion_complete>kayman_docs_est</infoportion_complete>
           <infoportion_fail>kayman_oblom</infoportion_fail>
      </objective>
      <objective>
           <text>radio_obj_03</text>
+          <map_location_type hint="Дядя Миша">blue_location</map_location_type>
+          <object_story_id>bar_Barman</object_story_id>
           <infoportion_complete>radio_end</infoportion_complete>
      </objective>
 </game_task>
 
 <game_task id="kaymanovu_doki">
-    <title>kaymanovu_doki_task</title>
+     <title>kaymanovu_doki_task</title>
      <objective>
           <text>kaymanovu_doki_obj_01</text>
           <icon>ui_iconsTotal_archiv</icon>
@@ -30,6 +34,8 @@
      </objective>
      <objective>
           <text>kaymanovu_doki_obj_02</text>
+          <map_location_type hint="Архивариус">blue_location</map_location_type>
+          <object_story_id>archivarius</object_story_id>
           <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
           <infoportion_complete>archiv_start</infoportion_complete>
      </objective>
@@ -47,7 +53,7 @@
 </game_task>
 
 <game_task id="archiv_pismo">
-    <title>archiv_pismo_task</title>
+     <title>archiv_pismo_task</title>
      <objective>
           <text>archiv_pismo_obj_01</text>
           <icon>ui_iconsTotal_archiv_pismo</icon>
@@ -74,7 +80,7 @@
 </game_task>
 
 <game_task id="teleport_start">
-    <title>teleport_start_task</title>
+     <title>teleport_start_task</title>
      <objective>
           <text>teleport_start_obj_01</text>
           <icon>ui_iconsTotal_locations</icon>
@@ -89,7 +95,7 @@
 </game_task>
 
 <game_task id="petrenko_poisk">
-    <title>petrenko_poisk_task</title>
+     <title>petrenko_poisk_task</title>
      <objective>
           <text>petrenko_poisk_obj_01</text>
           <icon>ui_iconsTotal_vert_poisk</icon>
@@ -151,7 +157,7 @@
 </game_task>
 
 <game_task id="flight_island">
-    <title>flight_island_task</title>
+     <title>flight_island_task</title>
      <objective>
           <text>flight_island_obj_01</text>
           <icon>ui_iconsTotal_island</icon>
@@ -176,7 +182,7 @@
 </game_task>
 
 <game_task id="shubin_soul">
-    <title>shubin_soul_task</title>
+     <title>shubin_soul_task</title>
      <objective>
           <text>shubin_soul_obj_01</text>
           <icon>ui_iconsTotal_krest</icon>
@@ -194,7 +200,7 @@
 </game_task>
 
 <game_task id="nastoyka">
-    <title>nastoyka_task</title>
+     <title>nastoyka_task</title>
      <objective>
           <text>nastoyka_obj_01</text>
           <icon>ui_iconsTotal_kris</icon>
@@ -219,7 +225,7 @@
 
 
 <game_task id="nastoyka_les">
-    <title>nastoyka_les_task</title>
+     <title>nastoyka_les_task</title>
      <objective>
           <text>nastoyka_les_obj_01</text>
           <icon>ui_iconsTotal_lesn</icon>
@@ -240,7 +246,7 @@
 
 
 <game_task id="max_labirint">
-    <title>max_labirint_task</title>
+     <title>max_labirint_task</title>
      <objective>
           <text>max_labirint_obj_01</text>
           <icon>ui_iconsTotal_max</icon>
@@ -258,7 +264,7 @@
 </game_task>
 
 <game_task id="dunya_mutant">
-    <title>dunya_mutant_task</title>
+     <title>dunya_mutant_task</title>
      <objective>
           <text>dunya_mutant_obj_01</text>
           <icon>ui_iconsTotal_dunya</icon>
@@ -278,7 +284,7 @@
 </game_task>
 
 <game_task id="dunya_sweets">
-    <title>dunya_sweets_task</title>
+     <title>dunya_sweets_task</title>
      <objective>
           <text>dunya_sweets_obj_01</text>
           <icon>ui_iconsTotal_dunya</icon>
@@ -298,7 +304,7 @@
 </game_task>
 
 <game_task id="shpak_vodka20">
-    <title>shpak_vodka20_task</title>
+     <title>shpak_vodka20_task</title>
      <objective>
           <text>shpak_vodka20_obj_01</text>
           <icon>ui_iconsTotal_shpak</icon>
@@ -318,7 +324,7 @@
 </game_task>
 
 <game_task id="shpak_vss">
-    <title>shpak_vss_task</title>
+     <title>shpak_vss_task</title>
      <objective>
           <text>shpak_vss_obj_01</text>
           <icon>ui_iconsTotal_shpak</icon>

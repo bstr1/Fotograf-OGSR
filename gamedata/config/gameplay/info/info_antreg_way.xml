@@ -100,7 +100,7 @@
 <info_portion id="dezertir_car_mesto"></info_portion>
 <info_portion id="dezertir_car_not_place"></info_portion>
 <info_portion id="dezertir_car_dialog_done">
-<action>cars.del_dezertir_car_delete</action>
+    <action>cars.del_dezertir_car_delete</action>
 </info_portion>
 
 <info_portion id="dezertir_flesh_dialog_start">
@@ -292,7 +292,7 @@
 <info_portion id="spider_story">
     <article>spider_story</article>
     <action>fotograf.sms_new_mutant</action>
-	<action>fotograf.about_pauk</action>
+    <action>fotograf.about_pauk</action>
 </info_portion>
 
 <info_portion id="kostolom_story">
@@ -1959,19 +1959,35 @@
 </info_portion>
 <info_portion id="kill_verka">
     <action>boryan67.verka_dead</action>
+    <action>boryan67.zapadlo_quest_spots_remove</action>
 </info_portion>
-<info_portion id="kill_haron"></info_portion>
+<info_portion id="kill_haron">
+    <action>boryan67.zapadlo_quest_spots_remove</action>
+</info_portion>
 <info_portion id="zapadlo_robbery_2"></info_portion>
 <info_portion id="zapadlo_dialog_1_done"></info_portion>
 <info_portion id="zapadlo_dialog_2_done"></info_portion>
+<info_portion id="zapadlo_quest_start">
+    <action>boryan67.haron_spawn</action>
+    <task>zapadlo_case</task>
+</info_portion>
 <info_portion id="zapadlo_dialog_3_done"></info_portion>
 <info_portion id="zapadlo_dialog_4_done"></info_portion>
-<info_portion id="verka_dialog_1_done"></info_portion>
+<info_portion id="verka_dialog_1_done">
+    <action>boryan67.zapadlo_verka_spot_remove</action>
+	<action>chetkiu.verka_teleport</action>
+</info_portion>
 <info_portion id="verka_na_meste"></info_portion>
-<info_portion id="verka_out"></info_portion>
+<info_portion id="verka_out">
+    <action>boryan67.zapadlo_quest_spots_remove</action>
+</info_portion>
 <info_portion id="haron_dialog_1_done"></info_portion>
-<info_portion id="haron_dialog_2_done"></info_portion>
+<info_portion id="haron_dialog_2_done">
+    <action>chetkiu.sms_verka</action>
+</info_portion>
 <info_portion id="haron_dialog_3_done"></info_portion>
+<info_portion id="haron_dialog_sms"></info_portion>
+
 
 <!-- поршни Шубин -->
 <info_portion id="shubin_start"></info_portion>

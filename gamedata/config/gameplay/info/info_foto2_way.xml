@@ -312,7 +312,7 @@
 <info_portion id="agroprom_u_light_2"></info_portion>
 <info_portion id="agroprom_u_light_3"></info_portion>
 <info_portion id="agroprom_u_light_4"></info_portion>
-<info_portion id="agroprom_u_light_5"></info_portion> 
+<info_portion id="agroprom_u_light_5"></info_portion>
 
 <!--for_start-->
 <info_portion id="start_spawn_actor"></info_portion>
@@ -332,7 +332,7 @@
 
 
 <info_portion id="doctor_info">
-      <task>doctor_help</task>
+    <task>doctor_help</task>
 </info_portion>
 <info_portion id="doctor_done"></info_portion>
 <!--doctor-->
@@ -343,14 +343,14 @@
 
 <!--sahar_shlem-->
 <info_portion id="sahar_shlem_start">
-      <task>sahar_shlem</task>
+    <task>sahar_shlem</task>
 </info_portion>
 
 <info_portion id="sahar_shlem_done"></info_portion>
 
 <!-- freeman_turist -->
 <info_portion id="freeman_turist_start">
-      <task>freeman_turist</task>
+    <task>freeman_turist</task>
 </info_portion>
 <info_portion id="freeman_turist_speak1"></info_portion>
 <info_portion id="freeman_turist_speak2"></info_portion>
