@@ -2646,7 +2646,7 @@
             <action>fotograf.metka_foto_08</action>
             <action>fotograf.metka_foto_09</action>
             <action>fotograf.metka_foto_10</action>
-			<action>y_level.lch_swamp_prom_swamp</action>
+            <action>y_level.lch_swamp_prom_swamp</action>
             <action>dialogs.break_dialog</action>
             <action>xyz_teleportation.swamp</action>
         </phrase>
@@ -3470,7 +3470,6 @@
         </phrase>
         <phrase id="2">
             <text>filin_poisk_dialog_2</text>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -3514,7 +3513,6 @@
         <phrase id="8">
             <text>brom_about_filin_dialog_8</text>
             <give_info>filin_poisk_dialog_done</give_info>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -3576,7 +3574,6 @@
             <text>filin_start_dialog_12</text>
             <give_info>filin_start_dialog_start</give_info>
             <action>y_level.lch_bar_swamp_bar</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -3605,7 +3602,6 @@
             <text>lazarev_vino_dialog_4</text>
             <give_info>lazarev_vino_dialog_start</give_info>
             <action>fotograf.tayniki_vino_spawn</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -3677,7 +3673,6 @@
             <action>fotograf.filin_vino_otdal</action>
             <action>y_level.lch_bar_mg</action>
             <action>y_level.lch_aver_bar</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -3843,7 +3838,6 @@
         <phrase id="6">
             <text>genrih_start_dialog_6</text>
             <give_info>genrih_start_dialog_start</give_info>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -3880,7 +3874,6 @@
         <phrase id="6">
             <text>jagger_start_dialog_6</text>
             <give_info>jagger_start_dialog_start</give_info>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -3933,7 +3926,6 @@
             <text>madam_start_dialog_10</text>
             <give_info>madam_start_dialog_start</give_info>
             <give_info>madam_actor</give_info>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -3972,7 +3964,6 @@
             <action>fotograf.wulf_trup_spawn</action>
             <action>fotograf.genrih_dal</action>
             <action>mauvais.timer_music_deadcity02</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -3995,7 +3986,6 @@
             <text>madam_one_dialog_2</text>
             <give_info>madam_one_dialog_start</give_info>
             <action>fotograf.wulf_case_otdal</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -4107,7 +4097,6 @@
         <phrase id="10">
             <text>osvedom_tri_dialog_10</text>
             <give_info>osvedom_tri_dialog_start</give_info>
-            <action>dialogs.break_dialog</action>
             <action>val_test.osvedom_dialog</action>
         </phrase>
     </phrase_list>
@@ -5146,11 +5135,9 @@
             <give_info>dezertir_car_dialog_start</give_info>
             <action>cars.dezertir_car_spawn</action>
             <action>mauvais.timer_music_prom04</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
         <phrase id="61">
             <text>dezertir_car_dialog_61</text>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -6112,7 +6099,6 @@
         <phrase id="6">
             <text>kayman_radio_6</text>
             <give_info>kayman_radio</give_info>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -6184,7 +6170,6 @@
             <text>archiv_start_dialog_6</text>
             <give_info>archiv_start</give_info>
             <action>foto2.zub_spawn</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -6212,7 +6197,6 @@
         <phrase id="4">
             <text>archiv_second_dialog_4</text>
             <give_info>archiv_second</give_info>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -6258,7 +6242,6 @@
             <give_info>archiv_shema</give_info>
             <action>fotograf.create_uber_restr</action>
             <action>foto2.zhurnal_shema</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -6295,7 +6278,6 @@
         <phrase id="6">
             <text>korona_shep_dialog_6</text>
             <give_info>korona_shep</give_info>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -6377,7 +6359,6 @@
             <text>radio_oblom_8</text>
             <give_info>radio_oblom</give_info>
             <action>foto2.create_zov1_restr</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -6471,7 +6452,6 @@
         <phrase id="6">
             <text>greta_dark_dialog_6</text>
             <give_info>greta_dark</give_info>
-            <action>dialogs.break_dialog</action>
             <action>foto2.letter_est</action>
         </phrase>
     </phrase_list>

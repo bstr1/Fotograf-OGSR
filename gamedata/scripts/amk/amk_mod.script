@@ -1644,7 +1644,7 @@ function other_spawn(obj, from_komp)
 		text = string.gsub(text, ",:", ":")
 		map_adds(sobj.id, "artefact_location", text)
 		sms2(text)
-	else
-		map_adds(sobj.id, "red_location", translate("trans_finished_title") .. " из %c[255,255,0,0]" .. from_komp)
+	-- else
+	-- 	map_adds(sobj.id, "red_location", translate("trans_finished_title") .. " из %c[255,255,0,0]" .. from_komp)
 	end
 end

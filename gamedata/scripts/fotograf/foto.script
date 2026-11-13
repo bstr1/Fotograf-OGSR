@@ -663,6 +663,7 @@ function break_mg_lc(actor, obj, p)
         elseif not has_alife_info("mg_3_jump") then
             sound = sound_object("ambient\\new\\actor_67")
             db.actor:give_info_portion("mg_3_jump")
+                news_manager.send_tip(db.actor, "%c[red]Фотограф:\\n%c[default]И что теперь делать? Может стоит поискать кого-нибудь в городе?", nil, nil, 15000)
         end
         if sound then
             sound:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
