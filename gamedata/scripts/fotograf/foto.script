@@ -616,23 +616,6 @@ function fix_pribor()
             level.client_spawn_manager():add(sobj.id, 0, this.FixObject, 0)
         end
     end
-    if has_alife_info('block_grenade') then
-        hide_grenade()
-    end
-end
-
--- прячем гранаты
-function hide_grenade()
-    local actor = db.actor
-    if actor and actor:active_slot() ~= nil and actor:active_item() ~= nil then
-        local obj = actor:active_item()
-        if obj then
-            local sect = obj:section()
-            if sect and (string.find(sect, 'grenade_') or string.find(sect, 'wpn_binoc')) then
-                actor:activate_slot(5)
-            end
-        end
-    end
 end
 
 -- удаление Варвары

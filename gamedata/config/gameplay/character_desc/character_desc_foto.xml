@@ -5361,7 +5361,7 @@
     <supplies>
             [spawn] \n
             wpn_flame \n
-            ammo_flame = 3 \n
+            ammo_flame = 1 \n
             device_torch \n
 #include "gameplay\character_drugs.xml" \n
 #include "gameplay\character_food.xml"            
@@ -5525,8 +5525,7 @@
     <crouch_type>-1</crouch_type>
 
     <supplies>
-            [spawn] \n
-            mutant_hand_kontroler_m            
+            [spawn] \n     
     </supplies>
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>

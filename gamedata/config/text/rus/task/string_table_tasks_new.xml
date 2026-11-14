@@ -1934,3 +1934,22 @@
 </string>
 
 
+<string id="ekza_poisk_task">
+    <text>Поиск экзоскелета</text>
+</string>
+
+<string id="ekza_poisk_obj_01">
+    <text>Найти экзоскелет</text>
+</string>
+
+<string id="ekza_poisk_obj_02">
+    <text>Найти шкуру контролёра</text>
+</string>
+
+<string id="ekza_poisk_obj_03">
+    <text>Проникнуть в логово контролёров</text>
+</string>
+
+<string id="ekza_poisk_obj_04">
+    <text>Получить информацию о экзоскелете</text>
+</string>

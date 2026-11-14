@@ -1374,6 +1374,8 @@
      <objective>
           <text>check_podzemka_obj_08</text>
           <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
+          <map_location_type hint="Браун">blue_location</map_location_type>
+          <object_story_id>brown_dva</object_story_id>
           <infoportion_complete>brown_six_dialog_done</infoportion_complete>
      </objective>
 </game_task>
@@ -1523,6 +1525,8 @@
      <objective>
           <text>voronin_car_obj_03</text>
           <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
+          <map_location_type hint="Генерал Воронин">blue_location</map_location_type>
+          <object_story_id>komandir_voronin</object_story_id>
           <infoportion_complete>voronin_dyshlo_dialog_done</infoportion_complete>
      </objective>
 </game_task>

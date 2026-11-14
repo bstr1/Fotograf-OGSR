@@ -2103,6 +2103,7 @@ end
 
 function orm_spawn()
     local obj = alife():create("ormont", vector():set(-217.914, 10.653, -244.415), 55284, 0)
+    alife():assign_story_id(obj.id, story_ids.ormont)
     obj:set_health(0.089)
 end
 
@@ -2225,13 +2226,9 @@ function flesh_peredal(first_speaker, second_speaker)
 end
 
 function orm_for_del()
-    local sobj
-    for a = 1, 65534 do
-        sobj = alife():object(a)
-        if sobj and sobj:section_name() == "ormont" then
-            alife():release(sobj, true)
-            break
-        end
+    local obj = alife():story_object(story_ids.ormont)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
@@ -2266,14 +2263,29 @@ function skin_restr_vhod_spawn()
 end
 
 function kont_vhod_spawn()
-    alife():create("catcher_vhod1", vector():set(-234.362, 17.035, 235.317), 579691, 688)
-    alife():create("catcher_vhod2", vector():set(-235.836, 17.125, 235.639), 577517, 688)
-    alife():create("catcher_vhod3", vector():set(-239.776, 17.208, 240.599), 570966, 688)
-    alife():create("catcher_prison1", vector():set(-273.556, 10.371, 228.585), 518006, 672)
-    alife():create("catcher_prison2", vector():set(-269.538, 11.323, 228.961), 524455, 672)
-    alife():create("catcher_main", vector():set(-274.856, 10.827, 222.699), 515833, 672)
-    alife():create("utyug", vector():set(-270.240, 10.711, 219.745), 523335, 672)
-    alife():create("irokez_skin", vector():set(455.900, -0.077, 130.629), 1063352, 1701)
+    local obj = alife():create("catcher_vhod1", vector():set(-234.362, 17.035, 235.317), 579691, 688)
+    alife():assign_story_id(obj.id, story_ids.catcher_vhod1)
+
+    local obj = alife():create("catcher_vhod2", vector():set(-235.836, 17.125, 235.639), 577517, 688)
+    alife():assign_story_id(obj.id, story_ids.catcher_vhod2)
+
+    local obj = alife():create("catcher_vhod3", vector():set(-239.776, 17.208, 240.599), 570966, 688)
+    alife():assign_story_id(obj.id, story_ids.catcher_vhod3)
+
+    local obj = alife():create("catcher_prison1", vector():set(-273.556, 10.371, 228.585), 518006, 672)
+    alife():assign_story_id(obj.id, story_ids.catcher_prison1)
+
+    local obj = alife():create("catcher_prison2", vector():set(-269.538, 11.323, 228.961), 524455, 672)
+    alife():assign_story_id(obj.id, story_ids.catcher_prison2)
+
+    local obj = alife():create("catcher_main", vector():set(-274.856, 10.827, 222.699), 515833, 672)
+    alife():assign_story_id(obj.id, story_ids.catcher_main)
+
+    local obj = alife():create("utyug", vector():set(-270.240, 10.711, 219.745), 523335, 672)
+    alife():assign_story_id(obj.id, story_ids.utyug)
+
+    local obj = alife():create("irokez_skin", vector():set(455.900, -0.077, 130.629), 1063352, 1701)
+    alife():assign_story_id(obj.id, story_ids.irokez_skin)
 end
 
 function prokol_restr_spawn()
@@ -2308,10 +2320,10 @@ function prokol_restr_spawn()
         custom = "[logic]\ncfg = scripts\\new\\restr\\prokol_prison_restr1.ltx"
         rewrite_restrictor(sobj, custom, 6)
     end
-    create_anom('zone_shkura_1', vector():set(-272.408, 10.627, 221.602), 520114, 672, 0.2, 0.0001)
-    create_anom('zone_shkura', vector():set(-263.923, 16.045, 236.134), 533304, 679, 0.0, 0.0001)
-    create_anom('zone_shkura', vector():set(-279.612, 13.201, 237.544), 509537, 672, 0.0, 0.0001)
-    create_anom('zone_shkura', vector():set(-250.341, 16.233, 236.939), 554401, 679, 0.0, 0.0001)
+    -- create_anom('zone_shkura_1', vector():set(-272.408, 10.627, 221.602), 520114, 672, 0.2, 0.0001)
+    -- create_anom('zone_shkura', vector():set(-263.923, 16.045, 236.134), 533304, 679, 0.0, 0.0001)
+    -- create_anom('zone_shkura', vector():set(-279.612, 13.201, 237.544), 509537, 672, 0.0, 0.0001)
+    -- create_anom('zone_shkura', vector():set(-250.341, 16.233, 236.939), 554401, 679, 0.0, 0.0001)
 end
 
 function vkarmane_20()
@@ -2330,26 +2342,30 @@ function ne_vkarmane_30()
     return db.actor:money() < 30000
 end
 
-function skin_obmen_20(t1, t2)
-    local npc = t1
+function skin_obmen_20(first_speaker, second_speaker)
+    local npc = first_speaker
     if npc:id() == db.actor:id() then
-        npc = t2
+        npc = second_speaker
     end
     dialogs.relocate_money(npc, 20000, "out")
     dialogs.relocate_item_section(npc, "kont_skin", "in")
 end
 
-function skin_obmen_30(t1, t2)
-    local npc = t1
+function skin_obmen_30(first_speaker, second_speaker)
+    local npc = first_speaker
     if npc:id() == db.actor:id() then
-        npc = t2
+        npc = second_speaker
     end
     dialogs.relocate_money(npc, 30000, "out")
     dialogs.relocate_item_section(npc, "kont_skin", "in")
 end
 
+function kont_skin_have()
+    return new_dialog.count_item("kont_skin", 1)
+end
+
 function kontry_enemy()
-    level.add_pp_effector("contra5.ppe", 30339, false)
+    level.add_pp_effector("blink.ppe", 9112, false)
     local snd_obj = xr_sound.get_safe_sound_object([[ambient\new\kon_trap]])
     snd_obj:play(db.actor, 0, sound_object.s2d)
     clear_kont()
@@ -2357,11 +2373,18 @@ function kontry_enemy()
 end
 
 function kontry_enemy_less()
-    level.add_pp_effector("contra5.ppe", 30339, false)
+    level.add_pp_effector("blink.ppe", 9112, false)
     local snd_obj = xr_sound.get_safe_sound_object([[ambient\new\kon_trap]])
     snd_obj:play(db.actor, 0, sound_object.s2d)
     clear_kont_less()
     kont_reorg_less()
+end
+
+function utyug_enemy(sid)
+    local obj = level_object_by_sid(story_ids.utyug)
+    if obj and obj:alive() then
+        obj:set_character_community("zombied", 0, 0)
+    end
 end
 
 local tbl_sect = {

@@ -119,20 +119,6 @@ function check_spawn()
 			amk.save_variable("gg_need_sleep",0)
 		end
 	end
-
-	if db.actor and not has_alife_info("game_over") then
-		local flame = db.actor:object("wpn_flame")
-		if flame then
-			db.actor:iterate_inventory(
-				function(dummy,item)
-					if item:section()=="wpn_flame" then
-						alife():release(alife():object(item:id()))
-					end
-				end
-				,db.actor)
-			
-		end
-	end
 end
 
 --[[------------------------------- no freeplay --------------------------------]]
@@ -1460,28 +1446,6 @@ function build_btrs_table(obj)
 	end
 end
 
-function firebated(obj, amount, local_direction, who, bone_index)
-	if bone_index>0 and who and IsStalker(who) then --false для отключения
-		local script
-		if IsMonster(obj) then 
-			script=bind_monster
-		elseif IsStalker(obj) then
-			script=xr_motivator
-		end
-		if script then
-			local weapon = who:active_item()
-			if not weapon or weapon:section()~="wpn_flame" then return end
-			if string.find(obj:section(), "zomb") and obj.health<0.2 then obj:kill(obj) end
-			script.play_particle(obj,
-			{
-				obj=obj,
-				particle="amk\\flame",
-				bone="bip01_spine"
-			})
-		end
-	end
-end
-
 local zombi_skeletons={
 "physics\\dead_body\\skelet_combine_pose_03",
 "physics\\dead_body\\skelet_combine_pose_04",
@@ -1489,30 +1453,6 @@ local zombi_skeletons={
 "physics\\dead_body\\skelet_torso"
 }
 function zomby_blow(obj)
-	if obj:object("wpn_flame") then
-		amk_particle.amk_particle({
-				particle="explosions\\explosion_fuelcan",
-				pos=obj:position(),
-				sound=[[weapons\t_rgd5_explosion]]
-			})
-		local dist = db.actor:position():distance_to(obj:position())
-		if dist < 10 and db.actor:see(obj) then
-			local h = hit()
-			h.impulse = 0
-			h.draftsman = db.actor
-			h.direction = vector():set(0,0,0)
-			h:bone("bip01_spine") -- чтобы учитывалась броня
-			h.power = 1/dist
-			h.type = hit.strike --chemical_burn
-			db.actor:hit(h)
-			h.power = 15/dist
-			h.type = hit.chemical_burn
-			db.actor:hit(h)
-		end
-		alife():release(alife():object(obj:id()))
-		return
-	end
-
 	if obj:section()=="zombie_blow" then
 		amk_particle.amk_particle({
 				particle="amk\\zomb_explode",

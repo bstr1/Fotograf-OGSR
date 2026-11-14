@@ -237,6 +237,9 @@
 <info_portion id="mercd2_dead"></info_portion>
 <info_portion id="mercd3_dead"></info_portion>
 <info_portion id="mercd4_dead"></info_portion>
+<info_portion id="ekza_mercs_dead">
+    <task>ekza_poisk</task>
+</info_portion>
 <info_portion id="skin_irokez"></info_portion>
 <info_portion id="skin_irokez_20"></info_portion>
 <info_portion id="skin_irokez_30"></info_portion>
@@ -244,6 +247,7 @@
 <info_portion id="prokol_vhod"></info_portion>
 <info_portion id="kont_enemy">
     <action>foto2.kontry_enemy</action>
+    <action>foto2.utyug_enemy</action>
 </info_portion>
 <info_portion id="kont_enemy_less">
     <action>foto2.kontry_enemy_less</action>
@@ -256,9 +260,6 @@
 <info_portion id="skin_lock"></info_portion>
 <info_portion id="utug_pomer"></info_portion>
 <info_portion id="utug_ubili"></info_portion>
-<info_portion id="skin_perehod"></info_portion>
-
-<info_portion id="block_grenade"></info_portion>
 
 <info_portion id="observer_enemy"></info_portion>
 <info_portion id="tunnel_open"></info_portion>

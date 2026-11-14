@@ -3651,12 +3651,24 @@ function dollar_have(first_speaker, second_speaker)
     return new_dialog.count_item("dollar", 1)
 end
 
+function actor_has_money_100000()
+    return db.actor:money() >= 100000
+end
+
 function euro_otdal(first_speaker, second_speaker)
     dialogs.relocate_item_section(first_speaker, "euro", "out", 1)
  end
 
 function dollar_otdal(first_speaker, second_speaker)
     dialogs.relocate_item_section(first_speaker, "dollar", "out", 1)
+end
+
+function dengi_otdal(first_speaker, second_speaker)
+    local npc = first_speaker
+    if npc:id() == db.actor:id() then
+        npc = second_speaker
+    end
+    dialogs.relocate_money(npc, 100000, "out")
 end
 
 function pda_pmc_aver_otdal(first_speaker, second_speaker)

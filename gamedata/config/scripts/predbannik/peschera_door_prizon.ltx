@@ -8,7 +8,8 @@ snd_open_start = trader_door_open_start
 snd_close_start = trader_door_close_start
 snd_close_stop = trader_door_close_stop
 on_use = ph_door@open
-on_info = {+skin_lock} ph_door@lock   ;для уникалов-любителей закрыть за собой двери
+on_info = {+skin_lock} ph_door@open
+on_info2 = {-skin_lock} ph_door@open
 
 [ph_door@open]
 locked = false
@@ -17,13 +18,3 @@ snd_open_start = trader_door_open_start
 snd_close_start = trader_door_close_start
 snd_close_stop = trader_door_close_stop
 on_use = ph_door@close
-on_info = {+skin_lock -skin_perehod} ph_door@lock %+skin_perehod%
-
-[ph_door@lock]
-locked = true
-closed = true
-snd_open_start = trader_door_open_start
-snd_close_start = trader_door_close_start
-snd_close_stop = trader_door_close_stop
-on_info = {=check_belt(mutant_hand_kontroler_m) -utug_ubili} ph_door@open
-on_info2 = {+kont_pahan} ph_door@open

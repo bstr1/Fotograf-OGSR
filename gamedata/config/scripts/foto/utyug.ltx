@@ -2,15 +2,15 @@
 none = true
 
 [logic]
-active = walker@1
+active = camper@1
 combat_ignore = combat_ignore
 on_hit = hit
 on_death = death
 
-[walker@1]
+[camper@1]
 path_walk = utyug_walk
 path_look = utyug_look
-def_state_standing = trans_zombied
+def_state_standing = trans_0
 meet = no_meet
 move = no_move
 danger = danger_condition
@@ -18,7 +18,7 @@ combat_ignore_cond = always
 on_actor_dist_le_nvis = 2 | remark@1 %+skin_lock%
 
 [remark@1]
-anim = trans_zombied
+anim = trans_0
 snd = utug
 target = catcher_main_walk,0
 meet = no_meet
@@ -28,12 +28,19 @@ combat_ignore_cond = always
 on_signal = sound_end | remark@2 %+utug_sdal =foto2.exo_spawn%
 
 [remark@2]
-anim = trans_zombied
+anim = trans_0
 target = catcher_main_walk,0
 meet = no_meet
 move = no_move
 danger = danger_condition
 combat_ignore_cond = always
+on_info = {+kont_enemy} camper@2
+
+[camper@2]
+path_walk = utyug_walk
+path_look = utyug_look
+meet = no_meet
+danger = danger_condition
 
 [danger_condition]
 ignore_distance = 0
@@ -43,6 +50,9 @@ ignore_distance_corpse = 0
 use = true
 use_wpn = false
 meet_talk_enabled = true
+
+[hit]
+on_info = {=hit_by_actor} %+kont_enemy%
 
 [death]
 on_info = {=killed_by_actor +kont_enemy} %+utug_pomer%

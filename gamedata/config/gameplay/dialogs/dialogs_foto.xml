@@ -4646,7 +4646,6 @@
         <phrase id="4">
             <text>brown_seven_dialog_4</text>
             <give_info>brown_seven_dialog_start</give_info>
-            <action>dialogs.break_dialog</action>
             <action>val_test.brown_dishlo</action>
         </phrase>
     </phrase_list>
@@ -4729,7 +4728,6 @@
             <text>voronin_dyshlo_dialog_8</text>
             <give_info>voronin_dyshlo_dialog_start</give_info>
             <action>cars.voronin_car_spawn</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -4786,7 +4784,6 @@
         <phrase id="6">
             <text>saharov_dyshlo_dialog_6</text>
             <give_info>saharov_dyshlo_dialog_start</give_info>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -4821,11 +4818,11 @@
             <next>62</next>
             <next>63</next>
             <next>64</next>
+            <next>65</next>
         </phrase>
         <phrase id="61">
             <precondition>fotograf.valuta_net</precondition>
             <text>sutuly_povodyr_dialog_61</text>
-            <action>dialogs.break_dialog</action>
         </phrase>
         <phrase id="62">
             <precondition>fotograf.valuta_have</precondition>
@@ -4842,6 +4839,11 @@
             <text>sutuly_povodyr_dialog_64</text>
             <next>74</next>
         </phrase>
+        <phrase id="65">
+            <precondition>fotograf.actor_has_money_100000</precondition>
+            <text>sutuly_povodyr_dialog_65</text>
+            <next>75</next>
+        </phrase>
         <phrase id="72">
             <text>sutuly_povodyr_dialog_72</text>
             <next>81</next>
@@ -4854,6 +4856,10 @@
             <text>sutuly_povodyr_dialog_74</text>
             <next>82</next>
         </phrase>
+        <phrase id="75">
+            <text>sutuly_povodyr_dialog_75</text>
+            <next>83</next>
+        </phrase>
         <phrase id="81">
             <text>sutuly_povodyr_dialog_81</text>
             <give_info>sutuly_povodyr_dialog_start</give_info>
@@ -4864,6 +4870,12 @@
             <text>sutuly_povodyr_dialog_82</text>
             <give_info>sutuly_povodyr_dialog_start</give_info>
             <action>fotograf.dollar_otdal</action>
+            <action>dialogs.break_dialog</action>
+        </phrase>
+        <phrase id="83">
+            <text>sutuly_povodyr_dialog_83</text>
+            <give_info>sutuly_povodyr_dialog_start</give_info>
+            <action>fotograf.dengi_otdal</action>
             <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
@@ -7053,13 +7065,11 @@
             <precondition>foto2.vkarmane_20</precondition>
             <text>irok_skin_dialog_6</text>
             <action>foto2.skin_obmen_20</action>
-            <action>dialogs.break_dialog</action>
             <give_info>skin_irokez</give_info>
         </phrase>
         <phrase id="61">
             <precondition>foto2.ne_vkarmane_20</precondition>
             <text>irok_skin_dialog_61</text>
-            <action>dialogs.break_dialog</action>
             <give_info>skin_irokez</give_info>
             <give_info>skin_irokez_20</give_info>
         </phrase>
@@ -7067,13 +7077,11 @@
             <precondition>foto2.vkarmane_30</precondition>
             <text>irok_skin_dialog_63</text>
             <action>foto2.skin_obmen_30</action>
-            <action>dialogs.break_dialog</action>
             <give_info>skin_irokez</give_info>
         </phrase>
         <phrase id="64">
             <precondition>foto2.ne_vkarmane_30</precondition>
             <text>irok_skin_dialog_64</text>
-            <action>dialogs.break_dialog</action>
             <give_info>skin_irokez</give_info>
             <give_info>skin_irokez_30</give_info>
         </phrase>

@@ -1192,18 +1192,14 @@ if (news_main and news_main.on_death) then
 	news_main.on_death(victim, who)
 end
 	amk_anoms.unreg_in_anom_manager(victim)
-	mod_call("firebated", victim, 1, nil, who, 14)
 	mod_call("zomby_blow",victim)
 end
 
 function on_npc_hit(obj, amount, local_direction, who, bone_index)
-	mod_call("firebated", obj, amount, local_direction, who, bone_index)
 	
 end
 
-function on_monster_hit(obj, amount, local_direction, who, bone_index)
-	mod_call("firebated", obj, amount, local_direction, who, bone_index)
-	
+function on_monster_hit(obj, amount, local_direction, who, bone_index)	
 end
 
 function on_ph_obj_hit(obj, amount, local_direction, who, bone_index)

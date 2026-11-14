@@ -342,3 +342,27 @@
           <infoportion_complete>shpak_dialog_4_done</infoportion_complete>
      </objective>
 </game_task>
+
+<game_task id="ekza_poisk">
+     <title>ekza_poisk_task</title>
+     <objective>
+          <text>ekza_poisk_obj_01</text>
+          <icon>ui_iconsTotal_shpak</icon>
+          <infoportion_complete>utug_sdal</infoportion_complete>
+          <article>ekza_poisk_enc</article>
+     </objective>
+     <objective>
+          <text>ekza_poisk_obj_02</text>
+          <map_location_type hint="Ирокез">blue_location</map_location_type>
+          <object_story_id>irokez_skin</object_story_id>
+          <function_complete>foto2.kont_skin_have</function_complete>
+     </objective>
+     <objective>
+          <text>ekza_poisk_obj_03</text>
+          <infoportion_complete>prokol_vhod</infoportion_complete>
+     </objective>
+     <objective>
+          <text>ekza_poisk_obj_04</text>
+          <infoportion_complete>utug_sdal</infoportion_complete>
+     </objective>
+</game_task>
