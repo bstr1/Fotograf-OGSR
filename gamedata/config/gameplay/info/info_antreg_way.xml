@@ -1582,7 +1582,8 @@
     <action>fotograf.create_ograb_restr</action>
 </info_portion>
 <info_portion id="actor_v_taynike">
-    <action>transfer.transfer</action>
+    <action>fotograf.transfer_und_agro</action>
+    <action>fotograf.maroder_money</action>
 </info_portion>
 <info_portion id="actor_otbrosilo"></info_portion>
 <info_portion id="antitaynik_restr_del">
@@ -1596,7 +1597,6 @@
 <info_portion id="agro_und_vernulsya"></info_portion>
 <info_portion id="aground_proval"></info_portion>
 
-<info_portion id="gps_block"></info_portion>
 <info_portion id="GG_recover_1"></info_portion>
 <info_portion id="GG_recover_2"></info_portion>
 <info_portion id="GG_vacsina"></info_portion>

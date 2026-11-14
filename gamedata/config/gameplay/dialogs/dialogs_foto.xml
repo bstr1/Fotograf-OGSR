@@ -4130,7 +4130,6 @@
             <give_info>broun_piluli</give_info>
             <action>fotograf.shema_labs_otdal</action>
             <action>fotograf.check_time_brown_dva</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -4524,7 +4523,6 @@
             <text>shpak_one_dialog_est_4</text>
             <give_info>shpak_one_dialog_done</give_info>
             <action>fotograf.shpak_one_dialog_done</action>
-            <action>transfer.create_box</action>
             <action>y_level.lch_swamp_aground_swamp</action>
         </phrase>
     </phrase_list>
@@ -4592,7 +4590,6 @@
             <action>y_level.lch_x16_dyshlo_x16</action>
             <action>y_level.lch_x16_x10_x16</action>
             <action>y_level.lch_x10_x18_x10</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -4895,7 +4892,6 @@
         <phrase id="4">
             <text>ploymar_vacsina_dialog_4</text>
             <give_info>ploymar_vacsina_dialog_start</give_info>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -5197,11 +5193,9 @@
             <text>dezertir_flesh_dialog_8</text>
             <give_info>dezertir_flesh_dialog_start</give_info>
             <action>fotograf.prom_flesh_winch</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
         <phrase id="81">
             <text>dezertir_flesh_dialog_81</text>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>

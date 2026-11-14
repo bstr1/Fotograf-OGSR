@@ -2051,6 +2051,7 @@
             wpn_ump45 \n
             ammo_11.43x23_fmj = 2 \n
             medkit = 1 \n
+            money_gg \n
             #include "gameplay\character_food.xml" \n
             #include "gameplay\character_drugs.xml"
     </supplies>

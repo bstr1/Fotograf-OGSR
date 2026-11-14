@@ -1287,6 +1287,8 @@
      <objective>
           <text>agro_und_zadan_obj_02</text>
           <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
+          <map_location_type hint="Майор Шпак">blue_location</map_location_type>
+          <object_story_id>shpak</object_story_id>
           <infoportion_complete>shpak_one_dialog_done</infoportion_complete>
      </objective>
      <objective>
@@ -1393,6 +1395,8 @@
      <objective>
           <text>glaza_ploti_obj_03</text>
           <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
+          <map_location_type hint="Профессор Плоймар">blue_location</map_location_type>
+          <object_story_id>uchen_061</object_story_id>
           <infoportion_complete>ploymar_vacsina_dialog_done</infoportion_complete>
      </objective>
 </game_task>

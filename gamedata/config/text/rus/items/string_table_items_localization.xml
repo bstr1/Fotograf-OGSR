@@ -1307,31 +1307,7 @@
 </string>
 
 <string id="money_gg_description">
-    <text>Деньги, отобранные у Стрелка при ограблении.</text>
-</string>
-
-<string id="money_ggg_inv_name">
-    <text>Деньги</text>
-</string>
-
-<string id="money_ggg_description">
-    <text>Деньги, отобранные у Стрелка при ограблении.</text>
-</string>
-
-<string id="money_gggg_inv_name">
-    <text>Деньги</text>
-</string>
-
-<string id="money_gggg_description">
-    <text>Деньги, отобранные у Стрелка при ограблении.</text>
-</string>
-
-<string id="money_ggggg_inv_name">
-    <text>Деньги</text>
-</string>
-
-<string id="money_ggggg_description">
-    <text>Деньги, отобранные у Стрелка при ограблении.</text>
+    <text>Деньги, отобранные у Фотографа при ограблении.</text>
 </string>
 
 <string id="money2_inv_name">

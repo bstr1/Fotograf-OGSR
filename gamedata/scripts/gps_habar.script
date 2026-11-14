@@ -921,9 +921,6 @@ end
 -- колбэк на потерю предмета из инвентаря ГГ
 -- вызываем из amk.script
 function on_item_drop(obj)
-    if has_alife_info("gps_block") then
-        return
-    end
     mylog("ON_ITEM_DROP: потерян предмет: " .. objinfo(obj))
     if obj and obj:id() then
         insert_item(get_inventory_box_id(obj), alife():object(obj:id()))

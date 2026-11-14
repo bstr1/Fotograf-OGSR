@@ -62,7 +62,7 @@
   <text>Небольшая железная упаковка. Внутри монпансье.</text>
 </string>
 <string id="sweets">
-  <text>Монпансье.</text>
+  <text>Монпансье</text>
 </string>
 <string id="plan_labx16_document_desc">
   <text>План коммуникаций лаборатории х-16. Среди прочего отмечен тайный ход в Саркофаг.</text>
@@ -71,36 +71,13 @@
   <text>План комуникаций лаборатории х-16.</text>
 </string>
 
-<string id="photo_alboum_name">
-  <text>Альбом с фотографиями .</text>
-</string>
-<string id="photo_alboum_desc">
-  <text>Альбом с фотографиями и личными записями Гриня.</text>
-</string>
 <string id="box_patron_name">
   <text>Ящик с патронами</text>
 </string>
 <string id="box_patron_desc">
   <text>Тяжелый деревянный ящик. Внутри цинки с патронами.</text>
 </string>
-<string id="book_nebo1_desc">
-  <text>Книга первая из лаборатории х-16. Вся в формулахи графиках. По видимому в этой лаборатории проводились исследования на животных и людях.</text>
-</string>
-<string id="book_nebo1_name">
-  <text>Книга первая из лаборатории х-16.</text>
-</string>
-<string id="book_nebo2_desc">
-  <text>Книга вторая из лаборатории х-16. Вся в формулах и графиках. По видимому в этой лаборатории проводились исследования на животных и людях.</text>
-</string>
-<string id="book_nebo2_name">
-  <text>Книга вторая из лаборатории х-16.</text>
-</string>
-<string id="book_nebo3_desc">
-  <text>Книга третья из лаборатории х-16. Вся в формулах и графиках. По видимому в этой лаборатории проводились исследования на животных и людях.</text>
-</string>
-<string id="book_nebo3_name">
-  <text>Книга третья из лаборатории х-16.</text>
-</string>
+
 
 <string id="levsha_decoder_desc">
   <text>Нечто вроде мощной электронной отмычки. Похоже, что она создавалась с целью взломать какой-то специфический электронный замок.</text>

@@ -25,6 +25,10 @@ local function on_take(obj, sobj)
     elseif obj:section() == "money2" then
         db.actor:give_info_portion("delete_2")
         alife():release(sobj)
+    elseif obj:section() == "money_gg" then
+        local money_actor = ogse.load_var("money_actor", 0)
+        db.actor:give_money(money_actor)
+        alife():release(sobj)
     elseif obj:section() == "wpn_minifake" then
         alife():release(sobj)
 
@@ -4548,6 +4552,41 @@ function lesnik_nastoyka_have()
     return new_dialog.count_item("nastoyka", 2)
 end
 
+local out_object
+local in_object
+
+function transfer_object_items(item)
+    local sect = item:section()
+    if sect == "detector_simple" or sect == "matras" or sect == "bioradar" or sect == "detector_kruglov" 
+    or sect == "device_torch" or sect == "wpn_knife" or sect == "wpn_knife_extreme" or sect == "wpn_binoc" then
+        return
+    end
+    out_object:transfer_item(item, in_object)
+end
+
+function transfer_object_item(item)
+    out_object:transfer_item(item, in_object)
+end
+
+function transfer_und_agro(actor, npc)
+    local obj = alife_create("aground_box", "l03u_agr_underground", vector():set(-42.726, -4.311, 12.951))
+    alife():use_ai_locations(obj, false)
+    alife():assign_story_id(obj.id, story_ids.aground_box)
+    dsh.wait_condition(function() return level_object_by_sid(story_ids.aground_box) end, 
+    function()
+        local inv_box_1 = level_object_by_sid(story_ids.aground_box)
+        out_object = db.actor
+        in_object = inv_box_1
+        db.actor:inventory_for_each(transfer_object_items)
+    end)
+end
+
+function maroder_money()
+    local money_actor = db.actor:money()
+    ogse.save_var("money_actor", money_actor)
+    db.actor:give_money(-money_actor)
+end
+
 local function distance_check()
     if not has_alife_info("zhorik_start") or not has_alife_info("agent_mk_spawn") or has_alife_info("agent_mk_vrag") then return end
     local mk_agent = level_object_by_sid(story_ids.mk_agent)
@@ -4558,5 +4597,5 @@ end
 
 function attach(sm)
     sm:subscribe({signal = "on_update",         fun = distance_check})
-    sm:subscribe({signal = "on_take",          fun = on_take})
+    sm:subscribe({signal = "on_take",           fun = on_take})
 end
