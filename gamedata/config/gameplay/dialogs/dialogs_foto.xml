@@ -3114,7 +3114,6 @@
         <phrase id="101">
             <precondition>fotograf.not_anom_pribor</precondition>
             <text>kruglov_anoms_dialog_est_101</text>
-            <action>dialogs.break_dialog</action>
         </phrase>
         <phrase id="11">
             <precondition>fotograf.has_zond</precondition>
@@ -3130,14 +3129,12 @@
             <text>kruglov_anoms_dialog_est_2</text>
             <give_info>kruglov_anoms_dialog_done</give_info>
             <action>fotograf.kruglov_pribor_otdal</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
         <phrase id="21">
             <text>kruglov_anoms_dialog_est_21</text>
             <give_info>kruglov_anoms_dialog_done</give_info>
             <action>fotograf.kruglov_pribor_otdal</action>
             <action>fotograf.dell_GG_zond</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>

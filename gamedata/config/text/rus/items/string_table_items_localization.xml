@@ -1534,22 +1534,6 @@
     <text>Коготь Огненной Химеры. Свойства неизучены, ввиду крайне малой вероятности добыть этот уникальный биоматериал.</text>
 </string>
 
-<string id="military_stalker_outfit_inv_name">
-    <text>SKAT-9</text>
-</string>
-
-<string id="military_stalker_outfit_description">
-    <text>outfit_military_stalker</text>
-</string>
-
-<string id="military_commander_outfit_inv_name">
-    <text>SKAT-9M</text>
-</string>
-
-<string id="military_commander_outfit_description">
-    <text>outfit_military_commander</text>
-</string>
-
 <string id="zahar_box_inv_name">
     <text>Контейнер Захара</text>
 </string>

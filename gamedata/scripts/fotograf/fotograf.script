@@ -2528,7 +2528,7 @@ end
 
 -- проверка на наличие зондов
 function has_zond()
-    return db.actor and not db.actor:object("anom_zond") and db.actor:object("anom_pribor")
+    return db.actor and db.actor:object("anom_zond") and db.actor:object("anom_pribor")
 end
 
 -- проверка на отсутствие зондов

@@ -792,7 +792,6 @@ neytral_novice_gaz_outfit_m1="hud_gaz",
 svoboda_heavy_gaz_outfit_m1="hud_gaz",
 bandit_gaz_outfit_m1="hud_gaz",
 --hud_exo
-neytral_exo_gaz_outfit_m1="hud_exo",
 svoboda_yellow_exo_outfit_m1="hud_exo",
 exo_outfit="hud_exo",
 --hud_merc
