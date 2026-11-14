@@ -1227,7 +1227,7 @@ end
 function bloo6_spawn()
     alife():create("bloodsucker_weak", vector():set(-259.719, 19.873, 262.617), 540027, 680)
     alife():create("bloodsucker_normal", vector():set(-259.173, 20.082, 265.407), 541146, 680)
-    alife():create("doberman", vector():set(-256.287, 20.233, 265.998), 545471, 680)
+    alife():create("dog_black", vector():set(-256.287, 20.233, 265.998), 545471, 680)
     alife():create("dog_green", vector():set(-254.360, 19.987, 263.046), 548785, 680)
     alife():create("dog_green", vector():set(-256.055, 19.962, 260.609), 545458, 680)
 end

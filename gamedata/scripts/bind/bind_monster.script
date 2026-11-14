@@ -360,52 +360,7 @@ function generic_object_binder:hit_callback(obj, amount, local_direction, who, b
 		obj:hit(h)    
 	end
 	amk.on_monster_hit(obj, amount, local_direction, who, bone_index)
-	
-	if obj:section()=="elektro_chimera" and time_global()>(self.charge_time or 0)+3000 then
-		amk_particle.amk_particle({particle="anomaly2\\electra2_blast",pos=obj:bone_position("bip01_spine"),sound="anomaly\\electra_blast1"})
-		local dist = db.actor:position():distance_to(obj:bone_position("bip01_spine"))
-		if dist < 15 then
-			local h = hit()
-			h.impulse = 0
-			h.draftsman = db.actor
-			h.direction = vector():set(0,0,0)
-			h:bone("bip01_spine")
-			h.power = 1/dist
-			h.type = hit.strike 
-			db.actor:hit(h)
-			h.power = 10/dist
-			h.type = hit.shock
-			db.actor:hit(h)
-		end
-		self.charge_time=time_global()
-	end
-
-	if obj:section()=="fire_chimera" and time_global()>(self.charge_time or 0)+3000 then
-		amk_particle.amk_particle({particle="amik\\monsters\\chimera\\attak_wave",pos=obj:bone_position("bip01_spine"),sound="anomaly\\polter_fire_death"})
-		local dist = db.actor:position():distance_to(obj:bone_position("bip01_spine"))
-		if dist < 15 then
-			local h = hit()
-			h.impulse = 0
-			h.draftsman = db.actor
-			h.direction = vector():set(0,0,0)
-			h:bone("bip01_spine")
-			h.power = 1/dist
-			h.type = hit.burn
-			db.actor:hit(h)
-			h.power = 10/dist
-			h.type = hit.burn
-			db.actor:hit(h)
-                        level.add_pp_effector("amk_shoot.ppe", 2015, false)
-                        local snd_obj = xr_sound.get_safe_sound_object([[anomaly\polter_fire_idle]])
-snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
-		end
-		self.charge_time=time_global()
-	end
-	
-	--AMK UTILS--
 	amk_utils.monster_hit(obj, amount, local_direction, who, bone_index)
-	--AMK UTILS--
-	
 end
 
 function generic_object_binder:net_spawn(sobject)
