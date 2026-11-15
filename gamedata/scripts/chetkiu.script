@@ -1,4 +1,9 @@
-local deal_phase = 0
+function give_govno(first_speaker, second_speaker)
+    dialogs.relocate_item_section(second_speaker, "mutant_flesh_eye", "in", 1)
+    dialogs.relocate_item_section(second_speaker, "vypolzen_hrebet", "in", 1)
+    dialogs.relocate_item_section(second_speaker, "ks_talisman_06", "in", 1)
+end
+
 function sms_verka()
     news_manager.send_tip(db.actor, "zapadlo_sms_" .. deal_phase)
 
@@ -13,12 +18,11 @@ function sms_verka()
 end
 
 function broken_exo()
-ogse.spawn_item_in_inv("broken_exoskeleton")
+    ogse.spawn_item_in_inv("broken_exoskeleton")
 end
 
 function dez_mask_teleport(first_speaker, second_speaker)
-dsh.wait_condition(function() return db.actor:dont_has_info("ui_talk") end, 
-    function()
+    dsh.wait_condition(function() return db.actor:dont_has_info("ui_talk") end, function()
         level.add_pp_effector("black.ppe", 2006, false)
         dsh.timeout(1000, function()
             local sim = alife()
@@ -37,8 +41,7 @@ dsh.wait_condition(function() return db.actor:dont_has_info("ui_talk") end,
 end
 
 function dunya_teleport(first_speaker, second_speaker)
-dsh.wait_condition(function() return db.actor:dont_has_info("ui_talk") end, 
-    function()
+    dsh.wait_condition(function() return db.actor:dont_has_info("ui_talk") end, function()
         level.add_pp_effector("black.ppe", 2006, false)
         dsh.timeout(1000, function()
             local sim = alife()
@@ -57,55 +60,52 @@ dsh.wait_condition(function() return db.actor:dont_has_info("ui_talk") end,
 end
 
 function verka_teleport(first_speaker, second_speaker)
-    dsh.wait_condition(function() return db.actor:dont_has_info("ui_talk") end,
-        function()
-            level.add_pp_effector("black.ppe", 2006, false)
-            dsh.timeout(1000, function()
-                local sim = alife()
-                local pos = patrol("verka1_walk")
-                local last = pos:count() - 1
-                for a = 1, 65534 do
-                    local sobj = sim:object(a)
-                    if sobj and sobj:section_name() == "verka" then
-                        sim:teleport_object(a, pos:point(last), pos:level_vertex_id(last), pos:game_vertex_id(last))
-                        break
-                    end
+    dsh.wait_condition(function() return db.actor:dont_has_info("ui_talk") end, function()
+        level.add_pp_effector("black.ppe", 2006, false)
+        dsh.timeout(1000, function()
+            local sim = alife()
+            local pos = patrol("verka1_walk")
+            local last = pos:count() - 1
+            for a = 1, 65534 do
+                local sobj = sim:object(a)
+                if sobj and sobj:section_name() == "verka" then
+                    sim:teleport_object(a, pos:point(last), pos:level_vertex_id(last), pos:game_vertex_id(last))
+                    break
                 end
-                local actor_pos = vector():set(-294.42, 9.68, -171.28)
-                local look_dir  = vector():set(-0.98, -0.09, -0.14)
-                db.actor:set_actor_position(actor_pos)
-                db.actor:set_actor_direction(-look_dir:getH())
-            end)
+            end
+            local actor_pos = vector():set(-294.42, 9.68, -171.28)
+            local look_dir = vector():set(-0.98, -0.09, -0.14)
+            db.actor:set_actor_position(actor_pos)
+            db.actor:set_actor_direction(-look_dir:getH())
         end)
+    end)
 end
 
 function ormant_teleport(first_speaker, second_speaker)
-    dsh.wait_condition(function() return db.actor:dont_has_info("ui_talk") end,
-        function()
-            level.add_pp_effector("black.ppe", 2006, false)
-            dsh.timeout(1000, function()
-                local sim = alife()
-                local pos = patrol("orm_walk_1")
-                local last = pos:count() - 1
-                for a = 1, 65534 do
-                    local sobj = sim:object(a)
-                    if sobj and sobj:section_name() == "ormont" then
-                        sim:teleport_object(a, pos:point(last), pos:level_vertex_id(last), pos:game_vertex_id(last))
-                        break
-                    end
+    dsh.wait_condition(function() return db.actor:dont_has_info("ui_talk") end, function()
+        level.add_pp_effector("black.ppe", 2006, false)
+        dsh.timeout(1000, function()
+            local sim = alife()
+            local pos = patrol("orm_walk_1")
+            local last = pos:count() - 1
+            for a = 1, 65534 do
+                local sobj = sim:object(a)
+                if sobj and sobj:section_name() == "ormont" then
+                    sim:teleport_object(a, pos:point(last), pos:level_vertex_id(last), pos:game_vertex_id(last))
+                    break
                 end
-				local actor_pos = vector():set(-158.28, 14.92, 182.23)
-				local look_dir  = vector():set(-0.75, -0.0, 0.0)
-                db.actor:set_actor_position(actor_pos)
-                db.actor:set_actor_direction(-look_dir:getH())
-            end)
+            end
+            local actor_pos = vector():set(-158.28, 14.92, 182.23)
+            local look_dir = vector():set(-0.75, -0.0, 0.0)
+            db.actor:set_actor_position(actor_pos)
+            db.actor:set_actor_direction(-look_dir:getH())
         end)
+    end)
 end
 
 function mg_group_release()
-	local mg_group_sids = {
-	20048, 20049, 20050, 20051, 20052, 20053, 20054, 20055, 20056, 30198, 30199, 30223, 30224, 30231, 30232, 30235,
-	}
+    local mg_group_sids = {20048, 20049, 20050, 20051, 20052, 20053, 20054, 20055, 20056, 30198, 30199, 30223, 30224,
+                           30231, 30232, 30235}
     local sim = alife()
     for _, sid in ipairs(mg_group_sids) do
         local sobj = sim:story_object(sid)
@@ -117,72 +117,73 @@ end
 
 function mg_group_del()
     mg_group_release()
-    dsh.wait_condition(function() return db.actor:dont_has_info("ui_talk") end,
-    function()
+    dsh.wait_condition(function() return db.actor:dont_has_info("ui_talk") end, function()
         level.add_pp_effector("black.ppe", 2006, false)
         dsh.timeout(1000, function()
             -- local pos = patrol("jagger_vyhod_look")
             -- db.actor:set_actor_position(pos:point(0))
             db.actor:give_info_portion("german_spasenie_gotovo")
-			xyz_teleportation.teleport_deadcity()
-			sms2("Похоже переход стал закрытым, нужно поискать что-нибудь или кого-нибудь в этом городе...", nil, nil, 10)
+            xyz_teleportation.teleport_deadcity()
+            sms2(
+                "Похоже переход стал закрытым, нужно поискать что-нибудь или кого-нибудь в этом городе...",
+                nil, nil, 10)
         end)
     end)
 end
 
 function spawn_kristals()
-amk.spawn_item_in_inv("ks_active_01")
-amk.spawn_item_in_inv("ks_active_02")
-amk.spawn_item_in_inv("ks_active_03")
-amk.spawn_item_in_inv("ks_active_04")
-amk.spawn_item_in_inv("ks_active_05")
-amk.spawn_item_in_inv("ks_active_06")
-amk.spawn_item_in_inv("ks_active_07")
-amk.spawn_item_in_inv("ks_active_08")
-amk.spawn_item_in_inv("ks_active_09")
-amk.spawn_item_in_inv("ks_active_10")
-amk.spawn_item_in_inv("ks_active_11")
-amk.spawn_item_in_inv("ks_active_12")
+    amk.spawn_item_in_inv("ks_active_01")
+    amk.spawn_item_in_inv("ks_active_02")
+    amk.spawn_item_in_inv("ks_active_03")
+    amk.spawn_item_in_inv("ks_active_04")
+    amk.spawn_item_in_inv("ks_active_05")
+    amk.spawn_item_in_inv("ks_active_06")
+    amk.spawn_item_in_inv("ks_active_07")
+    amk.spawn_item_in_inv("ks_active_08")
+    amk.spawn_item_in_inv("ks_active_09")
+    amk.spawn_item_in_inv("ks_active_10")
+    amk.spawn_item_in_inv("ks_active_11")
+    amk.spawn_item_in_inv("ks_active_12")
 
-amk.spawn_item_in_inv("ks_reagent_01")
-amk.spawn_item_in_inv("ks_reagent_02")
-amk.spawn_item_in_inv("ks_reagent_03")
-amk.spawn_item_in_inv("ks_reagent_04")
-amk.spawn_item_in_inv("ks_reagent_05")
-amk.spawn_item_in_inv("ks_reagent_06")
-amk.spawn_item_in_inv("ks_reagent_07")
-amk.spawn_item_in_inv("ks_reagent_08")
-amk.spawn_item_in_inv("ks_reagent_09")
-amk.spawn_item_in_inv("ks_reagent_10")
-amk.spawn_item_in_inv("ks_reagent_11")
-amk.spawn_item_in_inv("ks_reagent_12")
+    amk.spawn_item_in_inv("ks_reagent_01")
+    amk.spawn_item_in_inv("ks_reagent_02")
+    amk.spawn_item_in_inv("ks_reagent_03")
+    amk.spawn_item_in_inv("ks_reagent_04")
+    amk.spawn_item_in_inv("ks_reagent_05")
+    amk.spawn_item_in_inv("ks_reagent_06")
+    amk.spawn_item_in_inv("ks_reagent_07")
+    amk.spawn_item_in_inv("ks_reagent_08")
+    amk.spawn_item_in_inv("ks_reagent_09")
+    amk.spawn_item_in_inv("ks_reagent_10")
+    amk.spawn_item_in_inv("ks_reagent_11")
+    amk.spawn_item_in_inv("ks_reagent_12")
 
-amk.spawn_item_in_inv("ks_absolut_01")
-amk.spawn_item_in_inv("ks_absolut_02")
-amk.spawn_item_in_inv("ks_absolut_03")
-amk.spawn_item_in_inv("ks_absolut_04")
-amk.spawn_item_in_inv("ks_absolut_05")
-amk.spawn_item_in_inv("ks_absolut_06")
-amk.spawn_item_in_inv("ks_absolut_07")
-amk.spawn_item_in_inv("ks_absolut_08")
-amk.spawn_item_in_inv("ks_absolut_09")
-amk.spawn_item_in_inv("ks_absolut_10")
-amk.spawn_item_in_inv("ks_absolut_11")
-amk.spawn_item_in_inv("ks_absolut_12")
+    amk.spawn_item_in_inv("ks_absolut_01")
+    amk.spawn_item_in_inv("ks_absolut_02")
+    amk.spawn_item_in_inv("ks_absolut_03")
+    amk.spawn_item_in_inv("ks_absolut_04")
+    amk.spawn_item_in_inv("ks_absolut_05")
+    amk.spawn_item_in_inv("ks_absolut_06")
+    amk.spawn_item_in_inv("ks_absolut_07")
+    amk.spawn_item_in_inv("ks_absolut_08")
+    amk.spawn_item_in_inv("ks_absolut_09")
+    amk.spawn_item_in_inv("ks_absolut_10")
+    amk.spawn_item_in_inv("ks_absolut_11")
+    amk.spawn_item_in_inv("ks_absolut_12")
 
-amk.spawn_item_in_inv("ks_talisman_01")
-amk.spawn_item_in_inv("ks_talisman_02")
-amk.spawn_item_in_inv("ks_talisman_03")
-amk.spawn_item_in_inv("ks_talisman_04")
-amk.spawn_item_in_inv("ks_talisman_05")
-amk.spawn_item_in_inv("ks_talisman_06")
+    amk.spawn_item_in_inv("ks_talisman_01")
+    amk.spawn_item_in_inv("ks_talisman_02")
+    amk.spawn_item_in_inv("ks_talisman_03")
+    amk.spawn_item_in_inv("ks_talisman_04")
+    amk.spawn_item_in_inv("ks_talisman_05")
+    amk.spawn_item_in_inv("ks_talisman_06")
 
-amk.spawn_item_in_inv("ks_obereg_01")
-amk.spawn_item_in_inv("ks_obereg_02")
-amk.spawn_item_in_inv("ks_obereg_03")
-amk.spawn_item_in_inv("ks_obereg_04")
-amk.spawn_item_in_inv("ks_obereg_05")
-amk.spawn_item_in_inv("ks_obereg_06")
+    amk.spawn_item_in_inv("ks_obereg_01")
+    amk.spawn_item_in_inv("ks_obereg_02")
+    amk.spawn_item_in_inv("ks_obereg_03")
+    amk.spawn_item_in_inv("ks_obereg_04")
+    amk.spawn_item_in_inv("ks_obereg_05")
+    amk.spawn_item_in_inv("ks_obereg_06")
 end
 
 -- ШТУРМОВЫЕ

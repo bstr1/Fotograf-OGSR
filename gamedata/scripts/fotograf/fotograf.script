@@ -3820,24 +3820,18 @@ function del_brown_dva()
     end
 end
 
-function brown_x10_spawn_bak()
+function brown_x10_spawn()
     local obj = alife():create("brown_tri", vector():set(16.719, -8.989, 25.268), 8421, 351)
     alife():assign_story_id(obj.id, story_ids.brown_tri)
     obj:set_health(0.089)
 end
 
-function brown_x10_spawn()
-    local obj = alife():create("brown_tri", vector():set(16.719, -8.989, 25.268), 8421, 351)
-    alife():assign_story_id(obj.id, story_ids.brown_tri)
-end
-
 -- спавн Шубина в X10
-function shubin_x10_spawn(param1, param2)
-    local pos = vector():set(18.103, -8.991, 26.314) -- зададим позицию
-    local sobj = alife():create("shubin_x10", pos, 8514, 351) -- создадим Шубина
-    if sobj then
-        amk.save_variable("ShubinX10ID", sobj.id) -- сохраняем ИД        
-        level.add_pp_effector("blink.ppe", 9115, false) -- создадим вспышку
+function shubin_x10_spawn()
+    local obj = alife_create("shubin_x10", "l10u_bunker", vector():set(18.103, -8.991, 26.314))
+    alife():assign_story_id(obj.id, story_ids.shubin_x10)
+    if obj then
+        level.add_pp_effector("blink.ppe", 9115, false)
         amk_particle.amk_particle({
             particle = "anomaly2\\group_items\\mauv_shubin",
             pos = pos,
@@ -3848,27 +3842,10 @@ function shubin_x10_spawn(param1, param2)
 end
 
 -- удаление Шубина в X10
-function del_shubin_x10(actor, obj)
-    local shubinx10_id = amk.load_variable("ShubinX10ID", nil)
-    if shubinx10_id then
-        local sobj = alife():object(shubinx10_id)
-        local obj = level.object_by_id(shubinx10_id)
-        if obj then
-            local pos = obj:position()
-            amk_particle.amk_particle({
-                particle = "anomaly2\\group_items\\mauv_shubin_exit",
-                pos = pos,
-                sound = "$no_sound"
-            })
-        end
-        if sobj then -- Шубин в Х10 существует
-            alife():release(sobj, true) -- удаляем серверный объект
-            amk.del_variable("ShubinX10ID")
-            if has_alife_info("shubin_enemy2") then
-                local snd_obj = xr_sound.get_safe_sound_object([[characters_voice\scenario\backup\shubin_wound]])
-                snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
-            end
-        end
+function del_shubin_x10()
+    local obj = alife():story_object(story_ids.shubin_x10)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
@@ -3982,11 +3959,11 @@ end
 
 function brown_bunker_spawn()
     local obj = alife():create("brown_x10", vector():set(21.117, -8.991, 7.522), 8694, 352)
-    alife():assign_story_id(obj.id, story_ids.brown_x10)
+    alife():assign_story_id(obj.id, story_ids.brown_second_x10)
 end
 
 function del_brown_bunker()
-    local obj = alife():story_object(story_ids.brown_x10)
+    local obj = alife():story_object(story_ids.brown_second_x10)
     if obj then
         alife():release(obj, true)
         level.add_pp_effector("teleport.ppe", 25008, false)
@@ -4082,6 +4059,7 @@ end
 
 function shubin3_spawn()
     local obj = alife():create("shubin3", vector():set(-367.064, 40.659, 379.527), 238194, 775)
+    alife():assign_story_id(obj.id, story_ids.shubin3)
 end
 
 ---------------------------------------last_part---------------------------------
@@ -4137,24 +4115,16 @@ function sms_foto_smith()
 end
 
 function del_shubin3()
-    local sobj
-    for a = 1, 65535 do
-        sobj = alife():object(a)
-        if sobj and sobj:section_name() == "shubin3" then
-            alife():release(sobj, true)
-            break
-        end
+    local obj = alife():story_object(story_ids.shubin3)
+    if obj then
+        alife():release(obj, true)
     end
 end
 
 function del_brown_five()
-    local sobj
-    for a = 1, 65535 do
-        sobj = alife():object(a)
-        if sobj and sobj:section_name() == "brown_five" then
-            alife():release(sobj, true)
-            break
-        end
+    local obj = alife():story_object(story_ids.brown_five)
+    if obj then
+        alife():release(obj, true)
     end
 end
 

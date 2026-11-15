@@ -1808,26 +1808,6 @@
     <action>fotograf.brown_five_spawn</action>
 </info_portion>
 
-<info_portion id="pentagramm_01">
-    <article>pentagramm_01</article>
-    <action>pentagramm.sms_pentagramm</action>
-</info_portion>
-
-<info_portion id="pentagramm_02">
-    <article>pentagramm_02</article>
-    <action>pentagramm.sms_pentagramm</action>
-</info_portion>
-
-<info_portion id="pentagramm_03">
-    <article>pentagramm_03</article>
-    <action>pentagramm.sms_pentagramm</action>
-</info_portion>
-
-<info_portion id="pentagramm_04">
-    <article>pentagramm_04</article>
-    <action>pentagramm.sms_pentagramm</action>
-</info_portion>
-
 <info_portion id="escape_restr_spawn">
     <action>fotograf.create_escape_restr</action>
 </info_portion>

@@ -347,7 +347,7 @@
      <title>ekza_poisk_task</title>
      <objective>
           <text>ekza_poisk_obj_01</text>
-          <icon>ui_iconsTotal_shpak</icon>
+          <icon>ui_iconsTotal_find_item</icon>
           <infoportion_complete>utug_sdal</infoportion_complete>
           <article>ekza_poisk_enc</article>
      </objective>

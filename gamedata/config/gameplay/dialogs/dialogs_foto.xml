@@ -5247,8 +5247,6 @@
             <text>brown_eight_dialog_2</text>
             <give_info>brown_eight_dialog_start</give_info>
             <action>fotograf.del_drozdov</action>
-            <action>mauvise.timer_music_poligon04</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -5309,7 +5307,6 @@
             <text>voronin_dyshlo_attak_dialog_12</text>
             <give_info>voronin_dyshlo_attak_dialog_start</give_info>
             <give_info>actor_atak</give_info>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -5354,7 +5351,6 @@
         <phrase id="8">
             <text>plichko_start_dialog_8</text>
             <give_info>dolg_ataka_start</give_info>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -5385,7 +5381,6 @@
             <text>plichko_one_dialog_4</text>
             <give_info>dolg_ataka_finish</give_info>
             <action>amk_mod.start_blow_timer</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -5425,7 +5420,6 @@
             <action>fotograf.killers6_dyshlo_spawn</action>
             <action>foto2.varvara_spawn</action>
             <action>foto2.petrovige_spawn</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -5502,19 +5496,11 @@
         <phrase id="9">
             <text>voronin_dolg_dialog_one_9</text>
             <next>10</next>
-            <next>11</next>
         </phrase>
         <phrase id="10">
             <text>voronin_dolg_dialog_one_10</text>
             <give_info>voronin_dolg_dialog_one_start</give_info>
-            <action>dialogs.actor_set_dolg</action>
-            <action>dialogs.break_dialog</action>
-        </phrase>
-        <phrase id="11">
-            <text>voronin_dolg_dialog_one_11</text>
-            <give_info>voronin_dolg_dialog_one_start</give_info>
             <give_info>brown_x10_start</give_info>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -5603,7 +5589,6 @@
             <give_info>shubin_pentagramm_dialog_start</give_info>
             <give_info>story_20</give_info>
             <action>pentagramm.penta_start</action>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>
@@ -5712,7 +5697,6 @@
         <phrase id="4">
             <text>brown5_dialog_one_4</text>
             <give_info>brown5_dialog_start</give_info>
-            <action>dialogs.break_dialog</action>
         </phrase>
     </phrase_list>
 </dialog>

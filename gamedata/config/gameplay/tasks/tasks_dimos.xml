@@ -1,39 +1,39 @@
 <game_task id="zapadlo_case">
-	<title>Помочь внучке Деда Западло</title>
-	<objective>
-		<text>Помочь внучке Деда Западло</text>
-		<icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
-		<infoportion_complete>zapadlo_dialog_4_done</infoportion_complete>
+     <title>zapadlo_case_task</title>
+     <objective>
+          <text>zapadlo_case_obj_01</text>
+          <icon height="50" width="50" x="100" y="50">ui\ui_icons_task</icon>
+          <infoportion_complete>zapadlo_dialog_4_done</infoportion_complete>
           <article>zapadlo_help_verka</article>
-	</objective>
-	<objective>
-		<text>Найти Харона в Мёртвом городе</text>
-		<map_location_type hint="Харон">blue_location</map_location_type>
-		<object_story_id>haronchik</object_story_id>
-		<infoportion_complete>haron_dialog_2_done</infoportion_complete>
-	</objective>
-	<objective>
-		<text>Встретить внучку у перехода</text>
-		<map_location_type hint="Верка Заподлянка">blue_location</map_location_type>
-		<object_story_id>verka</object_story_id>
-		<infoportion_complete>verka_dialog_1_done</infoportion_complete>
-	</objective>
-	<objective>
-		<text>Поговорить с Хароном</text>
-		<map_location_type hint="Харон">blue_location</map_location_type>
-		<object_story_id>haronchik</object_story_id>
-		<infoportion_complete>haron_dialog_3_done</infoportion_complete>
-	</objective>
-	<objective>
-		<text>Вывести внучку из Мёртвого города</text>
-		<infoportion_complete>verka_out</infoportion_complete>
-	</objective>
-	<objective>
-		<text>Встретиться с Дедом Западло</text>
-		<map_location_type hint="Дед Западло">blue_location</map_location_type>
-		<object_story_id>zapadlo</object_story_id>
-		<infoportion_complete>zapadlo_dialog_4_done</infoportion_complete>
-	</objective>
+     </objective>
+     <objective>
+          <text>zapadlo_case_obj_02</text>
+          <map_location_type hint="Харон">blue_location</map_location_type>
+          <object_story_id>haronchik</object_story_id>
+          <infoportion_complete>haron_dialog_2_done</infoportion_complete>
+     </objective>
+     <objective>
+          <text>zapadlo_case_obj_03</text>
+          <map_location_type hint="Верка Заподлянка">blue_location</map_location_type>
+          <object_story_id>verka</object_story_id>
+          <infoportion_complete>verka_dialog_1_done</infoportion_complete>
+     </objective>
+     <objective>
+          <text>zapadlo_case_obj_04</text>
+          <map_location_type hint="Харон">blue_location</map_location_type>
+          <object_story_id>haronchik</object_story_id>
+          <infoportion_complete>haron_dialog_3_done</infoportion_complete>
+     </objective>
+     <objective>
+          <text>zapadlo_case_obj_05</text>
+          <infoportion_complete>verka_out</infoportion_complete>
+     </objective>
+     <objective>
+          <text>zapadlo_case_obj_06</text>
+          <map_location_type hint="Дед Западло">blue_location</map_location_type>
+          <object_story_id>zapadlo</object_story_id>
+          <infoportion_complete>zapadlo_dialog_4_done</infoportion_complete>
+     </objective>
 </game_task>
 
 <game_task id="anom_research">

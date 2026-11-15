@@ -1383,15 +1383,15 @@
 
 
 <string id="pentagramm_task">
-    <text>Найти "мерцающие знаки" в подземельях</text>
+    <text>Найти "мерцающий знак" в Х-10</text>
 </string>
 
 <string id="pentagramm_obj_01">
-    <text>Найти "мерцающие знаки" в подземельях</text>
+    <text>Найти "мерцающий знак" в Х-10</text>
 </string>
 
 <string id="pentagramm_obj_02">
-    <text>Найти и исследовать "мерцающие знаки" в подземельях</text>
+    <text>Найти и исследовать "мерцающий знак" в Х-10</text>
 </string>
 
 <string id="pentagramm_obj_03">
@@ -1952,4 +1952,33 @@
 
 <string id="ekza_poisk_obj_04">
     <text>Получить информацию о экзоскелете</text>
+</string>
+
+
+<string id="zapadlo_case_task">
+    <text>Помочь внучке Деда Западло</text>
+</string>
+
+<string id="zapadlo_case_obj_01">
+    <text>Помочь внучке Деда Западло</text>
+</string>
+
+<string id="zapadlo_case_obj_02">
+    <text>Найти Харона в Мёртвом городе</text>
+</string>
+
+<string id="zapadlo_case_obj_03">
+    <text>Встретить внучку у перехода</text>
+</string>
+
+<string id="zapadlo_case_obj_04">
+    <text>Поговорить с Хароном</text>
+</string>
+
+<string id="zapadlo_case_obj_05">
+    <text>Вывести внучку из Мёртвого города</text>
+</string>
+
+<string id="zapadlo_case_obj_06">
+    <text>Встретиться с Дедом Западло</text>
 </string>

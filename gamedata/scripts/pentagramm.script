@@ -11,50 +11,11 @@ local particle, sound
 -- таблица координат и свойств пентаграмм
 local tbl_pentagram = {
     [1] = {
-        pos = vector():set(-38.330, -4.578, -1.650),
-        lv = 4781,
-        gv = 30,
-        sect = "penta_red",
-        speech = "ambient\\new\\actor_penta1",
-        help = "help_red",
-        snd_help = "characters_voice\\scenario\\backup\\help_red",
-        tbl = {"izlom_hand", "mutant_tail_cat", "ks_talisman_03"},
-        part = {"mauvais\\penta_red_active2", "mauvais\\penta_red_active1", "mauvais\\penta_red_active"},
-        sound = {"anomaly\\penta_red_act2", "anomaly\\penta_red_act1", "anomaly\\penta_red_act"},
-        info = "pentagramm_01"
-    },
-    [2] = {
-        pos = vector():set(-0.920, -16.344, 60.897),
-        lv = 2739,
-        gv = 163,
-        sect = "penta_green",
-        speech = "ambient\\new\\actor_penta2",
-        help = "help_green",
-        snd_help = "characters_voice\\scenario\\backup\\help_green",
-        tbl = {"mutant_dog_tail", "mutant_chimera_kogot", "ks_talisman_02"},
-        part = {"mauvais\\penta_green_active2", "mauvais\\penta_green_active1", "mauvais\\penta_green_active"},
-        sound = {"anomaly\\penta_green_act2", "anomaly\\penta_green_act1", "anomaly\\penta_green_act"},
-        info = "pentagramm_02"
-    },
-    [3] = {
-        pos = vector():set(-33.275, -7.800, -22.171),
-        lv = 1755,
-        gv = 311,
-        sect = "penta_yellow",
-        speech = "ambient\\new\\actor_penta3",
-        help = "help_yellow",
-        snd_help = "characters_voice\\scenario\\backup\\help_yellow",
-        tbl = {"mutant_boar_leg", "mutant_psevdodog_tail", "ks_talisman_05"},
-        part = {"mauvais\\penta_yellow_active2", "mauvais\\penta_yellow_active1", "mauvais\\penta_yellow_active"},
-        sound = {"anomaly\\penta_yellow_act2", "anomaly\\penta_yellow_act1", "anomaly\\penta_yellow_act"},
-        info = "pentagramm_03"
-    },
-    [4] = {
-        pos = vector():set(-23.123, -23.519, -15.398),
-        lv = 2930,
-        gv = 448,
+        pos = vector():set(16.16, -8.80, 12.61),
+        lv = 8355,
+        gv = 445,
         sect = "penta_blue",
-        speech = "ambient\\new\\actor_penta4",
+        speech = "ambient\\new\\actor_penta1",
         help = "help_blue",
         snd_help = "characters_voice\\scenario\\backup\\help_blue",
         tbl = {"mutant_flesh_eye", "vypolzen_hrebet", "ks_talisman_06"},
@@ -219,10 +180,9 @@ function penta_timer()
         return
     end
     -- Пентаграммы пройдены, пора спавнить Шубина-человека.
-    sobj = alife():create("shubin2", posX10, lvX10, gvX10) -- создадим Шубина
-    if sobj then
-        amk.save_variable("Shubin2ID", sobj.id) -- сохраняем ИД  
-    end
+    local obj = alife():create("shubin2", posX10, lvX10, gvX10) -- создадим Шубина
+    alife():assign_story_id(obj.id, story_ids.shubin2)
+
     -- выдадим поршень окончания исследования пентаграмм
     db.actor:give_info_portion("shubin_pentagramm_dialog_have")
     -- удалим переменные
@@ -230,48 +190,10 @@ function penta_timer()
     amk.del_variable("PentaAct")
 end
 
--- спавн Шубина-призрака в X10
-function shubin_x10_spawn(param1, param2)
-    local sobj = alife():create("shubin_x10", posX10, lvX10, gvX10) -- создадим Шубина
-    if sobj then
-        amk.save_variable("ShubinX10ID", sobj.id) -- сохраняем ИД  
-        level.add_pp_effector("blink.ppe", 9115, false) -- создадим вспышку
-        particle = particles_object("anomaly2\\group_items\\mauv_shubin")
-        if particle then
-            particle:play_at_pos(pos)
-        end
-    end
-end
+-- shubin_pentagramm_dialog_start; начало задания
+-- shubin_pentagramm_dialog_have;  последняя пентаграмма исследована
+-- shubin_pentagramm_dialog_done;  сдача Шубину задания
 
--- удаление Шубина-призрака в X10
-function del_shubin_x10(actor, obj)
-    local shubinx10_id = amk.load_variable("ShubinX10ID", nil)
-    if shubinx10_id then
-        local sobj = alife():object(shubinx10_id)
-        local obj = level.object_by_id(shubinx10_id)
-        if obj then
-            local pos = obj:position()
-            particle = particles_object("anomaly2\\group_items\\mauv_shubin_exit")
-            if particle then
-                particle:play_at_pos(pos)
-            end
-        end
-        if sobj then -- Шубин в Х10 существует
-            alife():release(sobj, true) -- удаляем серверный объект
-            amk.del_variable("ShubinX10ID")
-            if has_alife_info("shubin_enemy2") then
-                local snd_obj = xr_sound.get_safe_sound_object([[characters_voice\scenario\backup\shubin_wound]])
-                snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
-            end
-        end
-    end
-end
--- ****************************************************************************************************************
---[[
-shubin_pentagramm_dialog_start --начало задания
-shubin_pentagramm_dialog_have --последняя пентаграмма исследована
-shubin_pentagramm_dialog_done --сдача Шубину задания
---]]
 -- для тестирования
 -- получить все реагенты
 function all_reagent()
@@ -285,11 +207,3 @@ function all_reagent()
         end
     end
 end
-
-function sms_pentagramm()
-    news_manager.send_tip(db.actor,
-        "%c[255,255,75,75]Найдена пентаграмма.\\nИнформация о ней записана в ПДА, в разделе 'Журнал'.",
-        nil, nil, 20000)
-end
-
--- ****************************************************************************************************************
