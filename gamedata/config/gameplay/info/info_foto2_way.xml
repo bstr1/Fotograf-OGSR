@@ -199,9 +199,7 @@
 </info_portion>
 <info_portion id="enable_voice"></info_portion>
 <info_portion id="orm_healed"></info_portion>
-<info_portion id="orm_start">
-    <action>mauvais.music_dyshlo04</action>
-</info_portion>
+<info_portion id="orm_start"></info_portion>
 <info_portion id="orm_mesto"></info_portion>
 <info_portion id="orm_pristupaet"></info_portion>
 <info_portion id="ormont_del">

@@ -52,20 +52,6 @@ function timer_music_poligon03()
     amk.g_start_timer("music_poligon03", 0, 0, 3, 0)
 end
 
-function music_poligon04()
-    local snd_obj = xr_sound.get_safe_sound_object([[mauvais\02_poligon\04_share]])
-    snd_obj:play(db.actor, 0, sound_object.s2d)
-end
-
-function timer_music_poligon04()
-    amk.g_start_timer("music_poligon04", 0, 0, 2, 0)
-end
-
-function music_poligon05()
-    local snd_obj = xr_sound.get_safe_sound_object([[mauvais\02_poligon\ploymar_road]])
-    snd_obj:play(db.actor, 0, sound_object.s2d)
-end
-
 ----------------swamp--------------------
 
 function music_swamp01()

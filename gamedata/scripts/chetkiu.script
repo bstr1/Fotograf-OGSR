@@ -79,6 +79,29 @@ function verka_teleport(first_speaker, second_speaker)
         end)
 end
 
+function ormant_teleport(first_speaker, second_speaker)
+    dsh.wait_condition(function() return db.actor:dont_has_info("ui_talk") end,
+        function()
+            level.add_pp_effector("black.ppe", 2006, false)
+            dsh.timeout(1000, function()
+                local sim = alife()
+                local pos = patrol("orm_walk_1")
+                local last = pos:count() - 1
+                for a = 1, 65534 do
+                    local sobj = sim:object(a)
+                    if sobj and sobj:section_name() == "ormont" then
+                        sim:teleport_object(a, pos:point(last), pos:level_vertex_id(last), pos:game_vertex_id(last))
+                        break
+                    end
+                end
+				local actor_pos = vector():set(-158.28, 14.92, 182.23)
+				local look_dir  = vector():set(-0.75, -0.0, 0.0)
+                db.actor:set_actor_position(actor_pos)
+                db.actor:set_actor_direction(-look_dir:getH())
+            end)
+        end)
+end
+
 function mg_group_release()
 	local mg_group_sids = {
 	20048, 20049, 20050, 20051, 20052, 20053, 20054, 20055, 20056, 30198, 30199, 30223, 30224, 30231, 30232, 30235,

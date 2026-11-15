@@ -2108,7 +2108,7 @@ function orm_spawn()
 end
 
 function iof_spawn()
-    local obj = alife():create("ioffe", vector():set(-141.086, 40.578, 181.332), 138853, 1)
+    local obj = braad_test.spawn_ai_location("ioffe", vector():set(-151.23, 20.89, 185.04), "dyshlo")
     alife():assign_story_id(obj.id, story_ids.ioffe)
     obj:set_health(0)
 end

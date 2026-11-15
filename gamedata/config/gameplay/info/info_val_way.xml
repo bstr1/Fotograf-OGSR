@@ -122,6 +122,7 @@
 
 <info_portion id="ormant_krut">
     <action>val_test.create_actorormant_restr</action>
+    <action>chetkiu.ormant_teleport</action>
 </info_portion>
 
 <info_portion id="actor_markubit">
