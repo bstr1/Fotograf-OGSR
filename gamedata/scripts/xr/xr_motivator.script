@@ -12,20 +12,24 @@ memtsg = {} --' временная таблица
 lasthealth = 0
 lastime = nil
 local particles={}
-
+local hit_ignore = 
+{
+    ["spy_aes"] = true
+}
 ----------------------------------------------------------------------------------------------------------------------
 class "motivator_binder" (object_binder)
 
 function motivator_binder:__init (obj) super(obj)
-  self.loaded = false
-  self.last_update = 0
-        self.prev_ammo = -1
-  self.npc_name = obj:name()		
-  ----memusage.collect_info(self.object, "__init")
+	self.loaded = false
+	self.last_update = 0
+	self.prev_ammo = -1
+	self.npc_name = obj:name()		
+	----memusage.collect_info(self.object, "__init")
 
-    self.first_update = false
-  self.treasure_processed = false
-        self.particles = {}
+	self.first_update = false
+	self.treasure_processed = false
+	self.particles = {}
+	self.am = ogsr_signals.get_mgr()
 end
 
 function motivator_binder:extrapolate_callback(cur_pt)
@@ -102,6 +106,7 @@ function motivator_binder:net_spawn(sobject)
   self.object:set_callback(callback.hit, motivator_binder.hit_callback, self)
   self.object:set_callback(callback.death, motivator_binder.death_callback, self)
   self.object:set_callback(callback.use_object, motivator_binder.use_callback, self)
+  self.object:set_callback(callback.entity_alive_before_hit, motivator_binder.before_hit_callback, self)
   --memusage.collect_info(self.object, "after__callback")
 
   --self.object:set_callback(callback.sound, motivator_binder.hear_callback, self)
@@ -208,6 +213,7 @@ function motivator_binder:clear_callbacks()
   self.object:set_patrol_extrapolate_callback(nil)
   self.object:set_callback(callback.hit, nil)
   self.object:set_callback(callback.death, nil)
+  self.object:set_callback(callback.entity_alive_before_hit, nil)
 end
 
 function motivator_binder:hit_callback(obj, amount, local_direction, who, bone_index)
@@ -242,6 +248,31 @@ function motivator_binder:hit_callback(obj, amount, local_direction, who, bone_i
   amk.on_npc_hit(obj, amount, local_direction, who, bone_index)
   -- end of addition
 
+end
+
+function motivator_binder:before_hit_callback(hit_data)
+    if hit_data.weapon_id then
+        local wpn = level.object_by_id(hit_data.weapon_id)
+        if hit_data.who_id == db.actor:id() and hit_data.hit_type == hit.fire_wound and wpn and wpn:is_weapon_magazined() then
+            local koef = has_alife_info("acv_kill2") and 1.3 or (has_alife_info("acv_kill") and 1.2 or 1.0)
+            hit_data.power = hit_data.power * koef
+        end
+    end
+
+    if self.object:story_id() ~= 4294967295 and hit_data.who_id ~= db.actor:id() and not hit_ignore[self.object:name()] then
+        hit_data.ignore_hit = true
+    end
+
+    -- if self.object:section() == "brown_four" and hit_data.power < 100 then
+        -- hit_data.ignore_hit = true
+    -- end
+
+    if not self.last_hit_data then
+        self.last_hit_data = {}
+    end
+
+    dsh.copy_hit_data(hit_data, self.last_hit_data)
+    self.am:call("on_npc_before_hit", self.object, hit_data, self)
 end
 
 function motivator_binder:death_callback(victim, who)
