@@ -310,6 +310,14 @@
     <text>Портативный фонарик.</text>
 </string>
 
+<string id="item_dynamite_esc_desc">
+    <text>Тяжёлый деревянный ящик с надписями "Взрывоопасно" на нескольких языках.</text>
+</string>
+
+<string id="item_dynamite_esc_name">
+    <text>Ящик с динамитом</text>
+</string>
+
 <string id="filin_priemnik_inv_name">
     <text>Приёмник</text>
 </string>
@@ -736,22 +744,6 @@
 
 <string id="max_ruk_description">
     <text>Рюкзак Макса</text>
-</string>
-
-<string id="device_atifact_merger_inv_name">
-    <text>ArtefactMerger</text>
-</string>
-
-<string id="device_atifact_merger_inv_name_short">
-    <text>AfMerger</text>
-</string>
-
-<string id="bread_a_inv_name">
-    <text>Радиоактивный хлеб</text>
-</string>
-
-<string id="bread_a_description">
-    <text>Радиоактивный хлеб</text>
 </string>
 
 <string id="antizombin_inv_name">
@@ -1534,196 +1526,12 @@
     <text>Коготь Огненной Химеры. Свойства неизучены, ввиду крайне малой вероятности добыть этот уникальный биоматериал.</text>
 </string>
 
-<string id="zahar_box_inv_name">
-    <text>Контейнер Захара</text>
-</string>
-
-<string id="zahar_box_description">
-    <text>Контейнер Захара, в котором находятся найденные им редкие артефакты.</text>
-</string>
-
-<string id="detector_kruglov_description">
-    <text>detector_kruglov_desc0</text>
-</string>
-
-<string id="flash_ban_inv_name">
-    <text>Флешка бандитов</text>
-</string>
-
-<string id="flash_ban_description">
-    <text>Простая флешка для хранения информации. Среди прочей информации, должны быть сведения о переходе из Тёмной Долины на Кордон.</text>
-</string>
-
-<string id="detector_elite_bad_description">
-    <text>detector_elite_bad_desc0</text>
-</string>
-
-<string id="af_electra_moonlight_new_inv_name">
-    <text>af_electra_moonlight_new</text>
-</string>
-
-<string id="af_electra_moonlight_new_description">
-    <text>af_electra_moonlight_new_desc</text>
-</string>
-
-<string id="nine_pda_inv_name">
-    <text>nine_pda_name</text>
-</string>
-
-<string id="nine_pda_description">
-    <text>nine_pda_desc</text>
-</string>
-
-<string id="doc_peredatchik_inv_name">
-    <text>Ресивер</text>
-</string>
-
-<string id="doc_peredatchik_description">
-    <text>Передатчик Болотного Доктора.</text>
-</string>
-
-<string id="box_vano_inv_name">
-    <text>Ящик с минами</text>
-</string>
-
-<string id="box_vano_description">
-    <text>Ящик с минами, который попросил найти и принести Вано.</text>
-</string>
-
 <string id="kruglov_flash_inv_name">
     <text>Документы</text>
 </string>
 
 <string id="kruglov_flash_description">
     <text>Документы с очень важной информацией.</text>
-</string>
-
-<string id="mil_svoboda_leader_pda_inv_name">
-    <text>Svoboda Leader PDA</text>
-</string>
-
-<string id="dar_pass_flash_inv_name">
-    <text>"Scientist" Flash card</text>
-</string>
-
-<string id="dar_pass_flash_inv_name_short">
-    <text>"Scientist" flash</text>
-</string>
-
-<string id="dar_pass_document_inv_name">
-    <text>CodeX-18</text>
-</string>
-
-<string id="flame_parts_inv_name">
-    <text>item_flame1_name</text>
-</string>
-
-<string id="flame_parts_description">
-    <text>flame_part_desc</text>
-</string>
-
-<string id="gorelka_inv_name">
-    <text>gorelka</text>
-</string>
-
-<string id="gorelka_description">
-    <text>gorelka_descr</text>
-</string>
-
-<string id="manometr_inv_name">
-    <text>manometr</text>
-</string>
-
-<string id="manometr_description">
-    <text>manometr_descr</text>
-</string>
-
-<string id="trubka_inv_name">
-    <text>trubka</text>
-</string>
-
-<string id="trubka_description">
-    <text>trubka_descr</text>
-</string>
-
-<string id="flamethrower_bad_inv_name">
-    <text>item_flamethrower_bad_name</text>
-</string>
-
-<string id="flamethrower_bad_description">
-    <text>flama_descr</text>
-</string>
-
-<string id="pribor_new_inv_name">
-    <text>Детектор выбросов</text>
-</string>
-
-<string id="pribor_new_description">
-    <text>Прибор, определяющий с незначительной погрешностью, дату и время следующего выброса. Разработан в секретной лаборатории на Янтаре.</text>
-</string>
-
-<string id="helmet_new_inv_name">
-    <text>Защитный шлем</text>
-</string>
-
-<string id="helmet_new_description">
-    <text>Специальный шлем, защищающий от разрушающего воздействия выбросов. Разработан в секретной лаборатории на Янтаре.</text>
-</string>
-
-<string id="mini_part_inv_name">
-    <text>Часть руководства</text>
-</string>
-
-<string id="mini_part_description">
-    <text>Одна из семи частей руководства по сборке Минигана М134.</text>
-</string>
-
-<string id="pribor_lazarev_inv_name">
-    <text>Прибор Лазарева</text>
-</string>
-
-<string id="pribor_lazarev_description">
-    <text>Прибор, определяющий уровень и динамику роста аномальной активности.</text>
-</string>
-
-<string id="rukzak_adulin_inv_name">
-    <text>Рюкзак с хабаром</text>
-</string>
-
-<string id="rukzak_adulin_description">
-    <text>Рюкзак с сильнодействующими медикаментами.</text>
-</string>
-
-<string id="cd_disk_inv_name">
-    <text>CD диск</text>
-</string>
-
-<string id="cd_disk_description">
-    <text>CD диск с результатами анализов и наблюдений за мутацией животных. Записан около пяти лет назад в самой первой научной экспедиции в Зону, организованной вскоре после второго взрыва на Чаэс.</text>
-</string>
-
-<string id="box_green_inv_name">
-    <text>Несгораемый кейс</text>
-</string>
-
-<string id="box_green_description">
-    <text>Несгораемый кейс с важной информацией внутри.</text>
-</string>
-
-<string id="box_remont_inv_name">
-    <text>Контейнер с медикаментами</text>
-</string>
-
-<string id="box_remont_description">
-    <text>Металлический контейнер с медикаментами внутри.</text>
-</string>
-
-<string id="pribor_haron_inv_name">
-    <text>Декодер Харона</text>
-</string>
-
-<string id="pribor_haron_description">
-    <text>Декодер Харона.</text>
 </string>
 
 <string id="val_sound_object_inv_name">

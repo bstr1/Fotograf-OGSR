@@ -623,32 +623,6 @@ function hit_by_actor(actor, npc)
 	return hit_by_actor
 end
 
-function hit_by_actor_kolt(actor, npc)
-	 local t = db.storage[npc:id()].hit
-     local hit_by_actor_kolt = (t ~= nil and t.who == actor:id())
-     printf("_bp: hit_by_actor: %s", if_then_else(hit_by_actor, "true", "false"))
-     if hit_by_actor_kolt then
-      local weapon = db.actor:item_in_slot(1)
-      if weapon and weapon:section() == "wpn_colt1911" then
-        return hit_by_actor_kolt
-      end
-    end
-     return false
-end
-
-function hit_by_actor_mosin(actor, npc)
-	 local t = db.storage[npc:id()].hit
-     local hit_by_actor_mosin = (t ~= nil and t.who == actor:id())
-     printf("_bp: hit_by_actor: %s", if_then_else(hit_by_actor, "true", "false"))
-     if hit_by_actor_mosin then
-      local weapon = db.actor:item_in_slot(2)
-      if weapon and weapon:section() == "wpn_m1891_30_scope_ucen" then
-        return hit_by_actor_mosin
-      end
-    end
-     return false
-end
-
 function killed_by_actor(actor, npc)
 	local t = db.storage[npc:id()].death
 	local killed_by_actor = t ~= nil and t.killer == actor:id()
@@ -656,7 +630,7 @@ function killed_by_actor(actor, npc)
 	return killed_by_actor
 end
 
-function actor_has_weapon (actor, npc)
+function actor_has_weapon(actor, npc)
     local obj = actor:active_item ()
     if obj == nil or isWeapon (obj) == false then return false end
     return true
@@ -950,32 +924,9 @@ function val_actor_in_cage(actor, npc)
 	return utils.npc_in_zone(actor, db.zone_by_name["val_prisoner_cage_zone"])
 end
 
-function val_actor_has_key_to_underground(actor, npc)
-	if xr_conditions_impl.actor_has_object(actor, "val_key_to_underground") then
-		printf("_bp: xr_conditions: val_actor_has_key_to_underground: true")
-		return true
-	end
-	printf("_bp: xr_conditions: val_actor_has_key_to_underground [actor='%s']: false", actor:name())
-	return false
-end
 
---[[
-function val_prisoner_in_cage(actor, npc)
-	local prisoner = level_object_by_sid(402)
-	if not prisoner then
-		return false
-	end
-	return utils.npc_in_zone(prisoner, db.zone_by_name["val_prisoner_cage_zone"])
-end
---]]
 
 function actor_wears_bandit_outfit(actor, npc)
-	--[[
-	local cur_eq = actor:get_current_equipment()
-	local wears = cur_eq and cur_eq:name() == "bandit_outfit"
-	printf("_bp: actor_wears_bandits_outfit: %s", utils.to_str(wears))
-	return wears
-	--]]
 	return xr_conditions_impl.actor_has_object(actor, "bandit_outfit")
 end
 

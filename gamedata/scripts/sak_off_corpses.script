@@ -157,11 +157,11 @@ function item_found(corps)
                     string.find(item_name, "vodka") or string.find(item_name, "antirad") or
                     string.find(item_name, "medkit") or string.find(item_name, "bandage") or
                     string.find(item_name, "energy_drink") or string.find(item_name, "detector") or
-                    string.find(item_name, "dynamite") or string.find(item_name, "quest_") or
+                    string.find(item_name, "quest_") or
                     string.find(item_name, "document") or string.find(item_name, "_flash") or
                     string.find(item_name, "case_") or string.find(item_name, "decoder") or
-                    string.find(item_name, "_key") or string.find(item_name, "trubka") or
-                    string.find(item_name, "flamethrower_bad") or string.find(item_name, "_m1") or
+                    string.find(item_name, "_key") or
+                    string.find(item_name, "_m1") or
                     string.find(item_name, "_m2") or string.find(item_name, "mutant_") or string.find(item_name, "af_") or
                     string.find(item_name, "diplomat") or string.find(item_name, "sak_") or
                     string.find(item_name, "_book") then

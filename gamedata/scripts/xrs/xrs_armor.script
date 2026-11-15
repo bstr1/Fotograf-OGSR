@@ -727,7 +727,7 @@ function get_npc_current_visual_level(id)
                 sect = "bandit_outfit_red1"
             end
             if vis == "stalker_bandit_drunk" then
-                sect = "outfit_bandit_m1"
+                sect = "bandit_outfit"
             end
             if vis == "stalker_bandit_8" then
                 sect = "bandit_gaz_outfit_m1"
@@ -749,7 +749,7 @@ function get_npc_current_visual_level(id)
                 sect = "dolg_gaz_outfit_m1"
             end
             if vis == "stalker_do_komandir" then
-                sect = "outfit_dolg_m1"
+                sect = "dolg_outfit"
             end
             if vis == "stalker_do_nauchniy" then
                 sect = "dolg_scientific_outfit"
@@ -787,7 +787,7 @@ function get_npc_current_visual_level(id)
                 sect = "killer_outfit"
             end
             if vis == "stalker_ki_head_1" then
-                sect = "outfit_killer_m1"
+                sect = "killer_outfit"
             end
             if vis == "stalker_ki_antigas" then
                 sect = "killer_gaz_outfit_m1"
@@ -877,7 +877,7 @@ function get_npc_current_visual_level(id)
                 sect = "novice_outfit"
             end
             if vis == "stalker_novice" then
-                sect = "outfit_novice_m1"
+                sect = "outfit_novice"
             end
             if vis == "green_stalker_3" then
                 sect = "novice_outfit_rain_1"
@@ -974,7 +974,7 @@ function get_npc_current_visual_level(id)
                 sect = "svoboda_exoskeleton"
             end
             if vis == "stalker_sv_leader" then
-                sect = "outfit_svoboda_m1"
+                sect = "svoboda_gaz_outfit_m1"
             end
             -- nano
             if vis == "stalker_nano_suit" then

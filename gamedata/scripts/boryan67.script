@@ -172,10 +172,8 @@ end
 -- Отработка жажды у ГГ
 --------------------------------------------------------------------
 local tbl_food = {
-    ["bread_a"] = "new\\inv_baton",
     ["bread"] = "new\\inv_baton",
     ["kolbasa"] = "new\\inv_baton",
-    ["kolbasa_a"] = "new\\inv_baton",
     ["conserva"] = "new\\inv_conserva",
     ["oreh"] = "new\\inv_baton",
     ["oliv"] = "new\\inv_conserva",
@@ -204,7 +202,6 @@ local tbl_drink = {
     ["mineral"] = "new\\drink_voda",
     ["chernigov"] = "new\\drink_pivo",
     ["old_melnik"] = "new\\drink_pivo",
-    ["vodka_a"] = "new\\drink_vodka",
     ["vodka"] = "new\\drink_vodka",
     ["vodka1"] = "new\\drink_vodka",
     ["energy_drink"] = "new\\drink_energy",

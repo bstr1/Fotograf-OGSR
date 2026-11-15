@@ -1564,23 +1564,8 @@ ammo_section["ammo_12x76_dart"]   = true
 ammo_section["ammo_12x76_zhekan"] = true
 
 quest_section = {}
-quest_section["gunslinger_flash"] = true
-quest_section["af_blood_tutorial"]  = true
-quest_section["esc_wounded_flash"]  = true
-quest_section["quest_case_02"]    = true
-quest_section["dar_document1"]    = true
-quest_section["dar_document2"]    = true
-quest_section["dar_document3"]    = true
-quest_section["dar_document4"]    = true
-quest_section["dar_document5"]    = true
-quest_section["kruglov_flash"]    = true
-quest_section["lab_x16_documents"]  = true
-quest_section["good_psy_helmet"]  = true
-quest_section["bad_psy_helmet"]   = true
 quest_section["decoder"]      = true
 quest_section["dynamite"]     = true
-quest_section["quest_case_01"]    = true
-quest_section["bar_ecolog_flash"] = true
 
 -- Выдаём предмет с выводом новости (без новости используем got_item)
 function got(s, n)

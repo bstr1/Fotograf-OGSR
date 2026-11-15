@@ -208,7 +208,7 @@ function drop_manager:create_release_item()
 			if vis == "stalker_bandit_4" or vis == "stalker_bandit_2" then sect = "bandit_outfit_red" end
 			if vis == "stalker_bandit_5" or vis == "stalker_bandit_9" then sect = "bandit_outfit_blue" end
 			if vis == "stalker_bandit_1" then sect = "bandit_outfit_red1" end
-			if vis == "stalker_bandit_drunk" then sect = "outfit_bandit_m1" end
+			if vis == "stalker_bandit_drunk" then sect = "bandit_outfit" end
 			if vis == "stalker_bandit_8" then sect = "bandit_gaz_outfit_m1" end
 			if vis == "stalker_bandit_veteran" then sect = "bandit_veteran_outfit" end
 			if vis == "stalker_bandit_borov" or vis == "stalker_bandit_master" then sect = "bandit_master_outfit" end
@@ -216,7 +216,7 @@ function drop_manager:create_release_item()
 	-- dolg
 			if string.find(vis,"stalker_do") then sect = "dolg_outfit" end
 			if vis == "stalker_do_antigas" then sect = "dolg_gaz_outfit_m1" end
-			if vis == "stalker_do_komandir" then sect = "outfit_dolg_m1" end
+			if vis == "stalker_do_komandir" then sect = "dolg_outfit" end
 			if vis == "stalker_do_nauchniy" then sect = "dolg_scientific_outfit" end
 			if vis == "stalker_do_exoskeleton" then sect = "dolg_black_exoskeleton" end
 	-- nebo
@@ -234,7 +234,7 @@ function drop_manager:create_release_item()
 			if vis == "izgoy" then sect = "bandit_veteran_outfit" end
 	-- killer
 			if string.find(vis,"stalker_ki") then sect = "killer_outfit" end
-			if vis == "stalker_ki_head_1" then sect = "outfit_killer_m1" end
+			if vis == "stalker_ki_head_1" then sect = "killer_outfit" end
 			if vis == "stalker_ki_antigas" then sect = "killer_gaz_outfit_m1" end
 			if vis == "stalker_ki_nauchniy" then sect = "merc_scientific_outfit" end
 			if vis == "stalker_ki_exoskeleton" then sect = "killer_blue_exoskeleton" end
@@ -266,7 +266,7 @@ function drop_manager:create_release_item()
 	-- novice
 			if vis == "green_stalker_1" then sect = "neytral_novice_outfit_m1" end
 			if vis == "green_stalker_2" then sect = "novice_outfit" end
-			if vis == "stalker_novice" then sect = "outfit_novice_m1" end
+			if vis == "stalker_novice" then sect = "outfit_novice" end
 			if vis == "green_stalker_3" then sect = "novice_outfit_rain_1" end
 			if vis == "green_stalker_4" then sect = "neytral_novice_outfit_cam" end
 			if vis == "green_stalker_5" then sect = "novice_outfit_new_2" end
@@ -300,12 +300,12 @@ function drop_manager:create_release_item()
 			if vis == "stalker_sv_hood_9" then sect = "svoboda_heavy_gaz_outfit_m1" end
 			if vis == "stalker_sv_nauchniy" then sect = "freedom_scientific_outfit" end
 			if vis == "stalker_sv_exoskeleton" then sect = "svoboda_exoskeleton" end
-			if vis == "stalker_sv_leader" then sect = "outfit_svoboda_m1" end
+			if vis == "stalker_sv_leader" then sect = "svoboda_gaz_outfit_m1" end
 	-- nano
 			if vis == "stalker_nano_suit" then sect = "nano_outfit" end
 		  end
 			if sect~=nil then 
-				if sect == "bandit_outfit" or sect == "outfit_bandit_m1" or sect == "bandit_outfit_blue" or sect == "bandit_outfit_red1" or sect == "bandit_outfit_red" or sect == "bandit_gaz_outfit_m1" or sect == "bandit_veteran_outfit" or sect == "bandit_master_outfit" or sect == "novice_outfit" or sect == "novice_outfit_rain_1" or sect == "novice_outfit_rain_2" or sect == "neytral_novice_outfit_m1" or sect == "neytral_novice_gaz_outfit_m1" or sect == "outfit_novice_m1" or sect == "neytral_novice_outfit_cam" or sect == "novice_outfit_new_1" or sect == "novice_outfit_new_2" or sect == "neytral_novice_outfit_cam_1" or sect == "neytral_novice_outfit_cam_2" or sect == "neytral_novice_outfit_cam_3" or sect == "neytral_novice_outfit_new" then
+				if sect == "bandit_outfit" or sect == "bandit_outfit_blue" or sect == "bandit_outfit_red1" or sect == "bandit_outfit_red" or sect == "bandit_gaz_outfit_m1" or sect == "bandit_veteran_outfit" or sect == "bandit_master_outfit" or sect == "novice_outfit" or sect == "novice_outfit_rain_1" or sect == "novice_outfit_rain_2" or sect == "neytral_novice_outfit_m1" or sect == "neytral_novice_gaz_outfit_m1" or sect == "neytral_novice_outfit_cam" or sect == "novice_outfit_new_1" or sect == "novice_outfit_new_2" or sect == "neytral_novice_outfit_cam_1" or sect == "neytral_novice_outfit_cam_2" or sect == "neytral_novice_outfit_cam_3" or sect == "neytral_novice_outfit_new" then
 				otf_1 = create_items(self.npc, sect, 1, 650)
 					if otf_1~= nil then
 					amk.start_timer("outfit_cond_1",1,otf_1.id) end	
@@ -315,7 +315,7 @@ function drop_manager:create_release_item()
 					if otf_2~= nil then
 					amk.start_timer("outfit_cond_2",1,otf_2.id) end		
 					
-				elseif sect == "dolg_outfit" or sect == "dolg_gaz_outfit_m1" or sect == "ecolog_outfit" or sect == "outfit_dolg_m1" or sect == "outfit_killer_m1" or sect == "killer_gaz_outfit_m1" or sect == "specops_outfit" or sect == "outfit_specnaz_m1" or sect == "monolit_outfit" or sect == "monolit_gaz_outfit_m1" or sect == "stalker_guard_outfit" or sect == "outfit_stalker_m1" or sect == "nebo_heavy_outfit" or sect == "outfit_stalker_m2" or sect == "neytral_gaz_outfit_m1" or sect == "neytral_gaz_outfit_m2" or sect == "svoboda_heavy_outfit" or sect == "svoboda_heavy_gaz_outfit_m1" or sect == "outfit_svoboda_m1" then
+				elseif sect == "dolg_outfit" or sect == "dolg_gaz_outfit_m1" or sect == "ecolog_outfit" or sect == "killer_gaz_outfit_m1" or sect == "specops_outfit" or sect == "outfit_specnaz_m1" or sect == "monolit_outfit" or sect == "monolit_gaz_outfit_m1" or sect == "stalker_guard_outfit" or sect == "outfit_stalker_m1" or sect == "nebo_heavy_outfit" or sect == "outfit_stalker_m2" or sect == "neytral_gaz_outfit_m1" or sect == "neytral_gaz_outfit_m2" or sect == "svoboda_heavy_outfit" or sect == "svoboda_heavy_gaz_outfit_m1" then
 				otf_3 = create_items(self.npc, sect, 1, 450)
 					if otf_3~= nil then
 					amk.start_timer("outfit_cond_3",1,otf_3.id) end		

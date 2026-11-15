@@ -1,327 +1,327 @@
-<string id="detector_elite_bad">
-  <text>Универсальный детектор, сломанный.</text>
-</string>
-<string id="detector_elite_bad_desc">
-  <text>Пожалуй самый лучший детектор в зоне, правда его еще надо отремонтировать.</text>
-</string>
-<string id="shceme_detector_name">
-  <text>Схема настройки детектора.</text>
-</string>
-<string id="shceme_detector_desc">
-  <text>Схема настройки детектора, При помощи этой схемы можно настроить качественный детектор аномалий, чтобы он идентифицировал практически любую аномалию зоны .</text>
-</string>
-<string id="device_pda1">
+<string id="device_pda">
   <text>ПДА</text>
 </string>
-<string id="enc_equipment_device_pda1">
+
+<string id="enc_equipment_device_pda">
   <text>Индивидуальный ПДА сталкера. Хранилище личной информации и необходимых для выживания данных.</text>
 </string>
-<string id="detec_flash_name">
-  <text>Обычная флешка, какие часто встречаются в зоне.</text>
-</string>
-<string id="detec_flash_desc">
-  <text>Флешка Монаха.</text>
-</string>
+
 <string id="st_detector_sak">
   <text>Универсальный детектор аномалий</text>
 </string>
+
 <string id="enc_equipment_devic_detect_sak">
   <text>Детектор, последняя разработка в области механизации исследований паранормальных явлений, позволяет обнаруживать и идентифицировать практически любую аномалию зоны.</text>
 </string>
-<string id="shceme_document_military_name">
-  <text>Схема подземных коммуникаций милитари.</text>
-</string>
-<string id="shceme_document_military_desc">
-  <text>Схема подземных коммуникаций милитари. Чертежи и планы подземных катакомб.</text>
-</string>
-<string id="freeman_case_name">
-  <text>Металлический кейс Фримена.</text>
-</string>
-<string id="freeman_case_desc">
-  <text>Металлический кейс Фримена. Обычный кейс, в таких обычно перевозят деньги и документы.</text>
-</string>
-<string id="resiver_name">
-  <text>Армейская радиостанция</text>
-</string>
-<string id="resiver_desc">
-  <text>Обычная армейская УКВ радиостанция, но в условиях активной ЗОНЫ, ее устарелая ламповая конструкция оказалась наиболее устойчивой к различного рода излучениям.</text>
-</string>
-<string id="item_notebook_new_desc">
-  <text>Ноутбук с данными. В нем находится информация о подземных коммуникациях Саркофага.</text>
-</string>
-<string id="item_notebook_new_name">
-  <text>Ноутбук с данными.</text>
-</string>
-<string id="monolit_journal_desc">
-  <text>Журнал с записями из Саркофага. Подробные записи "поведения" монолита за несколько лет. Много, много цифр и букв. Есть фотографии.</text>
-</string>
-<string id="monolit_journal_name">
-  <text>Журнал с записями из Саркофага.</text>
-</string>
+
 <string id="sweets_desc">
   <text>Небольшая железная упаковка. Внутри монпансье.</text>
 </string>
+
 <string id="sweets">
   <text>Монпансье</text>
 </string>
-<string id="plan_labx16_document_desc">
-  <text>План коммуникаций лаборатории х-16. Среди прочего отмечен тайный ход в Саркофаг.</text>
-</string>
-<string id="plan_labx16_document_name">
-  <text>План комуникаций лаборатории х-16.</text>
-</string>
-
-<string id="box_patron_name">
-  <text>Ящик с патронами</text>
-</string>
-<string id="box_patron_desc">
-  <text>Тяжелый деревянный ящик. Внутри цинки с патронами.</text>
-</string>
-
 
 <string id="levsha_decoder_desc">
   <text>Нечто вроде мощной электронной отмычки. Похоже, что она создавалась с целью взломать какой-то специфический электронный замок.</text>
 </string>
+
 <string id="levsha_decoder_name">
   <text>Декодер Левши.</text>
 </string>
-<string id="dan_document_name">
-  <text>Документы для Дэна.</text>
-</string>
-<string id="dan_document_desc">
-  <text>Документы для Дэна. Запечатанная папка. От Свиблова</text>
-</string>
-<string id="inventory_new_box_name">
-  <text>Металлический ящик с вещами Сидора.</text>
-</string>
-<string id="inventory_new_box_desc">
-  <text>Металлический ящик с вещами Сидора. Тяжелый, на замке.</text>
-</string>
+
 <string id="actor">
   <text>Одиночка</text>
 </string>
+
 <string id="actor_dolg">
   <text>"Долг"</text>
 </string>
+
 <string id="actor_freedom">
   <text>Дезертир</text>
 </string>
+
 <string id="arena_enemy">
   <text>Наёмник</text>
 </string>
+
 <string id="bad">
   <text>плохая</text>
 </string>
+
 <string id="bratok">
   <text>Браток</text>
 </string>
+
 <string id="nebo">
   <text>"Чистое Небо"</text>
 </string>
+
 <string id="bandit">
   <text>Бандит</text>
 </string>
+
 <string id="dolg">
   <text>"Долг"</text>
 </string>
+
 <string id="ecolog">
   <text>Учёный</text>
 </string>
+
 <string id="enemy">
   <text>Враг</text>
 </string>
+
 <string id="excellent">
   <text>отличная</text>
 </string>
-<string id="exo_outfit_name_m1">
-  <text>Экзоскелет ПНБ-4УЗ</text>
-</string>
+
 <string id="experienced">
   <text>опытный</text>
 </string>
+
 <string id="Found_PDA">
   <text>Данные на КПК</text>
 </string>
+
 <string id="freedom">
   <text>Дезертир</text>
 </string>
+
 <string id="friendly">
   <text>друг</text>
 </string>
+
 <string id="good">
   <text>хорошая</text>
 </string>
+
 <string id="indifferent">
   <text>нейтрал</text>
 </string>
+
 <string id="killer">
   <text>Наёмник</text>
 </string>
+
 <string id="l05_bar">
   <text>Бар</text>
 </string>
+
 <string id="l11_pripyat">
   <text>Припять</text>
 </string>
+
 <string id="master">
   <text>Мастер</text>
 </string>
+
 <string id="military">
   <text>Военный</text>
 </string>
+
 <string id="monolith">
   <text>"Наблюдатели"</text>
 </string>
+
 <string id="neutral">
   <text>Нейтрал</text>
 </string>
+
 <string id="novice">
   <text>Новичок</text>
 </string>
+
 <string id="st_no_active_task">
   <text>Нет активного задания</text>
 </string>
+
 <string id="st_time_till_surge">
   <text>Время до Выброса</text>
 </string>
+
 <string id="stalker">
   <text>Одиночка</text>
 </string>
+
 <string id="terrible">
   <text>Ужасная</text>
 </string>
+
 <string id="trader">
   <text>Торговец</text>
 </string>
+
 <string id="ui_st_community">
   <text>Группа</text>
 </string>
+
 <string id="ui_st_price">
   <text>Цена</text>
 </string>
+
 <string id="ui_st_rank">
   <text>Ранг</text>
 </string>
+
 <string id="ui_st_relation">
   <text>Отношение</text>
 </string>
+
 <string id="ui_st_reputation">
   <text>Репутация</text>
 </string>
+
 <string id="very_bad">
   <text>очень плохая</text>
 </string>
+
 <string id="very_good">
   <text>Очень хорошая</text>
 </string>
+
 <string id="veteran">
   <text>Ветеран</text>
 </string>
+
 <string id="zombied">
   <text>Зомби</text>
 </string>
+
 <string id="Btn_Cancel">
   <text>Отменить</text>
 </string>
+
 <string id="Btn_No">
   <text>Нет</text>
 </string>
+
 <string id="Btn_OK">
   <text>OK</text>
 </string>
+
 <string id="Btn_Yes">
   <text>Да</text>
 </string>
+
 <string id="global_map">
   <text>Карта Зоны</text>
 </string>
+
 <string id="st_autosave">
   <text>Автосохранение...</text>
 </string>
+
 <string id="st_game_over">
   <text>Игра окончена</text>
 </string>
+
 <string id="st_item_used">
   <text>Использовано</text>
 </string>
+
 <string id="st_not_enough_money">
   <text>Недостаточно денег</text>
 </string>
+
 <string id="st_not_enough_money_npc">
   <text>У НПС недостаточно денег</text>
 </string>
+
 <string id="ui_st_opponent_items">
   <text>Рюкзак</text>
 </string>
+
 <string id="st_search_treasure">
   <text>Обыскать тайник ($$ACTION_USE$$)</text>
 </string>
+
 <string id="inventory_item_use">
   <text>Поднять предмет ($$ACTION_USE$$)</text>
 </string>
-<string id="ui_mm_check_updates">
-  <text>Обновления</text>
-</string>
+
 <string id="ui_mm_alternative">
   <text>Альтернатива</text>
 </string>
+
 <string id="ui_inv_health">
   <text>Здоровье</text>
 </string>
+
 <string id="ui_inv_radiation">
   <text>Радиация</text>
 </string>
+
 <string id="ui_inv_satiety">
   <text>Сытость</text>
 </string>
+
 <string id="ui_inv_power">
   <text>Выносливость</text>
 </string>
+
 <string id="ui_inv_bleeding">
   <text>Кровотечение</text>
 </string>
+
 <string id="st_knife">
   <text>Нож</text>
 </string>
+
 <string id="l03u_agr_underground">
   <text>Подземелье НИИ "Агропром"</text>
 </string>
+
 <string id="l04u_labx18">
   <text>Лаборатория X-18</text>
 </string>
+
 <string id="l08u_brainlab">
   <text>Лаборатория X-16</text>
 </string>
+
 <string id="l10u_bunker">
   <text>Лаборатория X-10</text>
 </string>
+
 <string id="l12u_sarcofag">
   <text>Саркофаг</text>
 </string>
+
 <string id="dead_city">
   <text>Мёртвый Город</text>
 </string>
+
 <string id="aver">
   <text>Лес</text>
 </string>
+
 <string id="swamp">
   <text>Болота</text>
 </string>
+
 <string id="predbannik">
   <text>Миротворческий Корпус</text>
 </string>
+
 <string id="dyshlo">
   <text>Червоне Дышло</text>
 </string>
+
 <string id="hiding_road">
   <text>Испытательный полигон</text>
 </string>
+
 <string id="promzone">
   <text>Промзона</text>
 </string>
+
 <string id="av_peshera">
   <text>Пещера</text>
 </string>
+
 <string id="deadcity">
   <text>Мёртвый Город</text>
 </string>
@@ -329,6 +329,7 @@
 <string id="item_transmutator">
   <text>Трансмутатор</text>
 </string>
+
 <string id="item_transmutator_desc">
   <text>Переносной лабораторный трансмутатор. Работает только внутри пси-зон трансмутации. Верхняя линейка — выбранные компоненты, средняя — инвентарь, нижняя — изученные рецепты. Клик по рецепту автоматически выставляет компоненты. Кнопка "Запуск" начинает варку.</text>
 </string>
@@ -336,111 +337,146 @@
 <string id="ui_inv_alcohol">
   <text>Опьянение</text>
 </string>
+
 <string id="ui_inv_psy_health">
   <text>Пси-здоровье</text>
 </string>
+
 <string id="descr_ammo_weapon">
   <text>Боеприпасы</text>
 </string>
+
 <string id="descr_condition">
   <text>Состояние</text>
 </string>
+
 <string id="descr_cost">
   <text>Цена</text>
 </string>
+
 <string id="descr_damage">
   <text>Убойность оружия</text>
 </string>
+
 <string id="descr_damage_ammo">
   <text>Убойность патронов</text>
 </string>
+
 <string id="descr_distance">
   <text>Дальность</text>
 </string>
+
 <string id="descr_jump">
   <text>Высота прыжка</text>
 </string>
+
 <string id="descr_kg">
   <text>кг</text>
 </string>
+
 <string id="descr_knife_distance">
   <text>Дистанция удара</text>
 </string>
+
 <string id="descr_knife_power">
   <text>Сила удара (наносимый урон)</text>
 </string>
+
 <string id="descr_mag_size">
   <text>Вместимость</text>
 </string>
+
 <string id="descr_meters">
   <text>Метров</text>
 </string>
+
 <string id="descr_pg">
   <text>Подствольный гранатомет</text>
 </string>
+
 <string id="descr_radius">
   <text>Опасный радиус</text>
 </string>
+
 <string id="descr_rate">
   <text>Скорострельность</text>
-  <string id="descr_resource">
-    <text>Ресурс</text>
-  </string>
+<string id="descr_resource">
+  <text>Ресурс</text>
 </string>
+</string>
+
 <string id="descr_rub">
   <text>Рублей</text>
 </string>
+
 <string id="descr_scope">
   <text>Прицел</text>
 </string>
+
 <string id="descr_scopes">
   <text>Прицелы</text>
 </string>
+
 <string id="descr_seconds">
   <text>Секунд</text>
 </string>
+
 <string id="descr_silencer">
   <text>Глушитель</text>
 </string>
+
 <string id="descr_speed">
   <text>в/мин</text>
 </string>
+
 <string id="descr_sprint_speed">
   <text>Скорость бега</text>
 </string>
+
 <string id="descr_time">
   <text>Время действия</text>
 </string>
+
 <string id="descr_weight">
   <text>Вес</text>
 </string>
+
 <string id="descr_weight_power">
   <text>Переносимый вес</text>
 </string>
+
 <string id="ui_inv_outfit_burn_protection">
   <text>Ожог</text>
 </string>
+
 <string id="ui_inv_outfit_chemical_burn_protection">
   <text>Химический ожог</text>
 </string>
+
 <string id="ui_inv_outfit_explosion_protection">
   <text>Взрыв</text>
 </string>
+
 <string id="ui_inv_outfit_fire_wound_protection">
   <text>Пулестойкость</text>
 </string>
+
 <string id="ui_inv_outfit_radiation_protection">
   <text>Радиозащита</text>
 </string>
+
 <string id="ui_inv_outfit_shock_protection">
   <text>Электрозащита</text>
 </string>
+
 <string id="ui_inv_outfit_strike_protection">
   <text>Удар</text>
 </string>
+
 <string id="ui_inv_outfit_telepatic_protection">
   <text>Телепатия</text>
 </string>
+
 <string id="ui_inv_outfit_wound_protection">
   <text>Разрыв</text>
 </string>

@@ -1,0 +1,147 @@
+[inventory_box]
+class                  = O_INVBOX
+cform                  = skeleton
+visual                 = physics\box\expl_dinamit.ogf
+script_binding         = bind_physic_object.init
+radius                 = 1
+
+[m_inventory_box]:inventory_box
+visual                 = equipments\item_rukzak
+
+[taynik] 
+class                           = O_INVBOX
+cform                           = skeleton
+radius                          = 1
+visual                          = physics\box\expl_dinamit.ogf
+script_binding                  = bind_physic_object.init
+
+[taynik_vino1]:taynik
+visual                          = physics\box\box_1a
+custom_data                     = scripts\foto\swamp\taynik_vino1.ltx
+
+[taynik_vino2]:taynik
+visual                          = physics\box\box_1b
+custom_data                     = scripts\foto\swamp\taynik_vino2.ltx
+
+[taynik_vino3]:taynik
+visual                          = physics\box\box_1c
+custom_data                     = scripts\foto\swamp\taynik_vino3.ltx
+
+[aground_box]:taynik
+visual                          = equipments\item_box_01
+
+[taynik_shubin]:taynik
+visual                          = physics\box\box_1a
+custom_data                     = scripts\foto\prip\taynik_shubin.ltx
+
+[taynik_peschera1]:taynik
+visual                          = equipments\item_box_01
+custom_data                     = scripts\foto\peschera\peschera1.ltx
+
+[taynik_peschera2]:taynik
+visual                          = physics\box\box_1c
+custom_data                     = scripts\foto\peschera\peschera2.ltx
+
+[taynik_zapadlo]:taynik
+visual                          = equipments\item_rukzag.ogf
+custom_data                     = scripts\foto\dyshlo\taynik_zapadlo.ltx
+
+
+[c_box]:identity_immunities
+class                              = O_INVBOX
+cform                              = skeleton
+
+radius                             = 1
+visual                             = equipments\item_rukzag.ogf
+script_binding                     = bind_physic_object.init
+
+[ruk1]:c_box
+custom_data                        = scripts\c_box1.ltx
+
+[ruk2]:c_box
+custom_data                        = scripts\c_box2.ltx
+
+[ruk3]:c_box
+custom_data                        = scripts\c_box3.ltx
+
+[ruk4]:c_box
+custom_data                        = scripts\c_box4.ltx
+
+[ruk5]:c_box
+custom_data                        = scripts\c_box5.ltx
+
+[ruk6]:c_box
+custom_data                        = scripts\c_box6.ltx
+
+[ruk7]:c_box
+custom_data                        = scripts\c_box7.ltx
+
+[ruk8]:c_box
+custom_data                        = scripts\c_box8.ltx
+
+[ruk9]:c_box
+custom_data                        = scripts\c_box9.ltx
+
+[ruk10]:c_box
+custom_data                        = scripts\c_box10.ltx
+
+[ruk11]:c_box
+custom_data                        = scripts\c_box11.ltx
+
+[seaman_ruk]:c_box
+custom_data                        = scripts\seaman_ruk.ltx
+
+[prom_zasada]:c_box
+visual                             = equipments\exoskelet_ne_skunk
+
+[str]
+class                  = O_INVBOX
+cform                  = skeleton
+visual                 = physics\box\expl_dinamit.ogf
+script_binding         = bind_physic_object.init
+
+[t1]
+class                  = O_INVBOX
+cform                  = skeleton
+visual                 = physics\box\expl_dinamit.ogf
+script_binding         = bind_physic_object.init
+
+[t2]
+class                  = O_INVBOX
+cform                  = skeleton
+visual                 = physics\box\expl_dinamit.ogf
+script_binding         = bind_physic_object.init
+
+[t3]
+class                  = O_INVBOX
+cform                  = skeleton
+visual                 = physics\box\expl_dinamit.ogf
+script_binding         = bind_physic_object.init
+
+[mini]
+class                  = O_INVBOX
+cform                  = skeleton
+visual                 = physics\box\expl_dinamit.ogf
+script_binding         = bind_physic_object.init
+
+[v_box]:identity_immunities
+class                  = O_INVBOX
+cform                  = skeleton
+radius                 = 1
+visual                 = equipments\item_rukzag.ogf
+script_binding         = bind_physic_object.init
+
+[hlam_ruk]:v_box
+custom_data            = scripts\hlam_ruk.ltx
+
+[zombie_ruk]:v_box
+custom_data            = scripts\zombie_ruk.ltx
+
+[novis_ruk]:v_box
+custom_data            = scripts\novis_ruk.ltx
+
+[prom_ruk]:v_box
+custom_data            = scripts\prom_ruk.ltx
+
+[bar_ruk]:v_box
+custom_data            = scripts\bar_ruk.ltx
