@@ -4571,6 +4571,7 @@ local function distance_check()
 end
 
 function attach(sm)
+    sm:subscribe({signal = "on_first_update",   fun = on_first_update})
     sm:subscribe({signal = "on_update",         fun = distance_check})
     sm:subscribe({signal = "on_take",           fun = on_take})
 end
