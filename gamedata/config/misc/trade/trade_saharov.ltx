@@ -1,0 +1,8 @@
+[trader]
+buy_condition                            = saharov_generic_buy
+sell_condition                           = saharov_start_sell
+buy_supplies = {+sbor_recepts_og_done +sbor_recepts_tn_done} saharov_suppl_og, {-sbor_recepts_og_done +sbor_recepts_tn_done} saharov_suppl_tn, {-sbor_recepts_tn_done +sbor_recepts_ks_done} saharov_suppl_ks, {-sbor_recepts_ks_done} saharov_suppl_start
+
+#include "saharov\saharov_buy.ltx"
+#include "saharov\saharov_supl.ltx"
+#include "saharov\saharov_trade.ltx"

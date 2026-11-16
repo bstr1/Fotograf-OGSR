@@ -1,0 +1,8 @@
+[trader]
+buy_condition                            = misha_generic_buy
+sell_condition                           = misha_start_sell, {+radio_end} misha_end_sell
+buy_supplies                             = misha_supplies_start, {+radio_end} misha_supplies_end
+
+#include "misha\misha_buy.ltx"
+#include "misha\misha_supl.ltx"
+#include "misha\misha_trade.ltx"
