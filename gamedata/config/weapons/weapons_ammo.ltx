@@ -5,14 +5,15 @@ explosive                                = off
 tracer                                   = off
 tracer_color_ID                          = 0
 keep_visual                              = true
-
+impair									 = 1
+buck_shot                                = 1
+wm_size                                  = 0.05
 
 [ammo_knife]:ammo_base
 visual                                   = dynamics\devices\dev_harmonica\dev_harmonica.ogf
 description                              = st_ammo_knife_descr
 
 cost                                     = 20
-
 box_size                                 = 1
 
 inv_name                                 = st_ammo_knife
@@ -29,10 +30,6 @@ k_disp                                   = 1
 k_hit                                    = 1
 k_impulse                                = 1
 k_pierce                                 = 1
-impair                                   = 1
-buck_shot                                = 1
-tracer                                   = off
-wm_size                                  = 0.05
 
 
 [ammo_12x70_buck]:ammo_base
@@ -61,8 +58,6 @@ k_impulse                                = 1.2
 k_pierce                                 = 1
 impair                                   = 1.2
 buck_shot                                = 12
-tracer                                   = off
-wm_size                                  = 0.05
 
 
 [ammo_12x76_zhekan]:ammo_base
@@ -90,10 +85,6 @@ k_hit                                    = 6.5
 k_impulse                                = 1.5
 k_pierce                                 = 1.1
 impair                                   = 1.1
-buck_shot                                = 1
-tracer                                   = off
-wm_size                                  = 0.05
-explosive                                = off 
 
 
 [ammo_12x76_dart]:ammo_12x76_zhekan
@@ -121,10 +112,6 @@ k_hit                                    = 6.7
 k_impulse                                = 1.4
 k_pierce                                 = 2.3
 impair                                   = 1.15
-buck_shot                                = 1
-tracer                                   = on
-wm_size                                  = 0.05
-explosive                                = off
 
 
 [ammo_12x76_zhekan_heli]:ammo_12x76_zhekan
@@ -152,10 +139,7 @@ k_hit                                    = 10
 k_impulse                                = 2
 k_pierce                                 = 2.5
 impair                                   = 1.2
-buck_shot                                = 1
 tracer                                   = on
-wm_size                                  = 0.05
-explosive                                = off
 
 
 [ammo_9x18_fmj]:ammo_base
@@ -182,9 +166,6 @@ k_disp                                   = 1.1
 k_hit                                    = 3.95
 k_impulse                                = 1
 k_pierce                                 = 1
-impair                                   = 1
-buck_shot                                = 1
-tracer                                   = off
 wm_size                                  = 0.0325
 
 
@@ -213,9 +194,6 @@ k_hit                                    = 3.95
 k_impulse                                = 1.5
 k_pierce                                 = 1.3
 impair                                   = 1.03
-buck_shot                                = 1
-tracer                                   = off
-wm_size                                  = 0.05
 
 
 [ammo_7.62x25]:ammo_base
@@ -239,12 +217,9 @@ icon_name                                = 7.62x25_p
 
 k_dist                                   = 1
 k_disp                                   = 1.1
-k_hit                                    = 4.3
+k_hit                                    = 4.2
 k_impulse                                = 1.1
 k_pierce                                 = 2.5
-impair                                   = 1
-buck_shot                                = 1
-tracer                                   = off
 wm_size                                  = 0.04
 
 
@@ -272,9 +247,6 @@ k_disp                                   = 1.1
 k_hit                                    = 4.3
 k_impulse                                = 1.1
 k_pierce                                 = 2.5
-impair                                   = 1
-buck_shot                                = 1
-tracer                                   = off
 wm_size                                  = 0.04
 
 
@@ -302,10 +274,7 @@ k_disp                                   = 1.2
 k_hit                                    = 3.9
 k_impulse                                = 1
 k_pierce                                 = 1
-impair                                   = 1
-buck_shot                                = 1
 wm_size                                  = 0.06
-tracer                                   = off
 
 
 [ammo_9x19_pbp]:ammo_base
@@ -332,10 +301,7 @@ k_disp                                   = 1.1
 k_hit                                    = 4.1
 k_impulse                                = 1
 k_pierce                                 = 1.1
-impair                                   = 1
-buck_shot                                = 1
 wm_size                                  = 0.06
-tracer                                   = off
 
 
 [ammo_11.43x23_fmj]:ammo_base
@@ -362,10 +328,6 @@ k_disp                                   = 1.2
 k_hit                                    = 3.9
 k_impulse                                = 3
 k_pierce                                 = 1
-impair                                   = 1
-buck_shot                                = 1
-tracer                                   = off
-wm_size                                  = 0.05
 
 
 [ammo_11.43x23_hydro]:ammo_base
@@ -392,10 +354,6 @@ k_disp                                   = 1.1
 k_hit                                    = 4.1
 k_impulse                                = 3.5
 k_pierce                                 = 1.3
-impair                                   = 1
-buck_shot                                = 1
-tracer                                   = on
-wm_size                                  = 0.05
 
 
 [ammo_357_hp_mag]:ammo_base
@@ -419,14 +377,11 @@ icon_name                                = 357_hp_mag
 
 k_dist                                   = 1.1
 k_disp                                   = 1.1
-k_hit                                    = 6.5
+k_hit                                    = 7.1
 k_impulse                                = 3.0
 k_pierce                                 = 1.1
-impair                                   = 1
-buck_shot                                = 1
-tracer                                   = off
 wm_size                                  = 0.06
-
+tracer                                   = on
 
 [ammo_357_ap_mag]:ammo_base
 visual                                   = dynamics\weapons\wpn_ammo\ammo_357_jhp.ogf
@@ -449,14 +404,10 @@ icon_name                                = 357_ap_mag
 
 k_dist                                   = 1.2
 k_disp                                   = 1.2
-k_hit                                    = 7.1
+k_hit                                    = 7.5
 k_impulse                                = 3.5
 k_pierce                                 = 1
-impair                                   = 1
-buck_shot                                = 1
-tracer                                   = off
 wm_size                                  = 0.06
-explosive                                = off
 
 
 [ammo_5.45x39_fmj]:ammo_base
@@ -483,11 +434,6 @@ k_disp                                   = 1.2
 k_hit                                    = 3.35
 k_impulse                                = 1
 k_pierce                                 = 2
-impair                                   = 1
-buck_shot                                = 1
-wm_size                                  = 0.05
-tracer                                   = off
-explosive                                = off 
 
 
 [ammo_5.45x39_ap]:ammo_base
@@ -511,14 +457,9 @@ icon_name                                = 545ap
 
 k_dist                                   = 1.2
 k_disp                                   = 1
-k_hit                                    = 3.35
+k_hit                                    = 3.4
 k_impulse                                = 1
 k_pierce                                 = 2.5
-impair                                   = 1
-buck_shot                                = 1
-tracer                                   = off
-wm_size                                  = 0.05
-explosive                                = off 
 
 
 [ammo_5.45x39_izomorf]:ammo_base
@@ -541,15 +482,11 @@ inv_grid_y                               = 9
 icon_name                                = 545izo
 
 k_dist                                   = 1.2
-k_disp                                   = 1
-k_hit                                    = 4
-k_impulse                                = 1
+k_disp                                   = 1.2
+k_hit                                    = 5
+k_impulse                                = 1.2
 k_pierce                                 = 2.5
-impair                                   = 1
-buck_shot                                = 1
-tracer                                   = off
-wm_size                                  = 0.05
-explosive                                = off 
+tracer                                   = on
 
 
 [ammo_5.56x45_ss190]:ammo_base
@@ -573,14 +510,9 @@ icon_name                                = 556
 
 k_dist                                   = 1
 k_disp                                   = 1.3
-k_hit                                    = 3.33
+k_hit                                    = 3.4
 k_impulse                                = 1
 k_pierce                                 = 2
-impair                                   = 1
-buck_shot                                = 1
-tracer                                   = on
-wm_size                                  = 0.05
-explosive                                = off
 
 
 [ammo_5.56x45_ap]:ammo_base
@@ -604,14 +536,9 @@ icon_name                                = 556ap
 
 k_dist                                   = 1.2
 k_disp                                   = 1.1
-k_hit                                    = 3.33
+k_hit                                    = 3.5
 k_impulse                                = 0.9
 k_pierce                                 = 2.3
-impair                                   = 1
-buck_shot                                = 1
-tracer                                   = off
-wm_size                                  = 0.05
-explosive                                = off 
 
 
 [ammo_5.7x28_fmj]:ammo_base
@@ -638,10 +565,6 @@ k_disp                                   = 1.3
 k_hit                                    = 3.2
 k_impulse                                = 1
 k_pierce                                 = 1
-impair                                   = 1
-buck_shot                                = 1
-tracer                                   = off
-wm_size                                  = 0.05
 
 
 [ammo_5.7x28_ap]:ammo_base
@@ -665,13 +588,9 @@ icon_name                                = 5_728bp
 
 k_dist                                   = 1
 k_disp                                   = 1.3
-k_hit                                    = 3.6
+k_hit                                    = 3.4
 k_impulse                                = 1
 k_pierce                                 = 1
-impair                                   = 1
-buck_shot                                = 1
-tracer                                   = on
-wm_size                                  = 0.05
 
 
 [ammo_9x39_pab9]:ammo_base
@@ -698,11 +617,6 @@ k_disp                                   = 2
 k_hit                                    = 6.8
 k_impulse                                = 1
 k_pierce                                 = 2
-impair                                   = 1.05
-buck_shot                                = 1
-tracer                                   = on
-wm_size                                  = 0.05
-explosive                                = off
 
 
 [ammo_9x39_ap]:ammo_base
@@ -729,9 +643,6 @@ k_disp                                   = 1.1
 k_hit                                    = 7
 k_impulse                                = 1
 k_pierce                                 = 4
-impair                                   = 1
-buck_shot                                = 1
-tracer                                   = off
 wm_size                                  = 0.04
 
 
@@ -759,9 +670,6 @@ k_disp                                   = 0.8
 k_hit                                    = 6.8
 k_impulse                                = 1
 k_pierce                                 = 3.5
-impair                                   = 1
-buck_shot                                = 1
-tracer                                   = on
 wm_size                                  = 0.04
 
 
@@ -789,12 +697,8 @@ k_disp                                   = 0.8
 k_hit                                    = 7.5
 k_impulse                                = 1
 k_pierce                                 = 3.5
-impair                                   = 1
-buck_shot                                = 1
 tracer                                   = on
 wm_size                                  = 0.04
-
-explosive                                = off
 
 
 [ammo_12.7x108]:ammo_base
@@ -818,15 +722,11 @@ icon_name                                = 127108
 
 k_dist                                   = 1
 k_disp                                   = 1
-k_hit                                    = 12.6
+k_hit                                    = 9
 k_impulse                                = 1
 k_pierce                                 = 1.5
-impair                                   = 1
-buck_shot                                = 1
 tracer                                   = on
 wm_size                                  = 0.04
-
-explosive                                = off
 
 
 [ammo_7.62x39_fmj]:ammo_base
@@ -853,10 +753,6 @@ k_disp                                   = 1.1
 k_hit                                    = 3.35
 k_impulse                                = 1.1
 k_pierce                                 = 2
-impair                                   = 1
-buck_shot                                = 1
-tracer                                   = off
-wm_size                                  = 0.05
 
 
 [ammo_7.62x39_ap]:ammo_base
@@ -883,10 +779,6 @@ k_disp                                   = 1
 k_hit                                    = 3.35
 k_impulse                                = 1
 k_pierce                                 = 2.5 
-impair                                   = 1
-buck_shot                                = 1
-tracer                                   = on
-wm_size                                  = 0.05
 
 
 [ammo_7.62x39_k]:ammo_base
@@ -910,13 +802,9 @@ icon_name                                = 762izo
 
 k_dist                                   = 1
 k_disp                                   = 1
-k_hit                                    = 5.35
+k_hit                                    = 3.8
 k_impulse                                = 1
 k_pierce                                 = 1.5 
-impair                                   = 1
-buck_shot                                = 1
-tracer                                   = on
-wm_size                                  = 0.05
 
 
 [ammo_7.62x51_fmj]:ammo_base
@@ -943,11 +831,6 @@ k_disp                                   = 1.1
 k_hit                                    = 7.1
 k_impulse                                = 1.2
 k_pierce                                 = 2
-impair                                   = 1
-buck_shot                                = 1
-tracer                                   = on
-wm_size                                  = 0.05
-explosive                                = off
 
 
 [ammo_7.62x51_ap]:ammo_base
@@ -971,14 +854,9 @@ icon_name                                = 76251ap
 
 k_dist                                   = 1.3
 k_disp                                   = 1 
-k_hit                                    = 7.1
+k_hit                                    = 7.2
 k_impulse                                = 1.1
 k_pierce                                 = 3
-impair                                   = 1.03
-buck_shot                                = 1
-tracer                                   = on
-wm_size                                  = 0.05
-explosive                                = off
 
 
 [ammo_7.62x54_7h1]:ammo_base
@@ -1002,14 +880,9 @@ icon_name                                = 76254_h1
 
 k_dist                                   = 1.5
 k_disp                                   = 1.0
-k_hit                                    = 7.1
+k_hit                                    = 7.2
 k_impulse                                = 1
 k_pierce                                 = 2.8
-impair                                   = 1
-buck_shot                                = 1
-tracer                                   = off
-wm_size                                  = 0.05
-explosive                                = off
 
 
 [ammo_7.62x54_7h14]:ammo_base
@@ -1033,14 +906,9 @@ icon_name                                = 76254_h14
 
 k_dist                                   = 1.5
 k_disp                                   = 0.9
-k_hit                                    = 7.2
+k_hit                                    = 7.3
 k_impulse                                = 0.8
 k_pierce                                 = 3.2
-impair                                   = 1
-buck_shot                                = 1
-tracer                                   = off
-wm_size                                  = 0.05
-explosive                                = off
 
 
 [ammo_7.62x54_ap]:ammo_base
@@ -1064,14 +932,9 @@ icon_name                                = 76254_ap
 
 k_dist                                   = 1.5
 k_disp                                   = 1.05
-k_hit                                    = 7.3
+k_hit                                    = 7.4
 k_impulse                                = 1
 k_pierce                                 = 3.5
-impair                                   = 1
-buck_shot                                = 1
-tracer                                   = off
-wm_size                                  = 0.05
-explosive                                = off
 
 
 [ammo_7.62x54_izomorf]:ammo_7.62x54_7h14
@@ -1098,12 +961,7 @@ k_disp                                   = 1
 k_hit                                    = 9.5
 k_impulse                                = 1
 k_pierce                                 = 1.5
-impair                                   = 1
-buck_shot                                = 1
-tracer                                   = off
-wm_size                                  = 0.05
-explosive                                = off
-
+tracer                                   = on
 
 [ammo_gauss]:ammo_base
 visual                                   = dynamics\weapons\wpn_ammo\ammo_gauss.ogf
@@ -1126,14 +984,11 @@ icon_name                                = ammo_gauss
 
 k_dist                                   = 1.5
 k_disp                                   = 1
-k_hit                                    = 8.3
+k_hit                                    = 10
 k_impulse                                = 0.3
 k_pierce                                 = 25
 impair                                   = 0.3
-buck_shot                                = 1
-tracer                                   = off
 wm_size                                  = 0.02
-explosive                                = off
 
 
 [ammo_7.62x54r]:ammo_base
@@ -1157,12 +1012,10 @@ icon_name                                = 762x54r
 
 k_dist                                   = 1
 k_disp                                   = 1.1
-k_hit                                    = 6.5
+k_hit                                    = 6.6
 k_impulse                                = 1
 k_pierce                                 = 3.2
 impair                                   = 1.05
-buck_shot                                = 1
-wm_size                                  = 0.05
 tracer                                   = on
 
 
@@ -1187,14 +1040,9 @@ icon_name                                = flame_1
 
 k_dist                                   = 1
 k_disp                                   = 1
-k_hit                                    = 10
+k_hit                                    = 8
 k_impulse                                = 1
 k_pierce                                 = 1.5
-impair                                   = 1
-buck_shot                                = 1
-tracer                                   = off
-wm_size                                  = 0.05
-explosive                                = off
 
 
 [ammo_og-7b]:ammo_base
@@ -1221,7 +1069,7 @@ icon_name                                = ammo_rpg7
 
 k_dist                                   = 1
 k_disp                                   = 1
-k_hit                                    = 1.2
+k_hit                                    = 1.5
 k_impulse                                = 1
 k_pierce                                 = 1.05
 impair                                   = 1.15
@@ -1307,12 +1155,10 @@ icon_name                                = vog25
 
 k_dist                                   = 1
 k_disp                                   = 1
-k_hit                                    = 1
+k_hit                                    = 8
 k_impulse                                = 1
 k_pierce                                 = 1.25
-impair                                   = 1
 buck_shot                                = 0
-tracer                                   = off
 wm_size                                  = 0.1
 
 fake_grenade_name                        = wpn_fake_missile
@@ -1345,12 +1191,10 @@ icon_name                                = vog25p
 
 k_dist                                   = 1.3
 k_disp                                   = 1
-k_hit                                    = 1
+k_hit                                    = 9
 k_impulse                                = 1
 k_pierce                                 = 1.25
-impair                                   = 1
 buck_shot                                = 0
-tracer                                   = off
 wm_size                                  = 0.1
 
 jump_height                              = 1.5
@@ -1434,12 +1278,10 @@ icon_name                                = ammo209
 
 k_dist                                   = 1
 k_disp                                   = 1
-k_hit                                    = 1
+k_hit                                    = 9.3
 k_impulse                                = 1
 k_pierce                                 = 1.25
-impair                                   = 1
 buck_shot                                = 0
-tracer                                   = off
 wm_size                                  = 0.1
 
 fake_grenade_name                        = wpn_fake_missile2
@@ -1498,7 +1340,7 @@ fragment_speed                           = 2000
 explode_duration                         = 5
 
 ;звуки
-snd_explode                              = wpn_gl_explode
+snd_explode                              = weapons\explo\grenade_vog25_boom
 
 ;wallmarks
 wallmark_section                         = explosion_marks
@@ -1568,7 +1410,7 @@ wallmark_section                         = explosion_marks
 explode_duration                         = 5
 
 ;звуки
-snd_explode                              = wpn_gl_explode
+snd_explode								 = anomaly\bfuzz_blowout
 
 ;свойства которые читаются, но не используются
 inv_name                                 = ammo-vog-25p
@@ -1641,7 +1483,7 @@ wm_size                                  = 0.1 ;0.05
 explode_duration                         = 5
 
 ;звуки
-snd_explode                              = wpn_gl_explode
+snd_explode 							 = weapons\explo\grenade_m406_boom
 
 ;свойства которые читаются, но не используются
 inv_name                                 = ammo-m209
