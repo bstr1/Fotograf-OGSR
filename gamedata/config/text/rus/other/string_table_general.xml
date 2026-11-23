@@ -258,6 +258,10 @@
   <text>Сытость</text>
 </string>
 
+<string id="ui_inv_thirst">
+  <text>Жажда</text>
+</string>
+
 <string id="ui_inv_power">
   <text>Выносливость</text>
 </string>
@@ -479,4 +483,12 @@
 
 <string id="ui_inv_outfit_wound_protection">
   <text>Разрыв</text>
+</string>
+
+<string id="surge_news_start">
+  <text>Внимание! Приборы фиксируют приближение выброса! Всем немедленно найти укрытие!</text>
+</string>
+
+<string id="surge_news_disconnect">
+  <text>Связь потеряна. ПДА не может подключиться к сети.</text>
 </string>

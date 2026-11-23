@@ -70,6 +70,7 @@ function actor_binder:net_spawn(data)
 
 
     amk.on_game_load(obj)
+    boryan67.set_scan_timer()
 
 
     -- sak_off_corpses.off_corpses()

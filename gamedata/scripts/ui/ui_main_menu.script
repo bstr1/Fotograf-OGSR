@@ -226,8 +226,9 @@ function main_menu:OnKeyboard(dik, keyboard_action)
             get_console():execute("main_menu off")
 
         elseif dik == DIK_keys.DIK_J then -- personal_test
-            chetkiu.spawn_kristals()
+            table_treasure_l.give_all_treasures()
             get_console():execute("main_menu off")			
+
 			
 		end
 

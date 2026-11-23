@@ -1,46 +1,66 @@
-local radius = 100 --радиус круга с центром под ногами ГГ, в котором отключаются аномалии
+local radius = 15
+local radius_sqr = radius * radius
 
--- у телепортов и костров class = Z_MBALD, т.е. is_anomaly() их тоже цепляет,
--- а отключать их не надо
-local excluded_sections = {
-    zone_teleport         = true,
-    zone_teleport_out     = true,
-    zone_teleport_monolith = true,
+local ANOMALY_CLASS_NAMES = {
+    -- статические зоны Z_
+    "zone_acid_fog",
+    "ameba_zone",
+    "zone_bfuzz",
+    "zone_dead",
+    "zone_galantine",
+    "zone_mosquito_bald",
+    "zone_mincer",
+    "nogravity_zone",
+    "zone_radioactive",
+    "zone_rusty_hair",
+    "torrid_zone",
+    -- AMK-аномалии
+    "zone_bfuzz_s",
+    "zone_electra_s",
+    "zone_galant_s",
+    "zone_ice_s",
+    "zone_mbald_s",
+    "zone_mincer_s",
+    "zone_zharka_s",
 }
 
-local function is_excluded(sect)
-    if excluded_sections[sect] then return true end
-    if string.find(sect, "teleport", 1, true) then return true end
-    if string.find(sect, "campfire", 1, true) then return true end
-    if string.find(sect, "kampfire", 1, true) then return true end
-    if string.find(sect, "_tp",      1, true) then return true end -- c_tp1, c_tp1b ...
-    return false
+local anomaly_clsids = {}
+for _, name in ipairs(ANOMALY_CLASS_NAMES) do
+    local id = clsid_table and clsid_table[name]
+    if id then
+        anomaly_clsids[id] = true
+    end
 end
 
-function get_anoms(npc, r)
-    local anoms = {}
-    local pos = npc:position()
-    local r2 = r * r
-    for i = 1, 65534 do
-        local obj = level.object_by_id(i) -- только онлайн-объекты
-        if obj and obj:is_anomaly() and not is_excluded(obj:section()) then
-            if pos:distance_to_sqr(obj:position()) < r2 then
-                anoms[#anoms + 1] = obj
-            end
+local function is_anomaly(obj)
+    return anomaly_clsids[obj:clsid()] == true
+end
+
+local function collect_anomalies(center, radius_sqr)
+    local result = {}
+    local object_by_id = level.object_by_id
+
+    for id = 1, 65534 do
+        local obj = object_by_id(id)
+        if obj and is_anomaly(obj) and center:distance_to_sqr(obj:position()) < radius_sqr then
+            result[#result + 1] = obj
         end
     end
-    return anoms
+
+    return result
 end
 
 function on_item_drop(item)
-    if item:section() ~= "anom_remover" then return end
+    if not item or item:section() ~= "anom_remover" then
+        return
+    end
 
-    local anoms = get_anoms(db.actor, radius)
-    if #anoms == 0 then return end
-    --amk.mylog("anom_remover: disabled "..#anoms.." anomalies")
+    local actor = db.actor
+    if not actor then
+        return
+    end
 
-    for _, obj in ipairs(anoms) do
-        -- pcall: для не-зоны disable_anomaly() может бросить/уронить
-        pcall(function() obj:disable_anomaly() end)
+    for _, obj in ipairs(collect_anomalies(actor:position(), radius_sqr)) do
+        obj:disable_anomaly()
     end
 end

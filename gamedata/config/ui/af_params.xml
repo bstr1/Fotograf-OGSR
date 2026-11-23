@@ -15,6 +15,11 @@
 			<text font="letterica16" x="17" y="0"/>
 		</static_satiety_restore_speed>
 
+		<static_thirst_restore_speed x="0" y="0" width="257" height="20" complex_mode="1">
+			<texture>ui_inv_icon_thirst</texture>
+			<text font="letterica16" x="17" y="0"/>
+		</static_thirst_restore_speed>
+
 		<static_power_restore_speed x="0" y="0" width="257" height="20" complex_mode="1">
 			<texture>ui_inv_icon_power_restore_speed</texture>
 			<text font="letterica16" x="17" y="0"/>

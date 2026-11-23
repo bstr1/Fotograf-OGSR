@@ -25,3 +25,11 @@ function treasure()
     k = list[math.random(table.getn(list))]
     treasure_manager.get_treasure_manager():give_treasure(k)
 end
+
+--Выдача всех тайников
+function give_all_treasures()
+    for i = 1, #list do
+        local treasure_id = list[i]
+        treasure_manager.get_treasure_manager():give_treasure(treasure_id)
+    end
+end

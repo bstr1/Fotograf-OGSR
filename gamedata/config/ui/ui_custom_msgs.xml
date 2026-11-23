@@ -242,17 +242,5 @@
 	<infect_red x="5" y="400" width="50" height="50" complex_mode="1">
 	<texture x="352" y="224" width="64" height="64" r="255" g="0" b="0" a="255">ui\ui_hud</texture>
 	</infect_red>
- 
-	<water_green x="5" y="500" width="50" height="50" complex_mode="1">
-	<texture x="352" y="288" width="64" height="64" r="0" g="255" b="0" a="255">ui\ui_hud</texture>
-	</water_green>
 
-	<water_yellow x="5" y="500" width="50" height="50" complex_mode="1">
-	<texture x="352" y="288" width="64" height="64" r="255" g="255" b="0" a="255">ui\ui_hud</texture>
-	</water_yellow>
-
-	<water_red x="5" y="500" width="50" height="50" complex_mode="1">
-	<texture x="352" y="288" width="64" height="64" r="255" g="0" b="0" a="255">ui\ui_hud</texture>
-	</water_red>
-	
 </header>

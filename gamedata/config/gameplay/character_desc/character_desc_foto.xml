@@ -83,7 +83,7 @@
       wpn_pm \n
       ammo_9x18_fmj \n
       wpn_ak74u \n
-      ammo_5.45x39_fmj = 2 \n
+      ammo_5.45x39_fmj = 1 \n
       device_torch \n
 #include "gameplay\character_drugs.xml" \n
 #include "gameplay\character_food.xml"
@@ -120,7 +120,7 @@
       wpn_pm \n
       ammo_9x18_fmj \n
       wpn_ak74u \n
-      ammo_5.45x39_fmj = 2 \n
+      ammo_5.45x39_fmj = 1 \n
       device_torch \n
 #include "gameplay\character_drugs.xml" \n
 #include "gameplay\character_food.xml"
@@ -158,7 +158,7 @@
       wpn_pm \n
       ammo_9x18_fmj \n
       wpn_ak74u \n
-      ammo_5.45x39_fmj = 2 \n
+      ammo_5.45x39_fmj = 1 \n
       device_torch \n
 #include "gameplay\character_drugs.xml" \n
 #include "gameplay\character_food.xml"
@@ -195,7 +195,7 @@
       wpn_pm \n
       ammo_9x18_fmj \n
       wpn_ak74u \n
-      ammo_5.45x39_fmj = 2 \n
+      ammo_5.45x39_fmj = 1 \n
       device_torch \n
 #include "gameplay\character_drugs.xml" \n
 #include "gameplay\character_food.xml"
@@ -232,7 +232,7 @@
             wpn_walther \n
             ammo_9x19_pbp = 1 \n
             wpn_abakan \n
-            ammo_5.45x39_ap = 2 \n
+            ammo_5.45x39_fmj = 1 \n
             grenade_rgd5 = 1 \n
             device_torch \n
 #include "gameplay\character_drugs.xml" \n
@@ -270,7 +270,7 @@
             wpn_walther \n
             ammo_9x19_pbp = 1 \n
             wpn_abakan \n
-            ammo_5.45x39_ap = 2 \n
+            ammo_5.45x39_fmj = 1 \n
             grenade_rgd5 = 1 \n
             device_torch \n
 #include "gameplay\character_drugs.xml" \n
@@ -305,7 +305,7 @@
             [spawn] \n
             zheton = 1 \n
             wpn_abakan \n
-            ammo_5.45x39_ap = 2 \n
+            ammo_5.45x39_fmj = 1 \n
             device_torch \n
 #include "gameplay\character_food.xml" \n
 #include "gameplay\character_drugs.xml"
@@ -374,7 +374,7 @@
             [spawn] \n
             zheton = 1 \n
             wpn_ak74u \n
-            ammo_5.45x39_fmj = 2 \n
+            ammo_5.45x39_fmj = 1 \n
 #include "gameplay\character_items.xml" \n
 #include "gameplay\character_food.xml"
     </supplies>
@@ -479,7 +479,7 @@
       [spawn] \n
             zheton = 1 \n
             wpn_ak74 \n
-            ammo_5.45x39_fmj = 2 \n
+            ammo_5.45x39_fmj = 1 \n
             grenade_rgd5 = 1 \n
             device_torch \n
 #include "gameplay\character_drugs.xml" \n
@@ -515,7 +515,7 @@
       [spawn] \n
             hand_radio \n
             wpn_ak74 \n
-            ammo_5.45x39_fmj = 2 \n
+            ammo_5.45x39_fmj = 1 \n
             zheton = 1 \n
             device_torch \n
 #include "gameplay\character_drugs.xml" \n
@@ -1298,7 +1298,7 @@
     <supplies>
             [spawn] \n
             wpn_ak74u \n
-            ammo_5.45x39_fmj = 2 \n
+            ammo_5.45x39_fmj = 1 \n
             device_torch \n
 #include "gameplay\character_items.xml" \n
 #include "gameplay\character_drugs.xml" \n
@@ -1367,7 +1367,7 @@
     <supplies>
             [spawn] \n
             wpn_ak74u \n
-            ammo_5.45x39_fmj = 2 \n
+            ammo_5.45x39_fmj = 1 \n
             device_torch \n
 #include "gameplay\character_items.xml" \n
 #include "gameplay\character_drugs.xml" \n
@@ -1436,7 +1436,7 @@
     <supplies>
             [spawn] \n
             wpn_ak74u \n
-            ammo_5.45x39_fmj = 2 \n
+            ammo_5.45x39_fmj = 1 \n
             device_torch \n
 #include "gameplay\character_items.xml" \n
 #include "gameplay\character_drugs.xml" \n
@@ -1572,7 +1572,7 @@
     <supplies>
             [spawn] \n
             wpn_ak74u \n
-            ammo_5.45x39_fmj = 2 \n
+            ammo_5.45x39_fmj = 1 \n
             grenade_f1 = 1 \n
             device_torch \n
 #include "gameplay\character_items.xml" \n
@@ -1855,7 +1855,7 @@
     <supplies>
             [spawn] \n
             wpn_ak74u \n
-            ammo_5.45x39_fmj = 2 \n
+            ammo_5.45x39_fmj = 1 \n
             device_torch \n
 #include "gameplay\character_items.xml" \n
 #include "gameplay\character_drugs.xml" \n
@@ -1925,7 +1925,7 @@
     <supplies>
             [spawn] \n
             wpn_ak74u \n
-            ammo_5.45x39_fmj = 2 \n
+            ammo_5.45x39_fmj = 1 \n
             device_torch \n
 #include "gameplay\character_items.xml" \n
 #include "gameplay\character_drugs.xml" \n
@@ -1993,7 +1993,7 @@
     <supplies>
             [spawn] \n
             wpn_ak74u \n
-            ammo_5.45x39_fmj = 2 \n
+            ammo_5.45x39_fmj = 1 \n
             grenade_rgd5 = 1 \n
             medkit = 1 \n
             device_torch \n
@@ -2131,7 +2131,7 @@
     <supplies>
             [spawn] \n
             wpn_ak74u \n
-            ammo_5.45x39_fmj = 2 \n
+            ammo_5.45x39_fmj = 1 \n
             grenade_f1 = 1 \n
             device_torch \n
 #include "gameplay\character_items.xml" \n
@@ -2465,7 +2465,7 @@
             wpn_pm \n
             ammo_9x18_fmj = 2 \n
             wpn_ak74u = 1 \n
-            ammo_5.45x39_fmj = 2 \n
+            ammo_5.45x39_fmj = 1 \n
             device_torch \n
 #include "gameplay\character_food.xml" \n
 #include "gameplay\character_drugs.xml"
@@ -2498,7 +2498,7 @@
     <supplies>
             [spawn] \n
             wpn_ak74u = 1 \n
-            ammo_5.45x39_fmj = 2 \n
+            ammo_5.45x39_fmj = 1 \n
             device_torch \n
 #include "gameplay\character_food.xml" \n
 #include "gameplay\character_drugs.xml"
@@ -2773,7 +2773,7 @@
     <supplies>
             [spawn] \n
             wpn_ak74u = 1 \n
-            ammo_7.62x39_fmj = 2 \n
+            ammo_5.45x39_fmj = 2 \n
             grenade_f1 = 1 \n
             device_torch \n
 #include "gameplay\character_food.xml" \n
@@ -2807,7 +2807,7 @@
     <supplies>
             [spawn] \n
             wpn_ak74u = 1 \n
-            ammo_5.45x39_fmj = 2 \n
+            ammo_5.45x39_fmj = 1 \n
             grenade_rgd5 = 1 \n
             device_torch \n
 #include "gameplay\character_food.xml" \n
@@ -2843,7 +2843,7 @@
             wpn_pm \n
             ammo_9x18_fmj = 2 \n
             wpn_ak74u = 1 \n
-            ammo_5.45x39_fmj = 2 \n
+            ammo_5.45x39_fmj = 1 \n
             medkit = 1 \n
             device_torch \n
 #include "gameplay\character_food.xml" \n
@@ -2880,7 +2880,7 @@
             wpn_fort \n
             ammo_9x18_fmj = 2 \n
             wpn_ak74u = 1 \n
-            ammo_5.45x39_fmj = 2 \n
+            ammo_5.45x39_fmj = 1 \n
             device_torch \n
 #include "gameplay\character_food.xml" \n
 #include "gameplay\character_drugs.xml"
@@ -2979,7 +2979,7 @@
     <supplies>
             [spawn] \n
             wpn_ak74u = 1 \n
-            ammo_5.45x39_fmj = 2 \n
+            ammo_5.45x39_fmj = 1 \n
             device_torch \n
 #include "gameplay\character_food.xml" \n
 #include "gameplay\character_drugs.xml"
@@ -3083,7 +3083,7 @@
     <supplies>
             [spawn] \n
             wpn_ak74u = 1 \n
-            ammo_5.45x39_fmj = 2 \n
+            ammo_5.45x39_fmj = 1 \n
             device_torch \n
 #include "gameplay\character_food.xml" \n
 #include "gameplay\character_drugs.xml"
@@ -3119,7 +3119,7 @@
             wpn_pb \n
             ammo_9x18_fmj = 2 \n
             wpn_ak74 = 1 \n
-            ammo_5.45x39_fmj = 2 \n
+            ammo_5.45x39_fmj = 1 \n
             device_torch \n
 #include "gameplay\character_food.xml" \n
 #include "gameplay\character_drugs.xml"
@@ -3153,7 +3153,7 @@
     <supplies>
             [spawn] \n
             wpn_ak74 = 1 \n
-            ammo_7.62x39_fmj = 2 \n
+            ammo_5.45x39_fmj = 1 \n
             medkit = 1 \n
             device_torch \n
 #include "gameplay\character_food.xml" \n
@@ -3328,7 +3328,7 @@
     <supplies>
             [spawn] \n
             wpn_ak74 = 1 \n
-            ammo_7.62x39_fmj = 2 \n
+            ammo_5.45x39_fmj = 2 \n
             medkit = 1 \n
             device_torch \n
 #include "gameplay\character_food.xml" \n
@@ -3396,7 +3396,7 @@
     <supplies>
             [spawn] \n
             wpn_ak74u = 1 \n
-            ammo_5.45x39_fmj = 2 \n
+            ammo_5.45x39_fmj = 1 \n
             medkit = 1 \n
             device_torch \n
 #include "gameplay\character_food.xml" \n
@@ -3795,7 +3795,7 @@
             [spawn] \n
             zheton = 1 \n
             wpn_ak74u \n
-            ammo_5.45x39_ap = 1 \n
+            ammo_5.45x39_fmj = 1 \n
             device_torch \n
 #include "gameplay\character_food.xml" \n
 #include "gameplay\character_drugs.xml"
@@ -3869,7 +3869,7 @@
       [spawn] \n
             zheton = 1 \n
             wpn_ak74u \n
-            ammo_5.45x39_ap = 2 \n
+            ammo_5.45x39_fmj = 1 \n
             device_torch \n
 #include "gameplay\character_drugs.xml" \n
 #include "gameplay\character_food.xml"
@@ -3902,8 +3902,8 @@
     <supplies>
       [spawn] \n
             zheton = 1 \n
-            wpn_sks \n
-            ammo_11.43x23_fmj = 2 \n
+            wpn_ak74 \n
+            ammo_5.45x39_fmj = 1 \n
             grenade_rgd5 = 1 \n
             device_torch \n
 #include "gameplay\character_drugs.xml" \n
@@ -3938,7 +3938,7 @@
       [spawn] \n
             zheton = 1 \n
             wpn_abakan \n
-            ammo_5.45x39_ap = 2 \n
+            ammo_5.45x39_fmj = 1 \n
             grenade_rgd5 = 1 \n
             device_torch \n
 #include "gameplay\character_drugs.xml" \n
@@ -4081,7 +4081,7 @@
             [spawn] \n
             zheton = 1 \n
             wpn_ak74u \n
-            ammo_5.45x39_fmj = 2 \n
+            ammo_5.45x39_fmj = 1 \n
             medkit_army = 1 \n
             device_torch \n
 #include "gameplay\character_food.xml" \n
@@ -4116,7 +4116,7 @@
             [spawn] \n
             zheton = 1 \n
             wpn_ak74u \n
-            ammo_5.45x39_fmj = 2 \n
+            ammo_5.45x39_fmj = 1 \n
             medkit_army = 1 \n
             device_torch \n
 #include "gameplay\character_food.xml" \n
@@ -4151,7 +4151,7 @@
             [spawn] \n
             zheton = 1 \n
             wpn_ak74u \n
-            ammo_5.45x39_fmj = 2 \n
+            ammo_5.45x39_fmj = 1 \n
             medkit_army = 1 \n
             device_torch \n
 #include "gameplay\character_food.xml" \n
@@ -4186,7 +4186,7 @@
             [spawn] \n
             zheton = 1 \n
             wpn_abakan \n
-            ammo_5.45x39_ap = 2 \n
+            ammo_5.45x39_fmj = 1 \n
             medkit_army = 1 \n
             device_torch \n
 #include "gameplay\character_food.xml" \n
@@ -4221,7 +4221,7 @@
             [spawn] \n
             zheton = 1 \n
             wpn_ak74 \n
-            ammo_5.45x39_fmj = 2 \n
+            ammo_5.45x39_fmj = 1 \n
             medkit_army = 1 \n
             device_torch \n
 #include "gameplay\character_food.xml" \n
@@ -4256,7 +4256,7 @@
             [spawn] \n
             zheton = 1 \n
             wpn_ak74 \n
-            ammo_5.45x39_fmj = 2 \n
+            ammo_5.45x39_fmj = 1 \n
             medkit_army = 1 \n
             device_torch \n
 #include "gameplay\character_food.xml" \n
@@ -4695,7 +4695,7 @@
             [spawn] \n
             anom_remover \n
             wpn_ak103 = 1 \n
-            ammo_5.45x39_ap = 2 \n
+            ammo_5.45x39_fmj = 1 \n
             ammo_vog-25p = 3 \n
             medkit = 1 \n
             #include "gameplay\character_items.xml"
@@ -4738,14 +4738,14 @@
     <actor_dialog>petrograf_dialog_3</actor_dialog>
 </specific_character>
 
-<!--wpn_trup_x16-->
-<specific_character id="wpn_trup_x16" team_default = "1">
+<!--trup_x16-->
+<specific_character id="trup_x16" team_default = "1">
     <name>Неизвестный учёный</name>
     <icon>ui_npc_u_stalker_ecolog</icon>
     <map_icon x="7" y="0"></map_icon>
     <bio>ros_ecolog_guard_bio</bio>
 
-    <class>wpn_trup_x16</class>
+    <class>trup_x16</class>
     <community>ecolog</community>
     <money min="300" max="500" infinitive="1"></money>
 
@@ -4769,14 +4769,14 @@
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
 </specific_character>
 
-<!--wpn_trup_x10-->
-<specific_character id="wpn_trup_x10" team_default = "1">
+<!--trup_x10-->
+<specific_character id="trup_x10" team_default = "1">
     <name>Неизвестный учёный</name>
     <icon>ui_npc_u_stalker_ecolog_military</icon>
     <map_icon x="7" y="0"></map_icon>
     <bio>ros_ecolog_guard_bio</bio>
 
-    <class>wpn_trup_x10</class>
+    <class>trup_x10</class>
     <community>ecolog</community>
     <money min="300" max="500" infinitive="1"></money>
 
@@ -6070,7 +6070,7 @@
         [spawn] \n
         zheton = 1 \n            
         wpn_ak74 \n
-        ammo_5.45x39_fmj = 2 \n
+        ammo_5.45x39_fmj = 1 \n
     </supplies>
         
 #include "gameplay\character_dialogs.xml"
@@ -6123,7 +6123,7 @@
     <supplies>
         [spawn] \n
         wpn_ak74u \n
-        ammo_5.45x39_fmj = 2 \n
+        ammo_5.45x39_fmj = 1 \n
     </supplies>
 
 #include "gameplay\character_dialogs.xml"
@@ -6201,7 +6201,7 @@
     <supplies>
         [spawn] \n
         wpn_ak74u \n
-        ammo_5.45x39_fmj = 2 \n
+        ammo_5.45x39_fmj = 1 \n
     </supplies>
         
     #include "gameplay\character_dialogs.xml"
@@ -6228,7 +6228,7 @@
         [spawn] \n
         zheton = 1 \n
         wpn_ak74 \n
-        ammo_5.45x39_fmj = 2 \n
+        ammo_5.45x39_fmj = 1 \n
         device_torch \n
     </supplies>
         
@@ -6255,7 +6255,7 @@
     <supplies>
         [spawn] \n
         wpn_ak74u \n
-        ammo_5.45x39_fmj = 2 \n
+        ammo_5.45x39_fmj = 1 \n
         device_torch \n
     </supplies>
         
@@ -6362,7 +6362,7 @@
     <supplies>
         [spawn] \n
         wpn_ak74u \n
-        ammo_5.45x39_fmj = 2 \n
+        ammo_5.45x39_fmj = 1 \n
     </supplies>
         
     #include "gameplay\character_dialogs.xml"
@@ -6442,7 +6442,7 @@
     <supplies>
         [spawn] \n
         wpn_ak74u \n
-        ammo_5.45x39_fmj = 2 \n
+        ammo_5.45x39_fmj = 1 \n
     </supplies>
 
 #include "gameplay\character_dialogs.xml"
@@ -6522,7 +6522,7 @@
         wpn_pm \n
         ammo_9x18_fmj = 2 \n
         wpn_ak74u = 1 \n
-        ammo_5.45x39_fmj = 2 \n
+        ammo_5.45x39_fmj = 1 \n
         medkit = 1 \n
         device_torch \n
 #include "gameplay\character_food.xml" \n

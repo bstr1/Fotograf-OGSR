@@ -361,6 +361,14 @@ icon                                     = ui_npc_monster_chimera_strong
 Spawn_Inventory_Item_Section             = el_chimera_kogot
 Spawn_Inventory_Item_Probability         = 1.0
 
+base_linear_factor                       = 5
+base_quadratic_factor                    = 0
+base_max_distance                        = 15
+base_max_power                           = 5
+base_pp_effector_name                    = postprocess_electro_aura
+base_pp_highest_at                       = 1.0
+base_sound                               = anomaly\electra_idle1
+
 bones_particles                          = electro_chimera_particles
 immunities_sect                          = electro_chimera_immunities
 
@@ -444,12 +452,22 @@ icon                                     = ui_npc_monster_fire_chimera
 Spawn_Inventory_Item_Section             = fire_chimera_kogot
 Spawn_Inventory_Item_Probability         = 1.0
 
+// Огненная-аура
+base_linear_factor                       = 5
+base_quadratic_factor                    = 0
+base_max_distance                        = 15
+base_max_power                           = 5
+base_pp_effector_name                    = postprocess_fire_aura
+base_pp_highest_at                       = 1.0
+base_sound                               = anomaly\fire_idle_0
+
 bones_particles                          = fire_chimera_particles
 immunities_sect                          = fire_chimera_immunities
 
 ;MinAttackDist		                     = 2.0
 panic_threshold                          = 0.00001
 
+// Дамаг-аура
 fire_max_distance                        = 12
 fire_max_power                           = 10
 fire_linear_factor                       = 5
@@ -489,4 +507,4 @@ stop_on_death                            = true
 
 
 // На удаление 4etkiu
-[new_chimera]:wolk
+// [new_chimera]:wolk

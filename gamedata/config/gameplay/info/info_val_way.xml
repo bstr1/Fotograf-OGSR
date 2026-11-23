@@ -57,12 +57,12 @@
 
 <info_portion id="amb_brain">
     <action>val_test.create_ambbrain_restr</action>
-    <action>fotograf.wpn_trup_x16_spawn</action>
+    <action>fotograf.trup_x16_spawn</action>
 </info_portion>
 
 <info_portion id="amb_bunk">
     <action>val_test.create_ambbunk_restr</action>
-    <action>fotograf.wpn_trup_x10_spawn</action>
+    <action>fotograf.trup_x10_spawn</action>
 </info_portion>
 
 <info_portion id="amb_labx">

@@ -718,19 +718,19 @@ function get_npc_current_visual_level(id)
                 sect = "bandit_outfit"
             end
             if vis == "stalker_bandit_4" or vis == "stalker_bandit_2" then
-                sect = "bandit_outfit_red"
+                sect = "bandit_outfit"
             end
             if vis == "stalker_bandit_5" or vis == "stalker_bandit_9" then
-                sect = "bandit_outfit_blue"
+                sect = "bandit_outfit"
             end
             if vis == "stalker_bandit_1" then
-                sect = "bandit_outfit_red1"
+                sect = "bandit_outfit"
             end
             if vis == "stalker_bandit_drunk" then
                 sect = "bandit_outfit"
             end
             if vis == "stalker_bandit_8" then
-                sect = "bandit_gaz_outfit_m1"
+                sect = "bandit_outfit"
             end
             if vis == "stalker_bandit_veteran" then
                 sect = "bandit_veteran_outfit"
@@ -746,7 +746,7 @@ function get_npc_current_visual_level(id)
                 sect = "dolg_outfit"
             end
             if vis == "stalker_do_antigas" then
-                sect = "dolg_gaz_outfit_m1"
+                sect = "dolg_outfit"
             end
             if vis == "stalker_do_komandir" then
                 sect = "dolg_outfit"
@@ -790,7 +790,7 @@ function get_npc_current_visual_level(id)
                 sect = "killer_outfit"
             end
             if vis == "stalker_ki_antigas" then
-                sect = "killer_gaz_outfit_m1"
+                sect = "killer_outfit"
             end
             if vis == "stalker_ki_nauchniy" then
                 sect = "merc_scientific_outfit"
@@ -812,7 +812,7 @@ function get_npc_current_visual_level(id)
                 sect = "monolit_outfit"
             end
             if vis == "stalker_mo_hood_9" then
-                sect = "monolit_gaz_outfit_m1"
+                sect = "monolit_outfit"
             end
             if vis == "stalker_mo_nauchniy" then
                 sect = "monolit_scientific_outfit"
@@ -835,30 +835,30 @@ function get_npc_current_visual_level(id)
                 sect = "stalker_guard_outfit"
             end
             if vis == "stalker_neytral_hood_92" then
-                sect = "neytral_gaz_outfit_m1"
+                sect = "stalker_outfit"
             end
             if vis == "stalker_neytral_hood_9" then
-                sect = "neytral_gaz_outfit_m2"
+                sect = "stalker_outfit"
             end
             if vis == "stalker_2_gas" then
-                sect = "neytral_gaz_outfit_v1"
+                sect = "stalker_outfit"
             end
             if vis == "stalker_3_gas" then
-                sect = "neytral_gaz_outfit_v2"
+                sect = "stalker_outfit"
             end
             if vis == "stalker_4_gas" then
-                sect = "neytral_gaz_outfit_v3"
+                sect = "stalker_outfit"
             end
             if vis == "stalker_2_mask" or vis == "lisiy" or vis == "stalker_2_mask" or vis == "stalker_2_ochki" or vis ==
                 "stalker_2_rozh1" or vis == "stalker_2_usi" then
-                sect = "stalker_outfit_v1"
+                sect = "stalker_outfit"
             end
             if vis == "stalker_3_mask" or vis == "hellcar" or vis == "stalker_3_mask" or vis == "stalker_3_rozh2" or vis ==
                 "stalker_3_usi" then
-                sect = "stalker_outfit_v2"
+                sect = "stalker_outfit"
             end
             if vis == "stalker_4_rozh3" or vis == "serega" or vis == "stalker_4_ochki" then
-                sect = "stalker_outfit_v3"
+                sect = "stalker_outfit"
             end
             if vis == "stalker_prizrak" then
                 sect = "outfit_stalker_m1"
@@ -871,43 +871,43 @@ function get_npc_current_visual_level(id)
             end
             -- novice
             if vis == "green_stalker_1" then
-                sect = "neytral_novice_outfit_m1"
+                sect = "novice_outfit"
             end
             if vis == "green_stalker_2" then
                 sect = "novice_outfit"
             end
             if vis == "stalker_novice" then
-                sect = "outfit_novice"
+                sect = "novice_outfit"
             end
             if vis == "green_stalker_3" then
-                sect = "novice_outfit_rain_1"
+                sect = "novice_outfit"
             end
             if vis == "green_stalker_4" then
-                sect = "neytral_novice_outfit_cam"
+                sect = "novice_outfit"
             end
             if vis == "green_stalker_5" then
-                sect = "novice_outfit_new_2"
+                sect = "novice_outfit"
             end
             if vis == "green_stalker_6" then
-                sect = "novice_outfit_rain_2"
+                sect = "novice_outfit"
             end
             if vis == "green_stalker_7" then
-                sect = "neytral_novice_outfit_cam_2"
+                sect = "novice_outfit"
             end
             if vis == "green_stalker_8" then
-                sect = "neytral_novice_outfit_cam_3"
+                sect = "novice_outfit"
             end
             if vis == "green_stalker_9" then
-                sect = "novice_outfit_new_1"
+                sect = "novice_outfit"
             end
             if vis == "green_stalker_10" then
-                sect = "neytral_novice_outfit_cam_1"
+                sect = "novice_outfit"
             end
             if vis == "green_stalker_11" then
-                sect = "neytral_novice_outfit_new"
+                sect = "novice_outfit"
             end
             if vis == "green_stalker_antigas" then
-                sect = "neytral_novice_gaz_outfit_m1"
+                sect = "novice_outfit"
             end
             -- protect (see ecolog)
             -- soldier
@@ -941,7 +941,7 @@ function get_npc_current_visual_level(id)
                 sect = "novice_outfit"
             end
             if vis == "stalker_zombie8" then
-                sect = "neytral_novice_outfit_m1"
+                sect = "stalker_outfit"
             end
             if vis == "stalker_zombie_specnaz" then
                 sect = "specops_outfit"
@@ -962,10 +962,10 @@ function get_npc_current_visual_level(id)
                 sect = "svoboda_heavy_outfit"
             end
             if vis == "stalker_sv_hood_91" then
-                sect = "svoboda_gaz_outfit_m1"
+                sect = "svoboda_heavy_outfit"
             end
             if vis == "stalker_sv_hood_9" then
-                sect = "svoboda_heavy_gaz_outfit_m1"
+                sect = "svoboda_heavy_outfit"
             end
             if vis == "stalker_sv_nauchniy" then
                 sect = "freedom_scientific_outfit"
@@ -974,7 +974,7 @@ function get_npc_current_visual_level(id)
                 sect = "svoboda_exoskeleton"
             end
             if vis == "stalker_sv_leader" then
-                sect = "svoboda_gaz_outfit_m1"
+                sect = "svoboda_heavy_outfit"
             end
             -- nano
             if vis == "stalker_nano_suit" then

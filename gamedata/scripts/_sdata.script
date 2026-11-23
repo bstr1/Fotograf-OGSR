@@ -490,7 +490,8 @@ function vis_int()
 			ActText = ActText.. GetString("sdata_actor_satiety").. tostring(str).." ("..math.ceil(tonumber(str)*100).."%)\\n"
 		end
 		if aDrinky==true then
-			ActText = ActText.. string.format(GetString("sdata_actor_drinky").." %d",0).."%\\n"
+			str = string.format(" %f",db.actor.thirst)
+			ActText = ActText.. GetString("sdata_actor_drinky").. tostring(str).." ("..math.ceil(tonumber(str)*100).."%)\\n"
 		end
 		if aSleepy==true then
 			ActText = ActText.. string.format(GetString("sdata_actor_sleepy").." %d",amk.load_variable("gg_need_sleep",0)).."%\\n"

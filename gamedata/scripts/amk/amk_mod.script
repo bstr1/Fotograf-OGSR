@@ -9,7 +9,6 @@ local string_find = string.find
 local string_sub = string.sub
 
 local nrg,med,cnt,gv,lv,w
-in_hide=false
 local sound_obj_right,sound_obj_left,snd_volume,snd_obj_eq
 local sync_done=false
 zombied={}
@@ -99,18 +98,9 @@ function check_spawn()
   end
 
 	w=level.get_weather()
-	if amk.load_variable("blowout",0)>0 then amk.save_variable("weather",level.get_weather()) end
 	game.start_tutorial("restore_sun")
 	if has_alife_info("parallel_mg") then level.set_weather("w_deadcity",true) end
 
-	if amk.load_variable("blowout",0)>0 and amk.load_variable("blowout",0)<4 then
-		local bt=blowout_type()
-		level.add_cam_effector("camera_effects\\earthquake.anm", 2002, true, "")
-		if bt<1 then
-			level.add_pp_effector("vibros.ppe", 2001, true)
-			blowout_psy_sound("start")
-		end
-	end
 
 	-- Временное решение со сном(lsclon)
 	if not amk.has_g_timer("gg_need_sleep") then
@@ -128,12 +118,9 @@ function restore_sun()
         local lname = level.name()
         local sname = amk.load_variable("level_on_save","")
     amk.save_variable("level_on_save",lname)
-    if w and w~="" and amk.load_variable("blowout",0) == 0 then
+    if w and w~="" then
     level.set_weather(w,true)
  end
-    --[[if amk.load_variable("blow_started", 0) == 0 then
-    start_blow_timer() amk.save_variable("blow_started", 1)
- end]]
            if tmp_intro then
            tmp_intro = false
        end
@@ -290,9 +277,6 @@ function test_for_need_sleep_matras(oid)
 		if enemy==true then
 			amk.send_tip(game.translate_string("not_need_sleep_enemy"),nil,nil,5)
 		else
-			if amk.load_variable("blowout",-1)>-1 and amk.load_variable("blowout",-1)<5 then
-				amk.send_tip(game.translate_string("blowout_not_sleep"),nil,nil,5)
-			else
 				if amk.load_variable("block_sleep_menu",0)==0 then
 					if amk.load_variable("gg_need_sleep",0)>10 then
 						local spwn=ui_cheat.cheat(get_hud())
@@ -303,7 +287,6 @@ function test_for_need_sleep_matras(oid)
 				else
 					amk.send_tip(game.translate_string("not_need_sleep_nrg"),nil,nil,5)
 				end
-			end
 		 end
 	    amk.spawn_item_in_inv("matras")
 	end
@@ -346,206 +329,12 @@ function check_metka()
 end
 
 
---'*******************************************************************************
---'   **   **   **   **   **    **   **   **   **      BLOWOUT        **   **   **   **   **    **   **   **   **
---'*******************************************************************************
-function blowout_phantoms()
-	local blow=amk.load_variable("blowout",-1)
-	local bt=blowout_type()
-	if blow>1 and blow<4 and bt<2 then
-	  local lname=level.name()
-		if not in_hide and amk_hideouts.blowouts_phantoms[lname] then
-			local phantoms=amk_hideouts.blowouts_phantoms[lname]
-			if phantoms and phantoms.count>0 then
-				if math.random()<phantoms.probability then
-					if phantom_manager:phantom_count()<phantoms.count then
-						local yaw	 			= math.pi*2.0*math.random()
-						local radius 			= phantoms.radius*(math.random()/2.0+0.5)
-						local height 			= phantoms.height*math.random()
-						local a_pos 			= db.actor:position()
-						local pos 				= vector():set(math.sin(yaw)*radius+a_pos.x,a_pos.y+height,math.cos(yaw)*radius+a_pos.z)
-						phantom_manager.spawn_phantom(pos)
-					end
-				end
-			end
-		end
-	end
-end
-
-function blowout_scary_sounds()
-	local blow=amk.load_variable("blowout",-1)
-	if blow>0 and blow<4 then
-		local snd_obj = xr_sound.get_safe_sound_object(amk_hideouts.blowout_sounds[math.random(table.getn(amk_hideouts.blowout_sounds))])
-		local a=vector()
-		a.x=math.random(0,10)
-		a.y=math.random(0,10)
-		a.z=math.random(0,10)
-		snd_obj:play_at_pos(db.actor, db.actor:position():add(a))
-		amk.start_timer("blowout_ss",math.random(10,30),0)
-	end
-end
-
-function blowout_psy_sound(action)
-	if action=="start" then
-		snd_obj_eq = sound_object([[ambient\earthquake]],sound_object.looped+sound_object.s2d)
-    snd_obj_eq:play(db.actor, 4, sound_object.looped+sound_object.s2d)
-	end
-	if action == "stop" then
-		if snd_obj_eq then snd_obj_eq:stop() end
-	end
-	
-	local lname=level.name()
-	if not amk_hideouts.blowouts_phantoms[lname] then return end
-	local psy_sound=amk_hideouts.blowouts_phantoms[lname].psy_sounds or false	
-	if not psy_sound then return end
-
-	if action=="start" then
-		local level_vol=amk_hideouts.blowouts_phantoms[lname].level_vol or 1				
-		sound_obj_right, sound_obj_left = xr_sound.get_sound_object("psy_voices", "random")
-		sound_obj_left:play_at_pos (db.actor, vector():set(-1, 0, 1), 0, sound_object.s2d + sound_object.looped)
-		sound_obj_right:play_at_pos(db.actor, vector():set( 1, 0, 1), 0, sound_object.s2d + sound_object.looped)
-		snd_volume	= level.get_snd_volume()
-		level.set_snd_volume( level_vol )
-	end
-	if action == "stop" then
-		if sound_obj_left then sound_obj_left:stop() end
-		if sound_obj_right then sound_obj_right:stop() end
-		if snd_volume then level.set_snd_volume(snd_volume) end
-	end	
-end
-
-function Run_Blowout_pp()
-	local blow_enabled = 1
-
-	if blow_enabled>0 then
-		local bt=blowout_type()
-		if bt==2 and amk.load_variable("freeplay",0)~=2 then return end
-		sleep_manager.stopper()
-		amk.save_variable("blowout",1)
-		if bt<1 then
-			level.add_pp_effector("monolith_off.ppe", 2003, false)
-			level.add_cam_effector("camera_effects\\shell_shock.anm", 2004, false, "")
-			local snd_obj = xr_sound.get_safe_sound_object([[ambient\organic_moan1]])
-			snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
-		end
-		amk.start_timer("blowout_ss",math.random(5,15),0)
-		amk.start_timer("blowout",11,0)
-	end
-	--start_blow_timer()
-end
-
-function start_blow_timer()
-	--[[local shift = system_ini():r_float("blowout_period","shift")
-	shift = (math.random()*shift)-(shift/2)
-	local t_time = system_ini():r_float("blowout_period","time")
-	amk.g_start_timer( "blow_shift",0,0, t_time+shift )
-	if (news_main and news_main.next_blow) then
-		news_main.next_blow(t_time+shift)
-	end]]
-	local time = math.random(5,10) --задаётся время в минутах	
-	amk.g_start_timer( "blow_shift",0,0,time)
-end
-
-
-function Blowout_pp(phase)
----------------------------------------------------
---' TimeFactor = 5
---' GameMin = 12 RealSec
---' TimeBlowout = 184 RealSec
-
---' Начало (Timer = 36 sec)
---' Первая Фаза (Timer = 36 sec)
---' Вторая Фаза (Timer = 36 sec)
---' Третья Фаза (Timer = 36 sec)
---' Четвертая Фаза (Timer = 60 sec)
---' Конечнвя Фаза (Timer = 0 sec)
----------------------------------------------------
-
-	amk.mylog("blowout "..phase)
-	local bt=blowout_type()
-	
-	if phase==0 then
-		dsh_anomaly_detector.pre_blow_off()
-		amk_anoms.pre_blow_off()
-		if bt<1 then
-			local h = level.get_time_hours()
-			if h >= 7 and h < 21 then
-				level.set_weather_fx("fx_blowout_day")
-			else
-				level.set_weather_fx("fx_blowout_night")
-			end
-		end
-		amk.g_start_timer("blowout",0,0,3,1)
-	elseif phase==1 then
-		local snd_obj = xr_sound.get_safe_sound_object([[ambient\earthquake]])
-		snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
-		level.add_cam_effector("camera_effects\\earthquake.anm", 2002, true, "")
-		snd_obj = xr_sound.get_safe_sound_object([[anomaly\blowout]])
-		snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
-		blowout_psy_sound("start")
-		if bt<1 then
-			level.add_pp_effector("vibros.ppe", 2001, true)
-		end
-		in_hide=false
-		amk.g_start_timer("blowout",0,0,3,2)
-		amk.save_variable("blowout",2)	
-	elseif phase==2 then
-		amk.g_start_timer("blowout",0,0,3,3)
-	elseif phase==3 then
-		amk_anoms.after_blow_on()
-		dsh_anomaly_detector.on_after_blowout()
-		amk.save_variable("blowout",3)
-		local h = hit()
-		local cr
-		h.type = hit.strike
-		h.power = 1000
-		h.impulse = 1000
-		for a=1,65534,1 do
-			cr=level.object_by_id(a)
-			if cr~=nil and cr:section()=="m_crow" and math.random(0,100)<70 then
-				h.draftsman = cr
-				h.direction = cr:direction()
-				cr:hit(h)
-			end
-		end
-		amk.g_start_timer("blowout",0,0,3,4)
-	elseif phase==4 then
-		amk.save_variable("blowout",4)
-		level.remove_cam_effector(2002)
-		if bt<1 then
-			level.remove_pp_effector(2001)
-			level.add_pp_effector("monolith_off.ppe", 2003, false)
-		end
-		blowout_psy_sound("stop")
-		amk.start_timer("blowout",5,5)
-	elseif phase==5 then
-		level.set_weather(amk.load_variable("weather","default"))
-		if bt<1 then
-			local snd_obj = xr_sound.get_safe_sound_object([[anomaly\teleport_work2]])
-			snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
-		
-		end
-		amk.del_variable("blowout")
-		db.actor:give_info_portion("blowout_end")
-		amk.start_timer("blowout_end", 1)
-	end
-end
-
-local next_actor_hit_time=0
-function on_blowout_hit_actor()
-	if next_actor_hit_time<time_global() then
-		next_actor_hit_time=time_global()+1000
-		on_blowout_hit(db.actor)
-	end
-end
-
 function on_blowout_hit(npc,hide)
 	local bt=blowout_type()
-	if bt>0 or amk.load_variable("blowout",-1)~=3 then 
-    if npc:id()==db.actor:id() then in_hide = true end
+	if bt>0 or amk.load_variable("blowout",-1)~=3 then
 		return false
 	end
-	
+
 	local lname=level.name()
 	local need_hit
 	need_hit=true
@@ -553,7 +342,7 @@ function on_blowout_hit(npc,hide)
 	if hide and hide.zone then
 		need_hit = not check_npc_in_hideout(npc,hide)
 		if not need_hit then
-			if hide.defence then 
+			if hide.defence then
 				khit=hide.defence
 			else
 				khit=0
@@ -573,7 +362,7 @@ function on_blowout_hit(npc,hide)
 						end
 						need_hit = need_hit and not tmp
 						if tmp then
-							if o.defence then 
+							if o.defence then
 								khit=o.defence
 							else
 								khit=0
@@ -585,14 +374,13 @@ function on_blowout_hit(npc,hide)
 		end
 	end
 
-    if npc:id()==db.actor:id() then in_hide = not need_hit end
     if (need_hit or khit>0) and amk.load_variable("blowout",-1)==3 then
 		local h = hit()
     	h.power = (amk_hideouts.blowout_damages[lname] or 0.01)*khit
     	h.impulse = 0
 		h.draftsman = npc
 		h.direction = vector():set(0,0,0)
-		h:bone("bip01_spine") -- чтобы учитывалась броня
+		h:bone("bip01_spine")
     	h.type = hit.strike
 		npc:hit(h)
     	h.type = hit.telepatic
@@ -777,177 +565,9 @@ function af_transform_universal_end(params)
 	end
 end
 
---'*******************************************************************************
---'   **   **   **   **   **    **   **   **      OUTFIT_HUD        **   **   **   **   **    **   **   **   **  
---'*******************************************************************************
-local currhud
-local curr_tex
-local cur_weapon_fov
-
-local hud_tbl={
---hud_gaz
-svoboda_gaz_outfit_m1="hud_gaz",
-dolg_gaz_outfit_m1="hud_gaz",
-neytral_novice_gaz_outfit_m1="hud_gaz",
-svoboda_heavy_gaz_outfit_m1="hud_gaz",
-bandit_gaz_outfit_m1="hud_gaz",
---hud_exo
-svoboda_yellow_exo_outfit_m1="hud_exo",
-exo_outfit="hud_exo",
---hud_merc
-killer_gaz_outfit_m1="hud_merc",
---hud_sci
-dolg_scientific_outfit="hud_sci",
-ecolog_outfit="hud_sci",
-protection_outfit="hud_sci",
-scientific_outfit="hud_sci",
---hud_military
-military_outfit="hud_military",
-militaryspec_outfit="hud_military",
---hud IMM
-killer_blue_exoskeleton="hud_exo", 
-dolg_black_exoskeleton="hud_exo", 
-svoboda_exoskeleton="hud_exo", 
-monolit_exoskeleton="hud_exo", 
-broken_exoskeleton="hud_exo", 
-freedom_scientific_outfit="hud_sci", 
-merc_scientific_outfit="hud_sci", 
-monolit_scientific_outfit="hud_sci", 
-neytral_exo_antigas_outfit="hud_exo", 
-exo_bandit_outfit="hud_exo", 
-monolit_gaz_outfit_m1="hud_gaz",
-nano_outfit="hud_sci",
-nano_outfit_addw="hud_sci",
-nano_outfit_addh="hud_sci",
-neytral_gaz_outfit_v1="hud_gaz",
-neytral_gaz_outfit_v2="hud_gaz",
-neytral_gaz_outfit_v3="hud_gaz",
-neytral_gaz_outfit_m1="hud_gaz",
-neytral_gaz_outfit_m2="hud_gaz"}
-
-local current_static
-local static_enabled
-local current_zoom=1
-update_hud=false
-
-function set_hud_tex(static,enabled)
-	local zoom=67.5/device().fov
-	zoom=(zoom-1)*1.5+1
-	if zoom<1.001 then
-		zoom=1.001
-	end
-	local stretchy=0.75/(math.floor(device().aspect_ratio*1000)/1000)
-	if stretchy<1 then stretchy=1 end
-	local rect={x=-768*zoom+768,y=(-512*zoom+512)*stretchy-(stretchy-1)*300,w=1024*zoom,h=768*zoom*stretchy}
-	if amk.load_variable("option_hud",2)==2 then
-		set_blurs(enabled and curr_tex~="hud_sci" and static~=nil,rect)
-	else
-		set_blurs(false,rect)
-	end
-  if enabled==static_enabled and current_static==static and 
-      zoom==current_zoom and (not update_hud) then
-		return
-	end
-	update_hud=false
-	current_zoom=zoom
-	local need_change=false
-	if current_static~=static then
-		if current_static then
-			get_hud():RemoveCustomStatic(current_static)
-		end
-		if static then
-			get_hud():AddCustomStatic(static)
-		end
-		need_change=true
-		current_static=static
-	end
-  local wnd=get_hud():GetCustomStatic(current_static) and 
-            get_hud():GetCustomStatic(current_static):wnd()
-	if (not enabled) and wnd then
-		wnd:SetWidth(0)    
-	elseif wnd then
-		wnd:SetWndRect(rect.x,rect.y,rect.w,rect.h)
-	end
-	static_enabled=enabled
-end
-
-local blurs=nil
-local blurval=0 -- уровень запотевания от 0 до 1
-local blurlt=0 -- время последнего обновления
-local blurcyctime=0 -- время начала последнего цикла дыхания (выдох)
-local blurlastphase=0
-
-function set_blurs(enabled,rect)
-	if (not blurs) or get_hud():GetCustomStatic("hud_blur1")==nil then
-		blurs={}
-		for i=1,4 do
-			get_hud():AddCustomStatic("hud_blur"..i)
-			blurs[i]=get_hud():GetCustomStatic("hud_blur"..i):wnd()
-			blurs[i]:SetWidth(0)
-		end
-	end
-	if not enabled then
-		for i=1,4 do
-			blurs[i]:SetWidth(0)
-		end
-		return    
-	end
-  
--- Циклы в зависимости от силы дыхания: 0->1->0 0->1->2->4->5->0 0->1->2->3->4->5->0 5->4->3->4->5 4->3->4
-	local power=db.actor.power
-	local period=1.0+power*power*1.0 -- текущая частота дыхания от 30 до 120 циклов в минуту
-	local expirt=0.3
-	local breathpower=3
-  
-	local delta=(time_global()-blurlt)/1000 -- дельта в секундах
-	local phase=(time_global()-blurcyctime)/1000 -- фаза дыхательного цикла в сек.
-	blurlt=time_global()
-	if phase>period then
-		phase=phase%period
-		blurcyctime=blurlt-phase*1000
-	end
-	if blurlastphase>phase then
-		blurlastphase=0
-	end
-  
-	local blurdelta=delta*-0.7 -- работа вентилляции
-	if blurlastphase<expirt and phase<expirt then
-		blurdelta=blurdelta+(phase-blurlastphase)*breathpower
-	elseif blurlastphase<expirt then
-		blurdelta=blurdelta+(expirt-blurlastphase)*breathpower
-	end
-	blurlastphase=phase
-  
-	blurval=blurval+blurdelta
-	if blurval>0.999 then
-		blurval=0.999
-	elseif blurval<0 then
-		blurval=0
-	end
-  
-	local tm=math.floor(blurval*3)
-	local tmn=(tm+1)
-	local v=blurval*3-math.floor(blurval*3)
-	v=1-v
-	local v1=1-v
-	if tm~=0 then
-		blurs[tm]:SetColor(GetARGB(v*255,255,255,255))
-	end
-	if tmn~=0 then
-		blurs[tmn]:SetColor(GetARGB(v1*255,255,255,255))
-	end
-	for i=1,4 do
-		if i==tm or i==tmn then
-			blurs[i]:SetWndRect(rect.x,rect.y,rect.w,rect.h)
-		else
-			blurs[i]:SetWndRect(rect.x,rect.y,0,0)
-		end  
-	end
-end
-
 local lhup=0
 function check_hud()
-	local hudotf,actor
+	local actor
 	if db and db.actor then
 		actor=db.actor
 	else
@@ -994,24 +614,8 @@ function check_hud()
 	end
 
  
-	local hudotf=actor:get_current_outfit()
-	local hudotf_id="nil"
-	if hudotf then
-		hudotf_id=hudotf:section()
-	end
-	local tex
-	if hudotf_id then
-		tex = hud_tbl[hudotf_id]
-	end
-	curr_tex=tex
 	local act_it=db.actor:active_item()
-  
-	if db.actor.health>0 and not (act_it and act_it:section()=="wpn_binoc" and device().fov<50) and device().fov>30 and amk.load_variable("option_hud",2)~=0 then
-		set_hud_tex(tex,true)
-	else
-		set_hud_tex(tex,false)
-	end    
-  
+
 	if (ui_rad and db.actor.health>0 and amk.load_variable("option_rad",1) ~= 0) then
 		if act_it and act_it:section()=="wpn_binoc" then
 			local zoom=67.5/device().fov

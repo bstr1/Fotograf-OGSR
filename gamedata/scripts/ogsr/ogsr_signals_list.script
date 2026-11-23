@@ -15,8 +15,7 @@ addons = {
 	"ogse_qt",
 	"ogse_surge_mgr",
 	"ogsr_quick_saveload",
-	"dsh_cfg",
-	"dsh_torch",
 	"ui_inv_descr",
 	"braad_test",
+	"ogse_torch",
 }

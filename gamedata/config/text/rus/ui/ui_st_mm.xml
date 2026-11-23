@@ -537,6 +537,9 @@
 <string id="fpslock144">
     <text>144 кадра</text>
 </string>
+<string id="fpslock165">
+    <text>165 кадров</text>
+</string>
 <string id="fpslock240">
     <text>240 кадров</text>
 </string>

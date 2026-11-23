@@ -54,7 +54,7 @@ end
 -----------------------------Телепортация--------------------------------
 
 function hiding_road()
-    teleport_actor(vector():set(50.65, 3.00, 308.49), vector():set(0.0, 0.0, 0.0), "hiding_road")
+    teleport_actor(vector():set(50.65, 3.00, 308.49), vector():set(0.030, 1.59, 0), "hiding_road")
     local snd_obj = xr_sound.get_safe_sound_object([[car\apc_start]])
     snd_obj:play(db.actor, 0, sound_object.s2d)
 end

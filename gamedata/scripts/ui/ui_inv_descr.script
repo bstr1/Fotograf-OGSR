@@ -77,6 +77,7 @@ local eatable_params =
 	{ prop = "wounds_heal_perc",			text = string.format("%s", game.translate_string("ui_inv_bleeding")),			tex = "bleeding"	},
 	{ prop = "eat_psy_health",				text = string.format("%s", game.translate_string("ui_inv_psy_health")),			tex = "telepatic"	},
 	{ prop = "eat_satiety",					text = string.format("%s", game.translate_string("ui_inv_satiety")),			tex = "satiety"		},
+	{ prop = "eat_thirst",					text = string.format("%s", game.translate_string("ui_inv_thirst")),			tex = "thirst"		},
 	{ prop = "eat_power",					text = string.format("%s", game.translate_string("ui_inv_power")),	        	tex = "power"		},
 	{ prop = "eat_alcohol",					text = string.format("%s", game.translate_string("ui_inv_alcohol")),			tex = "alcohol"		},
 	{ prop = "eat_radiation",				text = string.format("%s", game.translate_string("ui_inv_radiation")),			tex = "radiation"	},

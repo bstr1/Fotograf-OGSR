@@ -1,0 +1,123 @@
+local snd = sound_object([[device\nlc6\pda\dairy_click_1]])
+
+function attach( sm )
+    sm:subscribe({ signal = "on_first_update", fun = this.set_torch_mode })
+    sm:subscribe({ signal = "on_key_down",     fun = this.on_key_down     })
+end
+
+local torch_mode = "off"
+
+function get_torch()
+    if db.actor and db.actor:alive() then
+        local torch = db.actor:item_in_slot(9)
+        if torch and torch:is_torch() then
+            return get_torch_obj(torch)
+        end
+    end
+end
+
+function set_torch_mode()
+    local torch = get_torch()
+    if not torch then
+        return
+    end
+
+    torch:set_script_control(true)
+
+    torch_mode = ogse.load_var("ogse_torch.torch_mode", "near")
+    if torch.on then
+        if torch_mode == "far" then
+            set_far_mode(torch)
+        else
+            set_near_mode(torch)
+        end
+    else
+        set_near_mode(torch)
+        torch_mode = "off"
+    end
+
+    ogse.save_var("ogse_torch.torch_mode", torch_mode)
+end
+
+function on_key_down(key, bind)
+    if bind ~= key_bindings.kTORCH then
+        return
+    end
+    if level.main_input_receiver() then
+        return
+    end
+
+    local holder = db.actor and db.actor:get_holder()
+    if holder and holder:is_car() then
+        return
+    end
+
+    toggle_torch()
+end
+
+function on_switch()
+    toggle_torch()
+end
+
+function toggle_torch()
+    local torch = get_torch()
+    if not torch then
+        return
+    end
+
+    torch:set_script_control(true)
+
+    if torch.on and torch_mode ~= "near" and torch_mode ~= "far" then
+        torch_mode = "near"
+    end
+
+    if not torch.on then
+        set_near_mode(torch, true)
+    elseif torch_mode == "near" then
+        set_far_mode(torch, true)
+    else
+        set_off_mode(torch)
+    end
+
+    snd:play(db.actor, 0, sound_object.s2d)
+
+    ogse.save_var("ogse_torch.torch_mode", torch_mode)
+end
+
+function set_near_mode(torch, switch_on)
+    torch_mode = "near"
+    torch:set_range(30, 0)
+    torch:set_angle(math.rad(90), 0)
+    if switch_on and not torch.on then
+        torch:enable(true)
+    end
+end
+
+function set_far_mode(torch, switch_on)
+    torch_mode = "far"
+    torch:set_range(70, 0)
+    torch:set_angle(math.rad(55), 0)
+    if switch_on and not torch.on then
+        torch:enable(true)
+    end
+end
+
+function set_off_mode(torch)
+    torch_mode = "off"
+    torch:enable(false)
+end
+
+function is_torch_enabled(torch)
+    if db.actor and db.actor:alive() then
+        if not torch then
+            torch = db.actor:item_in_slot(9)
+        end
+        if torch and torch:is_torch() then
+            torch = get_torch_obj(torch)
+            if torch.on then
+                return torch_mode
+            end
+            return false
+        end
+    end
+end

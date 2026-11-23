@@ -30,6 +30,7 @@ log1("--LUA version: ["..(jit.version or _VERSION).."]")
 FFI = require('ffi') --Делать только здесь и только один раз!
 --==============================================================================================
 math.randomseed(os.time())
+math.random = xoshiro128.xoshiro128()
 --====================================[LuaFileSystem]===========================================
 --lfs.dll должен быть в папке bin.
 --xpcall(function() require("lfs") end, log1)
@@ -1466,6 +1467,10 @@ function on_actor_bleeding()
 end
 
 function on_actor_satiety()
+end
+
+-- Жажда
+function on_actor_thirst()
 end
 
 --' Радиация

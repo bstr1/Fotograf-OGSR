@@ -196,30 +196,13 @@ inv_grid_x                       = 39
 inv_grid_y                       = 36
 
 
-[treasure_seif]:matras
-visual                           = physics\box\seif_01
-description                      = enc_amk_ruksak
-inv_name                         = amk_ruksak
-inv_name_short                   = amk_ruksak_s
-
-inv_grid_width                   = 3
-inv_grid_height                  = 3
-inv_grid_x                       = 9
-inv_grid_y                       = 35
-
-
 [inventory_seif]
 class                            = O_INVBOX
 cform                            = skeleton
 visual                           = physics\box\seif_01
 script_binding                   = bind_physic_object.init
 
-
-[m_inventory_seif]:inventory_seif
-visual                           = physics\box\seif_01
-radius                           = 1
-
-; bstr: на удаление, насрано в inventory.script
+// bstr: на удаление, насрано в inventory.script
 [separator]:bread
 inv_grid_width                   = 0
 inv_grid_height                  = 0

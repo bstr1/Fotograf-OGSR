@@ -4,7 +4,7 @@ end
 
 function on_use( obj )
 	local sect = obj:section()
-	if sect == "vodka" or sect == "vodka1" then
+	if sect == "vodka" then
 		amk.save_variable("gg_need_sleep", amk.load_variable("gg_need_sleep", 0) + 10)
 		amk_mod.test_sleep_pp()
 	end

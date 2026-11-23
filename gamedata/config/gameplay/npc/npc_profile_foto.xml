@@ -314,12 +314,12 @@
     <class>wulf_trup</class>
 </character>
 
-<character id="wpn_trup_x16">
-    <class>wpn_trup_x16</class>
+<character id="trup_x16">
+    <class>trup_x16</class>
 </character>
 
-<character id="wpn_trup_x10">
-    <class>wpn_trup_x10</class>
+<character id="trup_x10">
+    <class>trup_x10</class>
 </character>
 
 <character id="aver_ecolog">

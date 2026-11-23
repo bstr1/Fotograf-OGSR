@@ -368,9 +368,6 @@ local a
   if select_string=="dudka_timer" then
     level.enable_input()
   end
-  if select_string=="blowout_end" then
-    db.actor:disable_info_portion("blowout_end")
-  end
   if select_string=="penta_timer" then
     pentagramm.penta_timer()
   end
@@ -418,9 +415,6 @@ local a
   end
   if select_string=="music_peschera_contra2" then
     mauvais.music_peschera_contra2()
-  end
-  if select_string=="scan_timer" then
-    boryan67.scan_habar()
   end
   if select_string=="manuscript_timer" then
     fotograf.del_manuscript()
@@ -500,18 +494,6 @@ local a
   end
   if select_string=="af_transform_universal" then
     mod_call("af_transform_universal_end",unpack_array_from_string(params_string))
-  end
-  if select_string=="blowout" then
-    mod_call("Blowout_pp",params_string)
-  end
-  if select_string=="test" then
-    mod_call("Run_Blowout_pp")
-  end
-  if select_string=="blowout_ss" then
-    mod_call("blowout_scary_sounds")
-  end
-  if select_string=="blow_shift" then
-    mod_call("Run_Blowout_pp")
   end
   if select_string=="collect_anomalies_info" then
     amk_anoms.collect_info()
@@ -1060,7 +1042,6 @@ function on_actor_upade(delta)
 	--user area 
 	skunk.show_time()
 	oau_watchdog=99
-  mod_call("blowout_phantoms")
 	oau_watchdog=98
 
 	oau_watchdog=97
@@ -1076,7 +1057,6 @@ function on_actor_upade(delta)
 	oau_watchdog=931
  -- amk_alcohol.check_alcohol()
 	oau_watchdog=92
-  amk_mod.on_blowout_hit_actor()
 	oau_watchdog=91
   if amk_target then amk_target.update() end
   --
@@ -1282,7 +1262,7 @@ end
 -- Эта функция вызывается самой первой. Онлайновые объекты недоступны! db.actor недоступен!
 function on_game_start()
   mod_call("on_game_start")
-	ver = get_ver()
+	-- ver = get_ver()
 end
 
 --------------------- user function section---------------
@@ -2431,12 +2411,12 @@ function fill_item_weapon_packet(ret,stpk,updpk)
   return ret
 end
 
-function get_ver()
-	local ver = "0"
-	local mm = _G.main_menu.get_main_menu()
-	if mm then ver = mm:GetGSVer() end
-	return ver
-end
+-- function get_ver()
+	-- local ver = "0"
+	-- local mm = _G.main_menu.get_main_menu()
+	-- if mm then ver = mm:GetGSVer() end
+	-- return ver
+-- end
 
 -- функция сравнения для сортировки таймеров
 -- в конце таблицы таймеры с самым маленьким временем

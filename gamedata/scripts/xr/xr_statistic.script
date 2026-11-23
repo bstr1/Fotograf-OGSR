@@ -67,7 +67,6 @@ local sect_alias = {
         m_controller_normal_fat = "controller_weak",
         m_controller_old = "controller_weak",
         m_controller_old_fat = "controller_weak",
-        m_controller_senator = "controller_weak",
         controller_babka = "controller_weak",
         controller_tubeman = "controller_weak",
         electro_chimera = "controller_weak",

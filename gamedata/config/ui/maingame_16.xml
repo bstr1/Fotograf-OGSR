@@ -79,6 +79,10 @@
 		<texture>ui_hud_icon_psycho</texture>
 	</psy_health_static>
 
+	<thirst_static x="000" y="000" width="64" height="64">
+		<texture>ui_hud_icon_thirst</texture>
+	</thirst_static>
+
 	<invincible_static x="000" y="000" width="64" height="64">
 		<texture>ui_hud_icon_goodmode</texture>
 	</invincible_static>

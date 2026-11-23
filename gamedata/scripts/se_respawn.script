@@ -52,7 +52,7 @@ local simMaxCount = {
   izlom_strong = 60, izlom_blue = 50, 
   pseudo_gigant_weak = 23,
   gigant_weak = 12, gigant_normal = 18, gigant_strong = 18,
-  controller_weak = 18, m_controller_normal = 16, m_controller_normal_fat = 18,            m_controller_old = 22, m_controller_old_fat = 24, m_controller_senator = 12,
+  controller_weak = 18, m_controller_normal = 16, m_controller_normal_fat = 18,            m_controller_old = 22, m_controller_old_fat = 24, controller_babka = 12,
   controller_tubeman = 8,        
   burer_weak = 20, burer_normal = 30, burer_strong = 32,
   bloodsucker_weak = 26, bloodsucker_normal = 40, bloodsucker_strong = 28  

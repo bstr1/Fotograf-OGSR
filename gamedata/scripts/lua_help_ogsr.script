@@ -8411,6 +8411,8 @@ C++ class CTorch : CGameObject {
     function set_angle(number, number);
     function getEnabled() const;
     function switch();
+    function set_script_control(boolean);
+    function is_script_controlled();
     function _construct();
     function set_color(const fcolor&, number);
     function set_texture(string, number);

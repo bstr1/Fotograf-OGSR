@@ -2,9 +2,9 @@ local function on_take(obj, sobj)
     if obj:section() == "af_perdonit" and db.actor:has_info("perdonit_enable") and not db.actor:has_info("perdonit_taken") then
         db.actor:give_info_portion("perdonit_taken")
 
-        alife():create("m_controller_senator", vector():set(340.53, -6.32, -14.55), 1474965, 790)
-        alife():create("m_controller_senator1", vector():set(335.71, -2.08, 10.23), 1467098, 790)
-        alife():create("m_controller_senator2", vector():set(291.31, -3.62, -36.31), 1385034, 790)
+        alife():create("controller_babka", vector():set(340.53, -6.32, -14.55), 1474965, 790)
+        alife():create("m_controller_old_fat", vector():set(335.71, -2.08, 10.23), 1467098, 790)
+        alife():create("m_controller_old", vector():set(291.31, -3.62, -36.31), 1385034, 790)
         level.add_pp_effector("black.ppe", 2006, false)
         local snd_obj = xr_sound.get_safe_sound_object([[zwuk\controller_evil]])
         snd_obj:play(db.actor, 0, sound_object.s2d)
@@ -389,7 +389,7 @@ function rewrite_restrictor(sobj, custom, radius)
 end
 
 function manuscript_spawn()
-    alife():create("manuscript", vector():set(-540.472, 5.777, -131.298), 118713, 626)
+    braad_test.spawn_ai_location("manuscript", vector():set(-540.472, 5.777, -131.298), "predbannik")
     foto.mouse_create()
     boryan67.shubin_restr()
 end
@@ -408,21 +408,17 @@ function del_manuscript()
     ogse.remove_inv_items_by_section("manuscript", 1)
 end
 
------------------------------wpn_trup_spawn----------------------------
-
-function wpn_trup_x16_spawn()
-    local obj = alife():create("wpn_trup_x16", vector():set(52.587, 5.584, 9.906), 5569, 317)
-    alife():assign_story_id(obj.id, story_ids.wpn_trup_x16)
+function trup_x16_spawn()
+    local obj = alife():create("trup_x16", vector():set(52.587, 5.584, 9.906), 5569, 317)
+    alife():assign_story_id(obj.id, story_ids.trup_x16)
     obj:set_health(0)
 end
 
-function wpn_trup_x10_spawn()
-    local obj = alife():create("wpn_trup_x10", vector():set(-55.946, -23.592, -3.479), 538, 379)
-    alife():assign_story_id(obj.id, story_ids.wpn_trup_x10)
+function trup_x10_spawn()
+    local obj = alife():create("trup_x10", vector():set(-55.946, -23.592, -3.479), 538, 379)
+    alife():assign_story_id(obj.id, story_ids.trup_x10)
     obj:set_health(0)
 end
-
------------------------------x18_uber_spawn----------------------------
 
 function x18_uber_spawn()
     alife():create("tank1", vector():set(16.321, -10.820, -25.123), 5314, 140)
@@ -1635,73 +1631,55 @@ function sound_heli_prom()
     news_manager.send_tip(db.actor, "Всем внимание! Засёк вертушку. Чуть севернее фабрики", nil, nil, 10000)
 end
 
------------------------------lukash_boom-----------------------------
-
 function spawn_pda_boom()
-    local sobj = alife():create("bomba", vector():set(-50.112, 3.540, 261.312), 108130, 905)
-    if sobj then
-        amk.save_variable("bomb", sobj.id) -- pstor хранит только число/строку/логическое - таблицу в pstor не сохранить
-    end
+	local sobj = alife():create("bomba",vector():set(-50.112,3.540,261.312),108130,905)
+	if sobj then
+		amk.save_variable("bomb",sobj.id)
+	end
 end
 
 function lukash_boom()
-    local bpos, dist, obj
-    local bomb = amk.load_variable("bomb")
-    if bomb == nil then
-        return
-    end -- зона bomba_restr зовёт без условий, бомба может быть ещё не заспавнена
-    local id
-    if type(bomb) == "number" then
-        id = bomb
-    else
-        for k, v in pairs(bomb) do
-            id = k
-        end -- старый формат из сейвов 1.0004: таблица {[id]=имя}
-    end
-    if id == nil then
-        return
-    end
-    local sobj = alife():object(id)
-    local bobj = level.object_by_id(id)
-    if bobj then
-        bpos = bobj:position()
-    elseif sobj then
-        bpos = vector():set(sobj.position.x, sobj.position.y, sobj.position.z) -- клиентский объект оффлайн - берём координаты с серверного
-    end
-    if bpos == nil then
-        return
-    end
-    if sobj then
-        alife():release(sobj)
-    end
-    amk.del_variable("bomb")
-    amk_particle.amk_particle({
-        particle = "explosions\\explosion_fuelcan",
-        pos = bpos,
-        sound = [[weapons\t_rgd5_explosion]]
-    })
+	local sim = alife()
+	local bpos,dist,bobj,obj,sobj
+	local bomb = amk.load_variable("bomb")
+	if bomb == nil then return end
+	local k = type(bomb) == "number" and bomb or next(bomb)
+	bobj = level.object_by_id(k)
+	sobj = sim:object(k)
+	if bobj then
+		bpos = bobj:position()
+	elseif sobj then
+		bpos = vector():set(sobj.position.x,sobj.position.y,sobj.position.z)
+	end
+	if bpos == nil then return end
+	if sobj then sim:release(sobj) end
+	amk.del_variable("bomb")
 
-    for a = 1, 65535 do
-        obj = level.object_by_id(a)
-        if obj then
-            if IsMonster(obj) or IsStalker(obj) then
-                dist = obj:position():distance_to(bpos)
-                if dist < 50 then
-                    local h = hit()
-                    h.draftsman = obj
-                    h.direction = vector():set(0, 0, 0)
-                    h:bone("bip01_spine")
-                    h.type = hit.explosion
-                    h.power = 10
-                    h.impulse = 100
-                    obj:hit(h)
-                    if obj:id() == db.actor:id() then
-                        level.add_pp_effector("amk_shoot.ppe", 2011, false)
-                    end
-                end
-            end
-        end
-    end
+	particles_object([[explosions\explosion_fuelcan]]):play_at_pos(bpos)
+	xr_sound.get_safe_sound_object([[weapons\f1_explode]]):play_at_pos(db.actor,bpos,0)
+
+	for a = 1, 65535 do
+		obj = level.object_by_id(a)
+		if obj then
+			if IsMonster(obj) or IsStalker(obj) then
+				dist = obj:position():distance_to(bpos)
+				if dist < 50 then
+					if obj:id() == db.actor:id() then
+						level.add_pp_effector("amk_shoot.ppe", 2011, false)
+					else
+						local h = hit()
+						h.draftsman = db.actor
+						h.direction = vector():set(0,0,0)
+						h:bone("bip01_spine")
+						h.type = hit.explosion
+						h.power = 10
+						h.impulse = 100
+						obj:hit(h)
+					end
+				end
+			end
+		end
+	end
 end
 
 ----------------------------------lukash_angar---------------------------------
@@ -1744,15 +1722,16 @@ function mario_snaryaga_dal(first_speaker, second_speaker)
     dialogs.relocate_item_section(second_speaker, "medkit_army", "in", 1)
     dialogs.relocate_item_section(second_speaker, "bandage", "in", 2)
     dialogs.relocate_item_section(second_speaker, "energy_drink", "in", 1)
-    dialogs.relocate_item_section(second_speaker, "paek1", "in", 1)
+    dialogs.relocate_item_section(second_speaker, "paek2", "in", 1)
     dialogs.relocate_item_section(second_speaker, "grenade_rgd5", "in", 1)
     dialogs.relocate_item_section(second_speaker, "ammo_11.43x23_fmj", "in", 3)
+	dialogs.relocate_item_section(second_speaker, "outfit_soldier_m1", "in", 1)
 end
 
 function mario_snaryaga2_dal(first_speaker, second_speaker)
     dialogs.relocate_item_section(second_speaker, "medkit_army", "in", 1)
     dialogs.relocate_item_section(second_speaker, "bandage", "in", 2)
-    dialogs.relocate_item_section(second_speaker, "paek1", "in", 1)
+    dialogs.relocate_item_section(second_speaker, "paek2", "in", 1)
     dialogs.relocate_item_section(second_speaker, "wpn_wincheaster1300", "in", 1)
     dialogs.relocate_item_section(second_speaker, "ammo_12x76_zhekan", "in", 2)
     dialogs.relocate_item_section(second_speaker, "ammo_11.43x23_fmj", "in", 2)
@@ -2171,7 +2150,7 @@ end
 
 function sd_brown_otdal(first_speaker, second_speaker)
     dialogs.relocate_item_section(first_speaker, "foto_01", "out", 2)
-    dialogs.relocate_item_section(first_speaker, "ammo_sd", "out", 1)
+    -- dialogs.relocate_item_section(first_speaker, "ammo_sd", "out", 1)
     dialogs.relocate_item_section(first_speaker, "plan_baza", "out", 1)
 end
 
@@ -3567,7 +3546,7 @@ function create_aground_kontra_restr()
 end
 
 function aground_kontra_spawn()
-    alife():create("m_controller_senator1", vector():set(-69.908, -6.875, -67.683), 3118, 16)
+    alife():create("controller_babka", vector():set(-69.908, -6.875, -67.683), 3118, 16)
 end
 
 function create_x16_fire_restr()

@@ -4,6 +4,8 @@ function give_govno(first_speaker, second_speaker)
     dialogs.relocate_item_section(second_speaker, "ks_talisman_06", "in", 1)
 end
 
+
+local deal_phase = 0
 function sms_verka()
     news_manager.send_tip(db.actor, "zapadlo_sms_" .. deal_phase)
 
@@ -17,9 +19,11 @@ function sms_verka()
     deal_phase = deal_phase + 1
 end
 
+
 function broken_exo()
     ogse.spawn_item_in_inv("broken_exoskeleton")
 end
+
 
 function dez_mask_teleport(first_speaker, second_speaker)
     dsh.wait_condition(function() return db.actor:dont_has_info("ui_talk") end, function()
@@ -40,6 +44,7 @@ function dez_mask_teleport(first_speaker, second_speaker)
     end)
 end
 
+
 function dunya_teleport(first_speaker, second_speaker)
     dsh.wait_condition(function() return db.actor:dont_has_info("ui_talk") end, function()
         level.add_pp_effector("black.ppe", 2006, false)
@@ -58,6 +63,7 @@ function dunya_teleport(first_speaker, second_speaker)
         end)
     end)
 end
+
 
 function verka_teleport(first_speaker, second_speaker)
     dsh.wait_condition(function() return db.actor:dont_has_info("ui_talk") end, function()
@@ -81,6 +87,7 @@ function verka_teleport(first_speaker, second_speaker)
     end)
 end
 
+
 function ormant_teleport(first_speaker, second_speaker)
     dsh.wait_condition(function() return db.actor:dont_has_info("ui_talk") end, function()
         level.add_pp_effector("black.ppe", 2006, false)
@@ -103,6 +110,7 @@ function ormant_teleport(first_speaker, second_speaker)
     end)
 end
 
+
 function mg_group_release()
     local mg_group_sids = {20048, 20049, 20050, 20051, 20052, 20053, 20054, 20055, 20056, 30198, 30199, 30223, 30224,
                            30231, 30232, 30235}
@@ -114,6 +122,7 @@ function mg_group_release()
         end
     end
 end
+
 
 function mg_group_del()
     mg_group_release()
@@ -130,6 +139,7 @@ function mg_group_del()
         end)
     end)
 end
+
 
 function spawn_kristals()
     amk.spawn_item_in_inv("ks_active_01")
