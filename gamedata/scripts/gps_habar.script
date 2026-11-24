@@ -906,18 +906,6 @@ function on_item_take(item)
     end
 end
 
-function on_item_take_from_box(box, item)
-    mylog("ON_ITEM_TAKE_FROM_BOX: взят предмет " .. objinfo(item) .. ". Из ящика. Id: " ..
-              tostring(boxId))
-    -- если удалили из ящика почистим items_in_box
-    if item and item:id() and box and box:id() then
-        remove_item(box:id(), alife():object(item:id()), false)
-    end
-
-    recharge_gps(item, box)
-    update_gps(item, box, nil)
-end
-
 -- колбэк на потерю предмета из инвентаря ГГ
 -- вызываем из amk.script
 function on_item_drop(obj)

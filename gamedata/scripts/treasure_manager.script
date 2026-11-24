@@ -420,17 +420,16 @@ function get_treasure_manager()
 end
 
 function take_item_from_box(box, box_story_id)
-    printf("!!! take item from box %s", tostring(box:is_inv_box_empty()))
-    --    if box:is_inv_box_empty() == true then
-    get_treasure_manager():treasure_empty(box, box_story_id)
-    --    end
+    if box:is_inv_box_empty() == true then
+        get_treasure_manager():treasure_empty(box, box_story_id)
+    end
 end
 
-function save(p)
-    get_treasure_manager():save(p)
+function save(packet)
+    get_treasure_manager():save(packet)
 end
-function load(p)
-    get_treasure_manager():load(p)
+function load(reader)
+    get_treasure_manager():load(reader)
 end
 function clear_treasure_manager()
     treasure_manager = nil

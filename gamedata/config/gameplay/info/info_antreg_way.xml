@@ -1951,7 +1951,7 @@
 <info_portion id="zapadlo_dialog_4_done"></info_portion>
 <info_portion id="verka_dialog_1_done">
     <action>boryan67.zapadlo_verka_spot_remove</action>
-	<action>chetkiu.verka_teleport</action>
+    <action>chetkiu.verka_teleport</action>
 </info_portion>
 <info_portion id="verka_na_meste"></info_portion>
 <info_portion id="verka_out">

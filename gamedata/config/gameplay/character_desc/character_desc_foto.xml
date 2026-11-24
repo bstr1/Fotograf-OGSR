@@ -4289,9 +4289,9 @@
     <supplies>
             [spawn] \n
             medkit_scientic = 1 \n
-			wpn_walther \n
-			ammo_9x19_pbp = 1 \n
-			device_torch \n
+            wpn_walther \n
+            ammo_9x19_pbp = 1 \n
+            device_torch \n
     </supplies>
 
     <start_dialog>hello_dialog</start_dialog>
@@ -4826,32 +4826,6 @@
 
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>
-</specific_character>
-
-<!-- tank -->
-<specific_character id="tank_zombi" team_default="1">
-    <name>Уберсолдат</name>
-    <icon>ui_npc_tank</icon>
-    <map_icon x="1" y="2"></map_icon>
-    <bio>val_soldier_regular_bio</bio>
-
-    <class>cit_doctor</class>
-    <community>zombied</community> <panic_threshold>0.0</panic_threshold>
-    <money min="10" max="50" infinitive="0"></money>
-    
-    <rank>150</rank>
-    <reputation>0</reputation>
-
-    <visual>actors\aaz_tank_minifake</visual>
-    <snd_config>characters_voice\human_01\military\</snd_config>
-    <crouch_type>0</crouch_type>
-    <supplies>
-        [spawn] \n
-        wpn_minifake \n
-        device_torch \n
-    </supplies>
-
-#include "gameplay\character_dialogs.xml"
 </specific_character>
 
 <!-- tank_zomb -->
@@ -6501,40 +6475,6 @@
 </specific_character>    
 
 
-<specific_character id="neytral_new_02_zombi" team_default = "1">
-    <name>Санчо</name>
-    <icon>ui_npc_u_tsezar</icon>
-    <map_icon x="3" y="2"></map_icon>
-    <bio>sim_stalker_general_bio</bio>
-
-    <class>cit_doctor</class>
-    <community>zombied</community><panic_threshold>0.0</panic_threshold>
-
-    <rank>370</rank>
-    <reputation>120</reputation>
-    <money min="1400" max="1600" infinitive="0"/>        
-
-    <visual>actors\neytral\lisiy</visual>
-    <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <crouch_type>-1</crouch_type>
-    <supplies>
-        [spawn] \n
-        wpn_pm \n
-        ammo_9x18_fmj = 2 \n
-        wpn_ak74u = 1 \n
-        ammo_5.45x39_fmj = 1 \n
-        medkit = 1 \n
-        device_torch \n
-#include "gameplay\character_food.xml" \n
-#include "gameplay\character_drugs.xml"
-    </supplies>
-    
-<start_dialog>hello_dialog</start_dialog>
-<actor_dialog>dm_help_wounded_medkit_dialog</actor_dialog>    
-#include "gameplay\character_criticals.xml"
-#include "gameplay\character_dialogs.xml"
-</specific_character>
-
 <specific_character id="bandit_veteran_default1" team_default = "1">
     <name>Неизвестный бандит</name>
     <icon x="22" y="14"></icon>
@@ -6557,7 +6497,7 @@
         wpn_spas12 \n
         ammo_12x76_dart = 1 \n
         device_torch \n
-#include "gameplay\character_items.xml"			
+#include "gameplay\character_items.xml"            
     </supplies>
 
     <start_dialog>hello_dialog</start_dialog>
@@ -6584,11 +6524,11 @@
     <supplies>
         [spawn] \n
         wpn_walther \n
-        ammo_9x19_pbp = 1 \n	
+        ammo_9x19_pbp = 1 \n    
         wpn_val \n
         ammo_9x39_pab9 = 1 \n
         device_torch \n
-#include "gameplay\character_items.xml"			
+#include "gameplay\character_items.xml"            
     </supplies>
 
     <start_dialog>hello_dialog</start_dialog>
@@ -6619,7 +6559,7 @@
         wpn_lr300 = 1, 0, 1, 0 \n
         ammo_5.56x45_ss190 = 1 \n
         device_torch \n
-#include "gameplay\character_items.xml"			
+#include "gameplay\character_items.xml"            
     </supplies>
 
     <start_dialog>hello_dialog</start_dialog>

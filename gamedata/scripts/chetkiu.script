@@ -142,190 +142,190 @@ end
 
 
 function spawn_kristals()
-    amk.spawn_item_in_inv("ks_active_01")
-    amk.spawn_item_in_inv("ks_active_02")
-    amk.spawn_item_in_inv("ks_active_03")
-    amk.spawn_item_in_inv("ks_active_04")
-    amk.spawn_item_in_inv("ks_active_05")
-    amk.spawn_item_in_inv("ks_active_06")
-    amk.spawn_item_in_inv("ks_active_07")
-    amk.spawn_item_in_inv("ks_active_08")
-    amk.spawn_item_in_inv("ks_active_09")
-    amk.spawn_item_in_inv("ks_active_10")
-    amk.spawn_item_in_inv("ks_active_11")
-    amk.spawn_item_in_inv("ks_active_12")
+    ogse.spawn_item_in_inv("ks_active_01")
+    ogse.spawn_item_in_inv("ks_active_02")
+    ogse.spawn_item_in_inv("ks_active_03")
+    ogse.spawn_item_in_inv("ks_active_04")
+    ogse.spawn_item_in_inv("ks_active_05")
+    ogse.spawn_item_in_inv("ks_active_06")
+    ogse.spawn_item_in_inv("ks_active_07")
+    ogse.spawn_item_in_inv("ks_active_08")
+    ogse.spawn_item_in_inv("ks_active_09")
+    ogse.spawn_item_in_inv("ks_active_10")
+    ogse.spawn_item_in_inv("ks_active_11")
+    ogse.spawn_item_in_inv("ks_active_12")
 
-    amk.spawn_item_in_inv("ks_reagent_01")
-    amk.spawn_item_in_inv("ks_reagent_02")
-    amk.spawn_item_in_inv("ks_reagent_03")
-    amk.spawn_item_in_inv("ks_reagent_04")
-    amk.spawn_item_in_inv("ks_reagent_05")
-    amk.spawn_item_in_inv("ks_reagent_06")
-    amk.spawn_item_in_inv("ks_reagent_07")
-    amk.spawn_item_in_inv("ks_reagent_08")
-    amk.spawn_item_in_inv("ks_reagent_09")
-    amk.spawn_item_in_inv("ks_reagent_10")
-    amk.spawn_item_in_inv("ks_reagent_11")
-    amk.spawn_item_in_inv("ks_reagent_12")
+    ogse.spawn_item_in_inv("ks_reagent_01")
+    ogse.spawn_item_in_inv("ks_reagent_02")
+    ogse.spawn_item_in_inv("ks_reagent_03")
+    ogse.spawn_item_in_inv("ks_reagent_04")
+    ogse.spawn_item_in_inv("ks_reagent_05")
+    ogse.spawn_item_in_inv("ks_reagent_06")
+    ogse.spawn_item_in_inv("ks_reagent_07")
+    ogse.spawn_item_in_inv("ks_reagent_08")
+    ogse.spawn_item_in_inv("ks_reagent_09")
+    ogse.spawn_item_in_inv("ks_reagent_10")
+    ogse.spawn_item_in_inv("ks_reagent_11")
+    ogse.spawn_item_in_inv("ks_reagent_12")
 
-    amk.spawn_item_in_inv("ks_absolut_01")
-    amk.spawn_item_in_inv("ks_absolut_02")
-    amk.spawn_item_in_inv("ks_absolut_03")
-    amk.spawn_item_in_inv("ks_absolut_04")
-    amk.spawn_item_in_inv("ks_absolut_05")
-    amk.spawn_item_in_inv("ks_absolut_06")
-    amk.spawn_item_in_inv("ks_absolut_07")
-    amk.spawn_item_in_inv("ks_absolut_08")
-    amk.spawn_item_in_inv("ks_absolut_09")
-    amk.spawn_item_in_inv("ks_absolut_10")
-    amk.spawn_item_in_inv("ks_absolut_11")
-    amk.spawn_item_in_inv("ks_absolut_12")
+    ogse.spawn_item_in_inv("ks_absolut_01")
+    ogse.spawn_item_in_inv("ks_absolut_02")
+    ogse.spawn_item_in_inv("ks_absolut_03")
+    ogse.spawn_item_in_inv("ks_absolut_04")
+    ogse.spawn_item_in_inv("ks_absolut_05")
+    ogse.spawn_item_in_inv("ks_absolut_06")
+    ogse.spawn_item_in_inv("ks_absolut_07")
+    ogse.spawn_item_in_inv("ks_absolut_08")
+    ogse.spawn_item_in_inv("ks_absolut_09")
+    ogse.spawn_item_in_inv("ks_absolut_10")
+    ogse.spawn_item_in_inv("ks_absolut_11")
+    ogse.spawn_item_in_inv("ks_absolut_12")
 
-    amk.spawn_item_in_inv("ks_talisman_01")
-    amk.spawn_item_in_inv("ks_talisman_02")
-    amk.spawn_item_in_inv("ks_talisman_03")
-    amk.spawn_item_in_inv("ks_talisman_04")
-    amk.spawn_item_in_inv("ks_talisman_05")
-    amk.spawn_item_in_inv("ks_talisman_06")
+    ogse.spawn_item_in_inv("ks_talisman_01")
+    ogse.spawn_item_in_inv("ks_talisman_02")
+    ogse.spawn_item_in_inv("ks_talisman_03")
+    ogse.spawn_item_in_inv("ks_talisman_04")
+    ogse.spawn_item_in_inv("ks_talisman_05")
+    ogse.spawn_item_in_inv("ks_talisman_06")
 
-    amk.spawn_item_in_inv("ks_obereg_01")
-    amk.spawn_item_in_inv("ks_obereg_02")
-    amk.spawn_item_in_inv("ks_obereg_03")
-    amk.spawn_item_in_inv("ks_obereg_04")
-    amk.spawn_item_in_inv("ks_obereg_05")
-    amk.spawn_item_in_inv("ks_obereg_06")
+    ogse.spawn_item_in_inv("ks_obereg_01")
+    ogse.spawn_item_in_inv("ks_obereg_02")
+    ogse.spawn_item_in_inv("ks_obereg_03")
+    ogse.spawn_item_in_inv("ks_obereg_04")
+    ogse.spawn_item_in_inv("ks_obereg_05")
+    ogse.spawn_item_in_inv("ks_obereg_06")
 end
 
 -- ШТУРМОВЫЕ
 function spawn_rifle()
-    amk.spawn_item_in_inv("wpn_ak12") -- АК-12 обр. 2012 г.
-    amk.spawn_item_in_inv("wpn_ak74") -- АКС-74Н
-    amk.spawn_item_in_inv("wpn_ak74u") -- АКС-74У
-    amk.spawn_item_in_inv("wpn_ak103") -- AK-103
-    amk.spawn_item_in_inv("wpn_ak74u_snag") -- АК-105 «Тактик»
-    amk.spawn_item_in_inv("wpn_abakan") -- АН-94
-    amk.spawn_item_in_inv("wpn_val") -- АС «Вал»
-    amk.spawn_item_in_inv("wpn_ash12") -- АШ-12
-    amk.spawn_item_in_inv("wpn_groza") -- ОЦ-14 «Гроза»
-    amk.spawn_item_in_inv("wpn_groza_nimble") -- ОЦ-14 «Шторм»
-    amk.spawn_item_in_inv("wpn_vihr") -- СР-3М «Вихрь»
-    amk.spawn_item_in_inv("wpn_mdr") -- DT MDR
-    amk.spawn_item_in_inv("wpn_l85") -- Enfield L85A2
-    amk.spawn_item_in_inv("wpn_fn2000") -- FN F2000
-    amk.spawn_item_in_inv("wpn_fn2000_nimble") -- FN F2000 Tactical
-    amk.spawn_item_in_inv("wpn_galil") -- Galil ACE 22
-    amk.spawn_item_in_inv("wpn_galil31") -- Galil ACE 31
-    amk.spawn_item_in_inv("wpn_sig550_luckygun") -- H&K416 A5
-    amk.spawn_item_in_inv("wpn_g36") -- H&K G36E
-    amk.spawn_item_in_inv("wpn_lr300") -- M4A1
-    amk.spawn_item_in_inv("wpn_sa58") -- SA-58
-    amk.spawn_item_in_inv("wpn_scarh") -- SCAR-H
-    amk.spawn_item_in_inv("wpn_sig550") -- SIG SG 552
-    amk.spawn_item_in_inv("wpn_aug") -- Steyr AUG A1
-    amk.spawn_item_in_inv("wpn_aug_a3") -- Steyr AUG A3
+    ogse.spawn_item_in_inv("wpn_ak12") -- АК-12 обр. 2012 г.
+    ogse.spawn_item_in_inv("wpn_ak74") -- АКС-74Н
+    ogse.spawn_item_in_inv("wpn_ak74u") -- АКС-74У
+    ogse.spawn_item_in_inv("wpn_ak103") -- AK-103
+    ogse.spawn_item_in_inv("wpn_ak74u_snag") -- АК-105 «Тактик»
+    ogse.spawn_item_in_inv("wpn_abakan") -- АН-94
+    ogse.spawn_item_in_inv("wpn_val") -- АС «Вал»
+    ogse.spawn_item_in_inv("wpn_ash12") -- АШ-12
+    ogse.spawn_item_in_inv("wpn_groza") -- ОЦ-14 «Гроза»
+    ogse.spawn_item_in_inv("wpn_groza_nimble") -- ОЦ-14 «Шторм»
+    ogse.spawn_item_in_inv("wpn_vihr") -- СР-3М «Вихрь»
+    ogse.spawn_item_in_inv("wpn_mdr") -- DT MDR
+    ogse.spawn_item_in_inv("wpn_l85") -- Enfield L85A2
+    ogse.spawn_item_in_inv("wpn_fn2000") -- FN F2000
+    ogse.spawn_item_in_inv("wpn_fn2000_nimble") -- FN F2000 Tactical
+    ogse.spawn_item_in_inv("wpn_galil") -- Galil ACE 22
+    ogse.spawn_item_in_inv("wpn_galil31") -- Galil ACE 31
+    ogse.spawn_item_in_inv("wpn_sig550_luckygun") -- H&K416 A5
+    ogse.spawn_item_in_inv("wpn_g36") -- H&K G36E
+    ogse.spawn_item_in_inv("wpn_lr300") -- M4A1
+    ogse.spawn_item_in_inv("wpn_sa58") -- SA-58
+    ogse.spawn_item_in_inv("wpn_scarh") -- SCAR-H
+    ogse.spawn_item_in_inv("wpn_sig550") -- SIG SG 552
+    ogse.spawn_item_in_inv("wpn_aug") -- Steyr AUG A1
+    ogse.spawn_item_in_inv("wpn_aug_a3") -- Steyr AUG A3
 end
 
 -- ПУЛЕМЁТЫ
 function spawn_mg()
-    amk.spawn_item_in_inv("wpn_pkm") -- ПКМ
-    amk.spawn_item_in_inv("wpn_pkm_zulus") -- ПКМ «Вист»
-    amk.spawn_item_in_inv("wpn_rpk") -- РПК
-    amk.spawn_item_in_inv("wpn_rpk16") -- РПК-16
-    amk.spawn_item_in_inv("wpn_rpk74") -- РПК-74
-    amk.spawn_item_in_inv("wpn_rpk74m") -- РПК-74(П)
-    amk.spawn_item_in_inv("wpn_g36_nimble") -- H&K MG36
-    amk.spawn_item_in_inv("wpn_m249") -- FN M249 SAW
+    ogse.spawn_item_in_inv("wpn_pkm") -- ПКМ
+    ogse.spawn_item_in_inv("wpn_pkm_zulus") -- ПКМ «Вист»
+    ogse.spawn_item_in_inv("wpn_rpk") -- РПК
+    ogse.spawn_item_in_inv("wpn_rpk16") -- РПК-16
+    ogse.spawn_item_in_inv("wpn_rpk74") -- РПК-74
+    ogse.spawn_item_in_inv("wpn_rpk74m") -- РПК-74(П)
+    ogse.spawn_item_in_inv("wpn_g36_nimble") -- H&K MG36
+    ogse.spawn_item_in_inv("wpn_m249") -- FN M249 SAW
 end
 
 -- ПИСТОЛЕТЫ-ПУЛЕМЁТЫ
 function spawn_smg()
-    amk.spawn_item_in_inv("wpn_bizon") -- ПП-19 «Бизон»
-    amk.spawn_item_in_inv("wpn_vityaz") -- ПП-19 «Витязь»
-    amk.spawn_item_in_inv("wpn_sr2m") -- СР-2МП «Вереск»
-    amk.spawn_item_in_inv("wpn_mp9") -- B&T MP9
-    amk.spawn_item_in_inv("wpn_mp5") -- H&K MP5A5
-    amk.spawn_item_in_inv("wpn_ump45") -- H&K UMP45
-    amk.spawn_item_in_inv("wpn_p90") -- FN P90
-    amk.spawn_item_in_inv("wpn_vector") -- TDI Kriss Vector
+    ogse.spawn_item_in_inv("wpn_bizon") -- ПП-19 «Бизон»
+    ogse.spawn_item_in_inv("wpn_vityaz") -- ПП-19 «Витязь»
+    ogse.spawn_item_in_inv("wpn_sr2m") -- СР-2МП «Вереск»
+    ogse.spawn_item_in_inv("wpn_mp9") -- B&T MP9
+    ogse.spawn_item_in_inv("wpn_mp5") -- H&K MP5A5
+    ogse.spawn_item_in_inv("wpn_ump45") -- H&K UMP45
+    ogse.spawn_item_in_inv("wpn_p90") -- FN P90
+    ogse.spawn_item_in_inv("wpn_vector") -- TDI Kriss Vector
 end
 
 -- ДРОБОВИКИ
 function spawn_shotgun()
-    amk.spawn_item_in_inv("wpn_protecta_nimble") -- AA-12
-    amk.spawn_item_in_inv("wpn_protecta") -- Armsel Protecta
-    amk.spawn_item_in_inv("wpn_spas12_nimble") -- Benelli M4
-    amk.spawn_item_in_inv("wpn_b725") -- Browning B725
-    amk.spawn_item_in_inv("wpn_wincheaster1300") -- Mossberg 590
-    amk.spawn_item_in_inv("wpn_wincheaster1300_trapper") -- Remington M870
-    amk.spawn_item_in_inv("wpn_spas12") -- SPAS-12
-    amk.spawn_item_in_inv("wpn_usas12") -- USAS-12
-    amk.spawn_item_in_inv("wpn_saiga12") -- Сайга-12К
-    amk.spawn_item_in_inv("wpn_saiga12m") -- Сайга-12М
-    amk.spawn_item_in_inv("wpn_mp133") -- МР-133
-    amk.spawn_item_in_inv("wpn_mp153") -- МР-153
-    amk.spawn_item_in_inv("wpn_mp43") -- MP-43
-    amk.spawn_item_in_inv("wpn_mts255") -- МЦ-255
-    amk.spawn_item_in_inv("wpn_toz34") -- ТОЗ-34
-    amk.spawn_item_in_inv("wpn_bm16_full") -- ТОЗ-66
+    ogse.spawn_item_in_inv("wpn_protecta_nimble") -- AA-12
+    ogse.spawn_item_in_inv("wpn_protecta") -- Armsel Protecta
+    ogse.spawn_item_in_inv("wpn_spas12_nimble") -- Benelli M4
+    ogse.spawn_item_in_inv("wpn_b725") -- Browning B725
+    ogse.spawn_item_in_inv("wpn_wincheaster1300") -- Mossberg 590
+    ogse.spawn_item_in_inv("wpn_wincheaster1300_trapper") -- Remington M870
+    ogse.spawn_item_in_inv("wpn_spas12") -- SPAS-12
+    ogse.spawn_item_in_inv("wpn_usas12") -- USAS-12
+    ogse.spawn_item_in_inv("wpn_saiga12") -- Сайга-12К
+    ogse.spawn_item_in_inv("wpn_saiga12m") -- Сайга-12М
+    ogse.spawn_item_in_inv("wpn_mp133") -- МР-133
+    ogse.spawn_item_in_inv("wpn_mp153") -- МР-153
+    ogse.spawn_item_in_inv("wpn_mp43") -- MP-43
+    ogse.spawn_item_in_inv("wpn_mts255") -- МЦ-255
+    ogse.spawn_item_in_inv("wpn_toz34") -- ТОЗ-34
+    ogse.spawn_item_in_inv("wpn_bm16_full") -- ТОЗ-66
 end
 
 -- СНАЙПЕРСКИЕ
 function spawn_sniper()
-    amk.spawn_item_in_inv("wpn_mosin") -- Винтовка Мосина
-    amk.spawn_item_in_inv("wpn_vpo101") -- ВПО-101
-    amk.spawn_item_in_inv("wpn_vintorez") -- ВСС «Винторез»
-    amk.spawn_item_in_inv("wpn_vintorez_nimble") -- ВССМ
-    amk.spawn_item_in_inv("wpn_gauss") -- Гаусс-пушка
-    amk.spawn_item_in_inv("wpn_dvl_10") -- ДВЛ-10 М1
-    amk.spawn_item_in_inv("wpn_svd") -- СВД
-    amk.spawn_item_in_inv("wpn_svd_nimble") -- СВД-С
-    amk.spawn_item_in_inv("wpn_svu") -- СВУ
-    amk.spawn_item_in_inv("wpn_svu_nimble") -- СВУ-А
-    amk.spawn_item_in_inv("wpn_sv98") -- СВ-98
-    amk.spawn_item_in_inv("wpn_sv98m") -- СВ-98М
-    amk.spawn_item_in_inv("wpn_sks") -- СКС
-    amk.spawn_item_in_inv("wpn_awm") -- AWM-F
-    amk.spawn_item_in_inv("wpn_g28") -- H&K G28
-    amk.spawn_item_in_inv("wpn_m700") -- Remington M700
-    amk.spawn_item_in_inv("wpn_sig550_sniper") -- SIG SG 550 Sniper
-    amk.spawn_item_in_inv("wpn_wa2000") -- Walther WA2000
+    ogse.spawn_item_in_inv("wpn_mosin") -- Винтовка Мосина
+    ogse.spawn_item_in_inv("wpn_vpo101") -- ВПО-101
+    ogse.spawn_item_in_inv("wpn_vintorez") -- ВСС «Винторез»
+    ogse.spawn_item_in_inv("wpn_vintorez_nimble") -- ВССМ
+    ogse.spawn_item_in_inv("wpn_gauss") -- Гаусс-пушка
+    ogse.spawn_item_in_inv("wpn_dvl_10") -- ДВЛ-10 М1
+    ogse.spawn_item_in_inv("wpn_svd") -- СВД
+    ogse.spawn_item_in_inv("wpn_svd_nimble") -- СВД-С
+    ogse.spawn_item_in_inv("wpn_svu") -- СВУ
+    ogse.spawn_item_in_inv("wpn_svu_nimble") -- СВУ-А
+    ogse.spawn_item_in_inv("wpn_sv98") -- СВ-98
+    ogse.spawn_item_in_inv("wpn_sv98m") -- СВ-98М
+    ogse.spawn_item_in_inv("wpn_sks") -- СКС
+    ogse.spawn_item_in_inv("wpn_awm") -- AWM-F
+    ogse.spawn_item_in_inv("wpn_g28") -- H&K G28
+    ogse.spawn_item_in_inv("wpn_m700") -- Remington M700
+    ogse.spawn_item_in_inv("wpn_sig550_sniper") -- SIG SG 550 Sniper
+    ogse.spawn_item_in_inv("wpn_wa2000") -- Walther WA2000
 end
 
 -- ПИСТОЛЕТЫ
 function spawn_pistol()
-    amk.spawn_item_in_inv("wpn_pm_actor") -- АПБ
-    amk.spawn_item_in_inv("wpn_pb") -- ПБ
-    amk.spawn_item_in_inv("wpn_pm") -- ПМ
-    amk.spawn_item_in_inv("wpn_fort") -- Форт-12
-    amk.spawn_item_in_inv("wpn_fort_snag") -- ОЦ-33 «Пернач»
-    amk.spawn_item_in_inv("wpn_sr1m") -- СР-1МП «Гюрза»
-    amk.spawn_item_in_inv("wpn_tt33") -- ТТ-33
-    amk.spawn_item_in_inv("wpn_beretta") -- Beretta M9A1
-    amk.spawn_item_in_inv("wpn_hpsa") -- CZ 75B
-    amk.spawn_item_in_inv("wpn_colt1911") -- Colt M1911
-    amk.spawn_item_in_inv("wpn_coltm45a1") -- Colt M45A1
-    amk.spawn_item_in_inv("wpn_desert_eagle") -- Desert Eagle
-    amk.spawn_item_in_inv("wpn_fiveseven") -- FN Five-seveN
-    amk.spawn_item_in_inv("wpn_usp_nimble") -- FN FNX-45
-    amk.spawn_item_in_inv("wpn_glock") -- Glock 17
-    amk.spawn_item_in_inv("wpn_glock18") -- Glock 18с
-    amk.spawn_item_in_inv("wpn_usp") -- H&K USP45
-    amk.spawn_item_in_inv("wpn_sig220") -- SIG Sauer P220
-    amk.spawn_item_in_inv("wpn_sig220_nimble") -- SIG Sauer P220R
-    amk.spawn_item_in_inv("wpn_taurus") -- Taurus Raging Bull
-    amk.spawn_item_in_inv("wpn_walther") -- Walther P99
+    ogse.spawn_item_in_inv("wpn_pm_actor") -- АПБ
+    ogse.spawn_item_in_inv("wpn_pb") -- ПБ
+    ogse.spawn_item_in_inv("wpn_pm") -- ПМ
+    ogse.spawn_item_in_inv("wpn_fort") -- Форт-12
+    ogse.spawn_item_in_inv("wpn_fort_snag") -- ОЦ-33 «Пернач»
+    ogse.spawn_item_in_inv("wpn_sr1m") -- СР-1МП «Гюрза»
+    ogse.spawn_item_in_inv("wpn_tt33") -- ТТ-33
+    ogse.spawn_item_in_inv("wpn_beretta") -- Beretta M9A1
+    ogse.spawn_item_in_inv("wpn_hpsa") -- CZ 75B
+    ogse.spawn_item_in_inv("wpn_colt1911") -- Colt M1911
+    ogse.spawn_item_in_inv("wpn_coltm45a1") -- Colt M45A1
+    ogse.spawn_item_in_inv("wpn_desert_eagle") -- Desert Eagle
+    ogse.spawn_item_in_inv("wpn_fiveseven") -- FN Five-seveN
+    ogse.spawn_item_in_inv("wpn_usp_nimble") -- FN FNX-45
+    ogse.spawn_item_in_inv("wpn_glock") -- Glock 17
+    ogse.spawn_item_in_inv("wpn_glock18") -- Glock 18с
+    ogse.spawn_item_in_inv("wpn_usp") -- H&K USP45
+    ogse.spawn_item_in_inv("wpn_sig220") -- SIG Sauer P220
+    ogse.spawn_item_in_inv("wpn_sig220_nimble") -- SIG Sauer P220R
+    ogse.spawn_item_in_inv("wpn_taurus") -- Taurus Raging Bull
+    ogse.spawn_item_in_inv("wpn_walther") -- Walther P99
 end
 
 -- ГРАНОТОМЁТЫ
 function spawn_gl()
-    amk.spawn_item_in_inv("wpn_rg6") -- РГ-6
-    amk.spawn_item_in_inv("wpn_rgm40") -- РГМ-40
-    amk.spawn_item_in_inv("wpn_rpg7") -- РПГ-7
-    amk.spawn_item_in_inv("wpn_m320") -- M320
+    ogse.spawn_item_in_inv("wpn_rg6") -- РГ-6
+    ogse.spawn_item_in_inv("wpn_rgm40") -- РГМ-40
+    ogse.spawn_item_in_inv("wpn_rpg7") -- РПГ-7
+    ogse.spawn_item_in_inv("wpn_m320") -- M320
 end
 
--- amk.spawn_item_in_inv("wpn_addon_grenade_launcher") -- ГП-25
--- amk.spawn_item_in_inv("wpn_addon_grenade_launcher_ag36") -- AG36
--- amk.spawn_item_in_inv("wpn_addon_grenade_launcher_gl1") -- FN GL1
--- amk.spawn_item_in_inv("wpn_addon_grenade_launcher_l123a2") -- L123A2 UGL
--- amk.spawn_item_in_inv("wpn_addon_grenade_launcher_m203") -- M203
+-- ogse.spawn_item_in_inv("wpn_addon_grenade_launcher") -- ГП-25
+-- ogse.spawn_item_in_inv("wpn_addon_grenade_launcher_ag36") -- AG36
+-- ogse.spawn_item_in_inv("wpn_addon_grenade_launcher_gl1") -- FN GL1
+-- ogse.spawn_item_in_inv("wpn_addon_grenade_launcher_l123a2") -- L123A2 UGL
+-- ogse.spawn_item_in_inv("wpn_addon_grenade_launcher_m203") -- M203

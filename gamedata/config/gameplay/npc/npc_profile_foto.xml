@@ -226,10 +226,6 @@
     <class>zombik_stalk19</class>
 </character>
 
-<character id="neytral_new_02_zombi">
-    <class>cit_doctor</class>
-</character>
-
 <character id="swamp_doctor">
     <class>swamp_doctor</class>
 </character>
@@ -1328,8 +1324,4 @@
 
 <character id="zombi_tree">
     <class>zombi_tree</class>
-</character>
-
-<character id="mask_dolg_zombi">
-    <class>cit_doctor</class>
 </character>
